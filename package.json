@@ -1,0 +1,21 @@
+{
+  "name": "diyalog-atolyesi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Diyalog Atölyesi: doğru soru sorma pratiği. Senaryo + yapay zekâ karakteri + rubrikle puanlama (web + MCP)",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "start:dev": "MODEL_MODE=mock DATA_DIR=./tmp/data APP_URL=http://localhost:8080/ node --disable-warning=ExperimentalWarning server/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-timeout=30000 tests/*.test.js",
+    "ornek": "node tools/ornek-uret.js",
+    "istatistik": "node --disable-warning=ExperimentalWarning server/istatistik.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

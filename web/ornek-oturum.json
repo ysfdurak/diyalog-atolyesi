@@ -1,0 +1,126 @@
+{
+  "senaryo": {
+    "id": "depo-verim-dususu",
+    "baslik": "Gece vardiyasında verim neden düştü?",
+    "karakterAdi": "Serkan"
+  },
+  "toplam": 76,
+  "boyutlar": [
+    {
+      "anahtar": "acik",
+      "ad": "Açık uçlu soru",
+      "agirlik": 20,
+      "aciklama": "Sorular \"ne, nasıl, neler\" ile mi açılıyor, yoksa evet/hayır mı?",
+      "puan": 3,
+      "yorum": "5 sorudan 3 tanesi açık uçluydu."
+    },
+    {
+      "anahtar": "derinlesme",
+      "ad": "Derinleşme",
+      "agirlik": 20,
+      "aciklama": "Alınan cevap bir sonraki soruda kullanılıyor mu?",
+      "puan": 4,
+      "yorum": "İkinci sorudan sonra cevapların peşine düştün: \"ne değişti\" sorusunu \"nerede zorlanıyorlar\" ile sürdürdün. Dördüncü soruda zincir koptu."
+    },
+    {
+      "anahtar": "varsayimsiz",
+      "ad": "Varsayımsız soru",
+      "agirlik": 15,
+      "aciklama": "Soru, cevabı ya da suçlamayı içinde taşımıyor mu?",
+      "puan": 4,
+      "yorum": "5 sorudan 1 tanesi yönlendiriciydi."
+    },
+    {
+      "anahtar": "kesif",
+      "ad": "Bilgi keşfi",
+      "agirlik": 25,
+      "aciklama": "Kritik bilgilerin kaçı ortaya çıktı?",
+      "puan": 4,
+      "yorum": "3 kritik bilgiden 2 tanesi ortaya çıktı."
+    },
+    {
+      "anahtar": "sonuc",
+      "ad": "Sonuç",
+      "agirlik": 20,
+      "aciklama": "Kök neden tahmini doğru ve gerekçeli mi?",
+      "puan": 4,
+      "yorum": "Eğitim eksikliğini ve geçici personeli doğru birleştirdin. El terminallerinin gece güncellenmediği ortaya çıkmadığı için tahmin bir parça eksik kaldı."
+    }
+  ],
+  "ozet": "İlk sorudaki varsayımı bıraktığın anda bilgi gelmeye başladı. Bir sonraki denemede evet/hayır sorularını \"ne\" ve \"nasıl\" ile yeniden kur.",
+  "sorular": [
+    {
+      "no": 1,
+      "tur": "kapali",
+      "yonlendirici": true,
+      "not": "Soru, nedeni baştan \"isteksizlik\" olarak varsayıyor; Serkan da hazır cevaba sığındı.",
+      "dahaIyi": "Son haftalarda gece vardiyasında işler nasıl gidiyor?",
+      "soru": "Ekip son zamanlarda isteksiz mi çalışıyor?",
+      "cevap": "Biraz yorgunluk var tabii, gece çalışmak kolay değil."
+    },
+    {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false,
+      "not": "Zamanlamayı soran açık bir soru; ilk kritik bilgiyi ortaya çıkardı.",
+      "dahaIyi": "",
+      "soru": "Verim düşmeden hemen önce depoda ne değişti?",
+      "cevap": "Üç hafta kadar önce yeni adresleme düzenine geçildi. Gündüz ekibine eğitim verildi ama bize sıra gelmedi."
+    },
+    {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": false,
+      "not": "Bir önceki cevabın üzerine kurulu; derinleşmenin iyi bir örneği.",
+      "dahaIyi": "",
+      "soru": "Eğitim almadan yeni düzende toplayıcılar en çok nerede zorlanıyor?",
+      "cevap": "Sık sık \"adres bulunamadı\" hatası alıyorlar. Ürünü aramakla vakit geçiyor."
+    },
+    {
+      "no": 4,
+      "tur": "kapali",
+      "yonlendirici": false,
+      "not": "Doğru yere bakıyorsun ama evet/hayır sorusu tek kelimelik cevap aldı; farkın nedeni açılmadı.",
+      "dahaIyi": "Gündüz ekibinde olup gece ekibinde olmayan ne var?",
+      "soru": "Bu hata gündüz vardiyasında da oluyor mu?",
+      "cevap": "Pek olmuyor."
+    },
+    {
+      "no": 5,
+      "tur": "acik",
+      "yonlendirici": false,
+      "not": "Ekibin yapısını soran açık bir soru; ikinci kritik bilgi ortaya çıktı.",
+      "dahaIyi": "",
+      "soru": "Gece ekibinde kimler çalışıyor, ekibin yapısı nasıl?",
+      "cevap": "Ekibin yüzde kırkı kadarı geçici personel, onlar da sürekli değişiyor. Her gelene baştan anlatıyoruz."
+    }
+  ],
+  "tahmin": "Yeni adresleme düzeni gece ekibine eğitim verilmeden devreye girmiş; geçici personel sürekli değiştiği için öğrenen de kalmıyor.",
+  "kokNeden": "Adresleme değişikliği gece vardiyasına eğitim ve sistem güncellemesiyle taşınmadı; sürekli değişen geçici personel etkiyi büyüttü.",
+  "acilanlar": [
+    {
+      "bilgi": "3 hafta önce yeni adresleme düzeni devreye girdi. Gündüz ekibine eğitim verildi, gece ekibine verilmedi.",
+      "onem": "kritik"
+    },
+    {
+      "bilgi": "Gece ekibinin yaklaşık %40'ı geçici personel ve bu kişiler sürekli değişiyor.",
+      "onem": "kritik"
+    },
+    {
+      "bilgi": "Gece sık sık \"adres bulunamadı\" hatası alınıyor; toplayıcılar ürünü aramakla vakit kaybediyor.",
+      "onem": "destek"
+    }
+  ],
+  "kacirilanlar": [
+    {
+      "bilgi": "El terminallerindeki adres bilgisi gece güncellenmeden kalıyor; güncelleme yalnızca gündüz yapılıyor.",
+      "onem": "kritik"
+    }
+  ],
+  "idealSorular": [
+    "Verim düşmeden hemen önce süreçte ya da düzende ne değişti?",
+    "Toplayıcılar bir siparişi toplarken en çok nerede vakit kaybediyor?",
+    "Gece ekibinin yapısı gündüzden nasıl farklı?",
+    "Gündüz ekibinde olup gece ekibinde olmayan ne var?"
+  ]
+}

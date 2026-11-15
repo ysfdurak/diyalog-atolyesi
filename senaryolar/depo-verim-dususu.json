@@ -1,0 +1,60 @@
+{
+  "id": "depo-verim-dususu",
+  "baslik": "Gece vardiyasında verim neden düştü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Son 3 haftada gece vardiyasının toplama verimi %18 düştü. Gündüz vardiyası etkilenmedi. Vardiya şefiyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın suçlu aramak değil, düşüşün kök nedenini bulmak.",
+  "karakter": {
+    "ad": "Serkan",
+    "rol": "Gece vardiya şefi",
+    "tavir": "Savunmacı. Suçlanmaktan çekiniyor, başta kısa cevap veriyor. Kendisini dinleyen, merakla soran birine açılıyor.",
+    "ilk_soz": "Buyurun, verim konusunu konuşacakmışız. Biz elimizden geleni yapıyoruz aslında."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "adresleme",
+      "onem": "kritik",
+      "bilgi": "3 hafta önce yeni adresleme düzeni devreye girdi. Gündüz ekibine eğitim verildi, gece ekibine verilmedi.",
+      "acilma_kosulu": "Son haftalarda süreçte, düzende ya da sistemde ne değiştiği, düşüş başlamadan önce ne olduğu ya da eğitim sorulursa",
+      "ipucu_kelimeler": ["değiş", "önce ne", "ne oldu", "eğitim", "yeni", "farklı", "ne zaman"]
+    },
+    {
+      "id": "gecici-personel",
+      "onem": "kritik",
+      "bilgi": "Gece ekibinin yaklaşık %40'ı geçici personel ve bu kişiler sürekli değişiyor.",
+      "acilma_kosulu": "Ekibin yapısı, kadrosu, deneyimi ya da personel değişimi sorulursa",
+      "ipucu_kelimeler": ["ekip", "kadro", "personel", "deneyim", "kimler", "kaç kişi", "geçici"]
+    },
+    {
+      "id": "el-terminali",
+      "onem": "kritik",
+      "bilgi": "El terminallerindeki adres bilgisi gece güncellenmeden kalıyor; güncelleme yalnızca gündüz yapılıyor.",
+      "acilma_kosulu": "Ekipman, el terminali, sistem ya da gündüz ile gece arasındaki fark sorulursa",
+      "ipucu_kelimeler": ["terminal", "ekipman", "cihaz", "sistem", "gündüz", "fark", "güncel"]
+    },
+    {
+      "id": "adres-hatasi",
+      "onem": "destek",
+      "bilgi": "Gece sık sık \"adres bulunamadı\" hatası alınıyor; toplayıcılar ürünü aramakla vakit kaybediyor.",
+      "acilma_kosulu": "Toplayıcıların nerede vakit kaybettiği, işin nerede takıldığı, hatalar ya da şikâyetler sorulursa",
+      "ipucu_kelimeler": ["vakit", "zaman", "takıl", "hata", "şikâyet", "şikayet", "zorlan", "sorun yaşı"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Ekip son zamanlarda biraz isteksiz.",
+    "Gece çalışmak zor, insanlar yoruluyor."
+  ],
+  "kok_neden": "Adresleme değişikliği gece vardiyasına eğitim ve sistem güncellemesiyle taşınmadı; sürekli değişen geçici personel etkiyi büyüttü.",
+  "kok_neden_kelimeler": ["adres", "eğitim", "geçici", "terminal", "güncel"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Verim düşmeden hemen önce süreçte ya da düzende ne değişti?",
+    "Toplayıcılar bir siparişi toplarken en çok nerede vakit kaybediyor?",
+    "Gece ekibinin yapısı gündüzden nasıl farklı?",
+    "Gündüz ekibinde olup gece ekibinde olmayan ne var?"
+  ]
+}

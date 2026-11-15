@@ -1,0 +1,60 @@
+{
+  "id": "geciken-teslimler",
+  "baslik": "Mert'in teslimleri neden gecikiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 6,
+  "acilis": "Ekibindeki analist Mert son bir ayda 4 raporu geç teslim etti. Önceden en güvenilir kişilerden biriydi. Birebir görüşmedesiniz.",
+  "rolun": "Mert'in yöneticisisin. Amacın hesap sormak değil, neyin değiştiğini anlamak.",
+  "karakter": {
+    "ad": "Mert",
+    "rol": "Ekibindeki analist",
+    "tavir": "Yorgun ve çekingen. Şikâyetçi görünmek istemiyor, sorunu kendi üstüne alıyor. Yargılanmadığını hissedince anlatıyor.",
+    "ilk_soz": "Raporlar için görüşeceğimizi tahmin etmiştim. Kusura bakmayın, toparlayacağım."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "cift-yonetici",
+      "onem": "kritik",
+      "bilgi": "Bir aydır başka bir bölümün yöneticisi de doğrudan ona iş veriyor; öncelikler çakışıyor.",
+      "acilma_kosulu": "İş yükü, son bir ayda ne değiştiği, zamanını nelerin aldığı ya da başka kimlerden iş geldiği sorulursa",
+      "ipucu_kelimeler": ["iş yük", "değiş", "zamanın", "başka", "öncelik", "neler var", "üzerinde", "meşgul"]
+    },
+    {
+      "id": "arac-egitimi",
+      "onem": "kritik",
+      "bilgi": "Yeni raporlama aracının eğitimini alamadı; raporları hâlâ Excel'de elle hazırlıyor.",
+      "acilma_kosulu": "Raporları nasıl hazırladığı, işin nerede takıldığı, araçlar ya da neye ihtiyacı olduğu sorulursa",
+      "ipucu_kelimeler": ["nasıl hazır", "araç", "takıl", "ihtiyaç", "zorlan", "süreç", "eğitim", "en çok vakit"]
+    },
+    {
+      "id": "hayir-diyememe",
+      "onem": "kritik",
+      "bilgi": "Ek işleri yöneticisine söylemedi, çünkü \"hayır diyemeyen biri\" gibi görünmek istemedi.",
+      "acilma_kosulu": "Bunu neden daha önce paylaşmadığı, nasıl hissettiği ya da yöneticisinden ne beklediği sorulursa",
+      "ipucu_kelimeler": ["neden söyle", "paylaş", "hisset", "bekle", "destek", "nasıl yardım", "daha önce"]
+    },
+    {
+      "id": "fazla-mesai",
+      "onem": "destek",
+      "bilgi": "Haftada ortalama 8 saat fazla mesai yapıyor.",
+      "acilma_kosulu": "Çalışma saatleri, mesai ya da yorgunluğu sorulursa",
+      "ipucu_kelimeler": ["mesai", "saat", "yorgun", "kaçta", "dinlen"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Biraz motivasyonum düştü sanırım.",
+    "Son zamanlarda dikkatim dağınık."
+  ],
+  "kok_neden": "Belirsiz önceliklendirme ve araç eksikliği: iki yöneticiden gelen işler çakışıyor ve raporlar elle hazırlanıyor. Motivasyon düşüşü bunun sonucu, sebebi değil.",
+  "kok_neden_kelimeler": ["öncelik", "iki yönetici", "iş yük", "araç", "eğitim", "elle"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Son bir ayda işinde ne değişti?",
+    "Bir raporu hazırlarken en çok vaktini ne alıyor?",
+    "Şu an üzerinde hangi işler var ve bunlar kimden geliyor?",
+    "Benden nasıl bir destek işini kolaylaştırırdı?"
+  ]
+}

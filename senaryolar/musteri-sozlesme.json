@@ -1,0 +1,60 @@
+{
+  "id": "musteri-sozlesme",
+  "baslik": "Müşteri neden sözleşmeyi yenilemiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "4 yıllık bir lojistik müşterisi sözleşmesini yenilemeyeceğini bildirdi ve \"rakipten daha uygun teklif aldık\" dedi. Satın alma müdürüyle bir görüşme ayarladın.",
+  "rolun": "İş geliştirme yöneticisisin. Amacın indirim pazarlığı değil, kararın gerçek nedenini anlamak.",
+  "karakter": {
+    "ad": "Elif",
+    "rol": "Müşteri firmanın satın alma müdürü",
+    "tavir": "Kibar ama mesafeli. Konuyu fiyata bağlayıp kısa kesmek istiyor. Savunmaya geçmeyen, gerçekten dinleyen birine yaşadıklarını anlatıyor.",
+    "ilk_soz": "Görüşme talebiniz için teşekkürler. Açık konuşayım, kararımız büyük ölçüde verildi."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "hatali-sevkiyat",
+      "onem": "kritik",
+      "bilgi": "Son 2 ayda 3 kez eksik ya da yanlış sevkiyat oldu; biri firmanın en büyük müşterisine gitti.",
+      "acilma_kosulu": "Hizmetten memnuniyet, son dönemde yaşananlar, sorunlar ya da fiyat dışındaki etkenler sorulursa",
+      "ipucu_kelimeler": ["memnun", "hizmet", "yaşa", "sorun", "fiyat dışı", "başka", "deneyim", "son dönem"]
+    },
+    {
+      "id": "ust-yonetim",
+      "onem": "kritik",
+      "bilgi": "Bu hatalar yüzünden kendi genel müdürüne hesap vermek zorunda kaldı; karar aslında onun üstünden geldi.",
+      "acilma_kosulu": "Kararın nasıl ve kim tarafından alındığı ya da bu durumun onu kişisel olarak nasıl etkilediği sorulursa",
+      "ipucu_kelimeler": ["karar", "kim", "nasıl alındı", "etkile", "sizin için", "yönetim", "süreç"]
+    },
+    {
+      "id": "muhatap-yok",
+      "onem": "kritik",
+      "bilgi": "Sorun yaşandığında ulaşabileceği tek bir muhatap yok; her seferinde farklı biriyle konuşup konuyu baştan anlatıyor.",
+      "acilma_kosulu": "Sorun çıktığında ne olduğu, iletişim, kiminle görüştüğü ya da sorunların nasıl çözüldüğü sorulursa",
+      "ipucu_kelimeler": ["iletişim", "kiminle", "ulaş", "çözül", "ne oldu", "muhatap", "destek", "nasıl ilerledi"]
+    },
+    {
+      "id": "fiyat-farki",
+      "onem": "destek",
+      "bilgi": "Rakibin teklifi yalnızca %3 daha ucuz.",
+      "acilma_kosulu": "Rakip teklifin ayrıntısı ya da fiyat farkının büyüklüğü sorulursa",
+      "ipucu_kelimeler": ["teklif", "fark", "ne kadar", "yüzde", "rakip"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Piyasa artık çok fiyat odaklı.",
+    "Bütçeler bu yıl herkes için sıkı."
+  ],
+  "kok_neden": "Kayıp fiyattan değil güvenden: hizmet hataları ve tek bir muhatabın olmaması müşteriyi kendi yönetimi karşısında zor durumda bıraktı.",
+  "kok_neden_kelimeler": ["güven", "hata", "sevkiyat", "muhatap", "hizmet"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Fiyatı bir kenara bırakırsak, son dönemde bizimle çalışmak sizin için nasıldı?",
+    "Bir sorun çıktığında süreç sizin tarafınızda nasıl ilerliyor?",
+    "Bu karar sizin kurumunuzda nasıl şekillendi?",
+    "Yeni tedarikçiden fiyat dışında en çok ne bekliyorsunuz?"
+  ]
+}
