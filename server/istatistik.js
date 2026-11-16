@@ -3,18 +3,17 @@
 import { loadConfig } from './config.js';
 import { openStore } from './store.js';
 import { istanbulGunu } from './app.js';
-
-// Milyon token başına ABD doları [girdi, çıktı] (platform.claude.com/docs/en/about-claude/pricing, Kasım 2026)
-const FIYAT = { 'claude-haiku-5-5': [0.1, 0.5], 'claude-sonnet-5-5': [2, 10], 'claude-opus-5-5': [4, 20] };
+import { satirUsd, tahminiUsd } from '../src/cekirdek/fiyat.js';
 
 const config = loadConfig({ ...process.env, MODEL_MODE: 'mock' });
 const store = openStore(config.dbFile);
 const ozet = store.istatistik(istanbulGunu(Date.now() - 30 * 86400e3));
-let maliyet = 0;
 for (const k of ozet.kullanim) {
-  const f = FIYAT[k.model];
-  k.tahmini_usd = f ? Number(((k.girdi * f[0] + k.cikti * f[1]) / 1e6).toFixed(4)) : null;
-  maliyet += k.tahmini_usd || 0;
+  const usd = satirUsd(k);
+  k.tahmini_usd = usd == null ? null : Number(usd.toFixed(4));
 }
-console.log(JSON.stringify({ donem: 'son 30 gün', ...ozet, tahmini_toplam_usd: Number(maliyet.toFixed(4)) }, null, 2));
+const kredi = config.krediUsd
+  ? { yuklenen_usd: config.krediUsd, baslangic: config.krediBaslangic, tahmini_kalan_usd: Number((config.krediUsd - tahminiUsd(store.kullanimSatirlari(config.krediBaslangic))).toFixed(2)) }
+  : 'KREDI_USD tanımlı değil';
+console.log(JSON.stringify({ donem: 'son 30 gün', ...ozet, tahmini_toplam_usd: Number(tahminiUsd(ozet.kullanim).toFixed(4)), kredi, canli_oturumlar: store.metaOku('kapali') ? 'KAPALI: ' + store.metaOku('kapali') : 'açık' }, null, 2));
 store.close();

@@ -11,13 +11,14 @@ import { loadConfig } from '../server/config.js';
 import { openStore } from '../server/store.js';
 import { createApp, istanbulGunu } from '../server/app.js';
 import { MCP_ARAC_ADLARI } from '../server/mcp.js';
-import { sahteModel } from '../src/cekirdek/model.js';
+import { anthropicModel, ModelHatasi, sahteModel } from '../src/cekirdek/model.js';
+import { createBildirim } from '../server/bildirim.js';
 
 const ANAHTAR = 'm'.repeat(40);
 const calisan = new Set();
 test.after(async () => { for (const kapat of calisan) await kapat(); });
 
-async function baslat(env = {}) {
+async function baslat(env = {}, { model = sahteModel(), bildirim, simdi } = {}) {
   const config = loadConfig({ MODEL_MODE: 'mock', DATA_DIR: mkdtempSync(join(tmpdir(), 'diyalog-')), ...env });
   assert.deepEqual(config.errors, []);
   const store = openStore(config.dbFile);
@@ -25,7 +26,7 @@ async function baslat(env = {}) {
   await new Promise((r) => server.listen(0, '127.0.0.1', r));
   const taban = `http://127.0.0.1:${server.address().port}`;
   config.appUrl = taban + '/';
-  const app = createApp({ config, store, model: sahteModel() });
+  const app = createApp({ config, store, model, bildirim, simdi });
   server.on('request', app.handle);
   const kapat = () => new Promise((r) => { server.close(() => { store.close(); r(); }); server.closeAllConnections(); });
   calisan.add(kapat);
@@ -33,7 +34,7 @@ async function baslat(env = {}) {
     const y = await fetch(taban + yol, { method: 'POST', headers: { 'content-type': 'application/json', ...basliklar }, body: JSON.stringify(govde) });
     return { durum: y.status, veri: await y.json() };
   };
-  return { taban, store, post, config, kapat: async () => { calisan.delete(kapat); await kapat(); } };
+  return { taban, store, post, config, app, kapat: async () => { calisan.delete(kapat); await kapat(); } };
 }
 
 test('ayarlar: anahtarsız yayın ve anahtarsız MCP reddedilir', () => {
@@ -153,4 +154,112 @@ test('mcp: anahtar zorunlu; araçlar listelenir ve oturum uçtan uca çalışır
   const yok = await cagir('soru_sor', { oturum: 'yok', soru: 'x' });
   assert.ok(yok.hata && /Oturum bulunamadı/.test(yok.metin));
   await istemci.close();
+});
+
+// --- Kredi biterse / azalırsa ---------------------------------------------------------
+
+test('anthropic: kredi ve yetki hataları sınıflandırılır, yeniden denenmez', async () => {
+  const yanit = (status, govde) => async () => ({ ok: false, status, json: async () => govde });
+  const dene = async (f) => {
+    let sayi = 0;
+    const m = anthropicModel({ apiKey: 'k', karakterModeli: 'a', degerlendiriciModeli: 'b', fetch: async () => { sayi++; return f(); } });
+    const hata = await m.karakter({ senaryo: { gizli_bilgiler: [], karakter: {}, yaniltici_ipuclari: [] }, gecmis: [], soru: 's', acilanlar: [] }).catch((e) => e);
+    return [hata instanceof ModelHatasi, hata.kod, sayi];
+  };
+  assert.deepEqual(await dene(yanit(402, { error: { type: 'billing_error', message: 'x' } })), [true, 'kredi', 1]);
+  assert.deepEqual(await dene(yanit(400, { error: { type: 'invalid_request_error', message: 'Your credit balance is too low to access the Anthropic API.' } })), [true, 'kredi', 1]);
+  assert.deepEqual(await dene(yanit(401, { error: { type: 'authentication_error', message: 'invalid x-api-key' } })), [true, 'yetki', 1]);
+  assert.deepEqual(await dene(yanit(400, { error: { type: 'invalid_request_error', message: 'model: not found' } })), [true, 'istek', 1]);
+  assert.deepEqual(await dene(yanit(529, {})), [true, 'gecici', 2]);
+});
+
+test('kredi biterse: ziyaretçi açık mesaj görür, hak düşmez, sahibe bir kez bildirilir, yükleme sonrası kendiliğinden açılır', async () => {
+  let krediVar = false;
+  let an = Date.parse('2026-11-16T09:00:00Z');
+  const sahte = sahteModel();
+  const model = {
+    ad: 'anthropic',
+    karakter: async (g) => { if (!krediVar) throw new ModelHatasi('HTTP 402', { kod: 'kredi' }); return sahte.karakter(g); },
+    degerlendir: (g) => sahte.degerlendir(g),
+  };
+  const gonderilen = [];
+  const bildirim = { gonder: (olay, metin, o) => { gonderilen.push([olay, o?.acil === true]); return true; } };
+  const { taban, post, store } = await baslat({}, { model, bildirim, simdi: () => an });
+  const durum = async () => (await fetch(taban + '/api/durum')).json();
+  assert.equal((await durum()).kapaliMesaji, null);
+
+  const o = await post('/api/oturum', { senaryoId: 'depo-verim-dususu' });
+  const s = await post('/api/oturum/soru', { oturumId: o.veri.oturumId, soru: 'Ne değişti?' });
+  assert.deepEqual([s.durum, s.veri.kod], [503, 'kapali']);
+  assert.match(s.veri.hata, /kullanım kredisi tükendi/);
+  assert.ok(!/402|anthropic/i.test(s.veri.hata)); // teknik ayrıntı ziyaretçiye gitmez
+  assert.deepEqual(gonderilen, [['kredi-bitti', true]]);
+
+  // Kapalıyken: durum mesajı gösterir, yeni oturum hak düşmeden reddedilir
+  const d = await durum();
+  assert.match(d.kapaliMesaji, /örnek oturumu/);
+  assert.equal(d.kalanOturum, 2);
+  const red = await post('/api/oturum', { senaryoId: 'depo-verim-dususu' });
+  assert.equal(red.durum, 429);
+  assert.match(red.veri.hata, /kredisi tükendi/);
+  assert.equal((await durum()).kalanOturum, 2);
+  assert.ok(store.metaOku('kapali').includes('kredi')); // yeniden başlatmada da hatırlanır
+
+  // 30 dakika sonra yeniden denenir; kredi yüklendiyse ilk başarılı cevapta açılır
+  an += 31 * 60_000;
+  krediVar = true;
+  assert.equal((await durum()).kapaliMesaji, null);
+  const o2 = await post('/api/oturum', { senaryoId: 'depo-verim-dususu' });
+  assert.equal(o2.durum, 200);
+  assert.equal((await post('/api/oturum/soru', { oturumId: o2.veri.oturumId, soru: 'Süreçte ne değişti?' })).durum, 200);
+  assert.equal(store.metaOku('kapali'), null);
+});
+
+test('kredi azalırsa ve site tavanı dolarsa sahibe bildirilir', async () => {
+  const gonderilen = [];
+  const bildirim = { gonder: (olay, metin) => { gonderilen.push([olay, metin]); return true; } };
+  const { post, store, app } = await baslat({ KREDI_USD: '5', KREDI_UYARI_YUZDE: '20', SITE_GUNLUK_OTURUM: '1' }, { bildirim });
+  const gun = istanbulGunu();
+  store.kullanimKaydet(gun, { tur: 'degerlendirme', model: 'claude-sonnet-5-5', girdi: 1_000_000, cikti: 100_000 }); // 2 + 1 = 3 $
+  app.krediKontrol();
+  assert.deepEqual(gonderilen, []); // kalan 2 $ > eşik 1 $
+  store.kullanimKaydet(gun, { tur: 'degerlendirme', model: 'claude-sonnet-5-5', girdi: 600_000, cikti: 0 }); // +1,2 $ → kalan 0,8 $
+  app.krediKontrol();
+  assert.equal(gonderilen[0][0], 'kredi-azaldi');
+  assert.match(gonderilen[0][1], /kalan kredi 0\.80 \$/);
+
+  assert.equal((await post('/api/oturum', { senaryoId: 'geciken-teslimler' })).durum, 200);
+  assert.equal((await post('/api/oturum', { senaryoId: 'geciken-teslimler' }, { 'x-forwarded-for': '198.51.100.9' })).durum, 429);
+  assert.equal(gonderilen[1][0], 'site-tavani');
+});
+
+test('bildirim: aynı olay günde bir kez gider, adres yoksa yalnızca kayda yazılır, gönderim hatası uygulamayı bozmaz', async () => {
+  const { store } = await baslat();
+  const istekler = [];
+  const kayit = [];
+  let gun = '2026-11-16';
+  const b = createBildirim({ url: 'https://ntfy.example/konu', store, gun: () => gun, log: (m) => kayit.push(m), fetch: async (url, o) => { istekler.push([url, o.headers.Priority, o.body]); return { ok: true }; } });
+  assert.equal(b.gonder('kredi-bitti', 'Kredi bitti.', { acil: true }), true);
+  assert.equal(b.gonder('kredi-bitti', 'Kredi bitti.', { acil: true }), false);
+  assert.equal(b.gonder('kredi-azaldi', 'Kredi azaldı.'), true);
+  gun = '2026-11-17';
+  assert.equal(b.gonder('kredi-bitti', 'Kredi bitti.', { acil: true }), true);
+  assert.deepEqual(istekler.map((i) => i[1]), ['high', 'default', 'high']);
+  assert.equal(istekler[0][0], 'https://ntfy.example/konu');
+
+  const sessiz = createBildirim({ url: '', store, gun: () => '2026-12-01', log: (m) => kayit.push(m), fetch: async () => { throw new Error('çağrılmamalı'); } });
+  assert.equal(sessiz.gonder('site-tavani', 'Tavan doldu.'), true);
+  assert.ok(kayit.some((m) => m.includes('BİLDİRİM (site-tavani)')));
+  const bozuk = createBildirim({ url: 'https://ntfy.example/konu', store, gun: () => '2026-12-02', log: (m) => kayit.push(m), fetch: async () => { throw new TypeError('ağ yok'); } });
+  assert.equal(bozuk.gonder('kredi-bitti', 'x'), true);
+  await new Promise((r) => setTimeout(r, 20));
+  assert.ok(kayit.some((m) => m.includes('Bildirim gönderilemedi')));
+});
+
+test('ayarlar: bildirim ve kredi değerleri doğrulanır', () => {
+  assert.match(loadConfig({ MODEL_MODE: 'mock', BILDIRIM_URL: 'http://acik.test' }).errors.join(' '), /BILDIRIM_URL/);
+  assert.match(loadConfig({ MODEL_MODE: 'mock', KREDI_USD: '-1' }).errors.join(' '), /KREDI_USD/);
+  assert.match(loadConfig({ MODEL_MODE: 'mock', KREDI_BASLANGIC: '16.11.2026' }).errors.join(' '), /KREDI_BASLANGIC/);
+  const c = loadConfig({ MODEL_MODE: 'mock', BILDIRIM_URL: 'https://ntfy.sh/konu', KREDI_USD: '5', KREDI_BASLANGIC: '2026-11-16' });
+  assert.deepEqual([c.errors, c.bildirimUrl, c.krediUsd, c.krediBaslangic, c.krediUyariYuzde], [[], 'https://ntfy.sh/konu', 5, '2026-11-16', 20]);
 });

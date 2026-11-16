@@ -48,7 +48,25 @@ bash ~/ysfdurak.com/sunucu/kurulum-diyalog.sh
 | Kullanım ve tahmini maliyet | `sudo docker exec diyalog node server/istatistik.js` |
 | Limitleri değiştir | `.env` içinde `ZIYARETCI_GUNLUK_OTURUM`, `SITE_GUNLUK_OTURUM`; sonra güncelleme komutu (`.env` dosyası: `~/diyalog-atolyesi/.env`) |
 | Değerlendiriciyi güçlendir | `.env` içinde `DEGERLENDIRICI_MODELI=claude-sonnet-5-5` |
+| Kalan krediyi gör | `sudo docker exec diyalog node server/istatistik.js` → `kredi` alanı |
 | Geçici olarak kapat | `sudo docker stop diyalog` |
+
+## Kredi yükledikten sonra
+
+`~/diyalog-atolyesi/.env` içinde iki satırı güncelle, sonra güncelleme komutunu çalıştır:
+
+```
+KREDI_USD=5                  # yeni yüklediğin tutar + önceki tahmini kalan
+KREDI_BASLANGIC=2026-12-20   # yükleme tarihi
+```
+
+Kredi bittiği için kapanmış oturumlar, yüklemeden sonra en geç 30 dakikada kendiliğinden açılır.
+
+## Bildirimler (ntfy)
+
+1. Telefona **ntfy** uygulamasını kur (App Store / Google Play).
+2. Kurulum betiğinin sonunda yazan adresteki konu adına abone ol. Adres `.env` içinde `BILDIRIM_URL` satırında da durur.
+3. Denemek için sunucuda: `curl -d "Deneme bildirimi" "$(grep ^BILDIRIM_URL ~/diyalog-atolyesi/.env | cut -d= -f2)"`
 
 ## Yedek
 

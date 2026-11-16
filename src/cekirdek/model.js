@@ -4,7 +4,32 @@
 // İki uygulama var: Anthropic API (yayın) ve sahte model (testler ve anahtarsız yerel deneme).
 import { DEGERLENDIRICI_ARACI, DEGERLENDIRICI_ISTEMI, degerlendirmeMesaji, karakterAraci, karakterIstemi } from './istemler.js';
 
-export class ModelHatasi extends Error {}
+/**
+ * Model çağrısı hatası. `kod` nedeni söyler:
+ *   kredi  → Anthropic hesabında kredi bitti (yükleme yapılana kadar düzelmez)
+ *   yetki  → API anahtarı geçersiz ya da yetkisiz
+ *   gecici → yoğunluk, zaman aşımı, ağ; bir süre sonra kendiliğinden düzelir
+ *   istek  → diğer (ör. yanlış model adı, beklenmeyen cevap)
+ */
+export class ModelHatasi extends Error {
+  constructor(mesaj, { kod = 'istek' } = {}) {
+    super(mesaj);
+    this.kod = kod;
+  }
+}
+
+/** Başarısız API cevabını sınıflandırır. Kredi hatası sürüme göre 402 ya da 400 + "credit balance" metniyle gelebilir. */
+async function hataSinifi(yanit) {
+  let tur = '', mesaj = '';
+  try {
+    const govde = await yanit.json();
+    tur = String(govde?.error?.type || '');
+    mesaj = String(govde?.error?.message || '');
+  } catch { /* gövde yok ya da JSON değil */ }
+  if (yanit.status === 402 || tur === 'billing_error' || /credit balance|billing/i.test(mesaj)) return 'kredi';
+  if (yanit.status === 401 || yanit.status === 403) return 'yetki';
+  return 'istek';
+}
 
 const API = 'https://api.anthropic.com/v1/messages';
 
@@ -36,19 +61,22 @@ export function anthropicModel({ apiKey, karakterModeli, degerlendiriciModeli, f
           signal: AbortSignal.timeout(zamanAsimiMs),
         });
         if (yanit.status === 429 || yanit.status >= 500) {
-          sonHata = new ModelHatasi(`Model servisi yoğun (HTTP ${yanit.status}).`);
+          sonHata = new ModelHatasi(`Model servisi yoğun (HTTP ${yanit.status}).`, { kod: 'gecici' });
           await new Promise((r) => setTimeout(r, 800));
           continue; // geçici hata: bir kez daha dene
         }
-        if (!yanit.ok) throw new ModelHatasi(`Model isteği reddedildi (HTTP ${yanit.status}).`);
+        if (!yanit.ok) {
+          const kod = await hataSinifi(yanit);
+          throw new ModelHatasi(`Model isteği reddedildi (HTTP ${yanit.status}, ${kod}).`, { kod });
+        }
         const veri = await yanit.json();
         kullanim({ tur, model, girdi: veri.usage?.input_tokens || 0, cikti: veri.usage?.output_tokens || 0 });
         const blok = (veri.content || []).find((b) => b.type === 'tool_use' && b.name === arac.name);
         if (!blok || typeof blok.input !== 'object') throw new ModelHatasi('Model beklenen biçimde cevap vermedi.');
         return blok.input;
       } catch (err) {
-        if (err instanceof ModelHatasi && !/yoğun/.test(err.message)) throw err;
-        sonHata = err instanceof ModelHatasi ? err : new ModelHatasi(`Model servisine ulaşılamadı (${err.name}).`);
+        if (err instanceof ModelHatasi && err.kod !== 'gecici') throw err;
+        sonHata = err instanceof ModelHatasi ? err : new ModelHatasi(`Model servisine ulaşılamadı (${err.name}).`, { kod: 'gecici' });
       }
     }
     throw sonHata;

@@ -77,8 +77,10 @@ async function anaSayfa() {
   const s = durum.sunucu;
   const gecmis = gecmisiOku();
   const gunun = s.senaryolar.find((x) => x.id === s.gununSenaryosu) || s.senaryolar[0];
-  const oynanabilir = s.kalanOturum > 0 && s.siteAcik;
-  const hakMetni = !s.siteAcik
+  const oynanabilir = s.kalanOturum > 0 && s.siteAcik && !s.kapaliMesaji;
+  const hakMetni = s.kapaliMesaji
+    ? ''
+    : !s.siteAcik
     ? 'Bugün için site genelindeki oturum hakkı doldu. Yarın tekrar açılır; bu arada örnek oturumu inceleyebilirsin.'
     : s.kalanOturum > 0
       ? `Bugün ${s.gunlukHak} oturum hakkından ${s.kalanOturum} tanesi duruyor.`
@@ -106,7 +108,7 @@ async function anaSayfa() {
       el('div', { class: 'dugmeler' },
         el('button', { class: 'dugme ana', disabled: !oynanabilir, onclick: (e) => oturumBaslat(gunun.id, e.currentTarget) }, 'Günün senaryosunu oyna'),
         el('button', { class: 'dugme', onclick: () => ornekGoster() }, 'Örnek oturumu izle')),
-      el('p', { class: 'hak' }, hakMetni),
+      s.kapaliMesaji ? el('p', { class: 'kutu bilgi uyari', role: 'status' }, s.kapaliMesaji) : el('p', { class: 'hak' }, hakMetni),
       !s.yapayZeka && el('p', { class: 'kutu bilgi uyari' }, 'Deneme modu: yapay zekâ kapalı, karakter basit kurallarla cevap veriyor.')),
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
@@ -243,7 +245,7 @@ function oturumEkrani() {
         await gonder(alan.value.trim());
       } catch (err) {
         hata.replaceChildren(hataKutusu(err.message));
-        if (err.kod === 'oturum-yok') hata.append(el('p', { class: 'uyari' }, el('button', { class: 'dugme', type: 'button', onclick: anaSayfa }, 'Ana sayfaya dön')));
+        if (err.kod === 'oturum-yok' || err.kod === 'kapali') hata.append(el('p', { class: 'uyari' }, el('button', { class: 'dugme', type: 'button', onclick: anaSayfa }, 'Ana sayfaya dön')));
       } finally {
         dugme.disabled = false;
       }

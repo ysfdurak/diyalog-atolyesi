@@ -5,6 +5,7 @@ import { loadConfig } from './config.js';
 import { openStore } from './store.js';
 import { createApp, istanbulGunu } from './app.js';
 import { anthropicModel, sahteModel } from '../src/cekirdek/model.js';
+import { createBildirim } from './bildirim.js';
 
 const log = (msg) => console.log(`${new Date().toISOString()} ${msg}`);
 const config = loadConfig();
@@ -25,7 +26,8 @@ if (config.modelMode === 'mock') log('UYARI: MODEL_MODE=mock — yapay zekâ KAP
 
 let app;
 try {
-  app = createApp({ config, store, model, log });
+  const bildirim = createBildirim({ url: config.bildirimUrl, store, gun: () => istanbulGunu(), log });
+  app = createApp({ config, store, model, bildirim, log });
 } catch (err) {
   console.error(err.message);
   process.exit(1);
@@ -34,7 +36,7 @@ setInterval(() => app.bakim(), 3600e3).unref();
 
 const server = createServer(app.handle);
 server.listen(config.port, config.host, () => {
-  log(`Diyalog Atölyesi: ${config.appUrl} (dinlenen ${config.host}:${config.port}) · model: ${config.modelMode === 'mock' ? 'sahte' : `${config.karakterModeli} / ${config.degerlendiriciModeli}`} · limit: ziyaretçi ${config.ziyaretciGunluk}/gün, site ${config.siteGunluk}/gün · MCP: ${config.mcpEnabled ? 'açık' : 'kapalı'}`);
+  log(`Diyalog Atölyesi: ${config.appUrl} (dinlenen ${config.host}:${config.port}) · model: ${config.modelMode === 'mock' ? 'sahte' : `${config.karakterModeli} / ${config.degerlendiriciModeli}`} · limit: ziyaretçi ${config.ziyaretciGunluk}/gün, site ${config.siteGunluk}/gün · MCP: ${config.mcpEnabled ? 'açık' : 'kapalı'} · bildirim: ${config.bildirimUrl ? 'açık' : 'yalnızca kayıt'} · kredi takibi: ${config.krediUsd ? config.krediUsd + ' $' : 'kapalı'}`);
 });
 
 function shutdown(signal) {

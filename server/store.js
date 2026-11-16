@@ -37,6 +37,15 @@ export function openStore(dosya) {
 
     sayi,
 
+    metaOku: (anahtar) => db.prepare('SELECT deger FROM meta WHERE anahtar = ?').get(anahtar)?.deger ?? null,
+    metaYaz(anahtar, deger) {
+      if (deger == null) db.prepare('DELETE FROM meta WHERE anahtar = ?').run(anahtar);
+      else db.prepare('INSERT INTO meta (anahtar, deger) VALUES (?, ?) ON CONFLICT(anahtar) DO UPDATE SET deger = excluded.deger').run(anahtar, String(deger));
+    },
+
+    /** Verilen günden bugüne model kullanımı (tahmini harcama hesabı için). */
+    kullanimSatirlari: (ilkGun) => db.prepare('SELECT model, SUM(girdi) AS girdi, SUM(cikti) AS cikti FROM kullanim WHERE gun >= ? GROUP BY model').all(ilkGun),
+
     /**
      * Verilen sayaçların hepsinde yer varsa hepsini bir artırır; biri doluysa hiçbirini artırmaz.
      * @param {string} gun
@@ -48,7 +57,7 @@ export function openStore(dosya) {
         const dolu = sayaclar.find((s) => sayi(gun, s.anahtar) >= s.sinir);
         if (dolu) {
           db.exec('ROLLBACK');
-          return { izin: false, mesaj: dolu.mesaj };
+          return { izin: false, mesaj: dolu.mesaj, anahtar: dolu.anahtar };
         }
         for (const s of sayaclar) artir.run(gun, s.anahtar);
         db.exec('COMMIT');

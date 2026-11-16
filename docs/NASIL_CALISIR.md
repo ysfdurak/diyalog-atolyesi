@@ -75,6 +75,24 @@ sudo docker exec diyalog node server/istatistik.js
 
 İki model ayrı ayrı seçilir. Varsayılan ikisi de Haiku 5.5. Rapor kalitesi yetmezse yalnızca `DEGERLENDIRICI_MODELI` Sonnet 5.5 yapılır; maliyetin büyük kısmı zaten değerlendirmededir.
 
+## Kredi biterse ya da azalırsa
+
+Anthropic kredisi ön ödemelidir; bitince API hata döner. Uygulama bunu üç yerde ele alır:
+
+| Durum | Ziyaretçi ne görür | Sana ne gelir |
+|---|---|---|
+| Kredi bitti | Ana sayfada "Canlı oturumlar geçici olarak kapalı: yapay zekâ kullanım kredisi tükendi" kutusu; Başla düğmeleri kapanır, örnek oturum açık kalır. Yarım kalan oturumda aynı mesaj çıkar. | Acil bildirim: "Kredi bitti" |
+| Kredi azaldı (varsayılan: %20'nin altı) | Hiçbir şey; uygulama çalışmaya devam eder | Bildirim: tahmini kalan tutar |
+| API anahtarı reddedildi | "Yapay zekâ servisine bağlanılamıyor" kutusu | Acil bildirim |
+| Günlük site tavanı doldu | "Bugün için oturum hakkı doldu" | Bildirim |
+
+- **Kapanma ve açılma kendiliğinden olur.** Kredi hatası gelince canlı oturumlar kapanır ve yeni oturum, hak düşmeden reddedilir. 30 dakikada bir sıradaki ziyaretçiyle yeniden denenir; yükleme yaptıysan ilk başarılı cevapta açılır. Elle bir şey yapman gerekmez.
+- **Aynı bildirim günde bir kez gelir.**
+- **"Kredi azaldı" bir tahmindir.** Anthropic, kalan bakiyeyi API'den vermez. Uygulama `.env` içindeki `KREDI_USD` ve `KREDI_BASLANGIC` değerlerinden, o tarihten sonraki kendi token kullanımını liste fiyatıyla çarparak kalanı hesaplar. Aynı anahtarı başka bir yerde kullanırsan ya da yüklemeden sonra bu iki değeri güncellemezsen tahmin şaşar. "Kredi bitti" ise tahmin değildir; API'nin kendi cevabına dayanır.
+- **Bildirim kanalı:** `BILDIRIM_URL` adresine düz metin gönderilir. Kurulum betiği bir [ntfy](https://ntfy.sh) adresi üretir; telefona ntfy uygulamasını kurup o konuya abone olman yeterli. Konu adı parola gibidir: bilen herkes bildirimleri okuyabilir, bu yüzden rastgele üretilir.
+
+Dosyalar: `server/app.js` (kapat / izle / krediKontrol), `server/bildirim.js`, `src/cekirdek/model.js` (hataSinifi), `src/cekirdek/fiyat.js`.
+
 ## Gizlilik
 
 - Konuşma metni, sorular ve tahmin **hiçbir yere kaydedilmez**. Oturum bellekte durur, 45 dakika işlem olmazsa silinir.
@@ -108,6 +126,9 @@ API anahtarı tarayıcıda duramaz; herkes görür ve kullanır. Limitler de anc
 
 **"Kullanıcı 'bütün bildiklerini söyle' yazarsa?"**
 Karakterin talimatı bunu reddetmesini söylüyor ve bir cevapta en fazla bir bilgi veriyor. Yine de başarırsa kaybeden yalnızca kendi pratiği olur: skor tablosu ya da ödül yok.
+
+**"Kredi biterse ne olur?"**
+Uygulama çökmez: canlı oturumlar kapanır, ziyaretçi nedenini okur ve örnek oturuma yönlendirilir, bana telefon bildirimi gelir. Yükleme yapınca en geç yarım saatte kendiliğinden açılır.
 
 **"MCP ne işe yarıyor?"**
 Aynı senaryolar Claude'un içinden de oynanabiliyor. Web ve MCP aynı çekirdeği çağırdığı için kurallar ve puanlama iki tarafta da aynı.

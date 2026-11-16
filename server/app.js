@@ -7,6 +7,7 @@ import { gununSenaryosu, senaryolariYukle } from '../src/cekirdek/senaryolar.js'
 import { KuralHatasi, oturumServisi, SORU_UZUNLUGU, TAHMIN_UZUNLUGU } from '../src/cekirdek/oturum.js';
 import { ModelHatasi } from '../src/cekirdek/model.js';
 import { createMcpHandler } from './mcp.js';
+import { tahminiUsd } from '../src/cekirdek/fiyat.js';
 
 const TURLER = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml' };
 const GOVDE_SINIRI = 8 * 1024;
@@ -20,7 +21,14 @@ export const istanbulGunu = (zaman = Date.now()) => new Intl.DateTimeFormat('en-
  * @param {ReturnType<import('./store.js').openStore>} o.store
  * @param {object} o.model
  */
-export function createApp({ config, store, model, log = () => {}, simdi = Date.now }) {
+// Model kredi ya da yetki hatası verince canlı oturumlar kapanır; bu süre dolunca bir sonraki ziyaretçiyle yeniden denenir.
+const YENIDEN_DENEME_MS = 30 * 60_000;
+const KAPALI_MESAJI = {
+  kredi: 'Canlı oturumlar geçici olarak kapalı: yapay zekâ kullanım kredisi tükendi. Site sahibine haber verildi. Bu arada örnek oturumu inceleyebilirsin.',
+  yetki: 'Canlı oturumlar geçici olarak kapalı: yapay zekâ servisine bağlanılamıyor. Site sahibine haber verildi. Bu arada örnek oturumu inceleyebilirsin.',
+};
+
+export function createApp({ config, store, model: hamModel, bildirim = { gonder: () => false }, log = () => {}, simdi = Date.now }) {
   const senaryolar = senaryolariYukle(config.senaryoDir);
   const tuz = store.tuz();
   const ozet = (v) => createHash('sha256').update(String(v)).digest();
@@ -32,21 +40,77 @@ export function createApp({ config, store, model, log = () => {}, simdi = Date.n
     if (TURLER[extname(ad)]) dosyalar.set('/' + ad, { tur: TURLER[extname(ad)], icerik: readFileSync(join(config.webDir, ad)) });
   }
 
+  // --- Servis durumu: kredi bitti / anahtar reddedildi --------------------------------
+  // Durum veritabanında da tutulur; sunucu yeniden başlasa bile her ziyaretçi boşuna hata almaz.
+  let kapali = null;
+  try {
+    kapali = JSON.parse(store.metaOku('kapali') || 'null');
+  } catch { /* bozuk kayıt: açık say */ }
+  const kapaliNedeni = () => (kapali && simdi() - kapali.zaman < YENIDEN_DENEME_MS ? kapali.neden : null);
+
+  function kapat(neden, ayrinti) {
+    kapali = { neden, zaman: simdi() };
+    store.metaYaz('kapali', JSON.stringify(kapali));
+    log(`Canlı oturumlar kapandı (${neden}): ${ayrinti}`);
+    bildirim.gonder(neden === 'kredi' ? 'kredi-bitti' : 'anahtar-reddedildi',
+      neden === 'kredi'
+        ? 'Anthropic kredisi bitti. Canlı oturumlar kapalı, ziyaretçiler örnek oturuma yönlendiriliyor. console.anthropic.com → Billing üzerinden yükleme yapınca en geç 30 dakika içinde kendiliğinden açılır.'
+        : 'Anthropic API anahtarı reddedildi. Canlı oturumlar kapalı. Sunucuda ~/diyalog-atolyesi/.env içindeki ANTHROPIC_API_KEY değerini kontrol et.',
+      { acil: true });
+  }
+
+  /** Model çağrılarını izler: kredi/yetki hatasında servisi kapatır, ilk başarılı çağrıda yeniden açar. */
+  const izle = (ad) => async (girdi) => {
+    try {
+      const yanit = await hamModel[ad](girdi);
+      if (kapali) {
+        kapali = null;
+        store.metaYaz('kapali', null);
+        log('Canlı oturumlar yeniden açıldı.');
+      }
+      return yanit;
+    } catch (err) {
+      if (err instanceof ModelHatasi && KAPALI_MESAJI[err.kod]) {
+        kapat(err.kod, err.message);
+        throw new ModelHatasi(KAPALI_MESAJI[err.kod], { kod: err.kod });
+      }
+      throw err;
+    }
+  };
+  const model = { ad: hamModel.ad, karakter: izle('karakter'), degerlendir: izle('degerlendir') };
+
+  /** Tahmini kalan kredi eşiğin altına indiyse site sahibine haber verir (KREDI_USD tanımlıysa). */
+  function krediKontrol() {
+    if (!config.krediUsd) return;
+    const harcanan = tahminiUsd(store.kullanimSatirlari(config.krediBaslangic));
+    const kalan = config.krediUsd - harcanan;
+    if (kalan <= (config.krediUsd * config.krediUyariYuzde) / 100) {
+      bildirim.gonder('kredi-azaldi', `Tahmini kalan kredi ${Math.max(0, kalan).toFixed(2)} $ (${config.krediUsd} $ içinden ${harcanan.toFixed(2)} $ harcandı). Bitmeden yükleme yapmak için: console.anthropic.com → Billing. Yükledikten sonra .env içinde KREDI_USD ve KREDI_BASLANGIC değerlerini güncelle.`);
+    }
+  }
+
   /** Kullanım limiti: oturum başlatılırken çağrılır. Web'de ziyaretçi ve site sayaçları, MCP'de ayrı bir sayaç düşer. */
   function limit(kanal, ziyaretci) {
+    const neden = kapaliNedeni();
+    if (neden) return { izin: false, mesaj: KAPALI_MESAJI[neden] }; // hak düşmeden reddedilir
     const gun = istanbulGunu(simdi());
     if (kanal === 'mcp') {
       return store.hakDus(gun, [{ anahtar: 'mcp', sinir: config.mcpGunluk, mesaj: 'Bugünkü MCP oturum hakkı doldu. Yarın tekrar dene.' }]);
     }
-    return store.hakDus(gun, [
+    const sonuc = store.hakDus(gun, [
       { anahtar: 'z:' + ziyaretci, sinir: config.ziyaretciGunluk, mesaj: `Bugünkü ${config.ziyaretciGunluk} oturum hakkını kullandın. Yarın yeni senaryolarla devam edebilirsin.` },
       { anahtar: 'site', sinir: config.siteGunluk, mesaj: 'Bugün için site genelindeki oturum hakkı doldu. Yarın tekrar dene; bu arada örnek oturumu inceleyebilirsin.' },
     ]);
+    if (sonuc.anahtar === 'site') bildirim.gonder('site-tavani', `Bugünkü site tavanı (${config.siteGunluk} oturum) doldu; yeni ziyaretçiler yarına kadar oturum açamıyor. Sık oluyorsa .env içinde SITE_GUNLUK_OTURUM değerini yükselt.`);
+    return sonuc;
   }
 
   const servis = oturumServisi({
     senaryolar, model, limit, simdi, log,
-    kaydet: (o) => store.oturumKaydet(istanbulGunu(simdi()), o),
+    kaydet: (o) => {
+      store.oturumKaydet(istanbulGunu(simdi()), o);
+      krediKontrol();
+    },
   });
   const mcp = config.mcpEnabled ? createMcpHandler({ servis, log }) : null;
 
@@ -115,6 +179,7 @@ export function createApp({ config, store, model, log = () => {}, simdi = Date.n
       gunlukHak: config.ziyaretciGunluk,
       kalanOturum: Math.max(0, config.ziyaretciGunluk - store.sayi(gun, 'z:' + kim)),
       siteAcik: store.sayi(gun, 'site') < config.siteGunluk,
+      kapaliMesaji: kapaliNedeni() ? KAPALI_MESAJI[kapaliNedeni()] : null,
       yapayZeka: model.ad !== 'sahte',
       sinirlar: { soru: SORU_UZUNLUGU, tahmin: TAHMIN_UZUNLUGU },
     };
@@ -178,6 +243,7 @@ export function createApp({ config, store, model, log = () => {}, simdi = Date.n
     } catch (err) {
       if (res.headersSent) return res.end();
       if (err instanceof KuralHatasi) return json(res, err.durum, { hata: err.message, kod: err.kod });
+      if (err instanceof ModelHatasi && KAPALI_MESAJI[err.kod]) return json(res, 503, { hata: err.message, kod: 'kapali' });
       if (err instanceof ModelHatasi) {
         log(`Model hatası: ${err.message}`);
         return json(res, 502, { hata: 'Yapay zekâ servisi şu an cevap vermiyor. Birkaç saniye sonra tekrar dene; soru hakkın düşmedi.', kod: 'model' });
@@ -194,5 +260,5 @@ export function createApp({ config, store, model, log = () => {}, simdi = Date.n
     for (const [kim, k] of istekler) if (simdi() - k.baslangic > 60_000) istekler.delete(kim);
   }
 
-  return { handle, bakim, servis };
+  return { handle, bakim, servis, krediKontrol };
 }
