@@ -17,29 +17,18 @@ Cloudflare (turuncu bulut, Full strict) ─▶ ortak Caddy ─(web ağı)─▶ 
 
 Cloudflare → `ysfdurak.com` → **DNS** → **Kayıt ekle**: `A` · ad `diyalog` · içerik SUNUCU_IP · **Proxied (turuncu bulut)**.
 
-## 3. Caddy bloğu
+## 3. Sunucuda tek komut
 
-`ysfdurak.com` deposunda `sunucu/altyapi/Caddyfile` dosyasına ekle:
-
-```
-# Diyalog Atölyesi: doğru soru sorma pratiği + MCP (github.com/ysfdurak/diyalog-atolyesi)
-diyalog.ysfdurak.com {
-	encode zstd gzip
-	reverse_proxy diyalog:8080
-}
-```
-
-## 4. Sunucuda
+Caddy bloğu ve kurulum betiği `ysfdurak.com` deposundadır (`sunucu/altyapi/Caddyfile`, `sunucu/kurulum-diyalog.sh`).
 
 ```bash
 ssh ysf
-git clone https://github.com/ysfdurak/diyalog-atolyesi.git ~/diyalog-atolyesi && cd ~/diyalog-atolyesi
-cp .env.example .env && nano .env        # ANTHROPIC_API_KEY değerini yapıştır; APP_URL doğru mu bak
-cd deploy && sudo docker compose -f docker-compose.ortak.yml up -d --build
-cd ~/ysfdurak.com && git pull && cd sunucu/altyapi && sudo docker compose restart caddy
+cd ~/ysfdurak.com && git pull && bash sunucu/kurulum-diyalog.sh
 ```
 
-## 5. Kontrol
+Betik API anahtarını sorar (yazarken görünmez), `.env` dosyasını yalnızca senin okuyabileceğin şekilde oluşturur, uygulamayı derleyip başlatır ve Caddy'yi yeniden yükler.
+
+## 4. Kontrol
 
 - `https://diyalog.ysfdurak.com/healthz` → `{"ok":true}`
 - Ana sayfada sarı "Deneme modu" kutusu **görünmemeli**. Görünüyorsa `.env` içinde `MODEL_MODE=mock` kalmıştır.
@@ -49,7 +38,7 @@ cd ~/ysfdurak.com && git pull && cd sunucu/altyapi && sudo docker compose restar
 ## Güncelleme
 
 ```bash
-cd ~/diyalog-atolyesi && git pull && cd deploy && sudo docker compose -f docker-compose.ortak.yml up -d --build
+bash ~/ysfdurak.com/sunucu/kurulum-diyalog.sh
 ```
 
 ## Sık kullanılanlar
@@ -57,7 +46,7 @@ cd ~/diyalog-atolyesi && git pull && cd deploy && sudo docker compose -f docker-
 | İş | Komut |
 |---|---|
 | Kullanım ve tahmini maliyet | `sudo docker exec diyalog node server/istatistik.js` |
-| Limitleri değiştir | `.env` içinde `ZIYARETCI_GUNLUK_OTURUM`, `SITE_GUNLUK_OTURUM`; sonra güncelleme komutu |
+| Limitleri değiştir | `.env` içinde `ZIYARETCI_GUNLUK_OTURUM`, `SITE_GUNLUK_OTURUM`; sonra güncelleme komutu (`.env` dosyası: `~/diyalog-atolyesi/.env`) |
 | Değerlendiriciyi güçlendir | `.env` içinde `DEGERLENDIRICI_MODELI=claude-sonnet-5-5` |
 | Geçici olarak kapat | `sudo docker stop diyalog` |
 
