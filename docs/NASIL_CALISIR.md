@@ -108,7 +108,7 @@ Dosyalar: `server/app.js` (kapat / izle / krediKontrol), `server/bildirim.js`, `
 - Kullanıcı hesabı yok; gelişim başka cihaza taşınmaz.
 - Soru etiketlerini model verir ve nadiren yanılabilir. Bu yüzden toplam skor kodla hesaplanır ve her etiket raporda görünür.
 - Sunucu yeniden başlarsa yarım kalan oturumlar kaybolur.
-- 3 senaryo var; rapor kaçırılan bilgileri gösterdiği için ikinci oynayış daha kolaydır. Grafikte bu yüzden yalnızca ilk deneme sayılır.
+- 6 senaryo var (her alanda iki); rapor kaçırılan bilgileri gösterdiği için ikinci oynayış daha kolaydır. Grafikte bu yüzden yalnızca ilk deneme sayılır.
 
 ## Sorulursa ne derim?
 

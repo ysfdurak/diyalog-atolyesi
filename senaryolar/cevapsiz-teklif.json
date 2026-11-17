@@ -1,0 +1,60 @@
+{
+  "id": "cevapsiz-teklif",
+  "baslik": "Teklifimiz neden cevapsız kaldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Potansiyel bir müşteriye üç hafta önce depolama ve dağıtım teklifi gönderdin. İlk görüşme çok iyi geçmişti ama o günden beri ses yok. Lojistik müdürünü telefonla yakaladın.",
+  "rolun": "İş geliştirme yöneticisisin. Amacın teklifi yeniden anlatmak değil, karşı tarafta gerçekte ne olduğunu anlamak.",
+  "karakter": {
+    "ad": "Kerem",
+    "rol": "Potansiyel müşterinin lojistik müdürü",
+    "tavir": "Nazik ama oyalayıcı; \"değerlendiriyoruz\" deyip geçmek istiyor. Satış baskısı hissedince kapanıyor. Kendi derdini soran birine açık konuşuyor.",
+    "ilk_soz": "Merhaba, kusura bakmayın dönemedim. Teklifiniz bizde, değerlendiriyoruz."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "asil-dert",
+      "onem": "kritik",
+      "bilgi": "Asıl dertleri sezon dönemindeki kapasite sıkışması; teklif ise ağırlıklı olarak birim maliyet avantajını anlatıyordu.",
+      "acilma_kosulu": "Şu an lojistikte en çok neyle uğraştıkları, öncelikleri ya da teklifte neyin eksik kaldığı sorulursa",
+      "ipucu_kelimeler": ["öncelik", "uğraş", "zorlan", "eksik", "dert", "en önemli", "ihtiyaç", "beklenti"]
+    },
+    {
+      "id": "karar-verici",
+      "onem": "kritik",
+      "bilgi": "Kararı kendisi değil finans direktörü verecek; onun endişesi geçiş maliyeti ve bu konuda teklifte hiçbir şey yok.",
+      "acilma_kosulu": "Kararın nasıl ve kimler tarafından verileceği, süreçte başka kimlerin olduğu sorulursa",
+      "ipucu_kelimeler": ["karar", "kim", "süreç", "onay", "başka", "nasıl ilerl", "dahil"]
+    },
+    {
+      "id": "mevcut-sozlesme",
+      "onem": "kritik",
+      "bilgi": "Mevcut tedarikçiyle sözleşmeleri altı ay daha sürüyor; erken çıkışın cezası var.",
+      "acilma_kosulu": "Zamanlama, mevcut tedarikçi ya da ne zaman geçiş yapabilecekleri sorulursa",
+      "ipucu_kelimeler": ["zaman", "ne zaman", "mevcut", "şu an kim", "takvim", "geçiş", "sözleşme"]
+    },
+    {
+      "id": "olumlu-izlenim",
+      "onem": "destek",
+      "bilgi": "İlk görüşmeden olumlu izlenimle çıktı; referans depo ziyareti yapmak istiyor ama bunu söylemeye fırsat bulmadı.",
+      "acilma_kosulu": "İlk görüşmeyle ilgili izlenimi ya da bir sonraki adımda neyin işine yarayacağı sorulursa",
+      "ipucu_kelimeler": ["izlenim", "sonraki adım", "yardımcı ol", "nasıl bul", "işinize yara"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Bu aralar çok yoğunuz, sıra gelmedi.",
+    "Bütçe dönemi, kararlar yavaş ilerliyor."
+  ],
+  "kok_neden": "Teklif, müşterinin asıl derdi (sezon kapasitesi) ve gerçek karar vericinin endişesi (geçiş maliyeti) anlaşılmadan hazırlandı; üstelik mevcut sözleşme altı ay daha sürüyor. Sessizliğin nedeni yoğunluk değil, eksik keşif.",
+  "kok_neden_kelimeler": ["kapasite", "sezon", "karar verici", "finans", "geçiş", "sözleşme", "keşif"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Şu sıralar lojistik tarafında sizi en çok ne zorluyor?",
+    "Böyle bir karar sizde nasıl ilerliyor, sürece kimler dahil oluyor?",
+    "Bir değişiklik yapacak olsanız zamanlama açısından sizi ne bağlıyor?",
+    "Teklifte görmeyi bekleyip göremediğiniz bir şey oldu mu?"
+  ]
+}

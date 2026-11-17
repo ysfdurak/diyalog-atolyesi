@@ -1,0 +1,60 @@
+{
+  "id": "yanlis-sevkiyat",
+  "baslik": "Mağazalara neden yanlış ürün gidiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Operasyon",
+  "sure_dk": 8,
+  "acilis": "Son bir ayda mağazalardan gelen \"yanlış ürün geldi\" şikâyetleri üç katına çıktı. Sipariş hacmi ve ekip aynı. Sevkiyat sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın hatayı yapanı bulmak değil, hatanın neden artık yakalanmadığını anlamak.",
+  "karakter": {
+    "ad": "Derya",
+    "rol": "Sevkiyat sorumlusu",
+    "tavir": "İşini iyi yaptığına inanıyor ve hedeflerini tutturmakla gurur duyuyor. \"Dikkatsizlik\" imasına sertleşiyor. İşin nasıl yapıldığını merak eden birine ayrıntı veriyor.",
+    "ilk_soz": "Şikâyetleri ben de gördüm. Ama şunu söyleyeyim, ekip bu ay hız hedefini ilk kez tutturdu."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "hiz-primi",
+      "onem": "kritik",
+      "bilgi": "Geçen ay saatlik koli sayısına bağlı bir hız primi başladı; ekip o günden beri hıza odaklanıyor.",
+      "acilma_kosulu": "Son bir ayda ne değiştiği, hedefler, prim ya da ekibin neye göre değerlendirildiği sorulursa",
+      "ipucu_kelimeler": ["değiş", "hedef", "prim", "değerlendir", "ölç", "ne oldu", "yeni"]
+    },
+    {
+      "id": "kontrol-atlaniyor",
+      "onem": "kritik",
+      "bilgi": "Koli kapatılmadan önceki son barkod kontrolü zaman aldığı için çoğu zaman atlanıyor; sistem bu adımı zorunlu tutmuyor.",
+      "acilma_kosulu": "Bir kolinin hazırlanma adımları, kontrolün nasıl yapıldığı ya da hatanın normalde nerede yakalanması gerektiği sorulursa",
+      "ipucu_kelimeler": ["adım", "kontrol", "nasıl hazır", "yakala", "süreç", "koli kapat", "nasıl yapıl"]
+    },
+    {
+      "id": "benzer-urun",
+      "onem": "kritik",
+      "bilgi": "Hataların çoğu yan yana raflarda duran, aynı modelin farklı renk ve bedenlerinde oluyor.",
+      "acilma_kosulu": "Hataların hangi ürünlerde, nerede ya da ne tür olduğu, ortak bir özelliği olup olmadığı sorulursa",
+      "ipucu_kelimeler": ["hangi ürün", "ne tür", "ortak", "nerede olu", "örnek", "benzer", "hangi hata"]
+    },
+    {
+      "id": "kayit-yok",
+      "onem": "destek",
+      "bilgi": "Hatalar kişi ya da istasyon bazında kaydedilmiyor; yalnızca mağaza şikâyeti olarak geliyor.",
+      "acilma_kosulu": "Hataların nasıl takip edildiği, kaydı ya da verisi sorulursa",
+      "ipucu_kelimeler": ["takip", "kayıt", "veri", "rapor", "kim yap"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Mağazalar da artık her şeye şikâyet ediyor.",
+    "Yoğun günlerde birkaç dikkatsizlik oluyor tabii."
+  ],
+  "kok_neden": "Hız primi, sistemin zorunlu tutmadığı son barkod kontrolünü atlamayı ödüllendirdi; yan yana duran benzer ürünler de karışınca hatalar yakalanmadan çıkıyor. Sorun dikkatsizlik değil, teşvik ile kontrolün çelişmesi.",
+  "kok_neden_kelimeler": ["prim", "hız", "kontrol", "barkod", "benzer", "atla"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Şikâyetler artmaya başlamadan önce ekipte ya da hedeflerde ne değişti?",
+    "Bir koli hazırlanırken hangi adımlardan geçiyor?",
+    "Yanlış giden ürünlerin ortak bir özelliği var mı, hangi ürünlerde oluyor?",
+    "Bir hata normalde hangi adımda yakalanıyordu?"
+  ]
+}

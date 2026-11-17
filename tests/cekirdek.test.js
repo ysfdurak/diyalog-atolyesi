@@ -14,8 +14,12 @@ const senaryolar = senaryolariYukle(join(kok, 'senaryolar'));
 const depo = senaryolar.get('depo-verim-dususu');
 const serbest = () => ({ izin: true });
 
-test('senaryolar: üç senaryo geçerli ve ağırlıklar 100 ediyor', () => {
-  assert.equal(senaryolar.size, 3);
+test('senaryolar: altı senaryo geçerli, her alanda iki tane ve ağırlıklar 100 ediyor', () => {
+  assert.equal(senaryolar.size, 6);
+  const alanlar = {};
+  for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
+  assert.deepEqual(alanlar, { 'İş geliştirme': 2, Operasyon: 2, 'Ekip yönetimi': 2 });
+  for (const s of senaryolar.values()) assert.equal(s.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3);
   for (const s of senaryolar.values()) assert.deepEqual(senaryoDogrula(s), []);
   assert.equal(BOYUTLAR.reduce((t, b) => t + b.agirlik, 0), 100);
 });
@@ -36,8 +40,8 @@ test('senaryolar: hatalı senaryo nedenleriyle reddedilir', () => {
 
 test('senaryolar: günün senaryosu gün içinde sabit, günler arasında dönüyor', () => {
   assert.equal(gununSenaryosu(senaryolar, '2026-11-16').id, gununSenaryosu(senaryolar, '2026-11-16').id);
-  const uc = new Set(['2026-11-16', '2026-11-17', '2026-11-18'].map((g) => gununSenaryosu(senaryolar, g).id));
-  assert.equal(uc.size, 3);
+  const alti = new Set(['2026-11-16', '2026-11-17', '2026-11-18', '2026-11-19', '2026-11-20', '2026-11-21'].map((g) => gununSenaryosu(senaryolar, g).id));
+  assert.equal(alti.size, 6);
 });
 
 test('puanlama: oran 1-5 aralığına çevrilir', () => {
@@ -190,4 +194,17 @@ test('anthropic: geçici hatada bir kez yeniden dener, kalıcı hatada ModelHata
   await assert.rejects(m2.karakter({ senaryo: depo, gecmis: [], soru: 's', acilanlar: [] }), ModelHatasi);
   const m3 = anthropicModel({ apiKey: 'k', karakterModeli: 'a', degerlendiriciModeli: 'b', fetch: async () => ({ ok: true, status: 200, json: async () => ({ content: [{ type: 'text', text: 'serbest metin' }] }) }) });
   await assert.rejects(m3.karakter({ senaryo: depo, gecmis: [], soru: 's', acilanlar: [] }), /beklenen biçimde/);
+});
+
+test('senaryolar: her senaryoda iyi sorular kritik bilgiyi açar, suçlayıcı soru açmaz (sahte modelle)', async () => {
+  for (const s of senaryolar.values()) {
+    const servis = oturumServisi({ senaryolar, model: sahteModel(), limit: serbest });
+    const { oturumId } = servis.baslat({ senaryoId: s.id });
+    await servis.soruSor({ oturumId, soru: 'Ekip isteksiz, değil mi?' });
+    for (const soru of s.ideal_sorular.slice(0, 4)) await servis.soruSor({ oturumId, soru });
+    const rapor = await servis.degerlendir({ oturumId, tahmin: s.kok_neden });
+    assert.equal(rapor.sorular[0].yonlendirici, true, s.id);
+    assert.ok(rapor.acilanlar.filter((b) => b.onem === 'kritik').length >= 2, `${s.id}: ideal sorular en az iki kritik bilgiyi açmalı`);
+    assert.equal(rapor.boyutlar.find((b) => b.anahtar === 'sonuc').puan, 5, s.id);
+  }
 });
