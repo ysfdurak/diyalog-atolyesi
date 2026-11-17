@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { gununSenaryosu, herkeseAcik, senaryoDogrula, senaryolariYukle } from '../src/cekirdek/senaryolar.js';
+import { gununSenaryosu, herkeseAcik, senaryoDogrula, senaryolariYukle, varyantCozumle } from '../src/cekirdek/senaryolar.js';
 import { BOYUTLAR, degerlendirmeyiDuzelt, orandanPuana, puanla } from '../src/cekirdek/puanlama.js';
 import { KuralHatasi, oturumServisi } from '../src/cekirdek/oturum.js';
 import { anthropicModel, ModelHatasi, sahteModel } from '../src/cekirdek/model.js';
@@ -11,24 +11,30 @@ import { karakterIstemi } from '../src/cekirdek/istemler.js';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const senaryolar = senaryolariYukle(join(kok, 'senaryolar'));
-const depo = senaryolar.get('depo-verim-dususu');
+const depoTemel = senaryolar.get('depo-verim-dususu');
+const depo = varyantCozumle(depoTemel, 'v1');
 const serbest = () => ({ izin: true });
+const ilkVaryant = (a) => a[0]; // testlerde varyant seçimi sabit: adaylardan ilki
 
 test('senaryolar: altı senaryo geçerli, her alanda iki tane ve ağırlıklar 100 ediyor', () => {
   assert.equal(senaryolar.size, 6);
   const alanlar = {};
   for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
   assert.deepEqual(alanlar, { 'İş geliştirme': 2, Operasyon: 2, 'Ekip yönetimi': 2 });
-  for (const s of senaryolar.values()) assert.equal(s.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3);
+  for (const s of senaryolar.values()) for (const v of s.varyantlar) assert.equal(v.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3, `${s.id}/${v.id}`);
+  assert.equal(depoTemel.varyantlar.length, 3);
   for (const s of senaryolar.values()) assert.deepEqual(senaryoDogrula(s), []);
   assert.equal(BOYUTLAR.reduce((t, b) => t + b.agirlik, 0), 100);
 });
 
 test('senaryolar: oyuncuya giden veride gizli bilgi ve kök neden yok', () => {
-  const acik = JSON.stringify(herkeseAcik(depo));
-  assert.ok(!acik.includes('adresleme düzeni'));
-  assert.ok(!acik.includes(depo.kok_neden));
-  assert.ok(!('gizli_bilgiler' in herkeseAcik(depo)));
+  const acik = JSON.stringify(herkeseAcik(depoTemel));
+  for (const v of depoTemel.varyantlar) {
+    assert.ok(!acik.includes(v.kok_neden));
+    for (const b of v.gizli_bilgiler) assert.ok(!acik.includes(b.bilgi), b.id);
+  }
+  assert.ok(!('gizli_bilgiler' in herkeseAcik(depoTemel)));
+  assert.deepEqual(herkeseAcik(depoTemel).varyantlar, ['v1', 'v2', 'v3']);
 });
 
 test('senaryolar: hatalı senaryo nedenleriyle reddedilir', () => {
@@ -79,7 +85,7 @@ test('puanlama: bozuk model çıktısı güvenli varsayılanlara çekilir', () =
 
 test('oturum: baştan sona akış, gizli bilgi yalnızca raporda görünür', async () => {
   const kayitlar = [];
-  const servis = oturumServisi({ senaryolar, model: sahteModel(), limit: serbest, kaydet: (o) => kayitlar.push(o) });
+  const servis = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model: sahteModel(), limit: serbest, kaydet: (o) => kayitlar.push(o) });
   const b = servis.baslat({ senaryoId: 'depo-verim-dususu' });
   assert.equal(b.kalanSoru, 5);
   const c1 = await servis.soruSor({ oturumId: b.oturumId, soru: 'Verim düşmeden önce süreçte ne değişti?' });
@@ -103,7 +109,7 @@ test('oturum: baştan sona akış, gizli bilgi yalnızca raporda görünür', as
 });
 
 test('oturum: soru hakkı, uzunluk, boş soru ve bilinmeyen oturum kuralları', async () => {
-  const servis = oturumServisi({ senaryolar, model: sahteModel(), limit: serbest });
+  const servis = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model: sahteModel(), limit: serbest });
   const { oturumId } = servis.baslat({ senaryoId: 'geciken-teslimler' });
   await assert.rejects(servis.degerlendir({ oturumId, tahmin: 'x' }), /en az bir soru/);
   await assert.rejects(servis.soruSor({ oturumId, soru: '   ' }), /boş olamaz/);
@@ -116,9 +122,9 @@ test('oturum: soru hakkı, uzunluk, boş soru ve bilinmeyen oturum kuralları', 
 
 test('oturum: limit doluysa oturum açılmaz, süresi dolan oturum silinir', async () => {
   let an = 1_000_000;
-  const servis = oturumServisi({ senaryolar, model: sahteModel(), limit: () => ({ izin: false, mesaj: 'Hak doldu.' }), simdi: () => an });
+  const servis = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model: sahteModel(), limit: () => ({ izin: false, mesaj: 'Hak doldu.' }), simdi: () => an });
   assert.throws(() => servis.baslat({ senaryoId: 'depo-verim-dususu' }), (e) => e.durum === 429 && e.message === 'Hak doldu.');
-  const servis2 = oturumServisi({ senaryolar, model: sahteModel(), limit: serbest, simdi: () => an });
+  const servis2 = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model: sahteModel(), limit: serbest, simdi: () => an });
   const { oturumId } = servis2.baslat({ senaryoId: 'depo-verim-dususu' });
   an += 46 * 60_000;
   assert.throws(() => servis2.soruSor({ oturumId, soru: 'Ne değişti?' }), /süresi doldu/);
@@ -135,7 +141,7 @@ test('oturum: model tanımsız kimlik açarsa yok sayılır; model hatasında so
     },
     async degerlendir() { return {}; },
   };
-  const servis = oturumServisi({ senaryolar, model, limit: serbest });
+  const servis = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model, limit: serbest });
   const { oturumId } = servis.baslat({ senaryoId: 'depo-verim-dususu' });
   await assert.rejects(servis.soruSor({ oturumId, soru: 'Ne değişti?' }), ModelHatasi);
   hata = false;
@@ -148,7 +154,7 @@ test('oturum: model tanımsız kimlik açarsa yok sayılır; model hatasında so
 test('oturum: aynı oturumda eşzamanlı ikinci istek reddedilir', async () => {
   let birak;
   const model = { karakter: () => new Promise((r) => { birak = () => r({ cevap: 'Tamam.', acilan: [] }); }), degerlendir: async () => ({}) };
-  const servis = oturumServisi({ senaryolar, model, limit: serbest });
+  const servis = oturumServisi({ varyantSec: ilkVaryant, senaryolar, model, limit: serbest });
   const { oturumId } = servis.baslat({ senaryoId: 'depo-verim-dususu' });
   const ilk = servis.soruSor({ oturumId, soru: 'Bir?' });
   await assert.rejects(servis.soruSor({ oturumId, soru: 'İki?' }), /hâlâ işleniyor/);
@@ -196,15 +202,52 @@ test('anthropic: geçici hatada bir kez yeniden dener, kalıcı hatada ModelHata
   await assert.rejects(m3.karakter({ senaryo: depo, gecmis: [], soru: 's', acilanlar: [] }), /beklenen biçimde/);
 });
 
-test('senaryolar: her senaryoda iyi sorular kritik bilgiyi açar, suçlayıcı soru açmaz (sahte modelle)', async () => {
+test('senaryolar: her varyantta iyi sorular kritik bilgiyi açar, suçlayıcı soru açmaz (sahte modelle)', async () => {
   for (const s of senaryolar.values()) {
-    const servis = oturumServisi({ senaryolar, model: sahteModel(), limit: serbest });
-    const { oturumId } = servis.baslat({ senaryoId: s.id });
-    await servis.soruSor({ oturumId, soru: 'Ekip isteksiz, değil mi?' });
-    for (const soru of s.ideal_sorular.slice(0, 4)) await servis.soruSor({ oturumId, soru });
-    const rapor = await servis.degerlendir({ oturumId, tahmin: s.kok_neden });
-    assert.equal(rapor.sorular[0].yonlendirici, true, s.id);
-    assert.ok(rapor.acilanlar.filter((b) => b.onem === 'kritik').length >= 2, `${s.id}: ideal sorular en az iki kritik bilgiyi açmalı`);
-    assert.equal(rapor.boyutlar.find((b) => b.anahtar === 'sonuc').puan, 5, s.id);
+    for (const { id: vid } of s.varyantlar) {
+      const v = varyantCozumle(s, vid);
+      const servis = oturumServisi({ varyantSec: () => vid, senaryolar, model: sahteModel(), limit: serbest });
+      const { oturumId } = servis.baslat({ senaryoId: s.id });
+      await servis.soruSor({ oturumId, soru: 'Ekip isteksiz, değil mi?' });
+      for (const soru of v.ideal_sorular.slice(0, 4)) await servis.soruSor({ oturumId, soru });
+      const rapor = await servis.degerlendir({ oturumId, tahmin: v.kok_neden });
+      const ad = `${s.id}/${vid}`;
+      assert.equal(rapor.senaryo.varyant, vid, ad);
+      assert.equal(rapor.sorular[0].yonlendirici, true, ad);
+      assert.ok(rapor.acilanlar.filter((b) => b.onem === 'kritik').length >= 2, `${ad}: ideal sorular en az iki kritik bilgiyi açmalı`);
+      assert.equal(rapor.boyutlar.find((b) => b.anahtar === 'sonuc').puan, 5, ad);
+    }
   }
+});
+
+test('varyant: doğrulama kuralları', () => {
+  const { varyantlar, ...temel } = depoTemel;
+  const v = varyantlar[0];
+  assert.deepEqual(senaryoDogrula(depoTemel), []);
+  assert.match(senaryoDogrula({ ...temel, varyantlar: [] }).join(' '), /boş olmayan bir liste/);
+  assert.match(senaryoDogrula({ ...temel, kok_neden: 'üstte', varyantlar }).join(' '), /her varyantın içinde/);
+  assert.match(senaryoDogrula({ ...temel, varyantlar: [v, { ...v }] }).join(' '), /yineleniyor: v1/);
+  assert.match(senaryoDogrula({ ...temel, varyantlar: [{ ...v, id: 'V 2' }] }).join(' '), /"id" alanı olmalı/);
+  assert.match(senaryoDogrula({ ...temel, varyantlar: [{ ...v, kok_neden: '' }] }).join(' '), /Varyant "v1": "kok_neden"/);
+  // Eski biçim (varyantsız) tek varyant sayılır
+  const eski = senaryolariYukle(join(kok, 'senaryolar')).get('musteri-sozlesme');
+  assert.deepEqual(eski.varyantlar.map((x) => x.id), ['v1']);
+  assert.ok(!('gizli_bilgiler' in eski));
+  assert.throws(() => varyantCozumle(eski, 'v9'), /varyantı yok/);
+});
+
+test('varyant: oynanmamış olandan seçilir, hepsi oynandıysa tümünden; ortak alanlar varyantta ezilebilir', async () => {
+  const gorulen = [];
+  const servis = oturumServisi({ varyantSec: (a) => { gorulen.push([...a]); return a[a.length - 1]; }, senaryolar, model: sahteModel(), limit: serbest });
+  const b1 = servis.baslat({ senaryoId: 'depo-verim-dususu', oynananlar: ['v1'] });
+  assert.ok(!('varyant' in b1.senaryo) && !JSON.stringify(b1).includes('kok_neden')); // seçilen varyant oyun sırasında söylenmez
+  servis.baslat({ senaryoId: 'depo-verim-dususu', oynananlar: ['v1', 'v2', 'v3'] });
+  servis.baslat({ senaryoId: 'depo-verim-dususu', oynananlar: 'bozuk' });
+  assert.deepEqual(gorulen, [['v2', 'v3'], ['v1', 'v2', 'v3'], ['v1', 'v2', 'v3']]);
+  await servis.soruSor({ oturumId: b1.oturumId, soru: 'Bu düşüş nasıl ölçülüyor?' });
+  const rapor = await servis.degerlendir({ oturumId: b1.oturumId, tahmin: '' });
+  assert.deepEqual([rapor.senaryo.varyant, rapor.senaryo.varyantNo, rapor.senaryo.varyantSayisi], ['v3', 3, 3]);
+  assert.equal(rapor.idealSorular[1], 'Bu %18\'lik düşüş nasıl ölçülüyor?'); // v3'ün kendi soruları
+  assert.equal(varyantCozumle(depoTemel, 'v2').ideal_sorular, depoTemel.ideal_sorular); // v2 ortak soruları kullanır
+  assert.equal(varyantCozumle(depoTemel, 'v2').yaniltici_ipuclari, depoTemel.yaniltici_ipuclari);
 });

@@ -14,47 +14,242 @@
     "tavir": "Savunmacı. Suçlanmaktan çekiniyor, başta kısa cevap veriyor. Kendisini dinleyen, merakla soran birine açılıyor.",
     "ilk_soz": "Buyurun, verim konusunu konuşacakmışız. Biz elimizden geleni yapıyoruz aslında."
   },
-  "gizli_bilgiler": [
-    {
-      "id": "adresleme",
-      "onem": "kritik",
-      "bilgi": "3 hafta önce yeni adresleme düzeni devreye girdi. Gündüz ekibine eğitim verildi, gece ekibine verilmedi.",
-      "acilma_kosulu": "Son haftalarda süreçte, düzende ya da sistemde ne değiştiği, düşüş başlamadan önce ne olduğu ya da eğitim sorulursa",
-      "ipucu_kelimeler": ["değiş", "önce ne", "ne oldu", "eğitim", "yeni", "farklı", "ne zaman"]
-    },
-    {
-      "id": "gecici-personel",
-      "onem": "kritik",
-      "bilgi": "Gece ekibinin yaklaşık %40'ı geçici personel ve bu kişiler sürekli değişiyor.",
-      "acilma_kosulu": "Ekibin yapısı, kadrosu, deneyimi ya da personel değişimi sorulursa",
-      "ipucu_kelimeler": ["ekip", "kadro", "personel", "deneyim", "kimler", "kaç kişi", "geçici"]
-    },
-    {
-      "id": "el-terminali",
-      "onem": "kritik",
-      "bilgi": "El terminallerindeki adres bilgisi gece güncellenmeden kalıyor; güncelleme yalnızca gündüz yapılıyor.",
-      "acilma_kosulu": "Ekipman, el terminali, sistem ya da gündüz ile gece arasındaki fark sorulursa",
-      "ipucu_kelimeler": ["terminal", "ekipman", "cihaz", "sistem", "gündüz", "fark", "güncel"]
-    },
-    {
-      "id": "adres-hatasi",
-      "onem": "destek",
-      "bilgi": "Gece sık sık \"adres bulunamadı\" hatası alınıyor; toplayıcılar ürünü aramakla vakit kaybediyor.",
-      "acilma_kosulu": "Toplayıcıların nerede vakit kaybettiği, işin nerede takıldığı, hatalar ya da şikâyetler sorulursa",
-      "ipucu_kelimeler": ["vakit", "zaman", "takıl", "hata", "şikâyet", "şikayet", "zorlan", "sorun yaşı"]
-    }
-  ],
   "yaniltici_ipuclari": [
     "Ekip son zamanlarda biraz isteksiz.",
     "Gece çalışmak zor, insanlar yoruluyor."
   ],
-  "kok_neden": "Adresleme değişikliği gece vardiyasına eğitim ve sistem güncellemesiyle taşınmadı; sürekli değişen geçici personel etkiyi büyüttü.",
-  "kok_neden_kelimeler": ["adres", "eğitim", "geçici", "terminal", "güncel"],
   "soru_hakki": 5,
   "ideal_sorular": [
     "Verim düşmeden hemen önce süreçte ya da düzende ne değişti?",
     "Toplayıcılar bir siparişi toplarken en çok nerede vakit kaybediyor?",
     "Gece ekibinin yapısı gündüzden nasıl farklı?",
     "Gündüz ekibinde olup gece ekibinde olmayan ne var?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Adresleme değişikliği gece vardiyasına taşınmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "adresleme",
+          "onem": "kritik",
+          "bilgi": "3 hafta önce yeni adresleme düzeni devreye girdi. Gündüz ekibine eğitim verildi, gece ekibine verilmedi.",
+          "acilma_kosulu": "Son haftalarda süreçte, düzende ya da sistemde ne değiştiği, düşüş başlamadan önce ne olduğu ya da eğitim sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "önce ne",
+            "ne oldu",
+            "eğitim",
+            "yeni",
+            "farklı",
+            "ne zaman"
+          ]
+        },
+        {
+          "id": "gecici-personel",
+          "onem": "kritik",
+          "bilgi": "Gece ekibinin yaklaşık %40'ı geçici personel ve bu kişiler sürekli değişiyor.",
+          "acilma_kosulu": "Ekibin yapısı, kadrosu, deneyimi ya da personel değişimi sorulursa",
+          "ipucu_kelimeler": [
+            "ekip",
+            "kadro",
+            "personel",
+            "deneyim",
+            "kimler",
+            "kaç kişi",
+            "geçici"
+          ]
+        },
+        {
+          "id": "el-terminali",
+          "onem": "kritik",
+          "bilgi": "El terminallerindeki adres bilgisi gece güncellenmeden kalıyor; güncelleme yalnızca gündüz yapılıyor.",
+          "acilma_kosulu": "Ekipman, el terminali, sistem ya da gündüz ile gece arasındaki fark sorulursa",
+          "ipucu_kelimeler": [
+            "terminal",
+            "ekipman",
+            "cihaz",
+            "sistem",
+            "gündüz",
+            "fark",
+            "güncel"
+          ]
+        },
+        {
+          "id": "adres-hatasi",
+          "onem": "destek",
+          "bilgi": "Gece sık sık \"adres bulunamadı\" hatası alınıyor; toplayıcılar ürünü aramakla vakit kaybediyor.",
+          "acilma_kosulu": "Toplayıcıların nerede vakit kaybettiği, işin nerede takıldığı, hatalar ya da şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "vakit",
+            "zaman",
+            "takıl",
+            "hata",
+            "şikâyet",
+            "şikayet",
+            "zorlan",
+            "sorun yaşı"
+          ]
+        }
+      ],
+      "kok_neden": "Adresleme değişikliği gece vardiyasına eğitim ve sistem güncellemesiyle taşınmadı; sürekli değişen geçici personel etkiyi büyüttü.",
+      "kok_neden_kelimeler": [
+        "adres",
+        "eğitim",
+        "geçici",
+        "terminal",
+        "güncel"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gündüzden devreden ikmal açığı ve arızalı forklift",
+      "gizli_bilgiler": [
+        {
+          "id": "ikmal",
+          "onem": "kritik",
+          "bilgi": "Raf ikmali gündüz ekibinin işiydi. 3 hafta önce gündüz ekibi iki kişi küçültülünce ikmal yetişmiyor; gece toplayıcılar sık sık boş göze geliyor.",
+          "acilma_kosulu": "Son haftalarda ne değiştiği, rafların ve stoğun durumu ya da gündüzden geceye devreden iş sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "raf",
+            "stok",
+            "boş",
+            "ikmal",
+            "devr",
+            "önce ne",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "forklift",
+          "onem": "kritik",
+          "bilgi": "Gece çalışan iki reach truck'tan biri 3 haftadır arızalı; yedek parça bekleniyor.",
+          "acilma_kosulu": "Ekipman, araçlar, forklift ya da işin yapılması için gerekenler sorulursa",
+          "ipucu_kelimeler": [
+            "ekipman",
+            "araç",
+            "forklift",
+            "makine",
+            "cihaz",
+            "arıza",
+            "neye ihtiyaç",
+            "gündüzde olup"
+          ]
+        },
+        {
+          "id": "bekleme",
+          "onem": "kritik",
+          "bilgi": "Boş göz çıkınca toplayıcı, ürünü üst raftan indirmek için tek çalışan forklifti bekliyor; bekleme 20 dakikayı bulabiliyor.",
+          "acilma_kosulu": "Toplayıcıların nerede vakit kaybettiği, nerede beklediği ya da işin nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "vakit",
+            "bekle",
+            "takıl",
+            "zaman kayb",
+            "zorlan",
+            "nerede"
+          ]
+        },
+        {
+          "id": "bakim-yok",
+          "onem": "destek",
+          "bilgi": "Gece vardiyasında bakım teknisyeni yok; arızalar sabaha kalıyor.",
+          "acilma_kosulu": "Arızaların nasıl giderildiği, bakım ya da teknik destek sorulursa",
+          "ipucu_kelimeler": [
+            "bakım",
+            "teknik",
+            "tamir",
+            "gider"
+          ]
+        }
+      ],
+      "kok_neden": "Gündüz ekibi küçülünce raf ikmali yetişmiyor; gece toplayıcılar boş göze geliyor ve ürünü üst raftan indirmek için tek çalışan forklifti bekliyor. Sorun gece ekibinin performansı değil, gündüzden devreden iş ve arızalı ekipman.",
+      "kok_neden_kelimeler": [
+        "ikmal",
+        "boş",
+        "forklift",
+        "reach",
+        "arıza",
+        "gündüz",
+        "bekle"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İş yavaşlamadı, ölçü yanıltıyor: tek ürünlü e-ticaret siparişleri",
+      "gizli_bilgiler": [
+        {
+          "id": "eticaret",
+          "onem": "kritik",
+          "bilgi": "3 hafta önce e-ticaret siparişleri gece dalgasına taşındı; geceye çok sayıda tek ürünlü küçük sipariş geliyor.",
+          "acilma_kosulu": "Son haftalarda ne değiştiği, gelen siparişlerin yapısı ya da iş yükü sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "sipariş",
+            "iş yük",
+            "ne oldu",
+            "önce ne",
+            "gelen iş",
+            "yeni"
+          ]
+        },
+        {
+          "id": "olcum",
+          "onem": "kritik",
+          "bilgi": "Verim saatte toplanan adetle ölçülüyor; tek ürünlü siparişte yürüme süresi aynı kalırken toplanan adet düşüyor.",
+          "acilma_kosulu": "Verimin nasıl ölçüldüğü ya da %18'lik düşüşün nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "ölç",
+            "hesap",
+            "verim nasıl",
+            "metrik",
+            "gösterge"
+          ]
+        },
+        {
+          "id": "satir",
+          "onem": "kritik",
+          "bilgi": "Toplanan sipariş satırı sayısına bakılırsa gece ekibi aslında öncekinden fazla iş çıkarıyor.",
+          "acilma_kosulu": "Başka bir ölçüyle (satır, sipariş sayısı) durumun nasıl göründüğü, ekibin gerçekte ne kadar iş çıkardığı ya da gündüz ile gece arasındaki farkın nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "satır",
+            "sipariş sayısı",
+            "ne kadar iş",
+            "gerçekte",
+            "gündüz"
+          ]
+        },
+        {
+          "id": "toplu-toplama-yok",
+          "onem": "destek",
+          "bilgi": "E-ticaret siparişleri toplu toplanmıyor; her sipariş için ayrı tur atılıyor.",
+          "acilma_kosulu": "Siparişlerin nasıl toplandığı, toplama yöntemi ya da toplayıcıların nerede vakit kaybettiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl topla",
+            "yöntem",
+            "tur",
+            "vakit",
+            "yürü",
+            "nerede"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip yavaşlamadı: gece dalgasına tek ürünlü e-ticaret siparişleri taşındı ve verim saatte toplanan adetle ölçüldüğü için düşmüş görünüyor. Satır bazında iş arttı; asıl fırsat bu siparişleri toplu toplamak.",
+      "kok_neden_kelimeler": [
+        "e-ticaret",
+        "tek ürün",
+        "ölç",
+        "adet",
+        "satır",
+        "toplu"
+      ],
+      "ideal_sorular": [
+        "Verim düşmeden hemen önce süreçte ya da düzende ne değişti?",
+        "Bu %18'lik düşüş nasıl ölçülüyor?",
+        "Gece gelen siparişlerin yapısı gündüzden nasıl farklı?",
+        "Toplayıcılar bir siparişi toplarken en çok nerede vakit kaybediyor?"
+      ]
+    }
   ]
 }

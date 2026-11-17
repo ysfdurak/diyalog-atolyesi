@@ -39,6 +39,16 @@ Model cevabını serbest metin olarak değil, bir **form doldurarak** verir (API
 
 Gizli bilgiler ve kök neden tarayıcıya hiç gönderilmez; yalnızca oturum bitince raporda görünür. Bunu kontrol eden testler var.
 
+## Varyantlar: ezber yerine soru kalıbı
+
+Bir senaryonun birden fazla kök nedeni (varyantı) olabilir. Açılış ve karakter aynıdır, gizli bilgiler ve kök neden değişir. Oturum açılırken tarayıcı, bu senaryoda daha önce oynadığı varyantların kimliklerini gönderir; sunucu oynanmamış olanlardan birini rastgele seçer. Seçilen varyant rapora kadar söylenmez.
+
+- **Neden:** Rapor kök nedeni gösterdiği için tek kök nedenli senaryo bir kez oynanınca biter. Varyantla "şöyle sorabilirdin" önerileri bir sonraki oynayışta da işe yarar, ama önceki cevap yaramaz. Kişi cevabı değil, soru kalıbını öğrenir.
+- **Gelişim grafiği** her varyantın yalnızca ilk denemesini sayar.
+- **Şu an:** Depo senaryosunun 3 varyantı var (adresleme değişikliği, ikmal açığı ve arızalı forklift, ölçünün yanıltması). Diğer senaryolar tek varyantlı.
+
+Dosyalar: `src/cekirdek/senaryolar.js` (varyantCozumle), `src/cekirdek/oturum.js` (baslat).
+
 ## Puanlama
 
 | Boyut | Ağırlık | Nasıl hesaplanır |
@@ -108,7 +118,7 @@ Dosyalar: `server/app.js` (kapat / izle / krediKontrol), `server/bildirim.js`, `
 - Kullanıcı hesabı yok; gelişim başka cihaza taşınmaz.
 - Soru etiketlerini model verir ve nadiren yanılabilir. Bu yüzden toplam skor kodla hesaplanır ve her etiket raporda görünür.
 - Sunucu yeniden başlarsa yarım kalan oturumlar kaybolur.
-- 6 senaryo var (her alanda iki); rapor kaçırılan bilgileri gösterdiği için ikinci oynayış daha kolaydır. Grafikte bu yüzden yalnızca ilk deneme sayılır.
+- 6 senaryo var (her alanda iki); şimdilik yalnızca depo senaryosu çok varyantlı. Tek varyantlı senaryolarda ikinci oynayış kolaydır; grafikte bu yüzden her varyantın yalnızca ilk denemesi sayılır.
 
 ## Sorulursa ne derim?
 
@@ -129,6 +139,9 @@ Karakterin talimatı bunu reddetmesini söylüyor ve bir cevapta en fazla bir bi
 
 **"Kredi biterse ne olur?"**
 Uygulama çökmez: canlı oturumlar kapanır, ziyaretçi nedenini okur ve örnek oturuma yönlendirilir, bana telefon bildirimi gelir. Yükleme yapınca en geç yarım saatte kendiliğinden açılır.
+
+**"Aynı senaryoyu tekrar oynayınca cevabı bilmiyor musun?"**
+Senaryoların farklı kök nedenleri var ve tekrar oynayınca oynamadığın biri geliyor. Önceki raporu hatırlamak işe yaramıyor; işe yarayan, "ne değişti, iş nerede takılıyor, bunu nasıl ölçüyoruz" gibi soru kalıpları. Asıl öğretmek istediğim de bu.
 
 **"MCP ne işe yarıyor?"**
 Aynı senaryolar Claude'un içinden de oynanabiliyor. Web ve MCP aynı çekirdeği çağırdığı için kurallar ve puanlama iki tarafta da aynı.

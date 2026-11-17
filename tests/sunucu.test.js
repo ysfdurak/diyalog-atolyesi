@@ -18,7 +18,7 @@ const ANAHTAR = 'm'.repeat(40);
 const calisan = new Set();
 test.after(async () => { for (const kapat of calisan) await kapat(); });
 
-async function baslat(env = {}, { model = sahteModel(), bildirim, simdi } = {}) {
+async function baslat(env = {}, { model = sahteModel(), bildirim, simdi, varyantSec = (a) => a[0] } = {}) {
   const config = loadConfig({ MODEL_MODE: 'mock', DATA_DIR: mkdtempSync(join(tmpdir(), 'diyalog-')), ...env });
   assert.deepEqual(config.errors, []);
   const store = openStore(config.dbFile);
@@ -26,7 +26,7 @@ async function baslat(env = {}, { model = sahteModel(), bildirim, simdi } = {}) 
   await new Promise((r) => server.listen(0, '127.0.0.1', r));
   const taban = `http://127.0.0.1:${server.address().port}`;
   config.appUrl = taban + '/';
-  const app = createApp({ config, store, model, bildirim, simdi });
+  const app = createApp({ config, store, model, bildirim, simdi, varyantSec });
   server.on('request', app.handle);
   const kapat = () => new Promise((r) => { server.close(() => { store.close(); r(); }); server.closeAllConnections(); });
   calisan.add(kapat);
@@ -262,4 +262,27 @@ test('ayarlar: bildirim ve kredi değerleri doğrulanır', () => {
   assert.match(loadConfig({ MODEL_MODE: 'mock', KREDI_BASLANGIC: '16.11.2026' }).errors.join(' '), /KREDI_BASLANGIC/);
   const c = loadConfig({ MODEL_MODE: 'mock', BILDIRIM_URL: 'https://ntfy.sh/konu', KREDI_USD: '5', KREDI_BASLANGIC: '2026-11-16' });
   assert.deepEqual([c.errors, c.bildirimUrl, c.krediUsd, c.krediBaslangic, c.krediUyariYuzde], [[], 'https://ntfy.sh/konu', 5, '2026-11-16', 20]);
+});
+
+test('varyant: web, oynanan varyantları dışarıda bırakır ve özete yazar; eski veritabanı yükseltilir', async () => {
+  const { post, store } = await baslat({}, { varyantSec: undefined }); // gerçek rastgele seçim
+  const o = await post('/api/oturum', { senaryoId: 'depo-verim-dususu', oynananVaryantlar: ['v1', 'v2'] });
+  assert.equal(o.durum, 200);
+  assert.ok(!JSON.stringify(o.veri).includes('"varyant"'));
+  await post('/api/oturum/soru', { oturumId: o.veri.oturumId, soru: 'Bu düşüş nasıl ölçülüyor?' });
+  const r = await post('/api/oturum/degerlendir', { oturumId: o.veri.oturumId, tahmin: 'Ölçü yanıltıyor.' });
+  assert.equal(r.veri.senaryo.varyant, 'v3'); // tek aday v3'tü
+  assert.deepEqual(store.istatistik(istanbulGunu()).biten.map((b) => [b.senaryo, b.varyant]), [['depo-verim-dususu', 'v3']]);
+  assert.equal((await post('/api/oturum', { senaryoId: 'depo-verim-dususu', oynananVaryantlar: { kotu: 1 } })).durum, 200);
+
+  // Varyant sütunu olmayan eski veritabanı açılınca sütun eklenir, eski kayıtlar v1 sayılır
+  const { DatabaseSync } = await import('node:sqlite');
+  const dosya = join(mkdtempSync(join(tmpdir(), 'diyalog-eski-')), 'diyalog.db');
+  const eski = new DatabaseSync(dosya);
+  eski.exec('CREATE TABLE oturum (id INTEGER PRIMARY KEY AUTOINCREMENT, zaman INTEGER NOT NULL, gun TEXT NOT NULL, senaryo TEXT NOT NULL, kanal TEXT NOT NULL, soru_sayisi INTEGER NOT NULL, toplam INTEGER NOT NULL, kritik_acilan INTEGER NOT NULL, sure_sn INTEGER NOT NULL)');
+  eski.prepare("INSERT INTO oturum (zaman, gun, senaryo, kanal, soru_sayisi, toplam, kritik_acilan, sure_sn) VALUES (1, '2026-11-17', 'eski', 'web', 3, 50, 1, 60)").run();
+  eski.close();
+  const yeni = openStore(dosya);
+  assert.deepEqual(yeni.istatistik('2026-11-01').biten.map((b) => [b.senaryo, b.varyant]), [['eski', 'v1']]);
+  yeni.close();
 });

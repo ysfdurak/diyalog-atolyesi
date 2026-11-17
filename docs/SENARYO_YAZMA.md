@@ -25,6 +25,34 @@ En kolay yol: var olan bir dosyayı kopyalayıp değiştirmek.
 
 `ipucu_kelimeler` ve `kok_neden_kelimeler` yalnızca yapay zekâsız deneme modunda (`MODEL_MODE=mock`) kullanılır; gerçek model `acilma_kosulu` metnine bakar.
 
+## Varyantlar: aynı durum, farklı kök neden
+
+Rapor kök nedeni ve kaçırılan bilgileri gösterdiği için tek kök nedenli bir senaryo bir kez oynanınca "yanar". Varyantlar bunu önler: açılış, karakter ve rol aynı kalır; gizli bilgiler ve kök neden değişir. Oturum başlarken, kişinin bu tarayıcıda henüz oynamadığı varyantlardan biri rastgele seçilir. Hepsini oynadıysa tümü arasından seçilir.
+
+```json
+{
+  "id": "depo-verim-dususu",
+  "acilis": "…", "karakter": { … }, "soru_hakki": 5,
+  "yaniltici_ipuclari": ["…"],
+  "ideal_sorular": ["…"],
+  "varyantlar": [
+    { "id": "v1", "not": "Yazar notu, oyunda kullanılmaz", "gizli_bilgiler": [ … ], "kok_neden": "…", "kok_neden_kelimeler": ["…"] },
+    { "id": "v2", "gizli_bilgiler": [ … ], "kok_neden": "…", "ideal_sorular": ["Bu varyanta özel sorular (isteğe bağlı)"] }
+  ]
+}
+```
+
+- **Varyanta özel:** `gizli_bilgiler`, `kok_neden`, `kok_neden_kelimeler`. `varyantlar` kullanılıyorsa bunlar en üstte olamaz.
+- **Ortak, isteğe bağlı olarak varyantta değiştirilebilir:** `yaniltici_ipuclari`, `ideal_sorular`.
+- **Kimlik:** `v1`, `v2`… Ziyaretçi yalnızca kimliği görür, içeriği rapora kadar görmez. Yayındaki bir varyantın kimliğini değiştirme; tarayıcılardaki gelişim kaydı bu kimliğe bağlı.
+- `varyantlar` olmayan dosyalar tek varyantlı (`v1`) sayılır.
+
+**İyi varyantın ölçütleri**
+
+1. **Açılış metni her varyanta uymalı.** "Gündüz etkilenmedi" diyorsa her varyantta gece bunun bir nedeni olmalı.
+2. **Aynı soru kalıbı farklı cevaba götürmeli.** "Ne değişti?" sorusu bir varyantta adreslemeyi, başka birinde ekip küçülmesini açar. Kişi önceki raporu değil, soru kalıbını kullanmayı öğrenir.
+3. **En az bir varyant beklenmedik yerden gelmeli.** Örneğin "verim düşmedi, ölçü yanıltıyor". Bu, "sorun gerçekten var mı?" sorusunu öğretir.
+
 ## İyi senaryonun ölçütleri
 
 1. **Yüzeyde insan sorunu, kökte süreç sorunu.** "Ekip isteksiz", "müşteri fiyata bakıyor", "motivasyonu düşük" gibi ilk akla gelen açıklama yanlış çıkmalı.

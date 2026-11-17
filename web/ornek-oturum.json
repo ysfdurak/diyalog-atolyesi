@@ -2,7 +2,10 @@
   "senaryo": {
     "id": "depo-verim-dususu",
     "baslik": "Gece vardiyasında verim neden düştü?",
-    "karakterAdi": "Serkan"
+    "karakterAdi": "Serkan",
+    "varyant": "v1",
+    "varyantNo": 1,
+    "varyantSayisi": 3
   },
   "toplam": 76,
   "boyutlar": [

@@ -28,7 +28,7 @@ const KAPALI_MESAJI = {
   yetki: 'Canlı oturumlar geçici olarak kapalı: yapay zekâ servisine bağlanılamıyor. Site sahibine haber verildi. Bu arada örnek oturumu inceleyebilirsin.',
 };
 
-export function createApp({ config, store, model: hamModel, bildirim = { gonder: () => false }, log = () => {}, simdi = Date.now }) {
+export function createApp({ config, store, model: hamModel, bildirim = { gonder: () => false }, log = () => {}, simdi = Date.now, varyantSec }) {
   const senaryolar = senaryolariYukle(config.senaryoDir);
   const tuz = store.tuz();
   const ozet = (v) => createHash('sha256').update(String(v)).digest();
@@ -106,7 +106,7 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
   }
 
   const servis = oturumServisi({
-    senaryolar, model, limit, simdi, log,
+    senaryolar, model, limit, simdi, log, varyantSec,
     kaydet: (o) => {
       store.oturumKaydet(istanbulGunu(simdi()), o);
       krediKontrol();
@@ -194,7 +194,7 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
     const origin = req.headers.origin;
     if (origin && origin !== new URL(config.appUrl).origin) return json(res, 403, { hata: 'İstek kaynağı reddedildi.' });
     const govde = await readJson(req);
-    if (path === '/api/oturum') return json(res, 200, servis.baslat({ senaryoId: govde.senaryoId, kanal: 'web', ziyaretci: kim }));
+    if (path === '/api/oturum') return json(res, 200, servis.baslat({ senaryoId: govde.senaryoId, kanal: 'web', ziyaretci: kim, oynananlar: govde.oynananVaryantlar }));
     if (path === '/api/oturum/soru') return json(res, 200, await servis.soruSor({ oturumId: govde.oturumId, soru: govde.soru }));
     if (path === '/api/oturum/degerlendir') return json(res, 200, await servis.degerlendir({ oturumId: govde.oturumId, tahmin: govde.tahmin }));
     return json(res, 404, { hata: 'Bulunamadı.' });

@@ -4,9 +4,9 @@
 //
 // Oturumlar bellekte tutulur ve kısa ömürlüdür. Konuşma metni hiçbir yere kaydedilmez;
 // oturum bitince yalnızca anonim özet (senaryo, soru sayısı, skor) istatistik için yazılır.
-import { randomBytes } from 'node:crypto';
+import { randomBytes, randomInt } from 'node:crypto';
 import { degerlendirmeyiDuzelt, puanla } from './puanlama.js';
-import { herkeseAcik } from './senaryolar.js';
+import { herkeseAcik, varyantCozumle } from './senaryolar.js';
 
 /** Kullanıcıya olduğu gibi gösterilebilen iş kuralı hatası. */
 export class KuralHatasi extends Error {
@@ -31,8 +31,9 @@ const temizle = (v, uzunluk) => (typeof v === 'string' ? v.replace(/\s+/g, ' ').
  * @param {(kanal: string, ziyaretci: string) => {izin: boolean, mesaj?: string}} o.limit   oturum hakkı varsa düşer
  * @param {(ozet: object) => void} [o.kaydet]   biten oturumun anonim özeti
  * @param {() => number} [o.simdi]
+ * @param {(adaylar: string[]) => string} [o.varyantSec]   testlerde ve örnek üretiminde sabit seçim için
  */
-export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, simdi = Date.now, log = () => {} }) {
+export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, simdi = Date.now, log = () => {}, varyantSec = (a) => a[randomInt(a.length)] }) {
   /** @type {Map<string, any>} */
   const oturumlar = new Map();
 
@@ -64,8 +65,12 @@ export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, sim
   return {
     senaryoListesi: () => [...senaryolar.values()].map(herkeseAcik),
 
-    /** Yeni oturum. Kullanım limiti burada düşer: bir oturum en fazla (soru hakkı + 1) model çağrısı yapar. */
-    baslat({ senaryoId, kanal = 'web', ziyaretci = '' }) {
+    /**
+     * Yeni oturum. Kullanım limiti burada düşer: bir oturum en fazla (soru hakkı + 1) model çağrısı yapar.
+     * Varyant: `oynananlar` (tarayıcının bildirdiği, bu kişinin daha önce oynadığı varyant kimlikleri) dışındakilerden
+     * rastgele seçilir; hepsi oynandıysa tümü arasından. Hangi varyantın seçildiği rapora kadar söylenmez.
+     */
+    baslat({ senaryoId, kanal = 'web', ziyaretci = '', oynananlar = [] }) {
       const senaryo = senaryolar.get(String(senaryoId || ''));
       if (!senaryo) throw new KuralHatasi('Böyle bir senaryo yok.', { durum: 404, kod: 'senaryo-yok' });
       supur();
@@ -74,9 +79,13 @@ export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, sim
       }
       const hak = limit(kanal, ziyaretci);
       if (!hak.izin) throw new KuralHatasi(hak.mesaj, { durum: 429, kod: 'limit' });
+      const tumu = senaryo.varyantlar.map((v) => v.id);
+      const oynanan = new Set(Array.isArray(oynananlar) ? oynananlar.slice(0, 50).map(String) : []);
+      const adaylar = tumu.filter((id) => !oynanan.has(id));
+      const secilen = varyantSec(adaylar.length ? adaylar : tumu);
       const o = {
         id: randomBytes(18).toString('base64url'),
-        senaryo, kanal, gecmis: [], acilanlar: [], durum: 'soru', rapor: null, mesgul: false,
+        senaryo: varyantCozumle(senaryo, secilen), kanal, gecmis: [], acilanlar: [], durum: 'soru', rapor: null, mesgul: false,
         baslangic: simdi(), sonIslem: simdi(),
       };
       oturumlar.set(o.id, o);
@@ -120,7 +129,7 @@ export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, sim
         const skor = puanla({ senaryo: o.senaryo, acilanlar: o.acilanlar, degerlendirme });
         const bilgi = (b) => ({ bilgi: b.bilgi, onem: b.onem });
         o.rapor = {
-          senaryo: { id: o.senaryo.id, baslik: o.senaryo.baslik, karakterAdi: o.senaryo.karakter.ad },
+          senaryo: { id: o.senaryo.id, baslik: o.senaryo.baslik, karakterAdi: o.senaryo.karakter.ad, varyant: o.senaryo.varyant, varyantNo: o.senaryo.varyantNo, varyantSayisi: o.senaryo.varyantSayisi },
           toplam: skor.toplam,
           boyutlar: skor.boyutlar,
           ozet: degerlendirme.ozet,
@@ -133,7 +142,7 @@ export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, sim
         };
         o.durum = 'bitti';
         try {
-          kaydet({ senaryo: o.senaryo.id, kanal: o.kanal, soruSayisi: o.gecmis.length, toplam: skor.toplam, kritikAcilan: skor.kritikAcilan, sureSn: Math.round((simdi() - o.baslangic) / 1000) });
+          kaydet({ senaryo: o.senaryo.id, varyant: o.senaryo.varyant, kanal: o.kanal, soruSayisi: o.gecmis.length, toplam: skor.toplam, kritikAcilan: skor.kritikAcilan, sureSn: Math.round((simdi() - o.baslangic) / 1000) });
         } catch (err) {
           log(`Oturum özeti kaydedilemedi: ${err.message}`);
         }

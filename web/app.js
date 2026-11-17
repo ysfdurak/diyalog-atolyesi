@@ -30,12 +30,19 @@ function gecmisiOku() {
   } catch { /* yok say */ }
   return bellek.gecmis;
 }
+// Varyantı olmayan eski kayıtlar ilk varyanta (v1) aittir.
+const kayitVaryanti = (g) => g.varyant || 'v1';
+/** Bu tarayıcıda bir senaryonun oynanmış varyantları */
+const oynananVaryantlar = (senaryoId) => [...new Set(gecmisiOku().filter((g) => g.senaryoId === senaryoId).map(kayitVaryanti))];
+
 function gecmiseEkle(rapor) {
   const gecmis = gecmisiOku();
+  const varyant = rapor.senaryo.varyant || 'v1';
   gecmis.push({
-    t: Date.now(), senaryoId: rapor.senaryo.id, toplam: rapor.toplam,
+    t: Date.now(), senaryoId: rapor.senaryo.id, varyant, toplam: rapor.toplam,
     boyutlar: Object.fromEntries(rapor.boyutlar.map((b) => [b.anahtar, b.puan])),
-    ilk: !gecmis.some((g) => g.senaryoId === rapor.senaryo.id),
+    // Gelişim grafiği her varyantın yalnızca ilk denemesini sayar: aynı kök nedeni ikinci kez bulmak beceri değil, hatırlamadır.
+    ilk: !gecmis.some((g) => g.senaryoId === rapor.senaryo.id && kayitVaryanti(g) === varyant),
   });
   bellek.gecmis = gecmis.slice(-200);
   try {
@@ -88,6 +95,8 @@ async function anaSayfa() {
 
   const kart = (sn) => {
     const enIyi = Math.max(0, ...gecmis.filter((g) => g.senaryoId === sn.id).map((g) => g.toplam));
+    const n = sn.varyantlar.length;
+    const oynanan = oynananVaryantlar(sn.id).filter((v) => sn.varyantlar.includes(v)).length;
     return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : '') },
       el('div', { class: 'kart-ust' },
         sn.id === gunun.id && el('span', { class: 'etiket vurgu' }, 'Günün senaryosu'),
@@ -96,7 +105,7 @@ async function anaSayfa() {
       el('h3', {}, sn.baslik),
       el('p', {}, sn.acilis),
       el('div', { class: 'kart-alt' },
-        el('span', { class: 'kucuk soluk' }, `${sn.karakter.ad} · ${sn.karakter.rol}${enIyi ? ` · En iyi skorun ${enIyi}` : ''}`),
+        el('span', { class: 'kucuk soluk' }, `${sn.karakter.ad} · ${sn.karakter.rol}${n > 1 ? ` · ${n} farklı kök neden${oynanan ? `, ${oynanan} tanesini oynadın` : ''}` : ''}${enIyi ? ` · En iyi skorun ${enIyi}` : ''}`),
         el('button', { class: 'dugme' + (sn.id === gunun.id ? ' ana' : ''), disabled: !oynanabilir, onclick: (e) => oturumBaslat(sn.id, e.currentTarget) }, 'Başla')));
   };
 
@@ -113,6 +122,7 @@ async function anaSayfa() {
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
       el('h2', { id: 'b-senaryolar' }, 'Senaryolar'),
+      s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, 'Bazı senaryoların birden fazla kök nedeni var. Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.'),
       el('div', { class: 'kartlar' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-nasil' },
@@ -189,7 +199,7 @@ function gelisimBolumu(gecmis, senaryolar) {
 async function oturumBaslat(senaryoId, dugme) {
   if (dugme) dugme.disabled = true;
   try {
-    const y = await istek('/api/oturum', { senaryoId });
+    const y = await istek('/api/oturum', { senaryoId, oynananVaryantlar: oynananVaryantlar(senaryoId) });
     durum.oturum = { id: y.oturumId, senaryo: y.senaryo, kalan: y.kalanSoru, mesajlar: [], asama: 'soru' };
     history.pushState(null, '', '#oturum');
     oturumEkrani();
@@ -330,7 +340,10 @@ function skorHalkasi(toplam) {
 }
 
 function raporEkrani(rapor, { ornek = false } = {}) {
-  const tekrar = !ornek && gecmisiOku().filter((g) => g.senaryoId === rapor.senaryo.id).length > 1;
+  const varyant = rapor.senaryo.varyant || 'v1';
+  const varyantSayisi = rapor.senaryo.varyantSayisi || 1;
+  const tekrar = !ornek && gecmisiOku().filter((g) => g.senaryoId === rapor.senaryo.id && kayitVaryanti(g) === varyant).length > 1;
+  const kalanVaryant = varyantSayisi - (ornek ? 0 : oynananVaryantlar(rapor.senaryo.id).length);
   const seviye = rapor.toplam >= 80 ? 'Güçlü bir oturum' : rapor.toplam >= 60 ? 'İyi yoldasın' : rapor.toplam >= 40 ? 'Gelişme alanı var' : 'Yeniden denemeye değer';
   goster(
     el('a', { class: 'geri', href: '#', onclick: (e) => { e.preventDefault(); anaSayfa(); } }, '← Senaryolar'),
@@ -339,7 +352,8 @@ function raporEkrani(rapor, { ornek = false } = {}) {
     el('h1', { tabindex: '-1' }, rapor.senaryo.baslik),
     el('div', { class: 'skor' }, skorHalkasi(rapor.toplam),
       el('div', {}, el('h2', {}, seviye), rapor.ozet && el('p', { class: 'soluk' }, rapor.ozet))),
-    tekrar && el('p', { class: 'kucuk soluk' }, 'Bu senaryoyu daha önce oynadın; gelişim grafiğinde yalnızca ilk denemen sayılır.'),
+    tekrar && el('p', { class: 'kucuk soluk' }, 'Bu kök nedenle daha önce karşılaşmıştın; gelişim grafiğinde yalnızca ilk denemen sayılır.'),
+    varyantSayisi > 1 && el('p', { class: 'kutu bilgi uyari' }, `Bu senaryonun ${varyantSayisi} farklı kök nedeni var; bu oynayışta ${rapor.senaryo.varyantNo}. kök nedenle karşılaştın. ${kalanVaryant > 0 ? 'Tekrar oynarsan oynamadığın bir kök neden gelir: aşağıdaki soru kalıpları orada da işe yarar, cevaplar yaramaz.' : 'Hepsini oynadın.'}`),
 
     el('section', { class: 'bolum' }, el('h2', {}, 'Beş boyutta puanın'),
       el('ul', { class: 'boyutlar' }, rapor.boyutlar.map((b) => {
@@ -373,12 +387,12 @@ function raporEkrani(rapor, { ornek = false } = {}) {
         s.not && el('p', {}, s.not),
         s.dahaIyi && el('p', { class: 'oneri' }, el('b', {}, 'Şöyle sorabilirdin: '), s.dahaIyi))))),
 
-    el('section', { class: 'bolum' }, el('h2', {}, 'Bu senaryoda işe yarayan sorular'),
+    el('section', { class: 'bolum' }, el('h2', {}, 'İşe yarayan soru kalıpları'),
       el('ul', { class: 'liste duz' }, rapor.idealSorular.map((q) => el('li', {}, el('span', {}, q))))),
 
     el('div', { class: 'dugmeler bolum' },
       el('button', { class: 'dugme ana', onclick: anaSayfa }, ornek ? 'Kendin dene' : 'Başka bir senaryo'),
-      !ornek && el('button', { class: 'dugme', onclick: (e) => anaSayfa().then(() => oturumBaslat(rapor.senaryo.id)) }, 'Aynı senaryoyu tekrar oyna')),
+      !ornek && el('button', { class: 'dugme', onclick: () => anaSayfa().then(() => oturumBaslat(rapor.senaryo.id)) }, kalanVaryant > 0 ? 'Başka bir kök nedenle tekrar oyna' : 'Aynı senaryoyu tekrar oyna')),
   );
 }
 
