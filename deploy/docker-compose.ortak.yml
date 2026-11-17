@@ -2,6 +2,8 @@
 # Caddy (HTTPS) ortak altyapıda: github.com/ysfdurak/ysfdurak.com → sunucu/
 #   cd deploy && sudo docker compose -f docker-compose.ortak.yml up -d --build
 # Diyalog Atölyesi hiçbir portu dışarı açmaz; ortak Caddy "web" ağı üzerinden diyalog:8080'e ulaşır.
+# Proje adı açık: Pusula ve Destek de "deploy" klasöründen çalıştığı için adsız kalırsa Docker hepsini tek proje sanar.
+name: diyalog
 services:
   diyalog:
     build: ..
