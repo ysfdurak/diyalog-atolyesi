@@ -371,7 +371,8 @@ function raporEkrani(rapor, { ornek = false } = {}) {
         el('blockquote', {}, s.soru),
         el('p', { class: 'cevap' }, `${rapor.senaryo.karakterAdi}: ${s.cevap}`),
         s.not && el('p', {}, s.not),
-        s.dahaIyi && el('p', { class: 'oneri' }, el('b', {}, 'Şöyle sorabilirdin: '), s.dahaIyi))))),
+        s.dahaIyi && el('p', { class: 'oneri' }, el('b', {}, 'Şöyle sorabilirdin: '), s.dahaIyi),
+        (s.tur !== 'acik' || s.yonlendirici) && yenidenDene(s))))),
 
     el('section', { class: 'bolum' }, el('h2', {}, 'Bu senaryoda işe yarayan sorular'),
       el('ul', { class: 'liste duz' }, rapor.idealSorular.map((q) => el('li', {}, el('span', {}, q))))),
@@ -380,6 +381,47 @@ function raporEkrani(rapor, { ornek = false } = {}) {
       el('button', { class: 'dugme ana', onclick: anaSayfa }, ornek ? 'Kendin dene' : 'Başka bir senaryo'),
       !ornek && el('button', { class: 'dugme', onclick: (e) => anaSayfa().then(() => oturumBaslat(rapor.senaryo.id)) }, 'Aynı senaryoyu tekrar oyna')),
   );
+}
+
+
+// --- Bu soruyu yeniden dene: tüm oturumu baştan oynamadan zayıf bir soruyu düzeltip farkı görmek ---
+// Hızlı kontrol soru biçimine bakar (açık uçlu mu, varsayım ya da suçlama taşıyor mu). Yapay zekâ çağrısı yok;
+// karakterin cevabını ve rapordaki puanı değiştirmez. Kurallar sahte modeldeki (src/cekirdek/model.js) ile aynı.
+const ACIK_SORU = /(^|\s)(ne|neler|nasıl|neden|niçin|hangi|kim|kimler|nerede|ne zaman)(\s|\?|$)|anlat|bahseder|açıklar/;
+const YONLENDIRICI_SORU = /değil mi|öyle değil|isteksiz|tembel|motivasyon|suç|yüzünden mi|fiyat(tan)? mı/;
+function soruBicimi(metin) {
+  const k = String(metin).toLocaleLowerCase('tr');
+  return { acik: ACIK_SORU.test(k), yonlendirici: YONLENDIRICI_SORU.test(k) };
+}
+function yenidenDene(s) {
+  const kutu = el('div', { class: 'yeniden', hidden: true });
+  const alan = el('textarea', { rows: 2, maxlength: 300, placeholder: 'Aynı amaçla yeni sorunu yaz', 'aria-label': `Soru ${s.no} için yeni soru` });
+  const sonuc = el('div', { class: 'yeniden-sonuc', 'aria-live': 'polite' });
+  const etiketler = (b) => [
+    el('span', { class: 'etiket' + (b.acik ? ' vurgu' : '') }, b.acik ? 'Açık uçlu' : 'Kapalı'),
+    b.yonlendirici ? el('span', { class: 'etiket uyari' }, 'Yönlendirici') : el('span', { class: 'etiket' }, 'Tarafsız'),
+  ];
+  const kontrol = () => {
+    const metin = alan.value.trim();
+    sonuc.replaceChildren();
+    if (!metin) { sonuc.append(el('p', { class: 'soluk' }, 'Önce yeni sorunu yaz.')); return; }
+    const once = { acik: s.tur === 'acik', yonlendirici: !!s.yonlendirici }, sonra = soruBicimi(metin);
+    const notlar = [];
+    if (!once.acik && sonra.acik) notlar.push('Soru artık açık uçlu: karşı tarafı anlatmaya davet ediyor.');
+    if (!sonra.acik) notlar.push('Hâlâ evet/hayırla cevaplanabilir. "Ne", "nasıl", "hangi" ya da "anlatır mısın" ile başlamayı dene.');
+    if (once.yonlendirici && !sonra.yonlendirici) notlar.push('Varsayım ya da suçlama kalktı; cevabı karşı taraf belirliyor.');
+    if (sonra.yonlendirici) notlar.push('Soru hâlâ bir varsayım taşıyor (ör. "değil mi", "motivasyon", "suç"). Nedeni sen söyleme, ona sor.');
+    if (sonra.acik && !sonra.yonlendirici) notlar.push('İyi bir soru. Gerçek oturumda bu soruyu, bir önceki cevabın ayrıntısına bağlayarak sor.');
+    sonuc.append(
+      el('div', { class: 'once-sonra' },
+        el('div', {}, el('b', {}, 'Önce'), ...etiketler(once)),
+        el('div', {}, el('b', {}, 'Sonra'), ...etiketler(sonra))),
+      el('ul', { class: 'liste duz' }, notlar.map((n) => el('li', {}, el('span', {}, n)))),
+      el('p', { class: 'soluk' }, 'Bu hızlı kontrol yalnızca sorunun biçimine bakar; karakterin cevabını ve puanını değiştirmez.'));
+  };
+  const ac = el('button', { class: 'dugme kucuk', onclick: () => { kutu.hidden = !kutu.hidden; if (!kutu.hidden) alan.focus(); } }, 'Bu soruyu yeniden dene');
+  kutu.append(alan, el('button', { class: 'dugme kucuk ana', onclick: kontrol }, 'Kontrol et'), sonuc);
+  return el('div', { class: 'yeniden-dene' }, ac, kutu);
 }
 
 async function ornekGoster(gecmiseYaz = true) {

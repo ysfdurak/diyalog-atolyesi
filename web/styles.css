@@ -180,3 +180,12 @@ h1[tabindex]:focus { outline: none; }
 .marka, .ust nav a { white-space: nowrap; }
 .liste .etiket { margin-left: 0.4rem; }
 @media (max-width: 420px) { .ust nav a:first-child { display: none; } }
+
+/* Bu soruyu yeniden dene */
+.yeniden-dene { margin-top: 10px; }
+.dugme.kucuk { min-height: 44px; padding: 8px 14px; font-size: 15px; }
+.yeniden { margin-top: 10px; display: grid; gap: 8px; }
+.yeniden[hidden] { display: none; }
+.yeniden textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; resize: vertical; }
+.once-sonra { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 4px 0; }
+.once-sonra > div { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
