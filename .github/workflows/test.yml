@@ -1,0 +1,25 @@
+name: Testler
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Bağımlılıkları kur (kilit dosyasına sadık)
+        run: npm ci
+      - name: Testler (yapay zekâ çağrısı yok, sahte model)
+        run: npm test
