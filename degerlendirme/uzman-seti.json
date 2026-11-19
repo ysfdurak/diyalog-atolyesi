@@ -1,0 +1,437 @@
+{
+ "durum": "taslak",
+ "aciklama": "Etiketler Claude tarafından hazırlanmış taslaktır; uzman onayı bekliyor. Cevaplar sahte karakterle üretildi (sabit). Bir uzman her öğede uzman alanlarını gözden geçirip durumu \"onaylandi\" yapmalı.",
+ "rubrik": "src/cekirdek/istemler.js › DEGERLENDIRICI_ISTEMI",
+ "ogeler": [
+  {
+   "id": "u1",
+   "senaryo": "depo-verim-dususu",
+   "varyant": "v1",
+   "seviye": "iyi",
+   "gecmis": [
+    {
+     "soru": "Son üç haftada gece vardiyasında neler değişti?",
+     "cevap": "3 hafta önce yeni adresleme düzeni devreye girdi. Gündüz ekibine eğitim verildi, gece ekibine verilmedi."
+    },
+    {
+     "soru": "Bu değişiklik gece ekibine nasıl anlatıldı, eğitim yapıldı mı?",
+     "cevap": "Ekip son zamanlarda biraz isteksiz."
+    },
+    {
+     "soru": "Gece ekibinde şu an kimler çalışıyor, deneyimleri nasıl?",
+     "cevap": "Gece ekibinin yaklaşık %40'ı geçici personel ve bu kişiler sürekli değişiyor."
+    },
+    {
+     "soru": "Gündüz ile gece arasında terminal ya da sistem tarafında bir fark var mı?",
+     "cevap": "Olabilir, tam emin değilim."
+    },
+    {
+     "soru": "Toplayıcılar en çok nerede takılıyor, bir örnek verebilir misin?",
+     "cevap": "Gece sık sık \"adres bulunamadı\" hatası alınıyor; toplayıcılar ürünü aramakla vakit kaybediyor."
+    }
+   ],
+   "acilanlar": [
+    "adresleme",
+    "gecici-personel",
+    "adres-hatasi"
+   ],
+   "tahmin": "Adresleme değişikliği gece vardiyasına eğitimle ve terminal güncellemesiyle taşınmamış; geçici personel çok olduğu için etki büyümüş.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 4,
+      "tur": "kapali",
+      "yonlendirici": false
+     },
+     {
+      "no": 5,
+      "tur": "acik",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 4,
+    "sonuc": 5,
+    "not": "2. soru 1. cevabın üzerine kurulu; 4. soru kapalı ama yerinde."
+   }
+  },
+  {
+   "id": "u2",
+   "senaryo": "depo-verim-dususu",
+   "varyant": "v1",
+   "seviye": "zayif",
+   "gecmis": [
+    {
+     "soru": "Gece ekibi isteksiz mi çalışıyor?",
+     "cevap": "Ekip son zamanlarda biraz isteksiz."
+    },
+    {
+     "soru": "Motivasyon sorunu mu var sence?",
+     "cevap": "Ekip son zamanlarda biraz isteksiz."
+    },
+    {
+     "soru": "Kaç kişi geç geliyor?",
+     "cevap": "Olabilir, tam emin değilim."
+    }
+   ],
+   "acilanlar": [],
+   "tahmin": "Gece ekibinin motivasyonu düşük.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "kapali",
+      "yonlendirici": true
+     },
+     {
+      "no": 2,
+      "tur": "kapali",
+      "yonlendirici": true
+     },
+     {
+      "no": 3,
+      "tur": "kapali",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 1,
+    "sonuc": 1,
+    "not": "Suçlayıcı varsayımla başlıyor; cevaplar kullanılmıyor."
+   }
+  },
+  {
+   "id": "u3",
+   "senaryo": "geciken-teslimler",
+   "varyant": "v1",
+   "seviye": "orta",
+   "gecmis": [
+    {
+     "soru": "Son bir ayda iş yükünde neler değişti?",
+     "cevap": "Bir aydır başka bir bölümün yöneticisi de doğrudan ona iş veriyor; öncelikler çakışıyor."
+    },
+    {
+     "soru": "Raporları hazırlarken en çok nerede vakit kaybediyorsun?",
+     "cevap": "Biraz motivasyonum düştü sanırım."
+    },
+    {
+     "soru": "Neden bunu daha önce söylemedin?",
+     "cevap": "Ek işleri yöneticisine söylemedi, çünkü \"hayır diyemeyen biri\" gibi görünmek istemedi."
+    },
+    {
+     "soru": "Mesaiye kalıyor musun?",
+     "cevap": "Olabilir, tam emin değilim."
+    }
+   ],
+   "acilanlar": [
+    "cift-yonetici",
+    "hayir-diyememe"
+   ],
+   "tahmin": "İş yükü arttı ve raporlar elle hazırlandığı için gecikiyor.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": true
+     },
+     {
+      "no": 4,
+      "tur": "kapali",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 3,
+    "sonuc": 3,
+    "not": "3. soru 'neden' ile açık ama suçlama taşıyor; iki yöneticiden gelen iş çakışması tahminde yok."
+   }
+  },
+  {
+   "id": "u4",
+   "senaryo": "musteri-sozlesme",
+   "varyant": "v1",
+   "seviye": "iyi",
+   "gecmis": [
+    {
+     "soru": "Fiyat dışında son dönemde hizmetimizle ilgili neler yaşadınız?",
+     "cevap": "Son 2 ayda 3 kez eksik ya da yanlış sevkiyat oldu; biri firmanın en büyük müşterisine gitti."
+    },
+    {
+     "soru": "Bu sorunlar yaşandığında kiminle iletişime geçtiniz, nasıl ilerledi?",
+     "cevap": "Bu hatalar yüzünden kendi genel müdürüne hesap vermek zorunda kaldı; karar aslında onun üstünden geldi."
+    },
+    {
+     "soru": "Yenilememe kararı sizin tarafta nasıl alındı, kimler dahil oldu?",
+     "cevap": "Piyasa artık çok fiyat odaklı."
+    },
+    {
+     "soru": "Rakibin teklifi ne kadar farklı?",
+     "cevap": "Rakibin teklifi yalnızca %3 daha ucuz."
+    }
+   ],
+   "acilanlar": [
+    "hatali-sevkiyat",
+    "ust-yonetim",
+    "fiyat-farki"
+   ],
+   "tahmin": "Asıl neden fiyat değil; hatalı sevkiyatlar ve sorun çözecek tek bir muhatap olmaması yönetimde güveni bitirdi.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 4,
+      "tur": "acik",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 4,
+    "sonuc": 5,
+    "not": "2. ve 3. soru önceki cevapları izliyor."
+   }
+  },
+  {
+   "id": "u5",
+   "senaryo": "musteri-sozlesme",
+   "varyant": "v1",
+   "seviye": "zayif",
+   "gecmis": [
+    {
+     "soru": "Fiyatı yüzde 10 düşürürsek kalır mısınız?",
+     "cevap": "Olabilir, tam emin değilim."
+    },
+    {
+     "soru": "Rakip ne kadar teklif verdi?",
+     "cevap": "Rakibin teklifi yalnızca %3 daha ucuz."
+    }
+   ],
+   "acilanlar": [
+    "fiyat-farki"
+   ],
+   "tahmin": "Rakip daha ucuz teklif verdi.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "kapali",
+      "yonlendirici": true
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 1,
+    "sonuc": 1,
+    "not": "Pazarlığa atlıyor; kararın nedenini sormuyor."
+   }
+  },
+  {
+   "id": "u6",
+   "senaryo": "yanlis-sevkiyat",
+   "varyant": "v1",
+   "seviye": "iyi",
+   "gecmis": [
+    {
+     "soru": "Son bir ayda ekibin çalışma biçiminde ya da hedeflerinde neler değişti?",
+     "cevap": "Geçen ay saatlik koli sayısına bağlı bir hız primi başladı; ekip o günden beri hıza odaklanıyor."
+    },
+    {
+     "soru": "Yeni hedef ölçülmeye başlayınca koli kapatmadan önceki kontrol adımı nasıl yapılıyor?",
+     "cevap": "Koli kapatılmadan önceki son barkod kontrolü zaman aldığı için çoğu zaman atlanıyor; sistem bu adımı zorunlu tutmuyor."
+    },
+    {
+     "soru": "Şikâyet gelen hatalar hangi ürünlerde oluyor, ortak bir yanı var mı?",
+     "cevap": "Hataların çoğu yan yana raflarda duran, aynı modelin farklı renk ve bedenlerinde oluyor."
+    },
+    {
+     "soru": "Bu hataların kaydını kim tutuyor?",
+     "cevap": "Mağazalar da artık her şeye şikâyet ediyor."
+    }
+   ],
+   "acilanlar": [
+    "hiz-primi",
+    "kontrol-atlaniyor",
+    "benzer-urun"
+   ],
+   "tahmin": "Hız primi barkod kontrolünü atlamayı ödüllendiriyor; yan yana duran benzer ürünler karışıyor.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 4,
+      "tur": "acik",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 5,
+    "sonuc": 5,
+    "not": "Her soru bir öncekinin cevabını kullanıyor."
+   }
+  },
+  {
+   "id": "u7",
+   "senaryo": "erken-ayrilanlar",
+   "varyant": "v1",
+   "seviye": "orta",
+   "gecmis": [
+    {
+     "soru": "Yeni başlayan biri ilk gününü nasıl geçiriyor?",
+     "cevap": "Yeni gelen ilk gün doğrudan en yoğun toplama hattına veriliyor, çünkü eksik hep orada; yanına gösterecek biri ayrılamıyor."
+    },
+    {
+     "soru": "Ayrılanlar ne söyledi?",
+     "cevap": "Yeni gelenlerin vardiyası bir gün önce akşam bildiriliyor; ayrılanların çoğu bunu ve servis saatini sorun olarak söylemiş."
+    },
+    {
+     "soru": "Ücretten mi ayrılıyorlar?",
+     "cevap": "Şimdiki gençler ağır işe gelemiyor."
+    },
+    {
+     "soru": "Yeni gelenlere işi kim öğretiyor?",
+     "cevap": "Yazılı bir eğitim planı yok; el terminalini kimden denk gelirse ondan öğreniyorlar ve ilk hafta hata yapınca azar işitiyorlar."
+    }
+   ],
+   "acilanlar": [
+    "ilk-gun",
+    "vardiya-bildirimi",
+    "egitim-yok"
+   ],
+   "tahmin": "İlk gün yalnız bırakılıyorlar ve kimse işi öğretmiyor.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "kapali",
+      "yonlendirici": true
+     },
+     {
+      "no": 4,
+      "tur": "acik",
+      "yonlendirici": false
+     }
+    ],
+    "derinlesme": 3,
+    "sonuc": 3,
+    "not": "Vardiya bildiriminin geç yapılması kaçmış; 3. soru ücret varsayımı taşıyor."
+   }
+  },
+  {
+   "id": "u8",
+   "senaryo": "cevapsiz-teklif",
+   "varyant": "v1",
+   "seviye": "orta",
+   "gecmis": [
+    {
+     "soru": "Teklifimizi okuma fırsatınız oldu mu?",
+     "cevap": "Bu aralar çok yoğunuz, sıra gelmedi."
+    },
+    {
+     "soru": "Bu dönemde sizin için en önemli öncelik ne?",
+     "cevap": "Asıl dertleri sezon dönemindeki kapasite sıkışması; teklif ise ağırlıklı olarak birim maliyet avantajını anlatıyordu."
+    },
+    {
+     "soru": "Karar süreci nasıl ilerliyor, kimler dahil?",
+     "cevap": "Kararı kendisi değil finans direktörü verecek; onun endişesi geçiş maliyeti ve bu konuda teklifte hiçbir şey yok."
+    },
+    {
+     "soru": "Fiyatımız yüksek mi geldi?",
+     "cevap": "Bu aralar çok yoğunuz, sıra gelmedi."
+    }
+   ],
+   "acilanlar": [
+    "asil-dert",
+    "karar-verici"
+   ],
+   "tahmin": "Asıl öncelikleri sezon kapasitesi ve karar vericiyi tanımıyoruz.",
+   "uzman": {
+    "sorular": [
+     {
+      "no": 1,
+      "tur": "kapali",
+      "yonlendirici": false
+     },
+     {
+      "no": 2,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 3,
+      "tur": "acik",
+      "yonlendirici": false
+     },
+     {
+      "no": 4,
+      "tur": "kapali",
+      "yonlendirici": true
+     }
+    ],
+    "derinlesme": 2,
+    "sonuc": 3,
+    "not": "Sorular konu atlıyor; mevcut sözleşme takvimi sorulmamış."
+   }
+  }
+ ]
+}

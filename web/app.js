@@ -345,6 +345,19 @@ function skorHalkasi(toplam) {
     el('text', { svg: true, x: 52, y: 52 }, String(toplam)));
 }
 
+/** "Neden bu puan?": puanın kullanıcının hangi sorusuna ya da tahminindeki hangi ifadeye dayandığı.
+ *  Soru metinleri oturum kaydından gelir; model yalnız numara seçer. Puana katılmayan kullanıcı somut dayanağı görür. */
+function dayanakKutusu(b) {
+  const d = b.dayanak || [];
+  const kaynak = b.kaynak === 'model' ? 'Bu boyutu yapay zekâ değerlendiricisi puanlar.' : 'Bu puan soruların etiketlerinden kodla hesaplanır.';
+  if (!d.length) return el('details', { class: 'dayanak' }, el('summary', {}, 'Neden bu puan?'), el('p', { class: 'kucuk soluk' }, kaynak + (b.anahtar === 'kesif' ? ' Hangi bilgilerin açıldığı aşağıdaki "Ortaya çıkardığın bilgiler" bölümünde.' : '')));
+  return el('details', { class: 'dayanak' }, el('summary', {}, 'Neden bu puan? Senin sorundan dayanak'),
+    el('ul', { class: 'liste duz' }, d.map((x) => el('li', {}, x.alinti
+      ? el('span', {}, 'Tahmininden: ', el('q', {}, x.alinti))
+      : el('span', {}, el('b', {}, `Soru ${x.no}`), x.etiket ? ` (${x.etiket})` : '', ': ', el('q', {}, x.soru))))),
+    el('p', { class: 'kucuk soluk' }, kaynak + ' Katılmıyorsan aşağıda "Soru soru" bölümündeki notlara bak; aynı soruyu yeniden deneyebilirsin.'));
+}
+
 function raporEkrani(rapor, { ornek = false } = {}) {
   const varyant = rapor.senaryo.varyant || 'v1';
   const varyantSayisi = rapor.senaryo.varyantSayisi || 1;
@@ -368,7 +381,8 @@ function raporEkrani(rapor, { ornek = false } = {}) {
         return el('li', { class: 'boyut' },
           el('div', { class: 'boyut-ust' }, b.ad, el('small', {}, `${b.puan} / 5 · ağırlık %${b.agirlik}`)),
           el('div', { class: 'cubuk' }, cubuk),
-          b.yorum && el('p', {}, b.yorum));
+          b.yorum && el('p', {}, b.yorum),
+          dayanakKutusu(b));
       }))),
 
     el('section', { class: 'bolum' }, el('h2', {}, 'Kök neden'),

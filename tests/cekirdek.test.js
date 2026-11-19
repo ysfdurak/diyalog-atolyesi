@@ -251,3 +251,45 @@ test('varyant: oynanmamış olandan seçilir, hepsi oynandıysa tümünden; orta
   assert.equal(varyantCozumle(depoTemel, 'v2').ideal_sorular, depoTemel.ideal_sorular); // v2 ortak soruları kullanır
   assert.equal(varyantCozumle(depoTemel, 'v2').yaniltici_ipuclari, depoTemel.yaniltici_ipuclari);
 });
+
+// Dış inceleme (Kasım 2026): puanın kullanıcının kendi sorusundan dayanağı ve uzman setiyle karşılaştırma.
+import { uzmanKarsilastir, kappa } from '../src/cekirdek/uzman.js';
+import { readFileSync as okuDosya } from 'node:fs';
+
+test('dayanak: soru metni oturum kaydından gelir, model uydurduğu numarayı ekleyemez', async () => {
+  const { degerlendirmeyiDuzelt: duzelt, puanla: p } = await import('../src/cekirdek/puanlama.js');
+  const gecmis = [{ soru: 'Gece ekibi isteksiz mi?', cevap: 'Olabilir.' }, { soru: 'Son üç haftada neler değişti?', cevap: 'Adresleme değişti.' }, { soru: 'Adresleme değişikliği nasıl anlatıldı?', cevap: 'Anlatılmadı.' }];
+  const d = duzelt({ sorular: [{ no: 1, tur: 'kapali', yonlendirici: true }, { no: 2, tur: 'acik' }, { no: 3, tur: 'acik' }], derinlesme: { puan: 4, dayanak_sorular: [3, 9, 3, 'x'] }, sonuc: { puan: 5, dayanak: 'adresleme eğitimi' } }, 3);
+  assert.deepEqual(d.derinlesme.dayanak, [3]);
+  const senaryo = { gizli_bilgiler: [{ id: 'a', onem: 'kritik', bilgi: 'x' }] };
+  const r = p({ senaryo, acilanlar: [], degerlendirme: d, gecmis, tahmin: 'Adresleme eğitimi gece verilmedi.' });
+  const b = Object.fromEntries(r.boyutlar.map((x) => [x.anahtar, x]));
+  assert.deepEqual(b.derinlesme.dayanak, [{ no: 3, soru: 'Adresleme değişikliği nasıl anlatıldı?', etiket: '' }]);
+  assert.deepEqual(b.varsayimsiz.dayanak, [{ no: 1, soru: 'Gece ekibi isteksiz mi?', etiket: 'yönlendirici' }]);
+  assert.deepEqual(b.acik.dayanak.map((x) => x.no), [1]);
+  assert.deepEqual(b.sonuc.dayanak, [{ alinti: 'adresleme eğitimi' }], 'alıntı tahminde geçiyorsa olduğu gibi');
+  assert.equal(b.derinlesme.kaynak, 'model'); assert.equal(b.acik.kaynak, 'kod');
+  const uydurma = p({ senaryo, acilanlar: [], degerlendirme: duzelt({ sonuc: { puan: 5, dayanak: 'hiç yazılmamış cümle' } }, 3), gecmis, tahmin: 'Kısa tahmin.' });
+  assert.deepEqual(uydurma.boyutlar.find((x) => x.anahtar === 'sonuc').dayanak, [{ alinti: 'Kısa tahmin.' }], 'tahminde olmayan alıntı yerine tahminin kendisi');
+});
+
+test('uzman seti: geçerli yapı ve karşılaştırma ölçüleri (sahte değerlendiriciyle)', async () => {
+  const set = JSON.parse(okuDosya(new URL('../degerlendirme/uzman-seti.json', import.meta.url), 'utf8'));
+  const { senaryolariYukle, varyantCozumle } = await import('../src/cekirdek/senaryolar.js');
+  const S = senaryolariYukle(new URL('../senaryolar', import.meta.url).pathname);
+  assert.ok(['taslak', 'onaylandi'].includes(set.durum));
+  for (const o of set.ogeler) {
+    const s = varyantCozumle(S.get(o.senaryo), o.varyant);
+    assert.equal(o.uzman.sorular.length, o.gecmis.length, o.id);
+    assert.ok(o.gecmis.length <= s.soru_hakki, o.id);
+    assert.ok(o.acilanlar.every((id) => s.gizli_bilgiler.some((b) => b.id === id)), o.id);
+    assert.ok([1, 2, 3, 4, 5].includes(o.uzman.derinlesme) && [1, 2, 3, 4, 5].includes(o.uzman.sonuc), o.id);
+  }
+  const { sahteModel: sahte } = await import('../src/cekirdek/model.js');
+  const r = await uzmanKarsilastir(set.ogeler, (id, v) => varyantCozumle(S.get(id), v), (x) => sahte().degerlendir(x));
+  assert.equal(r.ogeSayisi, set.ogeler.length);
+  assert.ok(r.tur.uyum >= 0 && r.tur.uyum <= 1 && r.derinlesme.birFark !== null);
+  assert.equal(kappa([true, false, true], [true, false, true]), 1);
+  assert.equal(kappa(['a', 'a'], ['a', 'a']), 1);
+  assert.ok(Math.abs(kappa(['a', 'b', 'a', 'b'], ['a', 'a', 'b', 'b'])) < 1e-12, 'şans düzeyinde uyum = 0');
+});

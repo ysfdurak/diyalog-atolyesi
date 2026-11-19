@@ -126,7 +126,7 @@ export function oturumServisi({ senaryolar, model, limit, kaydet = () => {}, sim
 
         const ham = await model.degerlendir({ senaryo: o.senaryo, gecmis: o.gecmis, acilanlar: o.acilanlar, tahmin: metin });
         const degerlendirme = degerlendirmeyiDuzelt(ham, o.gecmis.length);
-        const skor = puanla({ senaryo: o.senaryo, acilanlar: o.acilanlar, degerlendirme });
+        const skor = puanla({ senaryo: o.senaryo, acilanlar: o.acilanlar, degerlendirme, gecmis: o.gecmis, tahmin: metin });
         const bilgi = (b) => ({ bilgi: b.bilgi, onem: b.onem });
         o.rapor = {
           senaryo: { id: o.senaryo.id, baslik: o.senaryo.baslik, karakterAdi: o.senaryo.karakter.ad, varyant: o.senaryo.varyant, varyantNo: o.senaryo.varyantNo, varyantSayisi: o.senaryo.varyantSayisi },

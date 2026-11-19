@@ -65,6 +65,12 @@ Oran 1-5'e şöyle çevrilir: `1 + yuvarla(4 × oran)`. Örnek: 5 sorudan 3'ü a
 
 Model bozuk ya da eksik bir cevap dönerse (`puanlama.js → degerlendirmeyiDuzelt`) eksikler güvenli varsayılanlarla doldurulur; rapor yine de tutarlı çıkar.
 
+## Puanın dayanağı ve uzmanla karşılaştırma (Kasım 2026)
+
+- **"Neden bu puan?"** Raporda her boyutun altında açılır kutu. Kod boyutlarında (açık uçlu, varsayımsız) kapalı ya da yönlendirici sayılan sorular kullanıcının kendi metniyle listelenir. Derinleşmede değerlendirici model puanı belirleyen soruların **yalnız numarasını** verir (`dayanak_sorular`); metin oturum kaydından alınır, böylece model alıntı uyduramaz. Sonuçta tahminden kısa bir alıntı istenir; alıntı tahminde geçmiyorsa tahminin kendisi gösterilir. Kod: `puanlama.js › puanla`, arayüz: `web/app.js › dayanakKutusu`.
+- **Uzman puanlı örnek set:** `degerlendirme/uzman-seti.json` altı senaryodan 8 konuşma, 30 soru içerir: soru soru açık/kapalı ve yönlendirici etiketleri, derinleşme ve sonuç puanları. **Şu an taslak:** etiketleri Claude hazırladı; bir eğitmen ya da İK uzmanı gözden geçirip `"durum": "onaylandi"` yapmalı. Yeni konuşma eklemek için `tools/uzman-seti-uret.js` (sorular el yazısı, cevaplar sahte karakterle sabitlenir).
+- **Karşılaştırma:** `node tools/uzman-karsilastir.js` (sahte değerlendirici, aracın çalıştığını gösterir) ya da `ANTHROPIC_API_KEY=… node tools/uzman-karsilastir.js --gercek` (gerçek değerlendirici). Çıktı `degerlendirme/son-karsilastirma.md`: soru türü ve yönlendirici etiketinde uyum ve Cohen κ, derinleşme ve sonuçta aynı/±1 uyum ve ortalama fark, toplam skorda fark ve her uyuşmazlık (soru metni, model notu). Önerilen kabul: κ ≥ 0,6; ±1 uyum ≥ %80; toplam skorda ortalama fark ≤ 10.
+
 ## Maliyet ve limitler
 
 Tek ek maliyet yapay zekâ API'sidir. Sunucu ve alan adı zaten var.

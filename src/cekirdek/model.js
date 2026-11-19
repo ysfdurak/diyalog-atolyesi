@@ -145,8 +145,13 @@ export function sahteModel() {
       const isabet = (senaryo.kok_neden_kelimeler || []).filter((k) => t.includes(kucuk(k))).length;
       return {
         sorular,
-        derinlesme: { puan: gecmis.length > 1 ? 3 : 2, yorum: 'Bazı cevapların peşine düştün, bazıları havada kaldı.' },
+        derinlesme: {
+          puan: gecmis.length > 1 ? 3 : 2, yorum: 'Bazı cevapların peşine düştün, bazıları havada kaldı.',
+          // Önceki cevaptan en az bir kelimeyi (5+ harf) kullanan sorular derinleşme dayanağıdır.
+          dayanak_sorular: gecmis.map((t, i) => (i && kucuk(gecmis[i - 1].cevap).split(/[^\p{L}]+/u).filter((w) => w.length >= 5).some((w) => kucuk(t.soru).includes(w)) ? i + 1 : 0)).filter(Boolean).slice(0, 3),
+        },
         sonuc: {
+          dayanak: (senaryo.kok_neden_kelimeler || []).find((k) => t.includes(kucuk(k))) || '',
           puan: isabet >= 2 ? 5 : isabet === 1 ? 3 : 1,
           yorum: isabet >= 2 ? 'Tahminin kök nedenle örtüşüyor.' : isabet === 1 ? 'Ana nedenlerden birini yakaladın.' : 'Tahminin yüzeyde kaldı.',
         },

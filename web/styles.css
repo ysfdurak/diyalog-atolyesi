@@ -104,6 +104,9 @@ a { color: var(--vurgu); text-underline-offset: 3px; }
 .cubuk { height: 8px; border-radius: 999px; background: var(--zemin-yumusak); border: 1px solid var(--cizgi); overflow: hidden; margin: 0.35rem 0; }
 .cubuk i { display: block; height: 100%; background: var(--vurgu); border-radius: 999px; }
 .boyut p { color: var(--soluk); font-size: 0.93rem; }
+.dayanak { margin-top: .35rem; font-size: .93rem; }
+.dayanak summary { cursor: pointer; color: var(--vurgu, #2a5d8f); font-weight: 600; }
+.dayanak q { font-style: italic; }
 
 /* Gelişim grafiği */
 .grafik { width: 100%; height: auto; display: block; }

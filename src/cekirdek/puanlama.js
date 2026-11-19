@@ -43,8 +43,13 @@ export function degerlendirmeyiDuzelt(ham, soruSayisi) {
   }
   return {
     sorular,
-    derinlesme: { puan: puan15(h.derinlesme?.puan), yorum: kisa(h.derinlesme?.yorum) },
-    sonuc: { puan: puan15(h.sonuc?.puan), yorum: kisa(h.sonuc?.yorum) },
+    derinlesme: {
+      puan: puan15(h.derinlesme?.puan), yorum: kisa(h.derinlesme?.yorum),
+      // Model yalnız numara verir; metin her zaman oturum kaydından alınır (model alıntı uyduramaz).
+      dayanak: [...new Set((Array.isArray(h.derinlesme?.dayanak_sorular) ? h.derinlesme.dayanak_sorular : []).map(Number))]
+        .filter((n) => Number.isInteger(n) && n >= 1 && n <= soruSayisi).slice(0, 3),
+    },
+    sonuc: { puan: puan15(h.sonuc?.puan), yorum: kisa(h.sonuc?.yorum), dayanak: kisa(h.sonuc?.dayanak, 160) },
     ozet: kisa(h.ozet, 600),
   };
 }
@@ -55,7 +60,7 @@ export function degerlendirmeyiDuzelt(ham, soruSayisi) {
  * @param {string[]} o.acilanlar            oturumda açılan gizli bilgi kimlikleri
  * @param {ReturnType<typeof degerlendirmeyiDuzelt>} o.degerlendirme
  */
-export function puanla({ senaryo, acilanlar, degerlendirme }) {
+export function puanla({ senaryo, acilanlar, degerlendirme, gecmis = [], tahmin = '' }) {
   const n = degerlendirme.sorular.length;
   const acikSayisi = degerlendirme.sorular.filter((s) => s.tur === 'acik').length;
   const yonlendiriciSayisi = degerlendirme.sorular.filter((s) => s.yonlendirici).length;
@@ -73,7 +78,19 @@ export function puanla({ senaryo, acilanlar, degerlendirme }) {
     sonuc: degerlendirme.sonuc,
   };
 
-  const boyutlar = BOYUTLAR.map((b) => ({ ...b, puan: puanlar[b.anahtar].puan, yorum: puanlar[b.anahtar].yorum }));
+  // Dayanak: puanın kullanıcının hangi sorusuna (ya da tahminindeki hangi ifadeye) dayandığı. Soru metni oturum
+  // kaydından gelir; model yalnız numara seçer. Kod boyutlarında dayanak etiketlerden çıkar.
+  const soru = (no, etiket) => ({ no, soru: gecmis[no - 1]?.soru ?? '', etiket });
+  const sorular = degerlendirme.sorular;
+  const dayanak = {
+    acik: (sorular.some((s) => s.tur !== 'acik') ? sorular.filter((s) => s.tur !== 'acik').map((s) => soru(s.no, 'kapalı')) : sorular.slice(0, 2).map((s) => soru(s.no, 'açık uçlu'))).slice(0, 3),
+    varsayimsiz: sorular.filter((s) => s.yonlendirici).map((s) => soru(s.no, 'yönlendirici')).slice(0, 3),
+    kesif: [],
+    derinlesme: (degerlendirme.derinlesme.dayanak || []).map((no) => soru(no, '')),
+    sonuc: degerlendirme.sonuc.dayanak && String(tahmin).toLocaleLowerCase('tr').includes(degerlendirme.sonuc.dayanak.toLocaleLowerCase('tr'))
+      ? [{ alinti: degerlendirme.sonuc.dayanak }] : tahmin ? [{ alinti: String(tahmin).slice(0, 160) }] : [],
+  };
+  const boyutlar = BOYUTLAR.map((b) => ({ ...b, puan: puanlar[b.anahtar].puan, yorum: puanlar[b.anahtar].yorum, kaynak: ['derinlesme', 'sonuc'].includes(b.anahtar) ? 'model' : 'kod', dayanak: dayanak[b.anahtar].filter((d) => d.alinti || d.soru) }));
   const toplam = Math.round(boyutlar.reduce((t, b) => t + (b.agirlik * b.puan) / 5, 0));
   return { toplam, boyutlar, kritikAcilan, kritikToplam: kritikler.length };
 }
