@@ -1,0 +1,60 @@
+{
+  "id": "erken-ayrilanlar",
+  "baslik": "Yeni başlayanlar neden ilk ayda ayrılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Son üç ayda işe başlayan 12 depo çalışanından 7'si ilk ayını doldurmadan ayrıldı. Ücret bölgedeki diğer depolarla aynı. Yeni başlayanları karşılayan vardiya amiriyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın \"yeni nesil çalışmak istemiyor\" açıklamasının ötesine geçmek.",
+  "karakter": {
+    "ad": "Hakan",
+    "rol": "Vardiya amiri",
+    "tavir": "Tecrübeli, işini seven ama yorgun. Yeni gelenlerden umudu kesmiş gibi konuşuyor. Kendi yükünü soran birine içini döküyor.",
+    "ilk_soz": "Ayrılanları soracaksınız herhalde. Ne diyeyim, şimdikiler iki gün çalışıp bırakıyor."
+  },
+  "gizli_bilgiler": [
+    {
+      "id": "ilk-gun",
+      "onem": "kritik",
+      "bilgi": "Yeni gelen ilk gün doğrudan en yoğun toplama hattına veriliyor, çünkü eksik hep orada; yanına gösterecek biri ayrılamıyor.",
+      "acilma_kosulu": "Yeni başlayan birinin ilk günü ya da ilk haftası nasıl geçtiği, nereye verildiği sorulursa",
+      "ipucu_kelimeler": ["ilk gün", "ilk hafta", "nereye", "nasıl başl", "karşıla", "nasıl geç"]
+    },
+    {
+      "id": "egitim-yok",
+      "onem": "kritik",
+      "bilgi": "Yazılı bir eğitim planı yok; el terminalini kimden denk gelirse ondan öğreniyorlar ve ilk hafta hata yapınca azar işitiyorlar.",
+      "acilma_kosulu": "İşin nasıl öğretildiği, eğitim, kimin gösterdiği ya da yeni gelenlerin nerede zorlandığı sorulursa",
+      "ipucu_kelimeler": ["öğre", "eğitim", "göster", "zorlan", "kim anlat", "destek", "hata"]
+    },
+    {
+      "id": "vardiya-bildirimi",
+      "onem": "kritik",
+      "bilgi": "Yeni gelenlerin vardiyası bir gün önce akşam bildiriliyor; ayrılanların çoğu bunu ve servis saatini sorun olarak söylemiş.",
+      "acilma_kosulu": "Ayrılanların ayrılırken ne söylediği, çıkış nedenleri ya da çalışma düzeni ve vardiyalar sorulursa",
+      "ipucu_kelimeler": ["ne söyle", "neden ayrıl", "vardiya", "çalışma düzen", "ne dedi", "servis", "gerekçe"]
+    },
+    {
+      "id": "amir-yuku",
+      "onem": "destek",
+      "bilgi": "Kendisi aynı anda 40 kişiye bakıyor; yeni gelene ilk gün ayırabildiği süre on dakikayı geçmiyor.",
+      "acilma_kosulu": "Kendi iş yükü, yeni gelenlere ne kadar zaman ayırabildiği ya da neye ihtiyacı olduğu sorulursa",
+      "ipucu_kelimeler": ["senin", "sizin yük", "zaman ayır", "kaç kişi", "ihtiyac", "sana"]
+    }
+  ],
+  "yaniltici_ipuclari": [
+    "Şimdiki gençler ağır işe gelemiyor.",
+    "Başka yerde üç kuruş fazlasını bulan gidiyor."
+  ],
+  "kok_neden": "Bir karşılama ve eğitim süreci yok: yeni gelen ilk gün en zor hatta tek başına bırakılıyor, işi tesadüfen öğreniyor ve vardiyasını son anda öğreniyor. Ayrılıkların nedeni isteksizlik değil, ilk haftanın tasarlanmamış olması.",
+  "kok_neden_kelimeler": ["eğitim", "ilk gün", "ilk hafta", "karşılama", "oryantasyon", "vardiya", "süreç"],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni başlayan birinin ilk günü baştan sona nasıl geçiyor?",
+    "İşi kimden ve nasıl öğreniyorlar?",
+    "Ayrılanlar giderken size ne söyledi?",
+    "Yeni gelenlere zaman ayırabilmen için neye ihtiyacın var?"
+  ]
+}

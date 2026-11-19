@@ -21,6 +21,11 @@ export function openStore(dosya) {
       PRIMARY KEY (gun, tur, model));
   `);
 
+  // Sonradan eklenen sütun: eski veritabanlarına bir kez eklenir.
+  if (!db.prepare('PRAGMA table_info(oturum)').all().some((c) => c.name === 'varyant')) {
+    db.exec("ALTER TABLE oturum ADD COLUMN varyant TEXT NOT NULL DEFAULT 'v1'");
+  }
+
   const oku = db.prepare('SELECT sayi FROM sayac WHERE gun = ? AND anahtar = ?');
   const artir = db.prepare('INSERT INTO sayac (gun, anahtar, sayi) VALUES (?, ?, 1) ON CONFLICT(gun, anahtar) DO UPDATE SET sayi = sayi + 1');
   const sayi = (gun, anahtar) => oku.get(gun, anahtar)?.sayi || 0;
@@ -69,8 +74,8 @@ export function openStore(dosya) {
     },
 
     oturumKaydet(gun, o) {
-      db.prepare('INSERT INTO oturum (zaman, gun, senaryo, kanal, soru_sayisi, toplam, kritik_acilan, sure_sn) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')
-        .run(Date.now(), gun, o.senaryo, o.kanal, o.soruSayisi, o.toplam, o.kritikAcilan, o.sureSn);
+      db.prepare('INSERT INTO oturum (zaman, gun, senaryo, varyant, kanal, soru_sayisi, toplam, kritik_acilan, sure_sn) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)')
+        .run(Date.now(), gun, o.senaryo, o.varyant || 'v1', o.kanal, o.soruSayisi, o.toplam, o.kritikAcilan, o.sureSn);
     },
 
     kullanimKaydet(gun, k) {
@@ -83,8 +88,8 @@ export function openStore(dosya) {
     istatistik(esikGun) {
       return {
         baslatilan: db.prepare("SELECT gun, anahtar, sayi FROM sayac WHERE gun >= ? AND anahtar IN ('site', 'mcp') ORDER BY gun DESC").all(esikGun),
-        biten: db.prepare(`SELECT senaryo, kanal, COUNT(*) AS adet, ROUND(AVG(toplam)) AS ortalama_skor, ROUND(AVG(soru_sayisi), 1) AS ortalama_soru,
-          ROUND(AVG(sure_sn)) AS ortalama_sure_sn FROM oturum WHERE gun >= ? GROUP BY senaryo, kanal ORDER BY adet DESC`).all(esikGun),
+        biten: db.prepare(`SELECT senaryo, varyant, kanal, COUNT(*) AS adet, ROUND(AVG(toplam)) AS ortalama_skor, ROUND(AVG(soru_sayisi), 1) AS ortalama_soru,
+          ROUND(AVG(sure_sn)) AS ortalama_sure_sn FROM oturum WHERE gun >= ? GROUP BY senaryo, varyant, kanal ORDER BY senaryo, varyant`).all(esikGun),
         kullanim: db.prepare('SELECT tur, model, SUM(cagri) AS cagri, SUM(girdi) AS girdi, SUM(cikti) AS cikti FROM kullanim WHERE gun >= ? GROUP BY tur, model').all(esikGun),
       };
     },

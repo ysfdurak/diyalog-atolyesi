@@ -32,7 +32,7 @@ const model = {
     ozet: 'İlk sorudaki varsayımı bıraktığın anda bilgi gelmeye başladı. Bir sonraki denemede evet/hayır sorularını "ne" ve "nasıl" ile yeniden kur.',
   }),
 };
-const servis = oturumServisi({ senaryolar: senaryolariYukle(join(kok, 'senaryolar')), model, limit: () => ({ izin: true }) });
+const servis = oturumServisi({ senaryolar: senaryolariYukle(join(kok, 'senaryolar')), model, limit: () => ({ izin: true }), varyantSec: () => 'v1' });
 const { oturumId } = servis.baslat({ senaryoId: 'depo-verim-dususu' });
 for (const a of ADIMLAR) await servis.soruSor({ oturumId, soru: a.soru });
 const rapor = await servis.degerlendir({ oturumId, tahmin: TAHMIN });

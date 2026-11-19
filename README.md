@@ -12,7 +12,8 @@ Ticari olmayan bir portföy projesidir. Arayüz Türkçedir.
 
 - **Bilgi kazanılır.** Karakterin gizli bilgileri vardır ve her birinin bir açılma koşulu vardır. Evet/hayır sorusu kısa cevap alır, suçlayan soru savunma alır.
 - **Her oturum aynı rubrikle puanlanır.** Beş boyut: açık uçlu soru, derinleşme, varsayımsız soru, bilgi keşfi, sonuç. Üçü kodla hesaplanır, ikisini model yazılı ölçütlere göre puanlar.
-- **Gelişim görünür.** Her senaryonun ilk denemesi grafiğe girer; tekrar oynanan senaryo skoru şişirmez.
+- **Ezber işe yaramaz.** Senaryoların farklı kök nedenleri (varyantları) var; tekrar oynayınca oynamadığın biri gelir. Öğrenilen şey cevap değil, soru kalıbı olur.
+- **Gelişim görünür.** Her varyantın ilk denemesi grafiğe girer; tekrar oynanan senaryo skoru şişirmez.
 
 ## Yapı
 
@@ -31,7 +32,7 @@ Node.js 22.13 ya da üstü gerekir.
 ```bash
 npm install
 npm run start:dev      # yapay zekâsız deneme modu: http://localhost:8080
-npm test               # 28 test
+npm test               # 32 test
 ```
 
 Gerçek modelle çalıştırmak için `.env.example` dosyasını `.env` olarak kopyala ve `ANTHROPIC_API_KEY` değerini yaz.
