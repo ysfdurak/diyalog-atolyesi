@@ -195,3 +195,4 @@ h1[tabindex]:focus { outline: none; }
 .once-sonra.iki .etiketler { display: flex; gap: 6px; flex-wrap: wrap; }
 .degisen { margin: 8px 0 4px; }
 .veri-notu { margin: 8px 0 0; }
+.metin{max-width:760px;padding-top:24px;padding-bottom:40px;line-height:1.65}.metin h2{margin-top:1.6em}.metin li{margin:.35em 0}

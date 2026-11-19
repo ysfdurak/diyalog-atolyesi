@@ -292,8 +292,9 @@ function oturumEkrani() {
     formAlani.replaceChildren(form);
     // İlk soruda sorunun nereye gittiği yazılır (kurum içi eğitimde kişisel ya da şirket verisi yazılmasın).
     if (!o.mesajlar.length) form.append(el('p', { class: 'soluk kucuk veri-notu', id: 'veri-notu' }, durum.sunucu.yapayZeka
-      ? 'Yazdıkların (sorular ve sondaki tahminin), karakterin cevabı ve değerlendirme için Anthropic’in yapay zekâ servisine (Claude) gönderilir. Gerçek kişi, müşteri ya da şirket bilgisi yazma. Konuşma kaydedilmez; oturum 45 dakika işlem olmazsa silinir.'
-      : 'Deneme modu: yapay zekâ kapalı, sorun bu sunucudan dışarı gönderilmez. Konuşma kaydedilmez.'));
+      ? 'Yazdıkların (sorular ve sondaki tahminin), karakterin cevabı ve değerlendirme için Anthropic’in yapay zekâ servisine (Claude) gönderilir. Gerçek kişi, müşteri ya da şirket bilgisi yazma. Konuşma kaydedilmez; oturum 45 dakika işlem olmazsa silinir. '
+      : 'Deneme modu: yapay zekâ kapalı, sorun bu sunucudan dışarı gönderilmez. Konuşma kaydedilmez. ',
+    el('a', { href: '/gizlilik.html' }, 'Gizlilik ve veri')));
     if (!o.mesajlar.length) alan.setAttribute('aria-describedby', 'veri-notu');
     alan.focus({ preventScroll: true });
   }

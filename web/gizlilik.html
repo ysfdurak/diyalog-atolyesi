@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gizlilik ve veri · Diyalog Atölyesi</title>
+  <meta name="description" content="Diyalog Atölyesi'nde yazdıklarının nereye gittiği, ne kadar tutulduğu ve neyi yazmaman gerektiği.">
+  <meta name="theme-color" content="#13294b">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+  <header class="ust">
+    <div class="sarici ust-ic">
+      <a class="marka" href="/"><span>Diyalog Atölyesi</span></a>
+      <nav aria-label="Bağlantılar">
+        <a href="/">Uygulamaya dön</a>
+        <a href="#en" lang="en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik" tabindex="-1" class="sarici metin">
+    <h1>Gizlilik ve veri</h1>
+    <p><strong>Kısaca:</strong> Soruların ve tahminin, cevap ve değerlendirme üretmek için ABD'deki Anthropic'in yapay zekâ servisine (Claude) gönderilir. Konuşma bu sunucuda kaydedilmez. Gerçek kişi, müşteri ya da şirket bilgisi yazma.</p>
+
+    <h2>Kim sorumlu?</h2>
+    <p>Diyalog Atölyesi, Yusuf Durak'ın ticari olmayan portföy projesidir. Veri sorumlusu Yusuf Durak'tır. İletişim: <a href="https://ysfdurak.com/">ysfdurak.com</a> üzerindeki iletişim bilgileri.</p>
+
+    <h2>Ne gönderiliyor, nereye?</h2>
+    <ul>
+      <li><strong>Gönderilen:</strong> Oturumda yazdığın sorular, sondaki kök neden tahminin, karakterin önceki cevapları ve seçtiğin senaryonun metni.</li>
+      <li><strong>Alıcı:</strong> Anthropic PBC (ABD), Claude API. Gönderim, karakterin cevabını ve sorularının değerlendirmesini üretmek içindir. Bu, kişisel verinin yurt dışına aktarılması sayılabilir; bu yüzden kişisel veri yazmamanı istiyoruz.</li>
+      <li><strong>Anthropic'te:</strong> Anthropic'in yayımladığı kurala göre API ile gönderilen içerik model eğitiminde kullanılmaz ve en geç 30 gün içinde otomatik silinir. Kötüye kullanım incelemesi gibi istisnalarda daha uzun tutulabilir. Güncel kural: <a href="https://privacy.claude.com/en/articles/7996866-is-my-data-used-for-model-training" lang="en">Anthropic gizlilik merkezi</a>.</li>
+    </ul>
+
+    <h2>Bu sunucuda ne kalıyor?</h2>
+    <ul>
+      <li><strong>Konuşma metni:</strong> Yalnızca sunucunun belleğinde durur, diske ya da veritabanına yazılmaz. 45 dakika işlem olmazsa ya da sunucu yeniden başlarsa silinir.</li>
+      <li><strong>Anonim özet:</strong> Senaryo, soru sayısı, puan ve süre. Kim olduğun bilgisi yoktur; istatistik için tutulur.</li>
+      <li><strong>Kullanım sınırı:</strong> Günlük oturum sınırı için IP adresinin kendisi değil, gizli bir değerle karıştırılmış özeti (geri çevrilemez) kullanılır. Bu sayaçlar 2 gün sonra silinir.</li>
+      <li><strong>Hata kayıtları:</strong> Sunucu hatalarında yalnız hatanın teknik açıklaması yazılır; soruların yazılmaz.</li>
+    </ul>
+
+    <h2>Tarayıcında ne kalıyor?</h2>
+    <p>Gelişimin (hangi senaryoyu kaç puanla bitirdiğin) yalnızca bu tarayıcıda, yerel depolamada tutulur. Çerez kullanılmaz. Silmek için tarayıcının site verilerini temizlemen yeterli.</p>
+
+    <h2>Neyi yazmamalısın?</h2>
+    <p>Gerçek kişi adı, müşteri, şirket, maaş, sağlık ya da iletişim bilgisi. Senaryolar kurgusaldır; pratik için gerçek bilgiye gerek yoktur.</p>
+
+    <h2>Hakların</h2>
+    <p>KVKK 11. madde kapsamındaki haklarını (bilgi isteme, düzeltme, silme vb.) yukarıdaki iletişim yoluyla kullanabilirsin. Sunucu seni tanıyan bir bilgi tutmadığı için genellikle silinecek bir kayıt da yoktur; Anthropic'e gönderilen içerik yukarıdaki süre içinde silinir.</p>
+
+    <h2>Değişiklikler</h2>
+    <p>Son güncelleme: 19 Kasım 2026. Uygulamanın veri akışı değişirse bu sayfa güncellenir.</p>
+
+    <hr>
+    <section id="en" lang="en">
+      <h2>Privacy and data (English)</h2>
+      <p><strong>In short:</strong> Your questions and final guess are sent to Anthropic's AI service (Claude, United States) to produce the character's replies and the feedback. The conversation is not saved on this server. Do not type real people's, customers' or companies' information.</p>
+      <ul>
+        <li><strong>Sent to Anthropic:</strong> your questions, your final root-cause guess, the character's earlier replies and the scenario text. Under Anthropic's published policy, API content is not used for model training and is deleted automatically within 30 days, with exceptions such as abuse review (<a href="https://privacy.claude.com/en/articles/7996866-is-my-data-used-for-model-training">Anthropic privacy center</a>).</li>
+        <li><strong>On this server:</strong> the conversation lives only in memory and is deleted after 45 minutes of inactivity or a restart. An anonymous summary (scenario, number of questions, score, duration) is kept for statistics. Daily limits use a salted, irreversible hash of your IP address; these counters are deleted after 2 days.</li>
+        <li><strong>In your browser:</strong> your progress is kept in local storage. No cookies are used.</li>
+        <li><strong>Controller:</strong> Yusuf Durak (non-commercial portfolio project). Contact details: <a href="https://ysfdurak.com/">ysfdurak.com</a>. Last updated: 19 November 2026.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="alt">
+    <div class="sarici">
+      <p>Ticari olmayan bir portföy projesi · <a href="https://ysfdurak.com/">Yusuf Durak</a></p>
+    </div>
+  </footer>
+</body>
+</html>
