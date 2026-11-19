@@ -8,6 +8,9 @@ Ticari olmayan bir portföy projesidir. Arayüz Türkçedir.
 |---|---|
 | ![Oturum ekranı](docs/ekranlar/oturum.png) | ![Rapor ekranı](docs/ekranlar/rapor.png) |
 
+
+**Projeyi anlatırken:** Mülakatta sorulabilecek 10 soru, kısa cevaplar ve verilen kararlar (sorun → karar → bedel): [docs/MULAKAT.md](docs/MULAKAT.md).
+
 ## Genel bir sohbet botundan farkı
 
 - **Bilgi kazanılır.** Karakterin gizli bilgileri vardır ve her birinin bir açılma koşulu vardır. Evet/hayır sorusu kısa cevap alır, suçlayan soru savunma alır.
