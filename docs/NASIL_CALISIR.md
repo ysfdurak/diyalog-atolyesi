@@ -148,3 +148,6 @@ Aynı senaryolar Claude'un içinden de oynanabiliyor. Web ve MCP aynı çekirde�
 
 **"Kodu kim yazdı?"**
 Problemi, senaryoları, rubriği ve kararları ben tanımladım; kod yapay zekâ desteğiyle yazıldı. Benchmark ve tasarım kararları vaka sayfasında.
+
+## "Bu soruyu yeniden dene": iki soru yan yana (Kasım 2026)
+Raporda zayıf bir sorunun altındaki "Bu soruyu yeniden dene" kutusu, yeni soru yazılınca ilk ve ikinci soruyu metinleriyle yan yana gösterir ve altında **değişen tek davranışı** yazar. `web/app.js` → `soruBicimi()` sorunun biçimine bakar (açık uçlu mu, varsayım var mı, zaman aralığı, ölçü, somut örnek, birden çok soru); `degisenDavranis()` bu sırayla ilk olumlu değişikliği seçer. Yapay zekâ çağrısı yok; karakterin cevabını ve puanı değiştirmez. Sözcük kuralları sezgiseldir; yeni bir davranış eklemek için iki fonksiyona birer satır eklemek yeter.
