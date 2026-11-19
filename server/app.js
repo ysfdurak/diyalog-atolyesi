@@ -3,6 +3,7 @@
 import { createHash, timingSafeEqual } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { gercekIp } from './gercek-ip.js';
 import { gununSenaryosu, senaryolariYukle } from '../src/cekirdek/senaryolar.js';
 import { KuralHatasi, oturumServisi, SORU_UZUNLUGU, TAHMIN_UZUNLUGU } from '../src/cekirdek/oturum.js';
 import { ModelHatasi } from '../src/cekirdek/model.js';
@@ -114,9 +115,9 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
   });
   const mcp = config.mcpEnabled ? createMcpHandler({ servis, log }) : null;
 
-  /** Ziyaretçi kimliği: IP adresinin tuzlu özeti. IP'nin kendisi saklanmaz. Caddy/Cloudflare arkasında gerçek IP başlıktan okunur. */
+  /** Ziyaretçi kimliği: IP adresinin tuzlu özeti. IP'nin kendisi saklanmaz. Başlıklara yalnız güvenilen vekilden gelirse bakılır (gercek-ip.js). */
   function ziyaretci(req) {
-    const ip = String(req.headers['cf-connecting-ip'] || String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket.remoteAddress || '');
+    const ip = gercekIp(req);
     return ozet(tuz + ip).toString('base64url').slice(0, 22);
   }
 

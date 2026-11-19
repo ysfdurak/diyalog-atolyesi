@@ -152,3 +152,8 @@ Problemi, senaryoları, rubriği ve kararları ben tanımladım; kod yapay zekâ
 
 ## "Bu soruyu yeniden dene": iki soru yan yana (Kasım 2026)
 Raporda zayıf bir sorunun altındaki "Bu soruyu yeniden dene" kutusu, yeni soru yazılınca ilk ve ikinci soruyu metinleriyle yan yana gösterir ve altında **değişen tek davranışı** yazar. `web/app.js` → `soruBicimi()` sorunun biçimine bakar (açık uçlu mu, varsayım var mı, zaman aralığı, ölçü, somut örnek, birden çok soru); `degisenDavranis()` bu sırayla ilk olumlu değişikliği seçer. Yapay zekâ çağrısı yok; karakterin cevabını ve puanı değiştirmez. Sözcük kuralları sezgiseldir; yeni bir davranış eklemek için iki fonksiyona birer satır eklemek yeter.
+
+
+## Ziyaretçi kimliği ve sahte başlıklar (Kasım 2026)
+
+Günlük 3 oturum sınırı ziyaretçinin IP özetine bağlıdır. Önceden `CF-Connecting-IP` ve `X-Forwarded-For` başlıklarının ilk değeri doğrudan okunuyordu; alan adı Cloudflare'den geçmiyorsa bu başlıkları herkes yazabilir, her istekte farklı bir IP uydurup ziyaretçi sınırını aşabilir ve site tavanını (günde 30 oturum) tek başına tüketebilirdi. `server/gercek-ip.js` artık `X-Forwarded-For`'u yalnız istek özel ağdaki Caddy'den geliyorsa okur ve son elemanını alır (Caddy güvenmediği istemcinin başlığını atar); `CF-Connecting-IP`'yi yalnız bağlantı Cloudflare'in yayımladığı adres aralıklarından geliyorsa kullanır. Test: `tests/gercek-ip.test.js`.
