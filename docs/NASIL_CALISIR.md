@@ -110,6 +110,7 @@ Dosyalar: `server/app.js` (kapat / izle / krediKontrol), `server/bildirim.js`, `
 - Ziyaretçi limiti için IP adresinin **tuzlu özeti** tutulur, IP'nin kendisi tutulmaz; özetler 2 gün sonra silinir.
 - Gelişim grafiği ziyaretçinin kendi tarayıcısında durur.
 - Sorular, cevap üretmek için Anthropic API'sine gönderilir.
+- Bu bilgi kullanıcıya ilk soru alanının altında da yazılır (`soruFormu`, `#veri-notu`): sorular ve sondaki tahmin Anthropic'in yapay zekâ servisine (Claude) gider, gerçek kişi, müşteri ya da şirket bilgisi yazılmamalı. Deneme modunda (`MODEL_MODE=mock`) sorunun sunucudan çıkmadığı yazılır. Not yalnız ilk soruda görünür; alan `aria-describedby` ile ona bağlıdır.
 
 ## Bilinen sınırlar
 
