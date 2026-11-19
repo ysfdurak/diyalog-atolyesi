@@ -23,3 +23,10 @@ jobs:
         run: npm ci
       - name: Testler (yapay zekâ çağrısı yok, sahte model)
         run: npm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Playwright kur
+        run: pip install playwright==1.*
+      - name: Tarayıcı duman testi (sahte model, Chrome)
+        run: python3 tests/tarayici/duman_test.py "$(which google-chrome)"
