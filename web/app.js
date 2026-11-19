@@ -405,7 +405,25 @@ const ACIK_SORU = /(^|\s)(ne|neler|nasıl|neden|niçin|hangi|kim|kimler|nerede|n
 const YONLENDIRICI_SORU = /değil mi|öyle değil|isteksiz|tembel|motivasyon|suç|yüzünden mi|fiyat(tan)? mı/;
 function soruBicimi(metin) {
   const k = String(metin).toLocaleLowerCase('tr');
-  return { acik: ACIK_SORU.test(k), yonlendirici: YONLENDIRICI_SORU.test(k) };
+  return {
+    acik: ACIK_SORU.test(k), yonlendirici: YONLENDIRICI_SORU.test(k),
+    zaman: /ne zaman|tarih|hafta|gün|\bay(dan|da|ın|lar)?\b|dün|geçen|son (\d+|birkaç|iki|üç)|önce(si)?\b|vardiya|saat/.test(k),
+    olcu: /kaç|ne kadar|yüzde|oran|sayı|adet|süre/.test(k),
+    ornek: /örnek|somut|en son|bir kez|anlatır mısın|anlatabilir/.test(k),
+    coklu: (k.match(/\?/g) || []).length > 1,
+  };
+}
+// İki soru arasında değişen tek davranışı seçer: önce varsayım ve kapalılık, sonra ayrıntı (zaman, ölçü, örnek), en son çoklu soru.
+function degisenDavranis(once, sonra) {
+  if (once.yonlendirici && !sonra.yonlendirici) return 'İkinci sorunda varsayımı ya da suçlamayı çıkardın; nedeni karşı tarafa bıraktın.';
+  if (!once.acik && sonra.acik) return 'İkinci sorunda evet/hayır yerine anlatmaya davet ettin.';
+  if (!once.zaman && sonra.zaman) return 'İkinci sorunda zaman aralığını belirttin; cevap belli bir döneme bağlanacak.';
+  if (!once.olcu && sonra.olcu) return 'İkinci sorunda ölçülebilir bir ayrıntı istedin (kaç, ne kadar, ne sıklıkta).';
+  if (!once.ornek && sonra.ornek) return 'İkinci sorunda somut bir örnek istedin.';
+  if (once.coklu && !sonra.coklu) return 'İkinci sorunda tek bir şey sordun; cevap dağılmayacak.';
+  if (!once.yonlendirici && sonra.yonlendirici) return 'İkinci soru bir varsayım ekledi; ilk sorudaki tarafsızlığı geri getir.';
+  if (once.acik && !sonra.acik) return 'İkinci soru kapalı hâle geldi; yeniden anlatmaya davet et.';
+  return 'İki soru aynı davranışı gösteriyor. Bir şeyi değiştir: zaman aralığı, somut örnek ya da ölçü iste.';
 }
 function yenidenDene(s) {
   const kutu = el('div', { class: 'yeniden', hidden: true });
@@ -419,17 +437,16 @@ function yenidenDene(s) {
     const metin = alan.value.trim();
     sonuc.replaceChildren();
     if (!metin) { sonuc.append(el('p', { class: 'soluk' }, 'Önce yeni sorunu yaz.')); return; }
-    const once = { acik: s.tur === 'acik', yonlendirici: !!s.yonlendirici }, sonra = soruBicimi(metin);
+    const once = { ...soruBicimi(s.soru || ''), acik: s.tur === 'acik', yonlendirici: !!s.yonlendirici }, sonra = soruBicimi(metin);
     const notlar = [];
-    if (!once.acik && sonra.acik) notlar.push('Soru artık açık uçlu: karşı tarafı anlatmaya davet ediyor.');
     if (!sonra.acik) notlar.push('Hâlâ evet/hayırla cevaplanabilir. "Ne", "nasıl", "hangi" ya da "anlatır mısın" ile başlamayı dene.');
-    if (once.yonlendirici && !sonra.yonlendirici) notlar.push('Varsayım ya da suçlama kalktı; cevabı karşı taraf belirliyor.');
     if (sonra.yonlendirici) notlar.push('Soru hâlâ bir varsayım taşıyor (ör. "değil mi", "motivasyon", "suç"). Nedeni sen söyleme, ona sor.');
     if (sonra.acik && !sonra.yonlendirici) notlar.push('İyi bir soru. Gerçek oturumda bu soruyu, bir önceki cevabın ayrıntısına bağlayarak sor.');
     sonuc.append(
-      el('div', { class: 'once-sonra' },
-        el('div', {}, el('b', {}, 'Önce'), ...etiketler(once)),
-        el('div', {}, el('b', {}, 'Sonra'), ...etiketler(sonra))),
+      el('div', { class: 'once-sonra iki' },
+        el('div', {}, el('b', {}, 'İlk soru'), el('q', {}, s.soru || ''), el('div', { class: 'etiketler' }, ...etiketler(once))),
+        el('div', {}, el('b', {}, 'İkinci soru'), el('q', {}, metin), el('div', { class: 'etiketler' }, ...etiketler(sonra)))),
+      el('p', { class: 'degisen' }, el('b', {}, 'Değişen davranış: '), degisenDavranis(once, sonra)),
       el('ul', { class: 'liste duz' }, notlar.map((n) => el('li', {}, el('span', {}, n)))),
       el('p', { class: 'soluk' }, 'Bu hızlı kontrol yalnızca sorunun biçimine bakar; karakterin cevabını ve puanını değiştirmez.'));
   };
