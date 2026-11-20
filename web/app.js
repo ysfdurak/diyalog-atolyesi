@@ -123,7 +123,7 @@ async function anaSayfa() {
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
       el('h2', { id: 'b-senaryolar' }, 'Senaryolar'),
       s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, 'Bazı senaryoların birden fazla kök nedeni var. Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.'),
-      el('div', { class: 'kartlar' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
+      el('div', { class: 'kartlar senaryo-kartlari' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-nasil' },
       el('h2', { id: 'b-nasil' }, 'Nasıl çalışır'),
