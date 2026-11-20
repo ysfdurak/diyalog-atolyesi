@@ -137,7 +137,8 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
     res.setHeader('X-Frame-Options', 'DENY');
-    res.setHeader('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'");
+    // Ortak ölçüm servisi (olcum.ysfdurak.com): yalnız betiği ve olay gönderimi için izin; stil satır içi değil (adoptedStyleSheets).
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://olcum.ysfdurak.com; connect-src 'self' https://olcum.ysfdurak.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'");
   }
 
   function json(res, durum, veri) {
