@@ -122,7 +122,7 @@ Ortak altyapı (VPS, Docker, ortak Caddy, Cloudflare) site deposunda anlatılır
 ## 8. Bilinen sınırlar ve sonraki adımlar
 
 - **Gerçek model ayarı yapılmadı.** Senaryolar ve varyantlar yalnız sahte modelle doğrulandı. Önce bu.
-- **İçerik hedefi tamam:** 122 senaryo × 3 kök neden = 366 oturum. Hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda. 122 kart tek listede uzun; alan filtresi var, gerekirse "oynamadıklarım" filtresi eklenebilir. Konuların yarısı kullanıcının kendi işinde yaşadığı sorunlardan. 90 kök nedenin hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda.
+- **İçerik hedefi tamam:** 122 senaryo × 3 kök neden = 366 oturum. Hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda. 122 kart tek listede uzun; alan filtresi var, gerekirse "oynamadıklarım" filtresi eklenebilir. İlk partilerdeki konular kullanıcının kendi işinde yaşadığı sorunlardan seçildi.
 - **Uzman seti taslak** ve yeni senaryoları kapsamıyor; bir eğitmen ya da İK uzmanı onaylamalı.
 - Metin tabanlı; ses tonu ve beden dili yok. Hesap yok; gelişim başka cihaza taşınmaz.
 - Sunucu yeniden başlarsa yarım oturumlar kaybolur.
