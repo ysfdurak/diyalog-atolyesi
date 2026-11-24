@@ -1,0 +1,199 @@
+{
+  "id": "saha-ekranlari",
+  "baslik": "Depodaki gösterge ekranlarına neden kimse bakmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 6,
+  "acilis": "Altı ay önce depoya dört büyük ekran asıldı; ekiplerin anlık verimini ve hedeflerini gösteriyor. Gözlemde çalışanların ekranlara neredeyse hiç bakmadığı görüldü. Toplama ekibinden deneyimli bir çalışanla konuşuyorsun.",
+  "rolun": "Ekranları kurduran veri ve raporlama sorumlususun. Amacın ekranları savunmak değil, neden bakılmadığını anlamak.",
+  "karakter": {
+    "ad": "Şule",
+    "rol": "Kıdemli toplayıcı",
+    "tavir": "Samimi ve pratik; \"bakacak vakit yok\" diye başlıyor. Gerçekten merak eden birine düşündüğünü söylüyor.",
+    "ilk_soz": "Ekranlar güzel ama iş akarken başını kaldırıp bakacak vakit pek olmuyor."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar rakamla ilgilenmiyor.",
+    "Ekranlar yeni, alışılmadı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ekranda gördüğün rakamlar senin işinle nasıl bağlantılı?",
+    "Ekranlar depoda nerede duruyor, gün içinde nerelerdesin?",
+    "Bir rakam kötü göründüğünde sonra neler oluyor?",
+    "Gün içinde işinle ilgili hangi bilgiye ihtiyacın oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış bilgi: ekip toplamı, kişinin işi değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekranda bütün deponun toplam verimi ve günlük hedef var; kendi işini ya da kendi ekibinin durumunu göstermiyor.",
+          "acilma_kosulu": "Rakamların kendi işiyle bağı sorulursa",
+          "ipucu_kelimeler": [
+            "işinle nasıl",
+            "toplam verim",
+            "kendi ekibi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gün içinde asıl ihtiyacı, sıradaki acil siparişleri ve hangi aracın ne zaman kalkacağını bilmek.",
+          "acilma_kosulu": "Gün içinde gereken bilgi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bilgiye",
+            "acil sipariş",
+            "araç"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rakam kötü görününce hiçbir şey değişmiyor; kimse gelip ne yapılacağını söylemiyor.",
+          "acilma_kosulu": "Kötü rakamın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "kötü göründüğünde",
+            "hiçbir şey değişmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekranlar ana koridorlarda asılı.",
+          "acilma_kosulu": "Ekranların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "nerede duruyor",
+            "ana koridor"
+          ]
+        }
+      ],
+      "kok_neden": "Ekranlara bakılmıyor çünkü çalışanın ihtiyacı olan bilgiyi göstermiyor: ekranlar deponun toplam verimini gösteriyor, çalışan ise sıradaki acil siparişi ve araç saatini bilmek istiyor; kötü rakam da hiçbir eyleme yol açmıyor.",
+      "kok_neden_kelimeler": [
+        "bilgi",
+        "toplam verim",
+        "acil sipariş",
+        "ihtiyaç",
+        "eylem"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yer yanlış: ekranlar çalışılan alanda değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekranlar ofis koridoruna ve mola alanına asıldı; toplayıcılar gün boyu raf koridorlarında, ekranların görmediği yerlerde.",
+          "acilma_kosulu": "Ekranların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "nerede duruyor",
+            "ofis koridoru",
+            "mola alanı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Rakamlar ekiple ilgili; ama toplayıcı ekranı ancak mola için geçerken görüyor.",
+          "acilma_kosulu": "Rakamların kendi işiyle bağı sorulursa",
+          "ipucu_kelimeler": [
+            "işinle nasıl",
+            "mola için geçerken"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Asıl ihtiyaç duydukları bilgi terminalde zaten var; ekrana bakmak için ayrıca yürümek gerekiyor.",
+          "acilma_kosulu": "Gün içinde gereken bilgi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bilgiye",
+            "terminalde zaten",
+            "yürümek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kötü rakamlarda vardiya amiri ekiple konuşuyor.",
+          "acilma_kosulu": "Kötü rakamın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "kötü göründüğünde",
+            "amiri ekiple"
+          ]
+        }
+      ],
+      "kok_neden": "Ekranlara bakılmıyor çünkü yanlış yerdeler: ekranlar ofis koridoruna ve mola alanına asıldı, toplayıcılar gün boyu raf koridorlarında ve ihtiyaç duydukları bilgi zaten terminallerinde var.",
+      "kok_neden_kelimeler": [
+        "yer",
+        "ofis koridoru",
+        "mola",
+        "terminal",
+        "koridor"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ceza aracı oldu: ekran sıralama ve azar getirdi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Rakam kötü görününce amir ekranın önünde ekibi topluyor ve en düşük kişileri isimleriyle sayıyor.",
+          "acilma_kosulu": "Kötü rakamın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "kötü göründüğünde",
+            "isimleriyle",
+            "en düşük"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekranda kişi bazında sıralama var; listenin altındakiler kendilerini teşhir edilmiş hissediyor.",
+          "acilma_kosulu": "Rakamların kendi işiyle bağı sorulursa",
+          "ipucu_kelimeler": [
+            "işinle nasıl",
+            "sıralama",
+            "teşhir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Asıl ihtiyaçları ekipçe hedefe ne kadar kaldığını görmek; kişi sıralaması değil.",
+          "acilma_kosulu": "Gün içinde gereken bilgi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bilgiye",
+            "ekipçe",
+            "hedefe ne kadar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekranlar toplama koridorlarının başında.",
+          "acilma_kosulu": "Ekranların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "nerede duruyor",
+            "koridorların başı"
+          ]
+        }
+      ],
+      "kok_neden": "Ekranlara bilerek bakılmıyor çünkü ekran ceza aracına döndü: kişi bazında sıralama gösteriyor, amir kötü rakamda ekibi ekran önünde toplayıp en düşükleri isimleriyle sayıyor; çalışanlar ekipçe hedefi görmek istiyor.",
+      "kok_neden_kelimeler": [
+        "sıralama",
+        "ceza",
+        "teşhir",
+        "isim",
+        "ekipçe"
+      ]
+    }
+  ]
+}

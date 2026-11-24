@@ -1,0 +1,200 @@
+{
+  "id": "standart-sureler",
+  "baslik": "Standart süreler neden gerçeği yansıtmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Personel planı, iki yıl önce yapılan zaman etüdünden çıkan standart sürelere dayanıyor. Plan her gün gerçekleşenden %25 sapıyor ve amirler planı \"zaten tutmuyor\" diye kullanmıyor. Zaman etüdünü yapan endüstri mühendisiyle konuşuyorsun.",
+  "rolun": "Veri ve raporlama sorumlususun. Amacın etüdü yanlış ilan etmek değil, sürelerin neden tutmadığını anlamak.",
+  "karakter": {
+    "ad": "Fikret",
+    "rol": "Endüstri mühendisi",
+    "tavir": "Yöntemine güveniyor; \"ölçüm doğruydu\" diyor. Ölçümün nasıl yapıldığını soran birine açık konuşuyor.",
+    "ilk_soz": "Ölçümler doğru yapıldı, yüzlerce gözlem var. Bir şeyler sonradan değişmiş olmalı."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar yavaşladı.",
+    "Amirler planı uygulamıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Etüt nasıl ve hangi koşullarda yapıldı?",
+    "Etütten bu yana süreçte ve ürünlerde neler değişti?",
+    "Sapma en çok hangi işlerde oluyor?",
+    "Standart süreler ne sıklıkla güncelleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gözlemlenen koşul özeldi: en iyi ekip, sakin dönem",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etüt sakin bir dönemde, en deneyimli toplayıcılar izlenerek yapıldı; çalışanlar izlendiklerini biliyordu.",
+          "acilma_kosulu": "Etüdün yapılış koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "etüt nasıl",
+            "sakin dönem",
+            "izlendikleri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sapma en çok yeni çalışanların yoğun olduğu vardiyalarda ve yoğun dönemlerde.",
+          "acilma_kosulu": "Sapmanın yoğunlaştığı işler sorulursa",
+          "ipucu_kelimeler": [
+            "sapma en çok",
+            "yeni çalışan",
+            "yoğun dönem"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Süreler hiç güncellenmedi; öğrenme eğrisi ve yorgunluk payı hesaba katılmadı.",
+          "acilma_kosulu": "Sürelerin güncellenme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "öğrenme eğrisi",
+            "yorgunluk payı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Etütten bu yana süreç büyük ölçüde aynı.",
+          "acilma_kosulu": "Etütten bu yana değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "etütten bu yana",
+            "büyük ölçüde aynı"
+          ]
+        }
+      ],
+      "kok_neden": "Süreler tutmuyor çünkü özel bir koşulda ölçüldü: etüt sakin dönemde, izlendiğini bilen en deneyimli toplayıcılarla yapıldı; yeni çalışan, yoğunluk, öğrenme ve yorgunluk payı hesaba katılmadı ve süreler hiç güncellenmedi.",
+      "kok_neden_kelimeler": [
+        "koşul",
+        "deneyimli",
+        "sakin",
+        "yorgunluk",
+        "öğrenme"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İş değişti, süre değişmedi: e-ticaret siparişleri",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etütten bu yana e-ticaret siparişleri arttı; tek ürünlü siparişlerde ürün başına süre çok kalemli siparişin üç katı.",
+          "acilma_kosulu": "Etütten bu yana değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "etütten bu yana",
+            "e-ticaret",
+            "üç katı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sapma en çok tek ürünlü sipariş toplama ve paketlemede.",
+          "acilma_kosulu": "Sapmanın yoğunlaştığı işler sorulursa",
+          "ipucu_kelimeler": [
+            "sapma en çok",
+            "tek ürünlü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Standart süreler hiç güncellenmedi; etüt sipariş tipine göre ayrı süre belirlemedi, tek ortalama süre kullanılıyor.",
+          "acilma_kosulu": "Sürelerin güncellenme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "tek ortalama",
+            "sipariş tipi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Etüt farklı vardiyalarda yapıldı.",
+          "acilma_kosulu": "Etüdün yapılış koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "etüt nasıl",
+            "farklı vardiya"
+          ]
+        }
+      ],
+      "kok_neden": "Süreler tutmuyor çünkü iş değişti: etüt tek bir ortalama süre verdi, sonradan artan tek ürünlü e-ticaret siparişlerinde ürün başına süre üç kat fazla ve sipariş tipine göre ayrı süreler hiç belirlenmedi.",
+      "kok_neden_kelimeler": [
+        "sipariş tipi",
+        "e-ticaret",
+        "ortalama",
+        "güncellen",
+        "tek ürünlü"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görünmeyen işler: bekleme ve dolaylı iş süreye girmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etüt yalnızca doğrudan toplama hareketlerini ölçtü; ürün arama, ekipman bekleme ve ikmal bekleme süreleri ölçülmedi.",
+          "acilma_kosulu": "Etüdün yapılış koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "etüt nasıl",
+            "ürün arama",
+            "ekipman bekleme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sapma en çok, ürünün rafta bulunamadığı ve forklift beklenen işlerde.",
+          "acilma_kosulu": "Sapmanın yoğunlaştığı işler sorulursa",
+          "ipucu_kelimeler": [
+            "sapma en çok",
+            "bulunamadığı",
+            "forklift beklen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Süreler yılda bir güncelleniyor ama yine yalnızca doğrudan hareket ölçülüyor.",
+          "acilma_kosulu": "Sürelerin güncellenme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "yılda bir",
+            "doğrudan hareket"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün yapısı etütten bu yana pek değişmedi.",
+          "acilma_kosulu": "Etütten bu yana değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "etütten bu yana",
+            "ürün yapısı"
+          ]
+        }
+      ],
+      "kok_neden": "Süreler tutmuyor çünkü görünmeyen işleri içermiyor: etüt yalnızca doğrudan toplama hareketini ölçtü, ürün arama ve ekipman ile ikmal bekleme süreleri hiç ölçülmedi ve güncellemeler de aynı yöntemle yapılıyor.",
+      "kok_neden_kelimeler": [
+        "bekleme",
+        "arama",
+        "doğrudan",
+        "ölçülmedi",
+        "görünmeyen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "yerel-tedarikci",
+  "baslik": "Yerel tedarikçiye geçiş neden yarıda kaldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Nakliye maliyetini ve süresini kısaltmak için ambalaj malzemelerinin yarısını yerel bir tedarikçiye kaydırma kararı alındı. Altı ay sonra yerel tedarikçinin payı %10'da kaldı ve geçiş fiilen durdu. Geçişi yöneten satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın geçişi zorla sürdürmek değil, neden yarıda kaldığını anlamak.",
+  "karakter": {
+    "ad": "Lale",
+    "rol": "Satın alma uzmanı",
+    "tavir": "Hevesli başlamış ama hayal kırıklığına uğramış; \"herkes eski tedarikçiyi istiyor\" diyor. Süreci soran birine açık.",
+    "ilk_soz": "Ben geçişe inanıyordum. Ama her adımda biri eski tedarikçiye geri dönmek istedi."
+  },
+  "yaniltici_ipuclari": [
+    "Ekipler alışkanlıklarını bırakmıyor.",
+    "Yerel tedarikçi küçük ve güvenilmez."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yerel tedarikçinin ürünleri depoda nasıl karşılandı?",
+    "Geçiş planı nasıl hazırlandı, kimler dahil edildi?",
+    "Yerel tedarikçi hangi konularda zorlanıyor?",
+    "Eski tedarikçi geçiş sürecinde ne yaptı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kapasite: yerel tedarikçi hacmi karşılayamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yerel tedarikçi aylık hacmin yalnızca %15'ini üretebiliyor; büyük siparişlerde teslimi bölüyor.",
+          "acilma_kosulu": "Tedarikçinin zorlandığı konular sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda zorlan",
+            "%15",
+            "teslimi bölüyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçiş planı tedarikçinin üretim kapasitesi ziyaret edilmeden, teklif formundaki beyana göre hazırlandı.",
+          "acilma_kosulu": "Geçiş planının hazırlanışı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "ziyaret",
+            "beyan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Depo bölünmüş teslimatlar yüzünden aynı ürün için haftada üç kez mal kabul yapmak zorunda kalınca şikâyet etti.",
+          "acilma_kosulu": "Ürünlerin depoda karşılanışı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandı",
+            "bölünmüş teslim",
+            "haftada üç"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eski tedarikçi fiyatlarını biraz düşürdü.",
+          "acilma_kosulu": "Eski tedarikçinin tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "eski tedarikçi",
+            "biraz düşürdü"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş kapasite yüzünden durdu: yerel tedarikçi hacmin yalnızca küçük bir kısmını üretebiliyor, plan fabrika ziyaret edilmeden beyana göre yapıldı ve bölünmüş teslimatlar depoda iş yükü yaratınca geri dönüş istendi.",
+      "kok_neden_kelimeler": [
+        "kapasite",
+        "ziyaret",
+        "beyan",
+        "bölünmüş",
+        "hacim"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kalite farkı: ürün şartnameye uygun ama sahaya değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Paketleme ekibi yerel tedarikçinin kolilerinin bant makinesinde sıkıştığını ve katlama çizgilerinin farklı olduğunu bildirdi.",
+          "acilma_kosulu": "Ürünlerin depoda karşılanışı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandı",
+            "sıkıştı",
+            "katlama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçiş planına depo ve paketleme dahil edilmedi; numuneler yalnızca ölçü kontrolünden geçti, makinede denenmedi.",
+          "acilma_kosulu": "Geçiş planının hazırlanışı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "numune",
+            "makinede denenmedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi, koli özelliklerini değiştirmek için teknik bilgi bekliyor; kimse ona makine bilgisini vermedi.",
+          "acilma_kosulu": "Tedarikçinin zorlandığı konular sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda zorlan",
+            "teknik bilgi",
+            "makine bilgisi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eski tedarikçi geçişe karışmadı.",
+          "acilma_kosulu": "Eski tedarikçinin tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "eski tedarikçi",
+            "karışmadı"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş kalite uyumsuzluğundan durdu: yerel tedarikçinin kolileri şartnameye uygun ama bant makinesinde sıkışıyor, numuneler makinede denenmedi, paketleme planlamaya katılmadı ve tedarikçiye uyum için gereken makine bilgisi verilmedi.",
+      "kok_neden_kelimeler": [
+        "makine",
+        "numune",
+        "dahil",
+        "uyum",
+        "paketleme"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eski tedarikçi karşılık verdi: fiyat indirimi ve ilişki",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eski tedarikçi geçiş başlayınca fiyatlarını %8 düşürdü ve depo ekibine doğrudan ulaşıp hızlı teslim sözü verdi.",
+          "acilma_kosulu": "Eski tedarikçinin tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "eski tedarikçi",
+            "%8",
+            "doğrudan ulaş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçiş planı yalnızca yerel tedarikçinin fiyat avantajına dayanıyordu; eski tedarikçinin karşılık vermesi senaryo olarak düşünülmedi.",
+          "acilma_kosulu": "Geçiş planının hazırlanışı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "fiyat avantajı",
+            "senaryo"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Depo, eski tedarikçinin yeni fiyatı ve hızlı teslim sözü varken yerel tedarikçiyle uğraşmanın anlamını sorguladı.",
+          "acilma_kosulu": "Ürünlerin depoda karşılanışı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandı",
+            "anlamını sorguladı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yerel tedarikçi teslimlerde zorlanmıyor.",
+          "acilma_kosulu": "Tedarikçinin zorlandığı konular sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda zorlan",
+            "zorlanmıyor"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş eski tedarikçinin karşılık vermesiyle durdu: geçiş yalnızca fiyat avantajına dayanıyordu, eski tedarikçi fiyatını düşürüp depoya hızlı teslim sözü verdi ve nakliye süresi ve risk dağıtma gibi diğer gerekçeler kimseye anlatılmadığı için geçişin anlamı kalmadı.",
+      "kok_neden_kelimeler": [
+        "fiyat",
+        "eski tedarikçi",
+        "gerekçe",
+        "senaryo",
+        "karşılık"
+      ]
+    }
+  ]
+}

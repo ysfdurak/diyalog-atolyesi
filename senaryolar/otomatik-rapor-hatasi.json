@@ -1,0 +1,200 @@
+{
+  "id": "otomatik-rapor-hatasi",
+  "baslik": "Otomatik rapor neden üç ay yanlış rakam gönderdi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Her sabah yönetime otomatik giden verimlilik raporunun üç aydır yanlış hesapladığı ortaya çıktı; bir veri kaynağı değişmiş. Bu sürede iki personel kararı yanlış rakamla verildi. Raporu kuran veri mühendisiyle konuşuyorsun.",
+  "rolun": "Veri ve raporlama sorumlususun. Amacın hatayı yapanı bulmak değil, hatanın neden üç ay fark edilmediğini anlamak.",
+  "karakter": {
+    "ad": "Koray",
+    "rol": "Veri mühendisi",
+    "tavir": "Teknik ve mahcup; \"rapor çalışıyordu, hata vermedi\" diyor. Sistemin nasıl kurulduğunu soran birine açık konuşuyor.",
+    "ilk_soz": "Rapor her sabah zamanında çalıştı, hiç hata vermedi. Sorun da tam orada zaten."
+  },
+  "yaniltici_ipuclari": [
+    "Mühendis dikkatsiz davrandı.",
+    "Sistemler çok karmaşık."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Veri kaynağındaki değişiklik nasıl oldu, kimin haberi vardı?",
+    "Rapor çalışırken verinin doğruluğu nasıl kontrol ediliyor?",
+    "Raporu okuyanlar tuhaf bir rakam görünce ne yapıyor?",
+    "Raporun bakımından ve sahipliğinden kim sorumlu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Değişiklik haber verilmedi: kaynak sistem sessizce değişti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "WMS ekibi bir sürüm güncellemesinde vardiya kodlarını değiştirdi; rapor ekibine haber verilmedi.",
+          "acilma_kosulu": "Kaynak değişikliğinin nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaynağındaki değişiklik",
+            "sürüm güncelle",
+            "vardiya kod"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Rapor yalnızca çalışıp çalışmadığına bakıyor; boş ya da beklenmedik değerler için bir kontrol yok.",
+          "acilma_kosulu": "Doğruluk kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "doğruluğu nasıl",
+            "boş",
+            "beklenmedik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Raporu kuran mühendis başka projeye geçti; raporun bir sahibi tanımlı değil.",
+          "acilma_kosulu": "Raporun sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "bakımından",
+            "sahibi",
+            "başka projeye"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Okuyanlar rakamı garip bulunca bazen e-posta atıyor.",
+          "acilma_kosulu": "Okurların tuhaf rakama tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "tuhaf bir rakam",
+            "e-posta at"
+          ]
+        }
+      ],
+      "kok_neden": "Hata fark edilmedi çünkü kimse bakmıyordu: WMS ekibi vardiya kodlarını haber vermeden değiştirdi, rapor yalnızca çalışıp çalışmadığını kontrol ediyor ve kuran kişi başka projeye geçtiği için raporun bir sahibi yok.",
+      "kok_neden_kelimeler": [
+        "haber",
+        "kontrol",
+        "sahibi",
+        "değişiklik",
+        "sessiz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Okurlar fark etti ama kanal yok: şüpheler kayboldu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki depo müdürü rakamları garip bulup kendi aralarında konuştu; kime bildireceklerini bilmedikleri için kimseye iletmediler.",
+          "acilma_kosulu": "Okurların tuhaf rakama tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "tuhaf bir rakam",
+            "kendi aralarında",
+            "kime bildirecek"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Raporun altında bir sahip ya da iletişim bilgisi yazmıyor; rapor \"sistemden\" geliyor.",
+          "acilma_kosulu": "Raporun sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "bakımından",
+            "iletişim bilgisi",
+            "sistemden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Raporda geçen haftayla kıyas ya da ani sıçramada uyarı yok; verimin bir gecede %18 artması kimseyi alarma geçirmedi.",
+          "acilma_kosulu": "Doğruluk kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "doğruluğu nasıl",
+            "%18",
+            "uyarı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kaynak değişikliği değişiklik takviminde yazıyordu.",
+          "acilma_kosulu": "Kaynak değişikliğinin nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaynağındaki değişiklik",
+            "takviminde"
+          ]
+        }
+      ],
+      "kok_neden": "Hata fark edildi ama yerine ulaşmadı: okurlar rakamları garip bulduğu hâlde raporun sahibi ve iletişim bilgisi olmadığı için kimseye bildirmedi, rapor da ani sıçramalarda uyarı vermiyor.",
+      "kok_neden_kelimeler": [
+        "bildir",
+        "sahip",
+        "uyarı",
+        "kanal",
+        "garip"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güven körlüğü: otomatik olduğu için doğru sayıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Okurlar otomatik raporu \"sistemden geldiği için\" doğru kabul ediyor; şüphelense de soru sormuyor.",
+          "acilma_kosulu": "Okurların tuhaf rakama tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "tuhaf bir rakam",
+            "sistemden geldiği",
+            "doğru kabul"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Rapor ilk kurulduğunda bir ay boyunca elle hesapla karşılaştırıldı; sonra bu kontrol bırakıldı.",
+          "acilma_kosulu": "Doğruluk kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "doğruluğu nasıl",
+            "elle hesap",
+            "bırakıldı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rapor veri ekibinde; ama sahibi yılda bir kontrol yapıyor ve o kontrol daha gelmemişti.",
+          "acilma_kosulu": "Raporun sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "bakımından",
+            "yılda bir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kaynak değişikliği küçük bir alan adı değişikliğiydi.",
+          "acilma_kosulu": "Kaynak değişikliğinin nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaynağındaki değişiklik",
+            "alan adı"
+          ]
+        }
+      ],
+      "kok_neden": "Hata fark edilmedi çünkü otomatik olduğu için doğru sayıldı: okurlar sistemden gelen rakamı sorgulamadı, kuruluştaki elle karşılaştırma bir ay sonra bırakıldı ve sahibinin kontrolü yılda bir yapılıyor.",
+      "kok_neden_kelimeler": [
+        "otomatik",
+        "doğru kabul",
+        "kontrol",
+        "bırakıldı",
+        "sorgulan"
+      ]
+    }
+  ]
+}

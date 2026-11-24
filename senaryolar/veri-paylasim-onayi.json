@@ -1,0 +1,200 @@
+{
+  "id": "veri-paylasim-onayi",
+  "baslik": "Veri paylaşım talepleri neden haftalarca onay bekliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Bölümlerin analiz için başka bölümlerin verisine erişim talepleri ortalama dört hafta onay bekliyor. Bazı ekipler artık verileri e-postayla Excel olarak gayriresmî paylaşıyor. Erişim taleplerini değerlendiren veri yönetişim uzmanıyla konuşuyorsun.",
+  "rolun": "Veri ve raporlama sorumlususun. Amacın onay sürecini kaldırmak değil, taleplerin neden beklediğini anlamak.",
+  "karakter": {
+    "ad": "İpek",
+    "rol": "Veri yönetişim uzmanı",
+    "tavir": "Kurallara bağlı ve endişeli; \"kişisel veri var, dikkatli olmak zorundayız\" diyor. Süreci merak eden birine açık konuşuyor.",
+    "ilk_soz": "Kişisel veri olan tablolar var, dikkatli olmak zorundayız. Hızlı onay riskli."
+  },
+  "yaniltici_ipuclari": [
+    "Bölümler sabırsız.",
+    "Kurallar çok katı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir erişim talebi geldiğinde hangi adımlardan geçiyor?",
+    "Taleplerin çoğu hangi verilere erişim istiyor?",
+    "Onay kararı kimler tarafından veriliyor?",
+    "Gayriresmî paylaşımlar hakkında neler biliyorsun?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Her talep aynı ağır süreçten geçiyor: risk ayrımı yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her talep, verinin türüne bakılmadan hukuk, BT güvenlik ve veri sahibi onayından sırayla geçiyor.",
+          "acilma_kosulu": "Talebin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "erişim talebi geldiğinde",
+            "hukuk",
+            "sırayla"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Taleplerin çoğu kişisel veri içermeyen operasyon verilerine: stok, sipariş, verim.",
+          "acilma_kosulu": "Talep edilen veriler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "kişisel veri içermeyen",
+            "operasyon verisi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kişisel veri olmayan basit talepler için de hukuk onayı zorunlu; hukuk bu talepleri ayda bir topluca değerlendiriyor.",
+          "acilma_kosulu": "Onay kararını kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "onay kararı",
+            "ayda bir",
+            "topluca"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gayriresmî paylaşımlar birkaç ekipte görüldü.",
+          "acilma_kosulu": "Gayriresmî paylaşımlar sorulursa",
+          "ipucu_kelimeler": [
+            "gayriresmî",
+            "birkaç ekip"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü risk ayrımı yok: kişisel veri içermeyen basit operasyon verisi talepleri de hukuk, BT güvenlik ve veri sahibi onayından sırayla geçiyor ve hukuk bunlara ayda bir bakıyor.",
+      "kok_neden_kelimeler": [
+        "risk",
+        "ayrım",
+        "kişisel veri",
+        "hukuk",
+        "sırayla"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Veri sahibi belirsiz: talep kimde bekliyor bilinmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Onay kararı verinin sahibinde; ama tabloların çoğu için bir veri sahibi tanımlanmadı, talepler sahip aranırken bekliyor.",
+          "acilma_kosulu": "Onay kararını kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "onay kararı",
+            "veri sahibi",
+            "tanımlanmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Talepler ortak bir e-posta kutusuna geliyor; kimin hangi talebe bakacağı belli değil.",
+          "acilma_kosulu": "Talebin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "erişim talebi geldiğinde",
+            "ortak e-posta",
+            "kimin hangi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekipler talebin kimde beklediğini öğrenemediği için gayriresmî yola başvuruyor.",
+          "acilma_kosulu": "Gayriresmî paylaşımlar sorulursa",
+          "ipucu_kelimeler": [
+            "gayriresmî",
+            "kimde beklediği"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Talepler çoğunlukla satış verisine.",
+          "acilma_kosulu": "Talep edilen veriler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "satış verisi"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü veri sahipliği belirsiz: tabloların çoğunun sahibi tanımlanmadı, talepler kimin bakacağı belli olmayan ortak bir e-posta kutusunda bekliyor ve talep sahibi durumunu öğrenemeyince gayriresmî yola gidiyor.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "belirsiz",
+        "ortak e-posta",
+        "gayriresmî",
+        "tanımlan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Talepler eksik: amaç ve kapsam yazılmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talep formunda yalnızca tablo adı yazılıyor; ne amaçla, hangi alanlara, ne kadar süre erişileceği sorulmuyor.",
+          "acilma_kosulu": "Talebin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "erişim talebi geldiğinde",
+            "tablo adı",
+            "amaç"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Onay verenler amacı bilmedikleri için talebi ek sorularla geri gönderiyor; her tur bir hafta sürüyor.",
+          "acilma_kosulu": "Onay kararını kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "onay kararı",
+            "geri gönder",
+            "her tur"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Taleplerin çoğu tablonun tamamını istiyor; asıl ihtiyaç genelde birkaç sütun.",
+          "acilma_kosulu": "Talep edilen veriler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "tamamını",
+            "birkaç sütun"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gayriresmî paylaşım konusunda bir uyarı yayımlandı.",
+          "acilma_kosulu": "Gayriresmî paylaşımlar sorulursa",
+          "ipucu_kelimeler": [
+            "gayriresmî",
+            "uyarı yayım"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü eksik geliyor: formda amaç, alanlar ve süre sorulmuyor, talepler gereksiz yere bütün tabloyu istiyor ve onay verenler amacı anlamak için talebi tur tur geri gönderiyor.",
+      "kok_neden_kelimeler": [
+        "amaç",
+        "form",
+        "geri gönder",
+        "kapsam",
+        "eksik"
+      ]
+    }
+  ]
+}

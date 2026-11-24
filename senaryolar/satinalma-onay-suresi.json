@@ -1,0 +1,200 @@
+{
+  "id": "satinalma-onay-suresi",
+  "baslik": "Satın alma talepleri neden haftalarca onay bekliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Depodan açılan satın alma taleplerinin onaylanması ortalama 18 gün sürüyor; küçük tutarlı talepler bile. Depo ekipleri gerekli malzemeyi ya kendi cebinden alıyor ya da işi bekletiyor. Talepleri yöneten satın alma koordinatörüyle konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın onay kurallarını kaldırmak değil, taleplerin neden bu kadar beklediğini anlamak.",
+  "karakter": {
+    "ad": "Sezer",
+    "rol": "Satın alma koordinatörü",
+    "tavir": "Yorgun ve kurallara bağlı; \"herkes onay zincirinde\" diyor. Akışı soran birine açık konuşuyor.",
+    "ilk_soz": "Talepler bizde değil aslında, onay zincirinde. Ben sadece takip ediyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Satın alma ekibi yavaş.",
+    "Talep edenler son dakikaya bırakıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir talep açıldıktan sonra onay zincirinde nasıl ilerliyor, kimler onaylıyor?",
+    "Taleplerin çoğu tutar olarak ne büyüklükte?",
+    "Bekleyen bir talep en çok nerede duruyor?",
+    "Onaylayan kişiler talepleri nasıl görüyor ve ne zaman bakıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tutara göre ayrım yok: her talep dört onaydan geçiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her talep, tutarına bakılmadan dört onaydan geçiyor: amir, depo müdürü, bütçe kontrol ve satın alma müdürü.",
+          "acilma_kosulu": "Onay zinciri sorulursa",
+          "ipucu_kelimeler": [
+            "onay zincirinde",
+            "dört onay",
+            "tutarına bakılmadan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Taleplerin %70'i 5.000 TL'nin altında; eldiven, etiket, küçük yedek parça gibi.",
+          "acilma_kosulu": "Taleplerin tutar büyüklüğü sorulursa",
+          "ipucu_kelimeler": [
+            "tutar olarak",
+            "%70",
+            "5.000"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talepler en çok bütçe kontrolde bekliyor; bütçe kontrol küçük talepleri büyüklerle aynı sırada değerlendiriyor.",
+          "acilma_kosulu": "Talebin en çok beklediği yer sorulursa",
+          "ipucu_kelimeler": [
+            "en çok nerede",
+            "bütçe kontrol",
+            "aynı sıra"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Onaylayanlar talepleri e-postayla görüyor.",
+          "acilma_kosulu": "Onaylayanların talepleri görme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl görüyor",
+            "e-postayla gör"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü tutara göre ayrım yok: taleplerin çoğu küçük tutarlı ama hepsi dört onaydan geçiyor ve bütçe kontrol küçük talepleri büyüklerle aynı sırada bekletiyor.",
+      "kok_neden_kelimeler": [
+        "tutar",
+        "dört onay",
+        "ayrım",
+        "küçük",
+        "bütçe kontrol"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Onaylayan görmüyor: bildirim yok, sistem ayrı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Onaylayanlar talepleri yalnızca satın alma sistemine girdiklerinde görüyor; bildirim gitmiyor, depo müdürü sisteme haftada bir giriyor.",
+          "acilma_kosulu": "Onaylayanların talepleri görme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl görüyor",
+            "haftada bir",
+            "bildirim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Talepler en çok depo müdürünün onayında bekliyor.",
+          "acilma_kosulu": "Talebin en çok beklediği yer sorulursa",
+          "ipucu_kelimeler": [
+            "en çok nerede",
+            "depo müdürünün onayı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Onay zinciri iki basamaklı ve makul; ama zincirin her halkası talebi kendisi gidip bulmak zorunda.",
+          "acilma_kosulu": "Onay zinciri sorulursa",
+          "ipucu_kelimeler": [
+            "onay zincirinde",
+            "iki basamak",
+            "kendisi gidip"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Talepler çeşitli tutarlarda.",
+          "acilma_kosulu": "Taleplerin tutar büyüklüğü sorulursa",
+          "ipucu_kelimeler": [
+            "tutar olarak",
+            "çeşitli tutar"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü onaylayanlar onları görmüyor: sistem bildirim göndermiyor, depo müdürü sisteme haftada bir giriyor ve talep her halkada birinin gidip bakmasını bekliyor.",
+      "kok_neden_kelimeler": [
+        "bildirim",
+        "görmüyor",
+        "haftada bir",
+        "sistem",
+        "depo müdürü"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eksik talep geri dönüyor: teklif ve açıklama eksik",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talepler en çok satın almada \"eksik bilgi\" nedeniyle bekliyor; taleplerin yarısı teklif ya da teknik açıklama olmadan geliyor.",
+          "acilma_kosulu": "Talebin en çok beklediği yer sorulursa",
+          "ipucu_kelimeler": [
+            "en çok nerede",
+            "eksik bilgi",
+            "teknik açıklama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Eksik talep onay zincirinin sonunda fark ediliyor ve baştan açılmak üzere geri gönderiliyor.",
+          "acilma_kosulu": "Onay zinciri sorulursa",
+          "ipucu_kelimeler": [
+            "onay zincirinde",
+            "zincirin sonunda",
+            "baştan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talep formunda hangi bilgilerin zorunlu olduğu yazmıyor; onaylayanlar eksikliği yalnızca son adımda görüyor.",
+          "acilma_kosulu": "Onaylayanların talepleri görme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl görüyor",
+            "zorunlu",
+            "son adım"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Talepler çoğunlukla orta büyüklükte.",
+          "acilma_kosulu": "Taleplerin tutar büyüklüğü sorulursa",
+          "ipucu_kelimeler": [
+            "tutar olarak",
+            "orta büyüklük"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler bekliyor çünkü eksik geliyor ve geç fark ediliyor: formda zorunlu bilgiler tanımlı değil, talep teklif ve açıklama olmadan açılıyor ve eksiklik zincirin sonunda görülünce talep baştan açılıyor.",
+      "kok_neden_kelimeler": [
+        "eksik",
+        "zorunlu",
+        "geri",
+        "form",
+        "baştan"
+      ]
+    }
+  ]
+}
