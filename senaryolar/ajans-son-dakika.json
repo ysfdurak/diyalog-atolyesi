@@ -1,0 +1,201 @@
+{
+  "id": "ajans-son-dakika",
+  "baslik": "Ajansla işler neden hep son dakikaya kalıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Reklam ajansıyla yürütülen son altı kampanyanın beşi son gün teslim edildi; ikisinde yayın ertelendi ve medya bedeli boşa gitti. Ajansla ilişkiyi yöneten marka yöneticisiyle konuşuyorsun.",
+  "rolun": "Pazarlama direktörüsün. Amacın ajansı değiştirmek değil, işlerin neden son dakikaya kaldığını anlamak.",
+  "karakter": {
+    "ad": "Tuğçe",
+    "rol": "Marka yöneticisi",
+    "tavir": "Yorgun ve arada kalmış; \"ajans yavaş\" diyor. Süreci adım adım soran birine dürüst konuşuyor.",
+    "ilk_soz": "Ajans her işi son güne bırakıyor. Ben de aradan çıkamıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Ajans bizi önemsemiyor.",
+    "Yaratıcı işler hep böyle uzar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ajansa iş nasıl bir brifle veriliyor?",
+    "Bir işte kaç tur revizyon oluyor ve revizyonlar nasıl geliyor?",
+    "Onay süreci içeride nasıl ilerliyor?",
+    "Ajansın bizim için ayırdığı ekip ve zaman nasıl?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Brif belirsiz: ajans ne istendiğini her turda yeniden öğreniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Brif genelde bir e-posta ve eski bir sunum; hedef, mesaj ve olmazsa olmazlar yazılı değil.",
+          "acilma_kosulu": "Brifin nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "brifle",
+            "e-posta",
+            "olmazsa olmaz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İşler ortalama beş tur revizyon görüyor; revizyonların çoğu \"aslında şunu istiyorduk\" diye başlıyor.",
+          "acilma_kosulu": "Revizyon sayısı ve kaynağı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç tur revizyon",
+            "beş tur",
+            "aslında şunu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Onaylayan direktör brif aşamasında yok; ilk kez son tasarımları görüyor ve yönü değiştiriyor.",
+          "acilma_kosulu": "Iç onay süreci sorulursa",
+          "ipucu_kelimeler": [
+            "onay süreci",
+            "brif aşamasında yok",
+            "yönü değiştir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ajans bu iş için ayrı bir ekip ayırdı.",
+          "acilma_kosulu": "Ajansın ayırdığı kaynak sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığı ekip",
+            "ayrı bir ekip"
+          ]
+        }
+      ],
+      "kok_neden": "İşler son dakikaya kalıyor çünkü brif belirsiz: hedef ve mesaj yazılı değil, onaylayan direktör brifte yok ve son tasarımda yönü değiştiriyor; ajans ne istendiğini beş tur revizyonla öğreniyor.",
+      "kok_neden_kelimeler": [
+        "brif",
+        "revizyon",
+        "onay",
+        "belirsiz",
+        "yön"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Onay zinciri uzun: beş kişi, sırayla",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her tasarım marka yöneticisi, ürün müdürü, hukuk, satış direktörü ve genel müdür yardımcısından sırayla geçiyor; her onay iki üç gün sürüyor.",
+          "acilma_kosulu": "Iç onay süreci sorulursa",
+          "ipucu_kelimeler": [
+            "onay süreci",
+            "sırayla geçiyor",
+            "hukuk"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Revizyonlar çoğunlukla birbirinin tersini isteyen farklı onaycılardan geliyor; kimin sözünün geçeceği belli değil.",
+          "acilma_kosulu": "Revizyon sayısı ve kaynağı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç tur revizyon",
+            "birbirinin tersi",
+            "kimin sözü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ajans süresinin yarısını onay beklemekle geçiriyor; teslim tarihine yaklaşınca işi sıkıştırıyor.",
+          "acilma_kosulu": "Ajansın ayırdığı kaynak sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığı ekip",
+            "onay beklemek",
+            "sıkıştır"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Brifler ayrıntılı bir şablonla veriliyor.",
+          "acilma_kosulu": "Brifin nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "brifle",
+            "şablon"
+          ]
+        }
+      ],
+      "kok_neden": "İşler son dakikaya kalıyor çünkü iç onay zinciri uzun: tasarımlar beş onaycıdan sırayla geçiyor, onaycılar birbirinin tersini istiyor, son sözün kimde olduğu belli değil ve ajans sürenin yarısını onay beklemekle geçiriyor.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "zincir",
+        "sırayla",
+        "son söz",
+        "bekle"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ajans kapasitesi: küçük müşteriye küçük ekip",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sözleşme bütçesi küçüldükten sonra ajans markaya yalnızca bir yarı zamanlı tasarımcı ayırıyor; tasarımcı büyük müşterilerin acil işleri gelince bu işi bırakıyor.",
+          "acilma_kosulu": "Ajansın ayırdığı kaynak sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığı ekip",
+            "yarı zamanlı",
+            "büyük müşteri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Brif zamanında ve açık veriliyor.",
+          "acilma_kosulu": "Brifin nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "brifle",
+            "zamanında ve açık"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Revizyon az; ama ilk taslak teslim tarihine iki gün kala geliyor.",
+          "acilma_kosulu": "Revizyon sayısı ve kaynağı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç tur revizyon",
+            "ilk taslak",
+            "iki gün kala"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Onay süreci bir iki gün sürüyor.",
+          "acilma_kosulu": "Iç onay süreci sorulursa",
+          "ipucu_kelimeler": [
+            "onay süreci",
+            "bir iki gün"
+          ]
+        }
+      ],
+      "kok_neden": "İşler son dakikaya kalıyor çünkü ajans kapasite ayırmıyor: sözleşme bütçesi küçülünce markaya yalnızca yarı zamanlı bir tasarımcı kaldı, tasarımcı büyük müşterilerin acil işlerine kayıyor ve ilk taslak teslimden iki gün önce geliyor.",
+      "kok_neden_kelimeler": [
+        "kapasite",
+        "yarı zamanlı",
+        "büyük müşteri",
+        "sözleşme",
+        "taslak"
+      ]
+    }
+  ]
+}

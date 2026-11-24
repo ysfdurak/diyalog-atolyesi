@@ -1,0 +1,198 @@
+{
+  "id": "tiklanan-kampanya",
+  "baslik": "Kampanya çok tıklandı, neden satış getirmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Yeni ürün serisi için yapılan dijital kampanya iki haftada 400 bin tıklama aldı; hedeflenen satışın yalnızca %12'si gerçekleşti. Kampanyayı yöneten performans pazarlama uzmanıyla konuşuyorsun.",
+  "rolun": "Pazarlama müdürüsün. Amacın bütçeyi kesmek değil, tıklamanın neden satışa dönmediğini anlamak.",
+  "karakter": {
+    "ad": "Defne",
+    "rol": "Performans pazarlama uzmanı",
+    "tavir": "Rakamlara hâkim ve gururlu; \"tıklama hedefini aştık\" diyor. Yolculuğu soran birine dürüst konuşuyor.",
+    "ilk_soz": "Tıklama hedefini iki katına çıkardık. Satış tarafında bir sorun var bence."
+  },
+  "yaniltici_ipuclari": [
+    "Ürün pahalı.",
+    "Satış ekibi takip etmedi."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Tıklayan kişi hangi sayfaya geliyor ve orada ne görüyor?",
+    "Kampanya kimlere gösterildi, hedef kitle nasıl seçildi?",
+    "Kampanyanın başarısı hangi göstergeyle ölçülüyor?",
+    "Tıklayanlar sayfada ne kadar kalıyor, sonra ne yapıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış kitle: tıklama ucuz kitleden geldi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Reklam platformu en ucuz tıklamayı getirecek şekilde ayarlandı; tıklamaların çoğu ürünü almayacak genç kullanıcılardan ve oyun uygulamalarından geldi.",
+          "acilma_kosulu": "Hedef kitlenin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle",
+            "en ucuz",
+            "oyun uygulama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ajansın ve uzmanın başarısı tıklama sayısı ve tıklama başı maliyetle ölçülüyor.",
+          "acilma_kosulu": "Başarı göstergesi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "tıklama sayısı",
+            "tıklama başı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tıklayanların %80'i sayfada beş saniyeden az kalıyor.",
+          "acilma_kosulu": "Sayfadaki davranış sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar kalıyor",
+            "beş saniye"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tıklayanlar ürünün tanıtım sayfasına geliyor.",
+          "acilma_kosulu": "Tıklamanın vardığı sayfa sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sayfaya",
+            "tanıtım sayfası"
+          ]
+        }
+      ],
+      "kok_neden": "Tıklama satışa dönmüyor çünkü yanlış kitleden geliyor: kampanya en ucuz tıklamayı getirecek şekilde ayarlandı, tıklamaların çoğu ürünü almayacak kullanıcılardan ve uygulama içi reklamlardan geldi ve başarı satış değil tıklama sayısıyla ölçülüyor.",
+      "kok_neden_kelimeler": [
+        "kitle",
+        "ucuz",
+        "tıklama",
+        "ölçül",
+        "satış"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sayfa kopuk: reklam bir şey, sayfa başka şey",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Reklam belirli bir ürünü ve indirimi gösteriyor; tıklayan kişi markanın genel ana sayfasına geliyor ve ürünü aramak zorunda kalıyor.",
+          "acilma_kosulu": "Tıklamanın vardığı sayfa sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sayfaya",
+            "ana sayfa",
+            "aramak zorunda"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tıklayanların çoğu ana sayfada birkaç saniye kalıp ürünü bulamadan çıkıyor.",
+          "acilma_kosulu": "Sayfadaki davranış sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar kalıyor",
+            "bulamadan çıkıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hedef kitle doğru seçilmiş; tıklayanların profili mevcut müşterilere benziyor.",
+          "acilma_kosulu": "Hedef kitlenin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle",
+            "mevcut müşteri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Başarı satışla ölçülüyor.",
+          "acilma_kosulu": "Başarı göstergesi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "satışla"
+          ]
+        }
+      ],
+      "kok_neden": "Tıklama satışa dönmüyor çünkü reklam ile sayfa kopuk: reklam belirli bir ürün ve indirimi gösteriyor ama tıklayan kişi genel ana sayfaya düşüyor, ürünü bulamıyor ve çıkıyor; doğru kitle boşa harcanıyor.",
+      "kok_neden_kelimeler": [
+        "sayfa",
+        "ana sayfa",
+        "kopuk",
+        "ürün",
+        "bulamadan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Stok ve teslim: ürün hazır değildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tıklayanların çoğu ürün sayfasında \"ön sipariş, teslim 6 hafta\" yazısını görünce çıkıyor.",
+          "acilma_kosulu": "Sayfadaki davranış sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar kalıyor",
+            "ön sipariş",
+            "6 hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tıklayan kişi doğru ürün sayfasına geliyor; ama ürün henüz stokta değil.",
+          "acilma_kosulu": "Tıklamanın vardığı sayfa sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sayfaya",
+            "stokta değil"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kampanyanın tarihi ürün lansman planına göre sabitlendi; üretim gecikince kampanya ertelenmedi, çünkü medya alanları önceden satın alınmıştı.",
+          "acilma_kosulu": "Başarı göstergesi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "medya alanı",
+            "ertelenmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kitle mevcut müşterilerden seçildi.",
+          "acilma_kosulu": "Hedef kitlenin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle",
+            "mevcut müşterilerden"
+          ]
+        }
+      ],
+      "kok_neden": "Tıklama satışa dönmüyor çünkü ürün hazır değil: üretim gecikti ama medya alanları önceden alındığı için kampanya ertelenmedi; ilgilenen müşteriler '6 hafta sonra teslim' yazısını görünce vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "stok",
+        "ön sipariş",
+        "gecik",
+        "ertelen",
+        "teslim"
+      ]
+    }
+  ]
+}

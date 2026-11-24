@@ -1,0 +1,200 @@
+{
+  "id": "yazilim-ekibi-ayrilik",
+  "baslik": "Yazılım ekibinden neden üst üste ayrılık var?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "E-ticaret şirketinin 14 kişilik yazılım ekibinden son altı ayda beş kişi ayrıldı; yeni alımlar da ilk yılını doldurmadan gidiyor. Ekipten ayrılmak üzere olduğu duyulan kıdemli geliştirici Kaya'yla konuşuyorsun.",
+  "rolun": "Teknoloji ekibinin bağlı olduğu İK iş ortağısın. Amacın Kaya'yı tutmak değil, ayrılıkların nedenini anlamak.",
+  "karakter": {
+    "ad": "Kaya",
+    "rol": "Kıdemli yazılım geliştirici",
+    "tavir": "Kibar ve mesafeli; \"teklif aldım\" diye kısa kesiyor. Gerçekten dinlendiğini hissedince açık konuşuyor.",
+    "ilk_soz": "Bir teklif aldım, düşünüyorum. Burada kötü bir şey yok aslında."
+  },
+  "yaniltici_ipuclari": [
+    "Yazılımcılar hep daha yüksek maaşa gider.",
+    "Sektörde herkes iş değiştiriyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir haftan genelde nasıl geçiyor, zamanının çoğu nereye gidiyor?",
+    "Ayrılan arkadaşların giderken ne söylediler?",
+    "Burada teknik olarak gelişmek nasıl mümkün oluyor?",
+    "İşlerin önceliği nasıl ve kimin tarafından belirleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yangın söndürme: hep acil iş, plan yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Haftanın çoğu, kampanya ve satış ekiplerinden gelen acil isteklerle geçiyor; planlanan işlere ancak gece kalınca dokunulabiliyor.",
+          "acilma_kosulu": "Haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "zamanının çoğu",
+            "acil istek",
+            "gece kal"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Öncelik, en yüksek sesle isteyen birime göre belirleniyor; ekipte bir ürün yöneticisi ya da sıralama yok.",
+          "acilma_kosulu": "Önceliklendirme sorulursa",
+          "ipucu_kelimeler": [
+            "işlerin önceliği",
+            "yüksek sesle",
+            "ürün yöneticisi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu \"tükendim, sürekli yangın söndürüyorum\" dedi.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan arkadaşların",
+            "tükendim",
+            "yangın"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eğitim bütçesi var ama kullanılmıyor.",
+          "acilma_kosulu": "Teknik gelişim sorulursa",
+          "ipucu_kelimeler": [
+            "teknik olarak gelişmek",
+            "eğitim bütçesi"
+          ]
+        }
+      ],
+      "kok_neden": "Ayrılıklar sürekli acil işten: öncelik en yüksek sesle isteyen birime göre belirleniyor, ürün yöneticisi ya da sıralama yok ve ekip planlı işi ancak gece kalarak yapabiliyor; geliştiriciler tükenip gidiyor.",
+      "kok_neden_kelimeler": [
+        "acil",
+        "öncelik",
+        "tüken",
+        "plan",
+        "yangın"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Eski teknoloji: gelişme yok, iş piyasası kapanıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sistem on yıllık bir altyapı üzerinde; yeni teknolojiye geçiş önerisi iki kez reddedildi, ekip eski koda yama yapıyor.",
+          "acilma_kosulu": "Teknik gelişim sorulursa",
+          "ipucu_kelimeler": [
+            "teknik olarak gelişmek",
+            "on yıllık",
+            "yama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu \"burada kalırsam piyasada geride kalırım\" dedi.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan arkadaşların",
+            "geride kalırım"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Zamanının çoğu eski kodda hata ayıklamakla geçiyor.",
+          "acilma_kosulu": "Haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "zamanının çoğu",
+            "hata ayıklama",
+            "eski kod"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Öncelikleri ekip lideri belirliyor.",
+          "acilma_kosulu": "Önceliklendirme sorulursa",
+          "ipucu_kelimeler": [
+            "işlerin önceliği",
+            "ekip lideri belirl"
+          ]
+        }
+      ],
+      "kok_neden": "Ayrılıklar gelişim kaybından: sistem on yıllık bir altyapıda, yenileme önerileri reddedildi, zamanın çoğu eski kodu yamamakla geçiyor ve geliştiriciler burada kalırsa piyasada geri kalacağını düşünüyor.",
+      "kok_neden_kelimeler": [
+        "eski",
+        "teknoloji",
+        "gelişim",
+        "piyasa",
+        "yama"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görülmeme ve kariyer yolu: teknik insan için yükselme yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yükselmenin tek yolu yönetici olmak; kıdemli geliştirici olarak kalmak isteyen için bir kariyer basamağı yok.",
+          "acilma_kosulu": "Teknik gelişim sorulursa",
+          "ipucu_kelimeler": [
+            "teknik olarak gelişmek",
+            "yönetici olmak",
+            "kariyer basamağı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların ikisi, ekip lideri pozisyonu dışarıdan doldurulduktan sonra gitti.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan arkadaşların",
+            "dışarıdan dolduruldu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Öncelikleri iş birimleri belirliyor; geliştiricilerin teknik borç ya da mimari önerileri toplantılara alınmıyor.",
+          "acilma_kosulu": "Önceliklendirme sorulursa",
+          "ipucu_kelimeler": [
+            "işlerin önceliği",
+            "teknik borç",
+            "mimari öneri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Haftası planlı işlerle geçiyor.",
+          "acilma_kosulu": "Haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "zamanının çoğu",
+            "planlı iş"
+          ]
+        }
+      ],
+      "kok_neden": "Ayrılıklar kariyer yolu olmamasından: teknik insan için tek yükselme yolu yöneticilik, ekip lideri pozisyonu dışarıdan dolduruldu ve geliştiricilerin teknik önerileri karar toplantılarına alınmıyor.",
+      "kok_neden_kelimeler": [
+        "kariyer",
+        "yükselme",
+        "dışarıdan",
+        "teknik öneri",
+        "basamak"
+      ]
+    }
+  ]
+}

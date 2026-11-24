@@ -1,0 +1,201 @@
+{
+  "id": "lansman-ses-getirmedi",
+  "baslik": "Yeni marka lansmanı neden ses getirmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sektor": "Pazarlama",
+  "sure_dk": 8,
+  "acilis": "Genç kitleye yönelik yeni bir alt marka büyük bir bütçeyle lanse edildi; altı ayda bilinirlik %4'te kaldı ve satış hedefin çok altında. Lansmanı yöneten marka müdürüyle konuşuyorsun.",
+  "rolun": "Pazarlama direktörüsün. Amacın markayı kapatmak değil, lansmanın neden tutmadığını anlamak.",
+  "karakter": {
+    "ad": "Bora Bey",
+    "rol": "Marka müdürü",
+    "tavir": "Yaratıcı ve kırgın; \"fikir çok iyiydi\" diyor. Kararları soran birine açık konuşuyor.",
+    "ilk_soz": "Fikir de tasarım da çok iyiydi, herkes beğendi. Neden tutmadı, ben de anlamadım."
+  },
+  "yaniltici_ipuclari": [
+    "Genç kitle markalara sadık değil.",
+    "Rakipler çok güçlü."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Hedef kitle nasıl tanımlandı, onlarla nasıl konuşuldu?",
+    "Lansman bütçesi hangi kanallara harcandı?",
+    "Ürün raflarda ve sitede ne zaman ve nerede bulunuyordu?",
+    "Markayı deneyenler sonra ne söyledi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kitle varsayımla tanımlandı: araştırma yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hedef kitle \"18-25 yaş, şehirli, trend takipçisi\" diye toplantıda tanımlandı; bu kitleyle hiçbir araştırma ya da görüşme yapılmadı.",
+          "acilma_kosulu": "Hedef kitlenin tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle nasıl",
+            "araştırma",
+            "toplantıda tanımlan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Deneyenler ürünü beğendi ama \"fiyatı öğrenci için yüksek\" ve \"marka bizim gibi konuşmaya çalışıyor\" dedi.",
+          "acilma_kosulu": "Deneyenlerin yorumları sorulursa",
+          "ipucu_kelimeler": [
+            "deneyenler",
+            "öğrenci",
+            "bizim gibi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bütçenin çoğu televizyon ve açık hava reklamına gitti; bu kitlenin en çok zaman geçirdiği kanallara küçük pay kaldı.",
+          "acilma_kosulu": "Bütçenin kanallara dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kanallara",
+            "televizyon",
+            "açık hava"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün lansman günü bütün mağazalardaydı.",
+          "acilma_kosulu": "Ürünün bulunurluğu sorulursa",
+          "ipucu_kelimeler": [
+            "raflarda ve sitede",
+            "lansman günü"
+          ]
+        }
+      ],
+      "kok_neden": "Lansman kitleyi tanımadan yapıldı: hedef kitle bir toplantıda varsayımla tanımlandı, kendileriyle hiç konuşulmadı; fiyat ve dil kitleye uymadı ve bütçe onların zaman geçirmediği kanallara harcandı.",
+      "kok_neden_kelimeler": [
+        "kitle",
+        "araştırma",
+        "varsayım",
+        "kanal",
+        "fiyat"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ürün bulunamadı: reklam vardı, raf yoktu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Lansman günü ürün yalnızca büyük şehirlerdeki 40 mağazada vardı; dağıtım anlaşmaları gecikti, internette ise ürün sayfası iki ay sonra açıldı.",
+          "acilma_kosulu": "Ürünün bulunurluğu sorulursa",
+          "ipucu_kelimeler": [
+            "raflarda ve sitede",
+            "40 mağaza",
+            "iki ay sonra"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bütçe ülke çapında reklama harcandı; reklamı görenlerin çoğu ürünü bulabileceği bir yerde değildi.",
+          "acilma_kosulu": "Bütçenin kanallara dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kanallara",
+            "ülke çapı",
+            "bulabileceği"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Deneyenler memnun; ama yorumların çoğu \"nereden bulabilirim\" sorusu.",
+          "acilma_kosulu": "Deneyenlerin yorumları sorulursa",
+          "ipucu_kelimeler": [
+            "deneyenler",
+            "nereden bulabilirim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedef kitle odak gruplarla test edildi.",
+          "acilma_kosulu": "Hedef kitlenin tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle nasıl",
+            "odak grup"
+          ]
+        }
+      ],
+      "kok_neden": "Lansman ürün bulunamadığı için tutmadı: reklam ülke çapında yapıldı ama ürün yalnızca 40 mağazadaydı, internet satışı iki ay sonra başladı; ilgilenenler ürünü bulamadı.",
+      "kok_neden_kelimeler": [
+        "bulunur",
+        "mağaza",
+        "dağıtım",
+        "reklam",
+        "internet"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Tek seferlik patlama: lansman sonrası hiçbir şey yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bütçenin %85'i lansman haftasındaki büyük etkinliğe ve ünlü iş birliğine harcandı; sonraki beş ay için neredeyse bütçe kalmadı.",
+          "acilma_kosulu": "Bütçenin kanallara dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kanallara",
+            "%85",
+            "ünlü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Deneyenler beğendi; ama markayı ikinci kez hatırlatan bir şey görmediklerini söylüyor.",
+          "acilma_kosulu": "Deneyenlerin yorumları sorulursa",
+          "ipucu_kelimeler": [
+            "deneyenler",
+            "ikinci kez",
+            "hatırlatan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kitle doğru tanımlanmıştı; ama kitlenin bir markayı tanıması için tekrar eden temas gerektiği plana girmedi.",
+          "acilma_kosulu": "Hedef kitlenin tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "hedef kitle nasıl",
+            "tekrar eden temas",
+            "plana girmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün her yerde bulunuyordu.",
+          "acilma_kosulu": "Ürünün bulunurluğu sorulursa",
+          "ipucu_kelimeler": [
+            "raflarda ve sitede",
+            "her yerde"
+          ]
+        }
+      ],
+      "kok_neden": "Lansman tek bir patlamayla bitti: bütçenin neredeyse tamamı lansman haftasındaki etkinlik ve ünlü iş birliğine harcandı, sonraki aylarda markayı hatırlatan bir temas kalmadı ve bilinirlik oluşmadı.",
+      "kok_neden_kelimeler": [
+        "bütçe",
+        "lansman haftası",
+        "tekrar",
+        "temas",
+        "süreklilik"
+      ]
+    }
+  ]
+}

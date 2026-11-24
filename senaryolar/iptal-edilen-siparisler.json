@@ -1,0 +1,201 @@
+{
+  "id": "iptal-edilen-siparisler",
+  "baslik": "Satılan ürünler neden sonradan iptal ediliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Sitede stokta görünüp satılan siparişlerin %7'si depoda ürün bulunamadığı için iptal ediliyor. İptal edilen müşterilerin yarısı bir daha alışveriş yapmıyor. Stok entegrasyonundan sorumlu e-ticaret operasyon uzmanıyla konuşuyorsun.",
+  "rolun": "E-ticaret tedarik zinciri müdürüsün. Amacın depoyu suçlamak değil, sitenin neden olmayan ürünü sattığını anlamak.",
+  "karakter": {
+    "ad": "Yeliz",
+    "rol": "E-ticaret operasyon uzmanı",
+    "tavir": "Bunalmış ama bilgili; \"stok sayıları geç güncelleniyor\" diyor. Sistemleri soran birine açık konuşuyor.",
+    "ilk_soz": "Sitedeki stok gerçek stokla her zaman aynı değil, bunu biliyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "Depo sayımları hatalı.",
+    "Müşteriler çok hızlı alıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Sitedeki stok bilgisi depodan ne sıklıkla güncelleniyor?",
+    "İptal edilen ürünlerin ortak noktası ne?",
+    "Aynı stok başka hangi kanallarda da satılıyor?",
+    "Bir sipariş iptal edilince müşteriye nasıl bildiriliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gecikmeli güncelleme: stok günde bir aktarılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Stok bilgisi depodan siteye gece bir kez aktarılıyor; gün içinde satılanlar ertesi güne kadar düşmüyor.",
+          "acilma_kosulu": "Stok güncelleme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "gece bir kez",
+            "ertesi güne"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İptallerin çoğu az stoklu, hızlı satan ürünlerde; son birkaç adet gün içinde birden fazla kez satılıyor.",
+          "acilma_kosulu": "Iptal edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iptal edilen ürünlerin",
+            "az stoklu",
+            "son birkaç"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri iptali siparişten iki gün sonra otomatik bir e-postayla öğreniyor.",
+          "acilma_kosulu": "Iptalin bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bildiriliyor",
+            "iki gün sonra",
+            "otomatik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Stok yalnızca sitede satılıyor.",
+          "acilma_kosulu": "Stokun satıldığı diğer kanallar sorulursa",
+          "ipucu_kelimeler": [
+            "başka hangi kanallarda",
+            "yalnızca site"
+          ]
+        }
+      ],
+      "kok_neden": "Site olmayan ürünü satıyor çünkü stok günde bir güncelleniyor: gün içinde satılan son adetler ertesi gece düşüyor, az stoklu hızlı ürünler birden fazla kez satılıyor ve müşteri iptali iki gün sonra öğreniyor.",
+      "kok_neden_kelimeler": [
+        "günde bir",
+        "güncel",
+        "stok",
+        "son adet",
+        "gecik"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ortak stok: mağazalar ve pazar yeri aynı stoğu satıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aynı depo stoğu hem sitede, hem iki pazar yerinde, hem de mağazaların siparişlerinde kullanılıyor; kanallar arasında rezervasyon yok.",
+          "acilma_kosulu": "Stokun satıldığı diğer kanallar sorulursa",
+          "ipucu_kelimeler": [
+            "başka hangi kanallarda",
+            "pazar yeri",
+            "rezervasyon"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İptal edilen ürünlerin çoğu mağazalara da sevk edilen ürünler; mağaza siparişi önce toplanıyor.",
+          "acilma_kosulu": "Iptal edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iptal edilen ürünlerin",
+            "mağazalara da",
+            "önce toplan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Stok her saat güncelleniyor; ama her kanal stoğun tamamını kendi stoğu gibi gösteriyor.",
+          "acilma_kosulu": "Stok güncelleme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "her saat",
+            "tamamını"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İptal müşteriye telefonla bildiriliyor.",
+          "acilma_kosulu": "Iptalin bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bildiriliyor",
+            "telefonla"
+          ]
+        }
+      ],
+      "kok_neden": "Site olmayan ürünü satıyor çünkü stok paylaşılıyor ama bölünmüyor: aynı stoğu site, pazar yerleri ve mağazalar aynı anda satıyor, her kanal stoğun tamamını gösteriyor ve öncelik mağaza siparişlerinde.",
+      "kok_neden_kelimeler": [
+        "kanal",
+        "ortak stok",
+        "rezervasyon",
+        "mağaza",
+        "pazar yeri"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fiziksel stok yanlış: hasarlı ve kayıp ürünler stokta görünüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İptal edilen ürünlerin çoğu depoda \"bulunamadı\" diye işaretleniyor; sistemde var, rafta yok.",
+          "acilma_kosulu": "Iptal edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iptal edilen ürünlerin",
+            "bulunamadı",
+            "rafta yok"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Stok sık güncelleniyor; ama depoda hasarlı ve kayıp ürünlerin stoktan düşülmesi aylık sayımı bekliyor.",
+          "acilma_kosulu": "Stok güncelleme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla güncel",
+            "hasarlı",
+            "aylık sayım"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Stok yalnızca sitede satılıyor.",
+          "acilma_kosulu": "Stokun satıldığı diğer kanallar sorulursa",
+          "ipucu_kelimeler": [
+            "başka hangi kanallarda",
+            "yalnızca sitede"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İptal müşteriye aynı gün bildiriliyor.",
+          "acilma_kosulu": "Iptalin bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bildiriliyor",
+            "aynı gün"
+          ]
+        }
+      ],
+      "kok_neden": "Site olmayan ürünü satıyor çünkü depo stoğu gerçeği yansıtmıyor: hasarlı ve kayıp ürünler aylık sayıma kadar stoktan düşülmüyor, sistem rafta olmayan ürünü satılabilir gösteriyor ve depo 'bulunamadı' diye iptal ediyor.",
+      "kok_neden_kelimeler": [
+        "hasarlı",
+        "kayıp",
+        "sayım",
+        "rafta yok",
+        "düşülmüyor"
+      ]
+    }
+  ]
+}

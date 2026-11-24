@@ -1,0 +1,200 @@
+{
+  "id": "giyim-iadeleri",
+  "baslik": "Giyim iadeleri neden %40'a çıktı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Online giyim satışlarında iade oranı bir yılda %25'ten %40'a çıktı; iade kargo ve işleme maliyeti kârı siliyor. İade nedenlerini inceleyen müşteri deneyimi analistiyle konuşuyorsun.",
+  "rolun": "E-ticaret operasyon müdürüsün. Amacın iadeyi zorlaştırmak değil, müşterilerin neden iade ettiğini anlamak.",
+  "karakter": {
+    "ad": "Selim",
+    "rol": "Müşteri deneyimi analisti",
+    "tavir": "Meraklı ve dikkatli; \"müşteriler artık her şeyi iade ediyor\" diye başlıyor. Ayrıntı soran birine veriyle cevap veriyor.",
+    "ilk_soz": "Müşteriler artık deneyip iade etmeyi alışkanlık hâline getirdi galiba."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler deneme kabini gibi kullanıyor.",
+    "İade ücretsiz olunca herkes iade eder."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "İade formunda en çok hangi neden seçiliyor?",
+    "İade edilen ürünlerin ortak noktası ne?",
+    "Bir yıl içinde ürün sayfalarında ya da tedarikte ne değişti?",
+    "Aynı ürünü iki bedende alıp birini iade eden müşteriler nasıl bir yol izliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Beden tablosu yanlış: yeni marka farklı kalıp",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İade nedenlerinin %60'ı \"küçük geldi\" ya da \"büyük geldi\".",
+          "acilma_kosulu": "En çok seçilen iade nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "iade formunda",
+            "küçük geldi",
+            "büyük geldi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İadelerin çoğu son bir yılda eklenen üç markada; bu markaların kalıbı farklı ama sitede tek ortak beden tablosu var.",
+          "acilma_kosulu": "Iade edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iade edilen ürünlerin",
+            "üç marka",
+            "ortak beden tablosu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteriler emin olamadıkları için iki beden alıp birini iade ediyor; bu davranış yeni markalarda daha yaygın.",
+          "acilma_kosulu": "Çift beden alma davranışı sorulursa",
+          "ipucu_kelimeler": [
+            "iki bedende",
+            "emin olamadık",
+            "birini iade"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün fotoğrafları aynı stüdyoda çekiliyor.",
+          "acilma_kosulu": "Bir yıldaki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "bir yıl içinde",
+            "stüdyo"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler beden uyumsuzluğundan: yeni eklenen markaların kalıbı farklı ama sitede tek ortak beden tablosu var; emin olamayan müşteriler iki beden alıp birini iade ediyor.",
+      "kok_neden_kelimeler": [
+        "beden",
+        "kalıp",
+        "tablo",
+        "iki beden",
+        "marka"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Görsel ve gerçek farklı: renk ve kumaş",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En çok seçilen neden \"ürün görseldekinden farklı\".",
+          "acilma_kosulu": "En çok seçilen iade nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "iade formunda",
+            "görseldekinden farklı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce maliyet için ürün fotoğrafları stüdyo yerine tedarikçinin gönderdiği görsellerle değiştirildi; renkler düzenlenmiş ve kumaş bilgisi eksik.",
+          "acilma_kosulu": "Bir yıldaki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "bir yıl içinde",
+            "tedarikçinin gönderdiği",
+            "kumaş bilgisi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İade edilen ürünlerin çoğu kumaşı ince ya da rengi ekranda farklı görünen ürünler.",
+          "acilma_kosulu": "Iade edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iade edilen ürünlerin",
+            "kumaşı ince",
+            "rengi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çift beden alımı çok yaygın değil.",
+          "acilma_kosulu": "Çift beden alma davranışı sorulursa",
+          "ipucu_kelimeler": [
+            "iki bedende",
+            "çok yaygın değil"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler beklentiyle gerçek arasındaki farktan: maliyet için stüdyo çekimi bırakılıp tedarikçinin düzenlenmiş görselleri kullanılmaya başlandı, renkler ekranda farklı görünüyor ve kumaş bilgisi eksik.",
+      "kok_neden_kelimeler": [
+        "görsel",
+        "renk",
+        "kumaş",
+        "tedarikçi",
+        "beklenti"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Teslimat gecikmesi: özel gün için alınan ürün geç geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En çok seçilen neden \"artık ihtiyacım kalmadı\".",
+          "acilma_kosulu": "En çok seçilen iade nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "iade formunda",
+            "ihtiyacım kalmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce depo şehir dışına taşındı; teslimat süresi iki günden beş güne çıktı.",
+          "acilma_kosulu": "Bir yıldaki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "bir yıl içinde",
+            "şehir dışı",
+            "beş gün"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İade edilen ürünlerin çoğu abiye, düğün ve bayram kıyafeti gibi belirli bir tarih için alınan ürünler.",
+          "acilma_kosulu": "Iade edilen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "iade edilen ürünlerin",
+            "abiye",
+            "belirli bir tarih"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çift beden alanlar azınlıkta.",
+          "acilma_kosulu": "Çift beden alma davranışı sorulursa",
+          "ipucu_kelimeler": [
+            "iki bedende",
+            "azınlık"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler gecikmeden: depo taşınınca teslimat süresi beş güne çıktı, belirli bir gün için alınan kıyafetler o güne yetişmiyor ve müşteriler 'artık ihtiyacım kalmadı' diye iade ediyor.",
+      "kok_neden_kelimeler": [
+        "teslimat",
+        "gecik",
+        "tarih",
+        "ihtiyaç",
+        "beş gün"
+      ]
+    }
+  ]
+}

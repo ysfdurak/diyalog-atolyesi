@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | Yeni sektörler: E-ticaret (11) ve Pazarlama (10); kartlarda sektör etiketi, ana sayfada sektör filtresi: 143 senaryo, 429 oturum. |
 | 2026-11-24 | Oynama durumu filtresi ve isteğe bağlı `sektor` alanı (yazılmamışsa "Depo ve lojistik"); sektör çipleri ikinci sektör gelince görünür. |
 | 2026-11-24 | İK ve işe alım (+7) ve Kalite ve iyileştirme (+8): 122 senaryo, 366 oturum; bir yıllık içerik hedefi tamamlandı. Tekrarlanan bir karakter adı düzeltildi. |
 | 2026-11-24 | Veri ve raporlama (+7) ve Tedarik ve satın alma (+8): 107 senaryo, 321 oturum. |

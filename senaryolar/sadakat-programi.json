@@ -1,0 +1,201 @@
+{
+  "id": "sadakat-programi",
+  "baslik": "Sadakat programı neden üye toplamadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Altı ay önce başlatılan müşteri sadakat programı ilk yıl 200 bin üye hedefliyordu; şu an 18 bin üye var ve aktif kullanan 4 bin. Programın proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Programın sponsoru olan pazarlama direktörüsün. Amacın programı kapatmak değil, neden tutmadığını anlamak.",
+  "karakter": {
+    "ad": "Sinem Hanım",
+    "rol": "Proje yöneticisi (sadakat programı)",
+    "tavir": "İşini savunan ama dürüst biri; \"teknik olarak sorunsuz çalışıyor\" diyor. Müşteri tarafını soran birine açık.",
+    "ilk_soz": "Program teknik olarak sorunsuz çalışıyor. Müşteriler ilgilenmiyor sanırım."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler kart taşımak istemiyor.",
+    "Herkesin zaten bir sürü programı var."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir müşteri mağazada ya da sitede programa nasıl katılıyor?",
+    "Üye olan bir müşteri ilk ayda ne kazanıyor?",
+    "Kasadaki ve mağazadaki ekip programı müşteriye nasıl anlatıyor?",
+    "Program tasarlanırken müşterilerden ne öğrenildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Katılım zahmetli: uygulama indir, uzun form doldur",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Katılmak için uygulamayı indirip 12 alanlı bir form doldurmak ve SMS doğrulaması yapmak gerekiyor; kasada katılmak mümkün değil.",
+          "acilma_kosulu": "Katılım süreci sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl katılıyor",
+            "uygulama",
+            "12 alan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kasiyerler kuyruk uzamasın diye programı anlatmıyor; anlatsalar da müşteri kasada üye olamıyor.",
+          "acilma_kosulu": "Mağaza ekibinin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki",
+            "kuyruk",
+            "anlatmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tasarımda müşterilere danışılmadı; program başka bir ülkedeki örnekten uyarlandı.",
+          "acilma_kosulu": "Tasarım sırasında müşteri girdisi sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "danışılmadı",
+            "uyarlandı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yeni üyeye hoş geldin indirimi veriliyor.",
+          "acilma_kosulu": "Ilk ayın kazancı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayda ne",
+            "hoş geldin"
+          ]
+        }
+      ],
+      "kok_neden": "Program katılım zahmeti yüzünden tutmadı: üye olmak için uygulama indirip uzun bir form doldurmak gerekiyor, kasada katılmak mümkün değil ve kasiyerler kuyruk uzamasın diye programı anlatmıyor.",
+      "kok_neden_kelimeler": [
+        "katılım",
+        "uygulama",
+        "form",
+        "kasa",
+        "zahmet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ödül uzak: puanı harcamak aylar sürüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk ayda neredeyse hiçbir şey kazanılmıyor; 100 TL'lik indirim için 5.000 TL'lik alışveriş gerekiyor ve puanlar 45 gün sonra kullanılabiliyor.",
+          "acilma_kosulu": "Ilk ayın kazancı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayda ne",
+            "5.000",
+            "45 gün"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tasarım finansın maliyet sınırına göre yapıldı; müşterilere hangi ödülün değerli olduğu sorulmadı.",
+          "acilma_kosulu": "Tasarım sırasında müşteri girdisi sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "maliyet sınırı",
+            "sorulmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Katılım kolay; kasada telefon numarasıyla üye olunabiliyor.",
+          "acilma_kosulu": "Katılım süreci sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl katılıyor",
+            "telefon numarası"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kasiyerler programı her müşteriye anlatıyor.",
+          "acilma_kosulu": "Mağaza ekibinin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki",
+            "her müşteriye"
+          ]
+        }
+      ],
+      "kok_neden": "Program ödül çok uzak olduğu için tutmadı: katılım kolay ama ilk indirim için büyük harcama gerekiyor, puanlar 45 gün sonra kullanılabiliyor ve tasarım müşteriye sorulmadan finansın maliyet sınırına göre yapıldı.",
+      "kok_neden_kelimeler": [
+        "ödül",
+        "puan",
+        "uzak",
+        "maliyet",
+        "sorulmadı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Mağaza ekibi teşvik edilmiyor: tek bir kanal çalışıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mağaza ekipleri programın hedeflerini bilmiyor; ne eğitim aldılar ne de üye kaydı onların hedefinde.",
+          "acilma_kosulu": "Mağaza ekibinin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki",
+            "hedeflerini bilmiyor",
+            "eğitim aldı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Katılım hem kasada hem sitede kolay; ama üyelerin %90'ı siteden geliyor.",
+          "acilma_kosulu": "Katılım süreci sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl katılıyor",
+            "%90",
+            "siteden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Program dijital ekip tarafından tasarlandı; mağaza operasyonu toplantılara davet edilmedi.",
+          "acilma_kosulu": "Tasarım sırasında müşteri girdisi sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "dijital ekip",
+            "davet edilmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk alışverişte puanlar hemen kullanılabiliyor.",
+          "acilma_kosulu": "Ilk ayın kazancı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayda ne",
+            "hemen kullanıl"
+          ]
+        }
+      ],
+      "kok_neden": "Program mağazalarda hiç başlamadı: dijital ekip tasarladı ve mağaza operasyonunu dahil etmedi, mağaza ekipleri ne eğitim aldı ne de üye kaydı hedeflerinde var; satışların çoğunun yapıldığı mağazalardan üye gelmiyor.",
+      "kok_neden_kelimeler": [
+        "mağaza",
+        "eğitim",
+        "dahil",
+        "dijital",
+        "hedef"
+      ]
+    }
+  ]
+}

@@ -153,6 +153,7 @@ async function anaSayfa() {
     return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : ''), 'data-alan': sn.alan, 'data-sektor': sn.sektor, 'data-durum': oynamaDurumu(sn) },
       el('div', { class: 'kart-ust' },
         sn.id === gunun.id && el('span', { class: 'etiket vurgu' }, 'Günün senaryosu'),
+        sn.sektor && sn.sektor !== 'Depo ve lojistik' && el('span', { class: 'etiket sektor' }, sn.sektor),
         el('span', { class: 'etiket' }, sn.alan),
         zorlukGoster(sn.zorluk)),
       el('h3', {}, sn.baslik),

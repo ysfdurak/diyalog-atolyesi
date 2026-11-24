@@ -1,0 +1,202 @@
+{
+  "id": "fuar-standi",
+  "baslik": "Fuar standı neden müşteri getirmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Yılın en büyük sektör fuarına bu yıl iki kat büyük bir stantla katılındı; dört günde gelen ziyaretçilerden fuar sonrası üç ayda yalnızca iki satış çıktı. Fuar organizasyonunu yöneten etkinlik uzmanıyla konuşuyorsun.",
+  "rolun": "Pazarlama müdürüsün. Amacın fuarı iptal etmek değil, standın neden müşteri getirmediğini anlamak.",
+  "karakter": {
+    "ad": "Görkem",
+    "rol": "Etkinlik uzmanı",
+    "tavir": "Enerjik ama hayal kırıklığına uğramış; \"stand fuarın en güzeliydi\" diyor. Planlamayı soran birine dürüst.",
+    "ilk_soz": "Stant fuarın en güzeliydi, ziyaretçi de çoktu. Satışa neden dönmedi anlamadım."
+  },
+  "yaniltici_ipuclari": [
+    "Fuarlar artık eskisi gibi değil.",
+    "Ziyaretçiler hediye için geliyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Standa gelen ziyaretçiler kimlerdi, nasıl karşılandılar?",
+    "Görüşülen kişilerin bilgileri nasıl toplanıp kimlere iletildi?",
+    "Fuardan önce hangi müşterilerle randevu ayarlanmıştı?",
+    "Fuar sonrasında satış ekibi neler yaptı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Takip yok: kartvizitler kutuda kaldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Görüşülen kişilerin kartvizitleri bir kutuda toplandı; fuardan iki hafta sonra Excel'e girildi ve satışa toplu e-postayla gönderildi.",
+          "acilma_kosulu": "Aday bilgisinin toplanması ve iletilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgileri nasıl",
+            "kartvizit",
+            "iki hafta sonra"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satış ekibi listedeki 600 kişiden yalnızca 40'ını aradı; kimin sıcak, kimin soğuk aday olduğu listede yazmıyordu.",
+          "acilma_kosulu": "Fuar sonrası satış takibi sorulursa",
+          "ipucu_kelimeler": [
+            "fuar sonrasında",
+            "600 kişi",
+            "sıcak"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ziyaretçilerin önemli bir kısmı gerçekten karar verici satın almacılardı.",
+          "acilma_kosulu": "Ziyaretçi profili ve karşılama sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandılar",
+            "karar verici",
+            "satın almacı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Fuardan önce birkaç müşteriye davetiye gönderildi.",
+          "acilma_kosulu": "Önceden ayarlanan randevular sorulursa",
+          "ipucu_kelimeler": [
+            "randevu",
+            "davetiye"
+          ]
+        }
+      ],
+      "kok_neden": "Fuar takipsizlikten sonuç vermedi: ziyaretçilerin çoğu gerçek karar vericilerdi ama kartvizitler iki hafta kutuda kaldı, listede kimin ne istediği yazmıyordu ve satış ekibi 600 kişiden yalnızca 40'ını aradı.",
+      "kok_neden_kelimeler": [
+        "takip",
+        "kartvizit",
+        "liste",
+        "satış ekibi",
+        "aranma"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yanlış ziyaretçi: stant çeken ama alıcı olmayan kitle",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Standa en çok, ödül çekilişi ve kahve ikramı için gelen öğrenciler ve başka firmaların çalışanları uğradı.",
+          "acilma_kosulu": "Ziyaretçi profili ve karşılama sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandılar",
+            "çekiliş",
+            "öğrenci"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Fuardan önce hiçbir müşteriyle randevu ayarlanmadı; büyük müşteriler rakiplerin özel toplantı odalarındaydı.",
+          "acilma_kosulu": "Önceden ayarlanan randevular sorulursa",
+          "ipucu_kelimeler": [
+            "randevu",
+            "randevu ayarlanmadı",
+            "toplantı odası"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bilgiler tablet üzerinden toplandı ve hemen CRM'e aktarıldı; çoğu satın alma yetkisi olmayan kişiler.",
+          "acilma_kosulu": "Aday bilgisinin toplanması ve iletilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgileri nasıl",
+            "tablet",
+            "yetkisi olmayan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satış ekibi listeyi bir haftada aradı.",
+          "acilma_kosulu": "Fuar sonrası satış takibi sorulursa",
+          "ipucu_kelimeler": [
+            "fuar sonrasında",
+            "bir haftada"
+          ]
+        }
+      ],
+      "kok_neden": "Fuar yanlış ziyaretçi çektiği için sonuç vermedi: stant çekiliş ve ikramla öğrencileri ve rakip çalışanlarını çekti, karar vericilerle önceden randevu ayarlanmadı ve büyük müşteriler rakiplerin özel toplantılarındaydı.",
+      "kok_neden_kelimeler": [
+        "ziyaretçi",
+        "randevu",
+        "karar verici",
+        "çekiliş",
+        "hedef"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yanlış mesaj: stant ürünü değil markayı anlattı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ziyaretçiler geldi, ama stantta yalnızca marka filmi ve dekor vardı; ürünleri deneyecekleri ya da fiyat konuşacakları bir alan yoktu.",
+          "acilma_kosulu": "Ziyaretçi profili ve karşılama sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl karşılandılar",
+            "marka filmi",
+            "deneyecek"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satış ekibi fuar boyunca standa sırayla iki kişi verdi; ziyaretçilerle çoğunlukla ajansın tuttuğu tanıtım elemanları konuştu.",
+          "acilma_kosulu": "Fuar sonrası satış takibi sorulursa",
+          "ipucu_kelimeler": [
+            "fuar sonrasında",
+            "tanıtım eleman",
+            "sırayla iki"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bilgiler toplandı ve iletildi; ama ziyaretçiler ürün hakkında soru soramadıkları için görüşmeler yüzeysel kaldı.",
+          "acilma_kosulu": "Aday bilgisinin toplanması ve iletilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgileri nasıl",
+            "yüzeysel",
+            "soru soramadık"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Önemli müşterilerle randevular ayarlanmıştı.",
+          "acilma_kosulu": "Önceden ayarlanan randevular sorulursa",
+          "ipucu_kelimeler": [
+            "randevu",
+            "randevular ayarlanmış"
+          ]
+        }
+      ],
+      "kok_neden": "Fuar yanlış mesajla sonuç vermedi: stant markayı anlatan bir dekordu, ürünü deneme ya da fiyat konuşma alanı yoktu ve ziyaretçilerle satışçılar değil ajansın tanıtım elemanları konuştuğu için görüşmeler yüzeysel kaldı.",
+      "kok_neden_kelimeler": [
+        "mesaj",
+        "ürün",
+        "tanıtım",
+        "satışçı",
+        "yüzeysel"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "kargo-paketleme-maliyeti",
+  "baslik": "Sipariş başına paketleme maliyeti neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Operasyon",
+  "sektor": "E-ticaret",
+  "sure_dk": 6,
+  "acilis": "E-ticaret deposunda sipariş başına paketleme maliyeti bir yılda %45 arttı; sipariş hacmi yalnızca %10 arttı. Paketleme bölümünden sorumlu vardiya şefiyle konuşuyorsun.",
+  "rolun": "E-ticaret operasyon müdürüsün. Amacın kesinti yapmak değil, maliyetin neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Rasim",
+    "rol": "Paketleme vardiya şefi",
+    "tavir": "Pratik ve doğrudan; \"malzeme pahalandı\" diyor. İşin nasıl yapıldığını soran birine gösteriyor.",
+    "ilk_soz": "Malzeme pahalandı, kolilerin fiyatı ikiye katlandı. Başka ne olabilir?"
+  },
+  "yaniltici_ipuclari": [
+    "Malzeme fiyatları arttı.",
+    "Ekip israf ediyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir siparişe hangi koli boyutu seçildiğine nasıl karar veriliyor?",
+    "Siparişlerin yapısı bir yılda nasıl değişti?",
+    "Maliyetin en büyük kalemi ne?",
+    "Pazarlama paketlere ne ekletiyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Koliler fazla büyük: tek tip koli kullanılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Koli boyutunu paketlemeci gözle seçiyor; depoda iki boy koli var ve küçük boy sık bitiyor.",
+          "acilma_kosulu": "Koli seçiminin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "koli boyutu",
+            "gözle seç",
+            "iki boy"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Siparişlerin çoğu artık tek ürünlü küçük siparişler.",
+          "acilma_kosulu": "Sipariş yapısındaki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "siparişlerin yapısı",
+            "tek ürünlü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En büyük kalem dolgu malzemesi ve hacme göre ödenen kargo ücreti; büyük kolide küçük ürün gidiyor.",
+          "acilma_kosulu": "Maliyetin en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalemi",
+            "dolgu",
+            "hacme göre"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Pazarlama yalnızca bir teşekkür kartı ekletiyor.",
+          "acilma_kosulu": "Pazarlamanın paketlere eklettikleri sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama paketlere",
+            "teşekkür kartı"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet koli seçiminden: depoda yalnızca iki boy koli var, küçük boy sık bitiyor, tek ürünlü küçük siparişler büyük kolilere konuyor ve fazladan dolgu ile hacme göre kargo ücreti maliyeti şişiriyor.",
+      "kok_neden_kelimeler": [
+        "koli",
+        "büyük",
+        "dolgu",
+        "hacim",
+        "boy"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Pazarlama ekleri: hediye, broşür ve özel kutu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pazarlama bir yıl önce her pakete markalı kutu, broşür, numune ve kurdele ekletmeye başladı.",
+          "acilma_kosulu": "Pazarlamanın paketlere eklettikleri sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama paketlere",
+            "markalı kutu",
+            "numune"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En büyük kalem markalı kutular ve eklerin işçiliği; her sipariş 90 saniye daha uzun sürüyor.",
+          "acilma_kosulu": "Maliyetin en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalemi",
+            "işçilik",
+            "90 saniye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sipariş yapısı pek değişmedi.",
+          "acilma_kosulu": "Sipariş yapısındaki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "siparişlerin yapısı",
+            "pek değişmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Koli boyutu sistem tarafından öneriliyor.",
+          "acilma_kosulu": "Koli seçiminin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "koli boyutu",
+            "sistem tarafından"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet pazarlama eklerinden: her pakete markalı kutu, broşür, numune ve kurdele eklenmeye başlandı; hem malzeme hem de sipariş başına 90 saniyelik ek işçilik maliyeti bu kararın bütçesinde görünmüyor.",
+      "kok_neden_kelimeler": [
+        "pazarlama",
+        "ek",
+        "markalı kutu",
+        "işçilik",
+        "numune"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kırılma ve yeniden gönderim: maliyet iadede saklı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Maliyet hesabına yeniden gönderilen siparişler de giriyor; kırılan ürünler için yeni paket ve kargo yapılıyor.",
+          "acilma_kosulu": "Maliyetin en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalemi",
+            "yeniden gönder",
+            "kırılan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir yılda cam ve seramik ürünlerin payı iki katına çıktı.",
+          "acilma_kosulu": "Sipariş yapısındaki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "siparişlerin yapısı",
+            "cam ve seramik",
+            "iki katına"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Koli seçimi doğru; ama kırılgan ürünler için ayrı paketleme talimatı ya da malzemesi yok.",
+          "acilma_kosulu": "Koli seçiminin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "koli boyutu",
+            "kırılgan",
+            "talimat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Pazarlama paketlere bir şey ekletmiyor.",
+          "acilma_kosulu": "Pazarlamanın paketlere eklettikleri sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama paketlere",
+            "ekletmiyor"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet kırılmalardan: cam ve seramik ürünlerin payı ikiye katlandı, kırılgan ürünler için ayrı paketleme talimatı ve malzemesi yok ve kırılan her ürün yeniden paketlenip gönderildiği için maliyet iki kez ödeniyor.",
+      "kok_neden_kelimeler": [
+        "kırıl",
+        "yeniden gönder",
+        "kırılgan",
+        "talimat",
+        "cam"
+      ]
+    }
+  ]
+}
