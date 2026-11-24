@@ -23,10 +23,11 @@ try:
         pg.get_by_role('button', name='Başla').first.click(); pg.wait_for_timeout(1500)
         ok('soru alanı açıldı', pg.locator('#soru').count() == 1)
         ok('veri notu ve gizlilik bağlantısı var', pg.locator('#veri-notu a[href="/gizlilik.html"]').count() == 1)
-        onceki = pg.locator('main').inner_text()
+        # Metin uzunluğu değil mesaj sayısı: kısa cevaplı senaryoda veri notu kalkınca metin kısalabiliyor.
+        onceki = pg.locator('.mesaj.karakter:not(.yaziyor)').count()
         pg.fill('#soru', 'Bu sorunu ilk ne zaman fark ettin, o gün neler oldu?')
         pg.locator('button[type=submit]').first.click(); pg.wait_for_timeout(2000)
-        ok('karakter cevap verdi', len(pg.locator('main').inner_text()) > len(onceki))
+        ok('karakter cevap verdi', pg.locator('.mesaj.karakter:not(.yaziyor)').count() == onceki + 1)
         # Rapor: her boyutta "Neden bu puan?" dayanağı; yönlendirici soru kendi metniyle gösterilir.
         pg.fill('#soru', 'Ekip isteksiz mi çalışıyor?')
         pg.locator('button[type=submit]').first.click(); pg.wait_for_timeout(1500)
