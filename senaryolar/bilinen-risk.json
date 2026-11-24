@@ -1,0 +1,200 @@
+{
+  "id": "bilinen-risk",
+  "baslik": "Bilinen risk neden yine gerçekleşti?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Mal kabul rampalarının yenilenmesi projesinde, kampanya dönemine sarkma riski proje başında risk listesine yazılmıştı. Proje sarktı ve kampanya haftasında iki rampa kapalıyken mal kabul kilitlendi. Projenin risk kaydını tutan proje uzmanıyla konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın kimin uyarmadığını bulmak değil, bilinen riskin neden önlenemediğini anlamak.",
+  "karakter": {
+    "ad": "Umut",
+    "rol": "Proje uzmanı",
+    "tavir": "Dürüst ve biraz suçluluk duyuyor; \"risk listede vardı\" diyor. Risk yönetiminin nasıl işlediğini soran birine açık konuşuyor.",
+    "ilk_soz": "Risk listede vardı, ilk günden. Bu beni daha çok rahatsız ediyor açıkçası."
+  },
+  "yaniltici_ipuclari": [
+    "Kampanya tarihi son anda değişti.",
+    "Yüklenici geç kaldı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Risk listeye yazıldıktan sonra onunla ilgili neler yapıldı?",
+    "Riskin gerçekleşmek üzere olduğu ne zaman ve nasıl fark edildi?",
+    "Risk listesi proje toplantılarında nasıl kullanılıyor?",
+    "Kampanya tarihleri proje planına nasıl yansıtılmıştı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Risk yazıldı ama sahipsiz: önlem ve tetik yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Risk listeye yazıldı ama bir sahibi, önlemi ya da \"şu tarih geçerse işi durdur\" gibi bir tetik noktası belirlenmedi.",
+          "acilma_kosulu": "Risk kaydından sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "listeye yazıldıktan",
+            "sahibi",
+            "tetik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Risk listesi ayda bir proje dosyasına ekleniyor; toplantılarda okunmuyor.",
+          "acilma_kosulu": "Risk listesinin kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "risk listesi",
+            "ayda bir",
+            "okunmuyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sarkma, kampanyadan bir hafta önce, iki rampa sökülmüşken fark edildi; geri dönmek için geç kalınmıştı.",
+          "acilma_kosulu": "Riskin ne zaman fark edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildi",
+            "bir hafta önce",
+            "sökülmüş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kampanya tarihleri plana işlenmişti.",
+          "acilma_kosulu": "Kampanya tarihlerinin plana yansıması sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya tarihleri",
+            "işlenmiş"
+          ]
+        }
+      ],
+      "kok_neden": "Risk bilindi ama yönetilmedi: listeye yazıldı ama sahibi, önlemi ve 'şu tarih geçerse dur' tetik noktası belirlenmedi, liste toplantılarda okunmadı ve sarkma iki rampa sökülmüşken fark edildi.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "tetik",
+        "önlem",
+        "yönetilmedi",
+        "okunmadı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Takvim baskısı: uyarı yapıldı, iş yine başlatıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sarkma riski iki ay önce yüklenicinin malzeme gecikmesini bildirmesiyle fark edildi ve sponsora iletildi.",
+          "acilma_kosulu": "Riskin ne zaman fark edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildi",
+            "iki ay önce",
+            "malzeme gecikmesi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Uyarıya rağmen bütçe yılı bitmeden harcama yapılması gerektiği için iş planlandığı gibi başlatıldı.",
+          "acilma_kosulu": "Risk kaydından sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "listeye yazıldıktan",
+            "bütçe yılı",
+            "harcama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kampanya tarihleri planda vardı; ama işi kampanyadan sonraya almak bütçenin bir sonraki yıla kayması demekti.",
+          "acilma_kosulu": "Kampanya tarihlerinin plana yansıması sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya tarihleri",
+            "sonraya almak",
+            "bir sonraki yıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Risk listesi her toplantıda gözden geçiriliyor.",
+          "acilma_kosulu": "Risk listesinin kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "risk listesi",
+            "her toplantıda"
+          ]
+        }
+      ],
+      "kok_neden": "Risk bilerek alındı: sarkma iki ay önce fark edilip sponsora iletildi ama bütçenin yıl bitmeden harcanması gerektiği için iş ertelenmedi; kampanya sonrasına almak bütçenin bir sonraki yıla kayması demekti.",
+      "kok_neden_kelimeler": [
+        "bütçe",
+        "bilerek",
+        "erteleme",
+        "harcama",
+        "uyarı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kampanya tarihi plana girmedi: pazarlama haber vermedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Proje planı geçen yılın kampanya takvimine göre yapıldı; bu yıl kampanya iki hafta öne alındı ve proje ekibine haber verilmedi.",
+          "acilma_kosulu": "Kampanya tarihlerinin plana yansıması sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya tarihleri",
+            "iki hafta öne",
+            "haber verilmedi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Riskin gerçekleştiği, kampanya ürünleri rampaya gelmeye başlayınca fark edildi.",
+          "acilma_kosulu": "Riskin ne zaman fark edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildi",
+            "kampanya ürünleri",
+            "rampaya gelmeye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Risk listesi toplantılarda okunuyordu; ama listedeki kampanya tarihi hiç doğrulanmadı.",
+          "acilma_kosulu": "Risk listesinin kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "risk listesi",
+            "doğrulanmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Risk için yüklenicide yedek ekip ayarlanmıştı.",
+          "acilma_kosulu": "Risk kaydından sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "listeye yazıldıktan",
+            "yedek ekip"
+          ]
+        }
+      ],
+      "kok_neden": "Risk kampanya tarihinin değiştiği bilinmediği için gerçekleşti: plan geçen yılın takvimine göre yapıldı, pazarlama kampanyayı iki hafta öne aldı ve proje ekibine haber vermedi; listedeki tarih hiç doğrulanmadı.",
+      "kok_neden_kelimeler": [
+        "kampanya",
+        "tarih",
+        "haber",
+        "doğrulan",
+        "pazarlama"
+      ]
+    }
+  ]
+}

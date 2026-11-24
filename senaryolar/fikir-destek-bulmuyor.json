@@ -1,0 +1,200 @@
+{
+  "id": "fikir-destek-bulmuyor",
+  "baslik": "İyileştirme önerin yönetimde neden destek bulmuyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Depoda iki istasyonu birleştirip günde 40 iş saati kazandıracak bir öneri hazırladın. İki kez yönetim toplantısında sundun; ikisinde de \"güzel fikir, sonra konuşalım\" denildi. Toplantıya katılan operasyon direktörünün asistanıyla konuşuyorsun.",
+  "rolun": "Öneriyi hazırlayan iş geliştirme yöneticisisin. Amacın öneriyi yeniden anlatmak değil, neden destek bulmadığını anlamak.",
+  "karakter": {
+    "ad": "Esin",
+    "rol": "Operasyon direktörünün asistanı",
+    "tavir": "Bilgili ve temkinli; toplantıların içini anlatmakta çekingen. Samimi ve suçlamayan sorulara açılıyor.",
+    "ilk_soz": "Toplantıda fikriniz beğenildi aslında. Ama gündem çok yoğundu, bilirsiniz."
+  },
+  "yaniltici_ipuclari": [
+    "Yönetim yeniliğe kapalı.",
+    "Toplantılar hep uzuyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Toplantıda öneri sunulurken direktörün aklında neler vardı?",
+    "Öneri toplantıdan önce kimler ile konuşulmuştu?",
+    "Toplantıdan sonra öneri hakkında neler söylendi?",
+    "Bu dönemde yönetimin en çok hangi konuya zamanı gidiyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Öncelik başka: yönetim maliyet değil müşteri kaybıyla uğraşıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yönetimin bütün zamanı, kaybedilme riski olan en büyük müşterinin şikâyetlerine gidiyor.",
+          "acilma_kosulu": "Yönetimin gündemi sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı gidiyor",
+            "büyük müşteri",
+            "şikâyet"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Direktörün aklında hizmet kalitesi ve zamanında teslim var; işçilik tasarrufu şu an gündeminde değil.",
+          "acilma_kosulu": "Direktörün o dönemki önceliği sorulursa",
+          "ipucu_kelimeler": [
+            "direktörün aklında",
+            "hizmet kalitesi",
+            "zamanında teslim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra direktör \"bu öneri teslim süresini de kısaltıyorsa getirsin\" dedi; bu söz sana ulaşmadı.",
+          "acilma_kosulu": "Toplantı sonrası yorumlar sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan sonra",
+            "teslim süresi",
+            "ulaşmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Öneri toplantıdan önce kimseyle konuşulmamıştı.",
+          "acilma_kosulu": "Önerinin önceden kimlerle konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan önce",
+            "konuşulmamış"
+          ]
+        }
+      ],
+      "kok_neden": "Öneri yanlış dille anlatıldı: yönetimin bütün gündemi büyük müşterinin şikâyetleri ve zamanında teslim, öneri ise işçilik tasarrufu olarak sunuldu; direktörün 'teslim süresini kısaltıyorsa getirsin' sözü öneri sahibine ulaşmadı.",
+      "kok_neden_kelimeler": [
+        "öncelik",
+        "müşteri",
+        "teslim",
+        "tasarruf",
+        "dil"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Önceden konuşulmadı: etkilenen müdür toplantıda karşı çıktı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Öneri toplantıdan önce birleştirilecek istasyonların bağlı olduğu sevkiyat müdürüyle konuşulmamıştı.",
+          "acilma_kosulu": "Önerinin önceden kimlerle konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan önce",
+            "sevkiyat müdürü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra sevkiyat müdürü direktöre, birleşmenin kendi ekibinden iki kişinin kaybı anlamına geldiğini ve haberi olmadığını söyledi.",
+          "acilma_kosulu": "Toplantı sonrası yorumlar sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan sonra",
+            "iki kişinin kaybı",
+            "haberi olmadığı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Direktör, etkilenen müdürün desteği olmayan bir değişikliği toplantıda onaylamak istemiyor.",
+          "acilma_kosulu": "Direktörün o dönemki önceliği sorulursa",
+          "ipucu_kelimeler": [
+            "direktörün aklında",
+            "desteği olmayan",
+            "onaylamak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yönetimin zamanı çoğunlukla bütçe hazırlığına gidiyor.",
+          "acilma_kosulu": "Yönetimin gündemi sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı gidiyor",
+            "bütçe hazırlığı"
+          ]
+        }
+      ],
+      "kok_neden": "Öneri destek bulmuyor çünkü etkilenen kişiye önceden sorulmadı: birleşme sevkiyat müdürünün ekibini küçültüyor, müdür öneriden toplantıda haberdar oldu ve direktör etkilenen müdürün desteği olmadan onay vermek istemiyor.",
+      "kok_neden_kelimeler": [
+        "önceden",
+        "sevkiyat müdürü",
+        "destek",
+        "haberi",
+        "etkilenen"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güven: geçmiş bir öneri vaadini tutmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra direktör, iki yıl önce aynı ekipten gelen ve vaat ettiği kazancı vermeyen bir yerleşim değişikliğini hatırlattı.",
+          "acilma_kosulu": "Toplantı sonrası yorumlar sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan sonra",
+            "iki yıl önce",
+            "vaat ettiği"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Direktörün aklındaki soru, 40 saatlik kazancın gerçek olup olmadığı; hesap yalnızca tahmine dayanıyor, deneme yapılmadı.",
+          "acilma_kosulu": "Direktörün o dönemki önceliği sorulursa",
+          "ipucu_kelimeler": [
+            "direktörün aklında",
+            "deneme",
+            "tahmine"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Öneri yalnızca iş geliştirme ekibi içinde hazırlandı; sahada bir deneme ya da ekip liderlerinin görüşü yok.",
+          "acilma_kosulu": "Önerinin önceden kimlerle konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "toplantıdan önce",
+            "ekip lider",
+            "iş geliştirme ekibi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yönetimin gündemi bu dönem görece sakin.",
+          "acilma_kosulu": "Yönetimin gündemi sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı gidiyor",
+            "sakin"
+          ]
+        }
+      ],
+      "kok_neden": "Öneri destek bulmuyor çünkü güven eksik: aynı ekipten gelen önceki bir öneri vaat ettiği kazancı vermedi, bu öneri de sahada denenmeden yalnızca tahminle hazırlandı; küçük bir deneme sonucu olmadan direktör karar vermek istemiyor.",
+      "kok_neden_kelimeler": [
+        "güven",
+        "deneme",
+        "tahmin",
+        "önceki öneri",
+        "kanıt"
+      ]
+    }
+  ]
+}

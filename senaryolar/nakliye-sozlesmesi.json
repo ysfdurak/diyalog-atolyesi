@@ -1,0 +1,201 @@
+{
+  "id": "nakliye-sozlesmesi",
+  "baslik": "Yeni nakliye sözleşmesi neden performansı artırmadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Altı ay önce nakliye firmasıyla zamanında teslimde %97 hedefli, cezalı yeni bir sözleşme imzalandı. Zamanında teslim %88'den %86'ya düştü; tek bir ceza bile kesilmedi. Sözleşmeyi takip eden lojistik planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Sözleşmeyi hazırlayan iş geliştirme yöneticisisin. Amacın nakliyeciyi cezalandırmak değil, sözleşmenin neden işe yaramadığını anlamak.",
+  "karakter": {
+    "ad": "Deniz Hanım",
+    "rol": "Lojistik planlama uzmanı",
+    "tavir": "Pragmatik ve biraz bıkkın; \"kâğıtta güzel ama...\" diyor. Uygulamayı soran birine somut örnek veriyor.",
+    "ilk_soz": "Sözleşme kâğıtta çok güzel. Ama uygulamada işler biraz farklı yürüyor."
+  },
+  "yaniltici_ipuclari": [
+    "Nakliyeci ceza umursamıyor.",
+    "Trafik her yıl kötüleşiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Zamanında teslim nasıl ölçülüyor, veriyi kim tutuyor?",
+    "Ceza maddesi pratikte nasıl işletiliyor?",
+    "Geç kalan teslimatların ortak noktası ne?",
+    "Nakliyeciyle performans ne zaman ve nasıl konuşuluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ölçüm nakliyecide: veriyi kendisi raporluyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Zamanında teslim, nakliyecinin kendi aylık raporundan ölçülüyor; nakliyecinin raporunda oran %96.",
+          "acilma_kosulu": "Ölçümün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriyi kim",
+            "kendi raporu",
+            "%96"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ceza, ancak bizim tarafımızdan ölçülen orana göre kesilebiliyor; ama elimizde bağımsız teslim verisi yok.",
+          "acilma_kosulu": "Cezanın nasıl işletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ceza maddesi",
+            "bağımsız",
+            "teslim verisi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Performans aylık toplantıda nakliyecinin raporu üzerinden konuşuluyor; müşteri şikâyetleri toplantıya gelmiyor.",
+          "acilma_kosulu": "Performansın nasıl konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "performans ne zaman",
+            "aylık toplantı",
+            "müşteri şikâyet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geç kalanlar çeşitli güzergâhlarda.",
+          "acilma_kosulu": "Geç teslimatların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç kalan",
+            "çeşitli"
+          ]
+        }
+      ],
+      "kok_neden": "Sözleşme işlemiyor çünkü ölçüm nakliyecide: zamanında teslim nakliyecinin kendi raporundan ölçülüyor, bağımsız teslim verisi olmadığı için ceza kesilemiyor ve müşteri şikâyetleri performans toplantısına gelmiyor.",
+      "kok_neden_kelimeler": [
+        "ölçüm",
+        "bağımsız",
+        "rapor",
+        "ceza",
+        "veri"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gecikmenin kaynağı biziz: araçlar depoda bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geç kalan teslimatların çoğu, aracın depodan planlanandan iki saat geç çıktığı sevkiyatlar.",
+          "acilma_kosulu": "Geç teslimatların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç kalan",
+            "geç çıktı",
+            "iki saat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sözleşmede gecikme depodan kaynaklanıyorsa ceza uygulanmıyor; nakliyeci her gecikmede çıkış saatini kanıt olarak gösteriyor.",
+          "acilma_kosulu": "Cezanın nasıl işletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ceza maddesi",
+            "depodan kaynaklan",
+            "kanıt"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ölçüm müşteriye varış saatine göre yapılıyor ve doğru; ama gecikmeyi bölmek için depodan çıkış saati ayrıca kaydediliyor.",
+          "acilma_kosulu": "Ölçümün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriyi kim",
+            "varış saati",
+            "çıkış saati"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Performans çeyrekte bir konuşuluyor.",
+          "acilma_kosulu": "Performansın nasıl konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "performans ne zaman",
+            "çeyrek"
+          ]
+        }
+      ],
+      "kok_neden": "Sözleşme işlemiyor çünkü gecikmenin kaynağı depo: araçlar depodan planlanandan geç çıkıyor, sözleşmede depodan kaynaklanan gecikmeye ceza yok ve nakliyeci her seferinde çıkış saatini kanıt gösteriyor.",
+      "kok_neden_kelimeler": [
+        "depo",
+        "geç çıkış",
+        "kaynak",
+        "ceza",
+        "çıkış saati"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ceza işletilmiyor: ilişkiyi bozmamak için",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ceza maddesi var ama hiç işletilmedi; satın alma, nakliyeciyle ilişkiyi bozmamak ve sezonda araç bulamamaktan korktuğu için ceza kesmek istemedi.",
+          "acilma_kosulu": "Cezanın nasıl işletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ceza maddesi",
+            "ilişki",
+            "araç bulama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Performans toplantılarında gecikme konuşuluyor ama hiçbir aksiyon ya da tarih yazılmıyor.",
+          "acilma_kosulu": "Performansın nasıl konuşulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "performans ne zaman",
+            "aksiyon",
+            "tarih yazılmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geç kalanların çoğu yoğun dönemlerde ve uzak güzergâhlarda; nakliyeci bu güzergâhlara en eski araçlarını veriyor.",
+          "acilma_kosulu": "Geç teslimatların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç kalan",
+            "uzak güzergâh",
+            "eski araç"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Zamanında teslim, araç takip sisteminden bağımsız ölçülüyor.",
+          "acilma_kosulu": "Ölçümün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriyi kim",
+            "araç takip"
+          ]
+        }
+      ],
+      "kok_neden": "Sözleşme işlemiyor çünkü ceza hiç işletilmiyor: satın alma ilişkiyi bozmamak ve yoğun dönemde araç bulamamaktan korkuyor, toplantılarda aksiyon yazılmıyor ve nakliyeci uzak güzergâhlara en eski araçlarını vermeye devam ediyor.",
+      "kok_neden_kelimeler": [
+        "ceza",
+        "işletil",
+        "ilişki",
+        "aksiyon",
+        "eski araç"
+      ]
+    }
+  ]
+}

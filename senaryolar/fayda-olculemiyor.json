@@ -1,0 +1,201 @@
+{
+  "id": "fayda-olculemiyor",
+  "baslik": "Teslim edilen projenin faydası neden ölçülemiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Bir yıl önce tamamlanan depo içi taşıma optimizasyonu projesi için yönetim kazancın ne olduğunu soruyor. Proje ekibi \"verim arttı\" diyor ama kimse bir rakam veremiyor. Projeyi yürüten proje yöneticisiyle konuşuyorsun.",
+  "rolun": "İyileştirme portföyünden sorumlu yöneticisin. Amacın projeyi değersiz ilan etmek değil, faydanın neden ölçülemediğini anlamak.",
+  "karakter": {
+    "ad": "Kerem Bey",
+    "rol": "Proje yöneticisi",
+    "tavir": "Projesiyle gurur duyuyor ama rakam sorusunda geriliyor. Ölçüm sürecini soran birine dürüst.",
+    "ilk_soz": "Proje başarılı oldu, sahadakiler de söylüyor. Rakam istenince işler zorlaşıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Bu tür faydalar zaten ölçülemez.",
+    "Yönetim her şeyi rakamla istiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Proje başlarken başlangıç durumu nasıl ölçüldü?",
+    "Projenin hedefi hangi göstergeyle tanımlanmıştı?",
+    "Proje bittikten sonra ölçümü kim, nasıl takip etti?",
+    "Aynı dönemde depoda başka neler değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Başlangıç ölçülmedi: karşılaştıracak bir şey yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Proje başında başlangıç durumu ölçülmedi; \"herkes sorunun ne kadar büyük olduğunu biliyordu\" denildi.",
+          "acilma_kosulu": "Başlangıç ölçümünün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "başlangıç durumu",
+            "ölçülmedi",
+            "herkes biliyordu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hedef \"taşıma süresini azaltmak\" olarak yazıldı; bir rakam ya da gösterge tanımlanmadı.",
+          "acilma_kosulu": "Hedefin tanımlandığı gösterge sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "rakam",
+            "tanımlanmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Proje bittikten sonra ölçüm yapıldı ama karşılaştırılacak bir başlangıç değeri olmadığı için kazanç hesaplanamadı.",
+          "acilma_kosulu": "Teslim sonrası ölçümün takibi sorulursa",
+          "ipucu_kelimeler": [
+            "bittikten sonra",
+            "karşılaştır",
+            "başlangıç değeri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Aynı dönemde depoda başka büyük bir değişiklik olmadı.",
+          "acilma_kosulu": "Aynı dönemdeki diğer değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "aynı dönemde",
+            "büyük bir değişiklik"
+          ]
+        }
+      ],
+      "kok_neden": "Fayda ölçülemiyor çünkü başlangıç ölçülmedi: hedef rakamsız yazıldı, proje başında başlangıç durumu ölçülmedi ve sonradan yapılan ölçümü karşılaştıracak bir değer yok.",
+      "kok_neden_kelimeler": [
+        "başlangıç",
+        "ölçülmedi",
+        "rakam",
+        "karşılaştır",
+        "hedef"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sonuç takipsiz: proje kapanınca ölçüm bitti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Proje bitince ekip dağıldı; sonuçları takip etmek kimseye verilmedi ve gösterge raporlardan kaldırıldı.",
+          "acilma_kosulu": "Teslim sonrası ölçümün takibi sorulursa",
+          "ipucu_kelimeler": [
+            "bittikten sonra",
+            "ekip dağıldı",
+            "raporlardan kaldır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Başlangıçta taşıma süresi iki hafta boyunca ölçüldü; veriler bir proje dosyasında duruyor.",
+          "acilma_kosulu": "Başlangıç ölçümünün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "başlangıç durumu",
+            "iki hafta boyunca",
+            "proje dosyası"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hedef taşıma süresinde %20 azalma olarak tanımlandı; ama bu hedefin kime ait olacağı yazılmadı.",
+          "acilma_kosulu": "Hedefin tanımlandığı gösterge sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "%20",
+            "kime ait"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Aynı dönemde sipariş hacmi biraz arttı.",
+          "acilma_kosulu": "Aynı dönemdeki diğer değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "aynı dönemde",
+            "sipariş hacmi"
+          ]
+        }
+      ],
+      "kok_neden": "Fayda ölçülemiyor çünkü sonuç takip edilmedi: başlangıç ölçülmüştü ve hedef rakamla tanımlıydı, ama proje kapanınca ekip dağıldı, göstergenin sahibi belirlenmedi ve gösterge raporlardan kaldırıldı.",
+      "kok_neden_kelimeler": [
+        "takip",
+        "sahibi",
+        "kapan",
+        "gösterge",
+        "dağıldı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Etki karıştı: aynı dönemde başka değişiklikler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aynı dönemde depoya iki yeni forklift alındı, vardiya düzeni değişti ve sipariş yapısı değişti; verim değişimi bunların hepsinin toplamı.",
+          "acilma_kosulu": "Aynı dönemdeki diğer değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "aynı dönemde",
+            "yeni forklift",
+            "vardiya düzeni"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Başlangıç ölçüldü ama yalnızca toplam verim olarak; taşıma süresi ayrıca ölçülmedi.",
+          "acilma_kosulu": "Başlangıç ölçümünün nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "başlangıç durumu",
+            "toplam verim",
+            "ayrıca"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Proje bittikten sonra toplam verim izlendi; artışın ne kadarının projeden geldiğini ayırmak için bir yöntem belirlenmedi.",
+          "acilma_kosulu": "Teslim sonrası ölçümün takibi sorulursa",
+          "ipucu_kelimeler": [
+            "bittikten sonra",
+            "ayırmak",
+            "yöntem"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedef toplam verimde %10 artış olarak tanımlanmıştı.",
+          "acilma_kosulu": "Hedefin tanımlandığı gösterge sorulursa",
+          "ipucu_kelimeler": [
+            "hangi göstergeyle",
+            "%10"
+          ]
+        }
+      ],
+      "kok_neden": "Fayda ölçülemiyor çünkü etkisi başka değişikliklerle karıştı: aynı dönemde yeni forkliftler, yeni vardiya düzeni ve sipariş yapısı değişti; yalnızca toplam verim ölçüldü ve projenin payını ayıracak bir yöntem belirlenmedi.",
+      "kok_neden_kelimeler": [
+        "karıştı",
+        "toplam verim",
+        "ayır",
+        "aynı dönem",
+        "yöntem"
+      ]
+    }
+  ]
+}

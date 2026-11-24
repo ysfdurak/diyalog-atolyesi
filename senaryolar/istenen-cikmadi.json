@@ -1,0 +1,201 @@
+{
+  "id": "istenen-cikmadi",
+  "baslik": "Teslim edilen sistem neden istenen şey çıkmadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Altı ayda geliştirilen yeni sevkiyat planlama ekranı teslim edildi; planlama ekibi \"bizim istediğimiz bu değildi\" diyerek eski Excel'ine döndü. Gereksinimleri toplayan iş analistiyle konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın kimin hatalı olduğunu bulmak değil, istenenle teslim edilenin neden ayrıştığını anlamak.",
+  "karakter": {
+    "ad": "Ilgın",
+    "rol": "İş analisti",
+    "tavir": "Titiz ve kırgın; \"onaylı gereksinim belgesi var\" diyor. Sürecin nasıl yürüdüğünü soran birine dürüst.",
+    "ilk_soz": "Gereksinim belgesini planlama ekibi imzaladı. Teslim ettiğimiz şey birebir o belge."
+  },
+  "yaniltici_ipuclari": [
+    "Kullanıcılar ne istediğini bilmiyor.",
+    "Planlama ekibi Excel'den vazgeçmek istemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Gereksinimler kimlerden ve nasıl toplandı?",
+    "Planlama ekibi işini şu an Excel'de nasıl yapıyor?",
+    "Geliştirme sırasında kullanıcılar ekranları ne zaman gördü?",
+    "Belge imzalandıktan sonra planlama işinde neler değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış kişiden toplandı: müdür istedi, kullanıcı başka",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gereksinimler planlama müdürüyle yapılan iki toplantıdan toplandı; ekranı her gün kullanacak planlamacılar görüşmeye katılmadı.",
+          "acilma_kosulu": "Gereksinimlerin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlerden",
+            "planlama müdürü",
+            "katılmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Planlamacılar Excel'de araçları sürükleyip bırakarak ve not sütunlarıyla planlıyor; belgede bu ihtiyaçlar yok.",
+          "acilma_kosulu": "Planlama ekibinin bugünkü işi sorulursa",
+          "ipucu_kelimeler": [
+            "excel'de nasıl",
+            "sürükle",
+            "not sütun"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kullanıcılar ekranları ilk kez teslimden bir hafta önceki eğitimde gördü.",
+          "acilma_kosulu": "Kullanıcıların ekranları görme zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ekranları ne zaman",
+            "eğitim",
+            "bir hafta önce"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Belge imzalandıktan sonra iş pek değişmedi.",
+          "acilma_kosulu": "Belge sonrası değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "imzalandıktan sonra",
+            "pek değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "İstenen çıkmadı çünkü gereksinimler yanlış kişiden toplandı: belgeyi yalnızca planlama müdürü şekillendirdi, ekranı kullanacak planlamacılar görüşülmedi ve onların Excel'deki çalışma biçimi belgeye girmedi; ekranları ilk kez teslimde gördüler.",
+      "kok_neden_kelimeler": [
+        "kullanıcı",
+        "müdür",
+        "görüşülmedi",
+        "çalışma biçimi",
+        "excel"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gereksinim donmuş, iş değişmiş: altı ayda süreç farklılaştı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Belge imzalandıktan sonra bir büyük müşteri eklendi ve planlama günlükten saatlik dalgalara geçti; belge güncellenmedi.",
+          "acilma_kosulu": "Belge sonrası değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "imzalandıktan sonra",
+            "saatlik dalga",
+            "güncellenmedi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Planlama ekibi bugün Excel'de saatlik dalgalarla, gün içinde birkaç kez plan yapıyor.",
+          "acilma_kosulu": "Planlama ekibinin bugünkü işi sorulursa",
+          "ipucu_kelimeler": [
+            "excel'de nasıl",
+            "birkaç kez",
+            "gün içinde"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geliştirme sırasında ara gösterim yapılmadı; değişiklik talebi süreci de \"kapsam dışı\" diye işletilmedi.",
+          "acilma_kosulu": "Kullanıcıların ekranları görme zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ekranları ne zaman",
+            "ara gösterim",
+            "kapsam dışı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gereksinimler kullanıcılarla atölye çalışmasıyla toplandı.",
+          "acilma_kosulu": "Gereksinimlerin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlerden",
+            "atölye"
+          ]
+        }
+      ],
+      "kok_neden": "İstenen çıkmadı çünkü iş değişti, belge değişmedi: imzadan sonra planlama günlükten saatlik dalgalara geçti, belge güncellenmedi, ara gösterim yapılmadı ve değişiklikler kapsam dışı sayıldı.",
+      "kok_neden_kelimeler": [
+        "değişti",
+        "güncellenmedi",
+        "dalga",
+        "ara gösterim",
+        "kapsam dışı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Belge yoruma açık: aynı kelime farklı anlam",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gereksinimler yazılı belgeyle toplandı; belgede \"esnek planlama\" ve \"hızlı düzenleme\" gibi ölçüsüz ifadeler var.",
+          "acilma_kosulu": "Gereksinimlerin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlerden",
+            "esnek planlama",
+            "ölçüsüz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kullanıcılar ekranları ara gösterimlerde gördü ve \"tamam\" dedi; ama gösterimler örnek veriyle, beş araçlık bir planla yapıldı.",
+          "acilma_kosulu": "Kullanıcıların ekranları görme zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ekranları ne zaman",
+            "örnek veri",
+            "beş araç"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Planlama ekibi günde 60 araçlık planı birkaç dakikada düzenliyor; \"hızlı düzenleme\"den bunu kastediyorlardı.",
+          "acilma_kosulu": "Planlama ekibinin bugünkü işi sorulursa",
+          "ipucu_kelimeler": [
+            "excel'de nasıl",
+            "60 araç",
+            "birkaç dakika"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Belge imzalandıktan sonra iş değişmedi.",
+          "acilma_kosulu": "Belge sonrası değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "imzalandıktan sonra",
+            "iş değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "İstenen çıkmadı çünkü belge yoruma açıktı: 'hızlı düzenleme' gibi ifadeler ölçüsüz yazıldı, ekip 60 araçlık planı dakikalar içinde düzenlemeyi kastediyordu ve ara gösterimler beş araçlık örnek veriyle yapıldığı için fark görülmedi.",
+      "kok_neden_kelimeler": [
+        "ölçüsüz",
+        "yorum",
+        "örnek veri",
+        "60 araç",
+        "ifade"
+      ]
+    }
+  ]
+}

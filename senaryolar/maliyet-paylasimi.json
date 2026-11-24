@@ -1,0 +1,199 @@
+{
+  "id": "maliyet-paylasimi",
+  "baslik": "Departmanlar depo maliyet paylaşımına neden itiraz ediyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sure_dk": 8,
+  "acilis": "Depo maliyetleri bu yıl ilk kez kullanan departmanlara paylaştırıldı. Üç departman faturalarına itiraz etti; biri depoyu kullanmayı azaltıp dışarıdan hizmet almaya başladı. Paylaşım modelini hazırlayan maliyet analistiyle konuşuyorsun.",
+  "rolun": "Modelin sahibi olan iş geliştirme yöneticisisin. Amacın modeli savunmak değil, itirazların nedenini anlamak.",
+  "karakter": {
+    "ad": "Ozan Bey",
+    "rol": "Maliyet analisti",
+    "tavir": "Hesaplarına güveniyor; \"model tutarlı\" diyor. Varsayımları soran birine açık konuşuyor.",
+    "ilk_soz": "Model tutarlı, her kuruşun nereden geldiği belli. İtirazlar bence alışkanlıktan."
+  },
+  "yaniltici_ipuclari": [
+    "Departmanlar bedava hizmete alışmış.",
+    "Herkes kendi bütçesini koruyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Maliyet departmanlara hangi anahtara göre dağıtılıyor?",
+    "İtiraz eden departmanlar en çok hangi kaleme itiraz ediyor?",
+    "Model hazırlanırken departmanlarla nasıl konuşuldu?",
+    "Dışarıdan hizmet almaya başlayan departman neden bu kararı verdi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış anahtar: palet sayısı, işçiliği yansıtmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Maliyetin tamamı departmanların depoda tuttuğu ortalama palet sayısına göre dağıtılıyor.",
+          "acilma_kosulu": "Dağıtım anahtarı sorulursa",
+          "ipucu_kelimeler": [
+            "anahtara göre",
+            "palet sayısı",
+            "ortalama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İtiraz edenler az palet tutup çok sipariş çıkaran departmanlar değil; çok palet tutup az hareket eden departmanlar, işçiliği hiç kullanmadıkları hâlde işçilik maliyetinin büyük kısmını ödüyor.",
+          "acilma_kosulu": "Itiraz edilen kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kaleme",
+            "işçilik",
+            "az hareket"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dışarıdan hizmet alan departman, aynı depolamayı yalnızca alan bedeliyle %30 daha ucuza buldu.",
+          "acilma_kosulu": "Dışarıdan hizmet alma kararının nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "dışarıdan hizmet",
+            "alan bedeli",
+            "%30"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Model finans direktörüne sunulup onaylandı.",
+          "acilma_kosulu": "Modelin hazırlanma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "departmanlarla nasıl",
+            "finans direktörü"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz yanlış dağıtım anahtarından: bütün maliyet palet sayısına göre dağıtılıyor, işçiliği az kullanan departmanlar işçilik maliyetini ödüyor ve biri aynı depolamayı dışarıda daha ucuza buldu.",
+      "kok_neden_kelimeler": [
+        "anahtar",
+        "palet sayısı",
+        "işçilik",
+        "dağıtım",
+        "faaliyet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Konuşulmadan geldi: fatura ilk kez yıl ortasında",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Model departmanlarla hiç konuşulmadan hazırlandı; departmanlar ilk faturayı yıl ortasında, bütçeleri kesinleştikten sonra gördü.",
+          "acilma_kosulu": "Modelin hazırlanma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "departmanlarla nasıl",
+            "yıl ortası",
+            "konuşulmadan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İtirazların çoğu toplam tutara; departmanların bütçesinde depo maliyeti için bir kalem yok.",
+          "acilma_kosulu": "Itiraz edilen kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kaleme",
+            "toplam tutar",
+            "bütçe kalemi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dışarıdan hizmet alan departman, bütçesinde depo kalemi olmadığı için maliyeti başka bir hizmet kalemine yazabildiği çözümü seçti.",
+          "acilma_kosulu": "Dışarıdan hizmet alma kararının nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "dışarıdan hizmet",
+            "hizmet kalemi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Anahtar alan, hareket ve işçiliği birlikte hesaba katıyor.",
+          "acilma_kosulu": "Dağıtım anahtarı sorulursa",
+          "ipucu_kelimeler": [
+            "anahtara göre",
+            "birlikte hesaba"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz yöntemden: model departmanlarla konuşulmadan hazırlandı, ilk fatura bütçeler kesinleştikten sonra yıl ortasında geldi ve depo maliyeti için kalemi olmayan departmanlar ya itiraz etti ya da başka kalemlere kaçtı.",
+      "kok_neden_kelimeler": [
+        "konuşulmadan",
+        "bütçe",
+        "yıl ortası",
+        "kalem",
+        "fatura"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görünmeyen hizmet: departmanlar ne için ödediğini bilmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İtirazlar en çok \"genel giderler\" kalemine; bu kalem faturanın yarısı ve neyi kapsadığı yazmıyor.",
+          "acilma_kosulu": "Itiraz edilen kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kaleme",
+            "genel gider",
+            "yarısı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Anahtar makul ama fatura tek satır; departman hangi hizmet için ne ödediğini göremiyor.",
+          "acilma_kosulu": "Dağıtım anahtarı sorulursa",
+          "ipucu_kelimeler": [
+            "anahtara göre",
+            "tek satır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dışarıdan hizmet alan departman, dış firmanın kalem kalem fiyat listesini \"daha şeffaf\" bulduğu için geçti.",
+          "acilma_kosulu": "Dışarıdan hizmet alma kararının nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "dışarıdan hizmet",
+            "şeffaf",
+            "fiyat listesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Model departman müdürlerine bir toplantıda anlatıldı.",
+          "acilma_kosulu": "Modelin hazırlanma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "departmanlarla nasıl",
+            "bir toplantıda"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz şeffaflık eksikliğinden: fatura tek satır, yarısı neyi kapsadığı yazmayan 'genel giderler' ve departmanlar ne için ödediğini göremiyor; dış firmanın kalem kalem fiyatı daha güvenilir bulundu.",
+      "kok_neden_kelimeler": [
+        "şeffaf",
+        "genel gider",
+        "tek satır",
+        "kalem",
+        "fiyat listesi"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "canliya-gecis-kaosu",
+  "baslik": "Canlıya geçiş günü neden kaosa döndü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Yeni WMS'e geçilen pazartesi günü depo öğlene kadar hiç sevkiyat yapamadı; iki gün boyunca siparişlerin yarısı gecikti. Geçişi planlayan proje müdürüyle konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın suçlu bulmak değil, geçişin neden kaosa döndüğünü anlamak.",
+  "karakter": {
+    "ad": "Melis",
+    "rol": "Proje müdürü",
+    "tavir": "Bitkin ve savunmada; \"teknik olarak her şey hazırdı\" diyor. Geçiş planını soran birine açık konuşuyor.",
+    "ilk_soz": "Teknik olarak her şey hazırdı, testlerden geçmişti. Sahada beklemediğimiz şeyler oldu."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip yeni sisteme alışamadı.",
+    "Yazılımda hata vardı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Geçiş planı nasıl hazırlandı, geçiş günü için neler planlanmıştı?",
+    "Pazartesi sabahı ilk saatlerde neler oldu?",
+    "Eski sistemden yeni sisteme veriler nasıl aktarıldı?",
+    "Geçiş gününde sahada destek nasıl organize edildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Veri aktarımı: stok ve adresler eksik taşındı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Stok ve raf adresleri hafta sonu aktarıldı; aktarımın doğrulaması yalnızca toplam adet üzerinden yapıldı.",
+          "acilma_kosulu": "Veri aktarımının nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriler nasıl",
+            "hafta sonu",
+            "toplam adet"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sabah toplayıcıların terminali, ürünleri boş raflara yönlendirdi; adreslerin %15'i yanlış aktarılmıştı.",
+          "acilma_kosulu": "Geçiş sabahı olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ilk saatlerde",
+            "boş raf",
+            "%15"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçiş planında aktarım sonrası rastgele raf sayımı gibi bir doğrulama adımı yoktu.",
+          "acilma_kosulu": "Geçiş planının içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "rastgele",
+            "doğrulama"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sahada her bölümde bir destek kişisi vardı.",
+          "acilma_kosulu": "Sahadaki destek düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "sahada destek",
+            "her bölümde"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş veri aktarımı yüzünden çöktü: stok ve adresler hafta sonu yalnızca toplam adetle doğrulanarak aktarıldı, adreslerin %15'i yanlıştı ve planda aktarım sonrası raf sayımı gibi bir doğrulama adımı yoktu.",
+      "kok_neden_kelimeler": [
+        "veri",
+        "aktarım",
+        "doğrulama",
+        "adres",
+        "toplam adet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Geri dönüş planı yok: sorun çıkınca karar verilemedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçiş planında sorun çıkarsa eski sisteme dönme ya da elle çalışma seçeneği yoktu; eski sistem cuma akşamı kapatıldı.",
+          "acilma_kosulu": "Geçiş planının içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "eski sisteme dön",
+            "kapatıldı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sabah ilk sorunlarda kimin karar vereceği belli değildi; sponsor ve BT direktörü öğlene kadar ulaşılamadı.",
+          "acilma_kosulu": "Geçiş sabahı olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ilk saatlerde",
+            "kimin karar",
+            "ulaşılamadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sahada destek ekibi vardı ama karar yetkisi yoktu; her sorun yukarı iletilip bekletildi.",
+          "acilma_kosulu": "Sahadaki destek düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "sahada destek",
+            "karar yetkisi",
+            "yukarı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veri aktarımı doğrulanmıştı.",
+          "acilma_kosulu": "Veri aktarımının nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriler nasıl",
+            "doğrulanmış"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş geri dönüş ve karar planı olmadığı için kaosa döndü: eski sistem cuma kapatıldı ve elle çalışma seçeneği yoktu, sabah karar verecek kişiler ulaşılamadı ve sahadaki destek ekibinin karar yetkisi yoktu.",
+      "kok_neden_kelimeler": [
+        "geri dönüş",
+        "karar",
+        "yetki",
+        "plan",
+        "ulaşılamadı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yanlış zaman ve hazırlıksız kullanıcı: pazartesi zirvesi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçiş, haftanın en yoğun günü olan pazartesiye planlandı; hafta sonu biriken siparişler de o sabah düştü.",
+          "acilma_kosulu": "Geçiş planının içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş planı",
+            "en yoğun gün",
+            "biriken"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplayıcıların çoğu yeni terminal ekranını ilk kez o sabah gördü; eğitim iki hafta önce sınıfta yapılmıştı.",
+          "acilma_kosulu": "Geçiş sabahı olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ilk saatlerde",
+            "ilk kez",
+            "sınıf"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sahada destek BT ekibinden oluşuyordu; depo süreçlerini bilen süper kullanıcı yoktu.",
+          "acilma_kosulu": "Sahadaki destek düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "sahada destek",
+            "bt ekibi",
+            "süper kullanıcı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veriler eksiksiz aktarıldı.",
+          "acilma_kosulu": "Veri aktarımının nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "veriler nasıl",
+            "eksiksiz"
+          ]
+        }
+      ],
+      "kok_neden": "Geçiş zamanlama ve hazırlıktan çöktü: geçiş haftanın en yoğun günü pazartesiye konuldu, toplayıcılar ekranı ilk kez o sabah gördü ve sahadaki destek depo süreçlerini bilmeyen BT ekibinden oluşuyordu.",
+      "kok_neden_kelimeler": [
+        "pazartesi",
+        "yoğun",
+        "eğitim",
+        "süper kullanıcı",
+        "zamanlama"
+      ]
+    }
+  ]
+}

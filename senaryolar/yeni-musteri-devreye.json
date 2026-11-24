@@ -1,0 +1,200 @@
+{
+  "id": "yeni-musteri-devreye",
+  "baslik": "Yeni müşterinin devreye alınması neden gecikiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Depoya yeni bir e-ticaret müşterisinin operasyonu taşınacaktı; başlangıç tarihi iki kez ertelendi ve müşteri sözleşmeden çıkmayı konuşmaya başladı. Devreye alma projesini yürüten operasyon uzmanıyla konuşuyorsun.",
+  "rolun": "Müşteriyi getiren iş geliştirme yöneticisisin. Amacın tarih koparmak değil, devreye almanın neden geciktiğini anlamak.",
+  "karakter": {
+    "ad": "Arda",
+    "rol": "Operasyon uzmanı",
+    "tavir": "Yoğun ve gergin; \"her şey aynı anda isteniyor\" diyor. İşin akışını soran birine açık konuşuyor.",
+    "ilk_soz": "Biz hazırlanıyoruz ama her hafta yeni bir istek geliyor. Bu tempoda tarih vermek zor."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri çok talepkâr.",
+    "Operasyon ekibi yavaş."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Devreye alma için hangi işler tamamlanmalı, şu an neredeyiz?",
+    "Müşterinin süreç ve kuralları size nasıl aktarıldı?",
+    "Sistem entegrasyonu ne durumda?",
+    "Satış sürecinde müşteriye neler söz verildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Satışta verilen söz depoda yok: özel paketleme ve hediye notu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Satış görüşmelerinde müşteriye markalı kutu, hediye notu ve aynı gün kargo söz verildi; bu hizmetler depoda hiç yok.",
+          "acilma_kosulu": "Satışta verilen sözler sorulursa",
+          "ipucu_kelimeler": [
+            "söz verildi",
+            "markalı kutu",
+            "hediye notu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kalan işlerin çoğu bu hizmetler için istasyon kurmak ve malzeme bulmak; operasyon bunları teklif imzalandıktan sonra öğrendi.",
+          "acilma_kosulu": "Kalan işler sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlanmalı",
+            "istasyon kur",
+            "imzalandıktan sonra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri kuralları satış ekibinin notlarından aktarıldı; operasyon ilk müşteri toplantısına davet edilmedi.",
+          "acilma_kosulu": "Müşteri kurallarının aktarılma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl aktarıldı",
+            "satış ekibinin notları",
+            "davet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sistem entegrasyonu test aşamasında.",
+          "acilma_kosulu": "Sistem entegrasyonunun durumu sorulursa",
+          "ipucu_kelimeler": [
+            "entegrasyonu",
+            "test aşama"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme satıştan: müşteriye depoda olmayan hizmetler (markalı kutu, hediye notu, aynı gün kargo) söz verildi, operasyon bunları teklif imzalandıktan sonra öğrendi ve ilk müşteri toplantısına davet edilmedi.",
+      "kok_neden_kelimeler": [
+        "söz",
+        "satış",
+        "hizmet",
+        "operasyon",
+        "davet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Entegrasyon: müşterinin sistemi sipariş gönderemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşterinin e-ticaret altyapısı siparişleri WMS'in istediği biçimde gönderemiyor; aradaki bağlantıyı kimin yazacağı belirlenmedi.",
+          "acilma_kosulu": "Sistem entegrasyonunun durumu sorulursa",
+          "ipucu_kelimeler": [
+            "entegrasyonu",
+            "biçim",
+            "bağlantı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Fiziksel hazırlık bitti; raflar ve ekip hazır, yalnızca sipariş gelmiyor.",
+          "acilma_kosulu": "Kalan işler sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlanmalı",
+            "fiziksel hazırlık",
+            "raflar"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satışta entegrasyonun \"standart, bir haftalık iş\" olduğu söylendi; BT'ye sorulmadı.",
+          "acilma_kosulu": "Satışta verilen sözler sorulursa",
+          "ipucu_kelimeler": [
+            "söz verildi",
+            "bir haftalık",
+            "bt'ye sorulmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterinin süreçleri yazılı bir el kitabıyla aktarıldı.",
+          "acilma_kosulu": "Müşteri kurallarının aktarılma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl aktarıldı",
+            "el kitabı"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme entegrasyondan: fiziksel hazırlık bitti ama müşterinin sistemi siparişleri WMS'in istediği biçimde gönderemiyor, bağlantıyı kimin yazacağı belirlenmedi ve satışta BT'ye sormadan 'bir haftalık iş' denildi.",
+      "kok_neden_kelimeler": [
+        "entegrasyon",
+        "bağlantı",
+        "bt",
+        "biçim",
+        "sorulmadı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ürün verisi yok: binlerce ürünün ana verisi eksik",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kalan iş, müşterinin 8.000 ürününün ana verisini (ölçü, ağırlık, barkod) sisteme tanıtmak; verilerin yarısı eksik.",
+          "acilma_kosulu": "Kalan işler sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlanmalı",
+            "8.000",
+            "ana veri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ürün listesi müşteriden bir Excel dosyası olarak geldi; hangi alanların zorunlu olduğu müşteriye söylenmedi.",
+          "acilma_kosulu": "Müşteri kurallarının aktarılma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl aktarıldı",
+            "excel dosyası",
+            "zorunlu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem bağlantısı hazır; ama ürün tanımlanmadan sipariş alınamıyor.",
+          "acilma_kosulu": "Sistem entegrasyonunun durumu sorulursa",
+          "ipucu_kelimeler": [
+            "entegrasyonu",
+            "tanımlanmadan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satışta standart hizmetler söz verildi.",
+          "acilma_kosulu": "Satışta verilen sözler sorulursa",
+          "ipucu_kelimeler": [
+            "söz verildi",
+            "standart hizmet"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme ürün verisinden: müşterinin 8.000 ürününün ölçü, ağırlık ve barkod verisinin yarısı eksik, hangi alanların zorunlu olduğu müşteriye baştan söylenmedi ve ürün tanımlanmadan sipariş alınamıyor.",
+      "kok_neden_kelimeler": [
+        "ana veri",
+        "ürün",
+        "eksik",
+        "zorunlu",
+        "tanımlan"
+      ]
+    }
+  ]
+}

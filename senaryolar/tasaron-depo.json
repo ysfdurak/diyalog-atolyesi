@@ -1,0 +1,201 @@
+{
+  "id": "tasaron-depo",
+  "baslik": "Taşeron depo neden beklenenden pahalıya geldi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Sezon taşkınlığı için bir lojistik firmasının deposu kiralandı. Teklifte palet başına aylık ücret uygundu; ama üç ayın sonunda toplam fatura bütçenin %40 üzerinde çıktı. Taşeron depoyla ilişkiyi yöneten lojistik uzmanıyla konuşuyorsun.",
+  "rolun": "Taşeron kararını veren iş geliştirme yöneticisisin. Amacın faturaya itiraz etmek değil, maliyetin neden aştığını anlamak.",
+  "karakter": {
+    "ad": "Gökçe",
+    "rol": "Lojistik uzmanı",
+    "tavir": "Detaycı ve biraz mahcup; \"faturalar sözleşmeye uygun\" diyor. Kalem kalem soran birine açık konuşuyor.",
+    "ilk_soz": "Faturaları tek tek kontrol ettim, hepsi sözleşmeye uygun. Ama toplam beklediğimiz gibi değil."
+  },
+  "yaniltici_ipuclari": [
+    "Taşeron fırsatçılık yapıyor.",
+    "Sezon uzun sürdü."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Faturadaki en büyük kalemler hangileri ve teklifte nasıl geçiyordu?",
+    "Bütçe hangi varsayımlarla hesaplanmıştı?",
+    "Taşeron depoya ürün nasıl gidip geliyor?",
+    "Sözleşme kimler ile, nasıl hazırlandı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hareket ücretleri: depolama ucuz, giriş-çıkış pahalı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Faturanın en büyük kalemi palet giriş, çıkış ve toplama ücretleri; teklifte bunlar küçük bir ek tabloda geçiyordu.",
+          "acilma_kosulu": "Fatura kalemleri sorulursa",
+          "ipucu_kelimeler": [
+            "faturadaki",
+            "giriş, çıkış",
+            "ek tablo"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bütçe yalnızca palet başına aylık depolama ücretiyle hesaplandı; paletlerin depoda üç ay hareketsiz kalacağı varsayıldı.",
+          "acilma_kosulu": "Bütçe varsayımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi varsayımlarla",
+            "depolama ücreti",
+            "hareketsiz"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ürünler sık sık ana depoya geri çağrılıyor; bir palet üç ayda ortalama dört kez gidip geliyor.",
+          "acilma_kosulu": "Ürünün taşeron depoya akışı sorulursa",
+          "ipucu_kelimeler": [
+            "gidip geliyor",
+            "geri çağrıl",
+            "dört kez"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sözleşme satın alma ile hazırlandı.",
+          "acilma_kosulu": "Sözleşmenin nasıl hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşme kimler",
+            "satın alma ile"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet hareketten aştı: bütçe paletlerin üç ay hareketsiz kalacağını varsayarak yalnızca depolama ücretiyle hesaplandı, ama ürünler sık sık geri çağrılıyor ve teklifte küçük tabloda geçen giriş-çıkış ücretleri faturanın en büyük kalemi oldu.",
+      "kok_neden_kelimeler": [
+        "hareket",
+        "giriş-çıkış",
+        "depolama ücreti",
+        "geri çağrıl",
+        "varsay"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yanlış ürün seçimi: hızlı ürünler dışarıda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Taşeron depoya hangi ürünlerin gideceğine mal kabul karar veriyor; yer açan büyük ürünler, yani sezonun en çok satanları gönderiliyor.",
+          "acilma_kosulu": "Ürünün taşeron depoya akışı sorulursa",
+          "ipucu_kelimeler": [
+            "gidip geliyor",
+            "mal kabul karar",
+            "en çok satan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En büyük kalem taşıma: çok satan ürünler her gün ana depoya geri taşınıyor.",
+          "acilma_kosulu": "Fatura kalemleri sorulursa",
+          "ipucu_kelimeler": [
+            "faturadaki",
+            "taşıma",
+            "her gün"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bütçe yavaş satan sezon dışı ürünlerin gönderileceği varsayımıyla hesaplandı.",
+          "acilma_kosulu": "Bütçe varsayımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi varsayımlarla",
+            "yavaş satan",
+            "sezon dışı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sözleşmeyi lojistik ve satın alma birlikte hazırladı.",
+          "acilma_kosulu": "Sözleşmenin nasıl hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşme kimler",
+            "birlikte hazırla"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet yanlış ürün seçiminden: bütçe yavaş satan ürünlerin dışarıda tutulacağını varsaydı ama mal kabul yer açmak için sezonun en çok satanlarını gönderdi; bu ürünler her gün ana depoya geri taşınıyor.",
+      "kok_neden_kelimeler": [
+        "ürün seçimi",
+        "en çok satan",
+        "taşıma",
+        "yavaş satan",
+        "mal kabul"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sözleşme açıkları: asgari hacim ve uzatma ücretleri",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sözleşme acele, teklif formu üzerinden hazırlandı; hukuk ve finans görmedi.",
+          "acilma_kosulu": "Sözleşmenin nasıl hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşme kimler",
+            "hukuk",
+            "acele"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Faturada \"asgari hacim taahhüdü farkı\" ve \"süre uzatma\" kalemleri var; sözleşmede asgari 2.000 palet taahhüdü yazıyor, ortalama 1.200 palet kullanıldı.",
+          "acilma_kosulu": "Fatura kalemleri sorulursa",
+          "ipucu_kelimeler": [
+            "faturadaki",
+            "asgari hacim",
+            "süre uzatma"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bütçe kullanılan palet sayısı üzerinden hesaplandı; asgari taahhüt ve uzatma ücretleri hesaba katılmadı.",
+          "acilma_kosulu": "Bütçe varsayımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi varsayımlarla",
+            "kullanılan palet",
+            "taahhüt"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünler genelde bir kez gidip sezon sonunda dönüyor.",
+          "acilma_kosulu": "Ürünün taşeron depoya akışı sorulursa",
+          "ipucu_kelimeler": [
+            "gidip geliyor",
+            "bir kez"
+          ]
+        }
+      ],
+      "kok_neden": "Maliyet sözleşmeden aştı: sözleşme hukuk ve finans görmeden aceleyle hazırlandı, 2.000 paletlik asgari hacim taahhüdü ve süre uzatma ücretleri vardı ama bütçe yalnızca kullanılan palet sayısıyla hesaplandı.",
+      "kok_neden_kelimeler": [
+        "sözleşme",
+        "asgari",
+        "taahhüt",
+        "uzatma",
+        "hukuk"
+      ]
+    }
+  ]
+}
