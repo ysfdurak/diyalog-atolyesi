@@ -1,0 +1,207 @@
+{
+  "id": "her-karar-sana",
+  "baslik": "Neden her karar sana geliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Vardiya sorumluların küçük kararlar için bile seni arıyor: hangi rampa önce, kim molaya çıkacak, arızalı forklift kime gidecek. Sen izindeyken bir vardiya iki saat bekledi. Vardiya sorumlularından Ozan'la birebir görüşüyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın \"neden kendin karar vermiyorsun\" demek değil, kararların neden sana geldiğini anlamak.",
+  "karakter": {
+    "ad": "Ozan",
+    "rol": "Vardiya sorumlusu",
+    "tavir": "Saygılı ve temkinli. Eleştiri gibi duyduğu soruya \"haklısınız, dikkat ederim\" deyip kapanır; gerçekten merak eden birine anlatır.",
+    "ilk_soz": "Sizi çok aradığımı biliyorum. Haklısınız, bundan sonra dikkat ederim."
+  },
+  "yaniltici_ipuclari": [
+    "Ben biraz çekingen biriyim.",
+    "Yanlış yapmaktan korkuyorum, o kadar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Son seni arayıp sorduğun kararda aklından neler geçti?",
+    "Daha önce kendi başına karar verdiğinde ne oldu?",
+    "Hangi kararları kendin verebileceğini nereden biliyorsun?",
+    "Kendin karar verebilmen için ne gerekirdi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yönetici öyle öğretti: karar ekibin önünde geri alındı",
+      "gizli_bilgiler": [
+        {
+          "id": "geri-alindi",
+          "onem": "kritik",
+          "bilgi": "İki ay önce Ozan rampa sırasını kendisi değiştirdi; yönetici ekibin önünde kararı geri aldı. O günden beri sormadan karar vermiyor.",
+          "acilma_kosulu": "Daha önce kendi başına karar verdiğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "kendi başına",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "hemen-cevap",
+          "onem": "kritik",
+          "bilgi": "Yönetici her aramada cevabı hemen veriyor, Ozan'a ne düşündüğünü hiç sormuyor; sormak en hızlı ve en güvenli yol olmuş.",
+          "acilma_kosulu": "Son sorduğu kararda aklından neler geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "aklından",
+            "neler geçti",
+            "son"
+          ]
+        },
+        {
+          "id": "sinir",
+          "onem": "kritik",
+          "bilgi": "Hangi kararların kendisine ait olduğu hiç konuşulmadı; sınırı yöneticinin tepkisinden tahmin etmeye çalışıyor.",
+          "acilma_kosulu": "Hangi kararları kendisinin verebileceğini nereden bildiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi karar",
+            "nereden biliyor",
+            "sınır",
+            "yetki"
+          ]
+        },
+        {
+          "id": "istiyor",
+          "onem": "destek",
+          "bilgi": "Kendi başına karar vermek istiyor; yeterli bilgisi olduğunu düşünüyor.",
+          "acilma_kosulu": "Kendi karar verebilmesi için neyin gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne gerekir",
+            "ihtiyac",
+            "istiyor"
+          ]
+        }
+      ],
+      "kok_neden": "Kararlar yöneticiye geliyor çünkü yönetici öyle öğretti: Ozan'ın kararı ekibin önünde geri alındı, yönetici her soruda cevabı hemen verip Ozan'a ne düşündüğünü sormuyor ve kararların sınırı hiç konuşulmadı.",
+      "kok_neden_kelimeler": [
+        "geri al",
+        "cevab",
+        "sınır",
+        "yönetici",
+        "sormuyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Karar vermek cezalandırılıyor: tutanak ve prim kesintisi",
+      "gizli_bilgiler": [
+        {
+          "id": "tutanak",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl başka bir vardiya sorumlusu kendi verdiği bir rampa kararı yüzünden tutanak yedi ve primi kesildi.",
+          "acilma_kosulu": "Daha önce kendi başına karar verildiğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "kendi başına",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "kim-sorumlu",
+          "onem": "kritik",
+          "bilgi": "Aklından hep \"ters giderse kim sorumlu olacak?\" sorusu geçiyor; yöneticiye sorunca sorumluluk yöneticiye geçiyor.",
+          "acilma_kosulu": "Son sorduğu kararda aklından neler geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "aklından",
+            "neler geçti",
+            "son"
+          ]
+        },
+        {
+          "id": "yetki-tanimi",
+          "onem": "kritik",
+          "bilgi": "Yazılı bir yetki tanımı yok; olay raporlarında \"kararı kim verdi\" alanı var ve sonuç kötüyse o kişi sorumlu tutuluyor.",
+          "acilma_kosulu": "Hangi kararları kendisinin verebileceğini nereden bildiği ya da yetki sorulursa",
+          "ipucu_kelimeler": [
+            "hangi karar",
+            "nereden biliyor",
+            "yetki",
+            "kural"
+          ]
+        },
+        {
+          "id": "yazili-yetki",
+          "onem": "destek",
+          "bilgi": "Karar yetkisi yazılı olarak verilirse rahatlar.",
+          "acilma_kosulu": "Kendi karar verebilmesi için neyin gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne gerekir",
+            "ihtiyac"
+          ]
+        }
+      ],
+      "kok_neden": "Kararlar yöneticiye geliyor çünkü karar vermek cezalandırılıyor: önceki sorumlu kendi kararı yüzünden tutanak yedi, yazılı yetki tanımı yok ve sonuç kötüyse kararı veren tek başına sorumlu tutuluyor.",
+      "kok_neden_kelimeler": [
+        "ceza",
+        "tutanak",
+        "yetki",
+        "sorumlu",
+        "prim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bilgi yöneticide: öncelik listesi ve raporlara erişim yok",
+      "gizli_bilgiler": [
+        {
+          "id": "oncelik-listesi",
+          "onem": "kritik",
+          "bilgi": "Rampa sırasını belirleyen müşteri öncelik listesi yalnızca yöneticinin e-postasına geliyor; Ozan bu listeyi görmüyor.",
+          "acilma_kosulu": "Hangi kararları kendisinin verebileceğini nereden bildiği ya da hangi bilgiye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi karar",
+            "nereden biliyor",
+            "liste",
+            "bilgi"
+          ]
+        },
+        {
+          "id": "tahmin",
+          "onem": "kritik",
+          "bilgi": "Son aramada aklından geçen, hangi aracın öncelikli müşteriye ait olduğunu bilmemekti; tahmin etmek yerine sordu.",
+          "acilma_kosulu": "Son sorduğu kararda aklından neler geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "aklından",
+            "neler geçti",
+            "son"
+          ]
+        },
+        {
+          "id": "erisim",
+          "onem": "kritik",
+          "bilgi": "Ozan'ın sistemde araç varış ve sipariş raporlarına erişim yetkisi yok; yetki talebi iki ay önce açıldı, hâlâ bekliyor.",
+          "acilma_kosulu": "Kendi karar verebilmesi için neyin gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne gerekir",
+            "ihtiyac",
+            "erişim",
+            "yetki"
+          ]
+        },
+        {
+          "id": "dogru-cikti",
+          "onem": "destek",
+          "bilgi": "Kendi başına verdiği kararların çoğu doğru çıktı.",
+          "acilma_kosulu": "Daha önce kendi başına karar verdiğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "kendi başına",
+            "ne oldu"
+          ]
+        }
+      ],
+      "kok_neden": "Kararlar yöneticiye geliyor çünkü karar için gereken bilgi yöneticide: müşteri öncelik listesi yalnızca yöneticiye geliyor, Ozan'ın raporlara erişim yetkisi yok ve tahmin etmek yerine sormak zorunda kalıyor.",
+      "kok_neden_kelimeler": [
+        "bilgi",
+        "erişim",
+        "öncelik listesi",
+        "yetki",
+        "rapor"
+      ]
+    }
+  ]
+}

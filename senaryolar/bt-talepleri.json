@@ -1,0 +1,206 @@
+{
+  "id": "bt-talepleri",
+  "baslik": "BT talepleri neden birikiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Operasyonun BT'ye açtığı geliştirme taleplerinden 60'ı bekliyor; bazıları bir yılı geçti. Ekipler \"BT bizi dinlemiyor\" diyor. BT'de talepleri önceliklendiren iş analistiyle konuşuyorsun.",
+  "rolun": "Operasyon taleplerini toplayıp BT'ye ileten iş geliştirme yöneticisisin. Amacın BT'yi suçlamak değil, taleplerin neden ilerlemediğini anlamak.",
+  "karakter": {
+    "ad": "Tuba",
+    "rol": "BT iş analisti",
+    "tavir": "İşini savunuyor; \"BT yavaş\" imasına sertleşiyor. Sürecin nasıl işlediğini merak eden birine açık konuşuyor.",
+    "ilk_soz": "Liste bende de var. Ama her talep bize geldiği gibi kalmıyor, onu söyleyeyim."
+  },
+  "yaniltici_ipuclari": [
+    "BT'de kaynak hep az.",
+    "Herkes kendi talebini acil sanıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir talep size ulaştıktan sonra hangi adımlardan geçiyor?",
+    "Bekleyen talepler en çok nerede takılıyor?",
+    "Hangi talepler öne geçiyor, bu nasıl belirleniyor?",
+    "Size gelen talepler genelde nasıl yazılmış oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Talepler operasyonda bekliyor: eksik yazılıyor, sorular cevapsız",
+      "gizli_bilgiler": [
+        {
+          "id": "bilgi-bekleniyor",
+          "onem": "kritik",
+          "bilgi": "Bekleyen 60 talebin 35'i aslında BT'de değil; operasyondan cevap bekliyor ve sistemde \"bilgi bekleniyor\" durumunda.",
+          "acilma_kosulu": "Bekleyen taleplerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nerede takıl",
+            "en çok",
+            "bekleyen"
+          ]
+        },
+        {
+          "id": "tek-cumle",
+          "onem": "kritik",
+          "bilgi": "Talepler genelde tek cümle: \"rapor hızlansın\" gibi. İş kuralı, örnek ya da beklenen sonuç yazılmıyor.",
+          "acilma_kosulu": "Gelen taleplerin nasıl yazıldığı ya da neyin eksik olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl yazıl",
+            "gelen talep",
+            "eksik"
+          ]
+        },
+        {
+          "id": "analiz",
+          "onem": "kritik",
+          "bilgi": "Her talep önce analize giriyor; analist talep sahibine soru soruyor ve cevap gelmeden talep bir sonraki adıma geçemiyor.",
+          "acilma_kosulu": "Bir talebin geçtiği adımlar ya da süreç sorulursa",
+          "ipucu_kelimeler": [
+            "adım",
+            "ulaştıktan",
+            "süreç"
+          ]
+        },
+        {
+          "id": "oylama",
+          "onem": "destek",
+          "bilgi": "Öncelik, aylık toplantıda bölüm müdürlerinin oyuyla belirleniyor.",
+          "acilma_kosulu": "Taleplerin önceliğinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "öne geç",
+            "nasıl belirlen",
+            "öncelik"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler BT'de değil operasyonda bekliyor: talepler iş kuralı ve örnek olmadan yazılıyor, analizde sorulan sorulara cevap gelmediği için 'bilgi bekleniyor' durumunda kalıyor.",
+      "kok_neden_kelimeler": [
+        "eksik",
+        "cevap",
+        "bilgi bekleniyor",
+        "iş kuralı",
+        "yazıl"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Önceliklendirme: kriter yok, acil işler sırayı bozuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "oy",
+          "onem": "kritik",
+          "bilgi": "Öncelik aylık toplantıda bölüm müdürlerinin oyuyla belirleniyor; kazanç, risk ya da efor gibi ölçülebilir bir kriter yok.",
+          "acilma_kosulu": "Taleplerin önceliğinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "öne geç",
+            "nasıl belirlen",
+            "öncelik"
+          ]
+        },
+        {
+          "id": "acil",
+          "onem": "kritik",
+          "bilgi": "Her ay üst yönetimden \"acil\" diye gelen 3-4 talep sırayı bozuyor; planlanan işler bir sonraki aya kayıyor.",
+          "acilma_kosulu": "Bekleyen taleplerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nerede takıl",
+            "en çok",
+            "bekleyen"
+          ]
+        },
+        {
+          "id": "paketsiz",
+          "onem": "kritik",
+          "bilgi": "Operasyon talepleri küçük ama çok; tek tek oylanınca büyük projelerin gerisinde kalıyor, birleştirilip paket hâlinde sunulmuyor.",
+          "acilma_kosulu": "Bir talebin geçtiği adımlar ya da taleplerin nasıl sunulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "adım",
+            "ulaştıktan",
+            "süreç",
+            "paket"
+          ]
+        },
+        {
+          "id": "acik-yazilmis",
+          "onem": "destek",
+          "bilgi": "Taleplerin çoğu yeterince açık yazılmış.",
+          "acilma_kosulu": "Gelen taleplerin nasıl yazıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl yazıl",
+            "gelen talep"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler önceliklendirme yüzünden bekliyor: sıra ölçülebilir bir kriter olmadan oyla belirleniyor, üst yönetimden gelen acil işler planı bozuyor ve küçük operasyon talepleri paketlenmediği için hep geride kalıyor.",
+      "kok_neden_kelimeler": [
+        "öncelik",
+        "kriter",
+        "oy",
+        "acil",
+        "paket"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kapasite: WMS değişiklikleri dış tedarikçide, saatler bitti",
+      "gizli_bilgiler": [
+        {
+          "id": "wms",
+          "onem": "kritik",
+          "bilgi": "Bekleyen operasyon taleplerinin çoğu WMS'e dokunuyor; WMS'te değişikliği yalnızca dış tedarikçi yapabiliyor.",
+          "acilma_kosulu": "Bekleyen taleplerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nerede takıl",
+            "en çok",
+            "bekleyen"
+          ]
+        },
+        {
+          "id": "saat-bitti",
+          "onem": "kritik",
+          "bilgi": "Tedarikçiyle yıllık sözleşmede 200 saat geliştirme var ve bu saat Mart'ta bitti; yeni sözleşme yılbaşında.",
+          "acilma_kosulu": "Bir talebin geçtiği adımlar ya da dış tedarikçiyle süreç sorulursa",
+          "ipucu_kelimeler": [
+            "adım",
+            "ulaştıktan",
+            "süreç",
+            "sözleşme"
+          ]
+        },
+        {
+          "id": "sessiz",
+          "onem": "kritik",
+          "bilgi": "Saat bitince WMS talepleri sessizce bekletildi; talep sahiplerine kimse bilgi vermedi, durumları hâlâ \"sırada\" görünüyor.",
+          "acilma_kosulu": "Taleplerin önceliğinin ya da durumunun nasıl belirlendiği ve bildirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "öne geç",
+            "nasıl belirlen",
+            "bilgi ver",
+            "durum"
+          ]
+        },
+        {
+          "id": "rapor-hizli",
+          "onem": "destek",
+          "bilgi": "WMS'e dokunmayan raporlama talepleri birkaç haftada çıkıyor.",
+          "acilma_kosulu": "Gelen taleplerin türü ya da nasıl yazıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl yazıl",
+            "gelen talep",
+            "rapor"
+          ]
+        }
+      ],
+      "kok_neden": "Talepler isteksizlikten değil kapasiteden bekliyor: operasyon taleplerinin çoğu WMS'e dokunuyor, WMS değişikliğini yalnızca dış tedarikçi yapabiliyor, sözleşmedeki saatler bitti ve bu talep sahiplerine söylenmedi.",
+      "kok_neden_kelimeler": [
+        "wms",
+        "tedarikçi",
+        "sözleşme",
+        "saat",
+        "kapasite"
+      ]
+    }
+  ]
+}

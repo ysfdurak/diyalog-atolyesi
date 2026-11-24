@@ -1,0 +1,208 @@
+{
+  "id": "tekrar-eden-cagrilar",
+  "baslik": "Aynı destek çağrıları neden geri geliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Depo destek hattına gelen çağrıların yarısı geçen ay da gelen sorunlarla aynı. \"Terminal donuyor\", \"etiket basılmıyor\" gibi çağrılar her hafta yeniden açılıyor. Destek hattının en deneyimli teknisyeniyle konuşuyorsun.",
+  "rolun": "Operasyon süreçlerinden sorumlu yöneticisin. Amacın çağrı sayısını tartışmak değil, aynı sorunların neden geri geldiğini anlamak.",
+  "karakter": {
+    "ad": "Nihat",
+    "rol": "Kıdemli destek teknisyeni",
+    "tavir": "Yorgun ve biraz alaycı; \"çözüyoruz ama yine geliyor\" diyor. Ekibini suçlayan soruya kapanır, işin nasıl yürüdüğünü soran birine anlatır.",
+    "ilk_soz": "Çağrıları kapatıyoruz, rakamlara bakın. Ama ertesi hafta aynısı geliyor, orası doğru."
+  },
+  "yaniltici_ipuclari": [
+    "Kullanıcılar cihazları özensiz kullanıyor.",
+    "Ekipmanlar artık eskidi."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir çağrı geldiğinde kapanana kadar ne oluyor?",
+    "Tekrar eden çağrıların ortak noktası ne?",
+    "Bir sorunun nasıl çözüldüğü nereye yazılıyor?",
+    "Bu çağrılar en çok hangi saatlerde ve kimden geliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Geçici çözüm ödüllendiriliyor: 30 dakikada kapatma hedefi",
+      "gizli_bilgiler": [
+        {
+          "id": "yeniden-baslat",
+          "onem": "kritik",
+          "bilgi": "Çağrıların çoğu cihazı yeniden başlatarak 30 dakika içinde kapatılıyor; kalıcı çözüm aranmıyor.",
+          "acilma_kosulu": "Bir çağrının kapanana kadar nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "kapanana",
+            "ne oluyor",
+            "çağrı geldiğinde"
+          ]
+        },
+        {
+          "id": "tekrar-yeni",
+          "onem": "kritik",
+          "bilgi": "Aynı cihazdan gelen tekrar çağrısı yeni bir çağrı olarak açılıyor; sistem ikisini ilişkilendirmiyor.",
+          "acilma_kosulu": "Tekrar eden çağrıların ortak noktası ya da nasıl kaydedildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak nokta",
+            "tekrar eden",
+            "aynı"
+          ]
+        },
+        {
+          "id": "hedef",
+          "onem": "kritik",
+          "bilgi": "Ekibin hedefi çağrıyı 30 dakikada kapatmak; kök neden aramak bu süreyi aştığı için performansı düşürüyor.",
+          "acilma_kosulu": "Çözümlerin nereye yazıldığı ya da ekibin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "nereye yazıl",
+            "hedef",
+            "ölç",
+            "performans"
+          ]
+        },
+        {
+          "id": "vardiya-basi",
+          "onem": "destek",
+          "bilgi": "Çağrılar en çok vardiya başlangıcında geliyor.",
+          "acilma_kosulu": "Çağrıların hangi saatlerde ve kimden geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi saat",
+            "kimden",
+            "saat"
+          ]
+        }
+      ],
+      "kok_neden": "Aynı sorunlar geri geliyor çünkü çağrılar geçici çözümle kapatılıyor: ekip 30 dakikada kapatma hedefiyle ölçülüyor, kök neden aranmıyor ve tekrar eden çağrı yeni çağrı sayıldığı için tekrar görünmüyor.",
+      "kok_neden_kelimeler": [
+        "geçici",
+        "hedef",
+        "kök neden",
+        "tekrar",
+        "30 dakika"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bilgi tek kişide: çözümü yalnızca Nihat biliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "yazilmiyor",
+          "onem": "kritik",
+          "bilgi": "Etiket yazıcısı ve terminal sorunlarının kalıcı çözümünü yalnızca Nihat biliyor; çözümler hiçbir yere yazılmıyor.",
+          "acilma_kosulu": "Çözümlerin nereye yazıldığı ya da nasıl paylaşıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "nereye yazıl",
+            "nasıl çözül",
+            "kayıt"
+          ]
+        },
+        {
+          "id": "gece",
+          "onem": "kritik",
+          "bilgi": "Tekrar eden çağrıların çoğu Nihat'ın çalışmadığı gece vardiyasında açılıyor; diğer teknisyenler sorunu geçici olarak atlatıyor.",
+          "acilma_kosulu": "Çağrıların hangi saatlerde ve kimden geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi saat",
+            "kimden",
+            "gece"
+          ]
+        },
+        {
+          "id": "diger",
+          "onem": "kritik",
+          "bilgi": "Çağrıların yarısında kategori olarak \"diğer\" seçiliyor; bu yüzden hangi sorunun tekrar ettiği listelerde görünmüyor.",
+          "acilma_kosulu": "Tekrar eden çağrıların ortak noktası ya da kategorileri sorulursa",
+          "ipucu_kelimeler": [
+            "ortak nokta",
+            "tekrar eden",
+            "kategori"
+          ]
+        },
+        {
+          "id": "istege-bagli",
+          "onem": "destek",
+          "bilgi": "Çağrı formunda çözüm yazmak isteğe bağlı bir alan.",
+          "acilma_kosulu": "Bir çağrının kapanana kadar nasıl ilerlediği ya da çağrı formu sorulursa",
+          "ipucu_kelimeler": [
+            "kapanana",
+            "ne oluyor",
+            "form"
+          ]
+        }
+      ],
+      "kok_neden": "Çözüm bilgisi tek kişide: kalıcı çözümü yalnızca Nihat biliyor ve hiçbir yere yazılmıyor; o yokken diğerleri geçici çözüm uyguluyor ve çağrılar 'diğer' kategorisine girdiği için tekrar görünmüyor.",
+      "kok_neden_kelimeler": [
+        "tek kişi",
+        "yazılmıyor",
+        "bilgi",
+        "nihat",
+        "kategori"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kaynak ortamda: ağ çekmeyen koridorlar ve ucuz etiket rulosu",
+      "gizli_bilgiler": [
+        {
+          "id": "wifi",
+          "onem": "kritik",
+          "bilgi": "Terminal donma çağrılarının çoğu, yeni kurulan yüksek rafların arkasındaki iki koridordan geliyor; orada kablosuz ağ çekmiyor.",
+          "acilma_kosulu": "Tekrar eden çağrıların ortak noktası ya da nereden geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak nokta",
+            "tekrar eden",
+            "nereden",
+            "hangi bölge"
+          ]
+        },
+        {
+          "id": "yetki-yok",
+          "onem": "kritik",
+          "bilgi": "Destek ekibinin ağ altyapısına ya da satın almaya müdahale yetkisi yok; sorunu yalnızca cihaz düzeyinde çözebiliyor ve kök nedeni ilgili bölüme iletmenin bir yolu yok.",
+          "acilma_kosulu": "Bir çağrının kapanana kadar nasıl ilerlediği ya da çözümlerin nereye iletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapanana",
+            "ne oluyor",
+            "nereye yazıl",
+            "ilet"
+          ]
+        },
+        {
+          "id": "rulo",
+          "onem": "kritik",
+          "bilgi": "Etiket basılmama çağrıları, satın almanın üç ay önce daha ucuz bir etiket rulosuna geçmesiyle başladı; rulo yazıcıda sıkışıyor.",
+          "acilma_kosulu": "Çağrıların kimden, ne zamandan beri geldiği ya da etiket sorunları sorulursa",
+          "ipucu_kelimeler": [
+            "kimden",
+            "ne zaman",
+            "rulo",
+            "etiket"
+          ]
+        },
+        {
+          "id": "cihaz-saglam",
+          "onem": "destek",
+          "bilgi": "Cihazlar aslında sağlam; atölyede test edildiğinde sorun çıkmıyor.",
+          "acilma_kosulu": "Cihazların durumu ya da testler sorulursa",
+          "ipucu_kelimeler": [
+            "cihaz",
+            "eski",
+            "test"
+          ]
+        }
+      ],
+      "kok_neden": "Sorunun kaynağı cihazlar değil ortam: yeni rafların arkasında kablosuz ağ çekmiyor, ucuz etiket rulosu yazıcıda sıkışıyor ve destek ekibinin bu kök nedenleri ilgili bölüme iletecek bir yolu yok.",
+      "kok_neden_kelimeler": [
+        "kablosuz",
+        "ağ",
+        "rulo",
+        "kök neden",
+        "satın alma"
+      ]
+    }
+  ]
+}
