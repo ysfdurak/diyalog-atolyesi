@@ -73,25 +73,52 @@ const zorlukGoster = (z) => el('span', { class: 'zorluk', role: 'img', 'aria-lab
 const hataKutusu = (mesaj) => el('p', { class: 'kutu hata', role: 'alert' }, mesaj);
 
 // --- Ana sayfa ---------------------------------------------------------------------
-// --- Alan filtresi: 30 kart telefonda uzun bir liste; alan çipiyle süzülür. Seçim yalnız bu ekranda tutulur. ---
-function alanFiltresi(senaryolar) {
-  const sayilar = {};
-  for (const s of senaryolar) sayilar[s.alan] = (sayilar[s.alan] || 0) + 1;
-  const alanlar = Object.keys(sayilar).sort((a, b) => a.localeCompare(b, 'tr'));
-  if (alanlar.length < 2) return null;
-  const dugmeler = [];
-  const sec = (alan) => {
-    for (const d of dugmeler) d.setAttribute('aria-pressed', String(d.dataset.alan === alan));
-    for (const k of document.querySelectorAll('.senaryo-kartlari .kart')) k.hidden = alan !== '' && k.dataset.alan !== alan;
+// --- Filtreler: sektör, alan ve oynama durumu. Seçimler bu ekranda tutulur; birlikte uygulanır. ---
+const DURUMLAR = [['', 'Hepsi'], ['yeni', 'Hiç oynamadıklarım'], ['devam', 'Yeni kök nedeni kalanlar'], ['bitti', 'Bitirdiklerim']];
+
+function filtreler(senaryolar, durumu) {
+  const secim = { sektor: '', alan: '', durum: '' };
+  const satirlar = [];
+  const uygula = () => {
+    for (const k of document.querySelectorAll('.senaryo-kartlari .kart')) {
+      k.hidden = (secim.sektor && k.dataset.sektor !== secim.sektor)
+        || (secim.alan && k.dataset.alan !== secim.alan)
+        || (secim.durum && k.dataset.durum !== secim.durum);
+    }
+    const gorunen = document.querySelectorAll('.senaryo-kartlari .kart:not([hidden])').length;
+    const bos = document.getElementById('filtre-bos');
+    if (bos) bos.hidden = gorunen > 0;
   };
-  const dugme = (alan, metin) => {
-    const d = el('button', { type: 'button', class: 'cip', 'aria-pressed': String(alan === ''), onclick: () => sec(alan) }, metin);
-    d.dataset.alan = alan;
-    dugmeler.push(d);
-    return d;
+  const satir = (anahtar, etiket, secenekler) => {
+    const dugmeler = secenekler.map(([deger, metin]) => {
+      const d = el('button', { type: 'button', class: 'cip', 'aria-pressed': String(deger === '') }, metin);
+      d.onclick = () => {
+        secim[anahtar] = deger;
+        for (const x of dugmeler) x.setAttribute('aria-pressed', String(x === d));
+        uygula();
+      };
+      return d;
+    });
+    satirlar.push(el('div', { class: 'cipler', role: 'group', 'aria-label': etiket }, ...dugmeler));
   };
-  return el('div', { class: 'cipler', role: 'group', 'aria-label': 'Alana göre süz' },
-    dugme('', `Tümü (${senaryolar.length})`), ...alanlar.map((a) => dugme(a, `${a} (${sayilar[a]})`)));
+  const say = (alan) => {
+    const n = {};
+    for (const s of senaryolar) n[s[alan]] = (n[s[alan]] || 0) + 1;
+    return Object.keys(n).sort((a, b) => a.localeCompare(b, 'tr')).map((k) => [k, `${k} (${n[k]})`]);
+  };
+  const sektorler = say('sektor');
+  if (sektorler.length > 1) satir('sektor', 'Sektöre göre süz', [['', `Bütün sektörler (${senaryolar.length})`], ...sektorler]);
+  const alanlar = say('alan');
+  if (alanlar.length > 1) satir('alan', 'Alana göre süz', [['', `Bütün alanlar (${senaryolar.length})`], ...alanlar]);
+  // Durum satırı yalnızca bu tarayıcıda en az bir oturum oynandıysa görünür; oynanmadıysa hepsi zaten "yeni".
+  const durumSayisi = {};
+  for (const s of senaryolar) durumSayisi[durumu(s)] = (durumSayisi[durumu(s)] || 0) + 1;
+  if (durumSayisi.devam || durumSayisi.bitti) {
+    satir('durum', 'Oynama durumuna göre süz', DURUMLAR.map(([d, m]) => [d, d ? `${m} (${durumSayisi[d] || 0})` : m]));
+  }
+  if (!satirlar.length) return null;
+  return el('div', { class: 'filtreler' }, ...satirlar,
+    el('p', { id: 'filtre-bos', class: 'kucuk soluk', hidden: true }, 'Bu seçimlere uyan senaryo yok.'));
 }
 
 async function anaSayfa() {
@@ -114,11 +141,16 @@ async function anaSayfa() {
       ? `Bugün ${s.gunlukHak} oturum hakkından ${s.kalanOturum} tanesi duruyor.`
       : `Bugünkü ${s.gunlukHak} oturum hakkını kullandın. Yarın devam edebilirsin.`;
 
+  // yeni: hiç oynanmadı · devam: oynanmamış kök nedeni var · bitti: bütün kök nedenler oynandı
+  const oynamaDurumu = (sn) => {
+    const o = oynananVaryantlar(sn.id).filter((v) => sn.varyantlar.includes(v)).length;
+    return o === 0 ? 'yeni' : o < sn.varyantlar.length ? 'devam' : 'bitti';
+  };
   const kart = (sn) => {
     const enIyi = Math.max(0, ...gecmis.filter((g) => g.senaryoId === sn.id).map((g) => g.toplam));
     const n = sn.varyantlar.length;
     const oynanan = oynananVaryantlar(sn.id).filter((v) => sn.varyantlar.includes(v)).length;
-    return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : ''), 'data-alan': sn.alan },
+    return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : ''), 'data-alan': sn.alan, 'data-sektor': sn.sektor, 'data-durum': oynamaDurumu(sn) },
       el('div', { class: 'kart-ust' },
         sn.id === gunun.id && el('span', { class: 'etiket vurgu' }, 'Günün senaryosu'),
         el('span', { class: 'etiket' }, sn.alan),
@@ -144,7 +176,7 @@ async function anaSayfa() {
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
       el('h2', { id: 'b-senaryolar' }, 'Senaryolar'),
       s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, 'Bazı senaryoların birden fazla kök nedeni var. Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.'),
-      alanFiltresi(s.senaryolar),
+      filtreler(s.senaryolar, oynamaDurumu),
       el('div', { class: 'kartlar senaryo-kartlari' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-nasil' },
