@@ -42,6 +42,7 @@ Gerçek modelle çalıştırmak için `.env.example` dosyasını `.env` olarak k
 
 ## Belgeler
 
+- [Proje dokümanı](docs/PROJE.md): kararlar, mimari, kod turu, testler, mülakat ve alıştırma (yaşayan rehber)
 - [Nasıl çalışır](docs/NASIL_CALISIR.md): mimari, puanlama, maliyet, gizlilik ve "sorulursa ne derim" notları
 - [Sunucu kurulumu](docs/SUNUCU_KURULUMU.md): diyalog.ysfdurak.com adresinde yayın
 - [MCP](docs/MCP.md): Claude'a bağlama
