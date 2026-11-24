@@ -1,0 +1,200 @@
+{
+  "id": "son-dakika-siparisleri",
+  "baslik": "Son saatte gelen siparişler neden yetişmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Müşterilere saat 16:00'ya kadar verilen siparişin aynı gün çıkacağı söyleniyor. Bu siparişlerin %25'i ertesi güne kalıyor ve şikâyet geliyor. Akşam vardiyasının sevkiyat koordinatörüyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın ekibi hızlandırmak değil, son saat siparişlerinin neden kaçtığını anlamak.",
+  "karakter": {
+    "ad": "Tamer",
+    "rol": "Sevkiyat koordinatörü",
+    "tavir": "Telaşlı ama dürüst; \"son saat hep kaos\" diyor. Akışı merak eden birine anlatıyor.",
+    "ilk_soz": "16:00'dan sonrası hep kaos. Herkes koşuyor ama yetmiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler son dakikaya bırakıyor.",
+    "Akşam ekibi yavaş."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "16:00'da gelen bir sipariş araca binene kadar neler oluyor?",
+    "Son araç depodan ne zaman çıkıyor, bu saat nasıl belirlendi?",
+    "Son saatte gelen siparişlerin ortak özelliği ne?",
+    "Sipariş akışı gün içinde nasıl dağılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Söz ile araç saati uyuşmuyor: son kargo aracı 17:00",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kargo firmasının son aracı 17:00'de çıkıyor; saat kargo firmasıyla iki yıl önce, son sipariş saati 15:00'ken belirlendi.",
+          "acilma_kosulu": "Son aracın çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "son araç",
+            "17:00",
+            "kargo firması"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sipariş sisteme düşünce toplamaya girmesi 20 dakika sürüyor; toplama, paketleme ve yükleme bir saati aşıyor.",
+          "acilma_kosulu": "Son saatte gelen siparişin akışı sorulursa",
+          "ipucu_kelimeler": [
+            "araca binene",
+            "20 dakika",
+            "toplama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satış iki yıl önce son sipariş saatini 15:00'ten 16:00'ya çekti; depo ve kargo süreleri buna göre değişmedi.",
+          "acilma_kosulu": "Siparişlerin gün içindeki dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "gün içinde nasıl",
+            "15:00",
+            "satış"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Son saat siparişleri genelde tek ürünlü.",
+          "acilma_kosulu": "Son saat siparişlerinin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "tek ürün"
+          ]
+        }
+      ],
+      "kok_neden": "Söz ile kapasite uyuşmuyor: satış son sipariş saatini 16:00'ya çekti ama kargonun son aracı hâlâ 17:00'de, siparişin toplanıp yüklenmesi bir saati aşıyor ve depo ile kargo süreleri bu söze göre değişmedi.",
+      "kok_neden_kelimeler": [
+        "son sipariş saati",
+        "kargo",
+        "17:00",
+        "satış",
+        "söz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Dalga planı: siparişler saatte bir toplu bırakılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Siparişler toplamaya saat başı dalgalar hâlinde bırakılıyor; 16:00'da gelen sipariş 17:00 dalgasına kalıyor.",
+          "acilma_kosulu": "Son saatte gelen siparişin akışı sorulursa",
+          "ipucu_kelimeler": [
+            "araca binene",
+            "dalga",
+            "saat başı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gün içinde siparişlerin %40'ı son iki saatte geliyor; dalga planı gün boyu eşit akışa göre yapılmış.",
+          "acilma_kosulu": "Siparişlerin gün içindeki dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "gün içinde nasıl",
+            "son iki saat",
+            "eşit"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Son araç 17:30'da çıkıyor; ama 17:00 dalgası bu araca yetişmiyor.",
+          "acilma_kosulu": "Son aracın çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "son araç",
+            "17:30"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Son saat siparişleri farklı ürün gruplarından.",
+          "acilma_kosulu": "Son saat siparişlerinin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "ürün grubu"
+          ]
+        }
+      ],
+      "kok_neden": "Siparişler dalga planına takılıyor: toplama saat başı dalgalarla bırakılıyor, 16:00'da gelen sipariş 17:00 dalgasına kalıp son araca yetişmiyor; siparişlerin yarıya yakını son iki saatte gelirken plan eşit akışa göre yapılmış.",
+      "kok_neden_kelimeler": [
+        "dalga",
+        "saat başı",
+        "eşit",
+        "son iki saat",
+        "plan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ödeme onayı: siparişler sistemde bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kapıda ödemesiz siparişler önce finans onayından geçiyor; 16:00'dan sonra gelen siparişlerin onayı ertesi sabaha kalıyor.",
+          "acilma_kosulu": "Son saatte gelen siparişin akışı sorulursa",
+          "ipucu_kelimeler": [
+            "araca binene",
+            "finans onay",
+            "ertesi sabah"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son saatte kaçan siparişlerin çoğu kurumsal müşterilerin vadeli siparişleri; bunlar kredi limiti kontrolü bekliyor.",
+          "acilma_kosulu": "Son saat siparişlerinin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "kredi limiti",
+            "vadeli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Son araç 18:00'de çıkıyor; sorun depoda değil, sipariş depoya hiç ulaşmıyor.",
+          "acilma_kosulu": "Son aracın çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "son araç",
+            "18:00",
+            "ulaşmıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler gün boyu dengeli geliyor.",
+          "acilma_kosulu": "Siparişlerin gün içindeki dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "gün içinde nasıl",
+            "dengeli"
+          ]
+        }
+      ],
+      "kok_neden": "Siparişler depoya hiç ulaşmıyor: vadeli kurumsal siparişler finansın kredi limiti onayını bekliyor, 16:00'dan sonraki onaylar ertesi sabaha kalıyor; depo ve araç saati aslında yetişiyor.",
+      "kok_neden_kelimeler": [
+        "finans",
+        "onay",
+        "kredi limiti",
+        "ulaşmıyor",
+        "vadeli"
+      ]
+    }
+  ]
+}

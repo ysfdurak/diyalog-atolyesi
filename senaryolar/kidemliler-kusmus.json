@@ -1,0 +1,200 @@
+{
+  "id": "kidemliler-kusmus",
+  "baslik": "İki kıdemli çalışan neden birbiriyle konuşmuyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Ekibin en deneyimli iki çalışanı Rıdvan ve Ayten aylardır birbirleriyle konuşmuyor. Ekip ikiye bölündü, iş devirlerinde bilgi kayboluyor. Ayten'le birebir görüşüyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın kimin haklı olduğunu bulmak değil, kopukluğun nereden doğduğunu anlamak.",
+  "karakter": {
+    "ad": "Ayten",
+    "rol": "Kıdemli depo çalışanı",
+    "tavir": "Gururlu ve kırgın; \"ben bir şey yapmadım\" diyor. Taraf tutulmadığını hissedince anlatıyor.",
+    "ilk_soz": "Benim kimseyle sorunum yok. Rıdvan'a sorarsanız o da aynı şeyi söyler herhalde."
+  },
+  "yaniltici_ipuclari": [
+    "Kişisel bir mesele bu.",
+    "İkisinin de huyu zor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Aranızdaki mesafe ne zaman ve nasıl başladı?",
+    "İş devrinde ikiniz arasında neler kayboluyor?",
+    "Görev ve sorumluluklar ikiniz arasında nasıl paylaştırılmış?",
+    "Bu durum düzelsin diye neler olması gerekir?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Rol belirsizliği: ikisine de aynı sorumluluk",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekip lideri ayrıldıktan sonra yeni lider atanmadı; ikisine de ayrı ayrı \"ekibe sen göz kulak ol\" denildi.",
+          "acilma_kosulu": "Görevlerin nasıl paylaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "paylaştırılmış",
+            "göz kulak",
+            "lider atanmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Mesafe, ikisinin aynı gün ekibe farklı talimat vermesiyle başladı; ekip kime uyacağını bilemedi.",
+          "acilma_kosulu": "Mesafenin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "mesafe ne zaman",
+            "farklı talimat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kimin neye karar vereceği netleşirse ve bu ekibe açıkça söylenirse sorun kalmaz.",
+          "acilma_kosulu": "Düzelme için ne gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "düzelsin",
+            "netleş",
+            "açıkça söylen"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devirde bazı arızalı ekipman bilgileri iletilmiyor.",
+          "acilma_kosulu": "Iş devrinde ne kaybolduğu sorulursa",
+          "ipucu_kelimeler": [
+            "iş devrinde",
+            "arızalı ekipman"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk kişisel değil yapısal: ekip lideri ayrılınca yerine kimse atanmadı, ikisine de ayrı ayrı 'ekibe göz kulak ol' denildi ve aynı gün farklı talimat verince çatıştılar; kimin neye karar vereceği netleşmedi.",
+      "kok_neden_kelimeler": [
+        "rol",
+        "lider",
+        "talimat",
+        "netleş",
+        "belirsiz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Haksız iş dağılımı: biri hep zor işi alıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ağır ve soğuk oda işleri hep Ayten'in ekibine, kolay işler Rıdvan'ın ekibine düşüyor; dağılımı Rıdvan'ın yakın olduğu amir yapıyor.",
+          "acilma_kosulu": "Görevlerin nasıl paylaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "paylaştırılmış",
+            "ağır",
+            "soğuk oda"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Mesafe, Rıdvan'ın ekibinin aylık ödül aldığı ve Ayten'in ekibinin \"yavaş\" diye anıldığı toplantıdan sonra başladı.",
+          "acilma_kosulu": "Mesafenin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "mesafe ne zaman",
+            "ödül",
+            "yavaş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İş dağılımı dönüşümlü olur ve iki ekip aynı ölçüyle değerlendirilirse aradaki soğukluk geçer.",
+          "acilma_kosulu": "Düzelme için ne gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "düzelsin",
+            "dönüşümlü",
+            "aynı ölçü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devirde notlar yazılı bırakılıyor ama okunmuyor.",
+          "acilma_kosulu": "Iş devrinde ne kaybolduğu sorulursa",
+          "ipucu_kelimeler": [
+            "iş devrinde",
+            "okunmuyor"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk adaletsiz dağılımdan: ağır işler hep Ayten'in ekibine düşüyor, ödül kolay işi alan Rıdvan'ın ekibine gitti ve iki ekip aynı ölçüyle değerlendirilmiyor; dönüşümlü dağılım soğukluğu giderir.",
+      "kok_neden_kelimeler": [
+        "adalet",
+        "ağır iş",
+        "ödül",
+        "dönüşümlü",
+        "dağılım"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eski bir olay konuşulmadı: hata birine yıkıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mesafe, altı ay önce büyük bir yanlış sevkiyatın Ayten'e yazılmasıyla başladı; Ayten hatanın Rıdvan'ın vardiyasında yapıldığını düşünüyor.",
+          "acilma_kosulu": "Mesafenin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "mesafe ne zaman",
+            "yanlış sevkiyat",
+            "yazılma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Olay hiçbir zaman ikisiyle birlikte konuşulmadı; Ayten olayın açıkça incelenmesini ve kaydının düzeltilmesini istiyor.",
+          "acilma_kosulu": "Düzelme için ne gerektiği sorulursa",
+          "ipucu_kelimeler": [
+            "düzelsin",
+            "incelen",
+            "kaydı düzelt"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Devirde ikisi birbirine bilgi vermiyor; Ayten \"yine bana yazılır\" korkusuyla her şeyi kendisi kontrol ediyor.",
+          "acilma_kosulu": "Iş devrinde ne kaybolduğu sorulursa",
+          "ipucu_kelimeler": [
+            "iş devrinde",
+            "bana yazılır",
+            "kontrol"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Görev dağılımı yazılı ve açık.",
+          "acilma_kosulu": "Görevlerin nasıl paylaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "paylaştırılmış",
+            "yazılı ve açık"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk konuşulmamış bir olaydan: altı ay önceki büyük hata Ayten'e yazıldı, Ayten hatanın Rıdvan'ın vardiyasında olduğunu düşünüyor ve olay hiç birlikte incelenmediği için devirde ikisi birbirine bilgi vermiyor.",
+      "kok_neden_kelimeler": [
+        "olay",
+        "konuşulmadı",
+        "hata",
+        "incelen",
+        "devir"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "cross-dock-bekliyor",
+  "baslik": "Aktarma ürünleri neden depoda bekliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Operasyon",
+  "sure_dk": 8,
+  "acilis": "Mağazalara gün içinde aktarılması gereken (cross-dock) ürünler depoda ortalama iki gün bekliyor; mağazalar kampanya ürünlerini geç alıyor. Aktarma alanının sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın aktarma ekibini sıkıştırmak değil, ürünlerin neden beklediğini anlamak.",
+  "karakter": {
+    "ad": "Cengiz",
+    "rol": "Aktarma (cross-dock) alanı sorumlusu",
+    "tavir": "Deneyimli ve sabırlı; \"bize gelen bilgi eksik\" diyor. Sistemi soran birine ayrıntı veriyor.",
+    "ilk_soz": "Ürün geliyor ama nereye gideceği belli değil. Bilgi gelene kadar bekletmek zorundayız."
+  },
+  "yaniltici_ipuclari": [
+    "Aktarma ekibi yetersiz.",
+    "Tedarikçiler geç getiriyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir aktarma ürünü kapıdan girdiğinde nereye gideceğini nasıl öğreniyorsunuz?",
+    "Bekleyen ürünlerin çoğu neyi bekliyor ve nerede?",
+    "Aktarma ürünleri gelen araçlarda nasıl ayrılıyor?",
+    "Mağaza araçlarının çıkış saati nasıl belirleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Dağıtım bilgisi geç geliyor: mağaza adetleri sonradan",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hangi mağazaya kaç adet gideceği, ürün geldikten sonra satış planlamanın gönderdiği dağıtım listesiyle öğreniliyor.",
+          "acilma_kosulu": "Ürünün nereye gideceğinin nasıl öğrenildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nereye gideceğini",
+            "dağıtım listesi",
+            "satış planlama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen ürünlerin çoğu dağıtım listesini bekliyor; liste genelde ürün geldikten iki gün sonra geliyor.",
+          "acilma_kosulu": "Bekleyen ürünlerin neyi beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen ürünlerin",
+            "liste",
+            "iki gün sonra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mağaza araçları her gün aynı saatte çıkıyor; listesi gelmeyen ürün o araca yüklenemiyor.",
+          "acilma_kosulu": "Mağaza araçlarının çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "mağaza araçlarının",
+            "aynı saat",
+            "yüklenemiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Aktarma ürünleri araçta ayrı paletlerle geliyor.",
+          "acilma_kosulu": "Aktarma ürünlerinin araçta nasıl ayrıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "araçlarda nasıl",
+            "ayrı palet"
+          ]
+        }
+      ],
+      "kok_neden": "Ürünler bilgi beklediği için duruyor: hangi mağazaya kaç adet gideceği ürün geldikten iki gün sonra gelen dağıtım listesiyle öğreniliyor ve listesi gelmeyen ürün sabit saatli mağaza aracına yüklenemiyor.",
+      "kok_neden_kelimeler": [
+        "dağıtım listesi",
+        "bilgi",
+        "iki gün",
+        "satış planlama",
+        "mağaza aracı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Karışık geliyor: aktarma ürünleri stok ürünleriyle aynı palette",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tedarikçiler aktarma ürünlerini stok ürünleriyle aynı paletlerde, etiket ayrımı yapmadan gönderiyor.",
+          "acilma_kosulu": "Aktarma ürünlerinin araçta nasıl ayrıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "araçlarda nasıl",
+            "aynı palet",
+            "etiket ayrımı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen ürünlerin çoğu mal kabulde, karışık paletlerin açılıp ayrılmasını bekliyor; aktarma alanına hiç gelmemiş.",
+          "acilma_kosulu": "Bekleyen ürünlerin neyi beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen ürünlerin",
+            "mal kabul",
+            "açılmayı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Nereye gideceği belli; ama ürün mal kabulden çıkıp aktarma alanına gelene kadar stok ürünü gibi işlem görüyor.",
+          "acilma_kosulu": "Ürünün nereye gideceğinin nasıl öğrenildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nereye gideceğini",
+            "stok ürünü gibi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mağaza araçlarının saatleri esnek.",
+          "acilma_kosulu": "Mağaza araçlarının çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "mağaza araçlarının",
+            "esnek"
+          ]
+        }
+      ],
+      "kok_neden": "Ürünler mal kabulde kayboluyor: tedarikçiler aktarma ürünlerini stok ürünleriyle aynı paletlerde etiketsiz gönderiyor, karışık paletler mal kabulde açılmayı bekliyor ve ürün stok ürünü gibi işleniyor.",
+      "kok_neden_kelimeler": [
+        "karışık",
+        "aynı palet",
+        "etiket",
+        "mal kabul",
+        "tedarikçi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Araç doluluk kuralı: mağaza aracı dolmadan çıkmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mağaza araçları ancak en az %80 dolulukla çıkabiliyor; küçük mağazaların aracı birkaç gün bekleyip dolmayı bekliyor.",
+          "acilma_kosulu": "Mağaza araçlarının çıkış saati sorulursa",
+          "ipucu_kelimeler": [
+            "mağaza araçlarının",
+            "%80",
+            "doluluk"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen ürünlerin çoğu hazır, etiketli ve paletli; küçük mağazalara gidecek araçları bekliyor.",
+          "acilma_kosulu": "Bekleyen ürünlerin neyi beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen ürünlerin",
+            "küçük mağaza",
+            "hazır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Nereye gideceği ürün gelmeden belli; bilgi zamanında geliyor.",
+          "acilma_kosulu": "Ürünün nereye gideceğinin nasıl öğrenildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nereye gideceğini",
+            "zamanında geliyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünler araçlarda ayrı etiketli geliyor.",
+          "acilma_kosulu": "Aktarma ürünlerinin araçta nasıl ayrıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "araçlarda nasıl",
+            "ayrı etiket"
+          ]
+        }
+      ],
+      "kok_neden": "Ürünler araç doluluk kuralı yüzünden bekliyor: mağaza aracı %80 dolmadan çıkamıyor, küçük mağazaların ürünleri hazır olduğu hâlde aracın dolmasını günlerce bekliyor ve kampanya ürünleri için bir istisna yok.",
+      "kok_neden_kelimeler": [
+        "doluluk",
+        "%80",
+        "küçük mağaza",
+        "istisna",
+        "araç"
+      ]
+    }
+  ]
+}

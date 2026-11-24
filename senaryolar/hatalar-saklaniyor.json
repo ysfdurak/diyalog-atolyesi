@@ -1,0 +1,201 @@
+{
+  "id": "hatalar-saklaniyor",
+  "baslik": "Ekip hataları neden saklıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Bir mağazaya yanlış ürün gittiği, iki hafta sonra müşteri şikâyetiyle ortaya çıktı. Hatayı yapan toplayıcı fark etmiş ama kimseye söylememiş. Benzer olaylar son aylarda arttı. Ekibin vardiya amiriyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın hatayı yapanı cezalandırmak değil, hataların neden saklandığını anlamak.",
+  "karakter": {
+    "ad": "Hakkı",
+    "rol": "Vardiya amiri",
+    "tavir": "Sert ama adil olduğunu düşünüyor; \"hata yapan sorumluluğunu alır\" diyor. Soruların suçlamadığını görünce açılıyor.",
+    "ilk_soz": "Hata yapan sorumluluğunu alır. Saklamak ayrı bir kusur."
+  },
+  "yaniltici_ipuclari": [
+    "Bu kuşak sorumluluk almıyor.",
+    "Toplayıcılar dikkatsiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir hata bildirildiğinde sonra neler oluyor?",
+    "Hata yapan biri kime, nasıl söyleyebiliyor?",
+    "Son dönemde hata sayısı ekibin değerlendirmesine nasıl yansıyor?",
+    "Geçen ay bir hata zamanında söylendiğinde ne olmuştu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Bildirmek cezalandırılıyor: tutanak ve prim kesintisi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bildirilen her hata için tutanak tutuluyor; üç tutanak prim kesintisi demek.",
+          "acilma_kosulu": "Bir hata bildirilince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bildirildiğinde",
+            "tutanak",
+            "prim kesinti"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen ay bir toplayıcı hatasını hemen söyledi; tutanak yedi ve ekip toplantısında örnek olarak anlatıldı.",
+          "acilma_kosulu": "Zamanında söylenen bir hatada ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "zamanında söylendiğinde",
+            "örnek olarak",
+            "hemen söyledi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekip hata sayısıyla değerlendiriliyor; bildirilen hata ekibin sıralamasını düşürüyor.",
+          "acilma_kosulu": "Hataların değerlendirmeye nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmesine",
+            "sıralama",
+            "hata sayısı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hata amire sözlü olarak söylenebiliyor.",
+          "acilma_kosulu": "Hatanın nasıl bildirilebildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kime, nasıl",
+            "sözlü"
+          ]
+        }
+      ],
+      "kok_neden": "Hatalar saklanıyor çünkü bildirmek cezalandırılıyor: her bildirime tutanak tutuluyor ve prim kesiliyor, hatasını söyleyen kişi toplantıda örnek gösterildi ve ekip hata sayısıyla değerlendirildiği için bildirmek ekibe de zarar.",
+      "kok_neden_kelimeler": [
+        "ceza",
+        "tutanak",
+        "prim",
+        "bildir",
+        "hata sayısı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bildirmenin yolu yok: amir hep sahada değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hatayı bildirmek için amire yüz yüze söylemek gerekiyor; amir gün boyu ofiste ya da toplantıda, sahada bulunamıyor.",
+          "acilma_kosulu": "Hatanın nasıl bildirilebildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kime, nasıl",
+            "yüz yüze",
+            "ofiste"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bildirilen hata için bir form yok; amir sözlü olarak not alıyor ve çoğu zaman unutuluyor.",
+          "acilma_kosulu": "Bir hata bildirilince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bildirildiğinde",
+            "form yok",
+            "unutul"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen ay bir toplayıcı hatayı söylemek için amiri yarım saat aradı; o arada araç çıktı.",
+          "acilma_kosulu": "Zamanında söylenen bir hatada ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "zamanında söylendiğinde",
+            "yarım saat",
+            "araç çıktı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hata sayısı ekibin değerlendirmesinde küçük bir yer tutuyor.",
+          "acilma_kosulu": "Hataların değerlendirmeye nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmesine",
+            "küçük bir yer"
+          ]
+        }
+      ],
+      "kok_neden": "Hatalar söylenmiyor çünkü söylemenin yolu yok: bildirim yalnızca amire yüz yüze yapılabiliyor, amir sahada değil ve form ya da kayıt olmadığı için söylenen hatalar da unutuluyor; zaman geçince araç çıkmış oluyor.",
+      "kok_neden_kelimeler": [
+        "yol",
+        "yüz yüze",
+        "sahada değil",
+        "form",
+        "kayıt"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Söylemek bir şey değiştirmiyor: düzeltme yapılmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bildirilen hataların hiçbirinde sonrasında bir şey yapılmadı; yanlış yerleştirilmiş ürün hâlâ aynı rafta.",
+          "acilma_kosulu": "Bir hata bildirilince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bildirildiğinde",
+            "bir şey yapılmadı",
+            "aynı raf"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen ay bir hata zamanında söylendi ama sevkiyat yine de durdurulmadı; \"araç gidecek\" denildi.",
+          "acilma_kosulu": "Zamanında söylenen bir hatada ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "zamanında söylendiğinde",
+            "durdurulmadı",
+            "araç gidecek"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hata amire söylenebiliyor ama amirin sevkiyatı durdurma ya da düzeltme yetkisi yok.",
+          "acilma_kosulu": "Hatanın nasıl bildirilebildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kime, nasıl",
+            "yetkisi yok",
+            "durdurma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hatalar ekip değerlendirmesinde sayılmıyor.",
+          "acilma_kosulu": "Hataların değerlendirmeye nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmesine",
+            "sayılmıyor"
+          ]
+        }
+      ],
+      "kok_neden": "Hatalar saklanıyor çünkü söylemek bir şeyi değiştirmiyor: bildirilen hatalardan sonra düzeltme yapılmıyor, amirin sevkiyatı durdurma yetkisi yok ve zamanında söylenen hata bile 'araç gidecek' diye gönderildi.",
+      "kok_neden_kelimeler": [
+        "değiştirmiyor",
+        "düzeltme",
+        "yetki",
+        "durdur",
+        "anlamsız"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "paketleme-darbogaz",
+  "baslik": "Paketleme neden darboğaz oldu?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Toplama hedefleri tutuyor ama paketleme istasyonlarının önünde her gün yüzlerce sipariş birikiyor. Paketleme ekibine iki kişi eklendi, kuyruk azalmadı. Paketleme vardiya sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın paketlemeyi hızlandırmak değil, kuyruğun neden azalmadığını anlamak.",
+  "karakter": {
+    "ad": "Melek",
+    "rol": "Paketleme vardiya sorumlusu",
+    "tavir": "Yorgun ve net; \"masa sayısı belli\" diyor. İş akışını soran birine somut örnek veriyor.",
+    "ilk_soz": "Kişi eklediniz ama masa sayısı aynı. Ben kimi nereye koyayım?"
+  },
+  "yaniltici_ipuclari": [
+    "Paketleme ekibi yavaş.",
+    "Sipariş çok arttı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir sipariş paketleme masasına geldikten sonra neler oluyor?",
+    "Kuyruk günün hangi saatlerinde ve nasıl birikiyor?",
+    "İstasyonlarda çalışan kişiler en çok ne için bekliyor?",
+    "Toplama ile paketleme arasındaki iş nasıl dengeleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Fiziksel kapasite: masa ve yazıcı sayısı sabit",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Masa sayısı altı ve her masada bir etiket yazıcısı var; eklenen iki kişi yazıcı bekliyor.",
+          "acilma_kosulu": "Paketleme masasındaki akış sorulursa",
+          "ipucu_kelimeler": [
+            "masasına geldikten",
+            "masa",
+            "yazıcı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İstasyondakiler en çok etiket yazıcısını bekliyor; yazıcı bir etiketi 20 saniyede basıyor.",
+          "acilma_kosulu": "Istasyonlarda en çok neyin beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için bekliyor",
+            "etiket yazıcı",
+            "20 saniye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplama hedefleri artırıldı ama paketleme kapasitesine bakılmadı; iki bölümün kapasitesi ayrı hesaplanıyor.",
+          "acilma_kosulu": "Toplama ile paketlemenin nasıl dengelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "dengeleniyor",
+            "toplama hedef",
+            "ayrı hesap"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kuyruk öğleden sonra büyüyor.",
+          "acilma_kosulu": "Kuyruğun nasıl biriktiği sorulursa",
+          "ipucu_kelimeler": [
+            "kuyruk günün",
+            "öğleden sonra"
+          ]
+        }
+      ],
+      "kok_neden": "Darboğaz kişide değil istasyonda: altı masa ve altı yavaş yazıcı var, eklenen kişiler yazıcı bekliyor ve toplama hedefleri paketleme kapasitesine bakılmadan artırıldı.",
+      "kok_neden_kelimeler": [
+        "masa",
+        "yazıcı",
+        "istasyon",
+        "kapasite",
+        "toplama hedef"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Toplama dalgası: siparişler aynı anda yığılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kuyruk sabah 10:00 ve öğleden sonra 15:00 civarında birden büyüyor; toplama dalgaları bu saatlerde aynı anda bitiyor.",
+          "acilma_kosulu": "Kuyruğun nasıl biriktiği sorulursa",
+          "ipucu_kelimeler": [
+            "kuyruk günün",
+            "10:00",
+            "dalga"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplama ve paketleme ayrı planlanıyor; toplama dalgaları paketlemenin anlık kapasitesine göre bırakılmıyor.",
+          "acilma_kosulu": "Toplama ile paketlemenin nasıl dengelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "dengeleniyor",
+            "ayrı planlan",
+            "anlık kapasite"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İstasyonlar sabah ilk bir saat ve öğle arasından sonra boş bekliyor; iş gelince hep birden geliyor.",
+          "acilma_kosulu": "Istasyonlarda en çok neyin beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için bekliyor",
+            "boş bekliyor",
+            "hep birden"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Paketleme adımları standart ve kısa.",
+          "acilma_kosulu": "Paketleme masasındaki akış sorulursa",
+          "ipucu_kelimeler": [
+            "masasına geldikten",
+            "standart"
+          ]
+        }
+      ],
+      "kok_neden": "Darboğaz akıştan: toplama dalgaları aynı anda bitip paketlemeye yığılıyor, istasyonlar arada boş bekliyor ve iki bölüm ayrı planlandığı için dalgalar paketleme kapasitesine göre bırakılmıyor.",
+      "kok_neden_kelimeler": [
+        "dalga",
+        "akış",
+        "ayrı planlan",
+        "yığıl",
+        "boş bekl"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eksik toplanan sipariş: paketleme kontrol ve tamamlama yapıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Masaya gelen siparişlerin beşte birinde eksik kalem var; paketlemeci eksik ürünü almak için rafa gidiyor.",
+          "acilma_kosulu": "Paketleme masasındaki akış sorulursa",
+          "ipucu_kelimeler": [
+            "masasına geldikten",
+            "eksik kalem",
+            "rafa"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İstasyondakiler en çok eksik ürünün gelmesini bekliyor; masa o sırada dolu kalıyor.",
+          "acilma_kosulu": "Istasyonlarda en çok neyin beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için bekliyor",
+            "eksik ürün",
+            "dolu kal"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplama hızla ölçülüyor ve eksik toplanan sipariş toplamanın hatası olarak kaydedilmiyor.",
+          "acilma_kosulu": "Toplama ile paketlemenin nasıl dengelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "dengeleniyor",
+            "hızla ölçül",
+            "kaydedilmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kuyruk gün boyu yavaş yavaş büyüyor.",
+          "acilma_kosulu": "Kuyruğun nasıl biriktiği sorulursa",
+          "ipucu_kelimeler": [
+            "kuyruk günün",
+            "yavaş yavaş"
+          ]
+        }
+      ],
+      "kok_neden": "Darboğaz paketlemede görünüyor ama toplamada başlıyor: siparişlerin beşte biri eksik toplanıyor, paketlemeci eksiği rafa gidip tamamlıyor ve toplama hızla ölçüldüğü için eksik toplama toplamanın hatası sayılmıyor.",
+      "kok_neden_kelimeler": [
+        "eksik",
+        "toplama",
+        "hız",
+        "tamamla",
+        "kaydedilmiyor"
+      ]
+    }
+  ]
+}
