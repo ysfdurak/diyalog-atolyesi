@@ -1,0 +1,200 @@
+{
+  "id": "vsm-uygulanmadi",
+  "baslik": "Değer akışı haritasındaki iyileştirmeler neden uygulanmadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 8,
+  "acilis": "Altı ay önce sipariş-sevkiyat akışı için ayrıntılı bir değer akışı haritası (VSM) çıkarıldı; 22 iyileştirme fırsatı belirlendi. Bugüne kadar yalnızca ikisi uygulandı. Çalışmayı yürüten yalın uzmanıyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın çalışmayı eleştirmek değil, fırsatların neden uygulanmadığını anlamak.",
+  "karakter": {
+    "ad": "Leyla",
+    "rol": "Yalın uzmanı",
+    "tavir": "Bilgili ve hayal kırıklığına uğramış; \"harita çok iyiydi\" diyor. Sonrasını soran birine dürüst.",
+    "ilk_soz": "Harita gerçekten iyiydi, herkes beğendi. Ama sonrasında işler yürümedi."
+  },
+  "yaniltici_ipuclari": [
+    "Bölümler değişime direniyor.",
+    "Fırsatlar fazla iddialıydı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Harita çıkarıldıktan sonra fırsatlar nasıl önceliklendirildi?",
+    "Haritalama çalışmasına hangi bölümler katıldı?",
+    "Uygulanan iki fırsatı diğerlerinden ayıran ne?",
+    "Gelecek durum haritası için bir uygulama planı yapıldı mı, nasıl?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Önceliklendirme ve plan yok: 22 fırsat bir liste olarak kaldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "22 fırsat önceliklendirilmeden, kazancı ve zorluğu belirtilmeden bir liste olarak yönetime sunuldu.",
+          "acilma_kosulu": "Fırsatların önceliklendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "önceliklendirildi",
+            "liste",
+            "kazancı ve zorluğu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gelecek durum haritası çizildi ama sorumlu, tarih ve bütçe içeren bir uygulama planı yapılmadı.",
+          "acilma_kosulu": "Uygulama planının durumu sorulursa",
+          "ipucu_kelimeler": [
+            "uygulama planı",
+            "gelecek durum",
+            "sorumlu, tarih"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Uygulanan iki fırsat, yalın uzmanının kendi başına yapabildiği küçük değişiklikler.",
+          "acilma_kosulu": "Uygulananların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan iki",
+            "kendi başına",
+            "küçük değişiklik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışmaya depo, satış ve BT katıldı.",
+          "acilma_kosulu": "Çalışmaya katılan bölümler sorulursa",
+          "ipucu_kelimeler": [
+            "haritalama çalışmasına",
+            "depo, satış"
+          ]
+        }
+      ],
+      "kok_neden": "Fırsatlar uygulanmadı çünkü harita bir plana dönüşmedi: 22 fırsat önceliklendirilmeden liste olarak sunuldu, gelecek durum için sorumlu, tarih ve bütçe içeren bir uygulama planı yapılmadı ve yalnızca uzmanın tek başına yapabildiği küçük işler gerçekleşti.",
+      "kok_neden_kelimeler": [
+        "plan",
+        "öncelik",
+        "liste",
+        "sorumlu",
+        "gelecek durum"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Akış uçtan uca ama sahiplik bölümlerde: kimse akışın sahibi değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Haritalamaya yalnızca depo katıldı; fırsatların çoğu satış, finans ve BT'nin süreçlerinde.",
+          "acilma_kosulu": "Çalışmaya katılan bölümler sorulursa",
+          "ipucu_kelimeler": [
+            "haritalama çalışmasına",
+            "yalnızca depo",
+            "satış, finans"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Uygulanan iki fırsat yalnızca depoyu ilgilendiren fırsatlar.",
+          "acilma_kosulu": "Uygulananların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan iki",
+            "yalnızca depoyu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fırsatlar önceliklendirildi; ama en kazançlı olanlar başka bölümlerin işi ve o bölümler bu çalışmadan haberdar değil.",
+          "acilma_kosulu": "Fırsatların önceliklendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "önceliklendirildi",
+            "başka bölümlerin",
+            "haberdar değil"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Uygulama planı yapıldı ve tarihlendi.",
+          "acilma_kosulu": "Uygulama planının durumu sorulursa",
+          "ipucu_kelimeler": [
+            "uygulama planı",
+            "tarihlendi"
+          ]
+        }
+      ],
+      "kok_neden": "Fırsatlar uygulanmadı çünkü akışın sahibi yok: haritalamaya yalnızca depo katıldı, en kazançlı fırsatlar satış, finans ve BT'nin süreçlerinde ve o bölümler çalışmadan habersiz; yalnızca depoyu ilgilendiren iki fırsat uygulandı.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "yalnızca depo",
+        "bölüm",
+        "habersiz",
+        "akış"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Haritanın sponsoru gitti: destek kayboldu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Uygulama planı yapıldı ve operasyon direktörü sponsor oldu; direktör iki ay sonra ayrıldı ve yeni direktöre plan anlatılmadı.",
+          "acilma_kosulu": "Uygulama planının durumu sorulursa",
+          "ipucu_kelimeler": [
+            "uygulama planı",
+            "direktör ayrıldı",
+            "anlatılmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Uygulanan iki fırsat, eski direktörün ayrılmadan önce onayladığı ve bütçe ayırdığı fırsatlar.",
+          "acilma_kosulu": "Uygulananların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan iki",
+            "bütçe ayırdığı",
+            "onayladığı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fırsatlar önceliklendirildi; kalan fırsatlar için bütçe talepleri yeni direktörün onayında bekliyor.",
+          "acilma_kosulu": "Fırsatların önceliklendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "önceliklendirildi",
+            "bütçe talepleri",
+            "yeni direktör"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışmaya ilgili bütün bölümler katıldı.",
+          "acilma_kosulu": "Çalışmaya katılan bölümler sorulursa",
+          "ipucu_kelimeler": [
+            "haritalama çalışmasına",
+            "bütün bölümler"
+          ]
+        }
+      ],
+      "kok_neden": "Fırsatlar uygulanmadı çünkü sponsor değişti: plan yapılmıştı ve operasyon direktörü destekliyordu, ama direktör iki ay sonra ayrıldı, yeni direktöre plan anlatılmadı ve kalan fırsatların bütçeleri onay bekliyor.",
+      "kok_neden_kelimeler": [
+        "sponsor",
+        "direktör",
+        "anlatılmadı",
+        "bütçe",
+        "destek"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "hata-onleme-devre-disi",
+  "baslik": "Hata önleme düzeneği neden devre dışı bırakıldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Paketleme istasyonlarına, yanlış ürün koliye girince bandı durduran bir barkod kontrolü kuruldu. Üç ay sonra istasyonların yarısında düzeneğin kablosunun çıkarıldığı ve hataların yeniden arttığı görüldü. Paketleme vardiya amiriyle konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın kabloyu çıkaranı bulmak değil, düzeneğin neden devre dışı bırakıldığını anlamak.",
+  "karakter": {
+    "ad": "Sarp",
+    "rol": "Paketleme vardiya amiri",
+    "tavir": "Ekibini koruyan ve dürüst; \"o düzenek iş görmüyor\" diyor. Sahadaki deneyimi soran birine açık konuşuyor.",
+    "ilk_soz": "Kablo çıkarıldı, biliyorum. Ama o düzenekle o hızda çalışmak mümkün değildi."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar kontrolden kaçıyor.",
+    "Düzenek pahalı ve gereksiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Düzenek bandı en çok hangi durumlarda durduruyor?",
+    "Bant durduğunda tekrar çalıştırmak için neler gerekiyor?",
+    "Düzenek kurulurken paketleme ekibiyle nasıl çalışıldı?",
+    "Paketleme ekibinin hedefleri düzenekten sonra nasıl değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış alarm: okunamayan barkodlar bandı durduruyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bant çoğunlukla hatalı ürünle değil, buruşuk ya da ışığı yansıtan ambalajdaki barkodu okuyamadığı için duruyor.",
+          "acilma_kosulu": "Düzeneğin durdurduğu durumlar sorulursa",
+          "ipucu_kelimeler": [
+            "bandı en çok",
+            "buruşuk",
+            "yansıtan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bant durduğunda yeniden başlatmak için amir şifresi gerekiyor; amir başka yerdeyse istasyon dakikalarca bekliyor.",
+          "acilma_kosulu": "Bandı yeniden çalıştırmanın süreci sorulursa",
+          "ipucu_kelimeler": [
+            "tekrar çalıştırmak",
+            "amir şifresi",
+            "dakikalarca"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Düzenek bir haftalık denemeyle kuruldu; denemede yalnızca düz kutulu ürünler kullanıldı.",
+          "acilma_kosulu": "Kurulum sürecinde ekibin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kurulurken paketleme",
+            "bir haftalık deneme",
+            "düz kutu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedefler değişmedi.",
+          "acilma_kosulu": "Düzenek sonrası hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "hedefleri düzenekten",
+            "hedefler değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "Düzenek devre dışı bırakıldı çünkü çoğu zaman yanlış alarm veriyor: bandı hatalı üründen çok okunamayan barkodlar yüzünden durduruyor, yeniden başlatmak amir şifresi istiyor ve deneme yalnızca düz kutulu ürünlerle yapıldı.",
+      "kok_neden_kelimeler": [
+        "yanlış alarm",
+        "barkod",
+        "amir şifresi",
+        "deneme",
+        "okunamayan"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Hedef değişmedi: düzenek hızı düşürdü, hedef aynı kaldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Düzenekten sonra istasyon başına saatlik koli hedefi aynı kaldı; düzenek her koliye birkaç saniye ekledi.",
+          "acilma_kosulu": "Düzenek sonrası hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "hedefleri düzenekten",
+            "saatlik koli",
+            "birkaç saniye"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bant durunca hatalı ürünü bulup değiştirmek ve yeniden okutmak iki dakika sürüyor; bu süre istasyonun verimine yazılıyor.",
+          "acilma_kosulu": "Bandı yeniden çalıştırmanın süreci sorulursa",
+          "ipucu_kelimeler": [
+            "tekrar çalıştırmak",
+            "iki dakika",
+            "verimine yazıl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bant çoğunlukla gerçek hatalarda duruyor.",
+          "acilma_kosulu": "Düzeneğin durdurduğu durumlar sorulursa",
+          "ipucu_kelimeler": [
+            "bandı en çok",
+            "gerçek hata"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kurulumda paketleme ekibiyle birkaç toplantı yapıldı.",
+          "acilma_kosulu": "Kurulum sürecinde ekibin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kurulurken paketleme",
+            "birkaç toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Düzenek devre dışı bırakıldı çünkü hedef değişmedi: düzenek her koliye saniyeler ekledi ve her duruş iki dakika sürüyor, ama saatlik koli hedefi aynı kaldı ve duruş süresi istasyonun verimine yazılıyor.",
+      "kok_neden_kelimeler": [
+        "hedef",
+        "verim",
+        "duruş",
+        "aynı kaldı",
+        "saniye"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ekip dahil edilmedi: amaç anlatılmadı, duruşlar ceza gibi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Düzenek bir hafta sonu kuruldu; paketleme ekibine amacı anlatılmadı, pazartesi bantlar \"kendiliğinden\" durmaya başladı.",
+          "acilma_kosulu": "Kurulum sürecinde ekibin rolü sorulursa",
+          "ipucu_kelimeler": [
+            "kurulurken paketleme",
+            "hafta sonu",
+            "amacı anlatılmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bant gerçek hatalarda duruyor; ama her duruş ekranda kırmızı yanıyor ve istasyon adı amirin ekranına düşüyor.",
+          "acilma_kosulu": "Düzeneğin durdurduğu durumlar sorulursa",
+          "ipucu_kelimeler": [
+            "bandı en çok",
+            "kırmızı",
+            "istasyon adı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bandı yeniden çalıştırmak kolay; ama duruş sayısı haftalık toplantıda istasyon istasyon okunuyor.",
+          "acilma_kosulu": "Bandı yeniden çalıştırmanın süreci sorulursa",
+          "ipucu_kelimeler": [
+            "tekrar çalıştırmak",
+            "duruş sayısı",
+            "okunuyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedefler düzenek süresine göre düşürüldü.",
+          "acilma_kosulu": "Düzenek sonrası hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "hedefleri düzenekten",
+            "düşürüldü"
+          ]
+        }
+      ],
+      "kok_neden": "Düzenek devre dışı bırakıldı çünkü ekip onu bir ceza aracı olarak gördü: amacı anlatılmadan kuruldu, her duruş istasyon adıyla amirin ekranına düşüyor ve duruş sayıları toplantıda tek tek okunuyor; hatayı yakalamak övülmek yerine suçlanmak demek.",
+      "kok_neden_kelimeler": [
+        "ceza",
+        "anlatılmadan",
+        "duruş sayıları",
+        "amacı",
+        "suçlan"
+      ]
+    }
+  ]
+}

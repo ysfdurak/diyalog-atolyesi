@@ -14,7 +14,7 @@ Ayrıntı belgeleri: [Nasıl çalışır](NASIL_CALISIR.md) · [Senaryo yazma](S
 | **Kimin için** | Yöneticiliğe hazırlanan ya da ekip yöneten kişiler (portföy projesi, ticari amaç yok) |
 | **Canlı** | https://diyalog.ysfdurak.com (VPS, Docker, ortak Caddy) |
 | **Depo** | https://github.com/ysfdurak/diyalog-atolyesi (herkese açık, PolyForm Shield lisansı) |
-| **Durum** | Yayında. Soru modu: 107 senaryo, hepsi üç kök nedenli, 321 oturum (hedef bir yıl: ~122 senaryo, 365 oturum); ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
+| **Durum** | Yayında. Soru modu: 122 senaryo × 3 kök neden = 366 oturum (bir yıllık içerik), 8 alan; ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
 | **Yapay zekâ** | Anthropic API (Haiku 5.5): karakter cevapları ve değerlendirme |
 | **Maliyet** | Oturum başına yarım sentin altı (tahmin); günlük limitler ve kredi bildirimiyle sınırlı |
 
@@ -122,7 +122,7 @@ Ortak altyapı (VPS, Docker, ortak Caddy, Cloudflare) site deposunda anlatılır
 ## 8. Bilinen sınırlar ve sonraki adımlar
 
 - **Gerçek model ayarı yapılmadı.** Senaryolar ve varyantlar yalnız sahte modelle doğrulandı. Önce bu.
-- **İçerik hedefi bir yıl:** ~122 senaryo × 3 kök neden ≈ 365 oturum; partiler hâlinde ilerliyor. Konuların yarısı kullanıcının kendi işinde yaşadığı sorunlardan. 90 kök nedenin hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda.
+- **İçerik hedefi tamam:** 122 senaryo × 3 kök neden = 366 oturum. Hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda. 122 kart tek listede uzun; alan filtresi var, gerekirse "oynamadıklarım" filtresi eklenebilir. Konuların yarısı kullanıcının kendi işinde yaşadığı sorunlardan. 90 kök nedenin hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda.
 - **Uzman seti taslak** ve yeni senaryoları kapsamıyor; bir eğitmen ya da İK uzmanı onaylamalı.
 - Metin tabanlı; ses tonu ve beden dili yok. Hesap yok; gelişim başka cihaza taşınmaz.
 - Sunucu yeniden başlarsa yarım oturumlar kaybolur.
@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | İK ve işe alım (+7) ve Kalite ve iyileştirme (+8): 122 senaryo, 366 oturum; bir yıllık içerik hedefi tamamlandı. Tekrarlanan bir karakter adı düzeltildi. |
 | 2026-11-24 | Veri ve raporlama (+7) ve Tedarik ve satın alma (+8): 107 senaryo, 321 oturum. |
 | 2026-11-24 | İş geliştirme (+7) ve Proje yönetimi (+10): 92 senaryo, 276 oturum. Duman testi cevabı mesaj sayısıyla kontrol ediyor (kısa cevaplı günün senaryosunda yanlış alarm veriyordu). |
 | 2026-11-24 | Operasyon (+8) ve Ekip yönetimi (+7): 75 senaryo, 225 oturum. |

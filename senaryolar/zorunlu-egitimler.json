@@ -1,0 +1,199 @@
+{
+  "id": "zorunlu-egitimler",
+  "baslik": "Zorunlu eğitimlerin tamamlanma oranı neden düşük?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "İK ve işe alım",
+  "sure_dk": 6,
+  "acilis": "Depo çalışanlarının yıllık zorunlu eğitimlerini (iş güvenliği, yangın, forklift kuralları) tamamlama oranı %41. Denetimde bulgu çıktı. Eğitimleri planlayan eğitim uzmanıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın çalışanları zorlamak değil, eğitimlerin neden tamamlanmadığını anlamak.",
+  "karakter": {
+    "ad": "Mine",
+    "rol": "Eğitim uzmanı",
+    "tavir": "Sistemli ve bıkkın; \"herkese duyurdum\" diyor. Eğitimin nasıl verildiğini soran birine açık konuşuyor.",
+    "ilk_soz": "Eğitimlerin hepsi sistemde, herkese e-postayla duyurdum. Tıklayan çok az."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar eğitimi önemsemiyor.",
+    "Amirler çalışanlara izin vermiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Eğitimler nerede, ne zaman ve nasıl veriliyor?",
+    "Çalışanlar eğitimden nasıl haberdar oluyor?",
+    "Eğitimi tamamlayanlarla tamamlamayanlar arasında ne fark var?",
+    "Eğitim süresi çalışma saatinden mi düşülüyor, nasıl planlanıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Erişim: eğitimler bilgisayarda, depoda bilgisayar yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eğitimler çevrim içi; şirket bilgisayarından ya da şirket hesabıyla telefondan açılıyor.",
+          "acilma_kosulu": "Eğitimin verilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "eğitimler nerede",
+            "çevrim içi",
+            "şirket hesabı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tamamlayanların çoğu ofise yakın çalışan amirler; toplayıcıların şirket hesabı ya da bilgisayara erişimi yok.",
+          "acilma_kosulu": "Tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlayanlarla",
+            "ofise yakın",
+            "erişimi yok"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Duyuru şirket e-postasıyla yapılıyor; çalışanların çoğunun e-postası yok.",
+          "acilma_kosulu": "Duyuru şekli sorulursa",
+          "ipucu_kelimeler": [
+            "haberdar oluyor",
+            "e-postası yok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eğitim süresi mesai içinde sayılıyor.",
+          "acilma_kosulu": "Eğitim süresinin planlanması sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma saatinden",
+            "mesai içinde"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitimler tamamlanmıyor çünkü çalışanlar ulaşamıyor: eğitimler yalnızca şirket hesabıyla açılan çevrim içi kurslar, duyurular e-postayla geliyor ve toplayıcıların ne e-postası ne de bilgisayar erişimi var.",
+      "kok_neden_kelimeler": [
+        "erişim",
+        "e-posta",
+        "bilgisayar",
+        "çevrim içi",
+        "ulaşam"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Zaman ayrılmadı: eğitim mesai dışında beklendi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eğitim süresi çalışma saatine sayılmıyor ve vardiya planında yer almıyor; çalışanlardan molada ya da evde yapmaları bekleniyor.",
+          "acilma_kosulu": "Eğitim süresinin planlanması sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma saatinden",
+            "molada",
+            "evde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tamamlayanlar, amirinin vardiya içinde yarım saat ayırdığı ekipler.",
+          "acilma_kosulu": "Tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlayanlarla",
+            "yarım saat ayır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Eğitim modülleri toplam dört saat; tek oturumda bitirilmesi gerekiyor, yarıda bırakılınca baştan başlıyor.",
+          "acilma_kosulu": "Eğitimin verilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "eğitimler nerede",
+            "dört saat",
+            "baştan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışanlar eğitimden amirleri aracılığıyla haberdar oluyor.",
+          "acilma_kosulu": "Duyuru şekli sorulursa",
+          "ipucu_kelimeler": [
+            "haberdar oluyor",
+            "amirleri aracılığıyla"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitimler tamamlanmıyor çünkü zaman ayrılmadı: dört saatlik eğitimin vardiya içinde yeri yok, molada ya da evde bitirilmesi bekleniyor, yarıda kalınca baştan başlıyor ve yalnızca amiri zaman ayıran ekipler tamamlıyor.",
+      "kok_neden_kelimeler": [
+        "zaman",
+        "vardiya",
+        "mesai",
+        "baştan",
+        "ayrılmadı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Takip yok: kimse kimin eksik olduğunu bilmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Duyuru yılda bir kez yapılıyor; sonrasında hatırlatma yok.",
+          "acilma_kosulu": "Duyuru şekli sorulursa",
+          "ipucu_kelimeler": [
+            "haberdar oluyor",
+            "yılda bir",
+            "hatırlatma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tamamlayanlarla tamamlamayanlar arasında belirgin bir fark yok; amirler kendi ekiplerinden kimin eksik olduğunu görebilecekleri bir liste almıyor.",
+          "acilma_kosulu": "Tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tamamlayanlarla",
+            "liste almıyor",
+            "kimin eksik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Eğitimler vardiya içinde, kolayca açılabilen kısa modüller; ama tamamlanma yalnızca yıl sonunda denetim öncesi kontrol ediliyor.",
+          "acilma_kosulu": "Eğitimin verilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "eğitimler nerede",
+            "denetim öncesi",
+            "kısa modül"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eğitim süresi çalışma saatinden sayılıyor.",
+          "acilma_kosulu": "Eğitim süresinin planlanması sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma saatinden",
+            "saatinden sayıl"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitimler tamamlanmıyor çünkü takip edilmiyor: duyuru yılda bir yapılıyor, hatırlatma yok, amirler eksik olanların listesini görmüyor ve tamamlanma ancak denetim öncesinde kontrol ediliyor.",
+      "kok_neden_kelimeler": [
+        "takip",
+        "hatırlatma",
+        "liste",
+        "denetim",
+        "amir"
+      ]
+    }
+  ]
+}

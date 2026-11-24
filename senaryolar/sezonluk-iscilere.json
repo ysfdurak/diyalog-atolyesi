@@ -1,0 +1,201 @@
+{
+  "id": "sezonluk-iscilere",
+  "baslik": "Sezonluk çalışanlar neden her yıl geri gelmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Her yıl yoğun sezon için 60 sezonluk çalışan alınıyor. Geçen yılın çalışanlarından yalnızca beşi bu yıl geri döndü; her sezon sıfırdan işe alım ve eğitim yapılıyor. Sezonluk çalışanları koordine eden İK uzmanıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın daha çok ilan vermek değil, deneyimli sezonlukların neden geri gelmediğini anlamak.",
+  "karakter": {
+    "ad": "Bahar",
+    "rol": "İK uzmanı",
+    "tavir": "Yorgun ve pratik; \"sezonluk iş böyle\" diyor. Gerçekten merak eden birine sezon sonunu anlatıyor.",
+    "ilk_soz": "Sezonluk iş böyledir, herkes bir sezonluk gelir. Her yıl yeniden başlıyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "Sezonluk çalışanlar zaten geçici iş arıyor.",
+    "Bu işi kimse uzun yapmak istemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Sezon bittiğinde çalışanlarla vedalaşma nasıl oluyor?",
+    "Geçen yılın çalışanlarına bu yıl ne zaman ve nasıl ulaşıldı?",
+    "Geri dönenlerle dönmeyenler arasında ne fark var?",
+    "Sezonluk çalışan sezon boyunca nasıl bir iş yapıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kimse aramıyor: eski çalışanların listesi tutulmuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın çalışanlarına hiç ulaşılmadı; iletişim bilgileri ve performans notları ajansın sisteminde kaldı.",
+          "acilma_kosulu": "Eski çalışanlara ulaşılması sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın çalışanlarına",
+            "iletişim bilgi",
+            "ajansın sistemi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sezon son gün toplu çıkışla bitiyor; kimseye \"seneye de gel\" denmiyor, iyi çalışanlar ayrıca belirlenmiyor.",
+          "acilma_kosulu": "Sezon sonunda ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sezon bittiğinde",
+            "toplu çıkış",
+            "seneye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geri dönen beş kişi, amirlerinin kişisel telefonundan kendisinin aradığı kişiler.",
+          "acilma_kosulu": "Dönenlerle dönmeyenlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "geri dönenlerle",
+            "kişisel telefon",
+            "kendisinin aradığı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sezonluklar çoğunlukla paketleme ve taşıma işi yapıyor.",
+          "acilma_kosulu": "Sezonluk çalışanın işi sorulursa",
+          "ipucu_kelimeler": [
+            "sezon boyunca",
+            "paketleme ve taşıma"
+          ]
+        }
+      ],
+      "kok_neden": "Sezonluklar geri gelmiyor çünkü kimse onları geri çağırmıyor: iletişim bilgileri ajansta kalıyor, sezon sonunda iyi çalışanlar belirlenip davet edilmiyor ve geri dönenler yalnızca amirlerinin kişisel olarak aradıkları.",
+      "kok_neden_kelimeler": [
+        "çağır",
+        "iletişim",
+        "ajans",
+        "davet",
+        "liste"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Geri dönmenin avantajı yok: aynı ücret, aynı en ağır iş",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geri dönenle ilk kez gelen arasında hiçbir fark yok: aynı ücret, aynı başlangıç, aynı en ağır iş.",
+          "acilma_kosulu": "Dönenlerle dönmeyenlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "geri dönenlerle",
+            "aynı ücret",
+            "aynı başlangıç"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sezonluklar sezon boyunca en ağır işlerde, kalıcı kadronun istemediği vardiyalarda çalışıyor.",
+          "acilma_kosulu": "Sezonluk çalışanın işi sorulursa",
+          "ipucu_kelimeler": [
+            "sezon boyunca",
+            "en ağır",
+            "istemediği vardiya"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın çalışanlarına ilan çıkınca toplu mesaj atıldı; çoğu daha iyi ücret veren bir depoda çoktan işe başlamıştı.",
+          "acilma_kosulu": "Eski çalışanlara ulaşılması sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın çalışanlarına",
+            "toplu mesaj",
+            "çoktan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sezon sonunda küçük bir kutlama yapılıyor.",
+          "acilma_kosulu": "Sezon sonunda ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sezon bittiğinde",
+            "kutlama"
+          ]
+        }
+      ],
+      "kok_neden": "Sezonluklar geri gelmiyor çünkü geri gelmenin bir avantajı yok: dönen de ilk kez gelenle aynı ücret ve en ağır işle başlıyor, çağrı ilan çıkınca yapılıyor ve o sırada iyiler başka depoda işe başlamış oluyor.",
+      "kok_neden_kelimeler": [
+        "avantaj",
+        "aynı ücret",
+        "ağır iş",
+        "geç",
+        "fark yok"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kadroya geçiş yolu kapalı: sezonluk hep sezonluk",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geri dönenlerin çoğu bir gün kadroya geçebileceğini umanlar; dönmeyenler önceki yıl kadroya başvurup sezonluk diye elendiklerini söylüyor.",
+          "acilma_kosulu": "Dönenlerle dönmeyenlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "geri dönenlerle",
+            "kadroya geç",
+            "elendik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sezon sonunda kadro açığı olsa da sezonluklar değerlendirilmiyor; kadroya dışarıdan alım yapılıyor.",
+          "acilma_kosulu": "Sezon sonunda ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sezon bittiğinde",
+            "kadro açığı",
+            "değerlendirilmiyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın çalışanlarına zamanında ulaşıldı; ama çoğu \"yine sezonluk mu\" diye teklifi geri çevirdi.",
+          "acilma_kosulu": "Eski çalışanlara ulaşılması sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın çalışanlarına",
+            "yine sezonluk",
+            "geri çevir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sezonluklar farklı bölümlerde dönüşümlü çalışıyor.",
+          "acilma_kosulu": "Sezonluk çalışanın işi sorulursa",
+          "ipucu_kelimeler": [
+            "sezon boyunca",
+            "dönüşümlü"
+          ]
+        }
+      ],
+      "kok_neden": "Sezonluklar geri gelmiyor çünkü kadroya geçiş yolu kapalı: sezon sonunda kadro açığı olsa da sezonluklar değerlendirilmiyor, kadroya dışarıdan alınıyor ve iyi çalışanlar 'yine sezonluk' teklifini geri çeviriyor.",
+      "kok_neden_kelimeler": [
+        "kadro",
+        "geçiş",
+        "sezonluk",
+        "değerlendirilmiyor",
+        "yol"
+      ]
+    }
+  ]
+}

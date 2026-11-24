@@ -1,0 +1,199 @@
+{
+  "id": "surec-dokumanlari",
+  "baslik": "Süreç dokümanlarını neden kimse okumuyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 6,
+  "acilis": "Kalite sisteminde depo süreçleri için 140 doküman var. Yeni çalışanlar ve amirler bir sorun çıktığında dokümana bakmak yerine birbirine soruyor. Dokümanları hazırlayan kalite uzmanıyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın okumayı zorunlu yapmak değil, dokümanların neden kullanılmadığını anlamak.",
+  "karakter": {
+    "ad": "Hande",
+    "rol": "Kalite uzmanı",
+    "tavir": "Emeğine değer verilmesini istiyor; \"her şey yazılı\" diyor. Dokümanların nasıl kullanıldığını soran birine açık konuşuyor.",
+    "ilk_soz": "Her süreç yazılı, hepsi kalite sisteminde. Ama kimse bakmıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar okumayı sevmiyor.",
+    "Herkes sormayı kolay buluyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir çalışan sahada sorun yaşadığında dokümana nasıl ulaşıyor?",
+    "Dokümanlar nasıl bir dille ve biçimde yazılmış?",
+    "Dokümanlar en son ne zaman güncellendi?",
+    "Dokümanlar hazırlanırken sahadan kimler katıldı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Erişim zor: dokümanlar bilgisayarda, klasörlerde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Dokümanlar kalite sisteminin klasörlerinde; şirket bilgisayarından giriş ve doküman numarasını bilmek gerekiyor.",
+          "acilma_kosulu": "Dokümana erişim sorulursa",
+          "ipucu_kelimeler": [
+            "dokümana nasıl",
+            "klasör",
+            "doküman numarası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dokümanlar düzgün yazılmış ama sahada ihtiyaç anında açılamıyor; telefonda görüntülenmiyor.",
+          "acilma_kosulu": "Dokümanların dili ve biçimi sorulursa",
+          "ipucu_kelimeler": [
+            "dille ve biçimde",
+            "telefonda",
+            "ihtiyaç anında"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hazırlarken sahadan kişiler katıldı; ama kimse dokümana sahadan nasıl ulaşılacağını sormadı.",
+          "acilma_kosulu": "Hazırlanmaya kimin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken sahadan",
+            "nasıl ulaşılacağı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dokümanlar yıllık olarak gözden geçiriliyor.",
+          "acilma_kosulu": "Güncellenme durumu sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman güncel",
+            "yıllık"
+          ]
+        }
+      ],
+      "kok_neden": "Dokümanlar okunmuyor çünkü sahada erişilemiyor: dokümanlar kalite sisteminin klasörlerinde, giriş için bilgisayar ve doküman numarası gerekiyor ve telefonda açılmıyor; ihtiyaç anında birine sormak tek yol.",
+      "kok_neden_kelimeler": [
+        "erişim",
+        "klasör",
+        "bilgisayar",
+        "telefon",
+        "ihtiyaç anında"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Dil ve biçim: denetçi için yazılmış, kullanıcı için değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Dokümanlar denetim formatında: amaç, kapsam, sorumluluklar, tanımlar; asıl adımlar beşinci sayfada ve resimsiz.",
+          "acilma_kosulu": "Dokümanların dili ve biçimi sorulursa",
+          "ipucu_kelimeler": [
+            "dille ve biçimde",
+            "denetim format",
+            "beşinci sayfa"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dokümanları kalite ekibi yazdı; sahadan kimse katılmadı, kullanılan terimler sahada konuşulan dilden farklı.",
+          "acilma_kosulu": "Hazırlanmaya kimin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken sahadan",
+            "terimler",
+            "kimse katılmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dokümana ulaşmak kolay; tabletten açılabiliyor.",
+          "acilma_kosulu": "Dokümana erişim sorulursa",
+          "ipucu_kelimeler": [
+            "dokümana nasıl",
+            "tablet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dokümanlar düzenli güncelleniyor.",
+          "acilma_kosulu": "Güncellenme durumu sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman güncel",
+            "düzenli güncel"
+          ]
+        }
+      ],
+      "kok_neden": "Dokümanlar okunmuyor çünkü denetçi için yazılmış: denetim formatında, asıl adımlar sayfaların sonunda ve resimsiz, sahadan kimse katılmadan yazıldığı için terimleri de sahada konuşulan dilden farklı.",
+      "kok_neden_kelimeler": [
+        "denetim",
+        "format",
+        "dil",
+        "resimsiz",
+        "katılmadı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güncel değil: doküman sahadaki gerçekten geride",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Dokümanların çoğu üç yıl önce yazıldı; o günden beri WMS ekranları ve yerleşim değişti, dokümanlar güncellenmedi.",
+          "acilma_kosulu": "Güncellenme durumu sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman güncel",
+            "üç yıl önce",
+            "wms ekran"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dokümana sahadaki tabletlerden ulaşılabiliyor; ama birkaç kez yanlış adımı izleyen çalışan hata yaptı.",
+          "acilma_kosulu": "Dokümana erişim sorulursa",
+          "ipucu_kelimeler": [
+            "dokümana nasıl",
+            "yanlış adım",
+            "hata yaptı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hazırlarken sahadan katılım vardı; ama değişiklikleri dokümana yansıtacak bir sorumlu ya da tetik yok.",
+          "acilma_kosulu": "Hazırlanmaya kimin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken sahadan",
+            "tetik",
+            "yansıtacak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dokümanlar kısa ve resimli.",
+          "acilma_kosulu": "Dokümanların dili ve biçimi sorulursa",
+          "ipucu_kelimeler": [
+            "dille ve biçimde",
+            "kısa ve resimli"
+          ]
+        }
+      ],
+      "kok_neden": "Dokümanlar okunmuyor çünkü güvenilmez hâle geldi: üç yıl önce yazıldılar, WMS ekranları ve yerleşim değiştiği hâlde güncellenmediler, eski adımı izleyen çalışanlar hata yaptı ve değişikliği dokümana yansıtacak bir sorumlu yok.",
+      "kok_neden_kelimeler": [
+        "güncel",
+        "eski",
+        "güvenilmez",
+        "sorumlu",
+        "değişti"
+      ]
+    }
+  ]
+}

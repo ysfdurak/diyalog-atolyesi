@@ -1,0 +1,199 @@
+{
+  "id": "disiplin-adalet",
+  "baslik": "Disiplin süreçleri neden adaletsiz algılanıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İK ve işe alım",
+  "sure_dk": 8,
+  "acilis": "Son altı ayda depoda 34 disiplin tutanağı tutuldu; çalışan anketinde \"kurallar herkese eşit uygulanıyor\" maddesi en düşük puanı aldı. İki çalışan tutanağa itiraz için avukata gitti. Disiplin süreçlerini yürüten İK uzmanıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın tutanakları savunmak değil, sürecin neden adaletsiz algılandığını anlamak.",
+  "karakter": {
+    "ad": "Neslihan",
+    "rol": "İK uzmanı",
+    "tavir": "Kurallara bağlı ve temkinli; \"prosedüre uyuyoruz\" diyor. Verileri merak eden birine dürüst konuşuyor.",
+    "ilk_soz": "Her tutanak prosedüre uygun tutuluyor. Algıyı ben de anlamaya çalışıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar kurallara uymuyor.",
+    "Tutanak yiyen herkes itiraz eder."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Tutanaklar en çok hangi ekiplerde ve hangi amirlerde tutuluyor?",
+    "Bir tutanak tutulmadan önce çalışan dinleniyor mu, nasıl?",
+    "Aynı ihlal için farklı kişilere ne tür yaptırımlar uygulandı?",
+    "Kurallar çalışanlara ne zaman ve nasıl anlatılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Amire göre değişiyor: tutanakların yarısı iki amirden",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "34 tutanağın 21'i aynı iki vardiya amirinden; diğer amirler aynı durumlarda sözlü uyarıyla yetiniyor.",
+          "acilma_kosulu": "Tutanakların dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi amirlerde",
+            "iki vardiya amiri",
+            "sözlü uyarı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aynı geç kalma için bir vardiyada tutanak, diğerinde hiçbir şey yapılmıyor; ortak bir yaptırım ölçüsü yok.",
+          "acilma_kosulu": "Aynı ihlale farklı yaptırımlar sorulursa",
+          "ipucu_kelimeler": [
+            "aynı ihlal",
+            "geç kalma",
+            "ölçüsü yok"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tutanak tutulmadan önce çalışan dinlenmiyor; amirin tuttuğu tutanak doğrudan İK'ya gidiyor.",
+          "acilma_kosulu": "Çalışanın dinlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "dinleniyor mu",
+            "doğrudan i̇k",
+            "dinlenmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kurallar işe girişte yazılı olarak veriliyor.",
+          "acilma_kosulu": "Kuralların anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "kurallar çalışanlara",
+            "işe girişte"
+          ]
+        }
+      ],
+      "kok_neden": "Süreç adaletsiz algılanıyor çünkü amire göre değişiyor: tutanakların çoğu iki amirden çıkıyor, aynı ihlale bir vardiyada tutanak diğerinde hiçbir şey uygulanıyor ve çalışan tutanaktan önce dinlenmiyor.",
+      "kok_neden_kelimeler": [
+        "amir",
+        "tutarsız",
+        "aynı ihlal",
+        "dinlenmiyor",
+        "ölçü"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Savunma hakkı kâğıt üzerinde: dinleme yapılmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Çalışana savunma formu veriliyor ama sözlü dinleme yapılmıyor; okuma yazması zayıf çalışanlar formu boş bırakıyor.",
+          "acilma_kosulu": "Çalışanın dinlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "dinleniyor mu",
+            "savunma formu",
+            "okuma yazma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tutanaklar ekipler arasında dengeli dağılmış.",
+          "acilma_kosulu": "Tutanakların dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi amirlerde",
+            "dengeli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Boş bırakılan savunma \"kabul\" sayılıyor ve yaptırım uygulanıyor; savunma yazanlarda yaptırım daha hafif.",
+          "acilma_kosulu": "Aynı ihlale farklı yaptırımlar sorulursa",
+          "ipucu_kelimeler": [
+            "aynı ihlal",
+            "boş bırakılan",
+            "kabul sayıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kurallar panoda asılı.",
+          "acilma_kosulu": "Kuralların anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "kurallar çalışanlara",
+            "panoda asılı"
+          ]
+        }
+      ],
+      "kok_neden": "Süreç adaletsiz algılanıyor çünkü savunma hakkı yalnızca kâğıt üzerinde: çalışan sözlü dinlenmiyor, okuma yazması zayıf olanlar savunma formunu boş bırakıyor ve boş savunma kabul sayılıp daha ağır yaptırım uygulanıyor.",
+      "kok_neden_kelimeler": [
+        "savunma",
+        "dinlen",
+        "form",
+        "boş",
+        "kabul"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kurallar bilinmiyor: değişiklikler duyurulmadan uygulanıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurallar işe girişte bir kez imzalatılıyor; son bir yılda mola, telefon ve kişisel eşya kuralları değişti, değişiklikler yalnızca amirlere e-postayla gitti.",
+          "acilma_kosulu": "Kuralların anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "kurallar çalışanlara",
+            "imzalatıl",
+            "değişiklikler"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tutanakların çoğu yeni kurallardan: telefon kullanımı ve mola süresi; çalışanlar kuralın değiştiğini tutanakla öğrendi.",
+          "acilma_kosulu": "Aynı ihlale farklı yaptırımlar sorulursa",
+          "ipucu_kelimeler": [
+            "aynı ihlal",
+            "telefon",
+            "tutanakla öğren"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çalışan dinleniyor; savunmaların çoğu \"kuralı bilmiyordum\".",
+          "acilma_kosulu": "Çalışanın dinlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "dinleniyor mu",
+            "bilmiyordum"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tutanaklar ekiplere dengeli dağılmış.",
+          "acilma_kosulu": "Tutanakların dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi amirlerde",
+            "ekiplere dengeli"
+          ]
+        }
+      ],
+      "kok_neden": "Süreç adaletsiz algılanıyor çünkü kurallar bilinmeden uygulanıyor: mola, telefon ve kişisel eşya kuralları değişti ama yalnızca amirlere e-postayla duyuruldu ve çalışanlar kuralın değiştiğini tutanak yiyince öğrendi.",
+      "kok_neden_kelimeler": [
+        "kural",
+        "duyurul",
+        "bilmiyor",
+        "değişiklik",
+        "tutanak"
+      ]
+    }
+  ]
+}

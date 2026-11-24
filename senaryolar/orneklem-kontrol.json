@@ -1,0 +1,200 @@
+{
+  "id": "orneklem-kontrol",
+  "baslik": "Kalite kontrol örneklemesi neden hataları yakalamıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Sevkiyat öncesi kalite kontrol her gün 50 sipariş örnekliyor ve hata oranı %0,5 çıkıyor. Aynı dönemde müşteri şikâyetlerinden hesaplanan hata oranı %3. Kontrolü yapan kalite kontrol sorumlusuyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın kontrolcüleri suçlamak değil, kontrolün neden hataları yakalamadığını anlamak.",
+  "karakter": {
+    "ad": "Yavuz",
+    "rol": "Kalite kontrol sorumlusu",
+    "tavir": "Yöntemine güveniyor; \"örneklem istatistiksel olarak yeterli\" diyor. Seçim yöntemini soran birine açık.",
+    "ilk_soz": "Örneklem sayısı yeterli, hesabı yapıldı. Müşteri şikâyetleri başka nedenlerden olabilir."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler hasarlı ürünü hata diye bildiriyor.",
+    "Kargo hata yapıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kontrol edilecek 50 sipariş nasıl seçiliyor?",
+    "Kontrolde bir siparişin hangi özelliklerine bakılıyor?",
+    "Müşteri şikâyetlerindeki hataların ortak noktası ne?",
+    "Kontrol günün hangi saatinde yapılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Seçim yanlı: kolay ve hazır siparişler seçiliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kontrolcü, paketleme alanında hazır bekleyen siparişlerden en ön sıradakileri alıyor; genelde tek ürünlü küçük siparişler.",
+          "acilma_kosulu": "Örneklemin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl seçiliyor",
+            "ön sıra",
+            "tek ürünlü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyetteki hataların çoğu çok kalemli ve büyük siparişlerde.",
+          "acilma_kosulu": "Şikâyet hatalarının ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetlerindeki hataların",
+            "çok kalemli",
+            "büyük sipariş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kontrol bütün kalemlerin doğruluğuna bakıyor; ama çok kalemli siparişleri açmak uzun sürdüğü için pratikte seçilmiyor.",
+          "acilma_kosulu": "Kontrolün kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi özelliklerine",
+            "açmak uzun",
+            "seçilmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kontrol gün içine dağıtılmış.",
+          "acilma_kosulu": "Kontrolün zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi saatinde",
+            "dağıtılmış"
+          ]
+        }
+      ],
+      "kok_neden": "Kontrol hataları yakalamıyor çünkü örneklem yanlı: kontrolcü kolayca açılabilen tek ürünlü siparişleri seçiyor, hatalar ise çok kalemli büyük siparişlerde ve bunlar pratikte hiç örneklenmiyor.",
+      "kok_neden_kelimeler": [
+        "yanlı",
+        "seçim",
+        "çok kalemli",
+        "tek ürünlü",
+        "örneklem"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yanlış zaman: kontrol sabah, hatalar akşam",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kontrol her gün sabah 09:00-11:00 arasında yapılıyor.",
+          "acilma_kosulu": "Kontrolün zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi saatinde",
+            "09:00",
+            "sabah"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyet gelen siparişlerin çoğu, yoğunluğun en yüksek olduğu öğleden sonra ve akşam hazırlananlar.",
+          "acilma_kosulu": "Şikâyet hatalarının ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetlerindeki hataların",
+            "öğleden sonra",
+            "akşam"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Seçim rastgele yapılıyor ama yalnızca kontrol saatinde hazırlanmış siparişler arasından.",
+          "acilma_kosulu": "Örneklemin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl seçiliyor",
+            "rastgele",
+            "kontrol saati"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kontrol sipariş kalemlerine ve ambalaja bakıyor.",
+          "acilma_kosulu": "Kontrolün kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi özelliklerine",
+            "ambalaja bak"
+          ]
+        }
+      ],
+      "kok_neden": "Kontrol hataları yakalamıyor çünkü yanlış zamanda yapılıyor: örnekleme yalnızca sabah iki saatte hazırlanan siparişler arasından yapılıyor, hatalar ise yoğunluğun en yüksek olduğu öğleden sonra ve akşam siparişlerinde.",
+      "kok_neden_kelimeler": [
+        "zaman",
+        "sabah",
+        "akşam",
+        "yoğunluk",
+        "örneklem"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kapsam dar: kontrol yalnızca ürün kodunu sayıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kontrol yalnızca siparişteki ürün kodlarının ve adetlerin doğru olup olmadığına bakıyor; renk, beden ve etiket kontrol edilmiyor.",
+          "acilma_kosulu": "Kontrolün kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi özelliklerine",
+            "renk",
+            "beden"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyetteki hataların çoğu aynı kodlu ürünün yanlış renk ya da bedeni ve yanlış adres etiketi.",
+          "acilma_kosulu": "Şikâyet hatalarının ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetlerindeki hataların",
+            "yanlış renk",
+            "adres etiketi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Seçim rastgele ve bütün siparişlerden yapılıyor.",
+          "acilma_kosulu": "Örneklemin seçimi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl seçiliyor",
+            "bütün siparişlerden"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kontrol gün boyu dağıtılmış.",
+          "acilma_kosulu": "Kontrolün zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi saatinde",
+            "gün boyu"
+          ]
+        }
+      ],
+      "kok_neden": "Kontrol hataları yakalamıyor çünkü kapsamı dar: yalnızca ürün kodu ve adet kontrol ediliyor, müşteri şikâyetlerinin çoğunu oluşturan yanlış renk, beden ve adres etiketi hataları kontrolün dışında kalıyor.",
+      "kok_neden_kelimeler": [
+        "kapsam",
+        "renk",
+        "beden",
+        "etiket",
+        "ürün kodu"
+      ]
+    }
+  ]
+}

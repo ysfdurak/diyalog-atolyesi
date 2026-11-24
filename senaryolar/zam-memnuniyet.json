@@ -1,0 +1,201 @@
+{
+  "id": "zam-memnuniyet",
+  "baslik": "Ücret zammı neden memnuniyet getirmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Depo çalışanlarına enflasyonun üzerinde %35 zam yapıldı. Zamdan bir ay sonra yapılan ankette ücret memnuniyeti düştü ve iki kıdemli çalışan istifa etti. İK iş ortağıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın zammı savunmak değil, neden memnuniyet getirmediğini anlamak.",
+  "karakter": {
+    "ad": "Özgür",
+    "rol": "İK iş ortağı",
+    "tavir": "Şaşkın ve biraz kırgın; \"piyasanın üstünde zam yaptık\" diyor. Ayrıntıyı soran birine açık konuşuyor.",
+    "ilk_soz": "Piyasanın üstünde bir zam yaptık. Bu tepkiyi ben de anlamakta zorlanıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar hiçbir zaman memnun olmaz.",
+    "Enflasyon her şeyi yiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Zam çalışanlar arasında nasıl dağıtıldı?",
+    "Zam çalışanlara nasıl ve ne zaman duyuruldu?",
+    "Zamla birlikte başka neler değişti?",
+    "İstifa eden kıdemliler giderken ne söyledi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kıdem eridi: yeni gelenle eski çalışan aynı ücrete geldi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Zam en alt ücrete göre sabit tutar olarak yapıldı; yeni başlayanla on yıllık çalışan arasındaki fark %30'dan %5'e indi.",
+          "acilma_kosulu": "Zammın dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "sabit tutar",
+            "%5"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İstifa eden kıdemliler \"on yılımın değeri kalmadı\" dedi.",
+          "acilma_kosulu": "Istifa edenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "istifa eden",
+            "on yılım",
+            "değeri"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Zamla birlikte kıdem primi kaldırıldı ve ücrete eklendi.",
+          "acilma_kosulu": "Zamla birlikte değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "zamla birlikte",
+            "kıdem primi",
+            "kaldırıldı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Zam e-postayla duyuruldu.",
+          "acilma_kosulu": "Zammın duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl ve ne zaman duyuruldu",
+            "e-posta"
+          ]
+        }
+      ],
+      "kok_neden": "Zam memnuniyet getirmedi çünkü kıdemi eritti: sabit tutarlı zam ve kıdem priminin kaldırılmasıyla yeni başlayanla on yıllık çalışan arasındaki fark neredeyse kapandı ve kıdemliler emeklerinin değersizleştiğini hissetti.",
+      "kok_neden_kelimeler": [
+        "kıdem",
+        "fark",
+        "sabit tutar",
+        "değer",
+        "eşitlen"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ek kalemler gitti: net gelir aslında düşük arttı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Zamla birlikte yemek kartı, yol yardımı ve fazla mesai katsayısı brüt ücrete katıldı; ayrı ödemeler kalktı.",
+          "acilma_kosulu": "Zamla birlikte değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "zamla birlikte",
+            "yemek kartı",
+            "yol yardımı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kâğıt üzerinde %35 zam herkese aynı oranda yapıldı; ama eski ek ödemeler düşünce net gelirdeki artış ortalama %12'de kaldı.",
+          "acilma_kosulu": "Zammın dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "net gelir",
+            "%12"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Zam \"tarihi %35 zam\" diye panoya asılarak duyuruldu; net etkiyi gösteren bir açıklama yapılmadı.",
+          "acilma_kosulu": "Zammın duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl ve ne zaman duyuruldu",
+            "tarihi",
+            "panoya"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İstifa edenler daha yakın bir işe geçtiğini söyledi.",
+          "acilma_kosulu": "Istifa edenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "istifa eden",
+            "daha yakın"
+          ]
+        }
+      ],
+      "kok_neden": "Zam memnuniyet getirmedi çünkü söz ile cebe giren farklıydı: '%35' diye duyurulan zamla yemek kartı, yol yardımı ve fazla mesai katsayısı ücrete katıldı, net gelirdeki artış %12'de kaldı ve bu açıklanmadı.",
+      "kok_neden_kelimeler": [
+        "net gelir",
+        "ek ödeme",
+        "duyuru",
+        "%35",
+        "açıklan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Zamanlama ve adalet: aynı gün başka bölüme daha fazlası",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Zam, ofis çalışanlarına yapılan %45'lik zamla aynı gün ve aynı e-postayla duyuruldu.",
+          "acilma_kosulu": "Zammın duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl ve ne zaman duyuruldu",
+            "%45",
+            "ofis çalışanları"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İstifa edenler \"bizim emeğimiz ofisinkinden az mı\" diyerek ayrıldı.",
+          "acilma_kosulu": "Istifa edenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "istifa eden",
+            "emeğimiz",
+            "ofisinkinden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Zam depoda herkese aynı oranda yapıldı; oranın neden farklı olduğu depo çalışanlarına açıklanmadı.",
+          "acilma_kosulu": "Zammın dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "neden farklı",
+            "açıklanmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Zamla birlikte başka bir şey değişmedi.",
+          "acilma_kosulu": "Zamla birlikte değişenler sorulursa",
+          "ipucu_kelimeler": [
+            "zamla birlikte",
+            "başka bir şey değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "Zam memnuniyet getirmedi çünkü karşılaştırma adaletsiz göründü: depo zammı aynı gün aynı e-postayla ofise yapılan daha yüksek zamla duyuruldu, farkın nedeni açıklanmadı ve depo çalışanları emeklerinin daha az değerli görüldüğünü düşündü.",
+      "kok_neden_kelimeler": [
+        "adalet",
+        "ofis",
+        "karşılaştır",
+        "açıklanmadı",
+        "aynı gün"
+      ]
+    }
+  ]
+}
