@@ -1,0 +1,202 @@
+{
+  "id": "sube-musteri-kaybi",
+  "baslik": "Şubeden müşteriler neden ayrılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Bir bankanın semt şubesinde son bir yılda bireysel müşterilerin %15'i hesabını kapattı ya da kullanmayı bıraktı; bölge ortalaması %6. Şube müdürüyle konuşuyorsun.",
+  "rolun": "Bölge müdürüsün. Amacın şubeyi sıkıştırmak değil, müşterilerin neden gittiğini anlamak.",
+  "karakter": {
+    "ad": "Nilüfer",
+    "rol": "Şube müdürü",
+    "tavir": "Deneyimli ve gururlu; \"faiz oranlarıyla rakiplere yetişemiyoruz\" diyor. Müşteri deneyimini soran birine açık.",
+    "ilk_soz": "Rakip bankalar daha iyi faiz veriyor, biz merkezin oranlarına bağlıyız."
+  },
+  "yaniltici_ipuclari": [
+    "Rakipler daha iyi faiz veriyor.",
+    "Gençler zaten dijital bankalara gidiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ayrılan müşteriler hesaplarını kapatırken ne söylüyor?",
+    "Ayrılan müşterilerin ortak özelliği ne?",
+    "Bir yıl içinde şubede ne değişti?",
+    "Müşteriler şubeye en çok hangi işler için geliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İlişki yöneticisi değişti: müşteri kendini yabancı hissetti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce şubenin üç deneyimli müşteri temsilcisi bölge merkezine alındı; yerlerine sık değişen yeni çalışanlar geldi.",
+          "acilma_kosulu": "Şubedeki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "şubede ne",
+            "bölge merkezine",
+            "sık değişen"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu yıllardır aynı temsilciyle çalışan, 50 yaş üstü ve emekli müşteriler.",
+          "acilma_kosulu": "Ayrılanların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "emekli",
+            "aynı temsilci"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hesabını kapatanlar \"artık kimse beni tanımıyor, her gelişimde baştan anlatıyorum\" diyor; bir kısmı eski temsilcinin geçtiği başka bir bankaya gitti.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "kapatırken",
+            "kimse beni tanımıyor",
+            "eski temsilci"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriler en çok fatura ve emekli maaşı işleri için geliyor.",
+          "acilma_kosulu": "Şubeye gelme nedenleri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler için",
+            "fatura"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler ilişki kopunca ayrılıyor: deneyimli temsilciler merkeze alındı, yerlerine sık değişen yeni çalışanlar geldi; yıllardır aynı kişiyle çalışan emekli müşteriler kendilerini yabancı hissedip gitti.",
+      "kok_neden_kelimeler": [
+        "temsilci",
+        "ilişki",
+        "değiş",
+        "emekli",
+        "tanımıyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bekleme süresi: kadro azaldı, kuyruk uzadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce gişe sayısı dörtten ikiye indirildi; dijital kanallara geçiş varsayıldı.",
+          "acilma_kosulu": "Şubedeki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "şubede ne",
+            "dörtten ikiye",
+            "gişe"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Müşterilerin çoğu dijitalde yapamadığı işler için geliyor: nakit yatırma, belge onayı, vekâlet işlemleri.",
+          "acilma_kosulu": "Şubeye gelme nedenleri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler için",
+            "nakit",
+            "vekâlet"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ayrılanlar \"her gelişimde 45 dakika bekliyorum\" diyor; şubedeki ortalama bekleme 12 dakikadan 40 dakikaya çıktı.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "kapatırken",
+            "45 dakika",
+            "bekleme"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ayrılanlar farklı yaş gruplarından.",
+          "acilma_kosulu": "Ayrılanların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "farklı yaş"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler beklemekten ayrılıyor: gişe sayısı dijitale geçiş varsayılarak yarıya indirildi, ama müşteriler dijitalde yapılamayan işler için gelmeye devam ediyor ve bekleme süresi üç kattan fazla uzadı.",
+      "kok_neden_kelimeler": [
+        "bekleme",
+        "gişe",
+        "kuyruk",
+        "dijital",
+        "kadro"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ücret değişikliği: habersiz hesap işletim ücreti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce düşük bakiyeli hesaplara aylık işletim ücreti getirildi; müşterilere yalnızca ekstrede küçük bir notla duyuruldu.",
+          "acilma_kosulu": "Şubedeki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "şubede ne",
+            "işletim ücreti",
+            "ekstre"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu düşük bakiyeli, maaşını başka bankaya aldıran ikincil hesap sahipleri.",
+          "acilma_kosulu": "Ayrılanların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "ortak özelliği",
+            "düşük bakiye",
+            "ikincil hesap"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hesabını kapatanlar \"haberim olmadan para kesildi\" diyor; şikâyetlerin çoğu ücret iadesi talebi.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "kapatırken",
+            "haberim olmadan",
+            "ücret iadesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriler en çok kart işlemleri için geliyor.",
+          "acilma_kosulu": "Şubeye gelme nedenleri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler için",
+            "kart işlemleri"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler habersiz ücret yüzünden ayrılıyor: düşük bakiyeli hesaplara aylık ücret getirildi ve yalnızca ekstrede küçük bir notla duyuruldu; müşteriler paranın 'habersiz kesildiğini' görünce hesabı kapatıyor.",
+      "kok_neden_kelimeler": [
+        "ücret",
+        "habersiz",
+        "duyuru",
+        "düşük bakiye",
+        "kesil"
+      ]
+    }
+  ]
+}

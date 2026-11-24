@@ -1,0 +1,202 @@
+{
+  "id": "kobi-kredi-suresi",
+  "baslik": "KOBİ kredi başvuruları neden üç hafta sürüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Küçük işletme kredisi başvurularının sonuçlanması ortalama 21 gün sürüyor; rakip bankalar bir haftada dönüyor. Başvuruların üçte biri müşteri vazgeçtiği için kapanıyor. Kredi tahsis biriminin ekip liderine konuşuyorsun.",
+  "rolun": "Ticari bankacılık operasyon müdürüsün. Amacın tahsis ekibini hızlandırmak değil, sürenin neden uzadığını anlamak.",
+  "karakter": {
+    "ad": "Kadir",
+    "rol": "Kredi tahsis ekip lideri",
+    "tavir": "Dikkatli ve riskten kaçan biri; \"acele edersek batık kredi artar\" diyor. Süreci soran birine açık.",
+    "ilk_soz": "Acele edersek batık kredi artar. Biz her dosyayı dikkatle inceliyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "Tahsis ekibi fazla temkinli.",
+    "Küçük işletmelerin belgeleri hep eksik."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir başvuru şubeden geldikten sonra hangi adımlardan geçiyor?",
+    "21 günün en çok hangi kısmında bekleniyor?",
+    "Başvuru dosyaları size nasıl bir hâlde ulaşıyor?",
+    "Küçük ve büyük tutarlı başvurular arasında süreç nasıl farklılaşıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Eksik dosya: şubeden eksik belgeyle geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Dosyaların %60'ı eksik belgeyle geliyor; şube çalışanı hangi belgenin zorunlu olduğunu bilmiyor.",
+          "acilma_kosulu": "Dosyaların geliş durumu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bir hâlde",
+            "eksik belge",
+            "zorunlu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En uzun bekleme, eksik belge için şubeye geri gönderilen dosyaların yeniden gelmesi; her tur ortalama bir hafta.",
+          "acilma_kosulu": "Beklemenin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "21 günün",
+            "geri gönder",
+            "her tur"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dosya şubede taranıp merkeze gönderiliyor; merkez eksikliği ancak incelemeye sıra gelince fark ediyor.",
+          "acilma_kosulu": "Başvurunun adımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlardan",
+            "taranıp",
+            "sıra gelince"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tutarlara göre farklı onay basamakları var.",
+          "acilma_kosulu": "Tutara göre süreç farkı sorulursa",
+          "ipucu_kelimeler": [
+            "küçük ve büyük",
+            "onay basamakları"
+          ]
+        }
+      ],
+      "kok_neden": "Süre eksik dosyalardan uzuyor: dosyaların çoğu şubeden eksik belgeyle geliyor, eksiklik ancak incelemeye sıra gelince fark ediliyor ve her geri gönderme turu bir hafta ekliyor.",
+      "kok_neden_kelimeler": [
+        "eksik",
+        "belge",
+        "geri gönder",
+        "tur",
+        "şube"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Tek süreç: 50 bin TL'lik kredi ile 5 milyonluk aynı yoldan",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "50 bin TL'lik bir kredi de 5 milyon TL'lik kredi de aynı ayrıntılı analizden ve aynı komite onayından geçiyor.",
+          "acilma_kosulu": "Tutara göre süreç farkı sorulursa",
+          "ipucu_kelimeler": [
+            "küçük ve büyük",
+            "50 bin",
+            "aynı ayrıntılı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En uzun bekleme haftada bir toplanan kredi komitesi; küçük başvurular da komite sırasını bekliyor.",
+          "acilma_kosulu": "Beklemenin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "21 günün",
+            "haftada bir",
+            "komite"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Adımlar: şube, tahsis analizi, risk, komite, kullandırım; her adım ayrı sırada bekliyor.",
+          "acilma_kosulu": "Başvurunun adımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlardan",
+            "kullandırım",
+            "ayrı sırada"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dosyalar çoğunlukla eksiksiz geliyor.",
+          "acilma_kosulu": "Dosyaların geliş durumu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bir hâlde",
+            "eksiksiz"
+          ]
+        }
+      ],
+      "kok_neden": "Süre tutara göre ayrım olmadığı için uzuyor: küçük bir kredi de büyük kredilerle aynı ayrıntılı analizden ve haftada bir toplanan komiteden geçiyor; küçük başvurular için hızlı yol ya da puanlama yok.",
+      "kok_neden_kelimeler": [
+        "tutar",
+        "komite",
+        "ayrım",
+        "küçük",
+        "hızlı yol"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Dış veri bekleniyor: istihbarat ve ekspertiz",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En uzun bekleme, teminat için yapılan gayrimenkul ekspertizi; ekspertiz firması raporu ortalama 10 günde gönderiyor.",
+          "acilma_kosulu": "Beklemenin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "21 günün",
+            "ekspertiz",
+            "10 gün"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İnceleme paralel değil sıralı: ekspertiz, finansal analiz bittikten sonra isteniyor.",
+          "acilma_kosulu": "Başvurunun adımları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlardan",
+            "sıralı",
+            "bittikten sonra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Küçük kredilerde de teminat olarak gayrimenkul isteniyor; teminatsız ya da kefaletli bir ürün yok.",
+          "acilma_kosulu": "Tutara göre süreç farkı sorulursa",
+          "ipucu_kelimeler": [
+            "küçük ve büyük",
+            "teminat",
+            "kefalet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dosyalar şubeden düzgün geliyor.",
+          "acilma_kosulu": "Dosyaların geliş durumu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bir hâlde",
+            "düzgün"
+          ]
+        }
+      ],
+      "kok_neden": "Süre dış beklemelerden uzuyor: küçük kredilerde bile gayrimenkul teminatı isteniyor, ekspertiz finansal analizden sonra sırayla isteniyor ve ekspertiz firması raporu on günde gönderiyor.",
+      "kok_neden_kelimeler": [
+        "ekspertiz",
+        "teminat",
+        "sıralı",
+        "dış",
+        "bekle"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "kampanya-uygulamasi",
+  "baslik": "Merkezin kampanyası mağazada neden yanlış uygulanıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Merkezden gönderilen son üç kampanyanın mağazaların yarısında ilk iki günü yanlış uygulandığı görüldü: eksik raf düzeni, yanlış fiyat, kampanya ürünü depoda. Kampanya uygulama projesini koordine eden bölge görsel düzenleme sorumlusuyla konuşuyorsun.",
+  "rolun": "Kampanyalardan sorumlu merkez proje yöneticisisin. Amacın mağazaları uyarmak değil, kampanyanın neden yanlış uygulandığını anlamak.",
+  "karakter": {
+    "ad": "Zerrin",
+    "rol": "Bölge görsel düzenleme sorumlusu",
+    "tavir": "Mağazaları savunan ve yorgun biri; \"bilgi geç geliyor\" diyor. Akışı soran birine açık.",
+    "ilk_soz": "Mağazalar elinden geleni yapıyor. Ama kampanya bilgisi bize hep son anda geliyor."
+  },
+  "yaniltici_ipuclari": [
+    "Mağaza müdürleri talimatı okumuyor.",
+    "Mağazalar kampanyayı önemsemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kampanya talimatı mağazaya ne zaman ve nasıl ulaşıyor?",
+    "Kampanya ürünleri mağazaya ne zaman geliyor?",
+    "Talimat mağazanın gerçek düzenine nasıl uyuyor?",
+    "Kampanya hazırlığına mağazada kimler zaman ayırıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Talimat geç ve dağınık: e-posta, PDF, telefon",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talimat kampanyadan bir gün önce akşam, 40 sayfalık bir PDF olarak e-postayla geliyor; fiyat listesi ayrı bir dosyada.",
+          "acilma_kosulu": "Talimatın mağazaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "talimatı mağazaya",
+            "bir gün önce",
+            "40 sayfa"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Mağaza ekibi hazırlığa ancak kampanya sabahı açılıştan önce bir saat ayırabiliyor.",
+          "acilma_kosulu": "Mağazadaki hazırlık kapasitesi sorulursa",
+          "ipucu_kelimeler": [
+            "zaman ayırıyor",
+            "kampanya sabahı",
+            "bir saat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimat genel bir mağaza planına göre; mağazalar kendi düzenine uyarlamak için zaman bulamıyor.",
+          "acilma_kosulu": "Talimatın mağaza düzenine uyumu sorulursa",
+          "ipucu_kelimeler": [
+            "gerçek düzenine",
+            "genel bir mağaza",
+            "uyarla"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kampanya ürünleri iki gün önce geliyor.",
+          "acilma_kosulu": "Kampanya ürünlerinin gelişi sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya ürünleri",
+            "iki gün önce"
+          ]
+        }
+      ],
+      "kok_neden": "Kampanya yanlış uygulanıyor çünkü talimat çok geç ve dağınık geliyor: bir gün önce akşam 40 sayfalık PDF ile ayrı fiyat dosyası geliyor, ekip hazırlığa yalnızca kampanya sabahı bir saat ayırabiliyor ve talimatı kendi düzenine uyarlayamıyor.",
+      "kok_neden_kelimeler": [
+        "talimat",
+        "geç",
+        "pdf",
+        "hazırlık",
+        "uyarla"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ürün geç geliyor: kampanya başlıyor, ürün yolda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kampanya ürünleri merkez depodan normal sevkiyatla gönderiliyor; mağazaların yarısına kampanyanın ilk günü öğleden sonra ulaşıyor.",
+          "acilma_kosulu": "Kampanya ürünlerinin gelişi sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya ürünleri",
+            "normal sevkiyat",
+            "ilk günü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ürün gelince mal kabul, raf düzeni ve etiketleme aynı gün, satış saatinde yapılıyor.",
+          "acilma_kosulu": "Mağazadaki hazırlık kapasitesi sorulursa",
+          "ipucu_kelimeler": [
+            "zaman ayırıyor",
+            "aynı gün",
+            "satış saatinde"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimat bir hafta önce ulaşıyor ve açık.",
+          "acilma_kosulu": "Talimatın mağazaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "talimatı mağazaya",
+            "bir hafta önce"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Talimat mağaza tiplerine göre ayrı hazırlanıyor.",
+          "acilma_kosulu": "Talimatın mağaza düzenine uyumu sorulursa",
+          "ipucu_kelimeler": [
+            "gerçek düzenine",
+            "mağaza tiplerine"
+          ]
+        }
+      ],
+      "kok_neden": "Kampanya yanlış uygulanıyor çünkü ürünler geç geliyor: talimat zamanında ama kampanya ürünleri normal sevkiyatla gönderiliyor, mağazaların yarısına ilk gün öğleden sonra ulaşıyor ve kurulum satış saatinde aceleyle yapılıyor.",
+      "kok_neden_kelimeler": [
+        "ürün",
+        "sevkiyat",
+        "geç",
+        "ilk gün",
+        "kurulum"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Tek tip plan: talimat küçük mağazaya sığmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talimat büyük mağaza düzenine göre: dört ada stand ve giriş masası; küçük mağazalarda bu kadar alan yok.",
+          "acilma_kosulu": "Talimatın mağaza düzenine uyumu sorulursa",
+          "ipucu_kelimeler": [
+            "gerçek düzenine",
+            "ada stand",
+            "küçük mağaza"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Küçük mağazalar talimatı kendi alanlarına sığdırmak için ürünleri bölüyor ve bazı ürünler depoda kalıyor.",
+          "acilma_kosulu": "Mağazadaki hazırlık kapasitesi sorulursa",
+          "ipucu_kelimeler": [
+            "zaman ayırıyor",
+            "sığdır",
+            "depoda kal"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimat zamanında ve tek tip geliyor; mağaza büyüklüğüne göre seçenek yok.",
+          "acilma_kosulu": "Talimatın mağazaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "talimatı mağazaya",
+            "tek tip",
+            "seçenek yok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünler kampanyadan önce geliyor.",
+          "acilma_kosulu": "Kampanya ürünlerinin gelişi sorulursa",
+          "ipucu_kelimeler": [
+            "kampanya ürünleri",
+            "kampanyadan önce"
+          ]
+        }
+      ],
+      "kok_neden": "Kampanya yanlış uygulanıyor çünkü plan tek tip: talimat büyük mağaza düzenine göre hazırlanıyor, küçük mağazalarda bu alan yok ve ekipler ürünleri bölüp bir kısmını depoda bırakıyor; mağaza büyüklüğüne göre bir seçenek yok.",
+      "kok_neden_kelimeler": [
+        "tek tip",
+        "büyük mağaza",
+        "küçük mağaza",
+        "alan",
+        "seçenek"
+      ]
+    }
+  ]
+}

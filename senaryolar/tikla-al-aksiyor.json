@@ -1,0 +1,201 @@
+{
+  "id": "tikla-al-aksiyor",
+  "baslik": "Tıkla-gel-al siparişleri mağazada neden aksıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "İnternetten sipariş verip mağazadan teslim alma hizmetinde müşterilerin %35'i ürünlerini hazır bulamıyor ya da 20 dakikadan fazla bekliyor. Hizmetin puanı mağaza puanının çok altında. Mağazanın teslim noktası sorumlusuyla konuşuyorsun.",
+  "rolun": "Çok kanallı satıştan sorumlu operasyon müdürüsün. Amacın mağazayı uyarmak değil, hizmetin neden aksadığını anlamak.",
+  "karakter": {
+    "ad": "Mehtap",
+    "rol": "Mağaza teslim noktası sorumlusu",
+    "tavir": "Bunalmış ama çözüm odaklı; \"siparişler hep son dakikada düşüyor\" diyor. Akışı soran birine somut konuşuyor.",
+    "ilk_soz": "Siparişler sisteme düşüyor ama hazırlayacak kimse yok, ben tek başımayım çoğu zaman."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler erken geliyor.",
+    "Mağaza ekibi internet siparişini önemsemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir internet siparişi mağazaya düştükten sonra nasıl hazırlanıyor?",
+    "Müşteriye siparişin hazır olduğu ne zaman ve nasıl bildiriliyor?",
+    "Hazır bulunamayan siparişlerin ortak noktası ne?",
+    "Teslim noktasında müşteri gelince ne oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hazırlık kimsenin işi değil: satış ekibinden kişi çekiliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Siparişi hazırlamak için satış alanından bir danışman çekiliyor; yoğun saatlerde kimse bırakılmıyor ve siparişler bekliyor.",
+          "acilma_kosulu": "Siparişin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "mağazaya düştükten",
+            "danışman çekil",
+            "yoğun saat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hazır bulunamayan siparişlerin çoğu öğleden sonra ve hafta sonu, mağazanın en yoğun olduğu saatlerde verilen siparişler.",
+          "acilma_kosulu": "Hazır olmayan siparişlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hazır bulunamayan",
+            "en yoğun",
+            "hafta sonu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem müşteriye sipariş mağazaya düştükten bir saat sonra otomatik olarak \"hazır\" bildirimi gönderiyor.",
+          "acilma_kosulu": "Hazır bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "hazır olduğu",
+            "bir saat sonra",
+            "otomatik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teslim noktasında müşteri kimlik gösteriyor.",
+          "acilma_kosulu": "Teslim anı sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri gelince",
+            "kimlik"
+          ]
+        }
+      ],
+      "kok_neden": "Hizmet aksıyor çünkü hazırlık kimsenin işi değil: siparişi hazırlamak için satış alanından kişi çekiliyor, yoğun saatlerde kimse bırakılmıyor ve sistem bir saat sonra otomatik 'hazır' mesajı gönderdiği için müşteri hazırlanmamış siparişe geliyor.",
+      "kok_neden_kelimeler": [
+        "hazırlık",
+        "kişi",
+        "yoğun saat",
+        "otomatik",
+        "hazır bildirimi"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Stok uyuşmuyor: sistemde var, rafta yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hazır bulunamayan siparişlerin çoğu sitenin mağazada stokta gösterdiği ama rafta olmayan ürünler; mağaza stoğu siteye günde bir aktarılıyor.",
+          "acilma_kosulu": "Hazır olmayan siparişlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hazır bulunamayan",
+            "günde bir",
+            "stokta göster"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hazırlayan kişi ürünü rafta bulamayınca depoda arıyor, bulamazsa siparişi eksik bırakıyor.",
+          "acilma_kosulu": "Siparişin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "mağazaya düştükten",
+            "eksik bırak",
+            "depoda arıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri gelince eksik ürün öğreniliyor; ne yapılacağı (iptal, değişim, kargo) için bir kural yok, her seferinde müdür aranıyor.",
+          "acilma_kosulu": "Teslim anı sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri gelince",
+            "eksik ürün",
+            "müdür aranıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriye hazır bildirimi sipariş tamamlanınca gidiyor.",
+          "acilma_kosulu": "Hazır bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "hazır olduğu",
+            "tamamlanınca"
+          ]
+        }
+      ],
+      "kok_neden": "Hizmet aksıyor çünkü site ile mağaza stoğu uyuşmuyor: mağaza stoğu siteye günde bir aktarılıyor, site rafta olmayan ürünü satıyor ve müşteri geldiğinde eksik ürün için ne yapılacağına dair bir kural olmadığı için her seferinde müdür aranıyor.",
+      "kok_neden_kelimeler": [
+        "stok",
+        "günde bir",
+        "eksik",
+        "kural",
+        "uyuşm"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Teslim noktası yanlış yerde: müşteri bekliyor, kimse görmüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Teslim noktası mağazanın en arkasında, depo kapısının yanında; çoğu zaman başında kimse yok ve müşteri birini bulmak için mağazayı dolaşıyor.",
+          "acilma_kosulu": "Teslim anı sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri gelince",
+            "en arkası",
+            "başında kimse"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bildirim doğru zamanda gidiyor; siparişler genelde hazır.",
+          "acilma_kosulu": "Hazır bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "hazır olduğu",
+            "doğru zaman"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bekleme şikâyetlerinin çoğu hazır siparişlerde; ürün raftaki dolapta ama teslim edecek kimse yok.",
+          "acilma_kosulu": "Hazır olmayan siparişlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hazır bulunamayan",
+            "dolapta",
+            "teslim edecek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler sabah ve öğleden sonra iki turda hazırlanıyor.",
+          "acilma_kosulu": "Siparişin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "mağazaya düştükten",
+            "iki tur"
+          ]
+        }
+      ],
+      "kok_neden": "Hizmet aksıyor çünkü teslim anı tasarlanmamış: siparişler çoğu zaman hazır ama teslim noktası mağazanın en arkasında ve başında kimse yok; müşteri birini bulmak için mağazayı dolaşıp bekliyor.",
+      "kok_neden_kelimeler": [
+        "teslim noktası",
+        "kimse yok",
+        "bekle",
+        "yer",
+        "arka"
+      ]
+    }
+  ]
+}

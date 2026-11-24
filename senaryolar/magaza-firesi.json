@@ -1,0 +1,202 @@
+{
+  "id": "magaza-firesi",
+  "baslik": "Mağaza firesi neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Mağazanın yıllık sayımında fire (kayıp) oranı %1,2'den %2,9'a çıktı. Güvenlik kamerası sayısı artırıldı ama fire düşmedi. Mağazanın kayıp önleme sorumlusuyla konuşuyorsun.",
+  "rolun": "Mağaza müdürüsün. Amacın hırsız aramak değil, firenin nereden geldiğini anlamak.",
+  "karakter": {
+    "ad": "Necati",
+    "rol": "Kayıp önleme sorumlusu",
+    "tavir": "Şüpheci ve deneyimli; \"hırsızlık arttı\" diyor. Verileri soran birine açık konuşuyor.",
+    "ilk_soz": "Hırsızlık her yerde arttı, kameralar da yetmiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Hırsızlık arttı.",
+    "Çalışanlar ürün alıyor olabilir."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Fire en çok hangi ürün gruplarında ve nasıl bir kayıp şeklinde?",
+    "Hasarlı ve iade ürünler mağazada nasıl işleniyor?",
+    "Mal kabulde gelen ürünler nasıl sayılıyor?",
+    "Bir yıl içinde mağazanın işleyişinde ne değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kayıt hatası: hasarlı ürünler sistemden düşülmüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hasar gören ürünler ayrı bir köşede toplanıyor ve atılıyor; ama sistemden düşülmesi ayda bir topluca yapılıyor, çoğu zaman unutuluyor.",
+          "acilma_kosulu": "Hasarlı ve iade ürün süreci sorulursa",
+          "ipucu_kelimeler": [
+            "hasarlı ve iade",
+            "ayda bir",
+            "unutuluyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Firenin çoğu kırılan cam ve seramik ürünlerde; hırsızlığa açık küçük ürünlerde artış az.",
+          "acilma_kosulu": "Firenin yoğunlaştığı ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi ürün gruplarında",
+            "cam ve seramik",
+            "küçük ürün"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce hasar kaydı tutan çalışan ayrıldı; görev kimseye verilmedi.",
+          "acilma_kosulu": "Işleyişteki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "işleyişinde",
+            "hasar kaydı",
+            "kimseye verilmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mal kabulde koli sayısı kontrol ediliyor.",
+          "acilma_kosulu": "Mal kabul sayımı sorulursa",
+          "ipucu_kelimeler": [
+            "mal kabulde gelen",
+            "koli sayısı"
+          ]
+        }
+      ],
+      "kok_neden": "Firenin çoğu hırsızlık değil kayıt hatası: hasar gören ürünler atılıyor ama sistemden düşülmüyor, hasar kaydını tutan çalışan ayrılınca görev kimseye verilmedi ve kayıp ancak yıl sonu sayımında fire olarak görünüyor.",
+      "kok_neden_kelimeler": [
+        "kayıt",
+        "hasar",
+        "sistemden düşül",
+        "görev",
+        "sayım"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Mal kabul sayılmıyor: eksik gelen fire yazılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mal kabulde yalnızca koli sayısı kontrol ediliyor; koli içi adet sayılmıyor ve irsaliyedeki adet sisteme giriliyor.",
+          "acilma_kosulu": "Mal kabul sayımı sorulursa",
+          "ipucu_kelimeler": [
+            "mal kabulde gelen",
+            "koli içi",
+            "irsaliye"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Firenin çoğu belli iki tedarikçinin ürünlerinde ve hep \"eksik\" şeklinde; ürünler raftan kaybolmuyor, hiç gelmemiş.",
+          "acilma_kosulu": "Firenin yoğunlaştığı ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi ürün gruplarında",
+            "iki tedarikçi",
+            "hiç gelmemiş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce iş yükü nedeniyle mal kabul sayımı \"güvenilir tedarikçiler\" için kaldırıldı.",
+          "acilma_kosulu": "Işleyişteki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "işleyişinde",
+            "güvenilir tedarikçi",
+            "kaldırıldı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hasarlı ürünler aynı gün sistemden düşülüyor.",
+          "acilma_kosulu": "Hasarlı ve iade ürün süreci sorulursa",
+          "ipucu_kelimeler": [
+            "hasarlı ve iade",
+            "aynı gün"
+          ]
+        }
+      ],
+      "kok_neden": "Firenin çoğu mal kabulden: bazı tedarikçiler için koli içi sayım kaldırıldı, irsaliyedeki adet doğrudan sisteme giriliyor ve eksik gelen ürünler hiç mağazaya girmeden yıl sonunda fire olarak çıkıyor.",
+      "kok_neden_kelimeler": [
+        "mal kabul",
+        "sayım",
+        "eksik",
+        "tedarikçi",
+        "irsaliye"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İade süreci açık: iade edilen ürün stoka geri girmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteri iadeleri kasada para iadesiyle kapatılıyor; ürün iade dolabına konuyor ama sisteme stok olarak geri girilmiyor ve dolap haftalarca sayılmıyor.",
+          "acilma_kosulu": "Hasarlı ve iade ürün süreci sorulursa",
+          "ipucu_kelimeler": [
+            "hasarlı ve iade",
+            "iade dolabı",
+            "geri girilmiyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce iade süresi 14 günden 30 güne çıkarıldı; iade sayısı ikiye katlandı.",
+          "acilma_kosulu": "Işleyişteki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "işleyişinde",
+            "30 gün",
+            "ikiye katlandı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fire en çok iadesi yüksek tekstil ve küçük elektronik ürünlerde.",
+          "acilma_kosulu": "Firenin yoğunlaştığı ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi ürün gruplarında",
+            "tekstil",
+            "küçük elektronik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mal kabulde koli içi sayım yapılıyor.",
+          "acilma_kosulu": "Mal kabul sayımı sorulursa",
+          "ipucu_kelimeler": [
+            "mal kabulde gelen",
+            "koli içi sayım"
+          ]
+        }
+      ],
+      "kok_neden": "Fire iade sürecinden: iade süresi uzayınca iadeler ikiye katlandı, kasada para iadesi yapılan ürünler sisteme stok olarak geri girilmiyor ve iade dolabı haftalarca sayılmadığı için ürünler kayıp görünüyor.",
+      "kok_neden_kelimeler": [
+        "iade",
+        "stoka geri",
+        "dolap",
+        "sistem",
+        "süre"
+      ]
+    }
+  ]
+}

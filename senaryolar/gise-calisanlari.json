@@ -1,0 +1,199 @@
+{
+  "id": "gise-calisanlari",
+  "baslik": "Gişe çalışanları neden ilk yılda ayrılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Şubelerde işe başlayan gişe ve müşteri hizmetleri çalışanlarının yarısı ilk yılda ayrılıyor; her ayrılan için eğitim maliyeti tekrar ediyor. Bölge İK sorumlusuyla konuşuyorsun.",
+  "rolun": "Bölge müdürüsün. Amacın daha çok işe alım yapmak değil, yeni çalışanların neden ayrıldığını anlamak.",
+  "karakter": {
+    "ad": "Cüneyt",
+    "rol": "Bölge İK sorumlusu",
+    "tavir": "Rakamlara hâkim ve pragmatik; \"genç kuşak sabırsız\" diyor. Ayrılanların hikâyesini soran birine dürüst.",
+    "ilk_soz": "Genç kuşak sabırsız, ilk zorlukta başka işe geçiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Gençler iş değiştirmeyi seviyor.",
+    "Bankacılık eskisi kadar cazip değil."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni bir çalışanın ilk üç ayı nasıl geçiyor?",
+    "Ayrılanlar çıkış görüşmesinde ne söylüyor?",
+    "Gişe çalışanının günlük işi ne, hangi hedeflerle ölçülüyor?",
+    "Bu rolden bir sonraki role geçmek nasıl ve ne kadar sürede oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Satış rolüne dönüştü: işe alınan iş başka",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlan \"müşteri hizmetleri\" diyor; ama günlük işin yarısı kredi kartı ve sigorta satışı, çalışan satış adediyle ölçülüyor.",
+          "acilma_kosulu": "Günlük iş ve hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işi ne",
+            "satış adedi",
+            "kredi kartı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanlar \"satış yapacağımı bilseydim başvurmazdım\" diyor.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "çıkış görüşmesinde",
+            "bilseydim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlk ay sınıf eğitimi; ikinci aydan itibaren satış hedefi veriliyor.",
+          "acilma_kosulu": "Ilk üç ay sorulursa",
+          "ipucu_kelimeler": [
+            "ilk üç ayı",
+            "ikinci aydan",
+            "satış hedefi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bir üst role geçiş iki yıl sürüyor.",
+          "acilma_kosulu": "Kariyer yolu sorulursa",
+          "ipucu_kelimeler": [
+            "bir sonraki role",
+            "iki yıl"
+          ]
+        }
+      ],
+      "kok_neden": "Yeni çalışanlar beklenti farkından ayrılıyor: ilan müşteri hizmetleri diyor ama işin yarısı satış, ikinci aydan itibaren satış hedefi geliyor ve çalışanlar satış yapacaklarını bilseler başvurmayacaklarını söylüyor.",
+      "kok_neden_kelimeler": [
+        "satış",
+        "ilan",
+        "beklenti",
+        "hedef",
+        "müşteri hizmetleri"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yalnız bırakılıyor: eğitimden sonra destek yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki haftalık eğitimden sonra çalışan doğrudan gişeye veriliyor; yanında bir mentor yok, kıdemli çalışanlar da kendi kuyruğuna bakıyor.",
+          "acilma_kosulu": "Ilk üç ay sorulursa",
+          "ipucu_kelimeler": [
+            "ilk üç ayı",
+            "mentor",
+            "doğrudan gişe"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanlar \"ilk ay hata yapmaktan korktum, kimseye soramadım\" diyor; kasa farkları maaştan kesiliyor.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "çıkış görüşmesinde",
+            "kasa farkı",
+            "soramadım"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gişe işi nakit ve işlem yoğun; ilk aylarda hata payı yüksek.",
+          "acilma_kosulu": "Günlük iş ve hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işi ne",
+            "nakit",
+            "hata payı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bir sonraki role geçiş net tanımlı.",
+          "acilma_kosulu": "Kariyer yolu sorulursa",
+          "ipucu_kelimeler": [
+            "bir sonraki role",
+            "net tanımlı"
+          ]
+        }
+      ],
+      "kok_neden": "Yeni çalışanlar yalnız bırakıldığı için ayrılıyor: iki haftalık eğitimden sonra mentorsuz gişeye veriliyor, kimseye soramıyor ve ilk aylardaki kasa farkları maaştan kesilince korkup gidiyor.",
+      "kok_neden_kelimeler": [
+        "mentor",
+        "yalnız",
+        "kasa farkı",
+        "destek",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Gelecek görünmüyor: terfi yolu tıkalı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gişeden müşteri temsilciliğine geçiş için en az üç yıl ve bir sınav gerekiyor; son iki yılda bölgede kimse geçmedi.",
+          "acilma_kosulu": "Kariyer yolu sorulursa",
+          "ipucu_kelimeler": [
+            "bir sonraki role",
+            "üç yıl",
+            "sınav"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu başka bankalarda daha üst bir rolde işe başladı.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "çıkış görüşmesinde",
+            "daha üst bir rol"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlk üç ay iyi geçiyor; mentor ve düzenli geri bildirim var.",
+          "acilma_kosulu": "Ilk üç ay sorulursa",
+          "ipucu_kelimeler": [
+            "ilk üç ayı",
+            "düzenli geri bildirim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedefler makul.",
+          "acilma_kosulu": "Günlük iş ve hedefler sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işi ne",
+            "makul"
+          ]
+        }
+      ],
+      "kok_neden": "Yeni çalışanlar gelecek görmediği için ayrılıyor: gişeden bir üst role geçiş en az üç yıl ve sınav istiyor, son iki yılda kimse geçemedi ve çalışanlar başka bankalarda daha üst rollerle işe başlıyor.",
+      "kok_neden_kelimeler": [
+        "terfi",
+        "üç yıl",
+        "gelecek",
+        "üst rol",
+        "yol"
+      ]
+    }
+  ]
+}

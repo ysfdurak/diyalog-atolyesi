@@ -1,0 +1,202 @@
+{
+  "id": "sube-satis-baskisi",
+  "baslik": "Şube satış hedefleri neden müşteri şikâyeti getiriyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Şubede sigorta ve yatırım ürünü satış hedefleri tutuyor; ama aynı dönemde \"istemediğim ürün satıldı\" şikâyetleri üç katına çıktı ve iki çalışan hakkında inceleme açıldı. Şubenin satış ekip lideriyle konuşuyorsun.",
+  "rolun": "Şube müdürüsün. Amacın çalışanları cezalandırmak değil, satış davranışının neden bu yöne gittiğini anlamak.",
+  "karakter": {
+    "ad": "Sevda",
+    "rol": "Şube satış ekip lideri",
+    "tavir": "Ekibini savunan ve gergin biri; \"hedefler bize yukarıdan geliyor\" diyor. Baskının kaynağını soran birine dürüst.",
+    "ilk_soz": "Hedefler bize yukarıdan geliyor. Ekip tutturmak için elinden geleni yapıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Bazı çalışanlar etik değil.",
+    "Müşteriler sonradan pişman oluyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ekibin satış hedefleri nasıl belirleniyor ve nasıl takip ediliyor?",
+    "Şikâyet gelen satışların ortak noktası ne?",
+    "Bir çalışan hedefin gerisinde kalınca neler oluyor?",
+    "Çalışanlar ürünleri nasıl öğreniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Günlük baskı: ekranda sıralama ve sabah telefonları",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hedefler günlük takip ediliyor; her sabah bölge müdürü satışların ekranını paylaşıp en düşük çalışanları telefonla arıyor.",
+          "acilma_kosulu": "Hedeflerin belirlenme ve takibi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip ediliyor",
+            "her sabah",
+            "en düşük"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hedefin gerisinde kalan çalışan haftalık toplantıda adıyla anılıyor ve primini kaybediyor.",
+          "acilma_kosulu": "Hedefin gerisinde kalmanın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "gerisinde kalınca",
+            "adıyla",
+            "primini kaybed"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şikâyet gelen satışların çoğu ay sonuna yakın, kredi kullandırımıyla birlikte paket olarak yapılan sigorta satışları.",
+          "acilma_kosulu": "Şikâyet gelen satışların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "ay sonu",
+            "paket olarak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün eğitimleri çevrim içi veriliyor.",
+          "acilma_kosulu": "Ürün eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "ürünleri nasıl",
+            "çevrim içi"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler hedef baskısından: hedefler her gün sıralamayla takip ediliyor, geride kalan çalışan adıyla anılıp prim kaybediyor ve ay sonunda çalışanlar sigortayı krediyle birlikte paket hâlinde müşteriye 'zorunluymuş gibi' satıyor.",
+      "kok_neden_kelimeler": [
+        "baskı",
+        "hedef",
+        "sıralama",
+        "prim",
+        "paket"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ürün bilgisi eksik: çalışan ürünü anlamadan satıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yatırım ürünleri iki saatlik bir çevrim içi modülle öğretiliyor; çalışanların çoğu ürünün riskini müşteriye anlatabilecek düzeyde bilmiyor.",
+          "acilma_kosulu": "Ürün eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "ürünleri nasıl",
+            "iki saat",
+            "risk"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerin çoğu \"riskini bilmiyordum\" ve \"faizi garanti sanmıştım\" diyen yatırım ürünü alıcıları.",
+          "acilma_kosulu": "Şikâyet gelen satışların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "riskini bilmiyordum",
+            "garanti"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hedefler aylık belirleniyor ve makul; ama yeni ürünler hedeflere eğitimden önce ekleniyor.",
+          "acilma_kosulu": "Hedeflerin belirlenme ve takibi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip ediliyor",
+            "eğitimden önce",
+            "yeni ürün"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geride kalan çalışana koçluk veriliyor.",
+          "acilma_kosulu": "Hedefin gerisinde kalmanın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "gerisinde kalınca",
+            "koçluk"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler bilgi eksikliğinden: yeni yatırım ürünleri hedeflere eğitimden önce ekleniyor, çalışanlar riskleri anlatabilecek kadar bilmiyor ve müşteriler riskli ürünü garanti sanarak alıyor.",
+      "kok_neden_kelimeler": [
+        "eğitim",
+        "risk",
+        "bilgi",
+        "yeni ürün",
+        "anlatam"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yanlış teşvik: prim satışta, şikâyet kimsede",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Prim satış adedine göre ödeniyor; satılan ürünün iptal ya da şikâyet olması primi etkilemiyor.",
+          "acilma_kosulu": "Hedeflerin belirlenme ve takibi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip ediliyor",
+            "satış adedi",
+            "iptal"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyet gelen satışların çoğu üç ay içinde iptal edilen ürünler; iptal edilen ürünün primi geri alınmıyor.",
+          "acilma_kosulu": "Şikâyet gelen satışların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "üç ay içinde",
+            "geri alınmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hedefin gerisinde kalan çalışan için bir yaptırım yok; ama en yüksek satıcılara ödül tatili veriliyor ve yarış oluşuyor.",
+          "acilma_kosulu": "Hedefin gerisinde kalmanın sonucu sorulursa",
+          "ipucu_kelimeler": [
+            "gerisinde kalınca",
+            "ödül tatili",
+            "yarış"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün eğitimleri yüz yüze ve ayrıntılı.",
+          "acilma_kosulu": "Ürün eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "ürünleri nasıl",
+            "yüz yüze"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler teşvik yapısından: prim satış adedine göre ödeniyor, iptal ve şikâyet primi etkilemiyor ve en yüksek satıcılara verilen ödül bir yarış yaratıyor; müşteriye uymayan ürünü satmak çalışana hiçbir bedel getirmiyor.",
+      "kok_neden_kelimeler": [
+        "teşvik",
+        "prim",
+        "iptal",
+        "ödül",
+        "satış adedi"
+      ]
+    }
+  ]
+}

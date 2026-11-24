@@ -1,0 +1,201 @@
+{
+  "id": "mobil-uygulama-gecis",
+  "baslik": "Müşteriler yeni mobil uygulamaya neden geçmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Bankanın yeni mobil uygulaması altı ay önce yayına alındı; eski uygulama kapatılınca aktif dijital müşteri sayısı %20 düştü ve şubelere gelen müşteri arttı. Geçiş projesinin proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Dijital bankacılığın sponsorusun. Amacın eski uygulamayı geri getirmek değil, müşterilerin neden geçmediğini anlamak.",
+  "karakter": {
+    "ad": "Oğuz",
+    "rol": "Dijital geçiş proje yöneticisi",
+    "tavir": "Teknik olarak gururlu; \"uygulama ödül aldı\" diyor. Kullanıcı tarafını soran birine dürüst.",
+    "ilk_soz": "Uygulama tasarım ödülü aldı, çok daha modern. Müşteriler alışacak bence."
+  },
+  "yaniltici_ipuclari": [
+    "Yaşlı müşteriler teknolojiye uzak.",
+    "Değişikliğe herkes direnir."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Eski uygulamadan yeniye geçiş müşteri için nasıl bir süreç?",
+    "Geçmeyen ya da bırakan müşterilerin ortak noktası ne?",
+    "Eski uygulamada yapılıp yenisinde yapılamayan hangi işlemler var?",
+    "Müşteriler geçiş hakkında nasıl bilgilendirildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Eksik işlem: en sık yapılan işler yeni uygulamada yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yeni uygulamada fatura talimatı, düzenli ödeme ve döviz alım satımı henüz yok; bunlar \"ikinci fazda\" gelecek.",
+          "acilma_kosulu": "Eksik işlemler sorulursa",
+          "ipucu_kelimeler": [
+            "yapılamayan hangi",
+            "fatura talimatı",
+            "ikinci faz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bırakanların çoğu her ay fatura ve kira ödemesini uygulamadan yapan müşteriler; şimdi bunun için şubeye geliyorlar.",
+          "acilma_kosulu": "Bırakanların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geçmeyen ya da bırakan",
+            "kira ödemesi",
+            "şubeye geliyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Eski uygulama yeni uygulama yayına girdiği gün kapatıldı; iki uygulamanın paralel çalıştığı bir dönem olmadı.",
+          "acilma_kosulu": "Geçiş sürecinin müşteri tarafı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş müşteri için",
+            "aynı gün",
+            "paralel"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterilere SMS ile bilgi verildi.",
+          "acilma_kosulu": "Müşteri bilgilendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bilgilendirildi",
+            "sms ile"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler geçmiyor çünkü yeni uygulama en sık işleri yapmıyor: fatura talimatı ve düzenli ödeme gibi işlemler 'ikinci faza' bırakıldı, eski uygulama yenisi açıldığı gün kapatıldı ve bu işleri yapan müşteriler şubeye döndü.",
+      "kok_neden_kelimeler": [
+        "eksik işlem",
+        "fatura",
+        "ikinci faz",
+        "kapatıldı",
+        "paralel"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Giriş zorlaştı: yeni güvenlik adımları",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yeni uygulamaya ilk girişte kimlik fotoğrafı, yüz tanıma ve SMS doğrulaması gerekiyor; eski uygulamada yalnızca şifre vardı.",
+          "acilma_kosulu": "Geçiş sürecinin müşteri tarafı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş müşteri için",
+            "yüz tanıma",
+            "kimlik fotoğrafı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bırakanların çoğu 55 yaş üstü ve eski model telefon kullanan müşteriler; yüz tanıma bu telefonlarda çalışmıyor.",
+          "acilma_kosulu": "Bırakanların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geçmeyen ya da bırakan",
+            "55 yaş",
+            "eski model telefon"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Uygulama eski uygulamanın bütün işlemlerini yapabiliyor.",
+          "acilma_kosulu": "Eksik işlemler sorulursa",
+          "ipucu_kelimeler": [
+            "yapılamayan hangi",
+            "bütün işlemleri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterilere geçiş için e-posta gönderildi.",
+          "acilma_kosulu": "Müşteri bilgilendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bilgilendirildi",
+            "e-posta gönderil"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler geçmiyor çünkü ilk giriş zorlaştı: yeni uygulama kimlik fotoğrafı ve yüz tanıma istiyor, eski telefonlarda yüz tanıma çalışmıyor ve özellikle yaşlı müşteriler ilk girişte takılıp vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "giriş",
+        "yüz tanıma",
+        "eski telefon",
+        "güvenlik",
+        "ilk giriş"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Habersiz geçiş: müşteri uygulamanın kapandığını o gün öğrendi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteriler geçişi eski uygulamayı açtıklarında çıkan \"bu uygulama artık kullanılmıyor\" uyarısıyla öğrendi; önceden bilgilendirme yapılmadı.",
+          "acilma_kosulu": "Müşteri bilgilendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl bilgilendirildi",
+            "artık kullanılmıyor",
+            "önceden"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni uygulamayı mağazada bulmak için müşterilerin aramayla bulması gerekiyor; eski uygulamadan yeniye yönlendirme bağlantısı yok.",
+          "acilma_kosulu": "Geçiş sürecinin müşteri tarafı sorulursa",
+          "ipucu_kelimeler": [
+            "geçiş müşteri için",
+            "yönlendirme",
+            "aramayla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bırakanlar her yaştan; çoğu yeni uygulamanın adının farklı olduğunu bilmiyor ve sahte uygulama sanıyor.",
+          "acilma_kosulu": "Bırakanların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geçmeyen ya da bırakan",
+            "adının farklı",
+            "sahte"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bütün işlemler yeni uygulamada mevcut.",
+          "acilma_kosulu": "Eksik işlemler sorulursa",
+          "ipucu_kelimeler": [
+            "yapılamayan hangi",
+            "mevcut"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler geçmiyor çünkü geçiş habersiz yapıldı: müşteriler eski uygulamanın kapandığını o gün öğrendi, yeniye yönlendirme yok ve adı farklı olan yeni uygulamayı birçok müşteri bulamadı ya da sahte sandı.",
+      "kok_neden_kelimeler": [
+        "habersiz",
+        "bilgilendir",
+        "yönlendirme",
+        "ad",
+        "sahte"
+      ]
+    }
+  ]
+}

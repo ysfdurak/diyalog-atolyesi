@@ -1,0 +1,201 @@
+{
+  "id": "cagri-merkezi-tekrar",
+  "baslik": "Çağrı merkezini aynı müşteriler neden tekrar arıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Bankanın çağrı merkezinde arayanların %38'i aynı konuda yedi gün içinde tekrar arıyor. Çağrı başına maliyet artıyor, müşteri memnuniyeti düşüyor. Çağrı merkezi kalite sorumlusuyla konuşuyorsun.",
+  "rolun": "Müşteri deneyiminden sorumlu yöneticisin. Amacın temsilcileri suçlamak değil, müşterilerin neden tekrar aradığını anlamak.",
+  "karakter": {
+    "ad": "Berk",
+    "rol": "Çağrı merkezi kalite sorumlusu",
+    "tavir": "Ölçümlere hâkim; \"temsilciler kısa sürede kapatmaya odaklı\" diyor. Çağrıların içeriğini soran birine açık.",
+    "ilk_soz": "Temsilcilerimiz çağrıları hızlı kapatıyor, ortalama süremiz çok iyi."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler anlamıyor.",
+    "Yaşlı müşteriler çok arıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Tekrar arayanlar en çok hangi konularda arıyor?",
+    "İlk aramada müşteriye ne söyleniyor ve çağrı nasıl kapanıyor?",
+    "Temsilcilerin hangi işlemleri yapma yetkisi var?",
+    "Temsilciler hangi göstergelerle değerlendiriliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yetki yok: temsilci talep açıyor, çözüm başka birimde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Temsilcilerin kart limiti, ücret iadesi ya da itiraz için yetkisi yok; her biri için arka ofise talep açıyorlar.",
+          "acilma_kosulu": "Temsilci yetkileri sorulursa",
+          "ipucu_kelimeler": [
+            "yetkisi var",
+            "arka ofis",
+            "ücret iadesi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk aramada müşteriye \"talebiniz alındı, 3-5 iş günü içinde dönülecek\" deniyor; arka ofis çoğu zaman dönmüyor.",
+          "acilma_kosulu": "Ilk aramanın kapanışı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk aramada",
+            "3-5 iş günü",
+            "dönmüyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tekrar arayanların çoğu \"talebim ne oldu\" diye arıyor.",
+          "acilma_kosulu": "Tekrar arama konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "talebim ne oldu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Temsilciler çağrı süresiyle ölçülüyor.",
+          "acilma_kosulu": "Temsilci göstergeleri sorulursa",
+          "ipucu_kelimeler": [
+            "göstergelerle",
+            "çağrı süresi"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler tekrar arıyor çünkü ilk çağrıda çözüm yok: temsilcilerin ücret iadesi ve itiraz gibi işlemlerde yetkisi yok, her şey arka ofise talep olarak gidiyor ve müşteriye söz verilen geri dönüş çoğu zaman yapılmıyor.",
+      "kok_neden_kelimeler": [
+        "yetki",
+        "talep",
+        "arka ofis",
+        "dönülmüyor",
+        "çözüm"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gösterge yanlış: hızlı kapatma ödüllendiriliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Temsilciler ortalama çağrı süresiyle ölçülüyor ve prim alıyor; 4 dakikayı aşan çağrılar performansı düşürüyor.",
+          "acilma_kosulu": "Temsilci göstergeleri sorulursa",
+          "ipucu_kelimeler": [
+            "göstergelerle",
+            "4 dakika",
+            "prim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Temsilciler karmaşık soruları \"şubeye gidin\" ya da \"tekrar arayın\" diyerek kısa kesiyor.",
+          "acilma_kosulu": "Ilk aramanın kapanışı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk aramada",
+            "şubeye gidin",
+            "kısa kes"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tekrar arayanların konuları karmaşık işlemler: kredi yapılandırma, itiraz, hesap kapama.",
+          "acilma_kosulu": "Tekrar arama konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "yapılandırma",
+            "itiraz"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Temsilcilerin birçok işlem için yetkisi var.",
+          "acilma_kosulu": "Temsilci yetkileri sorulursa",
+          "ipucu_kelimeler": [
+            "yetkisi var",
+            "birçok işlem"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler tekrar arıyor çünkü gösterge hızı ödüllendiriyor: temsilciler ortalama çağrı süresiyle prim alıyor, karmaşık sorular 'şubeye gidin' ya da 'tekrar arayın' diye kısa kesiliyor ve ilk çağrıda çözüm oranı hiç ölçülmüyor.",
+      "kok_neden_kelimeler": [
+        "çağrı süresi",
+        "prim",
+        "hız",
+        "ilk çağrıda çözüm",
+        "kısa kes"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bilgi tutarsız: her temsilci farklı cevap veriyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tekrar arayanların çoğu ilk aramada aldığı cevabı doğrulamak için arıyor: \"önceki temsilci başka söyledi\".",
+          "acilma_kosulu": "Tekrar arama konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "başka söyledi",
+            "doğrula"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk aramada temsilciler ürün kurallarını bilgi ekranından değil hafızadan anlatıyor; bilgi ekranı üç aydır güncellenmedi.",
+          "acilma_kosulu": "Ilk aramanın kapanışı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk aramada",
+            "bilgi ekranı",
+            "hafızadan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yetkiler yeterli; ama ürün ve ücret kuralları sık değişiyor ve değişiklikler temsilcilere e-postayla bildiriliyor.",
+          "acilma_kosulu": "Temsilci yetkileri sorulursa",
+          "ipucu_kelimeler": [
+            "yetkisi var",
+            "sık değişiyor",
+            "e-postayla"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Temsilciler müşteri memnuniyetiyle değerlendiriliyor.",
+          "acilma_kosulu": "Temsilci göstergeleri sorulursa",
+          "ipucu_kelimeler": [
+            "göstergelerle",
+            "memnuniyet"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteriler tekrar arıyor çünkü cevaplar tutarsız: ürün ve ücret kuralları sık değişiyor, değişiklikler e-postayla geliyor, bilgi ekranı güncel değil ve temsilciler hafızadan farklı cevaplar verince müşteri doğrulamak için yeniden arıyor.",
+      "kok_neden_kelimeler": [
+        "tutarsız",
+        "bilgi ekranı",
+        "güncel",
+        "farklı cevap",
+        "doğrula"
+      ]
+    }
+  ]
+}

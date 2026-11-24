@@ -1,0 +1,200 @@
+{
+  "id": "yogun-saatte-kimse-yok",
+  "baslik": "Mağazada yoğun saatlerde neden yeterli çalışan yok?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Mağazada akşam 18:00-21:00 ve hafta sonu öğleden sonra müşterilerin yarısı geliyor; ama bu saatlerde çalışan sayısı gün ortalamasının altında. Vardiya planını yapan mağaza müdür yardımcısıyla konuşuyorsun.",
+  "rolun": "Bölge İK ve operasyon sorumlususun. Amacın planı eleştirmek değil, yoğun saatlerde neden kimse olmadığını anlamak.",
+  "karakter": {
+    "ad": "Selda",
+    "rol": "Mağaza müdür yardımcısı",
+    "tavir": "Çözüm arayan ama sıkışmış biri; \"kurallar elimi bağlıyor\" diyor. Plan yapmanın zorluklarını soran birine açık.",
+    "ilk_soz": "Planı her hafta yapıyorum ama kurallar ve kadro elimi bağlıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar akşam çalışmak istemiyor.",
+    "Kadro yetersiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Vardiya planı nasıl hazırlanıyor, hangi kurallara uymak gerekiyor?",
+    "Çalışanların sözleşmeleri ve çalışma saatleri nasıl?",
+    "Plan yapılırken müşteri yoğunluğu nasıl hesaba katılıyor?",
+    "Akşam vardiyasında çalışmak isteyen ya da istemeyenlerin durumu ne?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sözleşme yapısı: herkes tam zamanlı, sabit vardiya",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Çalışanların hepsi tam zamanlı ve sabit 09:00-18:00 ya da 12:00-21:00 vardiyasında; yarı zamanlı ya da akşam sözleşmesi yok.",
+          "acilma_kosulu": "Sözleşme ve saatler sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmeleri",
+            "tam zamanlı",
+            "yarı zamanlı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Plan, iki sabit vardiyayı haftaya dağıtmaktan ibaret; günün en yoğun üç saatini ek kişiyle karşılayacak bir seçenek yok.",
+          "acilma_kosulu": "Planlama kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kurallara",
+            "iki sabit vardiya",
+            "ek kişi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yoğunluk plana girmiyor; kişi sayısı her saat için aynı.",
+          "acilma_kosulu": "Yoğunluğun plana katılması sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri yoğunluğu",
+            "her saat için aynı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Akşam vardiyasını tercih edenler de var.",
+          "acilma_kosulu": "Akşam vardiyası tercihleri sorulursa",
+          "ipucu_kelimeler": [
+            "akşam vardiyasında",
+            "tercih eden"
+          ]
+        }
+      ],
+      "kok_neden": "Yoğun saatlerde kimse yok çünkü sözleşme yapısı esnek değil: herkes tam zamanlı ve iki sabit vardiyadan birinde, yarı zamanlı ya da akşam sözleşmesi yok ve plan günün en yoğun saatlerini ek kişiyle karşılayamıyor.",
+      "kok_neden_kelimeler": [
+        "sözleşme",
+        "tam zamanlı",
+        "yarı zamanlı",
+        "sabit vardiya",
+        "esnek"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Veri yok: plan yoğunluğa değil alışkanlığa göre",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Plan yapılırken müşteri yoğunluğu verisi kullanılmıyor; sayaç verisi merkezde, mağazaya hiç gelmiyor.",
+          "acilma_kosulu": "Yoğunluğun plana katılması sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri yoğunluğu",
+            "sayaç verisi",
+            "merkezde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Plan geçen ayın planı kopyalanarak yapılıyor; kurallar esnek ama kimse saatlik yoğunluğu bilmiyor.",
+          "acilma_kosulu": "Planlama kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kurallara",
+            "kopyalan",
+            "saatlik yoğunluk"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Akşam çalışmak isteyen öğrenciler var ama yoğun saatlerin hangileri olduğu bilinmediği için onlara teklif yapılmıyor.",
+          "acilma_kosulu": "Akşam vardiyası tercihleri sorulursa",
+          "ipucu_kelimeler": [
+            "akşam vardiyasında",
+            "öğrenci",
+            "teklif"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yarı zamanlı sözleşmeler mümkün.",
+          "acilma_kosulu": "Sözleşme ve saatler sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmeleri",
+            "mümkün"
+          ]
+        }
+      ],
+      "kok_neden": "Yoğun saatlerde kimse yok çünkü plan veriye değil alışkanlığa dayanıyor: müşteri sayaç verisi merkezde kalıyor, plan geçen aydan kopyalanıyor ve yarı zamanlı akşam çalışmak isteyenler olduğu hâlde yoğun saatler bilinmediği için kullanılmıyor.",
+      "kok_neden_kelimeler": [
+        "veri",
+        "yoğunluk",
+        "kopyalan",
+        "sayaç",
+        "alışkanlık"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Akşamı kimse istemiyor: ulaşım ve ek ücret yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Akşam vardiyasını kimse istemiyor; 21:30'dan sonra toplu taşıma seyrek ve akşam vardiyasına ek ücret ya da servis yok.",
+          "acilma_kosulu": "Akşam vardiyası tercihleri sorulursa",
+          "ipucu_kelimeler": [
+            "akşam vardiyasında",
+            "toplu taşıma",
+            "servis"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Çalışanların sözleşmesi dönüşümlü vardiyaya izin veriyor; ama akşam vardiyası eşit dağıtılınca en deneyimliler istifa tehdidinde bulundu.",
+          "acilma_kosulu": "Sözleşme ve saatler sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmeleri",
+            "dönüşümlü",
+            "istifa"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Plan, akşam vardiyasına ancak gönüllü bulunabildiği kadar kişi yazılarak yapılıyor.",
+          "acilma_kosulu": "Planlama kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kurallara",
+            "gönüllü bulunabildiği"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yoğunluk verisi plana giriyor.",
+          "acilma_kosulu": "Yoğunluğun plana katılması sorulursa",
+          "ipucu_kelimeler": [
+            "müşteri yoğunluğu",
+            "plana giriyor"
+          ]
+        }
+      ],
+      "kok_neden": "Yoğun saatlerde kimse yok çünkü akşam vardiyası cazip değil: 21:30'dan sonra ulaşım zor, akşam için ek ücret ya da servis yok, akşamı eşit dağıtma denemesi istifa tehdidiyle geri alındı ve plan gönüllü sayısıyla sınırlı.",
+      "kok_neden_kelimeler": [
+        "akşam",
+        "ulaşım",
+        "ek ücret",
+        "servis",
+        "gönüllü"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "musteri-tanima-eksikleri",
+  "baslik": "Müşteri tanıma eksikleri denetimde neden tekrar çıkıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sektor": "Bankacılık",
+  "sure_dk": 8,
+  "acilis": "İç denetimde şubelerde açılan hesapların %22'sinde müşteri tanıma (KYC) belgelerinde eksik bulundu; geçen yıl da aynı bulgu çıkmıştı ve \"eğitim verildi\" diye kapatılmıştı. Uyum biriminden sorumlu uzmanla konuşuyorsun.",
+  "rolun": "Uyum ve kaliteden sorumlu yöneticisin. Amacın şubeleri cezalandırmak değil, eksiklerin neden tekrar ettiğini anlamak.",
+  "karakter": {
+    "ad": "Yasemin",
+    "rol": "Uyum uzmanı",
+    "tavir": "Kurallara bağlı ve endişeli; \"şubeler kuralı biliyor ama uygulamıyor\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Şubeler kuralları biliyor, eğitimi geçen yıl verdik. Uygulamada atlıyorlar."
+  },
+  "yaniltici_ipuclari": [
+    "Şubeler kuralları önemsemiyor.",
+    "Yeni çalışanlar dikkatsiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Eksikler en çok hangi belgelerde ve hangi hesap türlerinde çıkıyor?",
+    "Hesap açılışında sistem eksik belgeyi nasıl kontrol ediyor?",
+    "Geçen yılki bulgudan sonra neler yapıldı?",
+    "Şube çalışanı hesap açarken zamanla nasıl bir baskı altında?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sistem izin veriyor: eksik belgeyle hesap açılabiliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sistem, belgeler yüklenmeden de hesabı açmaya izin veriyor; \"belgeler sonra tamamlanacak\" diye işaretlenip geçiliyor.",
+          "acilma_kosulu": "Sistem kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "sistem eksik belgeyi",
+            "sonra tamamlanacak",
+            "izin veriyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Eksiklerin çoğu gelir belgesi ve adres doğrulamasında, kampanyayla açılan hesaplarda.",
+          "acilma_kosulu": "Eksiklerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi belgelerde",
+            "gelir belgesi",
+            "kampanya"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl yalnızca eğitim verildi; sistemde zorunlu alan kontrolü eklenmesi önerildi ama BT talebi hâlâ bekliyor.",
+          "acilma_kosulu": "Geçen yılki aksiyon sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılki bulgudan",
+            "zorunlu alan",
+            "bt talebi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hesap açılışı ortalama 20 dakika sürüyor.",
+          "acilma_kosulu": "Hesap açarken zaman baskısı sorulursa",
+          "ipucu_kelimeler": [
+            "zamanla nasıl",
+            "20 dakika"
+          ]
+        }
+      ],
+      "kok_neden": "Eksikler tekrar ediyor çünkü sistem izin veriyor: hesap belgeler yüklenmeden açılabiliyor, 'sonra tamamlanacak' denip unutuluyor ve geçen yıl önerilen zorunlu alan kontrolü BT sırasında beklerken yalnızca eğitim verildi.",
+      "kok_neden_kelimeler": [
+        "sistem",
+        "izin",
+        "zorunlu alan",
+        "eğitim",
+        "bt"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Zaman baskısı: kampanya hedefi ve hızlı hesap",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hesap açma kampanyası döneminde şube çalışanından günde 15 hesap açması bekleniyor; tam bir müşteri tanıma görüşmesi 25 dakika sürüyor.",
+          "acilma_kosulu": "Hesap açarken zaman baskısı sorulursa",
+          "ipucu_kelimeler": [
+            "zamanla nasıl",
+            "15 hesap",
+            "25 dakika"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Eksiklerin çoğu kampanya döneminde açılan hesaplarda.",
+          "acilma_kosulu": "Eksiklerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi belgelerde",
+            "kampanya dönemi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl eğitim verildi; kampanya hedefleri ise uyum birimine danışılmadan belirlendi.",
+          "acilma_kosulu": "Geçen yılki aksiyon sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılki bulgudan",
+            "danışılmadan",
+            "kampanya hedefleri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sistem zorunlu belgeleri kontrol ediyor.",
+          "acilma_kosulu": "Sistem kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "sistem eksik belgeyi",
+            "kontrol ediyor"
+          ]
+        }
+      ],
+      "kok_neden": "Eksikler zaman baskısından tekrar ediyor: kampanya döneminde çalışandan günde 15 hesap bekleniyor, tam müşteri tanıma görüşmesi bu hıza sığmıyor ve hedefler uyum birimine danışılmadan belirlendiği için eğitim tek başına işe yaramıyor.",
+      "kok_neden_kelimeler": [
+        "zaman",
+        "kampanya",
+        "hedef",
+        "danışılmadan",
+        "hız"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kural belirsiz: hangi belgenin ne zaman gerektiği net değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eksiklerin çoğu yabancı uyruklu ve şirket hesaplarında; bu hesaplar için istenen belgeler sık değişiyor.",
+          "acilma_kosulu": "Eksiklerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi belgelerde",
+            "yabancı uyruklu",
+            "şirket hesabı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen yılki eğitim genel kuralları anlattı; hesap türüne göre belge listesi yazılı olarak hiç dağıtılmadı.",
+          "acilma_kosulu": "Geçen yılki aksiyon sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılki bulgudan",
+            "belge listesi",
+            "yazılı olarak"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem temel belgeleri kontrol ediyor; ama hesap türüne göre değişen ek belgeleri tanımıyor.",
+          "acilma_kosulu": "Sistem kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "sistem eksik belgeyi",
+            "ek belge",
+            "hesap türüne göre"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışanlar hesap açarken acele etmiyor.",
+          "acilma_kosulu": "Hesap açarken zaman baskısı sorulursa",
+          "ipucu_kelimeler": [
+            "zamanla nasıl",
+            "acele etmiyor"
+          ]
+        }
+      ],
+      "kok_neden": "Eksikler kural belirsizliğinden tekrar ediyor: yabancı uyruklu ve şirket hesaplarında istenen belgeler sık değişiyor, hesap türüne göre belge listesi yazılı dağıtılmadı ve sistem ek belgeleri tanımadığı için eksik geçiyor.",
+      "kok_neden_kelimeler": [
+        "belirsiz",
+        "belge listesi",
+        "hesap türü",
+        "değiş",
+        "yazılı"
+      ]
+    }
+  ]
+}
