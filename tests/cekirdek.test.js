@@ -2,7 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { dirname, join } from 'node:path';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { gununSenaryosu, herkeseAcik, senaryoDogrula, senaryolariYukle, varyantCozumle } from '../src/cekirdek/senaryolar.js';
@@ -19,10 +19,11 @@ const serbest = () => ({ izin: true });
 const ilkVaryant = (a) => a[0]; // testlerde varyant seçimi sabit: adaylardan ilki
 
 test('senaryolar: tüm senaryolar geçerli, alan dağılımı ve ağırlıklar 100 ediyor', () => {
-  assert.equal(senaryolar.size, 30);
+  assert.equal(senaryolar.size, readdirSync(join(kok, 'senaryolar')).filter((f) => f.endsWith('.json')).length);
   const alanlar = {};
   for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
-  assert.deepEqual(alanlar, { 'İş geliştirme': 8, Operasyon: 8, 'Ekip yönetimi': 8, 'Proje yönetimi': 6 });
+  // Her alanda en az altı senaryo olsun: tek senaryolu alan filtrede boş görünür
+  for (const [alan, n] of Object.entries(alanlar)) assert.ok(n >= 6, `${alan}: ${n}`);
   // Her senaryo üç kök nedenli
   for (const [id, s] of senaryolar) assert.equal(s.varyantlar.length, 3, id);
   for (const s of senaryolar.values()) for (const v of s.varyantlar) assert.equal(v.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3, `${s.id}/${v.id}`);

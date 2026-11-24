@@ -1,0 +1,201 @@
+{
+  "id": "sarf-malzeme",
+  "baslik": "Sarf malzeme harcaması neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 6,
+  "acilis": "Depoda streç film, koli bandı ve etiket harcaması son altı ayda %40 arttı; sevkiyat hacmi ise yalnızca %8 arttı. Sarf malzemeden sorumlu depo elemanıyla konuşuyorsun.",
+  "rolun": "Depo maliyetlerinden sorumlu yöneticisin. Amacın israf edeni bulmak değil, harcamanın neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Ümit",
+    "rol": "Sarf malzeme sorumlusu",
+    "tavir": "Samimi ve biraz endişeli; \"kimseye hesap soramıyorum\" diyor. Sürece meraklı birine açık konuşuyor.",
+    "ilk_soz": "Ben isteyene veriyorum, defter de tutuyorum. Ama kimin ne kadar kullandığını takip edemiyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar malzemeyi israf ediyor.",
+    "Fiyatlar arttı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Malzeme depodan kime, nasıl veriliyor?",
+    "Harcama en çok hangi malzemede ve hangi bölümde arttı?",
+    "Artış başlamadan önce işte ne değişti?",
+    "Bir koli ya da palet hazırlanırken malzeme nasıl kullanılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sipariş yapısı değişti: e-ticaret koli başına malzemeyi artırdı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Altı ay önce e-ticaret siparişleri bu depoya taşındı; tek ürünlü küçük siparişler arttı.",
+          "acilma_kosulu": "Artıştan önce işte ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artış başlamadan",
+            "e-ticaret",
+            "küçük sipariş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Artışın çoğu koli bandı ve etikette, paketleme bölümünde.",
+          "acilma_kosulu": "Harcamanın en çok nerede arttığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi malzemede",
+            "koli bandı",
+            "paketleme"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Küçük bir koliye de büyük koli kadar bant ve etiket gidiyor; ürün başına malzeme dört katına çıktı.",
+          "acilma_kosulu": "Malzemenin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken malzeme",
+            "ürün başına",
+            "büyük koli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Malzeme bölüm sorumlularına haftalık veriliyor.",
+          "acilma_kosulu": "Malzemenin kime ve nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan kime",
+            "haftalık"
+          ]
+        }
+      ],
+      "kok_neden": "Artış israftan değil sipariş yapısından: e-ticaret siparişleri bu depoya taşındı, tek ürünlü küçük koliler arttı ve koli başına malzeme aynı kaldığı için ürün başına malzeme dört katına çıktı.",
+      "kok_neden_kelimeler": [
+        "e-ticaret",
+        "küçük",
+        "koli başına",
+        "ürün başına",
+        "sipariş yapısı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ucuz malzeme pahalıya patladı: daha çok tur, daha çok bant",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Satın alma altı ay önce daha ucuz streç film ve banda geçti.",
+          "acilma_kosulu": "Artıştan önce işte ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artış başlamadan",
+            "ucuz",
+            "satın alma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni streç çabuk yırtıldığı için palet iki tur yerine dört tur sarılıyor; yeni bant da tutmadığı için koliler iki kat bantlanıyor.",
+          "acilma_kosulu": "Malzemenin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken malzeme",
+            "tur",
+            "iki kat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Artış en çok streç filmde, sevkiyat bölümünde.",
+          "acilma_kosulu": "Harcamanın en çok nerede arttığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi malzemede",
+            "streç",
+            "sevkiyat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Malzeme defterle veriliyor ve kayıt tutuluyor.",
+          "acilma_kosulu": "Malzemenin kime ve nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan kime",
+            "defter"
+          ]
+        }
+      ],
+      "kok_neden": "Ucuz malzeme pahalıya patladı: satın alma daha ucuz streç ve banda geçti, yeni malzeme daha zayıf olduğu için palet başına sarma turu ve koli başına bant ikiye katlandı.",
+      "kok_neden_kelimeler": [
+        "ucuz",
+        "zayıf",
+        "tur",
+        "streç",
+        "bant"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kontrolsüz dağıtım: malzeme açık rafta, kayıt yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce sarf malzeme odası kapatıldı ve malzeme koridordaki açık rafa kondu; isteyen alıyor, kayıt tutulmuyor.",
+          "acilma_kosulu": "Malzemenin kime ve nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan kime",
+            "açık raf",
+            "kayıt"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Değişiklik, sarf sorumlusu izindeyken \"herkes kendi alsın\" diye geçici olarak yapıldı ve öyle kaldı.",
+          "acilma_kosulu": "Artıştan önce işte ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artış başlamadan",
+            "izin",
+            "herkes"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Artış bütün malzemelerde ve bütün bölümlerde; malzemenin bir kısmı depo dışına da gidiyor.",
+          "acilma_kosulu": "Harcamanın en çok nerede arttığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi malzemede",
+            "depo dışı",
+            "bütün bölüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Koliler standart bir talimatla hazırlanıyor.",
+          "acilma_kosulu": "Malzemenin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken malzeme",
+            "talimat"
+          ]
+        }
+      ],
+      "kok_neden": "Artış kontrolsüz dağıtımdan: sarf malzeme odası kapatılıp malzeme açık rafa kondu, kayıt tutulmuyor ve geçici olarak yapılan değişiklik kalıcı hâle geldi; malzemenin bir kısmı depo dışına gidiyor.",
+      "kok_neden_kelimeler": [
+        "açık raf",
+        "kayıt",
+        "kontrolsüz",
+        "depo dışı",
+        "dağıtım"
+      ]
+    }
+  ]
+}

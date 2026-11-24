@@ -1,0 +1,198 @@
+{
+  "id": "urun-olculeri",
+  "baslik": "Sistemdeki ürün ölçüleri neden yanlış?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Yeni koli seçme sistemi, ürün ölçülerine bakarak her siparişe uygun koliyi öneriyor. Paketleme ekibi önerilerin yarısını kullanmıyor; ürünler önerilen koliye sığmıyor ya da koli çok büyük kalıyor. Ana veri uzmanıyla konuşuyorsun.",
+  "rolun": "Projeyi yürüten veri ve raporlama sorumlususun. Amacın paketleme ekibini ikna etmek değil, verinin neden yanlış olduğunu anlamak.",
+  "karakter": {
+    "ad": "Tolga",
+    "rol": "Ana veri uzmanı",
+    "tavir": "Yoğun ve biraz bıkkın; \"veri tedarikçiden böyle geliyor\" diyor. Sürecin işleyişini soran birine açık konuşuyor.",
+    "ilk_soz": "Ölçüler sistemde var, boş alan yok. Doğru olup olmadığını kontrol etmek bizim işimiz değil ki."
+  },
+  "yaniltici_ipuclari": [
+    "Paketleme ekibi alışkanlıktan eski kolileri kullanıyor.",
+    "Sistem yeni, oturması zaman alır."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir ürünün ölçüleri sisteme nasıl giriyor?",
+    "Yanlış çıkan ölçülerin ortak noktası ne?",
+    "Bir ölçünün yanlış olduğu anlaşılınca ne yapılıyor?",
+    "Ana veri ekibinin başarısı nasıl ölçülüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kaynak yanlış: tek ürün yerine dış koli ölçüsü",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ölçüler tedarikçinin gönderdiği Excel listesinden toplu yükleniyor; listede ürün ölçüsü ile koli ölçüsü ayrı sütunlarda değil.",
+          "acilma_kosulu": "Ölçülerin sisteme nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme nasıl",
+            "tedarikçi",
+            "toplu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yanlış ölçülerin çoğunda sistemde ürünün değil, altılı ya da onlu dış kolinin ölçüsü kayıtlı.",
+          "acilma_kosulu": "Yanlış ölçülerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "ortak noktası",
+            "dış koli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ana veri ekibi yüklenen kayıt sayısı ve boş alan oranıyla ölçülüyor; ölçünün doğruluğu hiç ölçülmüyor.",
+          "acilma_kosulu": "Ana veri ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ana veri ekibinin",
+            "kayıt sayısı",
+            "boş alan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yanlış ölçü bildirmek için bir form var.",
+          "acilma_kosulu": "Yanlış ölçü anlaşılınca ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlaşılınca",
+            "form"
+          ]
+        }
+      ],
+      "kok_neden": "Ölçüler kaynağında yanlış: tedarikçi listesi kontrolsüz toplu yükleniyor, birçok üründe tek ürün yerine dış kolinin ölçüsü kayıtlı ve ana veri ekibi doğruluk değil kayıt sayısıyla ölçülüyor.",
+      "kok_neden_kelimeler": [
+        "tedarikçi",
+        "dış koli",
+        "toplu",
+        "doğruluk",
+        "kayıt sayısı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Düzeltme döngüsü yok: paketleme biliyor, sistem bilmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Paketlemeciler yanlış ölçüyü fark edince koliyi kendileri değiştiriyor; düzeltme sisteme hiç dönmüyor.",
+          "acilma_kosulu": "Yanlış ölçü anlaşılınca ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlaşılınca",
+            "fark ed",
+            "dönmüyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ana veri ekibine düzeltme talebi ancak e-postayla gidebiliyor; paketlemecilerin e-posta adresi yok.",
+          "acilma_kosulu": "Ana veri ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ana veri ekibinin",
+            "e-posta"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yanlış çıkan ölçüler hep aynı 200 üründe; paketleme ekibi bu ürünlerin listesini duvara asmış.",
+          "acilma_kosulu": "Yanlış ölçülerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "ortak noktası",
+            "aynı 200",
+            "duvar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ölçüler ürün sisteme açılırken bir kez giriliyor.",
+          "acilma_kosulu": "Ölçülerin sisteme nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme nasıl",
+            "bir kez"
+          ]
+        }
+      ],
+      "kok_neden": "Hata kalıcı çünkü düzeltme döngüsü yok: paketlemeciler yanlış ölçülü 200 ürünü biliyor ve koliyi kendileri değiştiriyor ama düzeltme sisteme dönmüyor; talep yalnızca e-postayla gidebiliyor ve onların e-postası yok.",
+      "kok_neden_kelimeler": [
+        "düzeltme",
+        "döngü",
+        "sisteme dönmüyor",
+        "e-posta",
+        "paketlemeci"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ambalaj değişti, kart güncellenmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yanlış çıkan ölçülerin hepsi son altı ayda ambalajı yenilenen ürünlerde.",
+          "acilma_kosulu": "Yanlış ölçülerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "ortak noktası",
+            "ambalaj"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ölçüler yalnızca ürün ilk kez açılırken giriliyor; ambalaj değişince ürün kodu değişmediği için kart hiç güncellenmiyor.",
+          "acilma_kosulu": "Ölçülerin sisteme nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme nasıl",
+            "ilk kez",
+            "kod"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mal kabulde ürün ölçülebiliyor ama ölçü cihazı yalnızca yeni ürünlerde kullanılıyor; farkı sisteme bildiren bir adım yok.",
+          "acilma_kosulu": "Yanlış ölçü anlaşılınca ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlaşılınca",
+            "ölçü cihazı",
+            "mal kabul"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ana veri ekibi aylık bir kontrol listesiyle çalışıyor.",
+          "acilma_kosulu": "Ana veri ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ana veri ekibinin",
+            "kontrol listesi"
+          ]
+        }
+      ],
+      "kok_neden": "Ölçüler eskidi: ambalajı değişen ürünlerin kodu değişmediği için kartları güncellenmiyor, ölçüler yalnızca ilk açılışta giriliyor ve mal kabuldeki ölçü cihazı farkı yakalayıp sisteme bildiremiyor.",
+      "kok_neden_kelimeler": [
+        "ambalaj",
+        "güncellen",
+        "ilk",
+        "mal kabul",
+        "ölçü cihazı"
+      ]
+    }
+  ]
+}

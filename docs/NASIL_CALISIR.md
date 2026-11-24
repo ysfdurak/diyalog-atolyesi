@@ -45,7 +45,7 @@ Bir senaryonun birden fazla kök nedeni (varyantı) olabilir. Açılış ve kara
 
 - **Neden:** Rapor kök nedeni gösterdiği için tek kök nedenli senaryo bir kez oynanınca biter. Varyantla "şöyle sorabilirdin" önerileri bir sonraki oynayışta da işe yarar, ama önceki cevap yaramaz. Kişi cevabı değil, soru kalıbını öğrenir.
 - **Gelişim grafiği** her varyantın yalnızca ilk denemesini sayar.
-- **Şu an:** 30 senaryonun hepsi üç kök nedenli; toplam 90 farklı oturum (İş geliştirme 8, Operasyon 8, Ekip yönetimi 8, Proje yönetimi 6). Ana sayfada alan filtresi var.
+- **Şu an:** Bütün senaryolar üç kök nedenli. Hedef bir yıllık içerik: yaklaşık 122 senaryo, 365 oturum. Senaryolar partiler hâlinde ekleniyor; güncel sayı ana sayfada. Ana sayfada alan filtresi var.
 
 Dosyalar: `src/cekirdek/senaryolar.js` (varyantCozumle), `src/cekirdek/oturum.js` (baslat).
 

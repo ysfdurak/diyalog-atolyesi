@@ -1,0 +1,201 @@
+{
+  "id": "veriye-ulasamiyor",
+  "baslik": "Amirler ihtiyaç duydukları veriye neden ulaşamıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 6,
+  "acilis": "Vardiya amirleri ekiplerinin günlük performansını görmek için her gün veri ekibinden rapor istiyor; veri ekibi günde 30'a yakın küçük talebe bakıyor. Amirlerin kendi başına bakabileceği bir rapor sistemi zaten var. Vardiya amirlerinden biriyle konuşuyorsun.",
+  "rolun": "Raporlama sorumlususun. Amacın amirleri sistemi kullanmaya zorlamak değil, veriye neden kendileri ulaşamadıklarını anlamak.",
+  "karakter": {
+    "ad": "Yasin",
+    "rol": "Vardiya amiri",
+    "tavir": "Çekingen; \"bilgisayarla aram iyi değil\" diye kendini küçümsüyor. Yargılanmadığını hissedince anlatıyor.",
+    "ilk_soz": "Veri ekibini çok meşgul ettiğimizi biliyorum. Ben bu sistemlerden pek anlamam."
+  },
+  "yaniltici_ipuclari": [
+    "Bilgisayarla aram iyi değil.",
+    "Gençler daha iyi kullanıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Rapor sistemini en son açmaya çalıştığında ne oldu?",
+    "Günlük olarak hangi bilgiye ihtiyacın oluyor?",
+    "Sistemi kullanmayı nasıl öğrendin?",
+    "Veri ekibinden gelen raporu nerede ve nasıl kullanıyorsun?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Cihaz ve erişim: telefonda açılmıyor, şifre kilitleniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En son açmaya çalıştığında şifresinin süresi dolduğu için hesabı kilitlenmişti; şifre yenilemek için BT'ye talep açmak gerekiyor.",
+          "acilma_kosulu": "Sistemi en son açmaya çalıştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son açmaya",
+            "şifre",
+            "kilit"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Raporu vardiya sırasında sahada telefonundan okuyor; rapor sistemi telefonda açılmıyor ve depoda amirlere ayrılmış bilgisayar yok.",
+          "acilma_kosulu": "Gelen raporu nerede ve nasıl kullandığı sorulursa",
+          "ipucu_kelimeler": [
+            "veri ekibinden gelen",
+            "telefon",
+            "bilgisayar"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Her gün ekibinin bir önceki gün kaç kalem topladığını ve kimin geride kaldığını bilmek istiyor.",
+          "acilma_kosulu": "Günlük olarak hangi bilgiye ihtiyaç duyduğu sorulursa",
+          "ipucu_kelimeler": [
+            "günlük olarak",
+            "kalem",
+            "geride"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sistemin eğitimini bir kez aldı.",
+          "acilma_kosulu": "Sistemi nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanmayı nasıl",
+            "eğitim"
+          ]
+        }
+      ],
+      "kok_neden": "Amirler veriye cihaz ve erişim yüzünden ulaşamıyor: rapor sistemi telefonda açılmıyor, depoda amire ayrılmış bilgisayar yok ve süresi dolan şifre BT talebi gerektirdiği için en kolay yol veri ekibine yazmak.",
+      "kok_neden_kelimeler": [
+        "telefon",
+        "bilgisayar",
+        "şifre",
+        "erişim",
+        "cihaz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sistem onun sorusuna göre değil: kişi bazında görünüm yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her gün ekibindeki kişilerin dünkü performansını görmek istiyor; sistemde ise veriler depo ve bölüm bazında, kişi bazında görünmüyor.",
+          "acilma_kosulu": "Günlük olarak hangi bilgiye ihtiyaç duyduğu sorulursa",
+          "ipucu_kelimeler": [
+            "günlük olarak",
+            "kişi bazında",
+            "bölüm"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son açtığında onlarca filtre ve sekme gördü; kendi ekibini bulmak için hangi filtreyi seçeceğini bilemedi.",
+          "acilma_kosulu": "Sistemi en son açmaya çalıştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son açmaya",
+            "filtre",
+            "sekme"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistemin tanıtımı yöneticilere yapıldı; amirler için kendi işlerine göre hazırlanmış bir görünüm ya da eğitim olmadı.",
+          "acilma_kosulu": "Sistemi nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanmayı nasıl",
+            "tanıtım",
+            "görünüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veri ekibinden gelen raporu sabah toplantısında ekiple paylaşıyor.",
+          "acilma_kosulu": "Gelen raporu nerede ve nasıl kullandığı sorulursa",
+          "ipucu_kelimeler": [
+            "veri ekibinden gelen",
+            "sabah toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem amirin sorusuna göre kurulmamış: amir kişi bazında dünkü performansı görmek istiyor ama sistem depo ve bölüm bazında, filtrelerle dolu ve amirlere göre hazırlanmış bir görünüm ya da eğitim yok.",
+      "kok_neden_kelimeler": [
+        "kişi bazında",
+        "görünüm",
+        "filtre",
+        "amir",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güven ve onay: yalnızca veri ekibinin raporu resmî sayılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Veri ekibinden gelen raporu müdürüne de iletiyor; müdür yalnızca veri ekibinin gönderdiği raporu \"resmî\" kabul ediyor.",
+          "acilma_kosulu": "Gelen raporu nerede ve nasıl kullandığı sorulursa",
+          "ipucu_kelimeler": [
+            "veri ekibinden gelen",
+            "müdür",
+            "resmî"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir keresinde sistemden kendi aldığı rakam veri ekibinin raporundan farklı çıktı ve müdürüne açıklama yapmak zorunda kaldı.",
+          "acilma_kosulu": "Sistemi en son açmaya çalıştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son açmaya",
+            "farklı çıktı",
+            "açıklama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İhtiyacı olan bilgi sistemde var; ama kendi baktığı rakamın doğru sayılacağından emin değil.",
+          "acilma_kosulu": "Günlük olarak hangi bilgiye ihtiyaç duyduğu sorulursa",
+          "ipucu_kelimeler": [
+            "günlük olarak",
+            "emin değil",
+            "doğru sayıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sistemi kullanmayı bir arkadaşından öğrendi.",
+          "acilma_kosulu": "Sistemi nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanmayı nasıl",
+            "arkadaş"
+          ]
+        }
+      ],
+      "kok_neden": "Amirler sistemi değil veri ekibinin onayını istiyor: müdür yalnızca veri ekibinin raporunu resmî sayıyor, sistemden kendi aldığı rakam bir kez farklı çıkınca amir açıklama yapmak zorunda kaldı ve o günden beri kendi baktığına güvenmiyor.",
+      "kok_neden_kelimeler": [
+        "resmî",
+        "güven",
+        "müdür",
+        "farklı",
+        "onay"
+      ]
+    }
+  ]
+}

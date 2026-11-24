@@ -1,0 +1,199 @@
+{
+  "id": "tedarikci-gecikiyor",
+  "baslik": "Ana tedarikçinin teslimatları neden gecikiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "En büyük ambalaj malzemesi tedarikçisinin teslimatlarının üçte biri son iki ayda gecikti. Depo birkaç kez koli bitme noktasına geldi. Tedarikçiyle ilişkiyi yöneten satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın tedarikçiyi değiştirmek değil, gecikmelerin nedenini anlamak.",
+  "karakter": {
+    "ad": "Seda",
+    "rol": "Satın alma uzmanı",
+    "tavir": "Tedarikçiyi koruyor; \"yıllardır sorun çıkarmadılar\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Bu tedarikçiyle yıllardır çalışıyoruz, sorun çıkarmazlardı. Bu dönem bir şeyler oldu."
+  },
+  "yaniltici_ipuclari": [
+    "Tedarikçi bizi artık önemsemiyor.",
+    "Hammadde krizi var, herkes geç teslim ediyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir siparişi tedarikçiye ne zaman ve nasıl iletiyoruz?",
+    "Gecikmeler başlamadan önce bizim tarafımızda ne değişti?",
+    "Geciken teslimatların ortak bir özelliği var mı, hangi siparişler gecikiyor?",
+    "Tedarikçi gecikmeyi nasıl açıklıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Bizim sipariş düzenimiz: 'stok bitince' sipariş",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki ay önce sipariş sıklığı haftalıktan \"stok bitince\"ye değiştirildi; siparişler artık düzensiz ve büyük partilerle gidiyor.",
+          "acilma_kosulu": "Gecikmelerden önce bizim tarafta ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "bizim tarafımızda",
+            "sipariş sıklığı",
+            "stok bitince"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geciken teslimatlar, önceki siparişin iki katından büyük gelen ve kısa sürede istenen siparişler.",
+          "acilma_kosulu": "Geciken teslimatların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "geciken teslimatlar",
+            "büyük",
+            "kısa süre"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi, üretim planını iki hafta önceden yaptığını ve habersiz gelen büyük siparişleri araya sokamadığını söylüyor.",
+          "acilma_kosulu": "Tedarikçinin gecikmeyi nasıl açıkladığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecikmeyi nasıl",
+            "üretim plan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler satın alma sistemi üzerinden e-postayla gidiyor.",
+          "acilma_kosulu": "Siparişin tedarikçiye ne zaman ve nasıl iletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "tedarikçiye ne zaman",
+            "e-posta"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme tedarikçiden değil bizim sipariş düzenimizden: sipariş haftalıktan 'stok bitince'ye geçti, siparişler düzensiz ve büyük partilerle kısa sürede isteniyor; tedarikçi iki haftalık üretim planına bunları sokamıyor.",
+      "kok_neden_kelimeler": [
+        "sipariş",
+        "düzensiz",
+        "büyük parti",
+        "üretim plan",
+        "haftalık"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ödeme vadesi uzadı: tedarikçi bizi sıranın sonuna aldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Finans üç ay önce ödeme vadesini 60 günden 90 güne çıkardı; tedarikçiye ayrıca haber verilmedi.",
+          "acilma_kosulu": "Gecikmelerden önce bizim tarafta ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "bizim tarafımızda",
+            "vade",
+            "ödeme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi resmî olarak kapasite sorunu diyor; satış temsilcisi ise gayriresmî olarak vadesi kısa müşterilere öncelik verdiklerini söyledi.",
+          "acilma_kosulu": "Tedarikçinin gecikmeyi nasıl açıkladığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecikmeyi nasıl",
+            "öncelik",
+            "gayriresmî"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gecikmeler belirli ürünlerde değil, bütün siparişlerde; özellikle tedarikçinin yoğun olduğu dönemlerde.",
+          "acilma_kosulu": "Geciken teslimatların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "geciken teslimatlar",
+            "bütün siparişler",
+            "yoğun dönem"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler haftalık bir düzenle gidiyor.",
+          "acilma_kosulu": "Siparişin tedarikçiye ne zaman ve nasıl iletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "tedarikçiye ne zaman",
+            "haftalık"
+          ]
+        }
+      ],
+      "kok_neden": "Tedarikçi bizi sıranın sonuna aldı: finans ödeme vadesini habersiz 90 güne uzattı, tedarikçi yoğun dönemlerde vadesi kısa müşterilere öncelik veriyor ve resmî olarak kapasite sorunu diyor.",
+      "kok_neden_kelimeler": [
+        "vade",
+        "ödeme",
+        "öncelik",
+        "finans",
+        "sıra"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ölçü değişikliği: yeni kalıbın bedeli konuşulmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geciken teslimatların hepsi, üç ay önce ölçüsü değiştirilen iki koli tipinde; eski tiplerde gecikme yok.",
+          "acilma_kosulu": "Geciken teslimatların ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "geciken teslimatlar",
+            "koli tipi",
+            "ölçü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Paketleme ekibinin isteğiyle iki koli tipinin ölçüsü değiştirildi; değişiklik tedarikçiye yalnızca teknik çizimle bildirildi.",
+          "acilma_kosulu": "Gecikmelerden önce bizim tarafta ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "bizim tarafımızda",
+            "paketleme",
+            "çizim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi yeni ölçü için kalıp yaptırmak zorunda kaldığını, kalıp bedeli konuşulmadığı için siparişleri beklettiğini söylüyor.",
+          "acilma_kosulu": "Tedarikçinin gecikmeyi nasıl açıkladığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecikmeyi nasıl",
+            "kalıp"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler düzenli aralıklarla gidiyor.",
+          "acilma_kosulu": "Siparişin tedarikçiye ne zaman ve nasıl iletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "tedarikçiye ne zaman",
+            "düzenli"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme koli ölçüsü değişikliğinden: iki koli tipinin ölçüsü değişti, tedarikçiye yalnızca çizim gönderildi ve yeni kalıbın bedeli konuşulmadığı için tedarikçi bu siparişleri bekletiyor.",
+      "kok_neden_kelimeler": [
+        "ölçü",
+        "kalıp",
+        "çizim",
+        "değişiklik",
+        "koli tipi"
+      ]
+    }
+  ]
+}

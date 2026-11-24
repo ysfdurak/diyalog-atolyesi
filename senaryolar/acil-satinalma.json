@@ -1,0 +1,198 @@
+{
+  "id": "acil-satinalma",
+  "baslik": "Acil satın almalar neden üç katına çıktı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Planlı sipariş yerine \"acil\" işaretiyle yapılan satın almalar son altı ayda üç katına çıktı. Acil alımlar ortalama %25 daha pahalı. Acil talepleri en çok açan bakım şefiyle konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın acil talepleri yasaklamak değil, neden bu kadar arttığını anlamak.",
+  "karakter": {
+    "ad": "Ferhat",
+    "rol": "Bakım şefi",
+    "tavir": "Telaşlı ve savunmada; \"makine durursa kim sorumlu?\" diyor. Planlamayı soran birine açık konuşuyor.",
+    "ilk_soz": "Forklift yatarsa depo durur. Acil istemeyip ne yapayım?"
+  },
+  "yaniltici_ipuclari": [
+    "Ekipman eskidi.",
+    "Satın alma çok yavaş."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Acil açılan son birkaç talep hangi parçalar içindi?",
+    "Bir parçaya ihtiyaç olacağını ne zaman anlıyorsunuz?",
+    "Normal yoldan bir parça almak ne kadar sürüyor, nerede bekliyor?",
+    "Depoda yedek parça stoku nasıl tutuluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Planlı bakım bırakıldı: arıza olunca anlaşılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Parça ihtiyacı çoğunlukla arıza olunca anlaşılıyor; planlı bakım takvimi bir yıl önce personel azalınca bırakıldı.",
+          "acilma_kosulu": "Parça ihtiyacının ne zaman anlaşıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlıyorsunuz",
+            "arıza",
+            "planlı bakım"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son acil taleplerin çoğu forklift akü ve fren parçaları; bunlar ömrü belli, önceden değiştirilebilecek parçalar.",
+          "acilma_kosulu": "Son acil taleplerin hangi parçalar için olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "son birkaç talep",
+            "akü",
+            "fren"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Depoda yedek parça stoku tutulmuyor; her parça ihtiyaç anında sipariş ediliyor.",
+          "acilma_kosulu": "Yedek parça stokunun nasıl tutulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "yedek parça stoku",
+            "tutulmuyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Normal satın alma süreci iki hafta sürüyor.",
+          "acilma_kosulu": "Normal satın almanın ne kadar sürdüğü sorulursa",
+          "ipucu_kelimeler": [
+            "normal yoldan",
+            "iki hafta"
+          ]
+        }
+      ],
+      "kok_neden": "Acil alımlar planlı bakımın bırakılmasından: ömrü belli parçalar arıza olunca fark ediliyor, planlı bakım takvimi personel azalınca bırakıldı ve yedek parça stoku tutulmadığı için her arıza acil alıma dönüyor.",
+      "kok_neden_kelimeler": [
+        "planlı bakım",
+        "arıza",
+        "ömrü",
+        "yedek",
+        "stok"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Normal süreç çok yavaş: acil kestirme yol oldu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Normal yoldan bir parça almak beş hafta sürüyor; talep üç onay basamağında bekliyor.",
+          "acilma_kosulu": "Normal satın almanın ne kadar sürdüğü sorulursa",
+          "ipucu_kelimeler": [
+            "normal yoldan",
+            "onay",
+            "beş hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Parça ihtiyacını çoğu zaman haftalar önce biliyor ama normal yoldan açsa bile geç geleceği için doğrudan acil açıyor.",
+          "acilma_kosulu": "Parça ihtiyacının ne zaman anlaşıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlıyorsunuz",
+            "haftalar önce"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Son acil talepler arasında filtre, eldiven, etiket rulosu gibi acil olmayan sarf malzemeleri de var.",
+          "acilma_kosulu": "Son acil taleplerin hangi parçalar için olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "son birkaç talep",
+            "sarf",
+            "eldiven"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Depoda küçük bir yedek parça dolabı var.",
+          "acilma_kosulu": "Yedek parça stokunun nasıl tutulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "yedek parça stoku",
+            "dolap"
+          ]
+        }
+      ],
+      "kok_neden": "Acil talep kestirme yol oldu: normal süreç üç onay basamağıyla beş hafta sürüyor, ihtiyaç önceden bilinse de geç geleceği için acil açılıyor ve acil olmayan sarf malzemeleri bile acil yoldan alınıyor.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "kestirme",
+        "beş hafta",
+        "normal süreç",
+        "sarf"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kayıp stok: parça depoda ama bulunamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yedek parçalar üç ayrı yerde, kayıtsız tutuluyor; parçanın depoda olup olmadığı bilinmediği için yenisi acil isteniyor.",
+          "acilma_kosulu": "Yedek parça stokunun nasıl tutulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "yedek parça stoku",
+            "kayıt",
+            "üç ayrı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son acil taleplerin bir kısmı için parça zaten depoda vardı; sonradan rafta bulundu.",
+          "acilma_kosulu": "Son acil taleplerin hangi parçalar için olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "son birkaç talep",
+            "zaten",
+            "bulundu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İhtiyaç arıza anında anlaşılıyor ama asıl zaman parçayı aramakla geçiyor; kimse bulamayınca acil talep açılıyor.",
+          "acilma_kosulu": "Parça ihtiyacının ne zaman anlaşıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "anlıyorsunuz",
+            "aramak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Normal satın alma süreci makul sürede işliyor.",
+          "acilma_kosulu": "Normal satın almanın ne kadar sürdüğü sorulursa",
+          "ipucu_kelimeler": [
+            "normal yoldan",
+            "makul"
+          ]
+        }
+      ],
+      "kok_neden": "Acil alımlar kayıp stoktan: yedek parçalar üç ayrı yerde kayıtsız tutuluyor, parça depoda olsa da bulunamadığı için yenisi acil isteniyor; bazı parçalar sonradan rafta çıkıyor.",
+      "kok_neden_kelimeler": [
+        "kayıt",
+        "yedek",
+        "bulun",
+        "stok",
+        "depoda"
+      ]
+    }
+  ]
+}

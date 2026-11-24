@@ -1,0 +1,197 @@
+{
+  "id": "gosterge-yaniltiyor",
+  "baslik": "Gösterge iyileşti, iş neden kötüleşti?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 8,
+  "acilis": "Depo verimlilik göstergesi altı ayda %15 iyileşti; aynı dönemde müşteri şikâyetleri ve iadeler arttı. Göstergeyi tasarlayan performans analistiyle konuşuyorsun.",
+  "rolun": "Operasyon performansından sorumlu yöneticisin. Amacın göstergeyi kaldırmak değil, iyileşmenin neden işe yansımadığını anlamak.",
+  "karakter": {
+    "ad": "Kaan",
+    "rol": "Performans analisti",
+    "tavir": "Göstergesiyle gurur duyuyor; \"rakam yalan söylemez\" diyor. Hesabın ayrıntısını soran birine dürüst davranıyor.",
+    "ilk_soz": "Verimlilik rekor seviyede. Şikâyetler başka bir konu bence."
+  },
+  "yaniltici_ipuclari": [
+    "Şikâyetler kargodan kaynaklanıyor.",
+    "Müşteriler eskisinden daha talepkâr."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Verimlilik göstergesi nasıl hesaplanıyor?",
+    "Gösterge iyileşirken sahada çalışma şekli nasıl değişti?",
+    "Şikâyet ve iadeler en çok hangi işlerden çıkıyor?",
+    "Göstergeye göre kimler ödüllendiriliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gösterge hızı ölçüyor, kaliteyi değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gösterge saatte toplanan kalem sayısı; hatalı toplanan kalemler de sayıya giriyor.",
+          "acilma_kosulu": "Göstergenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hesaplanıyor",
+            "kalem sayısı",
+            "hatalı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Göstergede ilk %20'ye giren toplayıcılar her ay prim alıyor.",
+          "acilma_kosulu": "Göstergeye göre kimlerin ödüllendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiril",
+            "prim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İadelerin çoğu yanlış ya da eksik toplanan siparişlerden çıkıyor; hata kontrolü göstergede yer almıyor.",
+          "acilma_kosulu": "Şikâyet ve iadelerin hangi işlerden çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "iadeler",
+            "yanlış",
+            "eksik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Toplayıcılar daha hızlı yürüyor ve kontrol adımlarını kısaltıyor.",
+          "acilma_kosulu": "Sahada çalışma şeklinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma şekli",
+            "hızlı"
+          ]
+        }
+      ],
+      "kok_neden": "Gösterge hızı ödüllendiriyor, kaliteyi değil: saatlik kalem sayısı hatalı toplamayı da sayıyor, ilk %20'ye prim veriliyor ve iadeleri artıran yanlış ve eksik toplamalar göstergede görünmüyor.",
+      "kok_neden_kelimeler": [
+        "hız",
+        "kalite",
+        "prim",
+        "hatalı",
+        "iade"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Zor iş göstergeden kaçıyor: siparişler ağırlıklandırılmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplayıcılar tek kalemli kolay siparişleri seçiyor; çok kalemli ve ağır siparişler gün sonuna kalıyor.",
+          "acilma_kosulu": "Sahada çalışma şeklinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma şekli",
+            "kolay sipariş",
+            "seç"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gösterge sipariş zorluğuna göre ağırlıklandırılmıyor; ağır bir kalem ile hafif bir kalem aynı sayılıyor.",
+          "acilma_kosulu": "Göstergenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hesaplanıyor",
+            "ağırlıklandır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerin çoğu gün sonuna kalıp ertesi güne sarkan büyük siparişlerden geliyor.",
+          "acilma_kosulu": "Şikâyet ve iadelerin hangi işlerden çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "iadeler",
+            "büyük sipariş",
+            "sark"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ödül ekip bazında değil kişi bazında veriliyor.",
+          "acilma_kosulu": "Göstergeye göre kimlerin ödüllendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiril",
+            "kişi bazında"
+          ]
+        }
+      ],
+      "kok_neden": "Gösterge zor işi cezalandırıyor: sipariş zorluğuna göre ağırlıklandırılmadığı için toplayıcılar kolay siparişleri seçiyor, ağır ve çok kalemli siparişler sarkıyor ve şikâyetler bu siparişlerden geliyor.",
+      "kok_neden_kelimeler": [
+        "ağırlık",
+        "kolay",
+        "zorluk",
+        "sark",
+        "seç"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İyileşme paydadan: saatler dolaylı işe kaydırılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gösterge toplanan kalem sayısını çalışılan saate bölüyor; çalışılan saat vardiya amirinin girdiği plandan geliyor.",
+          "acilma_kosulu": "Göstergenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hesaplanıyor",
+            "saate böl",
+            "plan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Amirler bekleme ve eğitim saatlerini \"dolaylı iş\" diye ayırıp göstergeden çıkarmaya başladı; aynı dönemde dolaylı iş saati iki katına çıktı.",
+          "acilma_kosulu": "Sahada çalışma şeklinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "çalışma şekli",
+            "dolaylı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Amirler, ekiplerinin gösterge sırasına göre değerlendiriliyor.",
+          "acilma_kosulu": "Göstergeye göre kimlerin ödüllendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiril",
+            "amir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İadeler çeşitli işlerden geliyor, belirgin bir yoğunlaşma yok.",
+          "acilma_kosulu": "Şikâyet ve iadelerin hangi işlerden çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "iadeler",
+            "yoğunlaş"
+          ]
+        }
+      ],
+      "kok_neden": "İyileşme gerçek değil, paydadan geliyor: gösterge kalem sayısını çalışılan saate bölüyor, amirler değerlendirildikleri için bekleme ve eğitim saatlerini dolaylı iş diye göstergeden çıkarıyor; iş aynı kaldı, rakam iyileşti.",
+      "kok_neden_kelimeler": [
+        "payda",
+        "saat",
+        "dolaylı",
+        "amir",
+        "değerlendiril"
+      ]
+    }
+  ]
+}
