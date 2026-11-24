@@ -35,13 +35,14 @@ Node.js 22.13 ya da üstü gerekir.
 ```bash
 npm install
 npm run start:dev      # yapay zekâsız deneme modu: http://localhost:8080
-npm test               # 32 test
+npm test               # 35 test
 ```
 
 Gerçek modelle çalıştırmak için `.env.example` dosyasını `.env` olarak kopyala ve `ANTHROPIC_API_KEY` değerini yaz.
 
 ## Belgeler
 
+- [Proje dokümanı](docs/PROJE.md): kararlar, mimari, kod turu, testler, mülakat ve alıştırma (yaşayan rehber)
 - [Nasıl çalışır](docs/NASIL_CALISIR.md): mimari, puanlama, maliyet, gizlilik ve "sorulursa ne derim" notları
 - [Sunucu kurulumu](docs/SUNUCU_KURULUMU.md): diyalog.ysfdurak.com adresinde yayın
 - [MCP](docs/MCP.md): Claude'a bağlama

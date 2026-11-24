@@ -1,0 +1,228 @@
+{
+  "id": "sayim-farki",
+  "baslik": "Sayım farkları neden büyüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Son iki ayın döngüsel sayımlarında stok farkları iki katına çıktı. Toplantılarda kayıp ve hırsızlık ihtimali konuşulmaya başlandı. Envanter kontrol sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın suçlu aramak değil, farkın nereden doğduğunu anlamak.",
+  "karakter": {
+    "ad": "Gül",
+    "rol": "Envanter kontrol sorumlusu",
+    "tavir": "Titiz, rakamlarla konuşuyor. \"Kayıp\" kelimesi geçince geriliyor çünkü ekibine şüpheyle bakılıyor. Sürecin nasıl işlediğini merak eden birine ayrıntı veriyor.",
+    "ilk_soz": "Farkları ben de görüyorum. Ama baştan söyleyeyim, benim ekibimden kimse bir şey almaz."
+  },
+  "yaniltici_ipuclari": [
+    "Depo büyük, her şeyi takip etmek kolay değil.",
+    "Belki dışarıdan biri alıyordur, bilemiyorum."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Farklar artmaya başlamadan önce süreçte ne değişti?",
+    "Farklar en çok hangi ürünlerde ve hangi bölgelerde çıkıyor?",
+    "Bir ürün depoya girdiğinden sayıldığı ana kadar hangi adımlardan geçiyor?",
+    "Sistemdeki kayıt ile raftaki durum nerede ayrışıyor olabilir?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kayıp değil kayıt gecikmesi: iadeler sisteme geç işleniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "iade-gecikme",
+          "onem": "kritik",
+          "bilgi": "İki ay önce iade işlemleri ayrı bir ekibe verildi; iade edilen ürünler rafa konuyor ama sisteme 3-4 gün sonra işleniyor.",
+          "acilma_kosulu": "Son dönemde süreçte ne değiştiği ya da iadelerin nasıl işlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "iade",
+            "önce ne",
+            "ne oldu",
+            "yeni"
+          ]
+        },
+        {
+          "id": "fazla-yonunde",
+          "onem": "kritik",
+          "bilgi": "Farkların çoğu fazla stok yönünde: rafta, sistemde görünenden daha çok ürün var.",
+          "acilma_kosulu": "Farkların yönü (eksik mi fazla mı), hangi ürünlerde ya da nasıl bir fark olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi ürün",
+            "fazla",
+            "eksik",
+            "yön",
+            "ne tür",
+            "nasıl bir fark"
+          ]
+        },
+        {
+          "id": "sabah-sayimi",
+          "onem": "kritik",
+          "bilgi": "Sayımlar sabah yapılıyor; o saatte önceki günlerin iadeleri sisteme henüz işlenmemiş oluyor.",
+          "acilma_kosulu": "Sayımların ne zaman ve nasıl yapıldığı ya da sistem ile raf arasındaki farkın nerede oluştuğu sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman",
+            "sayım nasıl",
+            "saat",
+            "ayrış",
+            "sistem",
+            "kayıt"
+          ]
+        },
+        {
+          "id": "terminal-yok",
+          "onem": "destek",
+          "bilgi": "İade ekibinin el terminali yok; işlemleri gün sonunda masaüstünden topluca giriyorlar.",
+          "acilma_kosulu": "İade ekibinin işlemleri nasıl girdiği ya da hangi araçları kullandığı sorulursa",
+          "ipucu_kelimeler": [
+            "terminal",
+            "araç",
+            "nasıl giril",
+            "ekipman"
+          ]
+        }
+      ],
+      "kok_neden": "Fark kayıptan değil kayıt gecikmesinden: iadeler ayrı ekibe geçince rafa konan ürün sisteme günler sonra işleniyor ve sabah sayımları aradaki ürünleri fark olarak yakalıyor.",
+      "kok_neden_kelimeler": [
+        "iade",
+        "gecik",
+        "kayıt",
+        "işlen",
+        "sabah"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kayıp değil adres hatası: koridorlar kayıtsız yeniden düzenlendi",
+      "gizli_bilgiler": [
+        {
+          "id": "kayitsiz-tasima",
+          "onem": "kritik",
+          "bilgi": "Sezon geçişinde iki koridor yeniden düzenlendi; yüzlerce ürün sistemde taşıma kaydı yapılmadan yeni adreslerine elle taşındı.",
+          "acilma_kosulu": "Son dönemde süreçte ya da yerleşimde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "düzen",
+            "taşı",
+            "yeni",
+            "önce ne",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "iki-koridor",
+          "onem": "kritik",
+          "bilgi": "Farkların büyük kısmı yeniden düzenlenen iki koridorda; aynı ürün bir adreste eksik, yakındaki bir adreste fazla görünüyor.",
+          "acilma_kosulu": "Farkların hangi bölgede, hangi ürünlerde ya da ne tür olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölge",
+            "bölge",
+            "koridor",
+            "hangi ürün",
+            "ne tür"
+          ]
+        },
+        {
+          "id": "istisna-girilmiyor",
+          "onem": "kritik",
+          "bilgi": "Toplayıcılar ürünü sistemin gösterdiği adreste bulamayınca yakındaki adresten alıyor; istisna girmek uzun sürdüğü için terminalde 'tamamlandı' basıyor.",
+          "acilma_kosulu": "Sistem ile raf arasındaki farkın nerede oluştuğu, toplamanın nasıl yapıldığı ya da ürünün depoda geçtiği adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "ayrış",
+            "sistem",
+            "kayıt",
+            "toplay",
+            "adım"
+          ]
+        },
+        {
+          "id": "yetki-iki-kiside",
+          "onem": "destek",
+          "bilgi": "Sistemde yer değiştirme kaydı girme yetkisi yalnızca iki kişide var.",
+          "acilma_kosulu": "Taşıma kaydını kimin girebildiği ya da yetkiler sorulursa",
+          "ipucu_kelimeler": [
+            "yetki",
+            "kim yap",
+            "kim gir"
+          ]
+        }
+      ],
+      "kok_neden": "Fark kayıptan değil adres hatasından: koridorlar yeniden düzenlenirken ürünler sistemde taşıma kaydı yapılmadan taşındı; toplayıcıların istisnaları kaydetmemesi farkı her gün büyüttü.",
+      "kok_neden_kelimeler": [
+        "adres",
+        "taşı",
+        "kayıt",
+        "koridor",
+        "düzenle"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kayıp değil ana veri hatası: koli içi adet değişti, kart güncellenmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "koli-adedi",
+          "onem": "kritik",
+          "bilgi": "Bir tedarikçi iki ay önce koli içi adedi 12'den 10'a düşürdü; ürün kartında hâlâ 12 yazıyor.",
+          "acilma_kosulu": "Son dönemde ne değiştiği, tedarikçiler ya da ürün bilgileri sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "tedarik",
+            "koli",
+            "ne oldu",
+            "önce ne",
+            "yeni"
+          ]
+        },
+        {
+          "id": "hep-eksik",
+          "onem": "kritik",
+          "bilgi": "Farkların çoğu o tedarikçinin ürünlerinde ve hep eksik yönünde çıkıyor.",
+          "acilma_kosulu": "Farkların hangi ürünlerde ya da ne yönde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi ürün",
+            "eksik",
+            "fazla",
+            "ne tür",
+            "yön"
+          ]
+        },
+        {
+          "id": "mal-kabul",
+          "onem": "kritik",
+          "bilgi": "Mal kabulde koliler açılmadan, koli sayısı çarpı karttaki adetle stoka giriliyor; adet sayımı yapılmıyor.",
+          "acilma_kosulu": "Ürünün depoya nasıl girdiği, mal kabulün nasıl yapıldığı ya da ürünün geçtiği adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "mal kabul",
+            "girdiğinden",
+            "adım",
+            "kabul",
+            "giriş"
+          ]
+        },
+        {
+          "id": "irsaliye",
+          "onem": "destek",
+          "bilgi": "Tedarikçinin irsaliyesinde yeni adet yazıyor ama kimse karttaki adetle karşılaştırmıyor.",
+          "acilma_kosulu": "Belgeler, irsaliye ya da kontrol sorulursa",
+          "ipucu_kelimeler": [
+            "irsaliye",
+            "belge",
+            "evrak"
+          ]
+        }
+      ],
+      "kok_neden": "Fark kayıptan değil ana veriden: tedarikçi koli içi adedi düşürdü, ürün kartı güncellenmedi ve mal kabul koliyi açmadan karttaki adetle giriş yaptığı için her gelen koli stoku şişiriyor.",
+      "kok_neden_kelimeler": [
+        "koli",
+        "adet",
+        "kart",
+        "mal kabul",
+        "tedarikçi",
+        "ana veri"
+      ]
+    }
+  ]
+}
