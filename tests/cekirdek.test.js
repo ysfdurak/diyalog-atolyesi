@@ -19,10 +19,10 @@ const serbest = () => ({ izin: true });
 const ilkVaryant = (a) => a[0]; // testlerde varyant seçimi sabit: adaylardan ilki
 
 test('senaryolar: tüm senaryolar geçerli, alan dağılımı ve ağırlıklar 100 ediyor', () => {
-  assert.equal(senaryolar.size, 15);
+  assert.equal(senaryolar.size, 30);
   const alanlar = {};
   for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
-  assert.deepEqual(alanlar, { 'İş geliştirme': 5, Operasyon: 4, 'Ekip yönetimi': 4, 'Proje yönetimi': 2 });
+  assert.deepEqual(alanlar, { 'İş geliştirme': 8, Operasyon: 8, 'Ekip yönetimi': 8, 'Proje yönetimi': 6 });
   // Her senaryo üç kök nedenli
   for (const [id, s] of senaryolar) assert.equal(s.varyantlar.length, 3, id);
   for (const s of senaryolar.values()) for (const v of s.varyantlar) assert.equal(v.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3, `${s.id}/${v.id}`);

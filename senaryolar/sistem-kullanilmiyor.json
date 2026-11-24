@@ -1,0 +1,200 @@
+{
+  "id": "sistem-kullanilmiyor",
+  "baslik": "Yeni sistemi neden kimse kullanmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Üç ay önce depoda yeni bir görev yönetim uygulaması devreye alındı ve proje \"zamanında tamamlandı\" diye kapandı. Bugün vardiya amirlerinin çoğu işleri hâlâ kâğıt listeyle dağıtıyor. Projeyi yürüten proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın amirleri zorlamak değil, sistemin neden kullanılmadığını anlamak.",
+  "karakter": {
+    "ad": "Barış",
+    "rol": "Proje yöneticisi",
+    "tavir": "Projeyi başarı olarak görüyor, \"kullanıcılar direnç gösteriyor\" diyor. Dinlendiğini hissedince eksikleri kabul ediyor.",
+    "ilk_soz": "Teknik olarak her şey çalışıyor, test raporları ortada. Kullanmamak bir tercih."
+  },
+  "yaniltici_ipuclari": [
+    "Amirler değişime direnç gösteriyor.",
+    "Kâğıda alışmışlar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir amirin vardiya başında sistemle iş dağıtması nasıl oluyor?",
+    "Sistem tasarlanırken amirlerden kimler dahil oldu?",
+    "Devreye alındıktan sonra sahada kim destek veriyor?",
+    "Projenin başarısı nasıl ölçüldü?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sistem kâğıttan yavaş: iş dağıtmak beş kat uzun",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sistemle 30 kişiye iş dağıtmak vardiya başında 25 dakika sürüyor; kâğıt listeyle 5 dakika.",
+          "acilma_kosulu": "Vardiya başında sistemle iş dağıtmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya başında",
+            "dakika",
+            "yavaş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tasarıma yalnızca ofisteki planlama ekibi katıldı; amirlere test sırasında bir kez gösterildi.",
+          "acilma_kosulu": "Tasarıma kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "planlama ekibi",
+            "ofis"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Projenin başarısı canlıya geçiş tarihi ve hata sayısıyla ölçüldü; kullanım oranı hiç ölçülmedi.",
+          "acilma_kosulu": "Projenin başarısının nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "canlıya",
+            "kullanım oranı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sahada destek için bir yardım hattı numarası verildi.",
+          "acilma_kosulu": "Devreye alındıktan sonra sahadaki destek sorulursa",
+          "ipucu_kelimeler": [
+            "devreye alındıktan",
+            "yardım hattı"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem kullanılmıyor çünkü amirin işini yavaşlatıyor: iş dağıtmak kâğıttan beş kat uzun sürüyor, tasarıma amirler katılmadı ve proje kullanım değil canlıya geçiş tarihiyle ölçüldüğü için sorun görülmedi.",
+      "kok_neden_kelimeler": [
+        "yavaş",
+        "dakika",
+        "katılmadı",
+        "kullanım",
+        "ölçül"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sahada destek yok: tek seferlik eğitim, süper kullanıcı yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Devreye alındıktan sonra sahada kimse yok; destek yalnızca e-postayla ve iki gün içinde cevaplanıyor.",
+          "acilma_kosulu": "Devreye alındıktan sonra sahadaki destek sorulursa",
+          "ipucu_kelimeler": [
+            "devreye alındıktan",
+            "e-posta",
+            "cevap"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Vardiya başında bir hata çıkınca amir işi bekletemediği için kâğıda dönüyor; sonra sistemi bir daha açmıyor.",
+          "acilma_kosulu": "Vardiya başında sistemle iş dağıtmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya başında",
+            "hata",
+            "kâğıda dön"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Amirlerin yarısı tasarım toplantılarına katıldı; ama eğitim canlıya geçişten bir ay önce tek seferlik verildi ve süper kullanıcı seçilmedi.",
+          "acilma_kosulu": "Tasarıma kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "eğitim",
+            "süper kullanıcı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Başarı ölçütleri arasında kullanıcı memnuniyeti anketi vardı ama yapılmadı.",
+          "acilma_kosulu": "Projenin başarısının nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "anket"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem kullanılmıyor çünkü sahada destek yok: eğitim canlıya geçişten çok önce tek seferlik verildi, süper kullanıcı yok ve bir hata çıkınca yardım günler sonra geldiği için amirler kâğıda dönüyor.",
+      "kok_neden_kelimeler": [
+        "destek",
+        "eğitim",
+        "süper kullanıcı",
+        "kâğıda",
+        "hata"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eski sistem kapatılmadı: kâğıt hâlâ zorunlu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Proje kapanırken eski kâğıt sistem kapatılmadı; denetim için imzalı kâğıt liste hâlâ zorunlu.",
+          "acilma_kosulu": "Projenin başarısının nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "denetim",
+            "imza"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Amirler her işi hem sisteme girmek hem kâğıda yazmak zorunda; çift iş olunca sistemi atlıyorlar.",
+          "acilma_kosulu": "Vardiya başında sistemle iş dağıtmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya başında",
+            "çift iş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Devreye alındıktan sonra kâğıdı kaldırma kararını kimin vereceği hiç belirlenmedi; kalite ve operasyon birbirine bakıyor.",
+          "acilma_kosulu": "Devreye alındıktan sonra sahadaki destek sorulursa",
+          "ipucu_kelimeler": [
+            "devreye alındıktan",
+            "karar",
+            "kalite"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tasarıma amirlerden ikisi katıldı ve sistemi beğendiler.",
+          "acilma_kosulu": "Tasarıma kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "tasarlanırken",
+            "beğen"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem kullanılmıyor çünkü eski sistem kapatılmadı: denetim için imzalı kâğıt liste hâlâ zorunlu, amirler aynı işi iki kez yapıyor ve kâğıdı kaldırma kararının sahibi yok.",
+      "kok_neden_kelimeler": [
+        "kâğıt",
+        "imza",
+        "denetim",
+        "çift",
+        "kapatılmadı"
+      ]
+    }
+  ]
+}

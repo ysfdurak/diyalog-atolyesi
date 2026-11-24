@@ -1,0 +1,200 @@
+{
+  "id": "elle-rapor",
+  "baslik": "Aylık rapor neden hâlâ elle hazırlanıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Aylık operasyon raporu hâlâ elle hazırlanıyor ve her ay iki gün sürüyor. Bir yıl önce başlatılan otomasyon projesi iki kez yeniden planlandı ve hâlâ bitmedi. Raporu hazırlayan veri analistiyle konuşuyorsun.",
+  "rolun": "Raporlama projesinin sponsorusun. Amacın yeni bir tarih almak değil, raporun neden otomatiğe geçemediğini anlamak.",
+  "karakter": {
+    "ad": "Merve",
+    "rol": "Veri analisti",
+    "tavir": "İşini bilen, biraz bıkkın; \"herkes otomatik olsun diyor ama...\" diye başlıyor. Ayrıntı soran birine açık konuşuyor.",
+    "ilk_soz": "Otomasyon herkesin isteği, benim de. Ama bu rapor göründüğü kadar basit değil."
+  },
+  "yaniltici_ipuclari": [
+    "Araçlarımız eski.",
+    "Bu işlere kimsenin vakti yok."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Raporu hazırlarken iki günün en çok hangi kısmı gidiyor?",
+    "Rapordaki rakamlar hangi kaynaklardan geliyor?",
+    "Rapor her ay nasıl değişiyor?",
+    "Otomasyon projesi şu an nerede takılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Veri temiz değil: düzeltme kuralları analistin kafasında",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki günün çoğu, WMS ve bordro verileri arasındaki uyuşmazlıkları elle düzeltmekle geçiyor; düzeltme kuralları yazılı değil, analistin kafasında.",
+          "acilma_kosulu": "Iki günün en çok neye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "iki günün",
+            "düzelt",
+            "uyuşmaz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Rakamlar üç kaynaktan geliyor: WMS, bordro ve Excel'de tutulan vardiya listeleri; vardiya listeleri her depoda farklı biçimde.",
+          "acilma_kosulu": "Rakamların hangi kaynaklardan geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "kaynaklardan",
+            "excel",
+            "biçim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Otomasyon ekibi verinin temiz geldiğini varsaydı; düzeltme kuralları kendilerine hiç aktarılmadığı için çıkan rapor tutmuyor.",
+          "acilma_kosulu": "Otomasyon projesinin nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "otomasyon projesi",
+            "varsay",
+            "aktarıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Raporun biçimi bir yıldır aynı.",
+          "acilma_kosulu": "Raporun her ay nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "her ay nasıl",
+            "aynı biçim"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor veriden dolayı otomatiğe geçemiyor: kaynaklar uyuşmuyor ve farklı biçimlerde, elle düzeltme kuralları yazılı olmadan analistin kafasında ve otomasyon ekibi verinin temiz geldiğini varsaydı.",
+      "kok_neden_kelimeler": [
+        "düzelt",
+        "kural",
+        "kaynak",
+        "uyuşmu",
+        "kafa"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kapsam sabit değil: her ay yeni kırılım isteniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her ay yönetimden 3-4 yeni kırılım ya da grafik isteniyor; raporun biçimi hiçbir ay aynı kalmıyor.",
+          "acilma_kosulu": "Raporun her ay nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "her ay nasıl",
+            "kırılım",
+            "grafik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Otomasyon ekibi her yeni istekte tasarımı baştan açıyor; raporun sabit bir çekirdeği hiç tanımlanmadı.",
+          "acilma_kosulu": "Otomasyon projesinin nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "otomasyon projesi",
+            "tasarım",
+            "çekirdek"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İki günün yarısı, yeni istenen kırılımlar için veriyi elle yeniden düzenlemekle geçiyor.",
+          "acilma_kosulu": "Iki günün en çok neye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "iki günün",
+            "yeniden düzenle"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veriler büyük ölçüde WMS'ten geliyor ve temiz.",
+          "acilma_kosulu": "Rakamların hangi kaynaklardan geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "kaynaklardan",
+            "wms"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor sabit olmadığı için otomatiğe geçemiyor: yönetim her ay yeni kırılım ve grafik istiyor, raporun sabit bir çekirdeği tanımlanmadı ve otomasyon her istekte baştan açılıyor.",
+      "kok_neden_kelimeler": [
+        "sabit",
+        "çekirdek",
+        "kırılım",
+        "istek",
+        "her ay"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sahipsiz ve yanlış hedefli: ek iş, asıl yük sunumda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Otomasyon projesi analistin ek işi olarak verildi; rapor dönemi geldiğinde proje her ay iki hafta duruyor.",
+          "acilma_kosulu": "Otomasyon projesinin nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "otomasyon projesi",
+            "ek iş",
+            "duruyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İki günün çoğu, raporu üst yönetim için sunuma aktarıp yorum yazmakla geçiyor; asıl hesap yarım gün.",
+          "acilma_kosulu": "Iki günün en çok neye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "iki günün",
+            "aktar",
+            "yorum"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Raporun hesap kısmı her ay aynı; ama proje planında sunum ve yorum adımları hiç yok, otomasyon bitse de işin çoğu kalacak.",
+          "acilma_kosulu": "Raporun her ay nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "her ay nasıl",
+            "sunum",
+            "plan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veriler iki kaynaktan geliyor ve uyumlu.",
+          "acilma_kosulu": "Rakamların hangi kaynaklardan geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "kaynaklardan",
+            "uyumlu"
+          ]
+        }
+      ],
+      "kok_neden": "Proje sahipsiz ve yanlış hedefli: otomasyon analistin ek işi olduğu için rapor döneminde duruyor ve iki günün asıl kısmı olan sunum ve yorum yazma adımı proje planında hiç yok.",
+      "kok_neden_kelimeler": [
+        "ek iş",
+        "sahip",
+        "sunum",
+        "yorum",
+        "plan"
+      ]
+    }
+  ]
+}

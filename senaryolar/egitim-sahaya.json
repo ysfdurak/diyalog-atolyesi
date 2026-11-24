@@ -1,0 +1,199 @@
+{
+  "id": "egitim-sahaya",
+  "baslik": "Eğitim neden sahaya yansımıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Ekibe iki ay önce yeni toplama talimatı için eğitim verildi; herkes imza attı, sınav ortalaması yüksekti. Sahada çoğu kişi hâlâ eski yöntemle çalışıyor. Eğitimi alan kıdemli toplayıcılardan Fatma'yla konuşuyorsun.",
+  "rolun": "Ekibin yöneticisisin ve eğitimi sen planladın. Amacın kimin uymadığını bulmak değil, eğitimin neden sahaya geçmediğini anlamak.",
+  "karakter": {
+    "ad": "Fatma",
+    "rol": "Kıdemli toplayıcı",
+    "tavir": "Dürüst ama dikkatli; yöneticisini eleştirmek istemiyor. İşin nasıl yürüdüğünü soran birine açık konuşuyor.",
+    "ilk_soz": "Eğitim güzeldi, emeğinize sağlık. Ama sahada iş biraz farklı yürüyor."
+  },
+  "yaniltici_ipuclari": [
+    "Alışkanlıklar kolay değişmiyor.",
+    "Bazıları dinlememiştir herhalde."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni yöntemi sahada denediğinde neler oldu?",
+    "Eğitim nerede ve nasıl yapıldı?",
+    "Eski yöntemle çalışınca vardiyada neler kolaylaşıyor?",
+    "Eğitimden sonra sahada sana kim, nasıl destek oldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sınıfta anlatıldı, sahada gösterilmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eğitim vardiya bitiminde, herkes yorgunken toplantı odasında yarım saatlik sunumla yapıldı; yeni yöntem sahada hiç gösterilmedi.",
+          "acilma_kosulu": "Eğitimin nerede ve nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "eğitim nerede",
+            "sunum",
+            "toplantı odası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sahada denediğinde terminaldeki adımları hatırlayamadı ve sipariş gecikti; hızı düşünce eskisine döndü.",
+          "acilma_kosulu": "Yeni yöntemi sahada denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "terminal",
+            "hatırla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Eğitimden sonra sahada soracak kimse yoktu; eğitmen başka depoya geçti.",
+          "acilma_kosulu": "Eğitimden sonra sahada kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "soracak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eski yöntemi gözü kapalı yapabiliyor.",
+          "acilma_kosulu": "Eski yöntemin neyi kolaylaştırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski yöntemle",
+            "alışkan"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitim sahaya geçmedi çünkü sahada verilmedi: yorgun bir vardiya sonunda sınıfta sunumla anlatıldı, sahada gösterilmedi ve sonrasında soracak kimse olmadığı için ilk takılmada herkes eski yönteme döndü.",
+      "kok_neden_kelimeler": [
+        "sahada",
+        "sınıf",
+        "sunum",
+        "göster",
+        "soracak"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Hedef eski yönteme göre: öğrenirken hız düşüyor, uyarı geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eski yöntemle saatlik toplama hedefi tutuyor; yeni yöntemi öğrenirken hız düşüyor ve hedefin altında kalan uyarı alıyor.",
+          "acilma_kosulu": "Eski yöntemin neyi kolaylaştırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski yöntemle",
+            "hedef",
+            "hız"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni yöntemi denediği ilk hafta hedefin altında kaldı ve vardiya amiri uyardı.",
+          "acilma_kosulu": "Yeni yöntemi sahada denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "uyar",
+            "amir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Öğrenme süresi için hedefte bir esneklik tanınmadı; kimse geçiş dönemini konuşmadı.",
+          "acilma_kosulu": "Eğitimden sonra sahada kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "esneklik",
+            "geçiş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eğitim sahada, toplama alanında uygulamalı yapıldı.",
+          "acilma_kosulu": "Eğitimin nerede ve nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "eğitim nerede",
+            "uygulamalı"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitim sahaya geçmedi çünkü hedef eski yönteme göre: yeni yöntemi öğrenirken hız düşüyor, hedefin altında kalan uyarı alıyor ve geçiş dönemi için hedefte esneklik tanınmadı.",
+      "kok_neden_kelimeler": [
+        "hedef",
+        "hız",
+        "uyarı",
+        "esneklik",
+        "geçiş"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Talimat sahaya uymuyor: karışık siparişlerde iki tur istiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yeni yöntem tek ürünlü siparişlerde iyi çalışıyor; karışık siparişlerde ise ürünler arabaya sığmıyor ve iki tur atmak gerekiyor.",
+          "acilma_kosulu": "Yeni yöntemi sahada denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "karışık",
+            "araba"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Eski yöntemle karışık siparişleri tek turda toplayabiliyor; ekip bu yüzden karışık siparişlerde eskiye dönüyor.",
+          "acilma_kosulu": "Eski yöntemin neyi kolaylaştırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski yöntemle",
+            "tek tur"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimat, ofiste bir haftalık örnek siparişlere bakılarak hazırlandı; o hafta karışık sipariş azdı ve toplayıcılara danışılmadı.",
+          "acilma_kosulu": "Eğitimin nerede ve nasıl yapıldığı ya da talimatın nasıl hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "eğitim nerede",
+            "talimat",
+            "danış"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Vardiya amiri yeni yöntemi uygulatmak için sahada duruyor.",
+          "acilma_kosulu": "Eğitimden sonra sahada kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "amir"
+          ]
+        }
+      ],
+      "kok_neden": "Eğitim değil talimat sorunlu: yeni yöntem karışık siparişlerde arabaya sığmıyor ve iki tur istiyor; talimat karışık siparişin az olduğu bir haftaya bakılarak ve toplayıcılara danışılmadan hazırlandı.",
+      "kok_neden_kelimeler": [
+        "talimat",
+        "karışık",
+        "tur",
+        "danış",
+        "sığmıyor"
+      ]
+    }
+  ]
+}

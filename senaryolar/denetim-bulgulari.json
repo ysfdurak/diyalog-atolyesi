@@ -1,0 +1,199 @@
+{
+  "id": "denetim-bulgulari",
+  "baslik": "Kapatılan denetim bulguları neden geri geliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Son iki iç denetimde aynı bulgular yeniden çıktı: yangın dolabının önü kapalı, raf etiketleri eksik, forklift kontrol formları boş. Bulguların hepsi geçen sefer \"kapatıldı\" diye işaretlenmişti. Düzeltici faaliyetleri takip eden kalite uzmanıyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın sorumlu aramak değil, kapatılan bulguların neden geri geldiğini anlamak.",
+  "karakter": {
+    "ad": "Pınar",
+    "rol": "Kalite uzmanı",
+    "tavir": "Düzenli ve kurallara bağlı; \"formları biz kapatıyoruz ama sahayı ben yönetmiyorum\" der. Süreci soran birine açık konuşur.",
+    "ilk_soz": "Kayıtlara bakarsanız hepsi zamanında kapatıldı. Sahada neden geri geldiğini ben de soruyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Sahada kurallara uyulmuyor.",
+    "Denetçiler çok ayrıntıya takılıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir bulgu kapatıldı diye işaretlenmeden önce ne yapılıyor?",
+    "Düzeltici faaliyetin kök nedeni nasıl belirleniyor?",
+    "Tekrar eden bulgular kapatıldıktan ne kadar sonra geri geldi?",
+    "Bulguyu sahada kim sahipleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Belge kapanıyor, saha değişmiyor: fotoğrafla kapatma ve hazır kök neden",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bulgu, fotoğraflı tek bir düzeltmeyle kapatılıyor: dolabın önü bir kez boşaltılıyor, fotoğraf çekiliyor, form kapanıyor.",
+          "acilma_kosulu": "Bir bulgunun kapatılmadan önce ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "işaretlenmeden",
+            "fotoğraf",
+            "form"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kök neden formunda hazır seçenekler var; çoğunda \"personel dikkatsizliği\" seçiliyor ve düzeltici faaliyet \"bilgilendirme yapıldı\" oluyor.",
+          "acilma_kosulu": "Kök nedenin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kök nedeni",
+            "dikkatsiz",
+            "seçenek"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bulgular kapatıldıktan iki üç hafta sonra geri geldi; ilk takip denetimi ise altı ay sonra.",
+          "acilma_kosulu": "Bulguların ne kadar sonra geri geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "geri geldi",
+            "takip",
+            "hafta"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bulguların sahibi formda kalite ekibi olarak görünüyor.",
+          "acilma_kosulu": "Bulgunun sahada sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "sahipleniyor",
+            "kalite ekibi"
+          ]
+        }
+      ],
+      "kok_neden": "Bulgular belgede kapatılıyor, sahada değil: tek seferlik düzeltmenin fotoğrafıyla form kapanıyor, kök neden hazır 'dikkatsizlik' seçeneğiyle geçiliyor ve takip denetimi aylar sonra geldiği için tekrar görünmüyor.",
+      "kok_neden_kelimeler": [
+        "fotoğraf",
+        "form",
+        "dikkatsizlik",
+        "kök neden",
+        "takip"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Fiziksel neden: yoğun haftalarda geçici alan yetmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yangın dolabının önü her yoğun haftada yeniden kapanıyor; bulgular sezon başlarında geri geliyor.",
+          "acilma_kosulu": "Bulguların ne kadar sonra geri geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "geri geldi",
+            "sezon",
+            "yoğun"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kök neden incelemesinde alan kapasitesine hiç bakılmadı; yoğun haftalarda geçici alan yetmediği için paletler koridorlara ve dolap önlerine konuyor.",
+          "acilma_kosulu": "Kök nedenin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kök nedeni",
+            "alan",
+            "palet"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Dolap önünü boş tutmanın sahada bir sahibi yok; vardiyalar birbirine bırakıyor ve paleti oraya koyanın başka seçeneği yok.",
+          "acilma_kosulu": "Bulgunun sahada sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "sahipleniyor",
+            "vardiya"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kapatma için fotoğraf yeterli sayılıyor.",
+          "acilma_kosulu": "Bir bulgunun kapatılmadan önce ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "işaretlenmeden",
+            "fotoğraf"
+          ]
+        }
+      ],
+      "kok_neden": "Bulgular alan yetmediği için geri geliyor: yoğun haftalarda geçici alan doluyor, paletler dolap önlerine konuyor ve kök neden incelemesi kapasiteye bakmadığı için çözüm hep 'boşalt' oluyor.",
+      "kok_neden_kelimeler": [
+        "alan",
+        "yoğun",
+        "palet",
+        "kapasite",
+        "geçici"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Form uygulanamaz: 28 maddelik forklift formu, süre ayrılmamış",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Forklift kontrol formunda 28 madde var; vardiya başında doldurmak 10 dakika sürüyor ama vardiya devrinde buna süre ayrılmamış.",
+          "acilma_kosulu": "Kök nedenin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kök nedeni",
+            "madde",
+            "süre"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bulgu, operatörlere formu doldurmaları hatırlatılınca kapatıldı; formun kendisine hiç bakılmadı.",
+          "acilma_kosulu": "Bir bulgunun kapatılmadan önce ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "işaretlenmeden",
+            "hatırlat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Formu operatörler dolduruyor ama formu kalite tasarlamış; operatörlere hangi maddelerin gerçekten önemli olduğu hiç sorulmamış.",
+          "acilma_kosulu": "Bulgunun sahada sahibi sorulursa",
+          "ipucu_kelimeler": [
+            "sahipleniyor",
+            "operatör",
+            "tasarla"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Formlar kapatıldıktan sonra birkaç gün dolduruldu, sonra yine boş kaldı.",
+          "acilma_kosulu": "Bulguların ne kadar sonra geri geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "geri geldi",
+            "birkaç gün"
+          ]
+        }
+      ],
+      "kok_neden": "Boş formlar dikkatsizlikten değil formun kendisinden: 28 maddelik form vardiya başına ayrılmamış 10 dakika istiyor, operatörlere sorulmadan tasarlandı ve bulgu yalnızca hatırlatmayla kapatıldı.",
+      "kok_neden_kelimeler": [
+        "form",
+        "madde",
+        "süre",
+        "operatör",
+        "hatırlat"
+      ]
+    }
+  ]
+}

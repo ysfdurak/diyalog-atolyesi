@@ -73,6 +73,27 @@ const zorlukGoster = (z) => el('span', { class: 'zorluk', role: 'img', 'aria-lab
 const hataKutusu = (mesaj) => el('p', { class: 'kutu hata', role: 'alert' }, mesaj);
 
 // --- Ana sayfa ---------------------------------------------------------------------
+// --- Alan filtresi: 30 kart telefonda uzun bir liste; alan çipiyle süzülür. Seçim yalnız bu ekranda tutulur. ---
+function alanFiltresi(senaryolar) {
+  const sayilar = {};
+  for (const s of senaryolar) sayilar[s.alan] = (sayilar[s.alan] || 0) + 1;
+  const alanlar = Object.keys(sayilar).sort((a, b) => a.localeCompare(b, 'tr'));
+  if (alanlar.length < 2) return null;
+  const dugmeler = [];
+  const sec = (alan) => {
+    for (const d of dugmeler) d.setAttribute('aria-pressed', String(d.dataset.alan === alan));
+    for (const k of document.querySelectorAll('.senaryo-kartlari .kart')) k.hidden = alan !== '' && k.dataset.alan !== alan;
+  };
+  const dugme = (alan, metin) => {
+    const d = el('button', { type: 'button', class: 'cip', 'aria-pressed': String(alan === ''), onclick: () => sec(alan) }, metin);
+    d.dataset.alan = alan;
+    dugmeler.push(d);
+    return d;
+  };
+  return el('div', { class: 'cipler', role: 'group', 'aria-label': 'Alana göre süz' },
+    dugme('', `Tümü (${senaryolar.length})`), ...alanlar.map((a) => dugme(a, `${a} (${sayilar[a]})`)));
+}
+
 async function anaSayfa() {
   durum.oturum = null;
   if (location.hash) history.replaceState(null, '', location.pathname);
@@ -97,7 +118,7 @@ async function anaSayfa() {
     const enIyi = Math.max(0, ...gecmis.filter((g) => g.senaryoId === sn.id).map((g) => g.toplam));
     const n = sn.varyantlar.length;
     const oynanan = oynananVaryantlar(sn.id).filter((v) => sn.varyantlar.includes(v)).length;
-    return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : '') },
+    return el('article', { class: 'kart' + (sn.id === gunun.id ? ' gunun' : ''), 'data-alan': sn.alan },
       el('div', { class: 'kart-ust' },
         sn.id === gunun.id && el('span', { class: 'etiket vurgu' }, 'Günün senaryosu'),
         el('span', { class: 'etiket' }, sn.alan),
@@ -123,6 +144,7 @@ async function anaSayfa() {
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
       el('h2', { id: 'b-senaryolar' }, 'Senaryolar'),
       s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, 'Bazı senaryoların birden fazla kök nedeni var. Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.'),
+      alanFiltresi(s.senaryolar),
       el('div', { class: 'kartlar senaryo-kartlari' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-nasil' },

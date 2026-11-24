@@ -1,0 +1,200 @@
+{
+  "id": "yesil-rapor",
+  "baslik": "Durum raporu hep yeşil, proje neden teslim edilmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Depo yönetim sistemi geçiş projesinin haftalık durum raporu altı aydır hep yeşil. Canlıya geçişe iki hafta kala test ekibi 140 açık hata bildirdi ve geçiş ertelendi. Projenin iş tarafındaki ekip liderlerinden biriyle konuşuyorsun.",
+  "rolun": "Projenin yönlendirme kurulundasın. Amacın kimin yanlış raporladığını bulmak değil, risklerin neden rapora yansımadığını anlamak.",
+  "karakter": {
+    "ad": "Okan",
+    "rol": "İş tarafı ekip lideri",
+    "tavir": "Temkinli; kimseyi ele vermek istemiyor. Güvende hissedince anlatıyor.",
+    "ilk_soz": "Rapor yeşildi, evet. Herkes biliyordu ki tam öyle değil."
+  },
+  "yaniltici_ipuclari": [
+    "Test ekibi çok titiz davrandı.",
+    "Bu büyüklükte projelerde sürprizler olur."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Durum raporundaki renk nasıl belirleniyor?",
+    "Bir sorun fark edildiğinde rapora kadar nasıl ulaşıyor?",
+    "Kırmızı raporlamanın ekipte nasıl bir karşılığı var?",
+    "Testler takvime göre ne zaman başladı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Renk yalnızca takvime bakıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Renk yalnızca kilometre taşlarının tarihine göre belirleniyor; tarihler tutuyorsa rapor yeşil, işin kalitesine bakılmıyor.",
+          "acilma_kosulu": "Rapordaki rengin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "renk",
+            "kilometre taşı",
+            "tarih"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Testler takvimin son ayına sıkıştırılmıştı; daha önce yalnızca belge teslimleri yapıldı.",
+          "acilma_kosulu": "Testlerin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "testler",
+            "son ay",
+            "sıkıştır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekiplerin bildirdiği sorunlar ayrı bir risk listesine gidiyor; risk listesi durum raporunda yer almıyor.",
+          "acilma_kosulu": "Bir sorunun rapora nasıl ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildiğinde",
+            "risk listesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kırmızı raporlamanın açık bir yaptırımı yok.",
+          "acilma_kosulu": "Kırmızı raporlamanın karşılığı sorulursa",
+          "ipucu_kelimeler": [
+            "kırmızı raporlamanın",
+            "yaptırım"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yeşildi çünkü renk yalnızca takvime bakıyor: kilometre taşları tarihinde teslim edildikçe rapor yeşil kaldı, sorunlar rapora girmeyen ayrı bir risk listesinde birikti ve testler son aya sıkıştığı için kalite geç görüldü.",
+      "kok_neden_kelimeler": [
+        "takvim",
+        "kilometre taşı",
+        "risk listesi",
+        "test",
+        "renk"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kırmızı cezalandırılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk ay kırmızı raporlayan ekip lideri yönlendirme kurulunda sert eleştirildi ve projeden alındı; o günden beri kimse kırmızı vermiyor.",
+          "acilma_kosulu": "Kırmızı raporlamanın karşılığı sorulursa",
+          "ipucu_kelimeler": [
+            "kırmızı raporlamanın",
+            "eleştiri",
+            "alındı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Renk her ekip liderinin kendi beyanına göre belirleniyor; doğrulayan bir ölçüt yok.",
+          "acilma_kosulu": "Rapordaki rengin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "renk",
+            "beyan",
+            "ölçüt"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sorunlar koridor konuşmalarında biliniyor ama yazılı rapora \"takipte\" diye giriyor.",
+          "acilma_kosulu": "Bir sorunun rapora nasıl ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildiğinde",
+            "koridor",
+            "takipte"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Testler planlandığı zamanda başladı.",
+          "acilma_kosulu": "Testlerin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "testler",
+            "planlandığı"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yeşildi çünkü kırmızı cezalandırılıyor: ilk kırmızı raporlayan lider eleştirilip projeden alındı, renk doğrulanmayan beyana dayanıyor ve sorunlar yazılı rapora 'takipte' diye giriyor.",
+      "kok_neden_kelimeler": [
+        "ceza",
+        "kırmızı",
+        "beyan",
+        "eleştiri",
+        "takipte"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bilgi yukarı çıkarken yumuşuyor: turuncu sunumda yeşil oluyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sorun önce ekip liderine, sonra proje yöneticisine, sonra program müdürüne gidiyor; her katman rapora yazmadan önce sorunu \"kendi içinde çözmeye\" çalışıyor.",
+          "acilma_kosulu": "Bir sorunun rapora nasıl ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "fark edildiğinde",
+            "katman",
+            "program müdürü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Renk program müdürünün kurul sunumunda belirleniyor; ekiplerin turuncu verdiği maddeler sunumda yeşile dönüyor.",
+          "acilma_kosulu": "Rapordaki rengin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "renk",
+            "sunum",
+            "turuncu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Testler zamanında başladı; hatalar ilk aydan beri ekip düzeyinde biliniyordu.",
+          "acilma_kosulu": "Testlerin ne zaman başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "testler",
+            "ilk ay",
+            "ekip düzeyi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekipte kırmızı raporlayan kimse cezalandırılmadı.",
+          "acilma_kosulu": "Kırmızı raporlamanın karşılığı sorulursa",
+          "ipucu_kelimeler": [
+            "kırmızı raporlamanın",
+            "cezalandırıl"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yeşildi çünkü bilgi yukarı çıkarken yumuşuyor: sorunlar üç katmandan geçiyor, her katman önce kendi çözmeye çalışıyor ve ekiplerin turuncu verdiği maddeler kurul sunumunda yeşile dönüyor; hatalar aylardır ekip düzeyinde biliniyordu.",
+      "kok_neden_kelimeler": [
+        "katman",
+        "turuncu",
+        "sunum",
+        "yumuş",
+        "ekip düzeyi"
+      ]
+    }
+  ]
+}

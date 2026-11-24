@@ -1,0 +1,198 @@
+{
+  "id": "fazla-mesai-butcesi",
+  "baslik": "Fazla mesai bütçesi neden her ay aşılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Depoda fazla mesai son altı ayın her ayında bütçeyi aştı; geçen ay aşım %60'tı. Finans her ay açıklama istiyor. Personel planını yapan operasyon planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Bütçe ve verimlilikten sorumlu iş geliştirme yöneticisisin. Amacın fazla mesaiyi kısmak değil, bütçeyi neden aştığını anlamak.",
+  "karakter": {
+    "ad": "Serkan",
+    "rol": "Operasyon planlama uzmanı",
+    "tavir": "Rakamlara hâkim ama savunmada; \"herkes fazla mesai istiyor\" imasına sertleşiyor. Planın nasıl yapıldığını soran birine açık konuşuyor.",
+    "ilk_soz": "Aşımı biliyorum. Ama iş geliyorsa çıkması gerekiyor, ne yapalım."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar fazla mesaiyi ek gelir olarak görüyor.",
+    "Bu sektörde fazla mesai normal."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Fazla mesai en çok hangi günlerde ve hangi işlerde yazılıyor?",
+    "Bütçedeki fazla mesai saati nasıl hesaplandı?",
+    "Bir günün personel ihtiyacını nasıl planlıyorsunuz?",
+    "Fazla mesai kararını kim, ne zaman veriyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gelen mal planlanmıyor: tedarikçiler randevusuz ve pazartesi yığılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Fazla mesainin çoğu pazartesi ve salı, mal kabulde yazılıyor; tedarikçiler hafta sonu biriken araçları pazartesi sabah randevusuz getiriyor.",
+          "acilma_kosulu": "Fazla mesainin hangi günlerde ve işlerde yazıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi günler",
+            "pazartesi",
+            "mal kabul"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Günlük personel planı yalnızca çıkış siparişlerine göre yapılıyor; gelen mal miktarı planda yok, çünkü randevu sistemi kullanılmıyor.",
+          "acilma_kosulu": "Günlük personel ihtiyacının nasıl planlandığı ya da gelen malın planlanması sorulursa",
+          "ipucu_kelimeler": [
+            "personel ihtiyac",
+            "randevu",
+            "gelen mal"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mal kabul amiri araçlar kapıya geldiğinde, günün sonunda fazla mesai yazıyor; araç gelmeden ihtiyaç bilinmiyor.",
+          "acilma_kosulu": "Fazla mesai kararını kimin ve ne zaman verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararını kim",
+            "amir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bütçe geçen yılın aylık ortalamasından hesaplandı.",
+          "acilma_kosulu": "Bütçenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bütçedeki",
+            "geçen yıl"
+          ]
+        }
+      ],
+      "kok_neden": "Fazla mesai gelen malın planlanmamasından: tedarikçiler randevusuz ve pazartesi yığılarak geliyor, personel planı yalnızca çıkışa göre yapılıyor ve fazla mesai araç kapıya gelince yazılıyor.",
+      "kok_neden_kelimeler": [
+        "randevu",
+        "gelen mal",
+        "pazartesi",
+        "plan",
+        "mal kabul"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bütçe gerçekçi değil: hacim arttı, kadro azaldı, bütçe güncellenmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bütçedeki fazla mesai saati geçen yıla göre hesaplandı; bu yıl hacim %20 arttı ama bütçe güncellenmedi.",
+          "acilma_kosulu": "Bütçenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bütçedeki",
+            "hesaplan",
+            "hacim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kadro bu yıl iki kişi azaltıldı; planlanan ihtiyaçla mevcut kadro arasındaki fark her gün fazla mesaiyle kapatılıyor.",
+          "acilma_kosulu": "Günlük personel ihtiyacının nasıl planlandığı ya da kadro sorulursa",
+          "ipucu_kelimeler": [
+            "personel ihtiyac",
+            "kadro"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fazla mesai haftanın bütün günlerine ve işlerine eşit dağılmış; belirli bir yığılma yok.",
+          "acilma_kosulu": "Fazla mesainin hangi günlerde ve işlerde yazıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi günler",
+            "dağıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Fazla mesaiyi vardiya amirleri yazıyor, müdür ay sonunda onaylıyor.",
+          "acilma_kosulu": "Fazla mesai kararını kimin ve ne zaman verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararını kim",
+            "onay"
+          ]
+        }
+      ],
+      "kok_neden": "Aşım fazla mesaiden değil bütçeden: bütçe geçen yılın hacmine göre hesaplandı, hacim arttı ve kadro azaltıldığı için aradaki fark her gün fazla mesaiyle kapatılıyor.",
+      "kok_neden_kelimeler": [
+        "bütçe",
+        "hacim",
+        "kadro",
+        "geçen yıl",
+        "güncellen"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Devamsızlık: izin payı yok, yedek kaydırma yetkisi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Fazla mesai en çok cuma ve cumartesi yazılıyor; o günlerde devamsızlık %12'ye çıkıyor.",
+          "acilma_kosulu": "Fazla mesainin hangi günlerde ve işlerde yazıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi günler",
+            "cuma",
+            "devamsız"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Planda izin ve devamsızlık payı yok; gelmeyen herkesin yeri aynı vardiyadaki kişilere fazla mesaiyle kapatılıyor.",
+          "acilma_kosulu": "Günlük personel ihtiyacının nasıl planlandığı ya da izin ve devamsızlık sorulursa",
+          "ipucu_kelimeler": [
+            "personel ihtiyac",
+            "izin",
+            "pay"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fazla mesaiyi ancak kendi ekibinden yazabiliyorlar; başka vardiyadan ya da yedek havuzdan kişi kaydırma yetkisi yok.",
+          "acilma_kosulu": "Fazla mesai kararını kimin ve ne zaman verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararını kim",
+            "yetki",
+            "yedek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bütçe hesabı tam kadro varsayımıyla yapılmış.",
+          "acilma_kosulu": "Bütçenin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bütçedeki",
+            "varsayım"
+          ]
+        }
+      ],
+      "kok_neden": "Fazla mesai devamsızlığı kapatmak için yazılıyor: cuma ve cumartesi devamsızlık artıyor, planda izin payı yok ve yedekten ya da başka vardiyadan kişi kaydırma yetkisi olmadığı için boşluk fazla mesaiyle doluyor.",
+      "kok_neden_kelimeler": [
+        "devamsız",
+        "izin",
+        "yedek",
+        "plan",
+        "cuma"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "pilot-yayilmiyor",
+  "baslik": "Başarılı pilot neden diğer depolara yayılmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Bir depoda pilot olarak başlatılan sesli toplama sistemi toplama hatalarını yarıya indirdi. Yönetim diğer dört depoya da yayılmasını istedi; altı ay geçti, hiçbirinde başlamadı. Pilotu yürüten depo müdürüyle konuşuyorsun.",
+  "rolun": "Yaygınlaştırmadan sorumlu iş geliştirme yöneticisisin. Amacın diğer depoları sıkıştırmak değil, pilotun neden yayılmadığını anlamak.",
+  "karakter": {
+    "ad": "Aylin",
+    "rol": "Pilot deponun müdürü",
+    "tavir": "Pilotla gurur duyuyor ama yorgun; \"diğerleri istemiyor\" diye özetliyor. Ayrıntı soran birine dürüstçe anlatıyor.",
+    "ilk_soz": "Pilot başarılıydı, rakamlar ortada. Diğer depolar neden almıyor, onu da onlara sormak lazım."
+  },
+  "yaniltici_ipuclari": [
+    "Diğer depo müdürleri yeniliğe kapalı.",
+    "Herkes kendi yöntemine alışmış."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Pilot başarılı olurken sizin depoda neler farklıydı?",
+    "Pilotun maliyeti ve emeği nasıl karşılandı?",
+    "Diğer depolar sistemi denediğinde neler oldu?",
+    "Yaygınlaştırmayı kim yürütüyor, nasıl planlandı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tekrarlanamayan koşullar: seçilmiş bölüm, en iyi ekip, ücretsiz uzman",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pilot, deponun en düzenli bölümünde ve en deneyimli 12 toplayıcıyla yapıldı; diğer bölümlerde hiç denenmedi.",
+          "acilma_kosulu": "Pilot deposunda neyin farklı olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "farklıydı",
+            "bölüm",
+            "deneyimli"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pilot süresince tedarikçinin iki uzmanı ücretsiz olarak sahadaydı; yaygınlaştırmada bu destek ücretli ve bütçede yok.",
+          "acilma_kosulu": "Pilotun maliyetinin ve emeğinin nasıl karşılandığı sorulursa",
+          "ipucu_kelimeler": [
+            "maliyeti",
+            "bütçe",
+            "uzman"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bir depo sistemi karışık ürünlü bölümünde denedi; ses tanıma gürültüde hata yaptı ve iki haftada bıraktılar.",
+          "acilma_kosulu": "Diğer depoların sistemi denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "gürültü",
+            "bıraktı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yaygınlaştırma için ayrı bir proje sorumlusu atanmadı.",
+          "acilma_kosulu": "Yaygınlaştırmayı kimin yürüttüğü ve nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kim yürüt",
+            "sorumlu"
+          ]
+        }
+      ],
+      "kok_neden": "Pilot tekrarlanamayan koşullarla başarıldı: en düzenli bölümde, en deneyimli ekiple ve tedarikçinin ücretsiz uzman desteğiyle yapıldı; diğer depolarda bu koşullar ve destek bütçesi yok.",
+      "kok_neden_kelimeler": [
+        "koşul",
+        "deneyimli",
+        "destek",
+        "bütçe",
+        "tekrarlan"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sahipsiz yaygınlaştırma: sorumlu yok, bedel depolara yıkıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yaygınlaştırma için proje sorumlusu atanmadı; karar toplantı tutanağında \"depolar uygulayacak\" diye geçti.",
+          "acilma_kosulu": "Yaygınlaştırmayı kimin yürüttüğü ve nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kim yürüt",
+            "sorumlu",
+            "tutanak"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pilotun maliyeti genel merkez bütçesinden karşılandı; yaygınlaştırmanın bedeli ise her deponun kendi bütçesine yazılacak ve depolar bunu bütçelerine koymadı.",
+          "acilma_kosulu": "Pilotun maliyetinin ve emeğinin nasıl karşılandığı sorulursa",
+          "ipucu_kelimeler": [
+            "maliyeti",
+            "bütçe",
+            "bedel"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Pilotta haftalık takip toplantısı ve genel müdürün yakın ilgisi vardı; yaygınlaştırmada bunlardan hiçbiri yok.",
+          "acilma_kosulu": "Pilot deposunda neyin farklı olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "farklıydı",
+            "takip",
+            "ilgi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Diğer depolar sistemi hiç denemedi; yalnızca bir sunum izlediler.",
+          "acilma_kosulu": "Diğer depoların sistemi denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "sunum"
+          ]
+        }
+      ],
+      "kok_neden": "Yaygınlaştırma sahipsiz kaldı: proje sorumlusu atanmadı, bedel depoların bütçesine yazıldı ama bütçelere konmadı ve pilottaki takip ile yönetim ilgisi devam etmedi.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "sorumlu",
+        "bütçe",
+        "takip",
+        "bedel"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Teknik uyumsuzluk: diğer depolar eski WMS sürümünde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki depo kurulum testine başladı; sesli sistemin onların WMS sürümüyle bağlantısı kurulamadı.",
+          "acilma_kosulu": "Diğer depoların sistemi denediğinde ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "denediğinde",
+            "kurulum",
+            "test"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pilot depo yeni WMS sürümüne geçen tek depoydu; diğer dört depo eski sürümde.",
+          "acilma_kosulu": "Pilot deposunda neyin farklı olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "farklıydı",
+            "wms",
+            "sürüm"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer depoların WMS geçişi BT'nin takviminde gelecek yıla konmuş; yaygınlaştırma planı bu takvime bakılmadan yapıldı.",
+          "acilma_kosulu": "Yaygınlaştırmayı kimin yürüttüğü ve nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "kim yürüt",
+            "takvim",
+            "bt"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Pilotun maliyeti beklenenin altında kaldı.",
+          "acilma_kosulu": "Pilotun maliyetinin ve emeğinin nasıl karşılandığı sorulursa",
+          "ipucu_kelimeler": [
+            "maliyeti",
+            "beklenen"
+          ]
+        }
+      ],
+      "kok_neden": "Pilot teknik olarak yayılamıyor: sesli sistem yeni WMS sürümüne bağlı, diğer depolar eski sürümde ve onların geçişi BT takviminde gelecek yıla konmuşken yaygınlaştırma planı bu takvime bakılmadan yapıldı.",
+      "kok_neden_kelimeler": [
+        "wms",
+        "sürüm",
+        "takvim",
+        "bt",
+        "geçiş"
+      ]
+    }
+  ]
+}
