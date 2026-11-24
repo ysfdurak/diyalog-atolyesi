@@ -55,6 +55,18 @@ test('senaryolar: günün senaryosu gün içinde sabit, günler arasında dönü
   assert.equal(alti.size, 6);
 });
 
+test('senaryolar: günün senaryosu sektörleri sırayla döndürüyor', () => {
+  const sektorSayisi = new Set([...senaryolar.values()].map((s) => s.sektor || 'Depo ve lojistik')).size;
+  const gunler = Array.from({ length: sektorSayisi }, (_, i) => new Date(Date.UTC(2026, 10, 16 + i)).toISOString().slice(0, 10));
+  const sektorler = new Set(gunler.map((g) => gununSenaryosu(senaryolar, g).sektor || 'Depo ve lojistik'));
+  assert.equal(sektorler.size, sektorSayisi, 'ardışık günlerde her sektör bir kez gelmeli');
+  // aynı sektör bir tur sonra başka bir senaryoyla gelir
+  const ilk = gununSenaryosu(senaryolar, gunler[0]);
+  const birTurSonra = gununSenaryosu(senaryolar, new Date(Date.UTC(2026, 10, 16 + sektorSayisi)).toISOString().slice(0, 10));
+  assert.equal(birTurSonra.sektor, ilk.sektor);
+  assert.notEqual(birTurSonra.id, ilk.id);
+});
+
 test('puanlama: oran 1-5 aralığına çevrilir', () => {
   assert.deepEqual([0, 0.5, 1, 2, -1].map(orandanPuana), [1, 3, 5, 5, 1]);
 });
