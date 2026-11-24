@@ -1,0 +1,205 @@
+{
+  "id": "iyilestirme-kalici-degil",
+  "baslik": "İyileştirmenin kazanımı neden kayboldu?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Geçen yıl toplama alanında yapılan 5S ve yerleşim çalışması ilk ay verimi %12 artırdı. Altı ay sonra ölçümler eski seviyeye döndü. Çalışmayı yürüten iyileştirme uzmanıyla konuşuyorsun.",
+  "rolun": "İyileştirme programından sorumlu yöneticisin. Amacın \"saha disiplinsiz\" demek değil, kazanımın neden kalıcı olmadığını anlamak.",
+  "karakter": {
+    "ad": "Deniz",
+    "rol": "Sürekli iyileştirme uzmanı",
+    "tavir": "Hayal kırıklığına uğramış ve kendini savunuyor; sorgulandığını hissedince \"biz işimizi yaptık\" der. Merak eden birine ayrıntı verir.",
+    "ilk_soz": "Proje teslim edildiğinde her şey yerindeydi, fotoğrafları var. Sonrası bizim elimizde değildi."
+  },
+  "yaniltici_ipuclari": [
+    "Saha ekibi eski alışkanlıklarına döndü.",
+    "Disiplin olmayınca böyle oluyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Proje kapandıktan sonra alanı kim takip ediyordu?",
+    "Kazanım ilk ne zaman düşmeye başladı, o dönemde ne değişti?",
+    "Yeni düzen günlük işte nasıl korunuyordu?",
+    "Çalışmaya saha ekibinden kimler katıldı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sahipsiz kazanım: takip yok, denetim bırakıldı, standart yok",
+      "gizli_bilgiler": [
+        {
+          "id": "sahip-yok",
+          "onem": "kritik",
+          "bilgi": "Proje kapandığında alanın sahibi tanımlanmadı; iyileştirme ekibi başka projeye geçti, alanı takip eden kimse kalmadı.",
+          "acilma_kosulu": "Proje kapandıktan sonra alanı kimin takip ettiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapandıktan",
+            "kim takip",
+            "sahip"
+          ]
+        },
+        {
+          "id": "denetim",
+          "onem": "kritik",
+          "bilgi": "Haftalık 5S denetimleri iki ay sonra bırakıldı; düşüş de tam o dönemde başladı.",
+          "acilma_kosulu": "Kazanımın ne zaman düşmeye başladığı ya da o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman",
+            "düşmeye",
+            "ne değişti"
+          ]
+        },
+        {
+          "id": "standart",
+          "onem": "kritik",
+          "bilgi": "Yeni düzen yalnızca proje sırasında asılan fotoğraflarla korunuyordu; günlük vardiya kontrolüne ya da standart iş talimatına eklenmedi.",
+          "acilma_kosulu": "Yeni düzenin günlük işte nasıl korunduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl korun",
+            "günlük",
+            "standart"
+          ]
+        },
+        {
+          "id": "iki-kisi",
+          "onem": "destek",
+          "bilgi": "Saha ekibinden yalnızca iki kişi çalışmaya katıldı.",
+          "acilma_kosulu": "Çalışmaya saha ekibinden kimlerin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimler katıl",
+            "saha ekibi",
+            "katıl"
+          ]
+        }
+      ],
+      "kok_neden": "Kazanım sahipsiz kaldığı için kayboldu: proje kapanınca alanın sahibi tanımlanmadı, denetimler bırakıldı ve yeni düzen günlük kontrollere ya da standart talimata bağlanmadı.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "denetim",
+        "standart",
+        "takip",
+        "günlük"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sahaya rağmen yapıldı: toplayıcılar katılmadı, yerleşim işlerini zorlaştırdı",
+      "gizli_bilgiler": [
+        {
+          "id": "hafta-sonu",
+          "onem": "kritik",
+          "bilgi": "Çalışmayı iyileştirme ekibi bir hafta sonu kendisi yaptı; saha ekibinden kimse katılmadı, toplayıcılar pazartesi değişmiş bir alanla karşılaştı.",
+          "acilma_kosulu": "Çalışmaya saha ekibinden kimlerin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimler katıl",
+            "saha ekibi",
+            "katıl"
+          ]
+        },
+        {
+          "id": "agir-ust",
+          "onem": "kritik",
+          "bilgi": "Yeni yerleşimde sık toplanan ağır ürünler üst raflara gitti; toplayıcılar işi zorlaştırdığı için ürünleri eski yerlerine taşıdı.",
+          "acilma_kosulu": "Kazanımın ne zaman düşmeye başladığı ya da o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman",
+            "düşmeye",
+            "ne değişti"
+          ]
+        },
+        {
+          "id": "itiraz-yolu",
+          "onem": "kritik",
+          "bilgi": "Toplayıcıların itirazlarını iletecekleri bir yol yoktu; sessizce kendi düzenlerine döndüler.",
+          "acilma_kosulu": "Yeni düzenin günlük işte nasıl korunduğu ya da itirazların nasıl iletildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl korun",
+            "günlük",
+            "itiraz"
+          ]
+        },
+        {
+          "id": "ilk-ay-yardim",
+          "onem": "destek",
+          "bilgi": "İlk ayki verim artışı kısmen proje ekibinin sahada yardım etmesinden geliyordu.",
+          "acilma_kosulu": "Proje kapandıktan sonra alanı kimin takip ettiği ya da ilk ay sorulursa",
+          "ipucu_kelimeler": [
+            "kapandıktan",
+            "kim takip",
+            "ilk ay"
+          ]
+        }
+      ],
+      "kok_neden": "Kazanım kalıcı olmadı çünkü değişiklik saha ekibine rağmen yapıldı: toplayıcılar çalışmaya katılmadı, yeni yerleşim ağır ürünleri üst raflara koyarak işlerini zorlaştırdı ve itirazlarını iletecek bir yol olmadığı için eski düzene döndüler.",
+      "kok_neden_kelimeler": [
+        "katıl",
+        "saha ekibi",
+        "yerleşim",
+        "ağır",
+        "itiraz"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Düzen korunuyor ama yerleşim eskidi: sezon değişti, ABC yenilenmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "sezon",
+          "onem": "kritik",
+          "bilgi": "Düşüş sezon değişimiyle başladı; kış sezonunda hacimli ürünler arttı ve sipariş karması değişti.",
+          "acilma_kosulu": "Kazanımın ne zaman düşmeye başladığı ya da o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman",
+            "düşmeye",
+            "ne değişti"
+          ]
+        },
+        {
+          "id": "abc",
+          "onem": "kritik",
+          "bilgi": "Yerleşim yaz sezonunun sık satan ürünlerine göre yapılmıştı; ürünlerin hız sınıflaması (ABC) sezon değişince yeniden yapılmadı.",
+          "acilma_kosulu": "Yeni düzenin günlük işte nasıl korunduğu ya da nasıl güncellendiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl korun",
+            "günlük",
+            "güncellen",
+            "sınıf"
+          ]
+        },
+        {
+          "id": "uzak-raf",
+          "onem": "kritik",
+          "bilgi": "Alanın düzeni korunuyor; ama yeni sezonun sık satan ürünleri en uzak raflarda kaldı, toplayıcılar daha çok yürüyor.",
+          "acilma_kosulu": "Proje kapandıktan sonra alanın durumu ya da kimin takip ettiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapandıktan",
+            "kim takip",
+            "alan"
+          ]
+        },
+        {
+          "id": "sahipleniyor",
+          "onem": "destek",
+          "bilgi": "Saha ekibi çalışmaya aktif katıldı ve düzeni sahipleniyor.",
+          "acilma_kosulu": "Çalışmaya saha ekibinden kimlerin katıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimler katıl",
+            "saha ekibi",
+            "katıl"
+          ]
+        }
+      ],
+      "kok_neden": "Disiplin değil yerleşim eskidi: düzen korunuyor ama yerleşim yaz sezonunun ürünlerine göre yapılmıştı, sezon değişince ürün karması değişti ve hız sınıflaması yeniden yapılmadığı için sık satan ürünler uzak raflarda kaldı.",
+      "kok_neden_kelimeler": [
+        "sezon",
+        "yerleşim",
+        "abc",
+        "sınıflama",
+        "ürün karması"
+      ]
+    }
+  ]
+}

@@ -18,11 +18,11 @@ const depo = varyantCozumle(depoTemel, 'v1');
 const serbest = () => ({ izin: true });
 const ilkVaryant = (a) => a[0]; // testlerde varyant seçimi sabit: adaylardan ilki
 
-test('senaryolar: on senaryo geçerli, alan dağılımı ve ağırlıklar 100 ediyor', () => {
-  assert.equal(senaryolar.size, 10);
+test('senaryolar: tüm senaryolar geçerli, alan dağılımı ve ağırlıklar 100 ediyor', () => {
+  assert.equal(senaryolar.size, 15);
   const alanlar = {};
   for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
-  assert.deepEqual(alanlar, { 'İş geliştirme': 3, Operasyon: 3, 'Ekip yönetimi': 3, 'Proje yönetimi': 1 });
+  assert.deepEqual(alanlar, { 'İş geliştirme': 5, Operasyon: 4, 'Ekip yönetimi': 4, 'Proje yönetimi': 2 });
   // Her senaryo üç kök nedenli
   for (const [id, s] of senaryolar) assert.equal(s.varyantlar.length, 3, id);
   for (const s of senaryolar.values()) for (const v of s.varyantlar) assert.equal(v.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3, `${s.id}/${v.id}`);

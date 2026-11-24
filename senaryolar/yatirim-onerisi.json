@@ -1,0 +1,208 @@
+{
+  "id": "yatirim-onerisi",
+  "baslik": "Yatırım önerin neden onaylanmadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sure_dk": 8,
+  "acilis": "Depoya otomatik koli kapatma hattı için hazırladığın yatırım önerisi, yatırım komitesinden ikinci kez onay alamadı. Karar yazısında yalnızca \"şu an öncelik değil\" yazıyor. Komitenin finans tarafındaki iş ortağıyla konuşuyorsun.",
+  "rolun": "Öneriyi hazırlayan iş geliştirme yöneticisisin. Amacın kararı tartışmak değil, neden onaylanmadığını anlamak.",
+  "karakter": {
+    "ad": "Levent",
+    "rol": "Finans iş ortağı",
+    "tavir": "Temkinli; komitenin içini anlatmak istemiyor. Karara itiraz eden birine kapanır, gerçekten anlamaya çalışan birine açılır.",
+    "ilk_soz": "Komitenin kararı belli; ben de çok bir şey ekleyemem açıkçası."
+  },
+  "yaniltici_ipuclari": [
+    "Bu yıl bütçeler herkes için sıkı.",
+    "Komite yeni yatırımlara hep temkinli yaklaşır."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Komitede öneri konuşulurken en çok ne soruldu?",
+    "Komite bir yatırımı nasıl değerlendiriyor, neye bakıyor?",
+    "Bu kararda komitede kim belirleyici oldu?",
+    "Öneri hangi hâliyle onaylanabilirdi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hesap: hacim varsayımı satış planıyla çelişiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "hacim-varsayimi",
+          "onem": "kritik",
+          "bilgi": "Komitede en çok, öneride varsayılan yıllık %15 hacim artışı soruldu; satış planındaki artış %4.",
+          "acilma_kosulu": "Komitede en çok neyin sorulduğu ya da önerinin varsayımları sorulursa",
+          "ipucu_kelimeler": [
+            "en çok ne",
+            "soruldu",
+            "varsayım",
+            "hacim"
+          ]
+        },
+        {
+          "id": "geri-odeme",
+          "onem": "kritik",
+          "bilgi": "Finans hesabı kendi hacim verisiyle yeniden yaptı; geri ödeme süresi 2,1 yıldan 4,5 yıla çıktı. Şirketin eşiği 3 yıl.",
+          "acilma_kosulu": "Komitenin bir yatırımı nasıl değerlendirdiği ya da hangi ölçütlere baktığı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendir",
+            "neye bakıyor",
+            "geri ödeme",
+            "eşik",
+            "ölçüt"
+          ]
+        },
+        {
+          "id": "asamali",
+          "onem": "kritik",
+          "bilgi": "Hacim varsayımı satış planına bağlanır ve hat iki aşamaya bölünürse geri ödeme eşiğin altına iniyor.",
+          "acilma_kosulu": "Önerinin hangi hâliyle onaylanabileceği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi hâl",
+            "onaylanabilir",
+            "koşul"
+          ]
+        },
+        {
+          "id": "cfo",
+          "onem": "destek",
+          "bilgi": "Kararı fiilen finans direktörü verdi; teknik tarafa itiraz yok.",
+          "acilma_kosulu": "Kararda kimin belirleyici olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "kim",
+            "itiraz"
+          ]
+        }
+      ],
+      "kok_neden": "Öneri fikir olarak değil hesap olarak düştü: hacim artışı varsayımı satış planıyla çelişiyor ve gerçek hacimle geri ödeme süresi şirketin eşiğini aşıyor.",
+      "kok_neden_kelimeler": [
+        "varsayım",
+        "hacim",
+        "geri ödeme",
+        "eşik",
+        "satış planı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sahiplik: hattı kullanacak operasyon direktörü desteklemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "sahiplik-soruldu",
+          "onem": "kritik",
+          "bilgi": "Komitede en çok, operasyon direktörünün bu yatırımı isteyip istemediği soruldu.",
+          "acilma_kosulu": "Komitede en çok neyin sorulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en çok ne",
+            "soruldu"
+          ]
+        },
+        {
+          "id": "direktor",
+          "onem": "kritik",
+          "bilgi": "Operasyon direktörü toplantıda \"bizim önceliğimiz değil\" dedi; kararda onun sözü belirleyici oldu.",
+          "acilma_kosulu": "Kararda kimin belirleyici olduğu ya da kimin görüşünün ağır bastığı sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "kim",
+            "görüş"
+          ]
+        },
+        {
+          "id": "sezon",
+          "onem": "kritik",
+          "bilgi": "Direktörün çekincesi, kurulumun hattı üç hafta durdurması ve bunun sezona denk gelmesi; öneri hazırlanırken kimse onunla konuşmamış.",
+          "acilma_kosulu": "Önerinin hangi hâliyle onaylanabileceği ya da direktörün çekincesi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi hâl",
+            "onaylanabilir",
+            "çekince"
+          ]
+        },
+        {
+          "id": "kural",
+          "onem": "destek",
+          "bilgi": "Komite, kullanacak bölümün sahiplenmediği bir yatırımı rakamlar iyi olsa da onaylamıyor.",
+          "acilma_kosulu": "Komitenin bir yatırımı nasıl değerlendirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendir",
+            "neye bakıyor",
+            "ölçüt"
+          ]
+        }
+      ],
+      "kok_neden": "Rakamlar değil sahiplik eksikti: yatırımı kullanacak operasyon direktörü, kurulum hattı sezonda durduracağı için öneriyi desteklemedi ve öneri hazırlanırken onunla konuşulmadı.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "operasyon direktörü",
+        "destek",
+        "kurulum",
+        "sezon"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sıra: hat yeni WMS'e bağlı, alternatif sunulmamış",
+      "gizli_bilgiler": [
+        {
+          "id": "entegrasyon",
+          "onem": "kritik",
+          "bilgi": "Komitede en çok, koli hattının yeni WMS'e nasıl bağlanacağı soruldu; hat entegrasyon gerektiriyor ve BT'nin gelecek yılki bütün kapasitesi WMS yenilemesinde.",
+          "acilma_kosulu": "Komitede en çok neyin sorulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en çok ne",
+            "soruldu",
+            "entegrasyon"
+          ]
+        },
+        {
+          "id": "kiyas",
+          "onem": "kritik",
+          "bilgi": "Komite yatırımları aynı bütçe havuzunda birbiriyle kıyaslıyor; WMS yenilemesi önce gelmek zorunda olduğu için koli hattı sıraya alınmadı.",
+          "acilma_kosulu": "Komitenin bir yatırımı nasıl değerlendirdiği ya da yatırımları nasıl sıraladığı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendir",
+            "neye bakıyor",
+            "kıyas",
+            "sıra"
+          ]
+        },
+        {
+          "id": "alternatif",
+          "onem": "kritik",
+          "bilgi": "Öneri yalnızca satın almayı sunuyordu; kiralama ya da WMS sonrasına aşamalı kurulum gibi bir seçenek yoktu.",
+          "acilma_kosulu": "Önerinin hangi hâliyle onaylanabileceği ya da alternatifler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi hâl",
+            "onaylanabilir",
+            "alternatif",
+            "seçenek"
+          ]
+        },
+        {
+          "id": "ertelendi",
+          "onem": "destek",
+          "bilgi": "Komite fikri beğendi; kararı \"reddedildi\" değil \"ertelendi\" diye kaydetti.",
+          "acilma_kosulu": "Kararda kimin belirleyici olduğu ya da kararın nasıl kaydedildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "kim",
+            "kayıt"
+          ]
+        }
+      ],
+      "kok_neden": "Öneri tek başına değil diğer yatırımlarla birlikte değerlendirildi: hat yeni WMS entegrasyonuna bağlı, BT kapasitesi WMS yenilemesinde ve öneri bu sıraya uyan bir alternatif (kiralama, aşamalı kurulum) sunmadı.",
+      "kok_neden_kelimeler": [
+        "wms",
+        "entegrasyon",
+        "alternatif",
+        "sıra",
+        "bt kapasite"
+      ]
+    }
+  ]
+}
