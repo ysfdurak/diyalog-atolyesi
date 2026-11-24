@@ -1,0 +1,201 @@
+{
+  "id": "sosyal-medya-krizi",
+  "baslik": "Sosyal medya krizi neden bu kadar büyüdü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sektor": "Pazarlama",
+  "sure_dk": 8,
+  "acilis": "Bir müşterinin hatalı ürün şikâyeti sosyal medyada iki günde milyonlarca kişiye ulaştı; ana akım haberlere çıktı. İlk paylaşım 50 beğeni almışken krize döndü. Sosyal medya ekibinin liderliğini yapan uzmanla konuşuyorsun.",
+  "rolun": "Kurumsal iletişim müdürüsün. Amacın ekibi suçlamak değil, krizin neden büyüdüğünü anlamak.",
+  "karakter": {
+    "ad": "Irmak",
+    "rol": "Sosyal medya ekip lideri",
+    "tavir": "Sarsılmış ve savunmada; \"o hafta sonu ekip yoktu\" diyor. Zaman çizelgesini soran birine dürüst.",
+    "ilk_soz": "Hafta sonuydu, ekip izindeydi. Pazartesi baktığımızda çoktan büyümüştü."
+  },
+  "yaniltici_ipuclari": [
+    "Sosyal medyada her şey abartılıyor.",
+    "Rakipler kışkırttı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "İlk paylaşım ne zaman fark edildi ve ilk cevap ne zaman verildi?",
+    "İlk verilen cevapta ne yazıyordu?",
+    "Bir paylaşıma cevap vermeden önce hangi onaylar gerekiyor?",
+    "Şikâyet eden müşterinin sorunu sonra nasıl çözüldü?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Geç fark edildi: hafta sonu kimse izlemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk paylaşım cuma akşamı yapıldı; hafta sonu takip yapılmıyor, ilk cevap pazartesi öğlen verildi.",
+          "acilma_kosulu": "Fark etme ve ilk cevap zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk cevap ne zaman",
+            "cuma akşamı",
+            "pazartesi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Cevap için hukuk ve pazarlama müdürü onayı gerekiyor; onaycılar hafta sonu ulaşılabilir değil.",
+          "acilma_kosulu": "Cevap için onay sorulursa",
+          "ipucu_kelimeler": [
+            "hangi onaylar",
+            "hukuk ve pazarlama",
+            "ulaşılabilir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşterinin sorunu hiç çözülmedi; ürün değişimi ancak kriz haberlere çıktıktan sonra yapıldı.",
+          "acilma_kosulu": "Müşterinin sorununun çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl çözüldü",
+            "ürün değişimi",
+            "haberlere çıktıktan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk cevap kibar bir özürdü.",
+          "acilma_kosulu": "Ilk cevabın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk verilen cevapta",
+            "kibar"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz geç fark edildiği için büyüdü: paylaşım cuma akşamı yapıldı, hafta sonu takip yok, cevap için gereken hukuk ve müdür onayı hafta sonu alınamadı ve ilk cevap üç gün sonra verildi.",
+      "kok_neden_kelimeler": [
+        "hafta sonu",
+        "geç",
+        "takip",
+        "onay",
+        "ilk cevap"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İlk cevap yangını körükledi: kalıp ve savunma",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Paylaşım iki saat içinde fark edildi ve cevap verildi.",
+          "acilma_kosulu": "Fark etme ve ilk cevap zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk cevap ne zaman",
+            "iki saat içinde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk cevap kalıp bir metindi: \"Ürünlerimiz tüm kalite standartlarına uygundur, lütfen özel mesaj gönderin.\" Bu cevabın ekran görüntüsü yayıldı.",
+          "acilma_kosulu": "Ilk cevabın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk verilen cevapta",
+            "kalıp bir metin",
+            "ekran görüntüsü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekip yalnızca hukukun onayladığı hazır metinlerle cevap verebiliyor; kendi cümlesini yazma yetkisi yok.",
+          "acilma_kosulu": "Cevap için onay sorulursa",
+          "ipucu_kelimeler": [
+            "hangi onaylar",
+            "hazır metin",
+            "yetkisi yok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterinin ürünü sonunda değiştirildi.",
+          "acilma_kosulu": "Müşterinin sorununun çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl çözüldü",
+            "değiştirildi"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz ilk cevap yüzünden büyüdü: paylaşım hızla fark edildi ama ekip yalnızca hukukun onayladığı kalıp metinlerle cevap verebiliyor; savunmacı 'standartlara uygun' cevabının ekran görüntüsü asıl şikâyetten daha çok yayıldı.",
+      "kok_neden_kelimeler": [
+        "kalıp",
+        "savunma",
+        "yetki",
+        "hazır metin",
+        "ilk cevap"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sorun çözülmedi: özür var, çözüm yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteri özel mesajla bilgilerini gönderdi; çağrı merkezi değişim için bir hafta süre verdi ve müşteri bunu da paylaştı.",
+          "acilma_kosulu": "Müşterinin sorununun çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl çözüldü",
+            "çağrı merkezi",
+            "bir hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk cevap içten bir özür ve çözüm sözüydü.",
+          "acilma_kosulu": "Ilk cevabın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk verilen cevapta",
+            "içten",
+            "çözüm sözü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sosyal medya ekibinin müşteriye doğrudan çözüm sunma yetkisi yok; dosyayı çağrı merkezine aktarıyor ve süreç orada standart işliyor.",
+          "acilma_kosulu": "Cevap için onay sorulursa",
+          "ipucu_kelimeler": [
+            "hangi onaylar",
+            "dosyayı",
+            "aktarıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Paylaşım aynı gün fark edildi.",
+          "acilma_kosulu": "Fark etme ve ilk cevap zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk cevap ne zaman",
+            "aynı gün"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz çözüm gelmediği için büyüdü: özür hızlı ve içtendi ama sosyal medya ekibinin çözüm yetkisi yok, dosya çağrı merkezinin standart sürecine düştü, müşteriye bir haftalık değişim süresi verildi ve müşteri bunu da paylaştı.",
+      "kok_neden_kelimeler": [
+        "çözüm",
+        "yetki",
+        "çağrı merkezi",
+        "süreç",
+        "özür"
+      ]
+    }
+  ]
+}

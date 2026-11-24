@@ -1,0 +1,202 @@
+{
+  "id": "indirim-gunu-cokmesi",
+  "baslik": "Büyük indirim günü site neden çöktü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sektor": "E-ticaret",
+  "sure_dk": 8,
+  "acilis": "Yılın en büyük indirim gününde site açılıştan sonraki ilk iki saat yarım yarım çalıştı; tahmini satış kaybı ciddi. Hazırlık projesini yürüten teknik proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Kampanya projesinin sponsorusun. Amacın suçlu bulmak değil, hazırlığın neden yetmediğini anlamak.",
+  "karakter": {
+    "ad": "Mert Bey",
+    "rol": "Teknik proje yöneticisi",
+    "tavir": "Bitkin ve savunmada; \"yük testlerinden geçmiştik\" diyor. Hazırlık sürecini soran birine dürüst.",
+    "ilk_soz": "Yük testlerini yapmıştık, sunucular hazırdı. Yine de olmadı."
+  },
+  "yaniltici_ipuclari": [
+    "Trafik beklenenin çok üstündeydi.",
+    "Bulut sağlayıcısı sorun yaşadı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yük testi hangi senaryoyla ve ne kadar trafikle yapıldı?",
+    "Çöküş sitenin hangi bölümünde başladı?",
+    "Kampanyanın saati ve kapsamı ne zaman kesinleşti?",
+    "Sorun çıktığında ilk dakikalarda neler yapıldı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış test: gezinme test edildi, ödeme edilmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yük testi ziyaretçilerin sayfaları gezmesi üzerine yapıldı; ödeme ve stok düşümü test edilmedi.",
+          "acilma_kosulu": "Yük testinin kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "yük testi",
+            "gezme",
+            "stok düşümü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Çöküş ödeme ve stok servisinde başladı; aynı ürüne binlerce kişi aynı anda ödeme yapınca stok servisi kilitlendi.",
+          "acilma_kosulu": "Çöküşün başladığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölümünde",
+            "stok servisi",
+            "kilitlen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlk dakikalarda sunucu sayısı artırıldı; ama sorun sunucuda değil stok veritabanında olduğu için işe yaramadı.",
+          "acilma_kosulu": "Ilk müdahale sorulursa",
+          "ipucu_kelimeler": [
+            "ilk dakikalarda",
+            "sunucu sayısı",
+            "veritabanı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kampanya kapsamı bir ay önce kesinleşti.",
+          "acilma_kosulu": "Kampanya kapsamının kesinleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman kesinleşti",
+            "bir ay önce"
+          ]
+        }
+      ],
+      "kok_neden": "Site yanlış şey test edildiği için çöktü: yük testi sayfa gezinmeye göre yapıldı, ödeme ve stok düşümü test edilmedi; açılışta aynı ürünlere binlerce eş zamanlı ödeme stok servisini kilitledi ve sunucu eklemek işe yaramadı.",
+      "kok_neden_kelimeler": [
+        "test",
+        "ödeme",
+        "stok",
+        "kilitlen",
+        "veritabanı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Son dakika değişikliği: kampanya kurgusu bir gün önce değişti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kampanyanın saati ve kapsamı bir gün önce pazarlamanın isteğiyle değişti: gece yarısı açılış ve ilk saat ek %20 indirim eklendi.",
+          "acilma_kosulu": "Kampanya kapsamının kesinleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman kesinleşti",
+            "bir gün önce",
+            "gece yarısı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yük testi gün boyuna yayılmış trafikle yapıldı; ilk saatteki ani yığılma test edilmedi.",
+          "acilma_kosulu": "Yük testinin kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "yük testi",
+            "gün boyuna",
+            "ani yığılma"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çöküş ana sayfada ve indirim kodu servisinde başladı; ek indirim için son gün yazılan kod test edilmeden yayına alındı.",
+          "acilma_kosulu": "Çöküşün başladığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölümünde",
+            "indirim kodu",
+            "test edilmeden"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sorun çıkınca ekip hemen toplandı.",
+          "acilma_kosulu": "Ilk müdahale sorulursa",
+          "ipucu_kelimeler": [
+            "ilk dakikalarda",
+            "hemen toplandı"
+          ]
+        }
+      ],
+      "kok_neden": "Site son dakika değişikliği yüzünden çöktü: kampanya bir gün önce gece yarısı açılışa ve ilk saat ek indirime çevrildi, ani yığılma hiç test edilmedi ve son gün yazılan indirim kodu servisi test edilmeden yayına alındı.",
+      "kok_neden_kelimeler": [
+        "son dakika",
+        "değişiklik",
+        "test",
+        "ani",
+        "indirim kodu"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Müdahale planı yok: kim ne yapacak belli değildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sorun çıkınca kimin karar vereceği belli değildi; ekip kampanyayı durdurmak, sayfayı sadeleştirmek ya da beklemek arasında 40 dakika tartıştı.",
+          "acilma_kosulu": "Ilk müdahale sorulursa",
+          "ipucu_kelimeler": [
+            "ilk dakikalarda",
+            "40 dakika",
+            "tartıştı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yük testi gerçekçiydi; ama testte sistem sınırına yaklaşınca ne yapılacağı belirlenmedi.",
+          "acilma_kosulu": "Yük testinin kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "yük testi",
+            "sistem sınırı",
+            "belirlenmedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çöküş, trafiğin test edilen sınırı %15 aştığı anda başladı; bekleme odası gibi bir koruma devreye alınmadı.",
+          "acilma_kosulu": "Çöküşün başladığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölümünde",
+            "bekleme odası",
+            "%15"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kampanya kapsamı haftalar önce belliydi.",
+          "acilma_kosulu": "Kampanya kapsamının kesinleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman kesinleşti",
+            "haftalar önce"
+          ]
+        }
+      ],
+      "kok_neden": "Site müdahale planı olmadığı için uzun süre çöktü: trafik test edilen sınırı az bir farkla aştı, bekleme odası gibi bir koruma hazır değildi ve kimin karar vereceği belli olmadığı için ekip 40 dakika ne yapacağını tartıştı.",
+      "kok_neden_kelimeler": [
+        "müdahale",
+        "karar",
+        "bekleme odası",
+        "plan",
+        "sınır"
+      ]
+    }
+  ]
+}

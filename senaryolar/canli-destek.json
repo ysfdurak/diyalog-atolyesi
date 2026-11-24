@@ -1,0 +1,200 @@
+{
+  "id": "canli-destek",
+  "baslik": "Canlı destek ekibi neden yanıt süresini tutturamıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Canlı destekte ilk yanıt süresi hedefi 2 dakika; son üç ayda ortalama 11 dakikaya çıktı. Ekip sayısı aynı. Canlı destek ekip lideriyle konuşuyorsun.",
+  "rolun": "Müşteri hizmetleri müdürüsün. Amacın ekibi hızlandırmak değil, yanıt süresinin neden uzadığını anlamak.",
+  "karakter": {
+    "ad": "Gizem Hanım",
+    "rol": "Canlı destek ekip lideri",
+    "tavir": "Ekibini koruyan ve bunalmış; \"herkes elinden geleni yapıyor\" diyor. Ayrıntı soran birine somut konuşuyor.",
+    "ilk_soz": "Ekip gerçekten elinden geleni yapıyor. Sohbetler bitmiyor, yenileri bekliyor."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip yavaşladı.",
+    "Müşteriler çok sabırsız."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir temsilcinin aynı anda kaç sohbeti oluyor, bir sohbet ne kadar sürüyor?",
+    "Sohbetlerin en çok hangi konularda açıldığını görüyorsun?",
+    "Bir temsilci cevabı bilmediğinde ne yapıyor?",
+    "Son üç ayda ekipte ya da sistemde ne değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tekrar eden soru: 'siparişim nerede' sohbetleri patladı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sohbetlerin yarısı \"siparişim nerede\" sorusu; sipariş takip sayfası üç aydır kargo bilgisini göstermiyor.",
+          "acilma_kosulu": "Sohbet konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "siparişim nerede",
+            "takip sayfası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce kargo firmasıyla bağlantı değişti; takip bilgisi siteye düşmüyor, temsilci kargo sitesine ayrıca bakıyor.",
+          "acilma_kosulu": "Son üç aydaki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "bağlantı değişti",
+            "kargo sitesi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bir sohbet ortalama 3 dakikadan 7 dakikaya çıktı; temsilci her siparişi ayrı sistemde arıyor.",
+          "acilma_kosulu": "Eş zamanlı sohbet ve süre sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "7 dakika",
+            "ayrı sistem"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bilmediği soruyu ekip liderine iletiyor.",
+          "acilma_kosulu": "Bilinmeyen soruların çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "cevabı bilmediğinde",
+            "ekip liderine"
+          ]
+        }
+      ],
+      "kok_neden": "Yanıt süresi tekrar eden bir sorudan uzadı: sipariş takip sayfası üç aydır kargo bilgisini göstermiyor, sohbetlerin yarısı 'siparişim nerede' sorusu ve her birinde temsilci kargo sitesine ayrıca bakıyor.",
+      "kok_neden_kelimeler": [
+        "siparişim nerede",
+        "takip",
+        "kargo",
+        "tekrar",
+        "bağlantı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bilgi tabanı yok: her soru ekip liderine gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Temsilci cevabı bilmediğinde ekip liderine yazıyor ve bekliyor; yazılı bir bilgi tabanı ya da hazır cevap yok.",
+          "acilma_kosulu": "Bilinmeyen soruların çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "cevabı bilmediğinde",
+            "bilgi tabanı",
+            "hazır cevap"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ayda ekibin yarısı yenilendi; yeni temsilciler kampanya ve iade kurallarını bilmiyor.",
+          "acilma_kosulu": "Son üç aydaki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "yarısı yenilendi",
+            "yeni temsilci"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yeni temsilcilerin sohbetleri deneyimlilerin iki katı sürüyor.",
+          "acilma_kosulu": "Eş zamanlı sohbet ve süre sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "iki katı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sohbetler farklı konulara dağılmış.",
+          "acilma_kosulu": "Sohbet konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "farklı konu"
+          ]
+        }
+      ],
+      "kok_neden": "Yanıt süresi bilgi eksikliğinden uzadı: ekibin yarısı yenilendi, yazılı bilgi tabanı ve hazır cevaplar yok ve yeni temsilciler her bilmediği soruyu ekip liderine sorup bekliyor.",
+      "kok_neden_kelimeler": [
+        "bilgi tabanı",
+        "yeni temsilci",
+        "ekip lideri",
+        "bekle",
+        "yenilendi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Eş zamanlı sohbet sınırı artırıldı: kalite ve süre bozuldu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce temsilci başına eş zamanlı sohbet sınırı üçten beşe çıkarıldı.",
+          "acilma_kosulu": "Eş zamanlı sohbet ve süre sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "üçten beşe",
+            "eş zamanlı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Değişiklik maliyet düşürmek için yapıldı; temsilciler beş sohbet arasında gidip gelirken yanlış cevap veriyor ve sohbet tekrar açılıyor.",
+          "acilma_kosulu": "Son üç aydaki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "yanlış cevap",
+            "tekrar açıl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sohbetlerin üçte biri aynı müşterinin aynı sorunla ikinci kez gelmesi.",
+          "acilma_kosulu": "Sohbet konuları sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konularda",
+            "ikinci kez"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bilinmeyen sorular için bir rehber var.",
+          "acilma_kosulu": "Bilinmeyen soruların çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "cevabı bilmediğinde",
+            "rehber"
+          ]
+        }
+      ],
+      "kok_neden": "Yanıt süresi eş zamanlı sohbet sınırından uzadı: maliyet için temsilci başına sohbet sınırı beşe çıkarıldı, temsilciler sohbetler arasında gidip gelirken hata yapıyor ve aynı müşteri aynı sorunla ikinci kez gelip kuyruğu büyütüyor.",
+      "kok_neden_kelimeler": [
+        "eş zamanlı",
+        "beş",
+        "tekrar",
+        "hata",
+        "sınır"
+      ]
+    }
+  ]
+}

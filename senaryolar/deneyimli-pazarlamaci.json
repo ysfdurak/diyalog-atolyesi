@@ -1,0 +1,200 @@
+{
+  "id": "deneyimli-pazarlamaci",
+  "baslik": "Pazarlama ekibine neden deneyimli aday bulunamıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Kıdemli dijital pazarlama uzmanı pozisyonu beş aydır açık; görüşülen adaylardan üçü teklif aşamasında vazgeçti. İşe alımı yürüten İK uzmanıyla konuşuyorsun.",
+  "rolun": "Pozisyonu açan pazarlama müdürüsün. Amacın İK'yı sıkıştırmak değil, deneyimli adayın neden gelmediğini anlamak.",
+  "karakter": {
+    "ad": "Çağla",
+    "rol": "İK uzmanı (işe alım)",
+    "tavir": "Yoğun ve dürüst; \"piyasada bu profil çok aranıyor\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Bu profil piyasada çok aranıyor, hepsinin elinde birkaç teklif var."
+  },
+  "yaniltici_ipuclari": [
+    "Piyasada bu profil yok.",
+    "Adaylar çok yüksek maaş istiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "İlanda ve görüşmelerde pozisyon nasıl anlatılıyor?",
+    "Vazgeçen adaylar ne söyledi?",
+    "Görüşme süreci kaç aşamalı ve ne kadar sürüyor?",
+    "Bu rolde çalışan kişi kime bağlı olacak, ekip nasıl?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Rol tanımı her şeyi istiyor: tek kişide beş iş",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlanda sosyal medya, reklam yönetimi, içerik, grafik tasarım ve veri analizi aynı kişiden isteniyor.",
+          "acilma_kosulu": "Pozisyonun anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "pozisyon nasıl anlatılıyor",
+            "grafik tasarım",
+            "veri analizi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Vazgeçenler \"bu beş ayrı iş, tek kişiye yüklenmiş\" dedi.",
+          "acilma_kosulu": "Vazgeçenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçen adaylar",
+            "beş ayrı iş",
+            "tek kişiye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rolde çalışacak kişi tek başına olacak; ekibin geri kalanı satış destek elemanlarından oluşuyor.",
+          "acilma_kosulu": "Rolün bağlılığı ve ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kime bağlı",
+            "tek başına",
+            "satış destek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Süreç üç aşamalı.",
+          "acilma_kosulu": "Görüşme sürecinin uzunluğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaç aşamalı",
+            "üç aşama"
+          ]
+        }
+      ],
+      "kok_neden": "Deneyimli aday gelmiyor çünkü rol gerçekçi değil: ilan sosyal medya, reklam, içerik, tasarım ve veri analizini tek kişiden istiyor, kişi ekipte yalnız kalacak ve deneyimli adaylar bunun beş ayrı iş olduğunu görüp vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "rol",
+        "tek kişi",
+        "beş",
+        "yalnız",
+        "gerçekçi"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Süreç uzun: adaylar başka teklifi kabul ediyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Görüşme süreci beş aşamalı: İK, müdür, vaka çalışması, genel müdür ve kişilik testi; ortalama yedi hafta sürüyor.",
+          "acilma_kosulu": "Görüşme sürecinin uzunluğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaç aşamalı",
+            "beş aşama",
+            "yedi hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Vazgeçenlerin üçü de \"bu arada başka bir teklifi kabul ettim\" dedi.",
+          "acilma_kosulu": "Vazgeçenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçen adaylar",
+            "başka bir teklif"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rol ilanda net ve makul anlatılıyor.",
+          "acilma_kosulu": "Pozisyonun anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "pozisyon nasıl anlatılıyor",
+            "net ve makul"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Rol doğrudan pazarlama müdürüne bağlı.",
+          "acilma_kosulu": "Rolün bağlılığı ve ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kime bağlı",
+            "doğrudan"
+          ]
+        }
+      ],
+      "kok_neden": "Deneyimli aday kayboluyor çünkü süreç çok uzun: beş aşamalı ve yedi hafta süren süreçte, birkaç teklifi olan adaylar başka yerin teklifini kabul ediyor.",
+      "kok_neden_kelimeler": [
+        "süreç",
+        "uzun",
+        "yedi hafta",
+        "aşama",
+        "teklif"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Teklif geride: bütçe ve esneklik piyasanın altında",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Vazgeçenler ücretin piyasanın %25 altında olduğunu ve uzaktan çalışma imkânı olmadığını söyledi.",
+          "acilma_kosulu": "Vazgeçenlerin söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçen adaylar",
+            "%25",
+            "uzaktan çalışma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Rol, haftada beş gün ofiste çalışan ve ofis saatlerine sıkı bağlı bir ekibe bağlı olacak.",
+          "acilma_kosulu": "Rolün bağlılığı ve ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kime bağlı",
+            "beş gün ofis",
+            "ofis saatleri"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlanda ücret ve çalışma düzeni yazmıyor; adaylar bunu son aşamada öğreniyor.",
+          "acilma_kosulu": "Pozisyonun anlatılması sorulursa",
+          "ipucu_kelimeler": [
+            "pozisyon nasıl anlatılıyor",
+            "ücret",
+            "son aşamada"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Görüşme süreci iki haftada bitiyor.",
+          "acilma_kosulu": "Görüşme sürecinin uzunluğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaç aşamalı",
+            "iki haftada"
+          ]
+        }
+      ],
+      "kok_neden": "Deneyimli aday gelmiyor çünkü teklif piyasanın gerisinde: ücret piyasanın çeyrek altında, uzaktan ya da esnek çalışma yok ve adaylar bunu ilanda değil son aşamada öğrenip vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "ücret",
+        "piyasa",
+        "esnek",
+        "uzaktan",
+        "son aşama"
+      ]
+    }
+  ]
+}

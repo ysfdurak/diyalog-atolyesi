@@ -1,0 +1,201 @@
+{
+  "id": "pazarlama-satis",
+  "baslik": "Pazarlama ve satış neden birbirini suçluyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Pazarlama ekibi \"verdiğimiz potansiyel müşterilerle satış ilgilenmiyor\", satış ekibi \"gelen müşteri adayları işe yaramıyor\" diyor. Son çeyrekte pazarlamanın getirdiği 1.200 adaydan yalnızca 30'u satışa döndü. Satış ekip lideriyle konuşuyorsun.",
+  "rolun": "İki ekibin de bağlı olduğu ticari direktörsün. Amacın haklıyı bulmak değil, kopukluğun nereden doğduğunu anlamak.",
+  "karakter": {
+    "ad": "Hakan Yılmaz",
+    "rol": "Satış ekip lideri",
+    "tavir": "Sert ve sabırsız; \"bize çöp liste geliyor\" diyor. Somut örnek isteyen birine açık konuşuyor.",
+    "ilk_soz": "Bize gelen listeler çöp. Arıyoruz, kimse almayı düşünmüyor."
+  },
+  "yaniltici_ipuclari": [
+    "Pazarlama satışı anlamıyor.",
+    "Satış ekibi tembel."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Pazarlamadan gelen bir aday size nasıl ulaşıyor, ne kadar sürede aranıyor?",
+    "İyi bir müşteri adayını siz nasıl tanımlıyorsunuz?",
+    "İki ekip hangi göstergeyle ölçülüyor?",
+    "Aranan adaylardan dönen geri bildirim pazarlamaya nasıl ulaşıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tanım yok: 'potansiyel müşteri' iki ekipte farklı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Satış için iyi aday bütçesi olan ve üç ay içinde almayı düşünen kurumsal müşteri; pazarlama formu dolduran herkesi aday sayıyor.",
+          "acilma_kosulu": "Iyi aday tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl tanımlıyorsunuz",
+            "bütçesi olan",
+            "formu dolduran"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pazarlama aday sayısıyla, satış kapanan satışla ölçülüyor.",
+          "acilma_kosulu": "Ekiplerin ölçüldüğü göstergeler sorulursa",
+          "ipucu_kelimeler": [
+            "iki ekip hangi",
+            "aday sayısı",
+            "kapanan satış"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satışın aradığı adaylarla ilgili notlar CRM'de kalıyor; pazarlama bu notları hiç görmüyor.",
+          "acilma_kosulu": "Geri bildirimin pazarlamaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "geri bildirim",
+            "crm",
+            "notlar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Adaylar günlük bir listeyle satışa gidiyor.",
+          "acilma_kosulu": "Adayın satışa ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürede aranıyor",
+            "günlük liste"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk tanımdan: pazarlama formu dolduran herkesi aday sayıyor, satış yalnızca bütçesi ve niyeti olanı; ekipler farklı göstergelerle ölçülüyor ve satışın notları pazarlamaya hiç dönmüyor.",
+      "kok_neden_kelimeler": [
+        "tanım",
+        "aday",
+        "gösterge",
+        "ölçül",
+        "geri bildirim"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Hız: adaylar günler sonra aranıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Adaylar haftada bir Excel listesiyle satışa gönderiliyor; çoğu formu doldurduktan beş-yedi gün sonra aranıyor.",
+          "acilma_kosulu": "Adayın satışa ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürede aranıyor",
+            "haftada bir",
+            "beş-yedi gün"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Arandığında adayların çoğu \"rakipten aldık\" ya da \"hatırlamıyorum\" diyor; bu bilgi pazarlamaya iletilmiyor.",
+          "acilma_kosulu": "Geri bildirimin pazarlamaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "geri bildirim",
+            "rakipten aldık",
+            "hatırlamıyorum"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İyi aday tanımı iki ekip arasında yazılı olarak kararlaştırılmış.",
+          "acilma_kosulu": "Iyi aday tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl tanımlıyorsunuz",
+            "yazılı olarak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İki ekip de satış gelirine göre ölçülüyor.",
+          "acilma_kosulu": "Ekiplerin ölçüldüğü göstergeler sorulursa",
+          "ipucu_kelimeler": [
+            "iki ekip hangi",
+            "satış gelirine"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk hızdan: tanım ortak ama adaylar haftalık listeyle aktarılıyor ve formu doldurduktan bir hafta sonra aranıyor; o arada müşteri rakipten alıyor ya da ilgisini kaybediyor.",
+      "kok_neden_kelimeler": [
+        "hız",
+        "haftada bir",
+        "geç",
+        "rakip",
+        "aranıyor"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Teşvik çatışması: satış küçük adayla vakit kaybetmek istemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Satış ekibinin primi yalnızca büyük satışlardan geliyor; pazarlamanın getirdiği küçük işletme adayları prime pek yansımıyor.",
+          "acilma_kosulu": "Ekiplerin ölçüldüğü göstergeler sorulursa",
+          "ipucu_kelimeler": [
+            "iki ekip hangi",
+            "prim",
+            "küçük işletme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satış için iyi aday büyük kurumsal müşteri; pazarlamanın kampanyaları ise yönetimin isteğiyle küçük işletmeleri hedefliyor.",
+          "acilma_kosulu": "Iyi aday tanımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl tanımlıyorsunuz",
+            "büyük kurumsal",
+            "küçük işletmeleri hedef"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Adaylar anında satışa gidiyor ama küçük işletme adayları sıranın sonuna konuyor ve çoğu hiç aranmıyor.",
+          "acilma_kosulu": "Adayın satışa ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürede aranıyor",
+            "sıranın sonu",
+            "hiç aranmıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geri bildirim aylık toplantıda konuşuluyor.",
+          "acilma_kosulu": "Geri bildirimin pazarlamaya ulaşması sorulursa",
+          "ipucu_kelimeler": [
+            "geri bildirim",
+            "aylık toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk teşvikten: yönetim pazarlamaya küçük işletmeleri hedefletiyor, satışın primi ise yalnızca büyük satışlardan geliyor; küçük işletme adayları sıranın sonuna konup hiç aranmıyor.",
+      "kok_neden_kelimeler": [
+        "prim",
+        "teşvik",
+        "küçük işletme",
+        "hedef",
+        "aranmıyor"
+      ]
+    }
+  ]
+}

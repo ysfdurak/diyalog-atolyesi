@@ -1,0 +1,201 @@
+{
+  "id": "teslimat-sikayetleri",
+  "baslik": "Teslimat şikâyetleri neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Müşteri şikâyetlerinin yarısı artık teslimatla ilgili: \"kapıya gelmeden teslim edildi göründü\", \"kargo geç geldi\". Bir yılda şikâyetler iki katına çıktı. Kargo firmalarıyla ilişkiyi yöneten lojistik uzmanıyla konuşuyorsun.",
+  "rolun": "E-ticaret operasyon müdürüsün. Amacın kargo firmasını değiştirmek değil, şikâyetlerin neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Ayşen",
+    "rol": "Lojistik uzmanı (kargo ilişkileri)",
+    "tavir": "Pratik ve yorgun; \"kargo firmaları her yerde böyle\" diyor. Verileri soran birine açık konuşuyor.",
+    "ilk_soz": "Bütün kargo firmaları aynı, değiştirsek de bir şey değişmez bence."
+  },
+  "yaniltici_ipuclari": [
+    "Kargo sektörü hep kötü.",
+    "Müşteriler sabırsız."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Şikâyetler en çok hangi bölgelerde ve hangi kargo firmasında?",
+    "Bir yıl içinde kargo düzeninde ne değişti?",
+    "Teslim edildi görünüp gelmeyen siparişler sonra nasıl çözülüyor?",
+    "Müşteriye teslimat tarihi nasıl söyleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ucuz kargo: tek firmaya geçildi, kapasite yetmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce iki kargo firmasından fiyatı düşük olana tek başına geçildi.",
+          "acilma_kosulu": "Kargo düzenindeki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "kargo düzeninde",
+            "tek başına",
+            "fiyatı düşük"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerin çoğu bu firmanın Anadolu'daki küçük şubelerinden; şubeler yoğun günlerde paketleri ertesi güne bırakıyor.",
+          "acilma_kosulu": "Şikâyetlerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölgelerde",
+            "küçük şube",
+            "ertesi güne"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "\"Teslim edildi\" görünen paketlerin çoğu şubede bekliyor; kurye günlük hedefi tutturmak için toplu teslim girişi yapıyor.",
+          "acilma_kosulu": "Teslim görünüp gelmeyenlerin çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edildi görünüp",
+            "toplu teslim",
+            "günlük hedef"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriye standart 2-4 gün bilgisi veriliyor.",
+          "acilma_kosulu": "Müşteriye söylenen tarih sorulursa",
+          "ipucu_kelimeler": [
+            "teslimat tarihi nasıl",
+            "2-4 gün"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler tek ve ucuz kargoya geçişten: bütün hacim fiyatı düşük tek firmaya verildi, firmanın küçük şubeleri yoğun günlerde paketleri bekletiyor ve kuryeler hedef için paket teslim edilmeden 'teslim edildi' giriyor.",
+      "kok_neden_kelimeler": [
+        "tek firma",
+        "kapasite",
+        "şube",
+        "teslim edildi",
+        "ucuz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Söz verilen tarih gerçekçi değil: site hep 'yarın' diyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sitede her sipariş için \"yarın kapında\" yazıyor; bu söz depo ve kargo sürelerine bakılmadan pazarlama tarafından eklendi.",
+          "acilma_kosulu": "Müşteriye söylenen tarih sorulursa",
+          "ipucu_kelimeler": [
+            "teslimat tarihi nasıl",
+            "yarın kapında",
+            "pazarlama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kargo düzeni değişmedi; ama söz verilen süre bir yıl önce üç günden bir güne indirildi.",
+          "acilma_kosulu": "Kargo düzenindeki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "kargo düzeninde",
+            "bir güne",
+            "söz verilen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerin çoğu, teslimatın aslında normal sürede, iki üç günde yapıldığı siparişlerde.",
+          "acilma_kosulu": "Şikâyetlerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölgelerde",
+            "normal sürede"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teslim görünüp gelmeyen siparişler az.",
+          "acilma_kosulu": "Teslim görünüp gelmeyenlerin çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edildi görünüp",
+            "az"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler sözden: teslimat normal sürede yapılıyor ama site pazarlama kararıyla her siparişe 'yarın kapında' diyor; depo ve kargo süreleri değişmeden verilen söz, normal teslimatı bile gecikme gibi gösteriyor.",
+      "kok_neden_kelimeler": [
+        "söz",
+        "yarın",
+        "beklenti",
+        "pazarlama",
+        "gerçekçi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Adres ve iletişim: kurye müşteriye ulaşamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Teslim görünüp gelmeyen paketlerin çoğunda kurye notu \"adreste bulunamadı\" ya da \"komşuya bırakıldı\".",
+          "acilma_kosulu": "Teslim görünüp gelmeyenlerin çözümü sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edildi görünüp",
+            "adreste bulunamadı",
+            "komşuya"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir yıl önce sipariş ekranındaki telefon alanı isteğe bağlı yapıldı; kurye müşteriyi arayamıyor.",
+          "acilma_kosulu": "Kargo düzenindeki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "kargo düzeninde",
+            "telefon alanı",
+            "isteğe bağlı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerin çoğu site ve apartman adreslerinde; daire ve blok bilgisi ayrı bir alanda sorulmuyor.",
+          "acilma_kosulu": "Şikâyetlerin yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi bölgelerde",
+            "daire",
+            "blok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriye teslimat günü SMS ile bildiriliyor.",
+          "acilma_kosulu": "Müşteriye söylenen tarih sorulursa",
+          "ipucu_kelimeler": [
+            "teslimat tarihi nasıl",
+            "sms"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetler adres ve iletişimden: telefon alanı isteğe bağlı yapıldı, site ve apartman adreslerinde blok ve daire bilgisi ayrı sorulmuyor; kurye müşteriye ulaşamayınca paketi komşuya bırakıyor ya da teslim edilemedi diye dönüyor.",
+      "kok_neden_kelimeler": [
+        "adres",
+        "telefon",
+        "blok",
+        "daire",
+        "iletişim"
+      ]
+    }
+  ]
+}

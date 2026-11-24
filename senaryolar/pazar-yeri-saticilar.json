@@ -1,0 +1,200 @@
+{
+  "id": "pazar-yeri-saticilar",
+  "baslik": "Pazar yerindeki satıcılar neden ayrılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sektor": "E-ticaret",
+  "sure_dk": 8,
+  "acilis": "Şirketin pazar yerine son altı ayda katılan 300 satıcının 120'si ilk üç ayda satışı bıraktı. Satıcı kazanma bütçesi her ay artıyor. Satıcı ilişkilerinden sorumlu kategori yöneticisiyle konuşuyorsun.",
+  "rolun": "Pazar yeri iş geliştirme müdürüsün. Amacın yeni satıcı bulmak değil, satıcıların neden ayrıldığını anlamak.",
+  "karakter": {
+    "ad": "Tunç",
+    "rol": "Kategori yöneticisi (pazar yeri)",
+    "tavir": "Hızlı ve hedef odaklı; \"satıcı bulmak sorun değil\" diyor. Satıcı deneyimini merak eden birine dürüst.",
+    "ilk_soz": "Satıcı bulmak sorun değil, her ay yenileri geliyor. Tutmak başka mesele."
+  },
+  "yaniltici_ipuclari": [
+    "Küçük satıcılar dayanamıyor.",
+    "Rekabet çok fazla."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni bir satıcının ilk ayı nasıl geçiyor?",
+    "Ayrılan satıcılar giderken ne söylüyor?",
+    "Satıcının kazancından hangi kesintiler yapılıyor, ne zaman ödeniyor?",
+    "Kalan satıcılarla ayrılanlar arasında ne fark var?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ödeme gecikiyor: nakit akışı küçük satıcıyı bitiriyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Satıcıya ödeme, teslimattan 45 gün sonra yapılıyor; iade süresi bitmeden ödeme alınamıyor.",
+          "acilma_kosulu": "Kesintiler ve ödeme sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kesintiler",
+            "45 gün",
+            "iade süresi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu \"stoğu finanse edemedim\" diyor.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan satıcılar",
+            "finanse"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kalan satıcıların çoğu büyük ve sermayesi olan firmalar; ayrılanlar küçük üreticiler.",
+          "acilma_kosulu": "Kalanlarla ayrılanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "kalan satıcılarla",
+            "sermaye",
+            "küçük üretici"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk ay satıcıya bir eğitim videosu gönderiliyor.",
+          "acilma_kosulu": "Yeni satıcının ilk ayı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayı",
+            "eğitim videosu"
+          ]
+        }
+      ],
+      "kok_neden": "Satıcılar nakit akışından ayrılıyor: ödeme teslimattan 45 gün sonra yapılıyor, küçük üreticiler bu sürede stoğu finanse edemiyor ve yalnızca sermayesi olan büyük satıcılar kalıyor.",
+      "kok_neden_kelimeler": [
+        "ödeme",
+        "45 gün",
+        "nakit",
+        "finanse",
+        "küçük"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Görünmezlik: yeni satıcı aramada çıkmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk ay yeni satıcının ürünleri aramada en alta düşüyor; sıralama geçmiş satış ve yoruma göre.",
+          "acilma_kosulu": "Yeni satıcının ilk ayı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayı",
+            "aramada",
+            "sıralama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanlar \"ürünlerimi kimse görmedi, sıfır satış\" diyor.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan satıcılar",
+            "kimse görmedi",
+            "sıfır satış"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kalanlar ilk ay kendi reklam bütçesiyle öne çıkma hizmeti alanlar.",
+          "acilma_kosulu": "Kalanlarla ayrılanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "kalan satıcılarla",
+            "reklam bütçesi",
+            "öne çıkma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Komisyon oranı sektör ortalamasında.",
+          "acilma_kosulu": "Kesintiler ve ödeme sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kesintiler",
+            "sektör ortalaması"
+          ]
+        }
+      ],
+      "kok_neden": "Satıcılar görünmezlikten ayrılıyor: sıralama geçmiş satış ve yoruma dayandığı için yeni satıcı aramada en alta düşüyor, ilk aylarda neredeyse hiç satış yapamıyor; yalnızca reklama para verenler kalıyor.",
+      "kok_neden_kelimeler": [
+        "görünür",
+        "arama",
+        "sıralama",
+        "yeni satıcı",
+        "reklam"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ceza ve kurallar: yeni satıcı ilk hatada puan kaybediyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk ayda kargo süresini aşan ya da iptal edilen her sipariş satıcı puanını düşürüyor; puan düşünce ürünler listeden kalkıyor.",
+          "acilma_kosulu": "Yeni satıcının ilk ayı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ayı",
+            "satıcı puanı",
+            "listeden kalk"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanlar \"kuralları kimse anlatmadı, ilk hafta cezalarla doldu\" diyor.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "ayrılan satıcılar",
+            "kuralları kimse",
+            "ceza"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kesintilere ek olarak geç kargo ve iptal için ceza bedeli kesiliyor.",
+          "acilma_kosulu": "Kesintiler ve ödeme sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kesintiler",
+            "ceza bedeli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kalanların çoğu daha önce başka pazar yerinde satmış.",
+          "acilma_kosulu": "Kalanlarla ayrılanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "kalan satıcılarla",
+            "başka pazar yeri"
+          ]
+        }
+      ],
+      "kok_neden": "Satıcılar kurallar yüzünden ayrılıyor: kurallar baştan anlatılmıyor, ilk hafta geç kargo ve iptal yüzünden puan ve ceza bedeli kaybediyorlar ve puan düşünce ürünleri listeden kalkıyor.",
+      "kok_neden_kelimeler": [
+        "kural",
+        "ceza",
+        "puan",
+        "anlatılmıyor",
+        "ilk hafta"
+      ]
+    }
+  ]
+}

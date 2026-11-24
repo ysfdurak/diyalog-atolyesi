@@ -1,0 +1,202 @@
+{
+  "id": "olculemeyen-butce",
+  "baslik": "Pazarlama bütçesi neden ölçülemeyen kanallara gidiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Pazarlama bütçesinin %60'ı, hangi satışı getirdiği ölçülemeyen etkinlik, sponsorluk ve basılı reklama gidiyor. Finans her bütçe döneminde bunu sorguluyor. Bütçeyi planlayan pazarlama planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Pazarlama direktörüsün. Amacın bu kanalları kesmek değil, bütçenin neden oraya gittiğini anlamak.",
+  "karakter": {
+    "ad": "Ebru Hanım",
+    "rol": "Pazarlama planlama uzmanı",
+    "tavir": "Deneyimli ve temkinli; \"her yıl böyle planlanır\" diyor. Planlama mantığını soran birine açık konuşuyor.",
+    "ilk_soz": "Bütçe her yıl aşağı yukarı aynı dağılımla planlanır. Değiştirmek kolay değil."
+  },
+  "yaniltici_ipuclari": [
+    "Bu kanallar marka için şart.",
+    "Dijital her şeyi ölçüyor ama satış getirmiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bütçe kanallara nasıl dağıtılıyor, hangi bilgiye dayanıyor?",
+    "Ölçülemeyen kanallar hangi taahhütlerle bağlı?",
+    "Kanalların etkisini ölçmek için ne denendi?",
+    "Bütçe kararlarında en çok kim belirleyici oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Alışkanlık: geçen yılın dağılımı kopyalanıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bütçe her yıl geçen yılın dağılımına enflasyon eklenerek hazırlanıyor; kanal başına getiri hesaplanmıyor.",
+          "acilma_kosulu": "Bütçe dağıtımının dayanağı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtılıyor",
+            "geçen yılın dağılımı",
+            "getiri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Etkisini ölçmek için hiçbir şey denenmedi; ne kampanya kodu ne de bölge bazlı karşılaştırma yapıldı.",
+          "acilma_kosulu": "Ölçüm girişimleri sorulursa",
+          "ipucu_kelimeler": [
+            "ne denendi",
+            "kampanya kodu",
+            "bölge bazlı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kararlarda en çok, bu kanalları yıllardır yöneten kıdemli müdürlerin sözü geçiyor.",
+          "acilma_kosulu": "Kararda sözü geçenler sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "kıdemli müdür",
+            "yıllardır"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bazı sponsorluklar yıllık sözleşmeyle bağlı.",
+          "acilma_kosulu": "Kanallara bağlılık sorulursa",
+          "ipucu_kelimeler": [
+            "hangi taahhütlerle",
+            "yıllık sözleşme"
+          ]
+        }
+      ],
+      "kok_neden": "Bütçe alışkanlıkla dağıtılıyor: her yıl geçen yılın dağılımı kopyalanıyor, kanalların etkisini ölçmek için hiçbir deneme yapılmadı ve kararlarda bu kanalları yöneten kıdemli müdürlerin sözü geçiyor.",
+      "kok_neden_kelimeler": [
+        "alışkanlık",
+        "geçen yıl",
+        "ölçüm",
+        "deneme",
+        "kıdemli"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Uzun taahhütler: sponsorluklar çok yıllık bağlandı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bütçenin büyük kısmı üç yıllık bir spor sponsorluğu ve fuar alanı kiralama anlaşmasıyla önceden bağlanmış.",
+          "acilma_kosulu": "Kanallara bağlılık sorulursa",
+          "ipucu_kelimeler": [
+            "hangi taahhütlerle",
+            "üç yıllık",
+            "fuar alanı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sponsorluk kararını genel müdür verdi; pazarlama planlamaya danışılmadı.",
+          "acilma_kosulu": "Kararda sözü geçenler sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "genel müdür",
+            "danışılmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sponsorluğun etkisini ölçmek için sözleşmede hiçbir veri paylaşımı ya da hedef maddesi yok.",
+          "acilma_kosulu": "Ölçüm girişimleri sorulursa",
+          "ipucu_kelimeler": [
+            "ne denendi",
+            "veri paylaşımı",
+            "hedef maddesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kalan bütçe yıllık plana göre dağıtılıyor.",
+          "acilma_kosulu": "Bütçe dağıtımının dayanağı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtılıyor",
+            "yıllık plan"
+          ]
+        }
+      ],
+      "kok_neden": "Bütçe önceden bağlandığı için ölçülemeyen kanallarda: genel müdür pazarlamaya danışmadan üç yıllık sponsorluk ve fuar anlaşmaları yaptı, sözleşmelerde ölçüm ya da veri maddesi yok ve bütçenin çoğu esnekliğini kaybetti.",
+      "kok_neden_kelimeler": [
+        "taahhüt",
+        "sponsorluk",
+        "sözleşme",
+        "danışılmadı",
+        "ölçüm"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ölçüm altyapısı yok: dijital dışı satış izlenemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etkinliklerde toplanan kartvizitler Excel'de kalıyor; CRM'e girilmediği için sonraki satışlarla eşleştirilemiyor.",
+          "acilma_kosulu": "Ölçüm girişimleri sorulursa",
+          "ipucu_kelimeler": [
+            "ne denendi",
+            "kartvizit",
+            "eşleştir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bütçe her kanalın getirisi hesaplanarak dağıtılmak isteniyor; ama satışların yarısı bayilerden geldiği için kanal bazlı satış verisi yok.",
+          "acilma_kosulu": "Bütçe dağıtımının dayanağı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtılıyor",
+            "bayi",
+            "kanal bazlı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kararlarda finansın sözü geçiyor ve finans ölçülebilir kanalı tercih ediyor; ama ölçememek o kanalın etkisiz olduğu anlamına gelmiyor.",
+          "acilma_kosulu": "Kararda sözü geçenler sorulursa",
+          "ipucu_kelimeler": [
+            "kim belirleyici",
+            "finans",
+            "ölçülebilir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Taahhütlerin çoğu yıllık ve esnek.",
+          "acilma_kosulu": "Kanallara bağlılık sorulursa",
+          "ipucu_kelimeler": [
+            "hangi taahhütlerle",
+            "yıllık ve esnek"
+          ]
+        }
+      ],
+      "kok_neden": "Kanallar ölçülemiyor çünkü ölçüm altyapısı yok: etkinlik temasları CRM'e girilmiyor, satışların yarısı bayilerden gelip kanal bilgisi kayboluyor; etkisini kimse bilmiyor ve tartışma rakamsız sürüyor.",
+      "kok_neden_kelimeler": [
+        "ölçüm",
+        "crm",
+        "bayi",
+        "altyapı",
+        "veri"
+      ]
+    }
+  ]
+}

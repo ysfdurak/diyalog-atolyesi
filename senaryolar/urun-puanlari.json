@@ -1,0 +1,202 @@
+{
+  "id": "urun-puanlari",
+  "baslik": "Ürün puanları neden düştü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Kendi markalı ürünlerin ortalama müşteri puanı altı ayda 4,5'ten 3,7'ye düştü; satışlar da geriliyor. Yorumları izleyen kalite uzmanıyla konuşuyorsun.",
+  "rolun": "Ürün kalitesinden sorumlu yöneticisin. Amacın kötü yorumları sildirmek değil, puanların neden düştüğünü anlamak.",
+  "karakter": {
+    "ad": "Aras",
+    "rol": "Ürün kalite uzmanı",
+    "tavir": "Dikkatli ve endişeli; \"rakipler sahte yorum yazıyor olabilir\" diyor. Yorumların içeriğini soran birine açık.",
+    "ilk_soz": "Rakiplerin sahte yorum yazdığından şüpheleniyorum açıkçası."
+  },
+  "yaniltici_ipuclari": [
+    "Rakipler sahte yorum yazıyor.",
+    "Müşteriler artık her şeye kötü puan veriyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Düşük puanlı yorumlarda en çok ne yazıyor?",
+    "Puanı en çok düşen ürünlerin ortak noktası ne?",
+    "Altı ay önce üretimde ya da tedarikte ne değişti?",
+    "Kötü yorumlara sonra nasıl dönülüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tedarikçi değişti: malzeme kalitesi düştü",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Altı ay önce maliyeti düşürmek için kendi markalı tekstil ürünlerinin üreticisi değiştirildi.",
+          "acilma_kosulu": "Altı ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "altı ay önce",
+            "üretici",
+            "maliyeti düşür"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Puanı en çok düşenler yeni üreticiden gelen havlu ve nevresim ürünleri.",
+          "acilma_kosulu": "Puanı düşen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "en çok düşen",
+            "havlu",
+            "nevresim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Düşük puanlı yorumlarda en çok \"ilk yıkamada çekti\" ve \"tüy bırakıyor\" yazıyor.",
+          "acilma_kosulu": "Kötü yorumların içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "düşük puanlı yorumlarda",
+            "ilk yıkama",
+            "tüy"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kötü yorumlara standart bir özür mesajıyla dönülüyor.",
+          "acilma_kosulu": "Yorumlara verilen yanıt sorulursa",
+          "ipucu_kelimeler": [
+            "kötü yorumlara",
+            "standart"
+          ]
+        }
+      ],
+      "kok_neden": "Puanlar ürün kalitesinden düştü: maliyet için üretici değiştirildi, yeni üreticiden gelen havlu ve nevresimler ilk yıkamada çekiyor ve tüy bırakıyor; yorumlar aynı sorunları tekrarlıyor.",
+      "kok_neden_kelimeler": [
+        "üretici",
+        "kalite",
+        "yıkama",
+        "tedarikçi",
+        "malzeme"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Paketleme hasarı: ürün sağlam, gelen hasarlı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Düşük puanlı yorumların çoğu \"kırık geldi\" ya da \"kutusu ezilmişti\".",
+          "acilma_kosulu": "Kötü yorumların içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "düşük puanlı yorumlarda",
+            "kırık geldi",
+            "ezilmiş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Puanı düşenler cam ve seramik ürünler; ürünün kendisine dair yorumlar olumlu.",
+          "acilma_kosulu": "Puanı düşen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "en çok düşen",
+            "cam",
+            "seramik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Altı ay önce kargoda kullanılan dolgu malzemesi kâğıda çevrildi ve koli boyutları küçültüldü.",
+          "acilma_kosulu": "Altı ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "altı ay önce",
+            "dolgu",
+            "koli boyutu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kırık ürünler için ücretsiz değişim yapılıyor.",
+          "acilma_kosulu": "Yorumlara verilen yanıt sorulursa",
+          "ipucu_kelimeler": [
+            "kötü yorumlara",
+            "ücretsiz değişim"
+          ]
+        }
+      ],
+      "kok_neden": "Puanlar ürün değil paketleme yüzünden düştü: cam ve seramik ürünler için dolgu malzemesi değiştirildi ve koliler küçültüldü; ürünler kırık geliyor ve müşteriler puanı ürüne veriyor.",
+      "kok_neden_kelimeler": [
+        "paketleme",
+        "kırık",
+        "dolgu",
+        "koli",
+        "cam"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Beklenti açığı: açıklama abartılı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Düşük puanlı yorumlarda en çok \"açıklamada yazdığı gibi değil\" ve \"fotoğraftaki kadar büyük değil\" yazıyor.",
+          "acilma_kosulu": "Kötü yorumların içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "düşük puanlı yorumlarda",
+            "açıklamada yazdığı",
+            "büyük değil"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Altı ay önce ürün açıklamaları dönüşümü artırmak için ajans tarafından yeniden yazıldı; ölçüler metnin sonuna, küçük yazıyla taşındı.",
+          "acilma_kosulu": "Altı ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "altı ay önce",
+            "ajans",
+            "ölçüler"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Puanı en çok düşenler mobilya ve dekorasyon ürünleri; aynı ürünlerin satışı ilk ay arttı, sonra puanlarla birlikte düştü.",
+          "acilma_kosulu": "Puanı düşen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "en çok düşen",
+            "mobilya",
+            "ilk ay arttı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kötü yorumlara kişisel yanıt veriliyor.",
+          "acilma_kosulu": "Yorumlara verilen yanıt sorulursa",
+          "ipucu_kelimeler": [
+            "kötü yorumlara",
+            "kişisel yanıt"
+          ]
+        }
+      ],
+      "kok_neden": "Puanlar beklenti açığından düştü: ürün açıklamaları satış için abartılı yeniden yazıldı, ölçüler küçük yazıyla sona taşındı; müşteri beklediğinden küçük ya da farklı bir ürünle karşılaşınca düşük puan veriyor.",
+      "kok_neden_kelimeler": [
+        "açıklama",
+        "beklenti",
+        "ölçü",
+        "ajans",
+        "abartı"
+      ]
+    }
+  ]
+}

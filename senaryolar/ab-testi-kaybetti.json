@@ -1,0 +1,202 @@
+{
+  "id": "ab-testi-kaybetti",
+  "baslik": "Yeni ürün sayfası testte neden kaybetti?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Veri ve raporlama",
+  "sektor": "E-ticaret",
+  "sure_dk": 8,
+  "acilis": "Tasarım ekibinin üç ay çalıştığı yeni ürün sayfası A/B testinde eski sayfaya kaybetti; dönüşüm %4 düştü. Ekip sonuçlara inanmıyor. Testi kuran veri analistiyle konuşuyorsun.",
+  "rolun": "E-ticaret ürün müdürüsün. Amacın tasarımı savunmak ya da gömmek değil, sonucun neden böyle çıktığını anlamak.",
+  "karakter": {
+    "ad": "Engin",
+    "rol": "Veri analisti (deney)",
+    "tavir": "Sakin ve titiz; \"sayılar ne diyorsa o\" diyor. Test kurgusunu soran birine açık konuşuyor.",
+    "ilk_soz": "Test istatistiksel olarak anlamlı çıktı. Yeni sayfa kaybetti, bu kadar."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler değişikliği sevmez.",
+    "Yeni tasarım kötüydü."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Test ne kadar sürdü ve hangi dönemde yapıldı?",
+    "Ziyaretçiler iki sayfaya nasıl dağıtıldı?",
+    "Kayıp hangi cihazlarda ya da hangi müşterilerde oluştu?",
+    "Yeni sayfada eski sayfaya göre neler değişmişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Mobilde yavaş: yeni sayfa ağır",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kaybın tamamı mobilde; masaüstünde yeni sayfa %3 daha iyi.",
+          "acilma_kosulu": "Kaybın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi cihazlarda",
+            "mobil",
+            "masaüstü"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni sayfada büyük ürün videoları ve 360 derece görüntü var; mobilde sayfa açılışı 1,8 saniyeden 4,5 saniyeye çıktı.",
+          "acilma_kosulu": "Iki sayfa arasındaki farklar sorulursa",
+          "ipucu_kelimeler": [
+            "neler değişmişti",
+            "video",
+            "4,5 saniye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Test iki hafta, normal bir dönemde yapıldı.",
+          "acilma_kosulu": "Testin süresi ve dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürdü",
+            "iki hafta",
+            "normal bir dönem"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ziyaretçiler rastgele ve eşit dağıtıldı.",
+          "acilma_kosulu": "Ziyaretçi dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "rastgele"
+          ]
+        }
+      ],
+      "kok_neden": "Yeni sayfa tasarım yüzünden değil hız yüzünden kaybetti: kayıp tamamen mobilde, yeni sayfadaki videolar ve 360 derece görüntü mobil açılışı iki katından fazla yavaşlattı; masaüstünde yeni sayfa aslında daha iyi.",
+      "kok_neden_kelimeler": [
+        "mobil",
+        "hız",
+        "yavaş",
+        "video",
+        "masaüstü"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Test kurgusu bozuk: kampanya haftasına denk geldi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Test yalnızca dört gün sürdü ve büyük indirim haftasına denk geldi.",
+          "acilma_kosulu": "Testin süresi ve dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürdü",
+            "dört gün",
+            "indirim haftası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kampanya bağlantıları yalnızca eski sayfaya gidiyordu; indirimli ürünü arayan müşteriler çoğunlukla eski sayfaya düştü.",
+          "acilma_kosulu": "Ziyaretçi dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "kampanya bağlantı",
+            "yalnızca eski"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kayıp en çok kampanyadan gelen yeni ziyaretçilerde değil, doğrudan gelen müşterilerde; iki grup sayfalara eşit dağılmadı.",
+          "acilma_kosulu": "Kaybın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi cihazlarda",
+            "doğrudan gelen",
+            "eşit dağılmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yeni sayfada ürün bilgileri yeniden düzenlenmişti.",
+          "acilma_kosulu": "Iki sayfa arasındaki farklar sorulursa",
+          "ipucu_kelimeler": [
+            "neler değişmişti",
+            "yeniden düzenlen"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuç test kurgusundan: test dört gün sürdü ve indirim haftasına denk geldi, kampanya bağlantıları yalnızca eski sayfaya gittiği için yüksek niyetli müşteriler eski sayfaya yığıldı ve gruplar karşılaştırılabilir değildi.",
+      "kok_neden_kelimeler": [
+        "test",
+        "kampanya",
+        "dört gün",
+        "eşit",
+        "dağıl"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kritik bilgi kayboldu: kargo ve iade bilgisi aşağıya indi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yeni sayfada teslimat süresi, kargo ücreti ve iade koşulları sayfanın en altına, katlanır bir bölüme taşındı.",
+          "acilma_kosulu": "Iki sayfa arasındaki farklar sorulursa",
+          "ipucu_kelimeler": [
+            "neler değişmişti",
+            "en altına",
+            "katlanır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kayıp en çok ilk kez alışveriş yapan müşterilerde; tekrar gelen müşterilerde fark yok.",
+          "acilma_kosulu": "Kaybın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "hangi cihazlarda",
+            "ilk kez",
+            "tekrar gelen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Test üç hafta, normal dönemde ve yeterli ziyaretçiyle yapıldı.",
+          "acilma_kosulu": "Testin süresi ve dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar sürdü",
+            "üç hafta",
+            "yeterli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dağılım rastgele yapıldı.",
+          "acilma_kosulu": "Ziyaretçi dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl dağıtıldı",
+            "rastgele yap"
+          ]
+        }
+      ],
+      "kok_neden": "Yeni sayfa güven bilgisini sakladığı için kaybetti: teslimat, kargo ücreti ve iade koşulları sayfanın en altına, katlanır bir bölüme taşındı; bu bilgiye ihtiyaç duyan ilk kez gelen müşteriler sepete eklemeden çıktı.",
+      "kok_neden_kelimeler": [
+        "kargo",
+        "iade",
+        "bilgi",
+        "ilk kez",
+        "güven"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "kisisel-epostalar",
+  "baslik": "Kişiselleştirilmiş e-postalar neden daha az açılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sektor": "Pazarlama",
+  "sure_dk": 7,
+  "acilis": "Müşteri verisine göre kişiselleştirilen kampanya e-postalarına geçildi; açılma oranı %22'den %13'e, tıklama %3'ten %1'e düştü. Kişiselleştirme altyapısını kuran CRM analistiyle konuşuyorsun.",
+  "rolun": "Pazarlama müdürüsün. Amacın kişiselleştirmeden vazgeçmek değil, sonuçların neden kötüleştiğini anlamak.",
+  "karakter": {
+    "ad": "Utku",
+    "rol": "CRM analisti",
+    "tavir": "Teknik ve hevesli; \"algoritma doğru çalışıyor\" diyor. Verinin nereden geldiğini soran birine açık konuşuyor.",
+    "ilk_soz": "Algoritma tam istediğimiz gibi çalışıyor. Neden açılmıyor, ben de şaşırdım."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler e-postadan sıkıldı.",
+    "E-posta artık eski bir kanal."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kişiselleştirme hangi verilere dayanıyor?",
+    "Müşteriler e-postalarda ne görüyor, bir örnek anlatır mısın?",
+    "Gönderim sıklığı ve zamanı geçişten sonra nasıl değişti?",
+    "Abonelikten çıkanlar ve şikâyetler ne söylüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Eski veri: zaten alınmış ürünü öneriyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kişiselleştirme son 12 aydaki gezinme ve sepet verisine dayanıyor; satın alma verisi ayrı sistemde olduğu için eşleşmiyor.",
+          "acilma_kosulu": "Kişiselleştirmenin dayandığı veri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "gezinme",
+            "satın alma verisi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Örnek: geçen ay buzdolabı alan müşteriye her hafta buzdolabı öneriliyor.",
+          "acilma_kosulu": "E-posta örneği sorulursa",
+          "ipucu_kelimeler": [
+            "bir örnek anlatır",
+            "buzdolabı",
+            "her hafta"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Abonelikten çıkanların çoğu \"aldığım ürünü bana yeniden satmaya çalışıyorsunuz\" diyor.",
+          "acilma_kosulu": "Çıkanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "abonelikten çıkanlar",
+            "aldığım ürünü",
+            "yeniden satma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gönderim sıklığı haftada bir.",
+          "acilma_kosulu": "Gönderim sıklığı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "gönderim sıklığı",
+            "haftada bir"
+          ]
+        }
+      ],
+      "kok_neden": "E-postalar daha az açılıyor çünkü kişiselleştirme eksik veriyle yapılıyor: öneriler gezinme ve sepet verisine dayanıyor, satın alma verisi eşleşmediği için müşteriye zaten aldığı ürün tekrar tekrar öneriliyor.",
+      "kok_neden_kelimeler": [
+        "satın alma verisi",
+        "eşleş",
+        "aldığı ürün",
+        "gezinme",
+        "eksik veri"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sıklık arttı: her davranış bir e-posta tetikliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçişten sonra her ürün görüntüleme ve sepete ekleme bir e-posta tetikliyor; bazı müşteriler haftada 9-10 e-posta alıyor.",
+          "acilma_kosulu": "Gönderim sıklığı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "gönderim sıklığı",
+            "tetikliyor",
+            "9-10"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Abonelikten çıkanlar ve şikâyet edenler \"her gün e-posta geliyor\" diyor; e-postaların bir kısmı spam klasörüne düşmeye başladı.",
+          "acilma_kosulu": "Çıkanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "abonelikten çıkanlar",
+            "her gün",
+            "spam"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kişiselleştirme doğru verilere dayanıyor; önerilen ürünler müşterinin ilgisine uygun.",
+          "acilma_kosulu": "Kişiselleştirmenin dayandığı veri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "ilgisine uygun"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "E-postalar ürün görseli ve fiyat içeriyor.",
+          "acilma_kosulu": "E-posta örneği sorulursa",
+          "ipucu_kelimeler": [
+            "bir örnek anlatır",
+            "ürün görseli"
+          ]
+        }
+      ],
+      "kok_neden": "E-postalar daha az açılıyor çünkü sıklık patladı: her görüntüleme ve sepet hareketi bir e-posta tetikliyor, bazı müşteriler haftada on e-posta alıyor, e-postalar spam klasörüne düşmeye başladı ve abonelikten çıkış arttı.",
+      "kok_neden_kelimeler": [
+        "sıklık",
+        "tetik",
+        "spam",
+        "fazla",
+        "abonelik"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kişisel ama ürkütücü: fazla kişisel konu satırları",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Konu satırları müşterinin adını, baktığı ürünü ve baktığı saati içeriyor: \"Ayşe, dün gece 02:14'te baktığın koltuk seni bekliyor\".",
+          "acilma_kosulu": "E-posta örneği sorulursa",
+          "ipucu_kelimeler": [
+            "bir örnek anlatır",
+            "baktığı saat",
+            "02:14"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyetlerde \"izlendiğimi hissediyorum\" ve \"bu bilgileri nereden biliyorsunuz\" ifadeleri çok geçiyor.",
+          "acilma_kosulu": "Çıkanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "abonelikten çıkanlar",
+            "izlendiğimi",
+            "nereden biliyorsunuz"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kişiselleştirme doğru veriye dayanıyor; ajans dönüşümü artırmak için konu satırlarında mümkün olan en çok kişisel bilgiyi kullanmayı önerdi.",
+          "acilma_kosulu": "Kişiselleştirmenin dayandığı veri sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilere",
+            "konu satırları",
+            "en çok kişisel"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gönderim sıklığı değişmedi.",
+          "acilma_kosulu": "Gönderim sıklığı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "gönderim sıklığı",
+            "değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "E-postalar daha az açılıyor çünkü kişiselleştirme ürkütücü: konu satırlarında müşterinin adı, baktığı ürün ve baktığı saat kullanılıyor, müşteriler izlendiğini hissediyor ve e-postaları açmadan siliyor ya da şikâyet ediyor.",
+      "kok_neden_kelimeler": [
+        "ürkütücü",
+        "izlendiğini",
+        "kişisel bilgi",
+        "konu satırı",
+        "güven"
+      ]
+    }
+  ]
+}

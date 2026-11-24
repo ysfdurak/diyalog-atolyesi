@@ -1,0 +1,201 @@
+{
+  "id": "sepet-terk",
+  "baslik": "Sepette bırakılan siparişler neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sektor": "E-ticaret",
+  "sure_dk": 7,
+  "acilis": "Bir ev yaşam e-ticaret sitesinde sepete ürün ekleyip ödemeyi tamamlamayanların oranı üç ayda %68'den %81'e çıktı. Trafik ve ürün sayısı aynı. Ödeme sayfalarından sorumlu ürün yöneticisiyle konuşuyorsun.",
+  "rolun": "E-ticaret büyüme yöneticisisin. Amacın indirim kararı vermek değil, müşterilerin neden sepeti bıraktığını anlamak.",
+  "karakter": {
+    "ad": "Ceren",
+    "rol": "Ürün yöneticisi (ödeme akışı)",
+    "tavir": "Verilere hâkim ama savunmada; \"fiyatlarımız rekabetçi\" diyor. Akışı adım adım soran birine açık konuşuyor.",
+    "ilk_soz": "Fiyatlarımız rakiplerle aynı seviyede. Müşteriler alışveriş yapmaktan vazgeçmiş gibi."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler fiyat karşılaştırıyor.",
+    "Ekonomi kötü, herkes tasarruf ediyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Müşteriler ödeme akışının en çok hangi adımında çıkıyor?",
+    "Üç ay önce ödeme sayfalarında ne değişti?",
+    "Sepeti bırakanlarla tamamlayanlar arasında ne fark var?",
+    "Müşteriler ödeme sırasında hangi soruları ya da şikâyetleri iletiyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kargo ücreti son adımda çıkıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Terkin çoğu son adımda, toplam tutarın göründüğü ekranda oluyor.",
+          "acilma_kosulu": "Terkin en çok olduğu adım sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımında",
+            "son adım",
+            "toplam tutar"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce ücretsiz kargo sınırı 250 TL'den 500 TL'ye çıkarıldı; kargo ücreti ürün sayfasında değil yalnızca son adımda görünüyor.",
+          "acilma_kosulu": "Üç ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "ücretsiz kargo",
+            "500"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Canlı destekte en sık şikâyet \"kargo ücretini en son gördüm\".",
+          "acilma_kosulu": "Ödeme sırasındaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetleri iletiyor",
+            "en son gördüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bırakanların çoğu 250-500 TL arası sepetler.",
+          "acilma_kosulu": "Bırakanlarla tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "sepeti bırakanlarla",
+            "250-500"
+          ]
+        }
+      ],
+      "kok_neden": "Terk kargo ücretinden: ücretsiz kargo sınırı yükseldi ve kargo ücreti ilk kez son adımda görünüyor; 250-500 TL'lik sepetlerdeki müşteriler toplam tutarı görünce vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "kargo",
+        "son adım",
+        "sınır",
+        "ücret",
+        "toplam tutar"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Zorunlu üyelik: misafir alışverişi kaldırıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce misafir olarak alışveriş kaldırıldı; ödeme için üye olmak zorunlu oldu.",
+          "acilma_kosulu": "Üç ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "misafir",
+            "üye olmak"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Terkin çoğu üyelik formunun açıldığı adımda; formda dokuz zorunlu alan var.",
+          "acilma_kosulu": "Terkin en çok olduğu adım sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımında",
+            "üyelik formu",
+            "dokuz"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bırakanların çoğu ilk kez gelen müşteriler; eski üyelerde terk oranı değişmedi.",
+          "acilma_kosulu": "Bırakanlarla tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "sepeti bırakanlarla",
+            "ilk kez gelen",
+            "eski üye"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Şikâyetler çoğunlukla teslim süresiyle ilgili.",
+          "acilma_kosulu": "Ödeme sırasındaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetleri iletiyor",
+            "teslim süresi"
+          ]
+        }
+      ],
+      "kok_neden": "Terk zorunlu üyelikten: misafir alışverişi kaldırıldı, ilk kez gelen müşteri ödeme için dokuz alanlı bir üyelik formuyla karşılaşıyor ve vazgeçiyor; eski üyelerde değişiklik yok.",
+      "kok_neden_kelimeler": [
+        "üyelik",
+        "misafir",
+        "form",
+        "ilk kez",
+        "zorunlu"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ödeme hatası: yeni ödeme sağlayıcısı bazı kartları reddediyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce ödeme altyapısı daha ucuz bir sağlayıcıya taşındı.",
+          "acilma_kosulu": "Üç ay önceki değişiklikler sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "ödeme altyapısı",
+            "sağlayıcı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Canlı destekte \"kartım reddedildi\" şikâyeti üç kat arttı; özellikle bazı bankaların kartlarında doğrulama ekranı açılmıyor.",
+          "acilma_kosulu": "Ödeme sırasındaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyetleri iletiyor",
+            "kartım reddedildi",
+            "doğrulama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bırakanların çoğu ödeme butonuna basmış ama işlemi tamamlanmamış müşteriler; çoğu aynı birkaç bankanın kartını kullanıyor.",
+          "acilma_kosulu": "Bırakanlarla tamamlayanların farkı sorulursa",
+          "ipucu_kelimeler": [
+            "sepeti bırakanlarla",
+            "butonuna basmış",
+            "aynı birkaç banka"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Terk çoğunlukla ödeme adımında.",
+          "acilma_kosulu": "Terkin en çok olduğu adım sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımında",
+            "ödeme adımı"
+          ]
+        }
+      ],
+      "kok_neden": "Terk teknik bir hatadan: ödeme altyapısı yeni bir sağlayıcıya taşındı, bazı bankaların kartlarında doğrulama ekranı açılmıyor ve ödemeye basan müşteriler işlemi tamamlayamadan çıkıyor.",
+      "kok_neden_kelimeler": [
+        "ödeme",
+        "sağlayıcı",
+        "kart",
+        "doğrulama",
+        "banka"
+      ]
+    }
+  ]
+}
