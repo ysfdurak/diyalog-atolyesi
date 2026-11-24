@@ -1,0 +1,200 @@
+{
+  "id": "tartim-farklari",
+  "baslik": "Tartım farkları neden müşteri şikâyetine dönüştü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Kilogramla satılan ürünlerde müşteriler son iki ayda 30 kez eksik tartım şikâyeti yaptı. Depodaki kontrol tartımında hepsi \"geçti\" olarak kaydedilmiş. Tartım istasyonundan sorumlu kalite kontrol teknisyeniyle konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın teknisyeni suçlamak değil, farkın neden yakalanmadığını anlamak.",
+  "karakter": {
+    "ad": "Burçin",
+    "rol": "Kalite kontrol teknisyeni",
+    "tavir": "Titiz ve şaşkın; \"teraziler kalibreli\" diyor. Ölçüm düzenini soran birine ayrıntı veriyor.",
+    "ilk_soz": "Teraziler kalibreli, kayıtları var. Bizim kontrolümüzde hepsi geçti."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler yanlış tartıyor.",
+    "Taşıma sırasında fire oluyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kontrol tartımı nasıl ve hangi sıklıkla yapılıyor?",
+    "Şikâyet gelen ürünlerin ortak noktası ne?",
+    "Terazilerin doğruluğu ne zaman ve nasıl kontrol ediliyor?",
+    "Tartımdan sonra ürünle neler oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Dara hatası: yeni ambalajın ağırlığı sisteme girilmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Şikâyet gelen ürünlerin hepsi iki ay önce ambalajı kalınlaşan ürünler.",
+          "acilma_kosulu": "Şikâyet gelen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "ambalaj",
+            "kalınlaş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kontrol tartımında brüt ağırlıktan sistemdeki dara düşülüyor; dara eski ambalaja göre tanımlı.",
+          "acilma_kosulu": "Kontrol tartımının yapılışı sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol tartımı",
+            "dara",
+            "brüt"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Teraziler düzenli kalibre ediliyor; sorun terazide değil, düşülen dara değerinde.",
+          "acilma_kosulu": "Terazi kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "terazilerin doğruluğu",
+            "kalibre",
+            "dara değer"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tartımdan sonra ürün doğrudan rafa gidiyor.",
+          "acilma_kosulu": "Tartım sonrası süreç sorulursa",
+          "ipucu_kelimeler": [
+            "tartımdan sonra",
+            "doğrudan raf"
+          ]
+        }
+      ],
+      "kok_neden": "Farklar yakalanmıyor çünkü dara yanlış: ambalaj kalınlaştı ama sistemdeki dara eski ambalaja göre tanımlı, kontrol tartımı brütten eski darayı düşüyor ve içerik eksik olsa da ürün geçiyor.",
+      "kok_neden_kelimeler": [
+        "dara",
+        "ambalaj",
+        "sistem",
+        "brüt",
+        "eski"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Örnekleme yetersiz: günde bir koli tartılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kontrol tartımı her partiden yalnızca bir koli seçilerek, günde bir kez yapılıyor.",
+          "acilma_kosulu": "Kontrol tartımının yapılışı sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol tartımı",
+            "bir koli",
+            "günde bir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şikâyet gelen ürünlerin hepsi aynı dolum hattından geliyor; o hattın dolum makinesi gün içinde sapıyor.",
+          "acilma_kosulu": "Şikâyet gelen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "dolum hattı",
+            "sapıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tartımdan sonra ürünler ikinci bir kontrol olmadan sevk ediliyor; dolum makinesinin sabah ayarı gün boyu kontrol edilmiyor.",
+          "acilma_kosulu": "Tartım sonrası süreç sorulursa",
+          "ipucu_kelimeler": [
+            "tartımdan sonra",
+            "sabah ayar",
+            "ikinci kontrol"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teraziler her ay kalibre ediliyor.",
+          "acilma_kosulu": "Terazi kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "terazilerin doğruluğu",
+            "her ay"
+          ]
+        }
+      ],
+      "kok_neden": "Farklar yakalanmıyor çünkü örnekleme yetersiz: her partiden günde yalnızca bir koli tartılıyor, dolum makinesi gün içinde sapıyor ve sabah ayarı gün boyu kontrol edilmediği için eksik dolumlar sevk ediliyor.",
+      "kok_neden_kelimeler": [
+        "örnekleme",
+        "bir koli",
+        "dolum",
+        "sap",
+        "gün içinde"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Terazi bozuk: kalibrasyon kâğıt üzerinde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kalibrasyon kayıtları var ama son kalibrasyon bir yıl önce; kalibrasyon etiketi yenilenmiş, cihaz kontrol edilmemiş.",
+          "acilma_kosulu": "Terazi kontrolü sorulursa",
+          "ipucu_kelimeler": [
+            "terazilerin doğruluğu",
+            "bir yıl önce",
+            "etiket"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kontrol tartımı istasyondaki tek terazide yapılıyor; terazi forklift yolunun yanında, titreşime açık.",
+          "acilma_kosulu": "Kontrol tartımının yapılışı sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol tartımı",
+            "tek terazi",
+            "titreşim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şikâyetler bütün ürünlerde, özellikle hafif paketlerde.",
+          "acilma_kosulu": "Şikâyet gelen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "şikâyet gelen",
+            "hafif paket"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tartımdan sonra ürünler etiketlenip sevk ediliyor.",
+          "acilma_kosulu": "Tartım sonrası süreç sorulursa",
+          "ipucu_kelimeler": [
+            "tartımdan sonra",
+            "etiketlenip"
+          ]
+        }
+      ],
+      "kok_neden": "Farklar yakalanmıyor çünkü teraziye güvenilemiyor: kalibrasyon bir yıldır yapılmamış ama etiketi yenilenmiş, kontrol tek terazide yapılıyor ve terazi forklift yolunun yanında titreşime açık; hafif paketlerde hata büyüyor.",
+      "kok_neden_kelimeler": [
+        "kalibrasyon",
+        "terazi",
+        "titreşim",
+        "etiket",
+        "tek terazi"
+      ]
+    }
+  ]
+}

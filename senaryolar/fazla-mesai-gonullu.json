@@ -1,0 +1,199 @@
+{
+  "id": "fazla-mesai-gonullu",
+  "baslik": "Fazla mesai gönüllüleri neden azaldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 6,
+  "acilis": "Eskiden fazla mesai listesine 40 kişi yazılırdı; son üç ayda bu sayı 12'ye düştü ve yoğun günlerde iş yetişmiyor. Fazla mesaiyi planlayan vardiya amiriyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın fazla mesaiyi zorunlu yapmak değil, gönüllülerin neden azaldığını anlamak.",
+  "karakter": {
+    "ad": "Ercan",
+    "rol": "Vardiya amiri",
+    "tavir": "Pratik ve biraz bıkkın; \"kimse kalmak istemiyor artık\" diyor. Gerçekten merak eden birine anlatıyor.",
+    "ilk_soz": "Kimse kalmak istemiyor artık. Listeyi asıyorum, iki üç isim yazılıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Yeni nesil fazla mesai istemiyor.",
+    "Çalışanlar yorgun."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Fazla mesai ne zaman ve nasıl duyuruluyor?",
+    "Fazla mesai ücreti nasıl ve ne zaman ödeniyor?",
+    "Fazla mesaide çalışanlara hangi işler veriliyor?",
+    "Üç ay önce fazla mesaiyle ilgili ne değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ödeme gecikiyor ve eksik: bordro sorunu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Fazla mesai ücreti üç ay önce bordro sistemi değişince bir ay gecikmeli ödenmeye başladı; iki kez eksik hesaplandı.",
+          "acilma_kosulu": "Fazla mesai ödemesi sorulursa",
+          "ipucu_kelimeler": [
+            "ücreti nasıl",
+            "bir ay gecikmeli",
+            "eksik hesap"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce yeni bordro sistemine geçildi; fazla mesai saatleri amir onayı yerine kart okuyucudan alınıyor ve mola süreleri düşülüyor.",
+          "acilma_kosulu": "Üç ay önceki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "bordro sistemi",
+            "kart okuyucu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fazla mesai yine aynı şekilde, günü gelince panoya asılarak duyuruluyor.",
+          "acilma_kosulu": "Fazla mesainin duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesai ne zaman",
+            "panoya asıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Fazla mesaide genelde toplama işi veriliyor.",
+          "acilma_kosulu": "Fazla mesaide verilen işler sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesaide",
+            "toplama işi"
+          ]
+        }
+      ],
+      "kok_neden": "Gönüllüler azaldı çünkü fazla mesai parası güvenilmez oldu: bordro sistemi değişince ödeme bir ay gecikmeye başladı, saatler kart okuyucudan mola düşülerek eksik hesaplandı ve çalışanlar emeğinin karşılığını alamayacağını düşünüyor.",
+      "kok_neden_kelimeler": [
+        "ödeme",
+        "bordro",
+        "gecik",
+        "eksik",
+        "güvenilmez"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Son dakika duyuru: plan yapamıyorlar",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç aydır fazla mesai aynı gün öğlen duyuruluyor; çalışanlar akşam planlarını iptal edemiyor.",
+          "acilma_kosulu": "Fazla mesainin duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesai ne zaman",
+            "aynı gün",
+            "öğlen"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce haftalık fazla mesai planı kaldırıldı; satış tahmini yerine günlük sipariş durumuna göre karar veriliyor.",
+          "acilma_kosulu": "Üç ay önceki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "haftalık plan",
+            "günlük sipariş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fazla mesaiye kalanlar eskiden birkaç gün önce bildiği için çocuk bakımını ve servisi ayarlayabiliyordu.",
+          "acilma_kosulu": "Fazla mesaide verilen işler sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesaide",
+            "çocuk bakımı",
+            "birkaç gün önce"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ücret zamanında ödeniyor.",
+          "acilma_kosulu": "Fazla mesai ödemesi sorulursa",
+          "ipucu_kelimeler": [
+            "ücreti nasıl",
+            "zamanında öden"
+          ]
+        }
+      ],
+      "kok_neden": "Gönüllüler azaldı çünkü fazla mesai son dakikaya kaldı: haftalık plan kaldırıldı, fazla mesai aynı gün öğlen duyuruluyor ve çalışanlar çocuk bakımı ve ulaşımı bu kadar kısa sürede ayarlayamıyor.",
+      "kok_neden_kelimeler": [
+        "son dakika",
+        "aynı gün",
+        "plan",
+        "çocuk bakımı",
+        "haftalık"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fazla mesai cezaya döndü: en ağır işler gönüllülere",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Fazla mesaide gönüllülere vardiyanın bıraktığı en ağır işler veriliyor: iade ayırma, soğuk oda, yük boşaltma.",
+          "acilma_kosulu": "Fazla mesaide verilen işler sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesaide",
+            "iade ayırma",
+            "en ağır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce gönüllülerin fazla mesaide kendi bölümlerinde kalma imkânı kaldırıldı; nerede ihtiyaç varsa oraya gönderiliyorlar.",
+          "acilma_kosulu": "Üç ay önceki değişiklik sorulursa",
+          "ipucu_kelimeler": [
+            "üç ay önce",
+            "kendi bölüm",
+            "kaldırıldı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fazla mesai birkaç gün önceden duyuruluyor; ama ne iş yapılacağı söylenmiyor.",
+          "acilma_kosulu": "Fazla mesainin duyurulması sorulursa",
+          "ipucu_kelimeler": [
+            "fazla mesai ne zaman",
+            "ne iş yapılacağı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ücret düzenli ödeniyor.",
+          "acilma_kosulu": "Fazla mesai ödemesi sorulursa",
+          "ipucu_kelimeler": [
+            "ücreti nasıl",
+            "düzenli öden"
+          ]
+        }
+      ],
+      "kok_neden": "Gönüllüler azaldı çünkü fazla mesai en ağır işlere döndü: gönüllüler kendi bölümlerinden alınıp iade ayırma, soğuk oda ve yük boşaltma gibi en ağır işlere veriliyor ve ne iş yapacakları önceden söylenmiyor.",
+      "kok_neden_kelimeler": [
+        "ağır iş",
+        "gönüllü",
+        "kendi bölüm",
+        "söylenmiyor",
+        "ceza"
+      ]
+    }
+  ]
+}

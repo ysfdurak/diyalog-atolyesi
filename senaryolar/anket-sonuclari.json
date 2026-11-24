@@ -1,0 +1,201 @@
+{
+  "id": "anket-sonuclari",
+  "baslik": "Çalışan anketi sonuçları neden hiçbir şeye dönüşmüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Üç yıldır yapılan çalışan bağlılık anketine depodan katılım her yıl azalıyor; bu yıl %22'ye düştü. Çalışanlar \"ankete yazınca ne değişti ki\" diyor. Anketi yürüten İK uzmanıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın katılımı artırmak değil, sonuçların neden bir şeye dönüşmediğini anlamak.",
+  "karakter": {
+    "ad": "Arzu",
+    "rol": "İK uzmanı",
+    "tavir": "Hevesli ama hayal kırıklığına uğramış; \"raporları zamanında paylaşıyoruz\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Raporu her yıl zamanında müdürlere gönderiyoruz. Sonrası bizim elimizde değil."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar anketi ciddiye almıyor.",
+    "Anket çok uzun."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Anket sonuçları kime, nasıl ve ne zaman ulaşıyor?",
+    "Sonuçlardan sonra hangi adımlar bekleniyor?",
+    "Çalışanlar sonuçları ve yapılanları nasıl öğreniyor?",
+    "Geçen yılın sonuçlarında en çok hangi konu öne çıkmıştı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Eylem planı sahipsiz: rapor gönderilip bırakılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sonuçlar 60 sayfalık bir rapor olarak müdürlere e-postayla gidiyor; birlikte okuma ya da yorum toplantısı yapılmıyor.",
+          "acilma_kosulu": "Sonuçların kime ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları kime",
+            "60 sayfa",
+            "e-postayla"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sonuçlardan sonra bir eylem planı hazırlanması bekleniyor ama kimin hazırlayacağı ve ne zaman takip edileceği tanımlı değil.",
+          "acilma_kosulu": "Sonuçlardan sonra beklenen adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlar",
+            "eylem planı",
+            "kimin hazırlayacağı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın en büyük konusu soyunma odası ve mola alanıydı; hiçbir şey yapılmadı.",
+          "acilma_kosulu": "Geçen yılın öne çıkan konusu sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın sonuçlarında",
+            "soyunma odası",
+            "mola alanı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışanlar sonuçları panodaki özetten görebiliyor.",
+          "acilma_kosulu": "Çalışanların yapılanları öğrenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "yapılanları",
+            "panodaki özet"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar bir şeye dönüşmüyor çünkü eylem planının sahibi yok: rapor müdürlere gönderilip bırakılıyor, eylem planını kimin hazırlayıp takip edeceği tanımlı değil ve geçen yılın en büyük şikâyeti olan soyunma ve mola alanı için hiçbir şey yapılmadı.",
+      "kok_neden_kelimeler": [
+        "eylem planı",
+        "sahip",
+        "takip",
+        "rapor",
+        "yapılmadı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yapılanlar görünmüyor: geri bildirim döngüsü yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Çalışanlar sonuçları hiç görmüyor; yapılan iyileştirmeler anketle ilişkilendirilmeden duyuruluyor ya da hiç duyurulmuyor.",
+          "acilma_kosulu": "Çalışanların yapılanları öğrenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "yapılanları",
+            "hiç görmüyor",
+            "ilişkilendiril"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl ankete dayanarak servis güzergâhı ve mola süresi değiştirildi; ama bunun ankette istendiği söylenmedi.",
+          "acilma_kosulu": "Sonuçlardan sonra beklenen adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlar",
+            "servis güzergâhı",
+            "mola süresi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın en büyük konusu ulaşım ve molaydı; çalışanlar bu değişikliklerin ankete bağlı olduğunu bilmiyor.",
+          "acilma_kosulu": "Geçen yılın öne çıkan konusu sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın sonuçlarında",
+            "ulaşım",
+            "bilmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sonuçlar müdürlerle toplantıda konuşuluyor.",
+          "acilma_kosulu": "Sonuçların kime ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları kime",
+            "toplantıda konuşul"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar aslında bir şeye dönüşüyor ama görünmüyor: ankete dayanarak servis ve mola düzenlendi, fakat çalışanlara sonuçlar gösterilmedi ve yapılanların anketten geldiği söylenmedi; çalışanlar yazdıklarının boşa gittiğini düşünüyor.",
+      "kok_neden_kelimeler": [
+        "görünmüyor",
+        "geri bildirim",
+        "söylenmedi",
+        "servis",
+        "döngü"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güven yok: anonimlik inanılmıyor, konular yüzeysel",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sonuçlar ekip bazında, beş kişilik ekiplere kadar kırılımla müdürlere gidiyor; çalışanlar kimin ne yazdığının anlaşılacağını düşünüyor.",
+          "acilma_kosulu": "Sonuçların kime ulaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları kime",
+            "beş kişilik",
+            "kırılım"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl bir ekibin düşük puanından sonra amir ekibini toplayıp \"kim yazdı\" diye sordu.",
+          "acilma_kosulu": "Geçen yılın öne çıkan konusu sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın sonuçlarında",
+            "kim yazdı",
+            "düşük puan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Asıl sorunlar ankette çıkmadığı için eylem planları yüzeysel kalıyor; çalışanlar riskli konuları yazmıyor.",
+          "acilma_kosulu": "Sonuçlardan sonra beklenen adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımlar",
+            "riskli konu",
+            "yüzeysel"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çalışanlar sonuçları amirlerinden öğreniyor.",
+          "acilma_kosulu": "Çalışanların yapılanları öğrenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "yapılanları",
+            "amirlerinden öğren"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar bir şeye dönüşmüyor çünkü çalışanlar gerçeği yazmıyor: sonuçlar beş kişilik ekiplere kadar kırılıyor, bir amir düşük puan sonrası 'kim yazdı' diye sordu ve anonimliğe güvenmeyen çalışanlar riskli konuları yazmadığı için planlar yüzeysel kalıyor.",
+      "kok_neden_kelimeler": [
+        "anonim",
+        "güven",
+        "kim yazdı",
+        "kırılım",
+        "yüzeysel"
+      ]
+    }
+  ]
+}

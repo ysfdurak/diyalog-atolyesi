@@ -1,0 +1,201 @@
+{
+  "id": "is-kazasi-raporlari",
+  "baslik": "İş kazası raporları neden hep aynı sonuca varıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 8,
+  "acilis": "Son bir yıldaki 14 iş kazası raporunun 13'ünde kök neden \"çalışanın dikkatsizliği\", alınan önlem \"çalışana uyarı ve eğitim\". Aynı tip kazalar tekrar ediyor. Raporları hazırlayan iş güvenliği uzmanıyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın uzmanı eleştirmek değil, raporların neden hep aynı sonuca vardığını anlamak.",
+  "karakter": {
+    "ad": "Taner",
+    "rol": "İş güvenliği uzmanı",
+    "tavir": "Deneyimli ve yorgun; \"raporu kurallara göre yazıyorum\" diyor. Yöntemi soran birine açık konuşuyor.",
+    "ilk_soz": "Raporlar mevzuata uygun, formun her alanı dolu. Sonuç da çoğu zaman gerçekten dikkatsizlik."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar kurallara uymuyor.",
+    "Kazalar şanssızlık."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kaza incelemesi nasıl yapılıyor, kimler katılıyor?",
+    "Kazaların ortak noktası ne, nerede ve hangi işte oluyor?",
+    "Kaza raporu sonra kimlere gidiyor, ne oluyor?",
+    "Rapordaki kök neden alanı nasıl dolduruluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İnceleme kazazedeyle sınırlı: saha ve sistem incelenmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İnceleme kazadan sonra yalnızca kazazede ve amiriyle görüşülerek yapılıyor; olay yeri incelenmiyor, tanıklarla konuşulmuyor.",
+          "acilma_kosulu": "Incelemenin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaza incelemesi",
+            "kazazede",
+            "olay yeri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kazaların çoğu aynı iki koridorda ve forklift ile yayanın karşılaştığı köşelerde.",
+          "acilma_kosulu": "Kazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kazaların ortak",
+            "iki koridor",
+            "köşe"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kök neden alanında hazır seçenekler var; \"çalışan dikkatsizliği\" ilk seçenek ve en kolay kapatılanı.",
+          "acilma_kosulu": "Kök neden alanının doldurulması sorulursa",
+          "ipucu_kelimeler": [
+            "kök neden alanı",
+            "hazır seçenek",
+            "ilk seçenek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Rapor işyeri hekimine ve müdüre gidiyor.",
+          "acilma_kosulu": "Raporun sonraki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "kaza raporu sonra",
+            "işyeri hekimi"
+          ]
+        }
+      ],
+      "kok_neden": "Raporlar aynı sonuca varıyor çünkü inceleme kazazedeyle sınırlı: olay yeri ve tanıklar incelenmiyor, kök neden alanında hazır 'dikkatsizlik' seçeneği var ve kazaların aynı koridor ve köşelerde yığıldığı görülmüyor.",
+      "kok_neden_kelimeler": [
+        "inceleme",
+        "olay yeri",
+        "hazır seçenek",
+        "köşe",
+        "dikkatsizlik"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sistem sorununu yazmak bedelli: rapor yönetime gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Rapor genel müdürlüğe ve sigortaya gidiyor; ekipman ya da yerleşim sorunu yazılırsa yatırım ve sorumluluk tartışması başlıyor.",
+          "acilma_kosulu": "Raporun sonraki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "kaza raporu sonra",
+            "sigorta",
+            "sorumluluk tartışma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kök neden alanı, uzmanın müdürle birlikte son hâlini verdiği bir taslaktan dolduruluyor; müdür \"çalışan kaynaklı\" yazılmasını tercih ediyor.",
+          "acilma_kosulu": "Kök neden alanının doldurulması sorulursa",
+          "ipucu_kelimeler": [
+            "kök neden alanı",
+            "taslak",
+            "çalışan kaynaklı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kazaların çoğu eski ve frenleri zayıf iki forkliftte.",
+          "acilma_kosulu": "Kazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kazaların ortak",
+            "eski",
+            "fren"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İncelemeye amir ve tanıklar katılıyor.",
+          "acilma_kosulu": "Incelemenin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaza incelemesi",
+            "tanıklar katıl"
+          ]
+        }
+      ],
+      "kok_neden": "Raporlar aynı sonuca varıyor çünkü sistem sorununu yazmanın bedeli var: rapor genel müdürlüğe ve sigortaya gidiyor, ekipman sorunu yazılırsa yatırım ve sorumluluk tartışması başlıyor ve müdür 'çalışan kaynaklı' yazılmasını tercih ediyor; kazalar ise aynı eski forkliftlerde.",
+      "kok_neden_kelimeler": [
+        "bedel",
+        "sigorta",
+        "ekipman",
+        "çalışan kaynaklı",
+        "forklift"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ramak kala yok: yalnızca kazalar inceleniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kazaların çoğu yüklemenin yetişmediği son saatlerde, aceleyle yapılan işlerde.",
+          "acilma_kosulu": "Kazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kazaların ortak",
+            "son saat",
+            "acele"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İnceleme yalnızca kaza olunca yapılıyor; ramak kala olaylar raporlanmıyor ve incelenmiyor.",
+          "acilma_kosulu": "Incelemenin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaza incelemesi",
+            "ramak kala",
+            "raporlanmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rapor yalnızca dosyaya giriyor; benzer kazalar arasında örüntü arayan bir yıllık değerlendirme yok.",
+          "acilma_kosulu": "Raporun sonraki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "kaza raporu sonra",
+            "dosyaya",
+            "örüntü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kök neden alanı serbest metinle dolduruluyor.",
+          "acilma_kosulu": "Kök neden alanının doldurulması sorulursa",
+          "ipucu_kelimeler": [
+            "kök neden alanı",
+            "serbest metin"
+          ]
+        }
+      ],
+      "kok_neden": "Raporlar aynı sonuca varıyor çünkü her kaza tek başına inceleniyor: ramak kala olaylar hiç raporlanmıyor, kazalar arasında örüntü aranmıyor ve hepsinin son saatlerdeki acele işlerde yığıldığı görülmüyor.",
+      "kok_neden_kelimeler": [
+        "ramak kala",
+        "örüntü",
+        "tek başına",
+        "son saat",
+        "acele"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "kaizen-haftasi",
+  "baslik": "Kaizen haftasının sonuçları neden bir ayda kayboldu?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Mal kabul alanında yapılan bir haftalık kaizen etkinliğinde kabul süresi %35 kısaldı ve etkinlik bir başarı hikâyesi olarak duyuruldu. Bir ay sonra süreler eski hâline döndü. Etkinliği yöneten kaizen kolaylaştırıcısıyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın etkinliği başarısız ilan etmek değil, sonuçların neden kaybolduğunu anlamak.",
+  "karakter": {
+    "ad": "Ömer",
+    "rol": "Kaizen kolaylaştırıcısı",
+    "tavir": "Enerjik ve savunmada; \"o hafta herkes gördü\" diyor. Etkinliğin ardından ne olduğunu soran birine dürüst.",
+    "ilk_soz": "O hafta sonuçları herkes gördü, rakamlar da ortada. Sonra ne oldu, ben de merak ediyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip eski alışkanlıklarına döndü.",
+    "Mal kabul çok değişken bir alan."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Kaizen haftasında ekipte kimler vardı?",
+    "Etkinlikten sonra açık kalan aksiyonlara ne oldu?",
+    "O hafta mal kabulün koşulları normal bir haftadan nasıl farklıydı?",
+    "Yeni yöntem günlük işe nasıl yerleştirildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Açık aksiyonlar kapanmadı: kalıcı çözümler yapılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etkinlikte 18 aksiyon çıktı; 12'si \"etkinlik sonrası\" diye bırakıldı ve hiçbirine sorumlu atanmadı.",
+          "acilma_kosulu": "Açık aksiyonların durumu sorulursa",
+          "ipucu_kelimeler": [
+            "açık kalan",
+            "18 aksiyon",
+            "sorumlu atanmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "O hafta geçici çözümler kullanıldı: bantla çizilmiş alanlar, elle yazılmış etiketler; kalıcı hâle getirilmedi.",
+          "acilma_kosulu": "Yeni yöntemin yerleştirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işe nasıl",
+            "geçici çözüm",
+            "kalıcı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekipte mal kabul çalışanları ve kolaylaştırıcı vardı; etkinlikten sonra kolaylaştırıcı başka alana geçti.",
+          "acilma_kosulu": "Etkinlikteki ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kaizen haftasında",
+            "başka alana geçti"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "O hafta hacim normaldi.",
+          "acilma_kosulu": "Etkinlik haftasının koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "normal bir haftadan",
+            "hacim normal"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar kayboldu çünkü etkinlik bitince iş bitti sayıldı: aksiyonların çoğu 'etkinlik sonrası' diye sorumlu atanmadan bırakıldı, o haftaki geçici çözümler kalıcı yapılmadı ve kolaylaştırıcı başka alana geçti.",
+      "kok_neden_kelimeler": [
+        "aksiyon",
+        "sorumlu",
+        "geçici çözüm",
+        "kalıcı",
+        "etkinlik sonrası"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Özel koşul: o hafta hacim düşük ve ekstra kişi vardı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Etkinlik haftası sezonun en sakin haftasıydı; gelen araç sayısı normalin yarısıydı.",
+          "acilma_kosulu": "Etkinlik haftasının koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "normal bir haftadan",
+            "en sakin",
+            "yarısı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Etkinlikte mal kabul ekibine ek olarak dört kişilik iyileştirme ekibi sahadaydı ve fiilen kabul işine yardım etti.",
+          "acilma_kosulu": "Etkinlikteki ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kaizen haftasında",
+            "dört kişilik",
+            "yardım etti"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aksiyonlar kapandı; ama %35'lik kazanç normal hacim ve normal kadroyla hiç ölçülmedi.",
+          "acilma_kosulu": "Açık aksiyonların durumu sorulursa",
+          "ipucu_kelimeler": [
+            "açık kalan",
+            "normal hacim",
+            "ölçülmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yeni yöntem standart talimata yazıldı.",
+          "acilma_kosulu": "Yeni yöntemin yerleştirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işe nasıl",
+            "standart talimat"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar kaybolmadı, hiç gerçek değildi: etkinlik en sakin haftada yapıldı, iyileştirme ekibi fiilen kabul işine yardım etti ve %35'lik kazanç normal hacim ve kadroyla hiç ölçülmedi.",
+      "kok_neden_kelimeler": [
+        "sakin",
+        "hacim",
+        "ölçülmedi",
+        "ekstra",
+        "özel koşul"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sahada olmayanlar dışlandı: diğer vardiya yöntemi bilmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kaizen ekibinde yalnızca sabah vardiyasından üç kişi vardı; akşam vardiyası ve forklift operatörleri katılmadı.",
+          "acilma_kosulu": "Etkinlikteki ekip sorulursa",
+          "ipucu_kelimeler": [
+            "kaizen haftasında",
+            "sabah vardiyası",
+            "akşam vardiya"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni yöntem yalnızca bir pano üzerindeki fotoğraflarla anlatıldı; akşam vardiyasına kimse göstermedi.",
+          "acilma_kosulu": "Yeni yöntemin yerleştirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işe nasıl",
+            "pano",
+            "kimse göstermedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aksiyonlar kapatıldı; ama süreler en çok akşam vardiyasında eski hâline döndü.",
+          "acilma_kosulu": "Açık aksiyonların durumu sorulursa",
+          "ipucu_kelimeler": [
+            "açık kalan",
+            "en çok akşam"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "O hafta normal bir haftaydı.",
+          "acilma_kosulu": "Etkinlik haftasının koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "normal bir haftadan",
+            "normal bir hafta"
+          ]
+        }
+      ],
+      "kok_neden": "Sonuçlar kayboldu çünkü değişiklik yalnızca bir vardiyaya ait kaldı: kaizen ekibinde yalnızca sabah vardiyası vardı, yeni yöntem akşam vardiyasına ve operatörlere gösterilmedi ve süreler en çok akşam vardiyasında eski hâline döndü.",
+      "kok_neden_kelimeler": [
+        "vardiya",
+        "katılmadı",
+        "gösterilmedi",
+        "akşam",
+        "yayıl"
+      ]
+    }
+  ]
+}

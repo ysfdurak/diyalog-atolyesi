@@ -1,0 +1,201 @@
+{
+  "id": "kadin-calisanlar",
+  "baslik": "Kadın çalışanlar neden depoda kalmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Depoda kadın çalışanların ilk altı ayda ayrılma oranı erkeklerin iki katı. Kadın çalışan sayısını artırma hedefi var ama işe alınanlar kısa sürede ayrılıyor. Depoda üç yıldır çalışan ve ekip lideri olan Esma'yla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın varsayımlarla açıklamak değil, kadın çalışanların neden ayrıldığını anlamak.",
+  "karakter": {
+    "ad": "Esma",
+    "rol": "Ekip lideri",
+    "tavir": "Açık sözlü ve temkinli; \"söyleyince şikâyet sanılıyor\" diyor. Ciddiye alındığını hissedince somut örnekler veriyor.",
+    "ilk_soz": "Söylesem şikâyet ediyor sanılacak. Ama ayrılanların çoğunu ben de tanıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Depo işi kadınlara ağır geliyor.",
+    "Kadınlar bu işi uzun yapmak istemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ayrılan kadın çalışanlar giderken ne söyledi?",
+    "Depoda kadınlar için tesis ve ortam nasıl?",
+    "Vardiya ve ulaşım düzeni kadın çalışanlar için nasıl işliyor?",
+    "Kadınlara hangi işler veriliyor, iş dağılımı nasıl yapılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tesis: soyunma odası ve tuvalet uzak",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kadınlar için tek soyunma odası ve tuvalet idari binada; depodan gidip gelmek molanın yarısını alıyor.",
+          "acilma_kosulu": "Tesis ve ortam koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "tesis ve ortam",
+            "idari bina",
+            "molanın yarısı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu molada tuvalete yetişememekten ve soyunma odasının küçüklüğünden bahsetti.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "giderken ne",
+            "tuvalete yetiş",
+            "küçük"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İş dağılımında ayrım yok; ama kadınların mola süresi pratikte daha kısa kalıyor ve bu verime yansıyor.",
+          "acilma_kosulu": "Iş dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler veriliyor",
+            "mola süresi",
+            "verime yansı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Servis vardiya saatlerine uygun.",
+          "acilma_kosulu": "Vardiya ve ulaşım sorulursa",
+          "ipucu_kelimeler": [
+            "ulaşım düzeni",
+            "servis uygun"
+          ]
+        }
+      ],
+      "kok_neden": "Kadın çalışanlar tesis yüzünden ayrılıyor: kadınlar için soyunma odası ve tuvalet idari binada, gidip gelmek molanın yarısını alıyor ve bu hem günlük hayatı zorlaştırıyor hem verimlerine yansıyor.",
+      "kok_neden_kelimeler": [
+        "tesis",
+        "tuvalet",
+        "soyunma",
+        "mola",
+        "uzak"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ulaşım ve güvenlik: gece servisi ana yolda bırakıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gece vardiyası çıkışında servis yalnızca ana yolda duruyor; kadın çalışanlar karanlıkta uzun yol yürümek zorunda.",
+          "acilma_kosulu": "Vardiya ve ulaşım sorulursa",
+          "ipucu_kelimeler": [
+            "ulaşım düzeni",
+            "ana yol",
+            "karanlık"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu gece vardiyası sonrası eve dönüşte kendini güvende hissetmediğini söyledi.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "giderken ne",
+            "güvende",
+            "eve dönüş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yeni başlayanlar önce dönüşümlü gece vardiyasına veriliyor; vardiya tercihi ancak bir yıldan sonra mümkün.",
+          "acilma_kosulu": "Iş dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler veriliyor",
+            "dönüşümlü gece",
+            "bir yıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Depoda kadınlar için ayrı soyunma odası var.",
+          "acilma_kosulu": "Tesis ve ortam koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "tesis ve ortam",
+            "ayrı soyunma"
+          ]
+        }
+      ],
+      "kok_neden": "Kadın çalışanlar güvenlik kaygısıyla ayrılıyor: yeni başlayanlar dönüşümlü gece vardiyasına veriliyor, gece çıkışında servis yalnızca ana yolda bırakıyor ve karanlıkta eve yürümek zorunda kalan çalışanlar kendini güvende hissetmiyor.",
+      "kok_neden_kelimeler": [
+        "güvenlik",
+        "servis",
+        "gece",
+        "ulaşım",
+        "karanlık"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İş tasarımı ve dışlanma: ekipman kişiye göre değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kadınlar çoğunlukla paketlemeye veriliyor; toplamaya ya da forklift eğitimine başvurduklarında \"ağır iş\" denerek geri çevriliyorlar.",
+          "acilma_kosulu": "Iş dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler veriliyor",
+            "paketleme",
+            "forklift eğitimi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların çoğu ilerleme şansı olmadığını ve ekipte \"misafir\" gibi görüldüklerini söyledi.",
+          "acilma_kosulu": "Ayrılanların söyledikleri sorulursa",
+          "ipucu_kelimeler": [
+            "giderken ne",
+            "ilerleme",
+            "misafir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Raf yükseklikleri ve el arabaları tek tip; kısa boylu çalışanlar için basamak ya da ayarlanabilir ekipman yok.",
+          "acilma_kosulu": "Tesis ve ortam koşulları sorulursa",
+          "ipucu_kelimeler": [
+            "tesis ve ortam",
+            "basamak",
+            "ayarlanabilir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Servis kapıdan alıp kapıya bırakıyor.",
+          "acilma_kosulu": "Vardiya ve ulaşım sorulursa",
+          "ipucu_kelimeler": [
+            "ulaşım düzeni",
+            "kapıdan"
+          ]
+        }
+      ],
+      "kok_neden": "Kadın çalışanlar ilerleyemedikleri için ayrılıyor: çoğu paketlemede tutuluyor, toplama ve forklift eğitimine başvuruları 'ağır iş' denerek geri çevriliyor, ekipman tek tip ve kendilerini ekipte misafir gibi hissediyorlar.",
+      "kok_neden_kelimeler": [
+        "ilerleme",
+        "forklift",
+        "geri çevril",
+        "ekipman",
+        "dışlan"
+      ]
+    }
+  ]
+}

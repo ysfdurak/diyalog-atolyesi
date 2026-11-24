@@ -1,0 +1,200 @@
+{
+  "id": "gorsel-panolar",
+  "baslik": "Görsel yönetim panoları neden güncellenmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 6,
+  "acilis": "Her ekibin alanına bir yıl önce görsel yönetim panoları kuruldu: günlük hedef, sorunlar, aksiyonlar. Gözlemde panoların çoğunda bilgiler üç-dört hafta eski. Panoların sahibi olan ekip liderlerinden biriyle konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın ekip liderlerini uyarmak değil, panoların neden güncellenmediğini anlamak.",
+  "karakter": {
+    "ad": "Duygu",
+    "rol": "Ekip lideri",
+    "tavir": "İşine özenli ama yorgun; \"panoyu güncellemek ayrı bir iş\" diyor. Gerçekten merak eden birine anlatıyor.",
+    "ilk_soz": "Panoyu güncellemek istiyorum aslında, ama her gün ayrı bir iş oluyor."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip liderleri tembellik ediyor.",
+    "Panolar gereksiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Panoyu güncellemek her gün ne kadar zaman alıyor, nasıl yapılıyor?",
+    "Panodaki bilgiler sonra kimler tarafından ne için kullanılıyor?",
+    "Panoya yazılan bir soruna sonra ne oluyor?",
+    "Panolar kurulurken ekip liderleriyle neler konuşuldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Çift iş: aynı veri hem sisteme hem panoya",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Panodaki rakamlar her gün sistemden okunup elle yazılıyor; bu yarım saat sürüyor ve aynı rakamlar zaten sistemde var.",
+          "acilma_kosulu": "Panoyu güncellemenin yükü sorulursa",
+          "ipucu_kelimeler": [
+            "panoyu güncellemek",
+            "elle yazıl",
+            "zaten sistemde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Panodaki rakamları kimse kullanmıyor; yöneticiler aynı veriyi kendi ekranlarından görüyor.",
+          "acilma_kosulu": "Panonun kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "panodaki bilgiler",
+            "kendi ekranlar",
+            "kimse kullanmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Pano tasarımı merkezden geldi; ekip liderlerine hangi bilginin işlerine yarayacağı sorulmadı.",
+          "acilma_kosulu": "Panoların kurulma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "panolar kurulurken",
+            "merkezden",
+            "sorulmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Panodaki sorunlar haftalık toplantıda konuşuluyor.",
+          "acilma_kosulu": "Panodaki sorunların takibi sorulursa",
+          "ipucu_kelimeler": [
+            "panoya yazılan",
+            "haftalık toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Panolar güncellenmiyor çünkü çift iş ve kimse kullanmıyor: rakamlar her gün sistemden elle kopyalanıyor, yöneticiler aynı veriyi kendi ekranlarından görüyor ve pano tasarımı ekip liderlerine sorulmadan merkezden geldi.",
+      "kok_neden_kelimeler": [
+        "çift iş",
+        "elle",
+        "kullanmıyor",
+        "sorulmadı",
+        "sistem"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sorunlar çözülmüyor: pano bir şikâyet listesine döndü",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Panoya yazılan sorunların çoğu aylardır çözülmeden duruyor; sorunların çoğu ekip liderinin yetkisi dışında.",
+          "acilma_kosulu": "Panodaki sorunların takibi sorulursa",
+          "ipucu_kelimeler": [
+            "panoya yazılan",
+            "aylardır",
+            "yetkisi dışında"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Panoya yöneticiler hiç gelmiyor; panodaki sorunları kimse üst kademeye taşımıyor.",
+          "acilma_kosulu": "Panonun kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "panodaki bilgiler",
+            "yöneticiler hiç gelmiyor",
+            "üst kademe"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Güncellemek kısa sürüyor; ama aynı sorunları her hafta yeniden yazmak ekibe anlamsız geliyor.",
+          "acilma_kosulu": "Panoyu güncellemenin yükü sorulursa",
+          "ipucu_kelimeler": [
+            "panoyu güncellemek",
+            "anlamsız",
+            "yeniden yazmak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Panolar ekip liderleriyle birlikte tasarlandı.",
+          "acilma_kosulu": "Panoların kurulma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "panolar kurulurken",
+            "birlikte tasarla"
+          ]
+        }
+      ],
+      "kok_neden": "Panolar güncellenmiyor çünkü panoya yazılan sorunlar çözülmüyor: sorunların çoğu ekip liderinin yetkisi dışında, yöneticiler panoya hiç gelmiyor ve aynı sorunları her hafta yeniden yazmak anlamsız hâle geldi.",
+      "kok_neden_kelimeler": [
+        "çözülmüyor",
+        "yetki",
+        "yönetici",
+        "üst kademe",
+        "anlamsız"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sahip ve rutin yok: başta destek vardı, sonra kayboldu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Panolar kurulurken ilk iki ay iyileştirme ekibi her sabah panolarda ekiplerle kısa toplantı yaptı; sonra bu toplantılar bırakıldı.",
+          "acilma_kosulu": "Panoların kurulma süreci sorulursa",
+          "ipucu_kelimeler": [
+            "panolar kurulurken",
+            "her sabah",
+            "bırakıldı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Güncellemek on dakika sürüyor ama günlük bir rutin hâline gelmedi; kimin ne zaman güncelleyeceği tanımlı değil.",
+          "acilma_kosulu": "Panoyu güncellemenin yükü sorulursa",
+          "ipucu_kelimeler": [
+            "panoyu güncellemek",
+            "rutin",
+            "tanımlı değil"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Panoyu kimin kullandığı belirsiz; panolar sabah toplantılarıyla birlikte anlamını yitirdi.",
+          "acilma_kosulu": "Panonun kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "panodaki bilgiler",
+            "anlamını yitir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Panodaki sorunlar genelde hızla çözülüyor.",
+          "acilma_kosulu": "Panodaki sorunların takibi sorulursa",
+          "ipucu_kelimeler": [
+            "panoya yazılan",
+            "hızla çözül"
+          ]
+        }
+      ],
+      "kok_neden": "Panolar güncellenmiyor çünkü rutin kurulmadı: ilk iki ay iyileştirme ekibinin her sabah yaptığı pano toplantıları bırakıldı, güncellemenin kimde ve ne zaman olduğu tanımlanmadı ve pano günlük işin parçası olmadı.",
+      "kok_neden_kelimeler": [
+        "rutin",
+        "sabah toplantı",
+        "bırakıldı",
+        "tanımlan",
+        "sahip"
+      ]
+    }
+  ]
+}
