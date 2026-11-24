@@ -1,0 +1,201 @@
+{
+  "id": "mentorluk-sondu",
+  "baslik": "Mentorluk programı neden söndü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 6,
+  "acilis": "Bir yıl önce yeni başlayanlar için mentorluk programı başlatıldı; deneyimli 15 çalışan mentor oldu. Altı ay sonra eşleşmelerin çoğu fiilen bitti. Programdan ayrılan mentorlardan biriyle konuşuyorsun.",
+  "rolun": "Programı başlatan depo müdürüsün. Amacın mentorları ikna etmek değil, programın neden söndüğünü anlamak.",
+  "karakter": {
+    "ad": "Recep",
+    "rol": "Kıdemli depo çalışanı, eski mentor",
+    "tavir": "Kırgın değil ama hevesi kaçmış; \"olmadı işte\" diyor. Gerçekten dinleyene anlatıyor.",
+    "ilk_soz": "İlk başta hevesliydim, gerçekten. Ama bir yerden sonra olmadı işte."
+  },
+  "yaniltici_ipuclari": [
+    "Yeni gelenler ilgisiz.",
+    "Mentorluk herkese göre değil."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Mentor olarak bir gününüz nasıl geçiyordu?",
+    "Mentorluğa ayırdığınız zaman nasıl planlanıyordu?",
+    "Mentor olmak size neler kazandırdı ya da kaybettirdi?",
+    "Programın başında size neler söylenmişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Zaman ayrılmadı: hedef aynı kaldı, prim gitti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mentorluk için zaman ayrılmadı; kendi toplama hedefi aynı kaldı, yeni gelene vakit ayırdıkça hedefin gerisine düştü.",
+          "acilma_kosulu": "Mentorluk zamanının nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığınız zaman",
+            "hedef",
+            "vakit"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gün içinde yeni geleni yanına alıp anlatmaya çalışıyordu ama kendi siparişleri biriktiği için çoğu zaman \"sonra konuşuruz\" diyordu.",
+          "acilma_kosulu": "Mentor olarak bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününüz",
+            "sonra konuşuruz",
+            "birikti"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mentor olmak ona prim kaybı ve amirinden uyarı getirdi.",
+          "acilma_kosulu": "Mentorluğun ona ne kazandırıp kaybettirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kazandırdı",
+            "prim kaybı",
+            "uyarı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Programın başında kısa bir bilgilendirme yapıldı.",
+          "acilma_kosulu": "Programın başında ne söylendiği sorulursa",
+          "ipucu_kelimeler": [
+            "programın başında",
+            "bilgilendirme"
+          ]
+        }
+      ],
+      "kok_neden": "Program zamansızlıktan söndü: mentorluğa süre ayrılmadı, mentorların kendi hedefleri aynı kaldı ve yeni gelene vakit ayıran mentor hedefin gerisine düşüp prim kaybetti.",
+      "kok_neden_kelimeler": [
+        "zaman",
+        "süre",
+        "hedef",
+        "prim",
+        "vakit"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Hazırlıksız mentorlar: ne öğretecekleri anlatılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Programın başında yalnızca \"yeni gelenlere yardım edin\" denildi; ne öğretecekleri, nasıl öğretecekleri konuşulmadı.",
+          "acilma_kosulu": "Programın başında ne söylendiği sorulursa",
+          "ipucu_kelimeler": [
+            "programın başında",
+            "yardım edin",
+            "nasıl öğret"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Her gün ne anlatacağını kendisi uyduruyordu; yeni gelen aynı soruları farklı mentorlardan farklı cevaplarla öğreniyordu.",
+          "acilma_kosulu": "Mentor olarak bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününüz",
+            "uydur",
+            "farklı cevap"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mentor olmak ona bir şey kazandırmadı; kendini yetersiz hissetti ve kimseye danışamadı.",
+          "acilma_kosulu": "Mentorluğun ona ne kazandırıp kaybettirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kazandırdı",
+            "yetersiz",
+            "danış"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mentorluk için haftada iki saat ayrılmıştı.",
+          "acilma_kosulu": "Mentorluk zamanının nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığınız zaman",
+            "iki saat"
+          ]
+        }
+      ],
+      "kok_neden": "Program hazırlıksızlıktan söndü: mentorlara ne öğretecekleri ve nasıl öğretecekleri anlatılmadı, her biri kendi yöntemini uydurdu ve yetersiz hisseden mentorların danışacağı kimse olmadı.",
+      "kok_neden_kelimeler": [
+        "hazırlık",
+        "nasıl öğret",
+        "yetersiz",
+        "danış",
+        "uydur"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görünmeyen emek: söz verilenler gerçekleşmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mentor olmak ona hiçbir şey kazandırmadı; yaptığı işi ne amiri ne de müdür sordu, yıl sonu değerlendirmesinde mentorluk hiç geçmedi.",
+          "acilma_kosulu": "Mentorluğun ona ne kazandırıp kaybettirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kazandırdı",
+            "yıl sonu",
+            "sordu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Programın başında mentorluğun değerlendirmede dikkate alınacağı ve bir sertifika verileceği söylenmişti; ikisi de olmadı.",
+          "acilma_kosulu": "Programın başında ne söylendiği sorulursa",
+          "ipucu_kelimeler": [
+            "programın başında",
+            "sertifika",
+            "dikkate alın"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gününün yarım saatini yeni gelenlere ayırıyordu; ilk ay müdürün takip toplantıları vardı, sonra kesildi.",
+          "acilma_kosulu": "Mentor olarak bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününüz",
+            "takip toplantı",
+            "kesildi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mentorluk saatleri vardiya planına yazılıyordu.",
+          "acilma_kosulu": "Mentorluk zamanının nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "ayırdığınız zaman",
+            "vardiya plan"
+          ]
+        }
+      ],
+      "kok_neden": "Program görünmezlikten söndü: başta söz verilen sertifika ve değerlendirmede dikkate alınma gerçekleşmedi, takip toplantıları bir ay sonra kesildi ve mentorların emeğini kimse sormadı.",
+      "kok_neden_kelimeler": [
+        "sertifika",
+        "değerlendirme",
+        "takip",
+        "söz",
+        "görünmez"
+      ]
+    }
+  ]
+}

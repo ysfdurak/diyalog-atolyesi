@@ -14,7 +14,7 @@ Ayrıntı belgeleri: [Nasıl çalışır](NASIL_CALISIR.md) · [Senaryo yazma](S
 | **Kimin için** | Yöneticiliğe hazırlanan ya da ekip yöneten kişiler (portföy projesi, ticari amaç yok) |
 | **Canlı** | https://diyalog.ysfdurak.com (VPS, Docker, ortak Caddy) |
 | **Depo** | https://github.com/ysfdurak/diyalog-atolyesi (herkese açık, PolyForm Shield lisansı) |
-| **Durum** | Yayında. Soru modu: 45 senaryo, hepsi üç kök nedenli, 135 oturum (hedef bir yıl: ~122 senaryo, 365 oturum); ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
+| **Durum** | Yayında. Soru modu: 60 senaryo, hepsi üç kök nedenli, 180 oturum (hedef bir yıl: ~122 senaryo, 365 oturum); ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
 | **Yapay zekâ** | Anthropic API (Haiku 5.5): karakter cevapları ve değerlendirme |
 | **Maliyet** | Oturum başına yarım sentin altı (tahmin); günlük limitler ve kredi bildirimiyle sınırlı |
 
@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | Yeni alanlar: İK ve işe alım (8), Kalite ve iyileştirme (7): 60 senaryo, 180 oturum. |
 | 2026-11-24 | Hedef bir yıllık içerik olarak büyütüldü. Yeni alanlar: Veri ve raporlama (8), Tedarik ve satın alma (7): 45 senaryo, 135 oturum. Senaryo üretici kütüphanesi karakter adlarının tekrarını da engelliyor; testler senaryo sayısını dosyalardan okuyor. |
 | 2026-11-24 | Son 15 senaryo (fazla mesai bütçesi, depo birleştirme, pilot yaygınlaştırma, mal kabul, denetim bulguları, rampa bekleme, ramak kala, eğitim, personel desteği, usta, vardiya gerginliği, elle rapor, kullanılmayan sistem, proje bütçesi, yeşil rapor) ve ana sayfada alan filtresi: 30 senaryo, 90 oturum. Senaryolar denetimli bir üretici betikle yazıldı (her ideal sorunun sahte modelde doğru bilgiyi açtığı yazarken kontrol edildi). |
 | 2026-11-24 | Gerçek sorunlardan beş senaryo (yatırım önerisi, BT talepleri, tekrar eden destek çağrıları, her kararın yöneticiye gelmesi, kalıcı olmayan iyileştirme): 15 senaryo, 45 oturum. |

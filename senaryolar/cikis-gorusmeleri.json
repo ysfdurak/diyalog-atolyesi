@@ -1,0 +1,200 @@
+{
+  "id": "cikis-gorusmeleri",
+  "baslik": "Çıkış görüşmeleri neden gerçek nedeni söylemiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Son bir yılda ayrılan 40 çalışanın çıkış görüşmesi formlarının %80'inde ayrılma nedeni \"daha iyi teklif\" yazıyor. Ama ayrılanların bir kısmı daha düşük ücretli işlere geçti. Çıkış görüşmelerini yapan İK uzmanıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın formları sorgulamak değil, çıkış görüşmelerinin gerçek nedeni neden yakalamadığını anlamak.",
+  "karakter": {
+    "ad": "Cansu",
+    "rol": "İK uzmanı",
+    "tavir": "Düzenli ve biraz savunmada; \"çalışan ne derse onu yazıyorum\" diyor. Süreci merak eden birine açık konuşuyor.",
+    "ilk_soz": "Formları eksiksiz dolduruyoruz. Çalışan ne söylerse onu yazıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Herkes para için gidiyor.",
+    "Ayrılanlar dürüst olmuyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Çıkış görüşmesi ne zaman, nerede ve kimle yapılıyor?",
+    "Formda hangi sorular var, cevaplar nasıl kaydediliyor?",
+    "Görüşme sonuçları sonra nereye gidiyor, kimler görüyor?",
+    "Ayrılan biri görüşmede neden açık konuşmayabilir?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış an, yanlış kişi: son gün, amirin önünde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Görüşme çalışanın son gününde, bordro evrakları imzalanırken ve çoğu zaman amirin de bulunduğu odada yapılıyor.",
+          "acilma_kosulu": "Görüşmenin ne zaman, nerede ve kimle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman, nerede",
+            "son gün",
+            "amir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ayrılan çalışan referansı ve son maaşı amirin elinde olduğu için amirinin yanında açık konuşmuyor.",
+          "acilma_kosulu": "Ayrılanın neden açık konuşmayabileceği sorulursa",
+          "ipucu_kelimeler": [
+            "açık konuşma",
+            "referans",
+            "son maaş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sonuçlar yalnızca İK arşivine giriyor; depo müdürü hiçbir özet görmüyor.",
+          "acilma_kosulu": "Sonuçların nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları sonra",
+            "arşiv",
+            "özet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Formda çoktan seçmeli bir neden listesi var.",
+          "acilma_kosulu": "Formun soruları ve kayıt şekli sorulursa",
+          "ipucu_kelimeler": [
+            "formda hangi",
+            "çoktan seçmeli"
+          ]
+        }
+      ],
+      "kok_neden": "Görüşme gerçek nedeni yakalamıyor çünkü yanlış anda ve yanlış kişinin yanında yapılıyor: son gün, evrak imzalanırken ve amirin önünde; referansı ve son maaşı amirin elinde olan çalışan açık konuşmuyor ve sonuçlar müdüre ulaşmıyor.",
+      "kok_neden_kelimeler": [
+        "son gün",
+        "amir",
+        "referans",
+        "açık konuş",
+        "yanlış an"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Form gerçeği saklıyor: tek seçim, en rahat kutu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Formda tek bir neden seçilebiliyor ve ilk seçenek \"daha iyi teklif\"; açık uçlu soru yok.",
+          "acilma_kosulu": "Formun soruları ve kayıt şekli sorulursa",
+          "ipucu_kelimeler": [
+            "formda hangi",
+            "tek bir neden",
+            "ilk seçenek"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "\"Daha iyi teklif\" demek kimseyi suçlamadığı için ayrılanlar için en rahat cevap.",
+          "acilma_kosulu": "Ayrılanın neden açık konuşmayabileceği sorulursa",
+          "ipucu_kelimeler": [
+            "açık konuşma",
+            "suçlama",
+            "rahat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sonuçlar yıllık bir pasta grafiğe dönüşüyor; grafik her yıl \"ücret sorunu\" diye okunup kapatılıyor.",
+          "acilma_kosulu": "Sonuçların nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları sonra",
+            "pasta grafik",
+            "ücret sorunu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Görüşmeler İK ofisinde yapılıyor.",
+          "acilma_kosulu": "Görüşmenin ne zaman, nerede ve kimle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman, nerede",
+            "ofis"
+          ]
+        }
+      ],
+      "kok_neden": "Form gerçeği saklıyor: tek seçimli formda ilk ve en rahat seçenek 'daha iyi teklif', açık uçlu soru yok ve sonuçlar her yıl 'ücret sorunu' diye okunup kapatılıyor.",
+      "kok_neden_kelimeler": [
+        "form",
+        "tek seçim",
+        "daha iyi teklif",
+        "açık uçlu",
+        "ücret sorunu"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görüşme bile yapılmıyor: form amirden duyulanla doluyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ayrılanların yarısı son gününü beklemeden ayrılıyor; onlarla görüşme yapılmıyor, formu İK uzmanı amirden duyduğuyla dolduruyor.",
+          "acilma_kosulu": "Görüşmenin ne zaman, nerede ve kimle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne zaman, nerede",
+            "amirden duy",
+            "beklemeden"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Formdaki \"daha iyi teklif\" cevaplarının çoğu çalışanın değil, amirin tahmini.",
+          "acilma_kosulu": "Formun soruları ve kayıt şekli sorulursa",
+          "ipucu_kelimeler": [
+            "formda hangi",
+            "tahmin"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sonuçlar amirlerin değerlendirmesine giriyor; yüksek ayrılmayı \"ücret\" diye açıklamak amirin işine geliyor.",
+          "acilma_kosulu": "Sonuçların nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "sonuçları sonra",
+            "amirlerin değerlendirme",
+            "işine geli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ayrılanların bazıları görüşmeye isteksiz geliyor.",
+          "acilma_kosulu": "Ayrılanın neden açık konuşmayabileceği sorulursa",
+          "ipucu_kelimeler": [
+            "açık konuşma",
+            "görüşmeye istek"
+          ]
+        }
+      ],
+      "kok_neden": "Formlar ayrılanların değil amirlerin sesi: ayrılanların yarısıyla hiç görüşülmüyor, form amirden duyulanla dolduruluyor ve ayrılmayı 'ücret' diye açıklamak amirlerin değerlendirmesine iyi geldiği için gerçek neden kayda geçmiyor.",
+      "kok_neden_kelimeler": [
+        "görüşülmüyor",
+        "amir",
+        "form",
+        "ücret",
+        "değerlendirme"
+      ]
+    }
+  ]
+}

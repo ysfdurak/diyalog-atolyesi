@@ -1,0 +1,199 @@
+{
+  "id": "hep-disaridan",
+  "baslik": "Amir pozisyonları neden hep dışarıdan dolduruluyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Son iki yılda açılan yedi vardiya amiri pozisyonunun altısına dışarıdan biri alındı. İçeriden başvuran deneyimli çalışanlar kırgın; ikisi ayrıldı. İşe alım kararlarına katılan bölge İK müdürüyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın içeriden terfiyi dayatmak değil, neden içeriden kimsenin seçilmediğini anlamak.",
+  "karakter": {
+    "ad": "Nevin",
+    "rol": "Bölge İK müdürü",
+    "tavir": "Deneyimli ve net; \"en iyi adayı seçiyoruz\" diyor. Seçim ölçütlerini soran birine açık konuşuyor.",
+    "ilk_soz": "Biz kimin içeriden kimin dışarıdan olduğuna bakmıyoruz, en iyi adayı seçiyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "İçeride yeterince iyi aday yok.",
+    "Dışarıdan gelen taze bakış getirir."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Adaylar hangi ölçütlerle karşılaştırılıyor?",
+    "İçeriden başvuranlar süreçte nerede eleniyor?",
+    "İçeride amirliğe hazırlanan biri nasıl yetişiyor?",
+    "Son pozisyonlarda karar nasıl verildi, kimler söz sahibiydi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kâğıt üzerinde eleniyorlar: diploma ve dış deneyim şartı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ölçütlerin başında üniversite diploması ve başka bir şirkette yöneticilik deneyimi var.",
+          "acilma_kosulu": "Adayların hangi ölçütlerle karşılaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ölçütlerle",
+            "diploma",
+            "yöneticilik deneyimi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İçeriden başvuranların çoğu ön elemede, diploma şartı yüzünden mülakata bile çağrılmıyor.",
+          "acilma_kosulu": "Içeriden başvuranların nerede elendiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriden başvuranlar",
+            "ön eleme",
+            "mülakat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İçeride amirliğe hazırlayan bir program yok; vekâlet ya da gözetimli yöneticilik deneyimi hiç kayda geçmiyor.",
+          "acilma_kosulu": "Içeride amirliğe nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanan",
+            "vekâlet",
+            "program"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kararı bölge İK ve depo müdürü birlikte veriyor.",
+          "acilma_kosulu": "Kararın nasıl ve kimlerle verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "söz sahibi",
+            "birlikte"
+          ]
+        }
+      ],
+      "kok_neden": "İçeridekiler kâğıt üzerinde eleniyor: ölçütler diploma ve başka şirkette yöneticilik deneyimi istiyor, içeriden başvuranlar ön elemede düşüyor ve içerideki vekâlet deneyimi hiçbir yerde kayıtlı değil.",
+      "kok_neden_kelimeler": [
+        "diploma",
+        "ölçüt",
+        "ön eleme",
+        "vekâlet",
+        "kayıt"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Amirler iyi elemanını bırakmıyor: 'henüz hazır değil'",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son pozisyonlarda adayın mevcut amiri de görüş veriyor; amirler en iyi elemanlarını kaybetmemek için \"henüz hazır değil\" diyor.",
+          "acilma_kosulu": "Kararın nasıl ve kimlerle verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "söz sahibi",
+            "mevcut amir",
+            "hazır değil"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İçeriden başvuranlar mülakata kadar geliyor; elenmeleri çoğunlukla mevcut amirlerinin görüşünden sonra oluyor.",
+          "acilma_kosulu": "Içeriden başvuranların nerede elendiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriden başvuranlar",
+            "görüşünden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hazırlık için bir yol yok; çünkü iyi bir eleman yetiştirmek amire kendi ekibinde boşluk demek ve bu boşluk telafi edilmiyor.",
+          "acilma_kosulu": "Içeride amirliğe nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanan",
+            "boşluk",
+            "telafi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ölçütler yetkinlik bazlı ve yazılı.",
+          "acilma_kosulu": "Adayların hangi ölçütlerle karşılaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ölçütlerle",
+            "yazılı"
+          ]
+        }
+      ],
+      "kok_neden": "İçeridekiler mevcut amirlerinin görüşüyle eleniyor: amirler en iyi elemanlarını kaybetmemek için 'hazır değil' diyor, çünkü yetiştirdikleri kişinin bıraktığı boşluk telafi edilmiyor.",
+      "kok_neden_kelimeler": [
+        "amir",
+        "hazır değil",
+        "boşluk",
+        "telafi",
+        "kaybetme"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Süreç dış adaya göre: sunum aşamasında eleniyorlar",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Adaylar yapılandırılmış mülakat ve 20 dakikalık bir sunumla karşılaştırılıyor; sahadaki performans ölçüte girmiyor.",
+          "acilma_kosulu": "Adayların hangi ölçütlerle karşılaştırıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ölçütlerle",
+            "sunum",
+            "sahadaki performans"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İçeriden başvuranlar en çok sunum aşamasında eleniyor; çoğu daha önce hiç sunum yapmamış.",
+          "acilma_kosulu": "Içeriden başvuranların nerede elendiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriden başvuranlar",
+            "sunum aşama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İçeridekilerin sunum, bütçe ya da raporlama gibi konularda deneyim kazanacağı bir fırsat yok.",
+          "acilma_kosulu": "Içeride amirliğe nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanan",
+            "fırsat",
+            "bütçe"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Karar mülakat puanlarının toplamıyla veriliyor.",
+          "acilma_kosulu": "Kararın nasıl ve kimlerle verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "söz sahibi",
+            "puan"
+          ]
+        }
+      ],
+      "kok_neden": "Seçim süreci dış adaya göre kurulmuş: ölçüt sahadaki performans değil sunum ve mülakat, içeridekiler sunum aşamasında eleniyor ve bu becerileri kazanabilecekleri bir fırsat yok.",
+      "kok_neden_kelimeler": [
+        "sunum",
+        "sahadaki performans",
+        "mülakat",
+        "fırsat",
+        "beceri"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "musteri-denetimi",
+  "baslik": "Müşteri denetiminden neden kötü not aldık?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 8,
+  "acilis": "En büyük müşterinin yıllık tedarikçi denetiminde depo 100 üzerinden 61 aldı; geçen yıl 84'tü. İç denetimlerde aynı alanlar yüksek puan almıştı. Denetime eşlik eden kalite müdürüyle konuşuyorsun.",
+  "rolun": "Operasyon direktörüsün. Amacın denetçiye itiraz etmek değil, puanın neden düştüğünü anlamak.",
+  "karakter": {
+    "ad": "Selçuk",
+    "rol": "Kalite müdürü",
+    "tavir": "Kırgın ve savunmada; \"denetçi çok katıydı\" diyor. Ayrıntı soran birine dürüst davranıyor.",
+    "ilk_soz": "Denetçi bu yıl değişti ve çok katıydı. Bence puan haksız."
+  },
+  "yaniltici_ipuclari": [
+    "Yeni denetçi çok katı.",
+    "Müşteri fiyat pazarlığı için puanı düşük tutuyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Puan en çok hangi bölümlerde düştü?",
+    "Müşterinin denetim kriterleri geçen yıldan bu yıla nasıl değişti?",
+    "İç denetimde bu bölümler nasıl puanlanıyor?",
+    "Denetime hazırlık nasıl yapıldı, kimler dahil oldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kriterler değişti, kimse okumadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteri bu yıl izlenebilirlik ve parti takibi maddelerini ekledi; yeni kriter listesi üç ay önce e-postayla geldi.",
+          "acilma_kosulu": "Denetim kriterlerinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterleri",
+            "izlenebilirlik",
+            "parti takibi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hazırlık geçen yılın kontrol listesiyle yapıldı; yeni kriter listesini kimse okumamıştı.",
+          "acilma_kosulu": "Denetime nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlık",
+            "geçen yılın",
+            "okumamış"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Puan en çok izlenebilirlik bölümünde düştü; parti numarası sevkiyatta kaydedilmiyor.",
+          "acilma_kosulu": "Puanın en çok nerede düştüğü sorulursa",
+          "ipucu_kelimeler": [
+            "puan en çok",
+            "parti numarası"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İç denetim kendi kontrol listemizle yapılıyor.",
+          "acilma_kosulu": "Iç denetimin nasıl puanladığı sorulursa",
+          "ipucu_kelimeler": [
+            "iç denetimde",
+            "kendi kontrol"
+          ]
+        }
+      ],
+      "kok_neden": "Puan kriter değişikliğinden düştü: müşteri bu yıl izlenebilirlik ve parti takibi maddelerini ekledi, yeni liste e-postayla geldi ama kimse okumadı ve hazırlık geçen yılın listesiyle yapıldı.",
+      "kok_neden_kelimeler": [
+        "kriter",
+        "izlenebilirlik",
+        "parti",
+        "okumadı",
+        "geçen yıl"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İç denetim kâğıt üzerinde: uygulama sorulmuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İç denetim prosedürlerin yazılı olup olmadığına bakıyor; sahada uygulanıp uygulanmadığını kontrol etmiyor.",
+          "acilma_kosulu": "Iç denetimin nasıl puanladığı sorulursa",
+          "ipucu_kelimeler": [
+            "iç denetimde",
+            "yazılı",
+            "prosedür"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Puan en çok sahada uygulama maddelerinde düştü; denetçi çalışanlara prosedürü sordu, çoğu bilmiyordu.",
+          "acilma_kosulu": "Puanın en çok nerede düştüğü sorulursa",
+          "ipucu_kelimeler": [
+            "puan en çok",
+            "uygulama madde",
+            "çalışanlara sordu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hazırlık belgelerin güncellenmesiyle yapıldı; sahaya ve çalışanlara yönelik bir hazırlık olmadı.",
+          "acilma_kosulu": "Denetime nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlık",
+            "belge",
+            "güncellen"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterinin kriterleri geçen yılla aynı.",
+          "acilma_kosulu": "Denetim kriterlerinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterleri",
+            "geçen yılla aynı"
+          ]
+        }
+      ],
+      "kok_neden": "Puan iç denetimin kâğıt üzerinde kalmasından düştü: iç denetim prosedürlerin yazılı olmasına bakıyor, uygulanıp uygulanmadığına bakmıyor; yeni denetçi sahada çalışanlara sordu ve hazırlık yalnızca belgelerdeydi.",
+      "kok_neden_kelimeler": [
+        "kâğıt",
+        "yazılı",
+        "uygula",
+        "saha",
+        "belge"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Geçen yılın aksiyonları yarım kaldı: tekrar eden bulgu iki kat",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Puan en çok tekrar eden bulgularda düştü; müşteri geçen yıl kapatılmasını istediği maddelerde ikinci kez puan kırdı.",
+          "acilma_kosulu": "Puanın en çok nerede düştüğü sorulursa",
+          "ipucu_kelimeler": [
+            "puan en çok",
+            "tekrar eden",
+            "ikinci kez"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın düzeltici faaliyet planı hazırlıkta hiç gözden geçirilmedi; maddelerin yarısı sorumlusu ayrıldığı için yarım kaldı.",
+          "acilma_kosulu": "Denetime nasıl hazırlanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlık",
+            "düzeltici",
+            "sorumlusu ayrıl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri bu yıl tekrar eden bulguya iki kat puan kırma kuralı getirdi.",
+          "acilma_kosulu": "Denetim kriterlerinin nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterleri",
+            "iki kat",
+            "kural"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İç denetim yılda iki kez yapılıyor.",
+          "acilma_kosulu": "Iç denetimin nasıl puanladığı sorulursa",
+          "ipucu_kelimeler": [
+            "iç denetimde",
+            "yılda iki"
+          ]
+        }
+      ],
+      "kok_neden": "Puan geçen yılın yarım kalan aksiyonlarından düştü: düzeltici faaliyetlerin yarısı sorumlusu ayrılınca kaldı, hazırlıkta hiç gözden geçirilmedi ve müşteri tekrar eden bulguya iki kat puan kırdı.",
+      "kok_neden_kelimeler": [
+        "düzeltici",
+        "tekrar eden",
+        "sorumlu",
+        "yarım",
+        "iki kat"
+      ]
+    }
+  ]
+}
