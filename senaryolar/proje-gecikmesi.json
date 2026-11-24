@@ -1,0 +1,216 @@
+{
+  "id": "proje-gecikmesi",
+  "baslik": "Proje neden üçüncü kez erteleniyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Depodaki yeni el terminali ve yazılım geçişi projesi iki kez ertelendi; şimdi üçüncü erteleme konuşuluyor. Projeyi yürüten uzmanla konuşuyorsun.",
+  "rolun": "Projenin sponsoru olan operasyon yöneticisisin. Amacın yeni bir tarih almak değil, tarihlerin neden tutmadığını anlamak.",
+  "karakter": {
+    "ad": "Ece",
+    "rol": "Proje uzmanı",
+    "tavir": "Yorgun ve temkinli; her ertelemede hesap verdiği için suçlanmayı bekliyor. Projenin nasıl işlediğini merak eden birine açık konuşuyor.",
+    "ilk_soz": "Yeni tarihi soracaksınız, biliyorum. Açık konuşayım, bu sefer de kesin bir şey söylemek zor."
+  },
+  "yaniltici_ipuclari": [
+    "Bu tür projeler hep uzar, sektörde normal.",
+    "Ekip biraz daha hızlı çalışsa yetişir."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Planlanan tarihle bugün arasında ne değişti?",
+    "Şu an işi en çok ne bekletiyor?",
+    "Projede kimler var ve zamanlarını nasıl paylaşıyorlar?",
+    "Bir karar ya da değişiklik talebi projede nasıl ilerliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kapsam kontrolü yok: istekler kayıt ve onay dışından geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "kapsam-buyudu",
+          "onem": "kritik",
+          "bilgi": "Başlangıçta 12 rapor ve 3 süreç vardı; bugün 31 rapor ve 7 süreç var. Yeni istekler e-postayla ya da koridorda geliyor, hiçbiri kayda geçmiyor.",
+          "acilma_kosulu": "Planlanan tarihten bu yana ne değiştiği, kapsam ya da gelen istekler sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "kapsam",
+            "istek",
+            "ne oldu",
+            "başlangıç"
+          ]
+        },
+        {
+          "id": "onay-yok",
+          "onem": "kritik",
+          "bilgi": "Değişiklik talebi için bir onay süreci yok; gelen her istek \"kısa sürer\" denerek plana ekleniyor ama takvim güncellenmiyor.",
+          "acilma_kosulu": "Bir karar ya da değişiklik talebinin projede nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "değişiklik talebi",
+            "nasıl ilerl",
+            "onay"
+          ]
+        },
+        {
+          "id": "test-acilyor",
+          "onem": "kritik",
+          "bilgi": "Her yeni istek test planını baştan açtırıyor; testler iki aydır bitirilemedi.",
+          "acilma_kosulu": "İşi en çok neyin beklettiği ya da testlerin durumu sorulursa",
+          "ipucu_kelimeler": [
+            "bekletiyor",
+            "en çok ne",
+            "test",
+            "takıl"
+          ]
+        },
+        {
+          "id": "talep-edenler",
+          "onem": "destek",
+          "bilgi": "Talep edenlerin çoğu sponsorun kendi müdürleri.",
+          "acilma_kosulu": "İstekleri kimlerin getirdiği ya da projede kimlerin olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kimler",
+            "kim",
+            "talep eden"
+          ]
+        }
+      ],
+      "kok_neden": "Tarihler kapsam kontrolü olmadığı için tutmuyor: istekler kayıt ve onay dışından geliyor, her biri testleri baştan açtırıyor ama takvim hiç güncellenmiyor.",
+      "kok_neden_kelimeler": [
+        "kapsam",
+        "onay",
+        "istek",
+        "takvim",
+        "test"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Tek anahtar kullanıcıya bağımlılık: operasyondan çekilemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "anahtar-kullanici",
+          "onem": "kritik",
+          "bilgi": "Depo süreçlerini bilen tek anahtar kullanıcı vardiya amiri Hakan; operasyondan çekilemediği için projeye haftada yalnızca birkaç saat verebiliyor.",
+          "acilma_kosulu": "Projede kimlerin olduğu ya da zamanlarını nasıl paylaştıkları sorulursa",
+          "ipucu_kelimeler": [
+            "kimler",
+            "zaman",
+            "paylaş",
+            "anahtar"
+          ]
+        },
+        {
+          "id": "cevapsiz-sorular",
+          "onem": "kritik",
+          "bilgi": "Süreçle ilgili 40'tan fazla soru Hakan'ın cevabını bekliyor; cevapsız sorular yüzünden geliştirme duruyor.",
+          "acilma_kosulu": "İşi en çok neyin beklettiği ya da nerede takılındığı sorulursa",
+          "ipucu_kelimeler": [
+            "bekletiyor",
+            "en çok ne",
+            "bekle",
+            "takıl"
+          ]
+        },
+        {
+          "id": "planda-yok",
+          "onem": "kritik",
+          "bilgi": "Proje planında Hakan'ın zamanı hiç ayrılmadı; bu süre için operasyon hedefleri de düşürülmedi.",
+          "acilma_kosulu": "Planlanan tarihten bu yana ne değiştiği ya da planın nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "plan",
+            "başlangıç",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "izinde-durdu",
+          "onem": "destek",
+          "bilgi": "Hakan izne çıktığı iki hafta boyunca proje tamamen durdu.",
+          "acilma_kosulu": "Hakan olmadığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "izin",
+            "yokken",
+            "olmadığında"
+          ]
+        }
+      ],
+      "kok_neden": "Proje tek bir anahtar kullanıcıya bağlı: süreçleri bilen tek kişi operasyondan çekilemiyor, planda onun zamanı ayrılmadı ve cevap bekleyen sorular geliştirmeyi durduruyor.",
+      "kok_neden_kelimeler": [
+        "anahtar kullanıcı",
+        "tek kişi",
+        "zaman",
+        "plan",
+        "operasyon"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Dış tedarikçi: sözleşmede tarih ve yaptırım yok, takip eden yok",
+      "gizli_bilgiler": [
+        {
+          "id": "entegrasyon",
+          "onem": "kritik",
+          "bilgi": "Yeni yazılımın mevcut sistemle entegrasyonu dış bir tedarikçide; tedarikçinin kendi takviminde bu iş üç kez kaydırıldı.",
+          "acilma_kosulu": "İşi en çok neyin beklettiği ya da dışarıya bağlı işler sorulursa",
+          "ipucu_kelimeler": [
+            "bekletiyor",
+            "en çok ne",
+            "bekle",
+            "dış",
+            "tedarik",
+            "takıl"
+          ]
+        },
+        {
+          "id": "sozlesme",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi sözleşmesinde teslim tarihi ve gecikme yaptırımı yok; yalnızca \"en kısa sürede\" yazıyor.",
+          "acilma_kosulu": "Planlanan tarihlerin neye dayandığı, planlanan tarihin neden tutmadığı ya da tedarikçiyle anlaşma sorulursa",
+          "ipucu_kelimeler": [
+            "planlanan",
+            "tarih",
+            "sözleşme",
+            "anlaşma"
+          ]
+        },
+        {
+          "id": "takip-yok",
+          "onem": "kritik",
+          "bilgi": "Tedarikçiyle düzenli bir toplantı yok; iletişim tek bir e-posta zinciri üzerinden yürüyor ve sorumlusu belli değil.",
+          "acilma_kosulu": "Projede kimlerin olduğu, kararların ya da tedarikçiyle iletişimin nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "kimler",
+            "nasıl ilerl",
+            "iletişim",
+            "takip"
+          ]
+        },
+        {
+          "id": "ic-isler-bitti",
+          "onem": "destek",
+          "bilgi": "Proje ekibi tedarikçiye bağlı olmayan işleri bitirmiş durumda.",
+          "acilma_kosulu": "Ekibin kendi işlerinin durumu sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar",
+            "bitti",
+            "hazır"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme proje ekibinden değil dış tedarikçiden: entegrasyon tedarikçinin takviminde kayıyor, sözleşmede tarih ve yaptırım yok ve tedarikçiyi düzenli takip eden kimse yok.",
+      "kok_neden_kelimeler": [
+        "tedarikçi",
+        "entegrasyon",
+        "sözleşme",
+        "takip",
+        "yaptırım"
+      ]
+    }
+  ]
+}

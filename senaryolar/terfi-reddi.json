@@ -1,0 +1,217 @@
+{
+  "id": "terfi-reddi",
+  "baslik": "Selin terfiyi neden reddetti?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 6,
+  "acilis": "Ekibinin en iyi toplayıcısı Selin'e vardiya sorumluluğu teklif ettin. Hiç düşünmeden \"teşekkürler, istemiyorum\" dedi. Bu rol için başka güçlü bir aday yok. Birebir görüşmedesiniz.",
+  "rolun": "Selin'in yöneticisisin. Amacın onu ikna etmek değil, neden istemediğini anlamak.",
+  "karakter": {
+    "ad": "Selin",
+    "rol": "Kıdemli toplayıcı",
+    "tavir": "Kibar ve kararlı; kendini açıklamak zorunda hissetmek istemiyor. İkna çabası görünce kapanır, gerçekten merak eden birine açılır.",
+    "ilk_soz": "Teklifiniz için sağ olun, gerçekten. Ama kararım belli."
+  },
+  "yaniltici_ipuclari": [
+    "Sorumluluk almak bana göre değil sanırım.",
+    "Şu an böyle iyiyim."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bu rol senin günlük hayatında ne değiştirirdi?",
+    "Bu kararı verirken seni en çok ne düşündürdü?",
+    "Daha önce bu rolü üstlenenlerde neler gördün?",
+    "Bu teklif nasıl olsa düşünebilirdin?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Rol değil vardiya düzeni: gece vardiyası ve çocuk bakımı",
+      "gizli_bilgiler": [
+        {
+          "id": "gece-vardiyasi",
+          "onem": "kritik",
+          "bilgi": "Vardiya sorumluları dönüşümlü olarak gece vardiyasına giriyor; Selin şu an sabit gündüz çalışıyor.",
+          "acilma_kosulu": "Rolün günlük hayatında ya da çalışma düzeninde neyi değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "günlük hayat",
+            "değiştir",
+            "vardiya",
+            "saat",
+            "düzen"
+          ]
+        },
+        {
+          "id": "cocuk-bakimi",
+          "onem": "kritik",
+          "bilgi": "Okul çağında çocuğu var ve akşamları bakımını kendisi üstleniyor; gece vardiyası bunu imkânsız kılıyor.",
+          "acilma_kosulu": "Kararı verirken onu en çok neyin düşündürdüğü ya da kişisel durumu sorulursa",
+          "ipucu_kelimeler": [
+            "düşündür",
+            "en çok ne",
+            "aile",
+            "kişisel"
+          ]
+        },
+        {
+          "id": "sabit-gunduz",
+          "onem": "kritik",
+          "bilgi": "Sabit gündüz vardiyası korunursa rolü seve seve alır.",
+          "acilma_kosulu": "Teklifin nasıl olsa düşünebileceği ya da hangi koşulla kabul edeceği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl olsa",
+            "koşul",
+            "şart",
+            "düşünebilir"
+          ]
+        },
+        {
+          "id": "hic-olmadi",
+          "onem": "destek",
+          "bilgi": "Ekipte rolü sabit gündüz vardiyasında yürüten bir sorumlu hiç olmadı.",
+          "acilma_kosulu": "Daha önce rolü üstlenenler sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "üstlenen",
+            "gördün"
+          ]
+        }
+      ],
+      "kok_neden": "Selin rolü değil vardiya düzenini reddediyor: sorumlular dönüşümlü geceye giriyor ve akşamları çocuğuna kendisi bakıyor. Sabit gündüz vardiyasıyla rolü alır.",
+      "kok_neden_kelimeler": [
+        "vardiya",
+        "gece",
+        "çocuk",
+        "gündüz",
+        "sabit"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Terfi geliri düşürüyor: fazla mesai ve prim kayboluyor",
+      "gizli_bilgiler": [
+        {
+          "id": "mesai-primi",
+          "onem": "kritik",
+          "bilgi": "Toplayıcı olarak düzenli fazla mesai ve performans primi alıyor; vardiya sorumlusunun maaşı sabit ve fazla mesai ödenmiyor.",
+          "acilma_kosulu": "Rolün günlük hayatında ya da gelirinde neyi değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "günlük hayat",
+            "değiştir",
+            "maaş",
+            "ücret",
+            "gelir"
+          ]
+        },
+        {
+          "id": "net-kayip",
+          "onem": "kritik",
+          "bilgi": "Hesapladığında terfiyle eline geçen aylık para düşüyor; bunu söylemeye çekiniyor çünkü \"para düşkünü\" görünmek istemiyor.",
+          "acilma_kosulu": "Kararı verirken onu en çok neyin düşündürdüğü ya da neden açıkça söylemediği sorulursa",
+          "ipucu_kelimeler": [
+            "düşündür",
+            "en çok ne",
+            "hesap",
+            "çekin"
+          ]
+        },
+        {
+          "id": "geri-donmek-istedi",
+          "onem": "kritik",
+          "bilgi": "Bir önceki sorumlu aynı nedenle altı ay sonra toplayıcılığa geri dönmek istemişti.",
+          "acilma_kosulu": "Daha önce rolü üstlenenlerde ne gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "üstlenen",
+            "gördün",
+            "önceki"
+          ]
+        },
+        {
+          "id": "fark-kapanirsa",
+          "onem": "destek",
+          "bilgi": "Ücret farkı kapanırsa rolü ister.",
+          "acilma_kosulu": "Teklifin nasıl olsa düşünebileceği ya da hangi koşulla kabul edeceği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl olsa",
+            "koşul",
+            "şart"
+          ]
+        }
+      ],
+      "kok_neden": "Terfi Selin'in gelirini düşürüyor: toplayıcıyken aldığı fazla mesai ve performans primi sorumlulukta yok ve maaş farkı bunu karşılamıyor. Önceki sorumlu da aynı nedenle geri dönmek istemişti.",
+      "kok_neden_kelimeler": [
+        "fazla mesai",
+        "prim",
+        "gelir",
+        "maaş",
+        "ücret"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Arkadaşlarını yönetmek ve yalnız kalmak: önceki sorumlu dışlandı",
+      "gizli_bilgiler": [
+        {
+          "id": "arkadaslari",
+          "onem": "kritik",
+          "bilgi": "Yöneteceği ekip yıllardır birlikte çalıştığı yakın arkadaşları; onlara iş dağıtmak ve uyarmak zorunda kalmaktan çekiniyor.",
+          "acilma_kosulu": "Rolün günlük hayatında ya da ekiple ilişkisinde neyi değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "günlük hayat",
+            "değiştir",
+            "ekip",
+            "arkadaş",
+            "ilişki"
+          ]
+        },
+        {
+          "id": "dislandi",
+          "onem": "kritik",
+          "bilgi": "Bir önceki sorumlu eski arkadaşları tarafından dışlandı ve sonunda işten ayrıldı; Selin bunu yakından gördü.",
+          "acilma_kosulu": "Daha önce rolü üstlenenlerde ne gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "daha önce",
+            "üstlenen",
+            "gördün",
+            "önceki"
+          ]
+        },
+        {
+          "id": "destek-yok",
+          "onem": "kritik",
+          "bilgi": "Yeni sorumlulara ne eğitim ne de zor durumlarda arkalarında duracak bir destek veriliyor; tek başına kalacağını düşünüyor.",
+          "acilma_kosulu": "Kararı verirken onu en çok neyin düşündürdüğü, eğitim ya da destek sorulursa",
+          "ipucu_kelimeler": [
+            "düşündür",
+            "en çok ne",
+            "destek",
+            "eğitim",
+            "yalnız"
+          ]
+        },
+        {
+          "id": "baska-ekip",
+          "onem": "destek",
+          "bilgi": "Başka bir ekipte ya da eğitim ve bir yol göstericiyle başlarsa düşünebilir.",
+          "acilma_kosulu": "Teklifin nasıl olsa düşünebileceği ya da hangi koşulla kabul edeceği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl olsa",
+            "koşul",
+            "şart"
+          ]
+        }
+      ],
+      "kok_neden": "Selin arkadaşlarını yönetmekten ve yalnız kalmaktan çekiniyor: önceki sorumlunun eski ekip arkadaşlarınca dışlandığını gördü ve yeni sorumlulara eğitim ya da destek verilmiyor.",
+      "kok_neden_kelimeler": [
+        "arkadaş",
+        "dışlan",
+        "destek",
+        "eğitim",
+        "yalnız"
+      ]
+    }
+  ]
+}

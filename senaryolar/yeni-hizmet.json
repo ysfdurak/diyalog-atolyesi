@@ -1,0 +1,221 @@
+{
+  "id": "yeni-hizmet",
+  "baslik": "Yeni hizmet paketi neden satılmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Altı ay önce mevcut müşterilere katma değerli bir hizmet paketi (etiketleme, set hazırlama, iade yönetimi) sunmaya başladınız. Hedef 10 müşteriydi; yalnızca 1 müşteri aldı. Satış ekibinin en deneyimli temsilcisiyle konuşuyorsun.",
+  "rolun": "İş geliştirme yöneticisisin ve paketi sen tasarladın. Amacın paketi savunmak değil, neden satılmadığını anlamak.",
+  "karakter": {
+    "ad": "Burak",
+    "rol": "Kıdemli müşteri temsilcisi",
+    "tavir": "Samimi ve işini bilen biri. \"Satış ekibi çabalamıyor\" imasına alınır. Müşterinin gözünden soran birine sahada olanları anlatır.",
+    "ilk_soz": "Paket güzel, söyleyeyim. Ama sahada işler göründüğü gibi değil."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler yeni şeye hep temkinli yaklaşır.",
+    "Piyasa durgun, kimse ek harcama yapmak istemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Müşteriler paketi duyduğunda ilk ne diyor?",
+    "Müşteri tarafında bu karar nasıl veriliyor, kimler dahil oluyor?",
+    "Bir temsilci için bu paketi satmak günlük işine nasıl yansıyor?",
+    "Tek alan müşteride diğerlerinden farklı olan ne?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Satış sistemi: prim paketi ödüllendirmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "prim",
+          "onem": "kritik",
+          "bilgi": "Temsilcilerin primi yalnızca depolama hacmine bağlı; ek hizmet satışı prime yansımıyor.",
+          "acilma_kosulu": "Temsilcilerin nasıl ödüllendirildiği ya da paketi satmanın temsilcinin işine nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "prim",
+            "temsilci",
+            "yansı",
+            "hedef",
+            "kazan"
+          ]
+        },
+        {
+          "id": "iki-gun",
+          "onem": "kritik",
+          "bilgi": "Paketi satmak için müşteride operasyon ekibiyle ayrı toplantı ve fiyat çalışması gerekiyor; bu bir temsilciye en az iki gün demek.",
+          "acilma_kosulu": "Paketi satmanın ne kadar zaman ve emek gerektirdiği ya da satış sürecinin nasıl işlediği sorulursa",
+          "ipucu_kelimeler": [
+            "zaman",
+            "süre",
+            "emek",
+            "nasıl satıl",
+            "toplantı"
+          ]
+        },
+        {
+          "id": "operasyondan-geldi",
+          "onem": "kritik",
+          "bilgi": "Alan tek müşteri temsilcinin değil, operasyon müdürünün tanıdığıydı; satış doğrudan operasyon üzerinden yürüdü.",
+          "acilma_kosulu": "Paketi alan müşterinin farkı ya da o satışın nasıl gerçekleştiği sorulursa",
+          "ipucu_kelimeler": [
+            "tek alan",
+            "farklı olan",
+            "nasıl ald",
+            "o müşteri"
+          ]
+        },
+        {
+          "id": "ilgi-var",
+          "onem": "destek",
+          "bilgi": "Müşteriler paketi ilk duyduklarında ilgili görünüyor.",
+          "acilma_kosulu": "Müşterilerin pakete ilk tepkisi sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne",
+            "duyduğunda",
+            "tepki"
+          ]
+        }
+      ],
+      "kok_neden": "Sorun ürün değil satış sistemi: prim yalnızca depolama hacmine bağlı ve paket satmak temsilciye günler kaybettiriyor, bu yüzden temsilciler paketi önermiyor; tek satış da operasyon üzerinden geldi.",
+      "kok_neden_kelimeler": [
+        "prim",
+        "temsilci",
+        "satış sistemi",
+        "hacim",
+        "önermiyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yanlış kişiye satılıyor: bütçe pazarlamada, teklif lojistiğe gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "butce-pazarlamada",
+          "onem": "kritik",
+          "bilgi": "Müşterilerde etiketleme ve set hazırlama pazarlama bütçesinden ödeniyor; teklif ise lojistik müdürüne gidiyor ve onun bütçesinde bu kalem yok.",
+          "acilma_kosulu": "Müşteri tarafında kararın nasıl verildiği, kimlerin dahil olduğu ya da hangi bütçeden ödendiği sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "kimler",
+            "bütçe",
+            "dahil",
+            "nasıl veril"
+          ]
+        },
+        {
+          "id": "pazarlamaya-anlatin",
+          "onem": "kritik",
+          "bilgi": "Lojistik müdürleri paketi beğenip \"bunu pazarlamaya da anlatın\" diyor; sonra konu orada kalıyor.",
+          "acilma_kosulu": "Müşterilerin pakete ilk tepkisi ya da görüşmelerin nasıl sonuçlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne",
+            "duyduğunda",
+            "tepki",
+            "ne diyor",
+            "sonuçlan"
+          ]
+        },
+        {
+          "id": "tek-masa",
+          "onem": "kritik",
+          "bilgi": "Tek alan müşteride lojistik ve pazarlama aynı direktöre bağlı; karar tek masada verildi.",
+          "acilma_kosulu": "Paketi alan müşterinin farkı ya da o satışın nasıl gerçekleştiği sorulursa",
+          "ipucu_kelimeler": [
+            "tek alan",
+            "farklı olan",
+            "nasıl ald",
+            "o müşteri"
+          ]
+        },
+        {
+          "id": "maliyet-tablosu",
+          "onem": "destek",
+          "bilgi": "Teklif dosyası yalnızca maliyet tablosundan oluşuyor; pazarlamaya hitap eden bir şey yok.",
+          "acilma_kosulu": "Teklifin içeriği ya da satış materyalleri sorulursa",
+          "ipucu_kelimeler": [
+            "teklif",
+            "dosya",
+            "sunum",
+            "materyal"
+          ]
+        }
+      ],
+      "kok_neden": "Paket yanlış kişiye satılıyor: hizmetin bütçesi müşterinin pazarlama tarafında, teklif ise lojistik müdürüne gidiyor; karar verici masada olmadığı için konu askıda kalıyor.",
+      "kok_neden_kelimeler": [
+        "bütçe",
+        "pazarlama",
+        "karar verici",
+        "lojistik",
+        "yanlış kişi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görünmeyen maliyet: müşteri kendi iç maliyetiyle yanlış kıyaslıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "kendi-yapiyor",
+          "onem": "kritik",
+          "bilgi": "Müşterilerin çoğu bu işleri kendi deposunda düşük ücretli sezonluk personelle yapıyor; ilk bakışta paket onlara pahalı görünüyor.",
+          "acilma_kosulu": "Müşterilerin pakete ilk tepkisi ya da bu işleri şu an nasıl yaptıkları sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne",
+            "duyduğunda",
+            "ne diyor",
+            "şu an nasıl",
+            "kendi"
+          ]
+        },
+        {
+          "id": "gizli-maliyet",
+          "onem": "kritik",
+          "bilgi": "Müşteriler kendi yaptıklarında hata ve iade maliyetini hesaba katmıyor; temsilcilerin elinde bu kıyası gösterecek bir hesap yok.",
+          "acilma_kosulu": "Müşteri tarafında kararın nasıl verildiği, neyle kıyaslandığı ya da maliyet hesabı sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "nasıl veril",
+            "hesap",
+            "maliyet",
+            "kıyas"
+          ]
+        },
+        {
+          "id": "zincir-kaybi",
+          "onem": "kritik",
+          "bilgi": "Tek alan müşteri, bir sezon hatalı set yüzünden büyük bir zincir müşterisini kaybetmişti.",
+          "acilma_kosulu": "Paketi alan müşterinin farkı ya da o satışın nasıl gerçekleştiği sorulursa",
+          "ipucu_kelimeler": [
+            "tek alan",
+            "farklı olan",
+            "nasıl ald",
+            "o müşteri"
+          ]
+        },
+        {
+          "id": "fiyati-savunamiyor",
+          "onem": "destek",
+          "bilgi": "Temsilciler paketin fiyatını savunmakta zorlanıyor.",
+          "acilma_kosulu": "Paketi satarken temsilcilerin nerede zorlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "temsilci",
+            "zorlan",
+            "günlük iş"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteri paketi kendi iç maliyetiyle kıyaslıyor ve hata, iade gibi gizli maliyetleri görmüyor; satış ekibinin elinde bu kıyası gösterecek bir hesap olmadığı için paket pahalı görünüyor.",
+      "kok_neden_kelimeler": [
+        "kıyas",
+        "gizli maliyet",
+        "hata",
+        "iade",
+        "hesap",
+        "pahalı"
+      ]
+    }
+  ]
+}
