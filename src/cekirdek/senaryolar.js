@@ -128,9 +128,21 @@ export function herkeseAcik(s) {
   };
 }
 
-/** Günün senaryosu: tarihe göre sırayla döner, herkes aynı gün aynı senaryoyu görür. */
+/**
+ * Günün senaryosu: herkes aynı gün aynı senaryoyu görür.
+ * Sektörler gün gün sırayla döner (depo, e-ticaret, pazarlama…), böylece senaryo sayısı
+ * çok olan sektör günün senaryosunu tekeline almaz. Sektör içinde senaryolar sırayla ilerler.
+ */
 export function gununSenaryosu(senaryolar, gun) {
-  const liste = [...senaryolar.values()];
+  const gruplar = new Map();
+  for (const s of senaryolar.values()) {
+    const sektor = s.sektor || VARSAYILAN_SEKTOR;
+    if (!gruplar.has(sektor)) gruplar.set(sektor, []);
+    gruplar.get(sektor).push(s);
+  }
+  const sektorler = [...gruplar.keys()].sort((a, b) => (a === VARSAYILAN_SEKTOR ? -1 : b === VARSAYILAN_SEKTOR ? 1 : a.localeCompare(b, 'tr')));
   const gunNo = Math.floor(Date.parse(gun + 'T00:00:00Z') / 86400000);
-  return liste[((gunNo % liste.length) + liste.length) % liste.length];
+  const mod = (n, m) => ((n % m) + m) % m;
+  const liste = gruplar.get(sektorler[mod(gunNo, sektorler.length)]);
+  return liste[mod(Math.floor(gunNo / sektorler.length), liste.length)];
 }
