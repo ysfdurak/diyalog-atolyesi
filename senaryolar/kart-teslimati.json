@@ -1,0 +1,202 @@
+{
+  "id": "kart-teslimati",
+  "baslik": "Banka kartları müşteriye neden geç ulaşıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sektor": "Bankacılık",
+  "sure_dk": 7,
+  "acilis": "Yeni ya da yenilenen kartların müşteriye ulaşması ortalama 14 gün sürüyor; hedef 5 gün. Kart ulaşmadan aranan çağrı merkezi aramaları ve iptal edilen başvurular artıyor. Kart üretim ve dağıtım tedarikçileriyle ilişkiyi yöneten uzmanla konuşuyorsun.",
+  "rolun": "Kart operasyonlarından sorumlu yöneticisin. Amacın tedarikçiyi değiştirmek değil, kartların neden geç ulaştığını anlamak.",
+  "karakter": {
+    "ad": "Efe",
+    "rol": "Kart operasyon uzmanı",
+    "tavir": "Bilgili ve sabırlı; \"kurye geç teslim ediyor\" diyor. Süreci parça parça soran birine açık.",
+    "ilk_soz": "Kartlar zamanında basılıyor bence. Sorun kuryede."
+  },
+  "yaniltici_ipuclari": [
+    "Kurye firması yavaş.",
+    "Adresler hep yanlış."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "14 günün ne kadarı basımda, ne kadarı kuryede geçiyor?",
+    "Kartlar basım tedarikçisine ne zaman ve nasıl gönderiliyor?",
+    "Teslim edilemeyen kartlara ne oluyor?",
+    "Geç ulaşan kartların ortak noktası ne?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Basım siparişi toplu: kartlar haftada bir basıma gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kart basım talepleri, maliyeti düşürmek için haftada bir toplu dosyayla basım tedarikçisine gönderiliyor.",
+          "acilma_kosulu": "Basım siparişinin gönderimi sorulursa",
+          "ipucu_kelimeler": [
+            "basım tedarikçisine",
+            "haftada bir",
+            "toplu dosya"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "14 günün yaklaşık altı günü, talebin basıma gönderilmesini beklemekle geçiyor.",
+          "acilma_kosulu": "Sürenin dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı basımda",
+            "altı gün",
+            "beklemek"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geç ulaşanların çoğu hafta başında onaylanan kartlar; cuma gününe kadar bekliyorlar.",
+          "acilma_kosulu": "Geç ulaşan kartların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç ulaşan",
+            "hafta başında",
+            "cuma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teslim edilemeyen kartlar şubeye gönderiliyor.",
+          "acilma_kosulu": "Teslim edilemeyen kartlar sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edilemeyen",
+            "şubeye gönder"
+          ]
+        }
+      ],
+      "kok_neden": "Kartlar basım düzeni yüzünden geç ulaşıyor: basım talepleri maliyet için haftada bir toplu gönderiliyor, hafta başında onaylanan kart basıma gitmek için cumayı bekliyor ve sürenin yaklaşık altı günü bu beklemede geçiyor.",
+      "kok_neden_kelimeler": [
+        "basım",
+        "haftada bir",
+        "toplu",
+        "bekle",
+        "maliyet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Teslim edilemiyor: kurye tek deneme yapıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurye kartı ancak müşteriye elden teslim edebiliyor; tek denemede bulamazsa kart dağıtım merkezine dönüyor ve oradan şubeye gönderiliyor.",
+          "acilma_kosulu": "Teslim edilemeyen kartlar sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edilemeyen",
+            "elden teslim",
+            "tek deneme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geç ulaşanların çoğu gündüz evde olmayan çalışan müşteriler.",
+          "acilma_kosulu": "Geç ulaşan kartların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç ulaşan",
+            "gündüz evde",
+            "çalışan müşteri"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Basım iki gün sürüyor; kurye ilk denemeyi üç gün içinde yapıyor; geri dönen kartlar şubeye bir hafta sonra ulaşıyor.",
+          "acilma_kosulu": "Sürenin dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı basımda",
+            "geri dönen",
+            "bir hafta sonra"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Basım talepleri her gün gönderiliyor.",
+          "acilma_kosulu": "Basım siparişinin gönderimi sorulursa",
+          "ipucu_kelimeler": [
+            "basım tedarikçisine",
+            "her gün gönder"
+          ]
+        }
+      ],
+      "kok_neden": "Kartlar teslim düzeni yüzünden geç ulaşıyor: kurye kartı ancak elden ve tek denemede teslim edebiliyor, gündüz evde olmayan çalışan müşteriler ıskalanıyor ve geri dönen kartlar şubeye bir hafta sonra ulaşıyor.",
+      "kok_neden_kelimeler": [
+        "teslim",
+        "tek deneme",
+        "kurye",
+        "evde",
+        "geri dön"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Adres verisi eski: kartlar eski adrese gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geç ulaşanların çoğu son birkaç yılda taşınmış müşteriler; kart sistemdeki eski adrese gidiyor.",
+          "acilma_kosulu": "Geç ulaşan kartların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "geç ulaşan",
+            "taşınmış",
+            "eski adres"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Basım talebi müşterinin hesap açılışındaki adresiyle gönderiliyor; adres güncellemesi kart sistemine aktarılmıyor.",
+          "acilma_kosulu": "Basım siparişinin gönderimi sorulursa",
+          "ipucu_kelimeler": [
+            "basım tedarikçisine",
+            "adres güncellemesi",
+            "aktarılmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Teslim edilemeyen kartlar imha ediliyor ve müşteri arayınca yeniden basım başlatılıyor; süre baştan başlıyor.",
+          "acilma_kosulu": "Teslim edilemeyen kartlar sorulursa",
+          "ipucu_kelimeler": [
+            "teslim edilemeyen",
+            "imha",
+            "yeniden basım"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Basım ve kurye süreleri hedefe yakın.",
+          "acilma_kosulu": "Sürenin dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı basımda",
+            "hedefe yakın"
+          ]
+        }
+      ],
+      "kok_neden": "Kartlar eski adrese gittiği için geç ulaşıyor: adres güncellemeleri kart sistemine aktarılmıyor, taşınmış müşterilerin kartı eski adrese gidiyor, teslim edilemeyince imha ediliyor ve müşteri arayınca süre baştan başlıyor.",
+      "kok_neden_kelimeler": [
+        "adres",
+        "güncel",
+        "eski adres",
+        "aktarılmıyor",
+        "yeniden basım"
+      ]
+    }
+  ]
+}

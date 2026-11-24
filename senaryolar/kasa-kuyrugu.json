@@ -1,0 +1,200 @@
+{
+  "id": "kasa-kuyrugu",
+  "baslik": "Kasa kuyrukları neden uzadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Operasyon",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 6,
+  "acilis": "Bir ev ve yaşam mağazasında hafta sonu kasa kuyruğunda bekleme ortalama 4 dakikadan 13 dakikaya çıktı; müşteriler sepetlerini bırakıp çıkıyor. Kasa sayısı aynı. Mağaza kasa sorumlusuyla konuşuyorsun.",
+  "rolun": "Mağaza müdürüsün. Amacın kasiyerleri hızlandırmak değil, kuyruğun neden uzadığını anlamak.",
+  "karakter": {
+    "ad": "Şenol",
+    "rol": "Kasa sorumlusu",
+    "tavir": "Pratik ve yorgun; \"hafta sonu herkes aynı anda geliyor\" diyor. Kasanın işleyişini soran birine somut konuşuyor.",
+    "ilk_soz": "Hafta sonu herkes aynı saatte geliyor, kasalar yetmiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri trafiği çok arttı.",
+    "Kasiyerler yavaş."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir müşterinin kasadaki işlemi ne kadar sürüyor, en çok ne zaman alıyor?",
+    "Hafta sonu kaç kasa açık ve kasiyerler nasıl planlanıyor?",
+    "Son dönemde kasada yapılan işlemlerde ne değişti?",
+    "Kuyrukta bekleyenler en çok neden şikâyet ediyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kasaya yeni işler yüklendi: üyelik ve kampanya",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son dönemde kasada sadakat programı üyeliği, kampanya kuponu kontrolü ve kargo siparişi alma da yapılmaya başlandı.",
+          "acilma_kosulu": "Kasa işlemlerindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "kasada yapılan",
+            "üyelik",
+            "kupon"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir müşterinin işlemi 1,5 dakikadan 4 dakikaya çıktı; en çok vakit üyelik kaydı ve kupon doğrulamasında gidiyor.",
+          "acilma_kosulu": "Kasadaki işlemin süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki işlemi",
+            "4 dakika",
+            "kupon doğrulama"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bekleyenler \"önümdekiler üye oluyor\" ve \"kupon çalışmıyor\" diye şikâyet ediyor.",
+          "acilma_kosulu": "Kuyruktaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "kuyrukta bekleyenler",
+            "üye oluyor",
+            "kupon çalışmıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hafta sonu bütün kasalar açık.",
+          "acilma_kosulu": "Kasa ve kasiyer planı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç kasa açık",
+            "bütün kasalar"
+          ]
+        }
+      ],
+      "kok_neden": "Kuyruk uzadı çünkü kasaya yeni işler yüklendi: üyelik kaydı, kupon kontrolü ve kargo siparişi kasada yapılıyor, müşteri başına işlem süresi iki katından fazla uzadı ve kasa sayısı değişmedi.",
+      "kok_neden_kelimeler": [
+        "kasa",
+        "üyelik",
+        "kupon",
+        "işlem süresi",
+        "yeni iş"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Planlama yanlış: kasiyerler öğle molasına aynı anda çıkıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hafta sonu altı kasanın ancak dördü açık; kasiyerlerin molaları 12:00-14:00 arasına, en yoğun saate denk geliyor.",
+          "acilma_kosulu": "Kasa ve kasiyer planı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç kasa açık",
+            "12:00-14:00",
+            "mola"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyenler \"kasalar boş duruyor ama kimse yok\" diyor.",
+          "acilma_kosulu": "Kuyruktaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "kuyrukta bekleyenler",
+            "kasalar boş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kasadaki işlem süresi değişmedi.",
+          "acilma_kosulu": "Kasadaki işlemin süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki işlemi",
+            "süresi değişmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kasa işlemlerinde değişiklik olmadı.",
+          "acilma_kosulu": "Kasa işlemlerindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "kasada yapılan",
+            "değişiklik olmadı"
+          ]
+        }
+      ],
+      "kok_neden": "Kuyruk uzadı çünkü kasiyer planı yoğunluğa uymuyor: molalar en yoğun öğle saatlerine denk geliyor, hafta sonu altı kasanın ancak dördü açık ve müşteriler boş kasalara bakarak bekliyor.",
+      "kok_neden_kelimeler": [
+        "mola",
+        "plan",
+        "yoğun saat",
+        "kasiyer",
+        "açık kasa"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fiyat uyuşmazlığı: raf ve kasa fiyatı farklı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bekleyenlerin en büyük şikâyeti, önlerindeki müşterilerin fiyat itirazı yüzünden kasanın durması.",
+          "acilma_kosulu": "Kuyruktaki şikâyetler sorulursa",
+          "ipucu_kelimeler": [
+            "kuyrukta bekleyenler",
+            "fiyat itirazı",
+            "durması"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir işlemin en uzun kısmı, raf etiketiyle kasa fiyatı farklı çıkınca reyondan fiyat kontrolü istenmesi; her biri birkaç dakika sürüyor.",
+          "acilma_kosulu": "Kasadaki işlemin süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kasadaki işlemi",
+            "raf etiketi",
+            "fiyat kontrolü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Son dönemde kampanyalar haftada iki kez değişiyor ama raf etiketleri elle ve geç değiştiriliyor.",
+          "acilma_kosulu": "Kasa işlemlerindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "kasada yapılan",
+            "haftada iki",
+            "elle"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kasa planı yoğunluğa göre yapılıyor.",
+          "acilma_kosulu": "Kasa ve kasiyer planı sorulursa",
+          "ipucu_kelimeler": [
+            "kaç kasa açık",
+            "yoğunluğa göre"
+          ]
+        }
+      ],
+      "kok_neden": "Kuyruk uzadı çünkü fiyatlar uyuşmuyor: kampanyalar haftada iki kez değişiyor, raf etiketleri elle ve geç güncelleniyor, kasada çıkan farklı fiyat her seferinde reyondan kontrol istenmesine ve kasanın durmasına yol açıyor.",
+      "kok_neden_kelimeler": [
+        "fiyat",
+        "etiket",
+        "kampanya",
+        "uyuşm",
+        "kontrol"
+      ]
+    }
+  ]
+}

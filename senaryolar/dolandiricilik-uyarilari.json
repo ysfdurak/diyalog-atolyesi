@@ -1,0 +1,201 @@
+{
+  "id": "dolandiricilik-uyarilari",
+  "baslik": "Dolandırıcılık uyarı sistemi neden gerçek vakaları kaçırıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Veri ve raporlama",
+  "sektor": "Bankacılık",
+  "sure_dk": 8,
+  "acilis": "Kart dolandırıcılığı izleme sistemi günde 4.000 uyarı üretiyor; ama son çeyrekte gerçek dolandırıcılık vakalarının %40'ı müşteri şikâyetiyle fark edildi. İzleme ekibinin analistiyle konuşuyorsun.",
+  "rolun": "Risk analitiğinden sorumlu yöneticisin. Amacın analistleri suçlamak değil, sistemin neden vakaları kaçırdığını anlamak.",
+  "karakter": {
+    "ad": "Ahu",
+    "rol": "Dolandırıcılık izleme analisti",
+    "tavir": "Yorgun ve dürüst; \"uyarıların çoğu boş\" diyor. Günlük işi soran birine açık konuşuyor.",
+    "ilk_soz": "Uyarıların çoğu boş çıkıyor. Gerçek olanı o yığının içinde bulmak zor."
+  },
+  "yaniltici_ipuclari": [
+    "Dolandırıcılar çok hızlı değişiyor.",
+    "Analist sayısı yetmiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir analist günde kaç uyarıya bakabiliyor, nasıl seçiyor?",
+    "Kaçırılan vakaların ortak noktası ne?",
+    "Uyarı kuralları en son ne zaman ve nasıl güncellendi?",
+    "Bir uyarı yanlış alarm çıkınca bu bilgi nasıl kullanılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yanlış alarm seli: gerçek vaka kalabalıkta kayboluyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir analist günde 250 uyarıya bakabiliyor; uyarıların %97'si yanlış alarm ve uyarılar geliş sırasına göre inceleniyor.",
+          "acilma_kosulu": "Günlük uyarı incelemesi sorulursa",
+          "ipucu_kelimeler": [
+            "kaç uyarıya",
+            "250",
+            "geliş sırası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kaçırılan vakaların çoğu uyarı üretmiş ama sırası gelmeden müşteri şikâyet etmiş.",
+          "acilma_kosulu": "Kaçırılan vakaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırılan vakaların",
+            "sırası gelmeden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yanlış alarm bilgisi hiçbir yere gitmiyor; uyarı kapatılıyor ve kurallar bu bilgiyle beslenmiyor.",
+          "acilma_kosulu": "Yanlış alarm geri bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "yanlış alarm",
+            "hiçbir yere",
+            "beslenmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kurallar yılda bir gözden geçiriliyor.",
+          "acilma_kosulu": "Kuralların güncellenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı kuralları",
+            "yılda bir"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem vakaları uyarı seli yüzünden kaçırıyor: uyarıların neredeyse tamamı yanlış alarm, analistler onları geliş sırasıyla inceliyor, gerçek vakalar sıraya gelmeden müşteri fark ediyor ve yanlış alarm bilgisi kuralları hiç beslemiyor.",
+      "kok_neden_kelimeler": [
+        "yanlış alarm",
+        "sıra",
+        "öncelik",
+        "geri bildirim",
+        "kural"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kurallar eskidi: yeni yöntemleri görmüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurallar üç yıl önce kart kopyalama vakalarına göre yazıldı; o günden beri güncellenmedi.",
+          "acilma_kosulu": "Kuralların güncellenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı kuralları",
+            "üç yıl önce",
+            "kart kopyalama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kaçırılan vakaların çoğu müşterinin telefonda kandırılıp kendi onayıyla yaptığı küçük tutarlı internet işlemleri.",
+          "acilma_kosulu": "Kaçırılan vakaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırılan vakaların",
+            "telefonda kandırıl",
+            "kendi onayı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Analist uyarıları risk puanına göre inceliyor; ama bu vakalar düşük puan aldığı için hiç uyarıya dönüşmüyor.",
+          "acilma_kosulu": "Günlük uyarı incelemesi sorulursa",
+          "ipucu_kelimeler": [
+            "kaç uyarıya",
+            "risk puanı",
+            "düşük puan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yanlış alarmlar kural ekibine raporlanıyor.",
+          "acilma_kosulu": "Yanlış alarm geri bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "yanlış alarm",
+            "kural ekibi"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem vakaları eskiyen kurallar yüzünden kaçırıyor: kurallar üç yıl önce kart kopyalamaya göre yazıldı, bugünkü vakalar müşterinin telefonda kandırılıp kendi onayıyla yaptığı küçük işlemler ve bunlar düşük risk puanı aldığı için hiç uyarı üretmiyor.",
+      "kok_neden_kelimeler": [
+        "kural",
+        "eski",
+        "güncellen",
+        "yeni yöntem",
+        "risk puanı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Veri kopuk: müşteri şikâyetleri izleme ekibine ulaşmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yanlış alarmlar kayda geçiyor; ama çağrı merkezine gelen dolandırıcılık şikâyetleri izleme ekibine ulaşmıyor, ayrı sistemde kalıyor.",
+          "acilma_kosulu": "Yanlış alarm geri bildirimi sorulursa",
+          "ipucu_kelimeler": [
+            "yanlış alarm",
+            "çağrı merkezi",
+            "ayrı sistem"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kaçırılan vakaların çoğu aynı birkaç sahte e-ticaret sitesinden; şikâyetlerde bu siteler tekrar tekrar geçiyor.",
+          "acilma_kosulu": "Kaçırılan vakaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırılan vakaların",
+            "sahte e-ticaret",
+            "tekrar tekrar"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kurallar ancak kayıp kesinleşip kayda geçtikten aylar sonra güncellenebiliyor.",
+          "acilma_kosulu": "Kuralların güncellenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı kuralları",
+            "aylar sonra",
+            "kesinleş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Analistler uyarıları risk puanına göre önceliklendiriyor.",
+          "acilma_kosulu": "Günlük uyarı incelemesi sorulursa",
+          "ipucu_kelimeler": [
+            "kaç uyarıya",
+            "önceliklendir"
+          ]
+        }
+      ],
+      "kok_neden": "Sistem vakaları veri kopukluğu yüzünden kaçırıyor: çağrı merkezine gelen dolandırıcılık şikâyetleri izleme ekibine ulaşmıyor, aynı sahte siteler şikâyetlerde tekrar geçtiği hâlde kurallara aylar sonra yansıyor.",
+      "kok_neden_kelimeler": [
+        "şikâyet",
+        "kopuk",
+        "çağrı merkezi",
+        "ulaşmıyor",
+        "sahte site"
+      ]
+    }
+  ]
+}

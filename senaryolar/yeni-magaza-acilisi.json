@@ -1,0 +1,200 @@
+{
+  "id": "yeni-magaza-acilisi",
+  "baslik": "Yeni mağaza neden hedefin altında açıldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 8,
+  "acilis": "Yeni bir AVM'de açılan mağaza ilk üç ayda satış hedefinin %55'inde kaldı. Açılış projesi zamanında ve bütçesinde tamamlanmıştı. Açılış projesini yöneten proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Yeni mağaza açılışlarının sponsorusun. Amacın yeri kötü ilan etmek değil, mağazanın neden hedefin altında açıldığını anlamak.",
+  "karakter": {
+    "ad": "Rüzgar",
+    "rol": "Mağaza açılış proje yöneticisi",
+    "tavir": "Projesiyle gurur duyan biri; \"zamanında ve bütçesinde açtık\" diyor. Açılışın ardını soran birine dürüst.",
+    "ilk_soz": "Mağazayı zamanında ve bütçesinde açtık, projenin her adımı tamam."
+  },
+  "yaniltici_ipuclari": [
+    "AVM kalabalık değil.",
+    "Yeni mağazalar ilk yıl hep zayıf olur."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Mağazanın satış hedefi nasıl ve hangi varsayımlarla belirlendi?",
+    "Açılış günü mağaza ne kadar hazırdı, eksik kalan neler vardı?",
+    "Mağaza ekibi nasıl ve ne zaman işe alınıp eğitildi?",
+    "AVM'nin kendisi açılıştan bu yana nasıl gelişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hedef iyimser: AVM'nin vaat ettiği trafik",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hedef AVM yönetiminin sunduğu günlük 40 bin ziyaretçi tahminine göre belirlendi; bağımsız bir trafik ölçümü yapılmadı.",
+          "acilma_kosulu": "Hedefin dayandığı varsayımlar sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlarla",
+            "40 bin",
+            "bağımsız"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "AVM'nin büyük mağazalarından ikisi henüz açılmadı; günlük trafik tahminin yarısında.",
+          "acilma_kosulu": "AVM'nin gelişimi sorulursa",
+          "ipucu_kelimeler": [
+            "açılıştan bu yana",
+            "henüz açılmadı",
+            "yarısında"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mağaza açılışta tamamen hazırdı.",
+          "acilma_kosulu": "Açılıştaki eksikler sorulursa",
+          "ipucu_kelimeler": [
+            "eksik kalan",
+            "tamamen hazır"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekip açılıştan bir ay önce işe alındı.",
+          "acilma_kosulu": "Ekibin alımı ve eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "işe alınıp",
+            "bir ay önce"
+          ]
+        }
+      ],
+      "kok_neden": "Mağaza hedefin altında çünkü hedef iyimser bir trafik varsayımına dayanıyor: hedef AVM yönetiminin 40 bin ziyaretçi tahminiyle belirlendi, bağımsız ölçüm yapılmadı ve AVM'nin büyük mağazaları açılmadığı için trafik tahminin yarısında.",
+      "kok_neden_kelimeler": [
+        "hedef",
+        "varsayım",
+        "trafik",
+        "avm",
+        "tahmin"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Açılış eksik: ürün ve sistem tam değildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Açılış günü ürünlerin %30'u henüz gelmemişti; kasa sistemi iki hafta sık sık kesildi ve kart ödemesi alınamadı.",
+          "acilma_kosulu": "Açılıştaki eksikler sorulursa",
+          "ipucu_kelimeler": [
+            "eksik kalan",
+            "%30",
+            "kasa sistemi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hedef benzer bir mağazanın ilk aylarına göre gerçekçi belirlendi.",
+          "acilma_kosulu": "Hedefin dayandığı varsayımlar sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlarla",
+            "benzer bir mağaza"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "AVM açılıştan bu yana kalabalık; komşu mağazalar hedeflerini tutturuyor.",
+          "acilma_kosulu": "AVM'nin gelişimi sorulursa",
+          "ipucu_kelimeler": [
+            "açılıştan bu yana",
+            "kalabalık",
+            "komşu mağaza"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekip açılıştan iki hafta önce eğitildi.",
+          "acilma_kosulu": "Ekibin alımı ve eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "işe alınıp",
+            "iki hafta önce"
+          ]
+        }
+      ],
+      "kok_neden": "Mağaza eksik açıldığı için hedefin altında: açılış tarihini tutturmak için ürünlerin üçte biri gelmeden ve kasa sistemi oturmadan açıldı, ilk haftalarda müşteriler eksik raf ve ödeme sorunuyla karşılaştı ve ilk izlenim kayboldu.",
+      "kok_neden_kelimeler": [
+        "eksik",
+        "açılış",
+        "ürün",
+        "kasa sistemi",
+        "ilk izlenim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ekip hazır değil: açılıştan üç gün önce işe alındı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekibin çoğu açılıştan üç gün önce işe alındı; ürün ve kasa eğitimi bir günde yapıldı, deneyimli kimse yok.",
+          "acilma_kosulu": "Ekibin alımı ve eğitimi sorulursa",
+          "ipucu_kelimeler": [
+            "işe alınıp",
+            "üç gün önce",
+            "bir günde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Mağaza fiziksel olarak hazırdı; ama ilk ay iki satış danışmanı ve müdür yardımcısı ayrıldı.",
+          "acilma_kosulu": "Açılıştaki eksikler sorulursa",
+          "ipucu_kelimeler": [
+            "eksik kalan",
+            "ayrıldı",
+            "müdür yardımcısı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "AVM kalabalık; müşteri anketlerinde en düşük puan \"çalışanların ilgisi ve bilgisi\".",
+          "acilma_kosulu": "AVM'nin gelişimi sorulursa",
+          "ipucu_kelimeler": [
+            "açılıştan bu yana",
+            "müşteri anketi",
+            "ilgisi ve bilgisi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hedef gerçekçi verilerle belirlendi.",
+          "acilma_kosulu": "Hedefin dayandığı varsayımlar sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlarla",
+            "gerçekçi"
+          ]
+        }
+      ],
+      "kok_neden": "Mağaza ekip hazır olmadığı için hedefin altında: ekip açılıştan üç gün önce alınıp bir günde eğitildi, deneyimli kimse yoktu, ilk ay ayrılıklar oldu ve müşteriler en düşük puanı çalışanların ilgisine ve bilgisine verdi.",
+      "kok_neden_kelimeler": [
+        "ekip",
+        "eğitim",
+        "deneyim",
+        "işe alım",
+        "ayrıl"
+      ]
+    }
+  ]
+}

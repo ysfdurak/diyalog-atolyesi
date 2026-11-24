@@ -1,0 +1,202 @@
+{
+  "id": "musteriye-yaklasmiyor",
+  "baslik": "Satış danışmanları neden müşteriye yaklaşmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Gizli müşteri değerlendirmelerinde satış danışmanlarının müşteriye kendiliğinden yaklaşma oranı %20'de. Danışmanlar kendi aralarında konuşuyor ya da raf düzenliyor. Mağazanın kıdemli satış danışmanıyla konuşuyorsun.",
+  "rolun": "Mağaza müdürüsün. Amacın danışmanları uyarmak değil, neden müşteriye yaklaşmadıklarını anlamak.",
+  "karakter": {
+    "ad": "Ayla",
+    "rol": "Kıdemli satış danışmanı",
+    "tavir": "Sıcak ama temkinli; \"müşteri rahatsız edilmek istemiyor\" diyor. Gerçekten merak eden birine açık konuşuyor.",
+    "ilk_soz": "Müşteriler genelde rahatsız edilmek istemiyor, biz de üstlerine gitmiyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "Danışmanlar isteksiz.",
+    "Yeni nesil müşteri yardım istemiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir vardiyada zamanının çoğu hangi işlere gidiyor?",
+    "Danışmanlar nasıl değerlendiriliyor ve neyle ödüllendiriliyor?",
+    "Müşteriye yaklaştığında en son ne olmuştu?",
+    "Ürünler hakkında bilgiyi nasıl öğreniyorsunuz?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Görev yükü: raf, sayım ve teslimat danışmanda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Vardiyanın yarısı raf düzenleme, fiyat etiketi değiştirme ve internet siparişi hazırlamaya gidiyor; bu işler danışmanların görev listesinde.",
+          "acilma_kosulu": "Vardiyadaki zaman dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işlere",
+            "görev listesi",
+            "internet siparişi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Danışmanlar görev listesinin tamamlanmasıyla değerlendiriliyor; müşteriyle geçen zaman hiçbir yerde görünmüyor.",
+          "acilma_kosulu": "Danışmanların değerlendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiriliyor",
+            "görev listesinin tamam",
+            "görünmüyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En son bir müşteriyle ilgilendiğinde raf görevi yarım kaldı ve ekip liderinden uyarı aldı.",
+          "acilma_kosulu": "Son yaklaşmada olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yaklaştığında",
+            "yarım kaldı",
+            "uyarı aldı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün bilgisi ayda bir toplantıda veriliyor.",
+          "acilma_kosulu": "Ürün bilgisinin öğrenilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgiyi nasıl",
+            "ayda bir"
+          ]
+        }
+      ],
+      "kok_neden": "Danışmanlar müşteriye yaklaşmıyor çünkü görevleri başka: vardiyanın yarısı raf, etiket ve internet siparişiyle geçiyor, değerlendirme görev listesine göre yapılıyor ve müşteriyle ilgilenip görevi yarım bırakan danışman uyarı alıyor.",
+      "kok_neden_kelimeler": [
+        "görev",
+        "değerlendir",
+        "raf",
+        "uyarı",
+        "müşteri zamanı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bilgi yok: soruya cevap verememe korkusu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ürün bilgisi yalnızca ürün kutusunda yazandan ibaret; yeni gelen ürünler için hiç bilgi verilmiyor.",
+          "acilma_kosulu": "Ürün bilgisinin öğrenilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgiyi nasıl",
+            "ürün kutusu",
+            "yeni gelen"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son yaklaştığı müşteri teknik bir soru sordu, cevap veremedi ve müşteri \"o zaman neden geldin\" dedi.",
+          "acilma_kosulu": "Son yaklaşmada olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yaklaştığında",
+            "teknik bir soru",
+            "cevap veremedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Vardiyanın çoğu satış alanında geçiyor; ama danışmanlar soru gelmesinden çekindikleri için müşteriye ancak çağrılınca gidiyor.",
+          "acilma_kosulu": "Vardiyadaki zaman dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işlere",
+            "çekindik",
+            "çağrılınca"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Danışmanlar satış cirosuyla değerlendiriliyor.",
+          "acilma_kosulu": "Danışmanların değerlendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiriliyor",
+            "satış cirosu"
+          ]
+        }
+      ],
+      "kok_neden": "Danışmanlar müşteriye yaklaşmıyor çünkü ürünü bilmiyor: ürün bilgisi kutudaki yazıyla sınırlı, yeni ürünler için bilgi verilmiyor ve sorulara cevap veremeyip mahcup olan danışmanlar müşteriye ancak çağrılınca gidiyor.",
+      "kok_neden_kelimeler": [
+        "bilgi",
+        "ürün",
+        "cevap veremedi",
+        "çekin",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Prim yapısı: komisyon kasada, sıra kavgası",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Prim, kasada danışman kodu girilen satıştan ödeniyor; kimin kodunun girileceği belirsiz, en son konuşan danışman kodu alıyor.",
+          "acilma_kosulu": "Danışmanların değerlendirilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ödüllendiriliyor",
+            "danışman kodu",
+            "en son konuşan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son uzun süre ilgilendiği müşteri, kasada başka bir danışmanın koduyla satın aldı.",
+          "acilma_kosulu": "Son yaklaşmada olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yaklaştığında",
+            "başka bir danışman",
+            "koduyla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Danışmanlar zamanlarının çoğunu kasaya yakın durarak geçiriyor; müşteriyle uzun ilgilenmek yerine satışın sonunu yakalamaya çalışıyor.",
+          "acilma_kosulu": "Vardiyadaki zaman dağılımı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işlere",
+            "kasaya yakın",
+            "sonunu yakala"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün bilgisi düzenli ve ayrıntılı veriliyor.",
+          "acilma_kosulu": "Ürün bilgisinin öğrenilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "bilgiyi nasıl",
+            "düzenli ve ayrıntılı"
+          ]
+        }
+      ],
+      "kok_neden": "Danışmanlar müşteriye yaklaşmıyor çünkü prim yapısı ilgilenmeyi değil kasayı ödüllendiriyor: prim kasada girilen danışman koduna gidiyor, uzun ilgilenen danışmanın satışını kasada başkası alabiliyor ve herkes kasaya yakın duruyor.",
+      "kok_neden_kelimeler": [
+        "prim",
+        "danışman kodu",
+        "kasa",
+        "ödül",
+        "ilgilen"
+      ]
+    }
+  ]
+}

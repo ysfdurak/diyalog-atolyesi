@@ -1,0 +1,201 @@
+{
+  "id": "magaza-donusum",
+  "baslik": "Ziyaretçi aynıyken mağaza satışı neden düşüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Mağazaya giren ziyaretçi sayısı geçen yılla aynı; ama alışveriş yapan ziyaretçi oranı %32'den %24'e düştü. Mağazanın satış ekip lideriyle konuşuyorsun.",
+  "rolun": "Bölge satış müdürüsün. Amacın kampanya vermek değil, ziyaretçilerin neden almadan çıktığını anlamak.",
+  "karakter": {
+    "ad": "Hüseyin",
+    "rol": "Mağaza satış ekip lideri",
+    "tavir": "Deneyimli ve biraz bıkkın; \"müşteri bakıp internetten alıyor\" diyor. Mağazada olanı soran birine açık.",
+    "ilk_soz": "Müşteri mağazada bakıp internetten daha ucuza alıyor, ne yapalım."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteriler internette daha ucuz buluyor.",
+    "Ekonomi kötü."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Almadan çıkan müşteriler mağazada en çok nerede vakit geçiriyor?",
+    "Bir müşteri yardım istediğinde ne oluyor?",
+    "Son bir yılda mağazanın düzeninde ya da ürünlerinde ne değişti?",
+    "Müşteriler almamanın nedeni olarak ne söylüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yardım yok: satış danışmanı kasa ve depoda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yardım isteyen müşteri çoğu zaman kimseyi bulamıyor; satış danışmanlarının yarısı kasaya ve depoya kaydırıldı.",
+          "acilma_kosulu": "Yardım talebinde olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yardım istediğinde",
+            "kasaya ve depoya",
+            "kimseyi bulamıyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Almadan çıkanlar en çok mobilya ve beyaz eşya gibi danışmanlık gerektiren reyonlarda vakit geçiriyor.",
+          "acilma_kosulu": "Almadan çıkanların mağazadaki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "almadan çıkan",
+            "mobilya",
+            "beyaz eşya"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteriler \"soracak kimse yoktu\" ve \"ölçüsünü öğrenemedim\" diyor.",
+          "acilma_kosulu": "Müşterilerin söylediği neden sorulursa",
+          "ipucu_kelimeler": [
+            "almamanın nedeni",
+            "soracak kimse",
+            "ölçüsü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mağaza düzeni geçen yılla aynı.",
+          "acilma_kosulu": "Düzen ve ürün değişiklikleri sorulursa",
+          "ipucu_kelimeler": [
+            "düzeninde ya da",
+            "geçen yılla aynı"
+          ]
+        }
+      ],
+      "kok_neden": "Satış düşüyor çünkü yardım edecek kimse yok: satış danışmanlarının yarısı kasa ve depoya kaydırıldı, danışmanlık gerektiren mobilya ve beyaz eşya reyonlarında müşteri soracak kimseyi bulamayıp çıkıyor.",
+      "kok_neden_kelimeler": [
+        "danışman",
+        "yardım",
+        "kaydırıl",
+        "soracak",
+        "reyon"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Stok yok: teşhir var, ürün yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşterilerin en sık söylediği \"teşhirdekini beğendim ama stokta yokmuş\".",
+          "acilma_kosulu": "Müşterilerin söylediği neden sorulursa",
+          "ipucu_kelimeler": [
+            "almamanın nedeni",
+            "teşhir",
+            "stokta yok"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son bir yılda mağazaya daha çok model kondu ama her modelden daha az stok ayrıldı; birçok ürün yalnızca teşhirde.",
+          "acilma_kosulu": "Düzen ve ürün değişiklikleri sorulursa",
+          "ipucu_kelimeler": [
+            "düzeninde ya da",
+            "daha çok model",
+            "daha az stok"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yardım isteyen müşteriye danışman \"internetten sipariş verebilirsiniz\" diyor; müşteri çoğu zaman oradan da almıyor.",
+          "acilma_kosulu": "Yardım talebinde olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yardım istediğinde",
+            "internetten sipariş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriler mağazanın her yerinde dolaşıyor.",
+          "acilma_kosulu": "Almadan çıkanların mağazadaki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "almadan çıkan",
+            "her yerinde"
+          ]
+        }
+      ],
+      "kok_neden": "Satış düşüyor çünkü ürün stokta yok: mağazada model sayısı arttı ama her modelden stok azaldı, müşteri teşhirde beğendiği ürünü alamıyor ve danışmanın internet önerisi çoğu zaman satışa dönmüyor.",
+      "kok_neden_kelimeler": [
+        "stok",
+        "teşhir",
+        "model",
+        "internet",
+        "stokta yok"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fiyat görünmüyor: etiket eksik, müşteri sormaktan çekiniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son bir yılda raf etiketleri dijital ekranlara geçti; ekranların bir kısmı çalışmıyor ya da yanlış ürünü gösteriyor.",
+          "acilma_kosulu": "Düzen ve ürün değişiklikleri sorulursa",
+          "ipucu_kelimeler": [
+            "düzeninde ya da",
+            "dijital ekran",
+            "çalışmıyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Almadan çıkanlar en çok etiketi çalışmayan ekranların olduğu reyonlarda; ürünleri elinde evirip bırakıyorlar.",
+          "acilma_kosulu": "Almadan çıkanların mağazadaki yolu sorulursa",
+          "ipucu_kelimeler": [
+            "almadan çıkan",
+            "evirip",
+            "bırakıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteriler \"fiyatını bilemedim, sormaya da çekindim\" diyor.",
+          "acilma_kosulu": "Müşterilerin söylediği neden sorulursa",
+          "ipucu_kelimeler": [
+            "almamanın nedeni",
+            "fiyatını bilemedim",
+            "çekindim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yardım isteyen müşteriye hızla danışman yönlendiriliyor.",
+          "acilma_kosulu": "Yardım talebinde olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yardım istediğinde",
+            "hızla danışman"
+          ]
+        }
+      ],
+      "kok_neden": "Satış düşüyor çünkü fiyat görünmüyor: raf etiketleri dijital ekranlara geçti, ekranların bir kısmı çalışmıyor ya da yanlış ürünü gösteriyor ve fiyatı göremeyen müşteri sormaya çekinip ürünü bırakıyor.",
+      "kok_neden_kelimeler": [
+        "fiyat",
+        "etiket",
+        "dijital ekran",
+        "görünmüyor",
+        "çekin"
+      ]
+    }
+  ]
+}

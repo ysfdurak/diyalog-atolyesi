@@ -1,0 +1,202 @@
+{
+  "id": "kurumsal-musteri-gidiyor",
+  "baslik": "Kurumsal müşteri işlemlerini neden başka bankaya taşıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sektor": "Bankacılık",
+  "sure_dk": 8,
+  "acilis": "On yıllık bir kurumsal müşteri, son altı ayda nakit yönetimi ve dış ticaret işlemlerinin %70'ini başka bir bankaya taşıdı. Kredi limitleri ve fiyatlar değişmedi. Müşterinin ilişki yöneticisiyle konuşuyorsun.",
+  "rolun": "Kurumsal bankacılık bölge müdürüsün. Amacın fiyat indirimi vermek değil, müşterinin neden işlemlerini taşıdığını anlamak.",
+  "karakter": {
+    "ad": "Tülin",
+    "rol": "Kurumsal ilişki yöneticisi",
+    "tavir": "Deneyimli ve kırgın; \"fiyatımız rekabetçi\" diyor. Müşterinin günlük deneyimini soran birine açık.",
+    "ilk_soz": "Fiyatlarımız rekabetçi, limitleri de koruduk. Neden gittiklerini tam anlayamadım."
+  },
+  "yaniltici_ipuclari": [
+    "Rakip bankalar fiyat kırıyor.",
+    "Müşterinin yeni finans müdürü başka bankadan geldi."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Müşterinin finans ekibi günlük işlemlerde neler yaşıyor?",
+    "Müşteriyle en son ne zaman ve nasıl bir görüşme yaptınız?",
+    "Diğer banka müşteriye fiyat dışında ne sunuyor?",
+    "Müşterinin işinde son bir yılda ne değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Dijital eksik: toplu ödeme ve entegrasyon yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşterinin finans ekibi 300 tedarikçiye ödemeyi tek tek giriyor; bankanın toplu ödeme dosyası ve ERP entegrasyonu yok.",
+          "acilma_kosulu": "Günlük işlem deneyimi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işlemlerde",
+            "toplu ödeme",
+            "erp"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Diğer banka müşterinin muhasebe sistemiyle doğrudan bağlantı kurdu; ödemeler otomatik gidiyor.",
+          "acilma_kosulu": "Rakibin sunduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fiyat dışında",
+            "doğrudan bağlantı",
+            "otomatik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri bir yılda iki kat büyüdü; tedarikçi sayısı 100'den 300'e çıktı.",
+          "acilma_kosulu": "Müşterinin işindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "müşterinin işinde",
+            "iki kat",
+            "100'den 300"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Son görüşme üç ay önce bir yemekte yapıldı.",
+          "acilma_kosulu": "Son görüşme sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "yemek"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteri dijital eksiklik yüzünden işlemlerini taşıyor: müşteri büyüdü ve 300 tedarikçiye ödemeyi tek tek girmek zorunda kaldı; bankanın toplu ödeme ve ERP entegrasyonu yok, rakip banka ödemeleri muhasebe sistemine bağlayıp otomatikleştirdi.",
+      "kok_neden_kelimeler": [
+        "dijital",
+        "toplu ödeme",
+        "entegrasyon",
+        "büyüdü",
+        "otomatik"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İlişki koptu: görüşmeler yalnızca limit yenilemede",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteriyle yalnızca yılda bir, kredi limiti yenilenirken görüşülüyor; ilişki yöneticisinin portföyü 15'ten 40 müşteriye çıktı.",
+          "acilma_kosulu": "Son görüşme sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "yılda bir",
+            "40 müşteri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Müşteri bu yıl ihracata başladı; ilişki yöneticisi bunu müşterinin başka bankayla iş yaptığını görünce öğrendi.",
+          "acilma_kosulu": "Müşterinin işindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "müşterinin işinde",
+            "ihracat",
+            "başka bankayla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer banka müşterinin ihracat planını erkenden fark edip bir dış ticaret uzmanı atadı.",
+          "acilma_kosulu": "Rakibin sunduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fiyat dışında",
+            "dış ticaret uzmanı",
+            "erkenden"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Günlük işlemler sorunsuz yürüyor.",
+          "acilma_kosulu": "Günlük işlem deneyimi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işlemlerde",
+            "sorunsuz"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteri ilişki koptuğu için işlemlerini taşıyor: ilişki yöneticisinin portföyü neredeyse üç katına çıktı, müşteriyle yalnızca limit yenilemede görüşülüyor ve müşterinin ihracata başladığını rakip banka erkenden fark edip dış ticaret uzmanı atadı.",
+      "kok_neden_kelimeler": [
+        "ilişki",
+        "görüşme",
+        "portföy",
+        "ihracat",
+        "fark etmedi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Hizmet hataları: dış ticaret işlemlerinde gecikme",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son altı ayda müşterinin üç dış ticaret ödemesi belge kontrolünde günlerce bekledi; bir sevkiyat gümrükte kaldı.",
+          "acilma_kosulu": "Günlük işlem deneyimi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işlemlerde",
+            "dış ticaret ödemesi",
+            "gümrük"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Diğer banka müşteriye aynı gün işlem garantisi ve doğrudan ulaşılabilir bir dış ticaret masası verdi.",
+          "acilma_kosulu": "Rakibin sunduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fiyat dışında",
+            "aynı gün",
+            "dış ticaret masası"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteriyle son görüşme hatalardan sonra yapıldı; ilişki yöneticisi hataları operasyon biriminin sorunu olarak anlattı ve bir çözüm sözü veremedi.",
+          "acilma_kosulu": "Son görüşme sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "operasyon biriminin",
+            "çözüm sözü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşterinin işinde büyük bir değişiklik yok.",
+          "acilma_kosulu": "Müşterinin işindeki değişim sorulursa",
+          "ipucu_kelimeler": [
+            "müşterinin işinde",
+            "büyük bir değişiklik"
+          ]
+        }
+      ],
+      "kok_neden": "Müşteri hizmet hataları yüzünden işlemlerini taşıyor: dış ticaret ödemeleri belge kontrolünde günlerce bekledi ve bir sevkiyat gümrükte kaldı, ilişki yöneticisi çözüm sözü veremedi ve rakip banka aynı gün işlem garantisi sundu.",
+      "kok_neden_kelimeler": [
+        "hizmet",
+        "dış ticaret",
+        "gecikme",
+        "çözüm",
+        "aynı gün"
+      ]
+    }
+  ]
+}

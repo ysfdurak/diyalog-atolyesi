@@ -1,0 +1,201 @@
+{
+  "id": "bos-raflar",
+  "baslik": "Raflar neden öğleden sonra boş kalıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Mağazada çok satan ürünlerin rafları öğleden sonra boşalıyor; ürünler depoda olduğu hâlde rafa gelmiyor. Satış kaybı ve müşteri şikâyeti artıyor. Mağaza deposundan sorumlu stok sorumlusuyla konuşuyorsun.",
+  "rolun": "Mağaza müdürüsün. Amacın ekibi suçlamak değil, rafların neden boş kaldığını anlamak.",
+  "karakter": {
+    "ad": "Gülsüm",
+    "rol": "Mağaza stok sorumlusu",
+    "tavir": "Çalışkan ve bunalmış; \"depoda ürün var, rafa taşıyacak el yok\" diyor. İşin akışını soran birine açık.",
+    "ilk_soz": "Depoda ürün var aslında. Rafa taşıyacak kimse yok."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip tembel.",
+    "Merkez az ürün gönderiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Raf dolumu ne zaman ve kim tarafından yapılıyor?",
+    "Boşalan rafları ilk kim, nasıl fark ediyor?",
+    "Depodaki ürünün yerini bulmak nasıl oluyor?",
+    "Merkezden gelen sevkiyat mağazaya ne zaman ulaşıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Dolum sabah bir kez: gün içinde kimse yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Raf dolumu yalnızca sabah açılıştan önce yapılıyor; gün içinde dolum için ayrılmış kimse yok, satış danışmanları müşteriyle ilgileniyor.",
+          "acilma_kosulu": "Raf dolumunun zamanı ve sorumlusu sorulursa",
+          "ipucu_kelimeler": [
+            "raf dolumu",
+            "sabah açılış",
+            "gün içinde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Boş rafı genellikle müşteri fark edip soruyor; reyonda düzenli bir kontrol turu yok.",
+          "acilma_kosulu": "Boş rafın fark edilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ilk kim",
+            "müşteri fark",
+            "kontrol turu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çok satan ürünler için sabahki dolum öğleye kadar yetiyor; öğleden sonra yoğunluğu için ikinci dolum planlanmadı.",
+          "acilma_kosulu": "Sevkiyatın geliş zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "merkezden gelen",
+            "ikinci dolum",
+            "öğleye kadar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Depoda ürünler adreslenmiş.",
+          "acilma_kosulu": "Depoda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "yerini bulmak",
+            "adreslen"
+          ]
+        }
+      ],
+      "kok_neden": "Raflar dolum düzeni yüzünden boş kalıyor: dolum yalnızca sabah bir kez yapılıyor, gün içinde dolum için ayrılmış kimse yok ve çok satan ürünlerin rafı öğleye kadar bitiyor; boş rafı ancak müşteri fark ediyor.",
+      "kok_neden_kelimeler": [
+        "dolum",
+        "sabah",
+        "gün içinde",
+        "ikinci dolum",
+        "kontrol"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Depo dağınık: ürün depoda ama bulunamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mağaza deposunda adres sistemi yok; ürünler geldiği yere konuyor ve aranınca bulunamıyor.",
+          "acilma_kosulu": "Depoda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "yerini bulmak",
+            "adres sistemi",
+            "bulunamıyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dolum gün içinde iki kez yapılıyor; ama ürünü depoda aramak dolum süresinin yarısını alıyor.",
+          "acilma_kosulu": "Raf dolumunun zamanı ve sorumlusu sorulursa",
+          "ipucu_kelimeler": [
+            "raf dolumu",
+            "iki kez",
+            "aramak"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Boş raf fark ediliyor; ama sistem ürünü stokta gösterdiği için \"depoda var\" deniyor ve kimse bulamıyor.",
+          "acilma_kosulu": "Boş rafın fark edilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ilk kim",
+            "stokta gösterdi",
+            "depoda var"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sevkiyat sabah erken geliyor.",
+          "acilma_kosulu": "Sevkiyatın geliş zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "merkezden gelen",
+            "sabah erken"
+          ]
+        }
+      ],
+      "kok_neden": "Raflar depo düzeni yüzünden boş kalıyor: mağaza deposunda adres sistemi yok, ürünler geldiği yere konup bulunamıyor ve dolum süresinin yarısı ürün aramakla geçiyor; sistem stokta gösterse de ürün rafa çıkamıyor.",
+      "kok_neden_kelimeler": [
+        "depo",
+        "adres",
+        "bulunamıyor",
+        "aramak",
+        "dağınık"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sevkiyat geç geliyor: ürün öğleden sonra mal kabulde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Merkezden gelen sevkiyat üç aydır sabah değil, öğleden sonra 14:00 civarında geliyor; nakliye güzergâhı değişti.",
+          "acilma_kosulu": "Sevkiyatın geliş zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "merkezden gelen",
+            "14:00",
+            "güzergâh"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Raf dolumu sevkiyat geldikten sonra yapılıyor; ama öğleden sonra mal kabul ve dolum aynı küçük ekiple ve en yoğun satış saatinde yapılıyor.",
+          "acilma_kosulu": "Raf dolumunun zamanı ve sorumlusu sorulursa",
+          "ipucu_kelimeler": [
+            "raf dolumu",
+            "mal kabul",
+            "küçük ekip"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Depodaki ürünün yeri belli; ama sevkiyat açılmadan önce raflar zaten boşalmış oluyor.",
+          "acilma_kosulu": "Depoda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "yerini bulmak",
+            "açılmadan önce"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Boş rafları reyon sorumlusu saatlik turda fark ediyor.",
+          "acilma_kosulu": "Boş rafın fark edilmesi sorulursa",
+          "ipucu_kelimeler": [
+            "ilk kim",
+            "saatlik tur"
+          ]
+        }
+      ],
+      "kok_neden": "Raflar sevkiyatın geç gelmesinden boş kalıyor: nakliye güzergâhı değişti ve sevkiyat öğleden sonra geliyor, mal kabul ve raf dolumu en yoğun satış saatinde aynı küçük ekiple yapılıyor ve o saate kadar raflar boşalmış oluyor.",
+      "kok_neden_kelimeler": [
+        "sevkiyat",
+        "öğleden sonra",
+        "güzergâh",
+        "mal kabul",
+        "geç"
+      ]
+    }
+  ]
+}

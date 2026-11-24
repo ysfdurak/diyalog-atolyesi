@@ -1,0 +1,201 @@
+{
+  "id": "metrekare-raporu",
+  "baslik": "Mağaza karşılaştırma raporu neden yanıltıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sektor": "Perakende mağaza",
+  "sure_dk": 7,
+  "acilis": "Mağazalar metrekare başına satışla sıralanıyor; en altta kalan üç mağaza için kapanma tartışması başladı. Bu mağazaların müdürleri raporun haksız olduğunu söylüyor. Raporu hazırlayan perakende analistiyle konuşuyorsun.",
+  "rolun": "Perakende performansından sorumlu yöneticisin. Amacın raporu savunmak değil, sıralamanın neden yanıltıcı bulunduğunu anlamak.",
+  "karakter": {
+    "ad": "İlkay",
+    "rol": "Perakende analisti",
+    "tavir": "Yöntemine güvenen biri; \"metrekare başına satış sektör standardı\" diyor. Varsayımları soran birine açık.",
+    "ilk_soz": "Metrekare başına satış sektörün standart göstergesi. Rakamlar ortada."
+  },
+  "yaniltici_ipuclari": [
+    "Zayıf mağazalar her zaman bahane bulur.",
+    "Müdürler sıralamayı kabullenmiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Metrekare hesabına mağazanın hangi alanları giriyor?",
+    "Satış rakamına hangi satışlar dahil ediliyor?",
+    "Alttaki mağazaların ortak özelliği ne?",
+    "Rapor hangi dönemi kapsıyor, bu dönemde mağazalarda ne oldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Alan tanımı: depo ve teslim alanı satış alanı sayılmış",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Metrekareye mağazanın toplam alanı giriyor; alttaki mağazaların alanının üçte biri internet siparişleri için teslim noktası ve depo.",
+          "acilma_kosulu": "Metrekare hesabının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi alanları",
+            "toplam alan",
+            "teslim noktası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Alttaki üç mağaza da merkez depoya yakın oldukları için bölgenin internet siparişi teslim noktası seçilmiş mağazalar.",
+          "acilma_kosulu": "Alttaki mağazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "alttaki mağazaların",
+            "teslim noktası seçil",
+            "merkez depoya yakın"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satış rakamına yalnızca mağaza kasası giriyor; bu mağazalardan teslim edilen internet siparişleri sayılmıyor.",
+          "acilma_kosulu": "Satış rakamının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi satışlar",
+            "mağaza kasası",
+            "sayılmıyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Rapor son 12 ayı kapsıyor.",
+          "acilma_kosulu": "Raporun dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi dönemi",
+            "12 ay"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yanıltıyor çünkü alan ve satış farklı tanımlanmış: alttaki mağazaların alanının üçte biri internet siparişi teslim noktası ve depo olarak kullanılıyor, bu alan metrekareye giriyor ama buradan teslim edilen satışlar mağazanın cirosuna yazılmıyor.",
+      "kok_neden_kelimeler": [
+        "alan",
+        "teslim noktası",
+        "internet",
+        "tanım",
+        "ciro"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Dönem etkisi: tadilat ve yol çalışması",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Rapor son 12 ayı kapsıyor; alttaki üç mağazadan ikisi bu dönemde iki ay tadilat için kısmen kapalıydı, birinin önünde altı ay yol çalışması vardı.",
+          "acilma_kosulu": "Raporun dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi dönemi",
+            "tadilat",
+            "yol çalışması"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Alttakiler dönem içinde dışsal kesinti yaşayan mağazalar; kesinti öncesi sıralamada orta sıralardaydılar.",
+          "acilma_kosulu": "Alttaki mağazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "alttaki mağazaların",
+            "dışsal kesinti",
+            "orta sıra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Metrekare satış alanına göre doğru hesaplanıyor.",
+          "acilma_kosulu": "Metrekare hesabının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi alanları",
+            "satış alanına göre"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satış rakamı bütün kanalları içeriyor.",
+          "acilma_kosulu": "Satış rakamının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi satışlar",
+            "bütün kanallar"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yanıltıyor çünkü dönem etkisini ayıklamıyor: alttaki mağazalar yıl içinde tadilat ve yol çalışması gibi dışsal kesintiler yaşadı, kesinti öncesi orta sıralardaydılar ve rapor bu ayları ayırmadan 12 aylık ortalamaya bakıyor.",
+      "kok_neden_kelimeler": [
+        "dönem",
+        "tadilat",
+        "dışsal",
+        "ayıkla",
+        "kesinti"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Konum farkı: AVM ile cadde mağazası aynı ölçüyle",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Alttaki üç mağaza da cadde mağazası; üst sıralar AVM mağazaları.",
+          "acilma_kosulu": "Alttaki mağazaların ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "alttaki mağazaların",
+            "cadde mağazası",
+            "avm"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Metrekare doğru; ama AVM mağazalarının ziyaretçi trafiği cadde mağazalarının üç katı ve kira modeli farklı.",
+          "acilma_kosulu": "Metrekare hesabının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi alanları",
+            "ziyaretçi trafiği",
+            "kira modeli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satış rakamı doğru; ama kâr ve kira dikkate alınmıyor: cadde mağazaları kira düşük olduğu için en kârlı mağazalar arasında.",
+          "acilma_kosulu": "Satış rakamının kapsamı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi satışlar",
+            "kâr",
+            "en kârlı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dönem içinde olağan dışı bir olay olmadı.",
+          "acilma_kosulu": "Raporun dönemi sorulursa",
+          "ipucu_kelimeler": [
+            "hangi dönemi",
+            "olağan dışı"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yanıltıyor çünkü farklı mağaza tiplerini tek ölçüyle karşılaştırıyor: alttakilerin hepsi düşük trafikli cadde mağazaları, AVM mağazalarıyla metrekare satışında yarışamıyorlar ama kira düşük olduğu için en kârlı mağazalar arasındalar.",
+      "kok_neden_kelimeler": [
+        "mağaza tipi",
+        "cadde",
+        "avm",
+        "kâr",
+        "tek ölçü"
+      ]
+    }
+  ]
+}
