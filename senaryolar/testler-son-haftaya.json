@@ -1,0 +1,200 @@
+{
+  "id": "testler-son-haftaya",
+  "baslik": "Kullanıcı testleri neden hep son haftaya kalıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Son üç sistem projesinde kullanıcı kabul testleri canlıya geçişten önceki son haftaya sıkıştı; her seferinde geçiş ya ertelendi ya da hatalarla yapıldı. Testleri koordine eden iş analistiyle konuşuyorsun.",
+  "rolun": "Projelerin portföyünden sorumlu yöneticisin. Amacın test ekibini suçlamak değil, testlerin neden sona kaldığını anlamak.",
+  "karakter": {
+    "ad": "Nehir",
+    "rol": "İş analisti",
+    "tavir": "Sistemli ve bıkkın; \"test ortamı hep geç geliyor\" diyor. Planlamayı soran birine açık konuşuyor.",
+    "ilk_soz": "Testi planlıyoruz ama test ortamı ve kullanıcılar hep son anda hazır oluyor."
+  },
+  "yaniltici_ipuclari": [
+    "Kullanıcılar test yapmayı sevmiyor.",
+    "Yazılım ekibi yavaş."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Test takvimi proje planında nasıl yer alıyor?",
+    "Test edecek kullanıcılar ne zaman ve nasıl belirleniyor?",
+    "Test ortamı ve test verisi ne zaman hazır oluyor?",
+    "Geliştirme sırasında kullanıcılar ürünü ne sıklıkla görüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Plan tampon olarak kullanılıyor: geliştirme gecikmesi testi yiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Plan testleri en sona koyuyor; geliştirme her geciktiğinde canlı tarih sabit kaldığı için gecikme test süresinden kesiliyor.",
+          "acilma_kosulu": "Test takviminin plandaki yeri sorulursa",
+          "ipucu_kelimeler": [
+            "test takvimi",
+            "en sona",
+            "sabit"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kullanıcılar ürünü ancak geliştirme bitince görüyor; ara gösterim yapılmıyor.",
+          "acilma_kosulu": "Kullanıcıların ürünü görme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla görüyor",
+            "ara gösterim",
+            "bitince"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Test ortamı geliştirme bitince kuruluyor; kurulum bir hafta sürüyor.",
+          "acilma_kosulu": "Test ortamının hazır olması sorulursa",
+          "ipucu_kelimeler": [
+            "test ortamı",
+            "kuruluyor",
+            "bir hafta"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Test kullanıcıları proje başında belirleniyor.",
+          "acilma_kosulu": "Test kullanıcılarının belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "test edecek kullanıcılar",
+            "proje başında"
+          ]
+        }
+      ],
+      "kok_neden": "Testler sona kalıyor çünkü plan testi tampon gibi kullanıyor: testler en sonda, geliştirme gecikince sabit canlı tarih yüzünden süre testten kesiliyor ve kullanıcılar ürünü ilk kez geliştirme bitince görüyor.",
+      "kok_neden_kelimeler": [
+        "tampon",
+        "en son",
+        "sabit",
+        "geliştirme",
+        "ara gösterim"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Test kullanıcısı yok: operasyondan kimse çekilemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Test edecek kullanıcılar test haftasından birkaç gün önce isteniyor; operasyon o kısa sürede kimseyi çekemiyor.",
+          "acilma_kosulu": "Test kullanıcılarının belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "test edecek kullanıcılar",
+            "birkaç gün önce",
+            "çekemiyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Test takviminde kullanıcıların zamanı planlanmıyor; yalnızca test tarihleri yazıyor.",
+          "acilma_kosulu": "Test takviminin plandaki yeri sorulursa",
+          "ipucu_kelimeler": [
+            "test takvimi",
+            "zamanı planlanmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kullanıcılar ürünü geliştirme boyunca görmediği için testte temel tasarım itirazları çıkıyor.",
+          "acilma_kosulu": "Kullanıcıların ürünü görme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla görüyor",
+            "temel tasarım",
+            "itiraz"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Test ortamı zamanında hazır oluyor.",
+          "acilma_kosulu": "Test ortamının hazır olması sorulursa",
+          "ipucu_kelimeler": [
+            "test ortamı",
+            "zamanında hazır"
+          ]
+        }
+      ],
+      "kok_neden": "Testler sona kalıyor çünkü test kullanıcısı planlanmıyor: kullanıcılar test haftasından birkaç gün önce isteniyor, operasyon kimseyi çekemiyor ve geliştirme boyunca ürünü görmeyen kullanıcılar testte temel itirazlar çıkarıyor.",
+      "kok_neden_kelimeler": [
+        "test kullanıcısı",
+        "planlan",
+        "operasyon",
+        "itiraz",
+        "çekemiyor"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Test verisi yok: gerçek senaryolar hazırlanmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Test ortamı zamanında kuruluyor ama içinde gerçekçi veri yok; ürün, sipariş ve stok verisi test haftasında elle giriliyor.",
+          "acilma_kosulu": "Test ortamının hazır olması sorulursa",
+          "ipucu_kelimeler": [
+            "test ortamı",
+            "gerçekçi veri",
+            "elle giril"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Takvimde test senaryolarının ve test verisinin hazırlanması için bir adım yok.",
+          "acilma_kosulu": "Test takviminin plandaki yeri sorulursa",
+          "ipucu_kelimeler": [
+            "test takvimi",
+            "test senaryo",
+            "adım yok"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kullanıcılar ürünü düzenli görüyor ama hep örnek veriyle; gerçek veriyle ilk kez son haftada karşılaşıyorlar.",
+          "acilma_kosulu": "Kullanıcıların ürünü görme sıklığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne sıklıkla görüyor",
+            "örnek veri",
+            "ilk kez"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Test kullanıcıları zamanında belirleniyor.",
+          "acilma_kosulu": "Test kullanıcılarının belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "test edecek kullanıcılar",
+            "zamanında belirlen"
+          ]
+        }
+      ],
+      "kok_neden": "Testler sona kalıyor çünkü test verisi hazırlanmıyor: takvimde test senaryosu ve veri hazırlığı adımı yok, gerçekçi veri test haftasında elle giriliyor ve kullanıcılar gerçek veriyle ilk kez son haftada karşılaşıyor.",
+      "kok_neden_kelimeler": [
+        "test verisi",
+        "senaryo",
+        "gerçekçi",
+        "elle",
+        "hazırlık"
+      ]
+    }
+  ]
+}

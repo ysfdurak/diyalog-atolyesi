@@ -1,0 +1,198 @@
+{
+  "id": "proje-toplantilari-bos",
+  "baslik": "Proje ekibi neden toplantılara gelmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Yeni etiketleme sistemi projesinin haftalık toplantılarına 12 kişilik ekipten son üç haftada ortalama dört kişi geldi. İşler sarkıyor. Toplantılara gelmeyen ekip üyelerinden, bölüm temsilcisi Alp'le konuşuyorsun.",
+  "rolun": "Projenin proje yöneticisisin. Amacın katılımı zorunlu kılmak değil, insanların neden gelmediğini anlamak.",
+  "karakter": {
+    "ad": "Alp",
+    "rol": "Proje ekibindeki depo temsilcisi",
+    "tavir": "Saygılı ama yorgun; \"gelmek istiyorum ama\" diye başlıyor. Gerçekten dinlendiğini hissedince açık konuşuyor.",
+    "ilk_soz": "Gelmek istiyorum aslında, ama o saatte depodan çıkmam pek mümkün olmuyor."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip projeyi önemsemiyor.",
+    "Herkes çok yoğun."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Toplantı saatinde depoda genelde neler oluyor?",
+    "Projeye ayırdığın zaman müdürünle nasıl konuşuldu?",
+    "Toplantıya katıldığın son seferde neler konuşuldu?",
+    "Toplantıdan sonra sana hangi işler düşüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Saat ve zaman: projeye zaman ayrılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplantı saati, depoda sabah sevkiyatlarının en yoğun olduğu 10:00'a denk geliyor.",
+          "acilma_kosulu": "Toplantı saatinde depodaki durum sorulursa",
+          "ipucu_kelimeler": [
+            "toplantı saatinde",
+            "10:00",
+            "sevkiyat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Projeye ayrılacak zaman müdürüyle hiç konuşulmadı; müdürü projeyi ek iş olarak görüyor ve hedefleri aynı.",
+          "acilma_kosulu": "Projeye ayrılan zamanın konuşulup konuşulmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "müdürünle",
+            "ek iş",
+            "hedefleri aynı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra ona düşen işleri mesai sonrası yapıyor ya da hiç yapamıyor.",
+          "acilma_kosulu": "Toplantı sonrası düşen işler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler düşüyor",
+            "mesai sonrası"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Son toplantıda test takvimi konuşuldu.",
+          "acilma_kosulu": "Son toplantıda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "son seferde",
+            "test takvimi"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip gelmiyor çünkü projeye zaman ayrılmadı: toplantı depodaki en yoğun saate denk geliyor, ekip üyelerinin müdürleriyle projeye ayrılacak süre konuşulmadı ve proje işi hedeflerin üstüne ek iş olarak kaldı.",
+      "kok_neden_kelimeler": [
+        "zaman",
+        "saat",
+        "müdür",
+        "ek iş",
+        "yoğun"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Toplantı değer üretmiyor: bilgi okuma toplantısı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son toplantıda bir saat boyunca her ekip üyesi durumunu tek tek okudu; hiçbir karar alınmadı.",
+          "acilma_kosulu": "Son toplantıda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "son seferde",
+            "durumunu tek tek",
+            "karar alınmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantı saati uygun; gelmeyenler çoğunlukla bilerek gelmiyor.",
+          "acilma_kosulu": "Toplantı saatinde depodaki durum sorulursa",
+          "ipucu_kelimeler": [
+            "toplantı saatinde",
+            "bilerek"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra ona bir iş düşmüyor; aynı bilgi toplantı notunda da var, notu okumak yetiyor.",
+          "acilma_kosulu": "Toplantı sonrası düşen işler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler düşüyor",
+            "toplantı notu",
+            "okumak yet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Projeye haftada dört saat ayrıldı.",
+          "acilma_kosulu": "Projeye ayrılan zamanın konuşulup konuşulmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "müdürünle",
+            "dört saat"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip gelmiyor çünkü toplantı değer üretmiyor: bir saat boyunca durumlar tek tek okunuyor, karar alınmıyor ve aynı bilgi nottan okunabildiği için insanlar bilerek gelmiyor.",
+      "kok_neden_kelimeler": [
+        "karar",
+        "durum okuma",
+        "değer",
+        "not",
+        "bilerek"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Rolü belirsiz: neden orada olduğunu bilmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Son toplantıda çoğunlukla yazılım ayrıntıları konuşuldu; depo tarafını ilgilendiren bir konu yoktu.",
+          "acilma_kosulu": "Son toplantıda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "son seferde",
+            "yazılım ayrıntı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantıdan sonra ona hiçbir iş verilmiyor; projede rolünün ne olduğu, neye karar vereceği hiç söylenmedi.",
+          "acilma_kosulu": "Toplantı sonrası düşen işler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler düşüyor",
+            "rolü",
+            "karar vereceği"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Projeye müdürü \"bizden biri olsun\" diye onu yazdırdı; ne beklendiği konuşulmadı.",
+          "acilma_kosulu": "Projeye ayrılan zamanın konuşulup konuşulmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "müdürünle",
+            "bizden biri",
+            "yazdırdı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Toplantı saati depoda sakin bir saate denk geliyor.",
+          "acilma_kosulu": "Toplantı saatinde depodaki durum sorulursa",
+          "ipucu_kelimeler": [
+            "toplantı saatinde",
+            "sakin bir saat"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip gelmiyor çünkü rolünü bilmiyor: üyeler 'bizden biri olsun' diye projeye yazıldı, kimseye rolü ve neye karar vereceği söylenmedi ve toplantılar onları ilgilendirmeyen ayrıntılarla geçiyor.",
+      "kok_neden_kelimeler": [
+        "rol",
+        "belirsiz",
+        "beklenti",
+        "ilgilendir",
+        "bizden biri"
+      ]
+    }
+  ]
+}

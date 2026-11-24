@@ -1,0 +1,200 @@
+{
+  "id": "butce-kirpiliyor",
+  "baslik": "Bütçe talebin neden her yıl kırpılıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İş geliştirme",
+  "sure_dk": 7,
+  "acilis": "Üç yıldır deponun bakım ve iyileştirme bütçesi talebi finans tarafından %40 kırpılıyor. Bu yıl da aynısı oldu ve iki kritik iş ertelendi. Bütçe sürecini yöneten finans iş ortağıyla konuşuyorsun.",
+  "rolun": "Deponun bütçe talebini hazırlayan iş geliştirme yöneticisisin. Amacın kırpmaya itiraz etmek değil, talebin neden kırpıldığını anlamak.",
+  "karakter": {
+    "ad": "Burak Bey",
+    "rol": "Finans iş ortağı",
+    "tavir": "Rakamcı ve nazik; \"herkesin talebi kırpılıyor\" diyor. Değerlendirme yöntemini soran birine açık konuşuyor.",
+    "ilk_soz": "Sadece sizin değil, herkesin talebi kırpılıyor. Bütçe sınırlı."
+  },
+  "yaniltici_ipuclari": [
+    "Finans operasyonu anlamıyor.",
+    "Şirket tasarruf modunda."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bütçe talepleri finans tarafında nasıl değerlendiriliyor?",
+    "Bizim talebimiz diğer departmanların taleplerinden nasıl ayrışıyor?",
+    "Geçen yıl onaylanan bütçenin ne kadarı gerçekten harcandı?",
+    "Kırpma kararı hangi toplantıda ve kimler tarafından veriliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gerekçe yok: talep geçen yıl artı enflasyon",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Finans her kalemde bir gerekçe ve getiri bekliyor; gerekçesi olmayan kalemler önce kırpılıyor.",
+          "acilma_kosulu": "Taleplerin değerlendirilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendiriliyor",
+            "gerekçe",
+            "getiri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bizim talebimiz geçen yılın bütçesine enflasyon eklenerek hazırlanıyor; diğer departmanlar iş başına gerekçeli talep sunuyor.",
+          "acilma_kosulu": "Talebin diğerlerinden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer departmanların",
+            "enflasyon",
+            "iş başına"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kırpma bütçe komitesinde yapılıyor; kalemleri savunacak kimse toplantıda yok, sadece yazılı talep okunuyor.",
+          "acilma_kosulu": "Kırpma kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kırpma kararı",
+            "bütçe komitesi",
+            "savunacak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geçen yılın bütçesi büyük ölçüde harcandı.",
+          "acilma_kosulu": "Geçen yılın harcanma oranı sorulursa",
+          "ipucu_kelimeler": [
+            "gerçekten harcandı",
+            "büyük ölçüde"
+          ]
+        }
+      ],
+      "kok_neden": "Talep gerekçesiz olduğu için kırpılıyor: depo bütçesi geçen yıla enflasyon eklenerek hazırlanıyor, finans gerekçe ve getiri bekliyor ve komitede kalemleri savunacak kimse olmadığı için kırpma önce bu talebe düşüyor.",
+      "kok_neden_kelimeler": [
+        "gerekçe",
+        "enflasyon",
+        "getiri",
+        "komite",
+        "savun"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Harcanmayan bütçe: geçen yıl yarısı kullanılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl onaylanan bütçenin yalnızca %55'i harcandı; işlerin bir kısmı satın alma süreçleri yüzünden yıl içinde başlatılamadı.",
+          "acilma_kosulu": "Geçen yılın harcanma oranı sorulursa",
+          "ipucu_kelimeler": [
+            "gerçekten harcandı",
+            "%55",
+            "başlatılamadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Finans bir sonraki yılın talebini, önceki yılın harcanma oranına göre otomatik düşürüyor.",
+          "acilma_kosulu": "Taleplerin değerlendirilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendiriliyor",
+            "harcanma oranı",
+            "otomatik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer departmanlar bütçelerinin %90'ından fazlasını yıl içinde harcıyor.",
+          "acilma_kosulu": "Talebin diğerlerinden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer departmanların",
+            "%90"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kırpma kararı CFO'nun toplantısında veriliyor.",
+          "acilma_kosulu": "Kırpma kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kırpma kararı",
+            "cfo"
+          ]
+        }
+      ],
+      "kok_neden": "Talep geçmiş performans yüzünden kırpılıyor: geçen yıl onaylanan bütçenin yalnızca %55'i harcandı ve finans bir sonraki talebi harcanma oranına göre otomatik düşürüyor; harcanamamanın nedeni satın almada takılan işler.",
+      "kok_neden_kelimeler": [
+        "harcan",
+        "%55",
+        "otomatik",
+        "satın alma",
+        "oran"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Risk anlatılmıyor: ertelemenin bedeli görünmüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Diğer departmanlar \"bu yapılmazsa ne olur\" sorusunu rakamla cevaplıyor; bizim talepte ertelemenin bedeli yazmıyor.",
+          "acilma_kosulu": "Talebin diğerlerinden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer departmanların",
+            "yapılmazsa",
+            "erteleme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Finans, ertelenince maliyeti ya da riski büyüyen kalemleri öncelikli tutuyor; risk belirtilmeyen kalem \"ertelenebilir\" sayılıyor.",
+          "acilma_kosulu": "Taleplerin değerlendirilme şekli sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl değerlendiriliyor",
+            "ertelenebilir",
+            "risk"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Komitede geçen yıl ertelenen çatı tamirinin bu yıl iki kat maliyetle yapıldığı hiç gündeme gelmedi.",
+          "acilma_kosulu": "Kırpma kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kırpma kararı",
+            "çatı",
+            "iki kat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geçen yılın bütçesi tamamen harcandı.",
+          "acilma_kosulu": "Geçen yılın harcanma oranı sorulursa",
+          "ipucu_kelimeler": [
+            "gerçekten harcandı",
+            "tamamen harcandı"
+          ]
+        }
+      ],
+      "kok_neden": "Talep risk anlatılmadığı için kırpılıyor: finans ertelenince büyüyen kalemleri koruyor, depo talebinde ertelemenin bedeli yazmıyor ve geçen yıl ertelenip iki kat maliyetle yapılan iş komiteye hiç anlatılmadı.",
+      "kok_neden_kelimeler": [
+        "risk",
+        "erteleme",
+        "bedel",
+        "komite",
+        "iki kat"
+      ]
+    }
+  ]
+}

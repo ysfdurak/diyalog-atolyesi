@@ -1,0 +1,201 @@
+{
+  "id": "cok-proje-ayni-anda",
+  "baslik": "Ekip aynı anda yedi projede, neden hiçbiri bitmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "İyileştirme ekibinin dört kişisi aynı anda yedi projede çalışıyor; son altı ayda tek bir proje kapanmadı. Ekipten deneyimli proje uzmanı Batuhan'la konuşuyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın ekibi daha çok çalıştırmak değil, işlerin neden bitmediğini anlamak.",
+  "karakter": {
+    "ad": "Batuhan",
+    "rol": "Proje uzmanı",
+    "tavir": "Yorgun ve dağınık; \"her şey acil\" diyor. Gününü merak eden birine dürüst anlatıyor.",
+    "ilk_soz": "Her proje acil, her biri birinin önceliği. Ben de hepsine biraz yetişmeye çalışıyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip yeterince hızlı değil.",
+    "Projeler çok karmaşık."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir gününün nasıl geçtiğini anlatır mısın?",
+    "Yeni bir proje ekibe nasıl ve kimin kararıyla giriyor?",
+    "Projeler arasında öncelik nasıl belirleniyor?",
+    "Bitmeye en yakın proje neden kapanamıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Projeye giriş kapısı yok: her müdür proje ekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her bölüm müdürü doğrudan ekibe proje verebiliyor; yeni proje almak için bir değerlendirme ya da kapasite kontrolü yok.",
+          "acilma_kosulu": "Yeni projelerin nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "yeni bir proje",
+            "bölüm müdürü",
+            "kapasite kontrol"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Öncelik belirlenmiyor; en son arayan müdürün projesi o hafta öne geçiyor.",
+          "acilma_kosulu": "Önceliğin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "projeler arasında",
+            "en son arayan",
+            "öne geç"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Günü yedi projenin toplantıları arasında geçiyor; her birine günde bir saatten az kalıyor.",
+          "acilma_kosulu": "Bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününün",
+            "yedi proje",
+            "bir saatten az"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "En yakın proje son raporunu bekliyor.",
+          "acilma_kosulu": "En yakın projenin neden kapanmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeye en yakın",
+            "son rapor"
+          ]
+        }
+      ],
+      "kok_neden": "İşler bitmiyor çünkü projeye giriş kapısı yok: her müdür ekibe doğrudan proje veriyor, kapasiteye bakılmıyor, öncelik en son arayana göre belirleniyor ve ekip yedi projeye bölünüp hiçbirine yeterli zaman ayıramıyor.",
+      "kok_neden_kelimeler": [
+        "kapasite",
+        "öncelik",
+        "giriş",
+        "yedi proje",
+        "bölün"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kapanış tanımı yok: projeler bitmeden yeniye geçiliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bitmeye en yakın projede uygulama yapıldı ama sonuçların ölçülmesi ve teslim için kimse tarih koymadı; \"bitmiş sayılır\" deniyor.",
+          "acilma_kosulu": "En yakın projenin neden kapanmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeye en yakın",
+            "ölçül",
+            "bitmiş sayılır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni projeler, eski projeler resmen kapanmadan başlatılıyor; kapanış kriteri tanımlı değil.",
+          "acilma_kosulu": "Yeni projelerin nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "yeni bir proje",
+            "kapanış kriteri",
+            "resmen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Öncelik listesi var ama listede \"%90 bitti\" görünen projeler hep en alta düşüyor.",
+          "acilma_kosulu": "Önceliğin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "projeler arasında",
+            "%90",
+            "en alt"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Günü çoğunlukla sahada geçiyor.",
+          "acilma_kosulu": "Bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününün",
+            "sahada geçiyor"
+          ]
+        }
+      ],
+      "kok_neden": "İşler bitmiyor çünkü kapanış tanımlı değil: projeler uygulama yapılınca 'bitmiş sayılıyor' ama ölçüm ve teslim yapılmıyor, yeni projeler eskiler kapanmadan başlıyor ve %90'daki projeler öncelikte en alta düşüyor.",
+      "kok_neden_kelimeler": [
+        "kapanış",
+        "ölçüm",
+        "%90",
+        "kriter",
+        "teslim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bekleme ve bağımlılık: her proje başka birini bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bitmeye en yakın proje, BT'nin bir rapor değişikliğini bekliyor; diğer projeler de satın alma, bakım ya da başka bölümlerden bir şey bekliyor.",
+          "acilma_kosulu": "En yakın projenin neden kapanmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeye en yakın",
+            "bt'nin",
+            "satın alma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Günü projeler arasında, kimin neyi beklediğini sormak ve hatırlatma yapmakla geçiyor.",
+          "acilma_kosulu": "Bir gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "bir gününün",
+            "hatırlatma",
+            "sormak"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Öncelik, beklemede olmayan işe göre günlük değişiyor; ekip beklerken yeni bir proje alınca hepsi uzuyor.",
+          "acilma_kosulu": "Önceliğin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "projeler arasında",
+            "beklemede",
+            "yeni bir proje alınca"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yeni projeler aylık bir toplantıda kabul ediliyor.",
+          "acilma_kosulu": "Yeni projelerin nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "yeni bir proje",
+            "aylık toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "İşler bitmiyor çünkü projeler dış bağımlılıklarda bekliyor: her proje BT, satın alma ya da başka bir bölümü bekliyor, ekip beklerken yeni proje alıyor ve günü hatırlatma yapmakla geçiyor.",
+      "kok_neden_kelimeler": [
+        "bekle",
+        "bağımlılık",
+        "bt",
+        "hatırlat",
+        "yeni proje"
+      ]
+    }
+  ]
+}

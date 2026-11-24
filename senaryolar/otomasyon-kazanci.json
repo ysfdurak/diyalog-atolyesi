@@ -1,0 +1,201 @@
+{
+  "id": "otomasyon-kazanci",
+  "baslik": "Otomasyon yatırımı neden beklenen kazancı vermedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sure_dk": 8,
+  "acilis": "Bir yıl önce devreye alınan otomatik sıralama (sorter) hattının yatırım kararında yılda %30 işçilik tasarrufu öngörülmüştü. Gerçekleşen tasarruf %8. Hattı işleten operasyon müdürüyle konuşuyorsun.",
+  "rolun": "Yatırım önerisini hazırlayan iş geliştirme yöneticisisin. Amacın operasyonu suçlamak değil, kazancın neden gelmediğini anlamak.",
+  "karakter": {
+    "ad": "Hakan Bey",
+    "rol": "Operasyon müdürü",
+    "tavir": "Deneyimli ve sabırsız; \"hat çalışıyor, sorun hesapta\" diyor. Sahayı merak eden birine somut konuşuyor.",
+    "ilk_soz": "Hat çalışıyor, makine olarak bir sorunu yok. Hesaplar kâğıt üzerinde biraz iyimserdi."
+  },
+  "yaniltici_ipuclari": [
+    "Makine beklenenden yavaş.",
+    "Ekip makineye alışamadı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Hat günün hangi saatlerinde ve ne kadar doluluğla çalışıyor?",
+    "Hattın öncesinde ve sonrasında kaç kişi çalışıyor, ne değişti?",
+    "Yatırım hesabındaki varsayımlar nasıl belirlenmişti?",
+    "Hatta en çok hangi ürünler ya da siparişler sorun çıkarıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hacim gelmedi: hesap üç vardiya doluluk varsaydı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hat günde yalnızca bir vardiya, yaklaşık %45 dolulukla çalışıyor.",
+          "acilma_kosulu": "Hattın kullanım oranı sorulursa",
+          "ipucu_kelimeler": [
+            "doluluğla",
+            "%45",
+            "bir vardiya"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yatırım hesabı, satışın o yıl öngördüğü hacimle hattın üç vardiya dolu çalışacağını varsaydı; hacim artışı gerçekleşmedi.",
+          "acilma_kosulu": "Hesap varsayımlarının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlar",
+            "üç vardiya",
+            "hacim artışı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hattın kendisi kişi azalttı ama hat bir vardiya çalıştığı için diğer vardiyalarda eski elle ayırma sürüyor.",
+          "acilma_kosulu": "Hat öncesi ve sonrası işçilik sorulursa",
+          "ipucu_kelimeler": [
+            "öncesinde ve sonrasında",
+            "elle ayırma",
+            "diğer vardiya"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bazı büyük koliler hatta sıkışıyor.",
+          "acilma_kosulu": "Hatta sorun çıkaran ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkarıyor",
+            "büyük koli"
+          ]
+        }
+      ],
+      "kok_neden": "Kazanç hacim gelmediği için yok: yatırım hesabı hattın üç vardiya dolu çalışacağını varsaydı, öngörülen hacim artışı gelmedi, hat bir vardiya yarı dolu çalışıyor ve diğer vardiyalarda elle ayırma sürüyor.",
+      "kok_neden_kelimeler": [
+        "hacim",
+        "varsayım",
+        "üç vardiya",
+        "doluluk",
+        "elle"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Uygun olmayan ürünler: siparişlerin üçte biri hatta giremiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ağır, yuvarlak ya da torbalı ürünler hatta giremiyor; siparişlerin üçte biri hâlâ elle ayrılıyor.",
+          "acilma_kosulu": "Hatta sorun çıkaran ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkarıyor",
+            "ağır",
+            "torbalı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hesapta bütün siparişlerin hattan geçeceği varsayıldı; ürün ölçüleri ve ambalaj türleri hesaba katılmadı.",
+          "acilma_kosulu": "Hesap varsayımlarının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlar",
+            "bütün sipariş",
+            "ambalaj türü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Elle ayırma ekibi küçüldü ama kapanmadı; ayrıca hattın beslenmesi için iki yeni kişi gerekti.",
+          "acilma_kosulu": "Hat öncesi ve sonrası işçilik sorulursa",
+          "ipucu_kelimeler": [
+            "öncesinde ve sonrasında",
+            "beslen",
+            "iki yeni kişi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hat iki vardiya çalışıyor.",
+          "acilma_kosulu": "Hattın kullanım oranı sorulursa",
+          "ipucu_kelimeler": [
+            "doluluğla",
+            "iki vardiya"
+          ]
+        }
+      ],
+      "kok_neden": "Kazanç gelmedi çünkü ürünlerin bir kısmı hatta uygun değil: hesap bütün siparişlerin hattan geçeceğini varsaydı, ağır, yuvarlak ve torbalı ürünler girmiyor, elle ayırma sürüyor ve hattı beslemek için yeni kişiler gerekti.",
+      "kok_neden_kelimeler": [
+        "uygun",
+        "ürün",
+        "elle",
+        "beslen",
+        "varsay"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Duruşlar: bakım sözleşmesi ve yedek parça yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hat çalışma süresinin %20'sinde arıza nedeniyle duruyor; duruşlarda ekip elle ayırmaya dönüyor.",
+          "acilma_kosulu": "Hattın kullanım oranı sorulursa",
+          "ipucu_kelimeler": [
+            "doluluğla",
+            "%20",
+            "duruyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yatırım hesabında %98 çalışırlık varsayıldı; bakım sözleşmesi ve yedek parça bütçesi maliyetten çıkarılmıştı.",
+          "acilma_kosulu": "Hesap varsayımlarının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "varsayımlar",
+            "%98",
+            "bakım sözleşmesi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En çok sorun, sensörleri tozlanan iki ayırma kolunda; parça tedarikçiden üç haftada geliyor.",
+          "acilma_kosulu": "Hatta sorun çıkaran ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkarıyor",
+            "sensör",
+            "üç hafta"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hattın etrafında çalışan kişi sayısı planlandığı gibi.",
+          "acilma_kosulu": "Hat öncesi ve sonrası işçilik sorulursa",
+          "ipucu_kelimeler": [
+            "öncesinde ve sonrasında",
+            "planlandığı gibi"
+          ]
+        }
+      ],
+      "kok_neden": "Kazanç duruşlarda kayboluyor: hesap %98 çalışırlık varsaydı ve bakım sözleşmesiyle yedek parça bütçesi maliyetten çıkarıldı; hat zamanın beşte birinde arızada, parça haftalarca geliyor ve ekip elle ayırmaya dönüyor.",
+      "kok_neden_kelimeler": [
+        "duruş",
+        "bakım",
+        "yedek parça",
+        "çalışırlık",
+        "arıza"
+      ]
+    }
+  ]
+}

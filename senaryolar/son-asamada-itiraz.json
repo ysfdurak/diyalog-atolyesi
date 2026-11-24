@@ -1,0 +1,201 @@
+{
+  "id": "son-asamada-itiraz",
+  "baslik": "Proje son aşamada neden itirazla karşılaştı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Yeni iade süreci projesi sekiz aylık çalışmanın ardından canlıya geçmek üzereydi. Son onay toplantısında müşteri hizmetleri direktörü projeye itiraz etti ve geçiş durdu. Proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın direktörü ikna etmek değil, itirazın neden son aşamada geldiğini anlamak.",
+  "karakter": {
+    "ad": "Cenk",
+    "rol": "Proje yöneticisi",
+    "tavir": "Hayal kırıklığına uğramış; \"son dakikada taş koydular\" diyor. Paydaş sürecini soran birine dürüst konuşuyor.",
+    "ilk_soz": "Sekiz ay çalıştık, son dakikada taş koydular. Hiç beklemiyordum."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri hizmetleri değişime direniyor.",
+    "Direktör projeyi sahiplenmek istiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Proje başında hangi bölümler paydaş olarak belirlendi?",
+    "Müşteri hizmetleri projeye ne zaman ve nasıl dahil oldu?",
+    "Direktörün itirazı tam olarak ne?",
+    "Proje boyunca ara onaylar nasıl alındı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Paydaş haritası eksik: müşteri hizmetleri hiç yoktu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Proje başında yalnızca depo ve BT paydaş olarak belirlendi; iade sürecinin müşteriye bakan tarafı düşünülmedi.",
+          "acilma_kosulu": "Paydaşların nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "paydaş olarak",
+            "depo ve bt",
+            "müşteriye bakan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Direktörün itirazı, yeni süreçte müşteriye para iadesinin iki gün geciktiği ve çağrı merkezine şikâyet yükü bineceği.",
+          "acilma_kosulu": "Itirazın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "itirazı tam olarak",
+            "para iadesi",
+            "çağrı merkezi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Müşteri hizmetleri projeyi ilk kez son onay toplantısının davetiyle öğrendi.",
+          "acilma_kosulu": "Müşteri hizmetlerinin dahil olma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "son onay",
+            "davet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ara onaylar depo müdürü ve BT'den alındı.",
+          "acilma_kosulu": "Ara onayların nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "ara onaylar",
+            "depo müdürü ve bt"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz geç geldi çünkü etkilenen bölüm hiç paydaş sayılmadı: proje yalnızca depo ve BT ile yürüdü, müşteri hizmetleri projeyi son onay davetiyle öğrendi ve yeni süreç para iadesini geciktirip onların yükünü artırıyor.",
+      "kok_neden_kelimeler": [
+        "paydaş",
+        "müşteri hizmetleri",
+        "geç",
+        "para iadesi",
+        "dahil"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Haberdar ama söz hakkı yok: bilgilendirme e-postaları",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteri hizmetleri proje boyunca aylık bilgilendirme e-postası aldı; tasarım toplantılarına davet edilmedi.",
+          "acilma_kosulu": "Müşteri hizmetlerinin dahil olma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "bilgilendirme e-postası",
+            "tasarım toplantı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ara onaylarda yalnızca proje ekibi imza attı; müşteri hizmetlerinden onay istenmedi.",
+          "acilma_kosulu": "Ara onayların nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "ara onaylar",
+            "imza",
+            "onay istenmedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Direktörün itirazı, ekibinin yeni ekranları hiç görmemiş olması ve eğitim planının olmaması.",
+          "acilma_kosulu": "Itirazın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "itirazı tam olarak",
+            "ekranlar",
+            "eğitim plan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Proje başında bütün bölümler paydaş listesine yazıldı.",
+          "acilma_kosulu": "Paydaşların nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "paydaş olarak",
+            "listesine yazıldı"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz son aşamada geldi çünkü müşteri hizmetleri bilgilendirildi ama dahil edilmedi: yalnızca aylık e-posta aldılar, tasarıma ve ara onaylara katılmadılar ve ekipleri yeni ekranları ilk kez son aşamada gördü.",
+      "kok_neden_kelimeler": [
+        "bilgilendir",
+        "dahil",
+        "onay",
+        "söz hakkı",
+        "e-posta"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Direktör değişti: yeni direktöre devir yapılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Müşteri hizmetleri baştan projedeydi; ama eski direktör üç ay önce ayrıldı, yeni direktöre proje anlatılmadı.",
+          "acilma_kosulu": "Müşteri hizmetlerinin dahil olma şekli sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "eski direktör",
+            "yeni direktör"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni direktörün itirazı projeye değil, eski direktörün verdiği bir kararadır: iade onay yetkisinin depoya geçmesi.",
+          "acilma_kosulu": "Itirazın içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "itirazı tam olarak",
+            "onay yetkisi",
+            "eski direktörün"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ara onaylar yazılı değil, toplantılarda sözlü alındı; yeni direktöre gösterilecek bir karar kaydı yok.",
+          "acilma_kosulu": "Ara onayların nasıl alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "ara onaylar",
+            "sözlü",
+            "karar kaydı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Proje başında paydaş listesi geniş tutuldu.",
+          "acilma_kosulu": "Paydaşların nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "paydaş olarak",
+            "geniş tutul"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz paydaş değişikliğinden: müşteri hizmetleri projedeydi ama direktörleri değişti, yeni direktöre proje anlatılmadı ve eski direktörün verdiği kararlar yazılı olmadığı için yeni direktör onları kabul etmiyor.",
+      "kok_neden_kelimeler": [
+        "direktör",
+        "anlatılmadı",
+        "yazılı",
+        "karar",
+        "devir"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "kararlar-erteleniyor",
+  "baslik": "Projede kararlar neden sürekli erteleniyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Depo yerleşim projesinde yönlendirme kurulu son üç toplantıda raf tipi kararını erteledi. Proje ekibi iki aydır bu kararı bekliyor ve tedarikçi teklifinin süresi doldu. Kurul sekreterliğini yapan proje koordinatörüyle konuşuyorsun.",
+  "rolun": "Projenin proje yöneticisisin. Amacın kurulu sıkıştırmak değil, kararın neden çıkmadığını anlamak.",
+  "karakter": {
+    "ad": "Tülay",
+    "rol": "Proje koordinatörü",
+    "tavir": "Düzenli ve diplomatik; kurul üyelerini eleştirmekten kaçınıyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Kurul konuyu önemsiyor, inanın. Ama her toplantıda yeni sorular çıkıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Kurul üyeleri kararsız.",
+    "Herkes başka işlerle meşgul."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Karar için kurula hangi bilgiler sunuldu?",
+    "Toplantılarda karar yerine neler konuşuluyor?",
+    "Kurulda bu kararı kim veriyor?",
+    "Her ertelemeden sonra neler yapılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Seçenek sunulmadı: kurul analiz değil karar bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurula 40 sayfalık bir teknik analiz sunuldu; seçenekler, maliyetleri ve önerilen tercih tek sayfada özetlenmedi.",
+          "acilma_kosulu": "Kurula sunulan bilgiler sorulursa",
+          "ipucu_kelimeler": [
+            "kurula hangi",
+            "40 sayfa",
+            "önerilen tercih"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantılarda kurul üyeleri analizdeki ayrıntıları soruyor ve ek analiz istiyor; karar sorusu hiç net sorulmuyor.",
+          "acilma_kosulu": "Toplantılarda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "karar yerine",
+            "ek analiz",
+            "net sorulmuyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Her ertelemeden sonra ekip daha uzun bir analiz hazırlıyor; sunum her seferinde büyüyor.",
+          "acilma_kosulu": "Ertelemeden sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ertelemeden sonra",
+            "daha uzun",
+            "büyüyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kararı kurul başkanı veriyor.",
+          "acilma_kosulu": "Kararı kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararı kim",
+            "kurul başkanı"
+          ]
+        }
+      ],
+      "kok_neden": "Karar ertelemesi sunumdan: kurula seçenekler ve önerilen tercih yerine uzun bir teknik analiz sunuldu, karar sorusu hiç net sorulmadı ve her ertelemede analiz daha da büyüdü.",
+      "kok_neden_kelimeler": [
+        "seçenek",
+        "öneri",
+        "analiz",
+        "karar sorusu",
+        "net"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Karar sahibi belirsiz: kurulda kimin vereceği belli değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurulda kararın kimde olduğu tanımlı değil; operasyon ve finans direktörü farklı raf tiplerini savunuyor ve kimse son sözü söylemiyor.",
+          "acilma_kosulu": "Kararı kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararı kim",
+            "tanımlı değil",
+            "son söz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantılar iki direktörün tartışmasıyla geçiyor; başkan uzlaşma bekliyor.",
+          "acilma_kosulu": "Toplantılarda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "karar yerine",
+            "tartışma",
+            "uzlaşma"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ertelemeden sonra iki direktörü bir araya getirecek bir ara görüşme yapılmıyor.",
+          "acilma_kosulu": "Ertelemeden sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ertelemeden sonra",
+            "ara görüşme",
+            "bir araya"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kurula seçenekler net biçimde sunuldu.",
+          "acilma_kosulu": "Kurula sunulan bilgiler sorulursa",
+          "ipucu_kelimeler": [
+            "kurula hangi",
+            "net biçimde"
+          ]
+        }
+      ],
+      "kok_neden": "Karar ertelemesi karar sahibinin belirsizliğinden: kurulda son sözün kimde olduğu tanımlı değil, iki direktör farklı seçenekleri savunuyor ve uzlaşmayı sağlayacak bir ara görüşme yapılmıyor.",
+      "kok_neden_kelimeler": [
+        "karar sahibi",
+        "belirsiz",
+        "iki direktör",
+        "uzlaşma",
+        "son söz"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bağımlı karar bekleniyor: bütçe ve kira kararı önce",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplantılarda raf tipi yerine deponun kira sözleşmesinin uzatılıp uzatılmayacağı konuşuluyor; o karar çıkmadan kimse raf yatırımına onay vermek istemiyor.",
+          "acilma_kosulu": "Toplantılarda konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "karar yerine",
+            "kira sözleşmesi",
+            "uzatıl"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ertelemeden sonra kira kararının ne zaman çıkacağı takip edilmiyor; proje planında bu bağımlılık yazmıyor.",
+          "acilma_kosulu": "Ertelemeden sonra yapılanlar sorulursa",
+          "ipucu_kelimeler": [
+            "ertelemeden sonra",
+            "bağımlılık",
+            "takip edilmiyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kurula raf seçenekleri sunuldu ama kira kararının olası sonuçlarına göre seçenekler ayrılmadı.",
+          "acilma_kosulu": "Kurula sunulan bilgiler sorulursa",
+          "ipucu_kelimeler": [
+            "kurula hangi",
+            "olası sonuç"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kararı kurul oy çokluğuyla veriyor.",
+          "acilma_kosulu": "Kararı kimin verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "kararı kim",
+            "oy çokluğu"
+          ]
+        }
+      ],
+      "kok_neden": "Karar başka bir karara bağlı: kurul önce deponun kira sözleşmesinin uzayıp uzamayacağını bilmek istiyor, bu bağımlılık proje planında yok ve raf seçenekleri kira kararının olası sonuçlarına göre hazırlanmadı.",
+      "kok_neden_kelimeler": [
+        "kira",
+        "bağımlı",
+        "önce",
+        "plan",
+        "olası sonuç"
+      ]
+    }
+  ]
+}

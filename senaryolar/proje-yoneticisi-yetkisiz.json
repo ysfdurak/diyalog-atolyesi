@@ -1,0 +1,201 @@
+{
+  "id": "proje-yoneticisi-yetkisiz",
+  "baslik": "Proje yöneticisi neden kimseye iş yaptıramıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Proje yönetimi",
+  "sure_dk": 7,
+  "acilis": "Depo süreç projesinin proje yöneticisi Nil, ekipteki kişilerden işleri zamanında alamıyor; görevlerin yarısı gecikmede. Ekiptekiler kendi müdürlerinin işlerini öne alıyor. Nil'le birebir görüşüyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın Nil'i eleştirmek değil, neden iş yaptıramadığını anlamak.",
+  "karakter": {
+    "ad": "Nil",
+    "rol": "Proje yöneticisi",
+    "tavir": "Yetkin ama yıpranmış; \"kimse beni dinlemek zorunda değil\" diyor. Destek gördüğünü hissedince açık konuşuyor.",
+    "ilk_soz": "Görevleri dağıtıyorum, tarih veriyorum. Ama kimse beni dinlemek zorunda değil aslında."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip disiplinsiz.",
+    "Nil yeterince sert değil."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ekiptekilerin zamanı proje başında nasıl ayarlandı?",
+    "Bir görev geciktiğinde ne yapabiliyorsun?",
+    "Ekiptekilerin performansını kim değerlendiriyor?",
+    "Sponsor olarak benden en son ne zaman destek istedin, nasıl geçti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Matris yapı: zaman müdürlerden alınmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekiptekilerin projeye ayıracağı zaman, bağlı oldukları müdürlerle hiç konuşulmadı; müdürler projeyi bilgilendirme e-postasıyla öğrendi.",
+          "acilma_kosulu": "Ekip zamanının ayarlanması sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı proje başında",
+            "müdürlerle",
+            "bilgilendirme"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekiptekilerin performansını yalnızca kendi müdürleri değerlendiriyor; proje katkısı değerlendirmeye girmiyor.",
+          "acilma_kosulu": "Ekip performansını kimin değerlendirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "performansını kim",
+            "kendi müdürleri",
+            "katkı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Görev geciktiğinde Nil yalnızca hatırlatma yapabiliyor; ekiptekinin müdürüyle konuşma yetkisi ya da yolu yok.",
+          "acilma_kosulu": "Gecikmede ne yapılabildiği sorulursa",
+          "ipucu_kelimeler": [
+            "görev geciktiğinde",
+            "hatırlatma",
+            "yolu yok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sponsordan iki ay önce destek istedi ve toplantı yapıldı.",
+          "acilma_kosulu": "Sponsordan destek istenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "toplantı yapıldı"
+          ]
+        }
+      ],
+      "kok_neden": "Nil iş yaptıramıyor çünkü proje zamanı müdürlerden alınmadı: ekiptekilerin zamanı bağlı oldukları müdürlerle konuşulmadı, performanslarını yalnızca kendi müdürleri değerlendiriyor ve Nil'in elinde hatırlatma dışında bir araç yok.",
+      "kok_neden_kelimeler": [
+        "müdür",
+        "zaman",
+        "değerlendir",
+        "yetki",
+        "matris"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sponsor görünmüyor: yetki desteklenmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Nil sponsordan iki kez destek istedi; ikisinde de \"sen hallet\" cevabını aldı, sponsor ekibe hiç konuşmadı.",
+          "acilma_kosulu": "Sponsordan destek istenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "sen hallet",
+            "ekibe konuşmadı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Proje başında ekiplerin zamanı ayarlandı ama açılış toplantısına sponsor katılmadı; ekip projenin önemini yalnızca Nil'den duydu.",
+          "acilma_kosulu": "Ekip zamanının ayarlanması sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı proje başında",
+            "açılış toplantısı",
+            "önemini"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Görev geciktiğinde Nil bunu sponsora iletebilir ama sponsor gecikmelere tepki vermiyor; ekip bunun sonuçsuz olduğunu biliyor.",
+          "acilma_kosulu": "Gecikmede ne yapılabildiği sorulursa",
+          "ipucu_kelimeler": [
+            "görev geciktiğinde",
+            "tepki vermiyor",
+            "sonuçsuz"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Performans değerlendirmesine proje katkısı da giriyor.",
+          "acilma_kosulu": "Ekip performansını kimin değerlendirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "performansını kim",
+            "proje katkısı da"
+          ]
+        }
+      ],
+      "kok_neden": "Nil iş yaptıramıyor çünkü sponsor görünmüyor: sponsor açılışa katılmadı, destek istendiğinde 'sen hallet' dedi ve gecikmelere tepki vermediği için ekip proje önceliğinin gerçek olmadığını düşünüyor.",
+      "kok_neden_kelimeler": [
+        "sponsor",
+        "görünmüyor",
+        "destek",
+        "öncelik",
+        "tepki"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görevler belirsiz: ne istendiği ve bitiş tanımı yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Görev geciktiğinde ekiptekiler \"ne istendiğini tam anlamadım\" diyor; görevlerde yalnızca başlık ve tarih var.",
+          "acilma_kosulu": "Gecikmede ne yapılabildiği sorulursa",
+          "ipucu_kelimeler": [
+            "görev geciktiğinde",
+            "anlamadım",
+            "başlık ve tarih"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekip zamanı müdürlerle ayarlandı; ama görevler toplantıda sözlü dağıtılıyor ve kimin neyi teslim edeceği yazılmıyor.",
+          "acilma_kosulu": "Ekip zamanının ayarlanması sorulursa",
+          "ipucu_kelimeler": [
+            "zamanı proje başında",
+            "sözlü dağıt",
+            "yazılmıyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Değerlendirmeye proje katkısı giriyor; ama görevin \"bitti\" sayılması için bir tanım yok, herkes kendi yorumuna göre bitiriyor.",
+          "acilma_kosulu": "Ekip performansını kimin değerlendirdiği sorulursa",
+          "ipucu_kelimeler": [
+            "performansını kim",
+            "bitti sayıl",
+            "tanım yok"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sponsordan bir kez destek istedi ve aldı.",
+          "acilma_kosulu": "Sponsordan destek istenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "bir kez destek"
+          ]
+        }
+      ],
+      "kok_neden": "Nil iş yaptıramıyor çünkü görevler belirsiz: görevler sözlü ve yalnızca başlık ve tarihle dağıtılıyor, ne istendiği ve 'bitti'nin ne demek olduğu tanımlı değil ve ekip her görevi kendi yorumuna göre geciktiriyor.",
+      "kok_neden_kelimeler": [
+        "belirsiz",
+        "tanım",
+        "sözlü",
+        "bitti",
+        "görev"
+      ]
+    }
+  ]
+}

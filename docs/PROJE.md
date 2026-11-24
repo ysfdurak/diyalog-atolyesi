@@ -14,7 +14,7 @@ Ayrıntı belgeleri: [Nasıl çalışır](NASIL_CALISIR.md) · [Senaryo yazma](S
 | **Kimin için** | Yöneticiliğe hazırlanan ya da ekip yöneten kişiler (portföy projesi, ticari amaç yok) |
 | **Canlı** | https://diyalog.ysfdurak.com (VPS, Docker, ortak Caddy) |
 | **Depo** | https://github.com/ysfdurak/diyalog-atolyesi (herkese açık, PolyForm Shield lisansı) |
-| **Durum** | Yayında. Soru modu: 75 senaryo, hepsi üç kök nedenli, 225 oturum (hedef bir yıl: ~122 senaryo, 365 oturum); ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
+| **Durum** | Yayında. Soru modu: 92 senaryo, hepsi üç kök nedenli, 276 oturum (hedef bir yıl: ~122 senaryo, 365 oturum); ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
 | **Yapay zekâ** | Anthropic API (Haiku 5.5): karakter cevapları ve değerlendirme |
 | **Maliyet** | Oturum başına yarım sentin altı (tahmin); günlük limitler ve kredi bildirimiyle sınırlı |
 
@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | İş geliştirme (+7) ve Proje yönetimi (+10): 92 senaryo, 276 oturum. Duman testi cevabı mesaj sayısıyla kontrol ediyor (kısa cevaplı günün senaryosunda yanlış alarm veriyordu). |
 | 2026-11-24 | Operasyon (+8) ve Ekip yönetimi (+7): 75 senaryo, 225 oturum. |
 | 2026-11-24 | Yeni alanlar: İK ve işe alım (8), Kalite ve iyileştirme (7): 60 senaryo, 180 oturum. |
 | 2026-11-24 | Hedef bir yıllık içerik olarak büyütüldü. Yeni alanlar: Veri ve raporlama (8), Tedarik ve satın alma (7): 45 senaryo, 135 oturum. Senaryo üretici kütüphanesi karakter adlarının tekrarını da engelliyor; testler senaryo sayısını dosyalardan okuyor. |
