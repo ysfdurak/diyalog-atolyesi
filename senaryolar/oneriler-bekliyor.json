@@ -1,0 +1,201 @@
+{
+  "id": "oneriler-bekliyor",
+  "baslik": "Onaylanan öneriler neden hayata geçmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Öneri sisteminde onaylanmış 180 öneri uygulanmayı bekliyor; bazıları bir yıldan eski. Çalışanlar \"öneri vermenin anlamı yok\" demeye başladı. Öneri sistemini yürüten sürekli iyileştirme koordinatörüyle konuşuyorsun.",
+  "rolun": "Operasyon direktörüsün. Amacın koordinatörü hesaba çekmek değil, onaylanan önerilerin neden uygulanmadığını anlamak.",
+  "karakter": {
+    "ad": "Alper",
+    "rol": "Sürekli iyileştirme koordinatörü",
+    "tavir": "Hevesli ama yorgun; \"onay benden çıkıyor, uygulama benden değil\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Değerlendirmeleri zamanında yapıyoruz. Onaydan sonrası bende değil."
+  },
+  "yaniltici_ipuclari": [
+    "Bölümler öneri uygulamaya isteksiz.",
+    "Çok fazla öneri geliyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir öneri onaylandıktan sonra kime gidiyor, nasıl ilerliyor?",
+    "Bekleyen önerilerin çoğu hangi türde işler?",
+    "Uygulanan önerilerle bekleyenler arasında ne fark var?",
+    "Sistemin başarısı nasıl ölçülüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Onaydan sonra sahipsiz: sorumlu ve tarih yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Onaylanan öneri sistemde \"onaylandı\" durumunda kalıyor; uygulama sorumlusu ve tarih atanmıyor.",
+          "acilma_kosulu": "Onaydan sonra önerinin nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "onaylandıktan sonra",
+            "sorumlu",
+            "tarih"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Uygulananların çoğunu öneriyi veren çalışan kendi bölümünde kendisi yaptı; bekleyenler başka bölümün yapması gereken işler.",
+          "acilma_kosulu": "Uygulananlarla bekleyenler arasındaki fark sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan önerilerle",
+            "kendisi yaptı",
+            "başka bölüm"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem aylık gelen ve onaylanan öneri sayısıyla ölçülüyor; uygulanma oranı raporlanmıyor.",
+          "acilma_kosulu": "Sistemin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sistemin başarısı",
+            "öneri sayısı",
+            "uygulanma oranı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bekleyenler arasında her türden öneri var.",
+          "acilma_kosulu": "Bekleyen önerilerin türü sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen önerilerin",
+            "her türden"
+          ]
+        }
+      ],
+      "kok_neden": "Öneriler onaydan sonra sahipsiz kalıyor: uygulama sorumlusu ve tarih atanmıyor, başka bölümün yapması gereken öneriler bekliyor ve sistem uygulanma oranıyla değil öneri sayısıyla ölçülüyor.",
+      "kok_neden_kelimeler": [
+        "sahip",
+        "sorumlu",
+        "tarih",
+        "uygulanma oranı",
+        "öneri sayısı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bütçe ve BT sırası: küçük harcama da büyük sıraya giriyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bekleyenlerin çoğu küçük harcama (raf etiketi, ayna, el arabası) ya da WMS'te küçük bir ekran değişikliği gerektiren öneriler.",
+          "acilma_kosulu": "Bekleyen önerilerin türü sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen önerilerin",
+            "küçük harcama",
+            "ekran değişikliği"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Onaydan sonra harcama gerektiren öneri satın alma talebine, sistem değişikliği gerektiren öneri BT talebine dönüşüyor ve oradaki sıraya giriyor.",
+          "acilma_kosulu": "Onaydan sonra önerinin nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "onaylandıktan sonra",
+            "satın alma talebi",
+            "bt talebi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Uygulananlar para ve sistem değişikliği gerektirmeyen öneriler; bekleyenler küçük de olsa bütçe ya da BT bekleyenler.",
+          "acilma_kosulu": "Uygulananlarla bekleyenler arasındaki fark sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan önerilerle",
+            "para gerektir",
+            "bütçe"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sistem uygulanan önerilerin sağladığı kazançla ölçülüyor.",
+          "acilma_kosulu": "Sistemin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sistemin başarısı",
+            "kazanç"
+          ]
+        }
+      ],
+      "kok_neden": "Öneriler bütçe ve BT sırasına takılıyor: küçük bir harcama ya da ekran değişikliği gerektiren öneri bile normal satın alma ve BT talebine dönüşüp sıraya giriyor; önerilere ayrılmış küçük bir bütçe ya da hızlı yol yok.",
+      "kok_neden_kelimeler": [
+        "bütçe",
+        "bt",
+        "sıra",
+        "satın alma",
+        "hızlı yol"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Onay gerçek değerlendirme değil: %90 onaylanıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Koordinatör, öneri vermeyi teşvik etmek için gelen önerilerin %90'ını onaylıyor; sistem onay oranıyla ölçülüyor.",
+          "acilma_kosulu": "Sistemin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sistemin başarısı",
+            "onay oranı",
+            "teşvik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen önerilerin bir kısmı teknik olarak uygulanamaz ya da birbirinin tekrarı; ama onaylandıkları için listede duruyorlar.",
+          "acilma_kosulu": "Bekleyen önerilerin türü sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen önerilerin",
+            "uygulanamaz",
+            "birbirinin tekrarı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Uygulanan öneriler, onaylanmadan önce ilgili bölüm sorumlusuna danışılanlar.",
+          "acilma_kosulu": "Uygulananlarla bekleyenler arasındaki fark sorulursa",
+          "ipucu_kelimeler": [
+            "uygulanan önerilerle",
+            "danışıl",
+            "bölüm sorumlusu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Onaylanan öneriler ilgili bölüm müdürüne e-postayla gönderiliyor.",
+          "acilma_kosulu": "Onaydan sonra önerinin nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "onaylandıktan sonra",
+            "e-posta"
+          ]
+        }
+      ],
+      "kok_neden": "Onay gerçek bir değerlendirme değil: teşvik için önerilerin %90'ı onaylanıyor, uygulanamaz ve tekrar eden öneriler listede kalıyor ve uygulayacak bölüme onaydan önce danışılmıyor.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "uygulanamaz",
+        "danış",
+        "teşvik",
+        "tekrar"
+      ]
+    }
+  ]
+}

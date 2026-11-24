@@ -1,0 +1,199 @@
+{
+  "id": "ise-alim-suresi",
+  "baslik": "Depo personeli alımı neden iki ay sürüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Depo için açılan pozisyonlar ortalama 60 günde doluyor; bu sürede boşluklar fazla mesaiyle kapatılıyor. Bölgedeki diğer depolar iki haftada işe alıyor. İşe alım uzmanıyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin ve pozisyonları sen açıyorsun. Amacın İK'yı sıkıştırmak değil, sürecin neden uzun sürdüğünü anlamak.",
+  "karakter": {
+    "ad": "Damla",
+    "rol": "İşe alım uzmanı",
+    "tavir": "Yoğun ve savunmada; \"aday bulmak zor\" diyor. Sürecin adımlarını soran birine açık konuşuyor.",
+    "ilk_soz": "Bölgede aday çok az, bunu biliyorsunuz. Biz elimizden geleni yapıyoruz."
+  },
+  "yaniltici_ipuclari": [
+    "Kimse depoda çalışmak istemiyor.",
+    "Bölgede aday yok."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir pozisyon açıldığı günden adayın başladığı güne kadar hangi adımlar var?",
+    "Bu sürenin en çok hangi adımında bekleniyor?",
+    "Sürece giren adaylardan kaçı, nerede vazgeçiyor?",
+    "Diğer depolar adayları nasıl bu kadar hızlı başlatıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Onay zinciri: boşalan kadro için bile üç basamaklı onay",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pozisyon açılmadan önce kadro onayı bölge müdürü, İK direktörü ve finanstan geçiyor; boşalan bir kadro için bile yeniden onay gerekiyor.",
+          "acilma_kosulu": "Sürecin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "açıldığı günden",
+            "kadro onayı",
+            "finans"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "60 günün yaklaşık 25'i, ilan yayınlanmadan önce kadro onayını beklemekle geçiyor.",
+          "acilma_kosulu": "En çok hangi adımda beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi adım",
+            "ilan yayınlanmadan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer depolar boşalan kadroyu yeniden onaya sokmadan doğrudan ilana çıkarıyor.",
+          "acilma_kosulu": "Diğer depoların nasıl hızlı işe aldığı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer depolar",
+            "yeniden onay",
+            "doğrudan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Adayların çoğu süreci tamamlıyor.",
+          "acilma_kosulu": "Adayların nerede vazgeçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçiyor",
+            "tamamlıyor"
+          ]
+        }
+      ],
+      "kok_neden": "Süre aday azlığından değil onaydan: boşalan kadro için bile üç basamaklı yeniden onay gerekiyor, ilan çıkmadan yaklaşık 25 gün geçiyor; diğer depolar boşalan kadroyu doğrudan ilana çıkarıyor.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "kadro",
+        "ilan",
+        "yeniden onay",
+        "basamak"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Adaylar süreçte kayboluyor: mülakattan sonra iki hafta sessizlik",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mülakata gelen adayların yarısı teklif aşamasına gelmeden vazgeçiyor; çoğu o arada başka depoda işe başlamış oluyor.",
+          "acilma_kosulu": "Adayların nerede vazgeçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçiyor",
+            "yarısı",
+            "başka depo"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En uzun bekleme, mülakattan sonra adaya dönüş yapılması; depo müdürünün onayı ortalama iki hafta sürüyor.",
+          "acilma_kosulu": "En çok hangi adımda beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi adım",
+            "mülakattan sonra",
+            "dönüş"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer depolar mülakat günü karar verip adaya aynı gün teklif yapıyor.",
+          "acilma_kosulu": "Diğer depoların nasıl hızlı işe aldığı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer depolar",
+            "aynı gün"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlan iş ilanı sitelerinde ve belediyenin istihdam ofisinde yayınlanıyor.",
+          "acilma_kosulu": "Sürecin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "açıldığı günden",
+            "istihdam"
+          ]
+        }
+      ],
+      "kok_neden": "Adaylar süreçte kayboluyor: mülakattan sonra karar ve dönüş iki hafta sürüyor, adayların yarısı bu arada başka depoda işe başlıyor; rakipler aynı gün teklif yapıyor.",
+      "kok_neden_kelimeler": [
+        "dönüş",
+        "karar",
+        "kayb",
+        "aynı gün",
+        "mülakat"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İşe başlama adımları: belgeler parça parça, hekim randevusu yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Teklif kabul edildikten sonra aday sağlık raporu, adli sicil ve diploma gibi belgeleri kendisi topluyor; liste adaya parça parça bildiriliyor.",
+          "acilma_kosulu": "Sürecin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "açıldığı günden",
+            "belge",
+            "sağlık raporu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "60 günün yaklaşık üç haftası teklif ile işe başlama arasında, belge tamamlamada geçiyor.",
+          "acilma_kosulu": "En çok hangi adımda beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi adım",
+            "teklif ile",
+            "belge tamamla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Adayların üçte biri belge aşamasında vazgeçiyor; özellikle işyeri hekimi randevusu bulamayınca.",
+          "acilma_kosulu": "Adayların nerede vazgeçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "vazgeçiyor",
+            "işyeri hekimi",
+            "randevu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Diğer depolar ilanlarda daha yüksek ücret yazıyor.",
+          "acilma_kosulu": "Diğer depoların nasıl hızlı işe aldığı sorulursa",
+          "ipucu_kelimeler": [
+            "diğer depolar",
+            "ücret"
+          ]
+        }
+      ],
+      "kok_neden": "Süre işe başlama adımlarından: teklif sonrası belgeler adaya parça parça bildiriliyor, belge ve sağlık raporu toplamak üç hafta sürüyor ve işyeri hekimi randevusu bulamayan adaylar vazgeçiyor.",
+      "kok_neden_kelimeler": [
+        "belge",
+        "sağlık raporu",
+        "işyeri hekimi",
+        "parça parça",
+        "vazgeç"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "yaz-izinleri",
+  "baslik": "Yaz izinleri neden her yıl kriz oluyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "İK ve işe alım",
+  "sure_dk": 6,
+  "acilis": "Her yaz temmuz ve ağustosta depoda aynı anda çok kişi izinde oluyor; sevkiyatlar gecikiyor, kalanlar fazla mesaiye kalıyor. İzinleri onaylayan vardiya amiriyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın izinleri kısıtlamak değil, krizin neden her yıl tekrarlandığını anlamak.",
+  "karakter": {
+    "ad": "Gülay",
+    "rol": "Vardiya amiri",
+    "tavir": "Arada kalmış; \"herkesin çocuğu okul tatilinde\" diyor. Süreci soran birine açık konuşuyor.",
+    "ilk_soz": "Herkes çocuklarıyla tatile çıkmak istiyor, ben kime hayır diyeyim?"
+  },
+  "yaniltici_ipuclari": [
+    "Herkes yazın izin istiyor, yapacak bir şey yok.",
+    "Çalışanlar plan yapmıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "İzin talepleri ne zaman ve nasıl toplanıyor?",
+    "Aynı anda kaç kişinin izinde olabileceği nasıl belirleniyor?",
+    "Yaz aylarında iş yükü nasıl değişiyor?",
+    "Geçen yılın yaz dönemi sonra nasıl değerlendirildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Plan yok: ilk gelen alıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İzin talepleri yıl boyunca tek tek, ilk gelene göre onaylanıyor; yaz için toplu bir planlama yapılmıyor.",
+          "acilma_kosulu": "Izin taleplerinin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talepleri ne zaman",
+            "ilk gelen",
+            "tek tek"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aynı anda izinde olabilecek kişi sayısı için yazılı bir sınır yok; amir her talepte o anki duruma bakıyor.",
+          "acilma_kosulu": "Aynı anda izin sınırının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "sınır",
+            "yazılı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yılın yaz dönemi hiç değerlendirilmedi; aynı sorun her yıl ilk kez yaşanıyormuş gibi karşılanıyor.",
+          "acilma_kosulu": "Geçen yazın nasıl değerlendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın",
+            "değerlendirilmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yaz aylarında iş yükü biraz azalıyor.",
+          "acilma_kosulu": "Yazın iş yükünün nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "yaz aylarında",
+            "azalıyor"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz plansızlıktan: yaz izinleri ilk gelene göre tek tek onaylanıyor, aynı anda izinde olabilecek kişi sayısı için yazılı sınır yok ve geçen yıl hiç değerlendirilmediği için aynı kriz her yıl tekrarlanıyor.",
+      "kok_neden_kelimeler": [
+        "plan",
+        "ilk gelen",
+        "sınır",
+        "değerlendiril",
+        "tek tek"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Takvim çakışması: en yoğun dönem yaz",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bahçe ve dış mekân ürünleri yüzünden temmuz-ağustos yılın en yoğun dönemi; iş yükü %40 artıyor.",
+          "acilma_kosulu": "Yazın iş yükünün nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "yaz aylarında",
+            "bahçe",
+            "en yoğun"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İzin sınırı yıllık ortalama iş yüküne göre belirlenmiş; yaz yoğunluğu hesaba katılmamış.",
+          "acilma_kosulu": "Aynı anda izin sınırının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "ortalama",
+            "hesaba katıl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İzin talepleri nisanda toplanıyor ama satışın yaz tahmini haziranda geliyor; izinler tahminden önce onaylanmış oluyor.",
+          "acilma_kosulu": "Izin taleplerinin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talepleri ne zaman",
+            "nisan",
+            "tahmin"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Geçen yıl yaz sonunda kısa bir toplantı yapıldı.",
+          "acilma_kosulu": "Geçen yazın nasıl değerlendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın",
+            "kısa toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz takvim çakışmasından: yılın en yoğun dönemi yaz, izin sınırı yıllık ortalama iş yüküne göre belirlenmiş ve izinler satışın yaz tahmini gelmeden onaylanıyor.",
+      "kok_neden_kelimeler": [
+        "yoğun",
+        "ortalama",
+        "tahmin",
+        "takvim",
+        "sezon"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kişi sayısı değil beceri: iki operatör aynı anda izinde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sınır kişi sayısına göre konuyor ama beceriye bakılmıyor; iki forklift operatörünün ikisi de aynı haftalarda izne çıkabiliyor.",
+          "acilma_kosulu": "Aynı anda izin sınırının nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "aynı anda kaç",
+            "beceri",
+            "forklift"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Geçen yaz sevkiyatlar en çok iki operatörün aynı anda izinde olduğu hafta durdu; bu konuşuldu ama yetkinlik planı yapılmadı.",
+          "acilma_kosulu": "Geçen yazın nasıl değerlendirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "geçen yılın",
+            "operatör",
+            "yetkinlik"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İzin talepleri amirlerin elindeki ayrı listelerde; iki vardiyanın izinleri birbirini görmüyor.",
+          "acilma_kosulu": "Izin taleplerinin nasıl toplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talepleri ne zaman",
+            "ayrı liste",
+            "birbirini görmüyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yazın iş yükü yıl ortalamasına yakın.",
+          "acilma_kosulu": "Yazın iş yükünün nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "yaz aylarında",
+            "yıl ortalaması"
+          ]
+        }
+      ],
+      "kok_neden": "Kriz kişi sayısından değil beceriden: izin sınırı yalnızca kişi sayısına bakıyor, az kişide olan beceriler (forklift) aynı anda izne çıkabiliyor ve vardiyaların izin listeleri birbirini görmüyor.",
+      "kok_neden_kelimeler": [
+        "beceri",
+        "forklift",
+        "kişi sayısı",
+        "liste",
+        "yetkinlik"
+      ]
+    }
+  ]
+}

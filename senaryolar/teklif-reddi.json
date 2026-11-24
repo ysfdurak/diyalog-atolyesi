@@ -1,0 +1,201 @@
+{
+  "id": "teklif-reddi",
+  "baslik": "Adaylar teklifi neden son anda reddediyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Son üç ayda vardiya amiri pozisyonu için teklif yapılan beş adaydan dördü teklifi reddetti. Ücret piyasa ortalamasında. Bu adaylardan biriyle, kararını anlamak için telefonda konuşuyorsun.",
+  "rolun": "İşe alımı yapan depo müdürüsün. Amacın adayı geri kazanmak değil, neden reddettiğini anlamak.",
+  "karakter": {
+    "ad": "Onur",
+    "rol": "Teklifi reddeden aday, deneyimli vardiya amiri",
+    "tavir": "Kibar ve mesafeli; \"başka bir teklifi değerlendirdim\" diyor. İçtenlikle merak eden birine açılıyor.",
+    "ilk_soz": "Aradığınız için teşekkürler. Açıkçası başka bir yeri tercih ettim, kusura bakmayın."
+  },
+  "yaniltici_ipuclari": [
+    "Başka yer daha fazla verdi herhalde.",
+    "Adaylar artık çok seçici."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Süreç boyunca bizi nasıl tanıdınız, neler dikkatinizi çekti?",
+    "Kararınızı verirken aklınızda en çok neler vardı?",
+    "Tercih ettiğiniz yer size hangi konuda farklı geldi?",
+    "Teklif görüşmesi nasıl geçti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İlk izlenim: depo turunda dağınıklık, kimseyle tanışmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mülakattan sonra depoyu gezdirdiler; dağınık koridorlar ve yorgun görünen ekip dikkatini çekti, kimse ona ekibi tanıtmadı.",
+          "acilma_kosulu": "Süreçte bizi nasıl tanıdığı ve neyin dikkatini çektiği sorulursa",
+          "ipucu_kelimeler": [
+            "tanıdınız",
+            "depo tur",
+            "dağınık"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tercih ettiği yerde mülakattan sonra gelecekteki ekibiyle tanıştırıldı ve bir vardiyayı izledi.",
+          "acilma_kosulu": "Tercih ettiği yerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tercih ettiğiniz",
+            "tanıştır",
+            "vardiya izle"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aklındaki asıl soru, ekibin onu kabul edip etmeyeceği ve bu kadar dağınık bir alanı düzeltmek için desteği olup olmayacağıydı.",
+          "acilma_kosulu": "Kararı verirken aklında neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "aklınızda",
+            "destek",
+            "kabul"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teklif görüşmesi kısa ve netti.",
+          "acilma_kosulu": "Teklif görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "teklif görüşmesi",
+            "kısa"
+          ]
+        }
+      ],
+      "kok_neden": "Aday ücret yüzünden değil izlenimden reddetti: depo turunda dağınık alan ve yorgun ekip gördü, kimseyle tanıştırılmadı ve destek göreceğinden emin olamadı; rakip yer onu gelecekteki ekibiyle tanıştırdı.",
+      "kok_neden_kelimeler": [
+        "izlenim",
+        "depo tur",
+        "tanıştır",
+        "destek",
+        "dağınık"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Teklif belirsiz: vardiya ve yan haklar yazılı değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Teklif telefonla yapıldı; vardiya düzeni, servis ve yan haklar yazılı olarak hiç gönderilmedi.",
+          "acilma_kosulu": "Teklif görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "teklif görüşmesi",
+            "telefon",
+            "yazılı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aklında en çok çalışma saatleri vardı; dönüşümlü gece olup olmadığını sorduğunda \"sonra netleşir\" cevabını aldı.",
+          "acilma_kosulu": "Kararı verirken aklında neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "aklınızda",
+            "gece",
+            "çalışma saat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tercih ettiği yer teklifle birlikte vardiya planını, servis güzergâhını ve yan hakları yazılı gönderdi.",
+          "acilma_kosulu": "Tercih ettiği yerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tercih ettiğiniz",
+            "servis güzergâh",
+            "yan hak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Süreç boyunca İK ile iletişim iyiydi.",
+          "acilma_kosulu": "Süreçte bizi nasıl tanıdığı ve neyin dikkatini çektiği sorulursa",
+          "ipucu_kelimeler": [
+            "tanıdınız",
+            "iletişim"
+          ]
+        }
+      ],
+      "kok_neden": "Aday belirsizlik yüzünden reddetti: teklif telefonla yapıldı, vardiya düzeni ve yan haklar yazılı verilmedi, gece vardiyası sorusu 'sonra netleşir'le geçiştirildi; rakip yer her şeyi yazılı gönderdi.",
+      "kok_neden_kelimeler": [
+        "yazılı",
+        "belirsiz",
+        "vardiya",
+        "yan hak",
+        "gece"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Rol çelişkisi: ilan yönetim diyor, iş yarı yarıya toplama",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mülakatta rolün yarısının sahada toplama yapmak olduğu söylendi; ilanda bu yazmıyordu.",
+          "acilma_kosulu": "Süreçte bizi nasıl tanıdığı ve neyin dikkatini çektiği sorulursa",
+          "ipucu_kelimeler": [
+            "tanıdınız",
+            "ilan",
+            "sahada toplama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aklında en çok, hem ekibi yönetip hem onların işini yapmak zorunda kalınca ikisinin de yarım kalacağı vardı.",
+          "acilma_kosulu": "Kararı verirken aklında neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "aklınızda",
+            "yönetip",
+            "yarım"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tercih ettiği yerde rol yalnızca yönetim; ekibin yetişemediği günler için bir yedek havuzu var.",
+          "acilma_kosulu": "Tercih ettiği yerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "tercih ettiğiniz",
+            "yalnızca yönetim",
+            "yedek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Teklif edilen ücret beklentisine yakındı.",
+          "acilma_kosulu": "Teklif görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "teklif görüşmesi",
+            "ücret"
+          ]
+        }
+      ],
+      "kok_neden": "Aday rol yüzünden reddetti: ilan yönetim pozisyonu diyordu ama mülakatta işin yarısının sahada toplama olduğu ortaya çıktı; aday iki işi birden yarım yapacağını düşündü, rakip yerde rol yalnızca yönetim.",
+      "kok_neden_kelimeler": [
+        "rol",
+        "ilan",
+        "sahada toplama",
+        "yönetim",
+        "yarım"
+      ]
+    }
+  ]
+}

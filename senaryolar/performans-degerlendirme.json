@@ -1,0 +1,200 @@
+{
+  "id": "performans-degerlendirme",
+  "baslik": "Performans değerlendirmeleri neden ayırt etmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 7,
+  "acilis": "Yıllık performans değerlendirmesinde depo çalışanlarının %90'ı \"beklentiyi karşılıyor\" ya da üstü aldı. Aynı yıl verim düştü ve iki iyi çalışan \"farkımız görülmüyor\" diyerek ayrıldı. Değerlendirmeleri yapan vardiya amirlerinden biriyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın amirleri sıkı not vermeye zorlamak değil, değerlendirmenin neden ayırt etmediğini anlamak.",
+  "karakter": {
+    "ad": "Tuncay",
+    "rol": "Vardiya amiri",
+    "tavir": "İyi niyetli ve korumacı; \"ekibime haksızlık yapmam\" diyor. Sürecin nasıl işlediğini soran birine dürüst davranıyor.",
+    "ilk_soz": "Ekibim iyi çalışıyor, düşük not verecek bir neden göremiyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Herkes gerçekten iyi çalışıyor.",
+    "Form çok karışık."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Değerlendirmeyi yaparken neye dayanıyorsun, elinde hangi bilgi oluyor?",
+    "Düşük not verdiğinde sonra neler oluyor?",
+    "Değerlendirme sonucu çalışanın ücretine ya da gelişimine nasıl yansıyor?",
+    "Bir çalışanla değerlendirme görüşmesi nasıl geçiyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Veri yok: not hafızadan veriliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Değerlendirmeyi yıl sonunda hafızadan yapıyor; elinde kişi bazında verim ya da hata verisi yok, son birkaç haftayı hatırlıyor.",
+          "acilma_kosulu": "Değerlendirmede neye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "neye dayanıyorsun",
+            "hafıza",
+            "kişi bazında"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Görüşmede somut örnek veremediği için düşük notu savunamıyor; çalışan itiraz edince notu yükseltiyor.",
+          "acilma_kosulu": "Değerlendirme görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirme görüşmesi",
+            "somut örnek",
+            "itiraz"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl bir çalışana düşük not verdi, çalışan İK'ya şikâyet etti ve amirden kanıt istendi; kanıt sunamadı.",
+          "acilma_kosulu": "Düşük not verince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "düşük not",
+            "kanıt",
+            "şikâyet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Not, yıllık zam oranını küçük bir miktar etkiliyor.",
+          "acilma_kosulu": "Sonucun ücrete ve gelişime nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "ücretine",
+            "zam oranı"
+          ]
+        }
+      ],
+      "kok_neden": "Değerlendirme veriye dayanmıyor: amir yıl sonunda hafızadan not veriyor, kişi bazında verim ve hata verisi yok; somut örnek ve kanıt sunamadığı için düşük not itiraz gelince yükseltiliyor.",
+      "kok_neden_kelimeler": [
+        "veri",
+        "hafıza",
+        "kanıt",
+        "somut",
+        "itiraz"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Not hiçbir şey değiştirmiyor: herkese aynı zam",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Zam oranı herkese aynı veriliyor; değerlendirme notu ücrete ya da terfiye hiç yansımıyor.",
+          "acilma_kosulu": "Sonucun ücrete ve gelişime nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "ücretine",
+            "aynı zam",
+            "terfi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Düşük not verdiği çalışanın hevesi kaçtı ve ekipte gerginlik çıktı; bunun karşılığında hiçbir şey kazanılmadı.",
+          "acilma_kosulu": "Düşük not verince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "düşük not",
+            "gerginlik",
+            "kazanıl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Görüşmeler formu imzalatmaktan ibaret; gelişim planı ya da hedef konuşulmuyor.",
+          "acilma_kosulu": "Değerlendirme görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirme görüşmesi",
+            "imza",
+            "gelişim planı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Değerlendirmede verim raporlarına bakıyor.",
+          "acilma_kosulu": "Değerlendirmede neye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "neye dayanıyorsun",
+            "verim rapor"
+          ]
+        }
+      ],
+      "kok_neden": "Not hiçbir şeyi değiştirmediği için ayırt etmiyor: zam ve terfi notla bağlantısız, düşük not yalnızca gerginlik yaratıyor ve görüşmeler gelişim konuşulmadan form imzalatmaya dönüşmüş.",
+      "kok_neden_kelimeler": [
+        "zam",
+        "terfi",
+        "bağlantı",
+        "gerginlik",
+        "gelişim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Düşük not amire yük: evrak, uymayan form, beş dakikalık görüşme",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İK, düşük not verilen her çalışan için ayrıntılı bir gelişim planı ve üç aylık takip formu istiyor; amir bunu 30 kişilik ekipte yapacak zamanı bulamıyor.",
+          "acilma_kosulu": "Düşük not verince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "düşük not",
+            "takip formu"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Değerlendirme formunda 12 yetkinlik var ve hepsi depo işine uymayan genel ifadeler; amir neyi puanladığını tam bilmiyor.",
+          "acilma_kosulu": "Değerlendirmede neye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "neye dayanıyorsun",
+            "yetkinlik",
+            "genel ifade"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Görüşmeler vardiya arasında beşer dakikada yapılıyor; çalışanın kendi görüşü sorulmuyor.",
+          "acilma_kosulu": "Değerlendirme görüşmesinin nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirme görüşmesi",
+            "beşer dakika",
+            "kendi görüşü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Not, prim dağıtımında küçük bir etkiye sahip.",
+          "acilma_kosulu": "Sonucun ücrete ve gelişime nasıl yansıdığı sorulursa",
+          "ipucu_kelimeler": [
+            "ücretine",
+            "prim"
+          ]
+        }
+      ],
+      "kok_neden": "Değerlendirme yükten ve formdan bozuk: düşük not amire ağır bir evrak yükü getiriyor, form depo işine uymayan genel yetkinliklerle dolu ve görüşmeler beş dakikada yapılıyor; en kolay yol herkese orta-üstü not vermek.",
+      "kok_neden_kelimeler": [
+        "evrak",
+        "yük",
+        "form",
+        "yetkinlik",
+        "beş dakika"
+      ]
+    }
+  ]
+}

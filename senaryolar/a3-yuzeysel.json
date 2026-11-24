@@ -1,0 +1,201 @@
+{
+  "id": "a3-yuzeysel",
+  "baslik": "A3 çalışmaları neden kök nedene inmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 8,
+  "acilis": "Son altı ayda hazırlanan 24 A3 çalışmasının 19'unda kök neden \"eğitim eksikliği\" ya da \"dikkatsizlik\", çözüm \"eğitim verilmesi\". Aynı sorunlar tekrar ediyor. A3'leri hazırlayan ekip liderlerinden biriyle konuşuyorsun.",
+  "rolun": "A3 çalışmalarını değerlendiren iyileştirme yöneticisisin. Amacın A3'leri reddetmek değil, neden kök nedene inilmediğini anlamak.",
+  "karakter": {
+    "ad": "Serdar",
+    "rol": "Ekip lideri",
+    "tavir": "İşini yapmış olmak istiyor; \"formu doldurduk\" diyor. Nasıl çalıştığını soran birine açık konuşuyor.",
+    "ilk_soz": "A3'ü istenen şekilde hazırladık, onaylandı da. Başka ne yapabilirdik bilmiyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip liderleri A3'ü ciddiye almıyor.",
+    "Bu sorunlar zaten insandan kaynaklanıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "A3'ü hazırlarken sahada ne kadar zaman geçirdiniz, neler gördünüz?",
+    "Kök neden analizini kimler ile yaptınız?",
+    "A3 için ne kadar süreniz vardı, nasıl teslim edildi?",
+    "Değerlendirmede A3'ten neler bekleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Masa başında yazılıyor: saha ve veri yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "A3 toplantı odasında, iki saatlik bir oturumda hazırlandı; sahaya hiç gidilmedi, veri toplanmadı.",
+          "acilma_kosulu": "Sahada ne kadar zaman geçirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada ne kadar",
+            "toplantı odası",
+            "veri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kök neden analizini yalnızca ekip liderleri yaptı; sorunu yaşayan operatörler katılmadı.",
+          "acilma_kosulu": "Analizin kimlerle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "analizini",
+            "operatör",
+            "katılmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Değerlendirmede formun bütün kutularının dolu olmasına ve zamanında teslim edilmesine bakılıyor; kök nedenin doğrulanması istenmiyor.",
+          "acilma_kosulu": "Değerlendirmede A3'ten ne beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmede",
+            "kutu",
+            "doğrulan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "A3 için bir hafta süre verildi.",
+          "acilma_kosulu": "A3 için ne kadar süre olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar süreniz",
+            "bir hafta"
+          ]
+        }
+      ],
+      "kok_neden": "A3'ler masa başında yazılıyor: sahaya gidilmiyor ve veri toplanmıyor, sorunu yaşayan operatörler analize katılmıyor ve değerlendirme kök nedenin doğrulanmasını değil formun dolu olmasını istiyor.",
+      "kok_neden_kelimeler": [
+        "saha",
+        "veri",
+        "operatör",
+        "doğrulan",
+        "masa başı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Güvenli kök neden: yönetimi işaret etmek riskli",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Analizi ekip ve sorumlu müdürle birlikte yaptılar; yönetim kararlarıyla ilgili nedenler konuşulduğunda müdür \"bunu yazmayalım\" dedi.",
+          "acilma_kosulu": "Analizin kimlerle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "analizini",
+            "müdür",
+            "yazmayalım"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Değerlendirmede A3 üst yönetime sunuluyor; yönetim kararlarını ya da başka bölümleri işaret eden bir kök neden sunmak riskli görülüyor.",
+          "acilma_kosulu": "Değerlendirmede A3'ten ne beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmede",
+            "üst yönetim",
+            "riskli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sahada asıl nedenin vardiya planındaki eksik personel olduğunu gördüler; bu bilgi A3'e girmedi.",
+          "acilma_kosulu": "Sahada ne kadar zaman geçirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada ne kadar",
+            "eksik personel",
+            "girmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "A3 zamanında teslim edildi.",
+          "acilma_kosulu": "A3 için ne kadar süre olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar süreniz",
+            "zamanında teslim"
+          ]
+        }
+      ],
+      "kok_neden": "A3'ler güvenli kök nedende duruyor: sahada asıl nedeni (eksik personel planı) gördüler ama yönetim kararlarını ya da başka bölümleri işaret eden bir neden yazmak riskli bulundu; 'eğitim eksikliği' kimseyi rahatsız etmiyor.",
+      "kok_neden_kelimeler": [
+        "risk",
+        "yönetim",
+        "eksik personel",
+        "güvenli",
+        "başka bölüm"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sayı hedefi: kopyala, düzenle, teslim et",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "A3 için üç gün verildi; günlük işin yanında yetiştirmek için önceki A3'lerden biri kopyalanıp düzenlendi.",
+          "acilma_kosulu": "A3 için ne kadar süre olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar süreniz",
+            "üç gün",
+            "kopyala"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Değerlendirmede ayda en az dört A3 hedefi var; sayı tutturulunca kalite sorgulanmıyor.",
+          "acilma_kosulu": "Değerlendirmede A3'ten ne beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "değerlendirmede",
+            "dört a3",
+            "sayı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kök neden analizini tek başına, şablondaki örnek cevaplara bakarak yaptı.",
+          "acilma_kosulu": "Analizin kimlerle yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "analizini",
+            "tek başına",
+            "şablon"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sahaya bir kez gidip fotoğraf çekti.",
+          "acilma_kosulu": "Sahada ne kadar zaman geçirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada ne kadar",
+            "fotoğraf"
+          ]
+        }
+      ],
+      "kok_neden": "A3'ler sayı hedefi için üretiliyor: ayda dört A3 hedefi var, kısa sürede yetiştirmek için önceki A3'ler kopyalanıyor ve analiz tek başına şablondaki örnek cevaplarla yapılıyor.",
+      "kok_neden_kelimeler": [
+        "sayı",
+        "hedef",
+        "kopyala",
+        "şablon",
+        "tek başına"
+      ]
+    }
+  ]
+}

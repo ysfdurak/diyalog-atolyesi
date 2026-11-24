@@ -1,0 +1,201 @@
+{
+  "id": "gece-hatalari",
+  "baslik": "Gece vardiyasında hata oranı neden iki kat?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Gece vardiyasında toplama hata oranı gündüzün iki katı. Ekip deneyimi iki vardiyada benzer. Gece vardiyası amiriyle konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın gece ekibini suçlamak değil, farkın nereden geldiğini anlamak.",
+  "karakter": {
+    "ad": "Kenan",
+    "rol": "Gece vardiyası amiri",
+    "tavir": "Yorgun ve biraz kırgın; \"gece ekibini kimse görmüyor\" diyor. Gece koşullarını merak eden birine açılıyor.",
+    "ilk_soz": "Gece ekibi hep kötü örnek olarak gösteriliyor. Ama burada işler gündüz gibi değil."
+  },
+  "yaniltici_ipuclari": [
+    "Gece çalışanlar uykulu.",
+    "Gece ekibi daha az özenli."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Gece vardiyasında depo gündüzden nasıl farklı?",
+    "Hatalar en çok gecenin hangi saatlerinde ve hangi işlerde oluyor?",
+    "Gece bir sorun çıkınca nasıl çözüyorsunuz?",
+    "Gece ekibine işler gündüz ekibinden nasıl devralınıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Işık: tasarruf için aydınlatma yarıya indirildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Enerji tasarrufu için gece koridor aydınlatmasının yarısı kapatılıyor; raf etiketleri zor okunuyor.",
+          "acilma_kosulu": "Gece deponun gündüzden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "gündüzden nasıl",
+            "aydınlatma",
+            "ışık"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hatalar en çok üst raflarda ve benzer ürün kodlarının karıştırılması şeklinde, gecenin her saatinde eşit.",
+          "acilma_kosulu": "Hataların gece nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecenin hangi",
+            "üst raf",
+            "benzer"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sorun çıkınca el feneri kullanıyorlar; aydınlatma kararını veren tesis yönetimine ulaşamıyorlar.",
+          "acilma_kosulu": "Gece sorunların nasıl çözüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkınca",
+            "el feneri",
+            "tesis"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devir notları yazılı bırakılıyor.",
+          "acilma_kosulu": "Işlerin gündüzden nasıl devralındığı sorulursa",
+          "ipucu_kelimeler": [
+            "devralınıyor",
+            "devir not"
+          ]
+        }
+      ],
+      "kok_neden": "Gece hatası yorgunluktan değil ışıktan: tasarruf için koridor aydınlatmasının yarısı kapatılıyor, üst raflardaki etiketler zor okunuyor ve benzer kodlar karışıyor; ekip kararı veren tesis yönetimine ulaşamıyor.",
+      "kok_neden_kelimeler": [
+        "aydınlatma",
+        "ışık",
+        "etiket",
+        "tasarruf",
+        "üst raf"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Destek yok: gece tek amir, sorun atlatılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gece sistem hatası ya da stok sorunu çıkınca ulaşılabilecek BT ya da envanter sorumlusu yok; ekip sorunu \"atlatıp\" devam ediyor.",
+          "acilma_kosulu": "Gece sorunların nasıl çözüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkınca",
+            "envanter sorumlusu",
+            "atlat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hatalar en çok sistemde stok görünüp rafta olmayan ürünlerde; toplayıcı yakındaki benzer ürünü alıyor.",
+          "acilma_kosulu": "Hataların gece nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecenin hangi",
+            "stok görünüp",
+            "yakındaki"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gündüz her bölümde bir sorumlu ve destek ekibi var; gece tek amir 60 kişiye bakıyor.",
+          "acilma_kosulu": "Gece deponun gündüzden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "gündüzden nasıl",
+            "tek amir",
+            "destek ekibi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devir sırasında kısa bir konuşma yapılıyor.",
+          "acilma_kosulu": "Işlerin gündüzden nasıl devralındığı sorulursa",
+          "ipucu_kelimeler": [
+            "devralınıyor",
+            "kısa konuşma"
+          ]
+        }
+      ],
+      "kok_neden": "Gece hatası destek yokluğundan: gündüz her sorunda başvurulacak sorumlu ve destek var, gece tek amir var ve stok ya da sistem sorunu çıkınca toplayıcılar benzer ürünü alıp sorunu atlatıyor.",
+      "kok_neden_kelimeler": [
+        "destek",
+        "sorumlu",
+        "tek amir",
+        "atlat",
+        "benzer ürün"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İş farkı: zor siparişler geceye bırakılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gündüz ekibi karmaşık ve çok kalemli siparişleri geceye bırakıyor; kolay siparişler gündüz bitiriliyor.",
+          "acilma_kosulu": "Işlerin gündüzden nasıl devralındığı sorulursa",
+          "ipucu_kelimeler": [
+            "devralınıyor",
+            "karmaşık",
+            "bırakıyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hataların çoğu gecenin ilk saatlerinde, gündüzden devralınan çok kalemli siparişlerde.",
+          "acilma_kosulu": "Hataların gece nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "gecenin hangi",
+            "ilk saat",
+            "çok kalemli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gece sipariş karması gündüzden çok farklı; ama hata oranı iki vardiyada sipariş zorluğuna bakılmadan karşılaştırılıyor.",
+          "acilma_kosulu": "Gece deponun gündüzden farkı sorulursa",
+          "ipucu_kelimeler": [
+            "gündüzden nasıl",
+            "sipariş karması",
+            "zorluk"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sorun çıkınca nöbetçi müdür telefonla aranabiliyor.",
+          "acilma_kosulu": "Gece sorunların nasıl çözüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sorun çıkınca",
+            "nöbetçi"
+          ]
+        }
+      ],
+      "kok_neden": "Fark ekipten değil işten: gündüz ekibi karmaşık ve çok kalemli siparişleri geceye bırakıyor, hatalar devralınan bu siparişlerde yoğunlaşıyor ve iki vardiya sipariş zorluğuna bakılmadan karşılaştırılıyor.",
+      "kok_neden_kelimeler": [
+        "devral",
+        "çok kalemli",
+        "karmaşık",
+        "zorluk",
+        "karşılaştır"
+      ]
+    }
+  ]
+}

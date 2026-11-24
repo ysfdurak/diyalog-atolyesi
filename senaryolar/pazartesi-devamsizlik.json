@@ -1,0 +1,198 @@
+{
+  "id": "pazartesi-devamsizlik",
+  "baslik": "Pazartesi devamsızlığı neden bu kadar yüksek?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "İK ve işe alım",
+  "sure_dk": 6,
+  "acilis": "Depoda pazartesi devamsızlığı %14, diğer günler %4. Pazartesi sabahları vardiyalar eksik başlıyor. Devamsızlığı takip eden İK iş ortağıyla konuşuyorsun.",
+  "rolun": "Depo müdürüsün. Amacın gelmeyenlere yaptırım uygulamak değil, pazartesinin neden farklı olduğunu anlamak.",
+  "karakter": {
+    "ad": "Aslı",
+    "rol": "İK iş ortağı",
+    "tavir": "Kurallara bağlı; \"disiplin süreci işletiyoruz\" diyor. Veriye meraklı birine açık konuşuyor.",
+    "ilk_soz": "Pazartesileri gelmeyenlere tutanak tutuyoruz ama değişen bir şey olmuyor."
+  },
+  "yaniltici_ipuclari": [
+    "Hafta sonu eğlenip pazartesi gelmiyorlar.",
+    "Disiplin gevşek."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Pazartesi gelmeyenler kimler ve ortak bir özellikleri var mı?",
+    "Cumartesi ve pazar günleri depoda nasıl çalışılıyor?",
+    "Gelmeyenler genelde hangi gerekçeyi bildiriyor?",
+    "Pazartesi sabahı vardiya nasıl başlıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yorgunluk: cumartesi zorunlu fazla mesai",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç aydır cumartesi günleri zorunlu fazla mesai var; çoğu çalışan altı gün üst üste çalışıyor.",
+          "acilma_kosulu": "Hafta sonu nasıl çalışıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "cumartesi ve pazar",
+            "zorunlu",
+            "altı gün"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pazartesi gelmeyenlerin çoğu cumartesi fazla mesaiye kalan çalışanlar.",
+          "acilma_kosulu": "Pazartesi gelmeyenlerin kimler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi gelmeyenler",
+            "fazla mesai"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gerekçe genelde \"rahatsızlandım\"; ama gelmeyenlerin çoğu bir gün dinlenebilmek için pazartesiyi kullanıyor.",
+          "acilma_kosulu": "Gelmeyenlerin gerekçeleri sorulursa",
+          "ipucu_kelimeler": [
+            "gerekçe",
+            "dinlen",
+            "rahatsız"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Pazartesi sabahı vardiya toplantısı yapılıyor.",
+          "acilma_kosulu": "Pazartesi sabahı vardiyanın nasıl başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi sabahı",
+            "toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Pazartesi devamsızlığı yorgunluktan: üç aydır cumartesi zorunlu fazla mesai var, çalışanlar altı gün üst üste çalışıyor ve dinlenmek için pazartesi gelmiyor.",
+      "kok_neden_kelimeler": [
+        "cumartesi",
+        "fazla mesai",
+        "yorgun",
+        "dinlen",
+        "altı gün"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Pazartesi en ağır gün: hafta sonu birikimi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pazartesi sabahı hafta sonu biriken siparişler ve iadeler yüzünden haftanın en ağır vardiyası; herkes en ağır işe veriliyor.",
+          "acilma_kosulu": "Pazartesi sabahı vardiyanın nasıl başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi sabahı",
+            "en ağır",
+            "birik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Cumartesi ve pazar depo kapalı; siparişler ve iadeler pazartesiye birikiyor.",
+          "acilma_kosulu": "Hafta sonu nasıl çalışıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "cumartesi ve pazar",
+            "kapalı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Pazartesi gelmeyenler en çok iade ayırma ve ağır koli bölümündekiler.",
+          "acilma_kosulu": "Pazartesi gelmeyenlerin kimler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi gelmeyenler",
+            "iade ayırma",
+            "ağır koli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gerekçeler çoğunlukla sağlık sorunu olarak bildiriliyor.",
+          "acilma_kosulu": "Gelmeyenlerin gerekçeleri sorulursa",
+          "ipucu_kelimeler": [
+            "gerekçe",
+            "sağlık"
+          ]
+        }
+      ],
+      "kok_neden": "Pazartesi en ağır gün olduğu için kaçılıyor: depo hafta sonu kapalı, siparişler ve iadeler pazartesiye birikiyor ve en ağır işlerdeki çalışanlar o günden kaçıyor.",
+      "kok_neden_kelimeler": [
+        "birik",
+        "ağır",
+        "kapalı",
+        "iade",
+        "hafta sonu"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ulaşım: pazartesi servisinin ilk seferi geç",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pazartesi vardiya 06:00'da başlıyor; servis pazartesileri pazar tarifesiyle çalıştığı için ilk sefer 06:30'da.",
+          "acilma_kosulu": "Pazartesi sabahı vardiyanın nasıl başladığı sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi sabahı",
+            "servis",
+            "sefer"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pazartesi gelmeyenlerin çoğu şehrin aynı bölgesinde oturan, servisle gelen çalışanlar.",
+          "acilma_kosulu": "Pazartesi gelmeyenlerin kimler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi gelmeyenler",
+            "aynı bölge"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gerekçe olarak çoğu \"yol\" diyor; geç gelmek tutanak gerektirdiği için hiç gelmemeyi tercih ediyorlar.",
+          "acilma_kosulu": "Gelmeyenlerin gerekçeleri sorulursa",
+          "ipucu_kelimeler": [
+            "gerekçe",
+            "yol",
+            "geç gelmek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hafta sonları depo kapalı.",
+          "acilma_kosulu": "Hafta sonu nasıl çalışıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "cumartesi ve pazar",
+            "kapalı"
+          ]
+        }
+      ],
+      "kok_neden": "Pazartesi devamsızlığı ulaşımdan: pazartesi servisinin ilk seferi vardiya başladıktan sonra geliyor, servisle gelenler geç kalıyor ve geç kalmak tutanak gerektirdiği için hiç gelmemeyi seçiyorlar.",
+      "kok_neden_kelimeler": [
+        "servis",
+        "ulaşım",
+        "geç",
+        "tutanak",
+        "sefer"
+      ]
+    }
+  ]
+}

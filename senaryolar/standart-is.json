@@ -1,0 +1,200 @@
+{
+  "id": "standart-is",
+  "baslik": "Standart iş talimatları neden uygulanmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Paketleme istasyonları için bir yıl önce standart iş talimatları hazırlandı ve asıldı. Gözlemde istasyonların yarısında iş talimattan farklı yapılıyor ve paketleme süreleri istasyondan istasyona iki kat değişiyor. Paketleme ekip lideriyle konuşuyorsun.",
+  "rolun": "Standart işten sorumlu iyileştirme yöneticisisin. Amacın talimata uymayanları uyarmak değil, talimatın neden uygulanmadığını anlamak.",
+  "karakter": {
+    "ad": "Emine",
+    "rol": "Paketleme ekip lideri",
+    "tavir": "Pratik ve açık sözlü; \"kâğıtta öyle ama gerçekte...\" diyor. Saha bilgisine değer veren birine anlatıyor.",
+    "ilk_soz": "Talimatlar asılı, herkes gördü. Ama kâğıtta yazan her zaman sahada işlemiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar alışkanlıklarını bırakmıyor.",
+    "Talimatı okuyan yok."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Talimat hazırlanırken istasyonda kimler vardı?",
+    "Talimattan farklı yapılan adımlar neden öyle yapılıyor?",
+    "İstasyonlar arasında ekipman ya da malzeme farkı var mı, nasıl?",
+    "Bir çalışan daha iyi bir yol bulunca ne oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ofiste yazıldı: tek istasyonun videosundan",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talimat bir mühendis tarafından ofiste, tek bir örnek istasyonun videosundan yazıldı; ekip liderleri ve paketlemeciler katılmadı.",
+          "acilma_kosulu": "Talimatın kimlerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talimat hazırlanırken",
+            "ofis",
+            "video"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Farklı yapılan adımların çoğu, talimatın gerçekte olmayan bir malzeme sırasını varsaymasından; paketlemeciler malzemeye göre sırayı değiştiriyor.",
+          "acilma_kosulu": "Farklı yapılan adımların nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "farklı yapılan",
+            "malzeme sırası",
+            "varsay"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İstasyonların yarısında talimattaki masa düzeni yok; bant makinesi ve yazıcı farklı yerlerde.",
+          "acilma_kosulu": "Istasyonlar arasındaki ekipman ve malzeme farkı sorulursa",
+          "ipucu_kelimeler": [
+            "ekipman ya da malzeme",
+            "masa düzeni",
+            "yazıcı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Daha iyi bir yol bulan çalışan genelde ekip liderine söylüyor.",
+          "acilma_kosulu": "Daha iyi yol bulunca ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha iyi bir yol",
+            "ekip liderine"
+          ]
+        }
+      ],
+      "kok_neden": "Talimat sahaya göre değil ofiste yazıldı: tek bir örnek istasyondan, paketlemeciler katılmadan hazırlandı; istasyonların yarısında talimattaki düzen ve malzeme sırası yok, bu yüzden herkes kendi yolunu buluyor.",
+      "kok_neden_kelimeler": [
+        "ofis",
+        "katılmadan",
+        "istasyon",
+        "düzen",
+        "malzeme"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İstasyonlar aynı değil: farklı model makineler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İstasyonlarda farklı model bant makineleri ve iki tip etiket yazıcısı var; talimat yalnızca yeni modele göre yazılmış.",
+          "acilma_kosulu": "Istasyonlar arasındaki ekipman ve malzeme farkı sorulursa",
+          "ipucu_kelimeler": [
+            "ekipman ya da malzeme",
+            "model",
+            "bant makine"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Farklı yapılan adımlar eski model makinelerin olduğu istasyonlarda; o makinelerle talimattaki sıra uygulanamıyor.",
+          "acilma_kosulu": "Farklı yapılan adımların nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "farklı yapılan",
+            "eski model"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimat yeni modelin bulunduğu tek istasyonda hazırlandı; diğer istasyonlara bakılmadı.",
+          "acilma_kosulu": "Talimatın kimlerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talimat hazırlanırken",
+            "tek istasyon",
+            "bakılmadı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İyi fikirler bazen ekip toplantısında konuşuluyor.",
+          "acilma_kosulu": "Daha iyi yol bulunca ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha iyi bir yol",
+            "ekip toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Talimat uygulanamıyor çünkü istasyonlar aynı değil: farklı model bant makineleri ve yazıcılar var, talimat yalnızca yeni modelin olduğu istasyonda hazırlandı ve eski makinelerde talimattaki sıra işlemiyor.",
+      "kok_neden_kelimeler": [
+        "ekipman",
+        "model",
+        "istasyon",
+        "eski",
+        "standart değil"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Talimat geride kaldı: güncelleme yolu ve sahibi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir çalışan daha hızlı bir yol bulunca diğerleri onu kopyalıyor; talimatı güncellemenin bir yolu yok, talimat bir yıldır aynı.",
+          "acilma_kosulu": "Daha iyi yol bulunca ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "daha iyi bir yol",
+            "kopyala",
+            "güncelle"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Farklı yapılan adımların çoğu aslında talimattan daha hızlı; paketlemeciler kendi aralarında geliştirmiş.",
+          "acilma_kosulu": "Farklı yapılan adımların nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "farklı yapılan",
+            "daha hızlı",
+            "geliştir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Talimatı hazırlayan mühendis başka projeye geçti; talimatın bir sahibi yok.",
+          "acilma_kosulu": "Talimatın kimlerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "talimat hazırlanırken",
+            "mühendis",
+            "sahibi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İstasyonların ekipmanı birbirinin aynısı.",
+          "acilma_kosulu": "Istasyonlar arasındaki ekipman ve malzeme farkı sorulursa",
+          "ipucu_kelimeler": [
+            "ekipman ya da malzeme",
+            "birbirinin aynı"
+          ]
+        }
+      ],
+      "kok_neden": "Talimat uygulanmıyor çünkü geride kaldı: paketlemeciler talimattan daha hızlı yollar geliştirdi ve birbirine öğretiyor, ama talimatı güncellemenin bir yolu ve talimatın bir sahibi yok.",
+      "kok_neden_kelimeler": [
+        "güncelle",
+        "sahibi",
+        "daha hızlı",
+        "geride",
+        "geliştir"
+      ]
+    }
+  ]
+}

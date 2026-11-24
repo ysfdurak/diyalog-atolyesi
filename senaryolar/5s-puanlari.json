@@ -1,0 +1,200 @@
+{
+  "id": "5s-puanlari",
+  "baslik": "5S puanları yüksek, alan neden dağınık?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Aylık 5S denetimlerinde depo bölümleri ortalama 92 puan alıyor. Müşteri ziyaretinde ise koridorlar dağınık bulundu ve rapora yazıldı. 5S denetimlerini yapan denetçilerden biriyle konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın denetçileri suçlamak değil, puanlarla gerçeğin neden ayrıştığını anlamak.",
+  "karakter": {
+    "ad": "Hülya",
+    "rol": "5S denetçisi",
+    "tavir": "Kurallara bağlı; \"kontrol listesine göre puanlıyorum\" diyor. Denetimin nasıl yapıldığını soran birine açık konuşuyor.",
+    "ilk_soz": "Ben listeye göre puanlıyorum. Denetim günü alanlar gayet düzenliydi."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri ziyareti kötü bir güne denk geldi.",
+    "Saha ekibi disiplinsiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Denetim ne zaman ve nasıl yapılıyor?",
+    "Kontrol listesinde hangi maddeler var?",
+    "Denetim günü ile diğer günler arasında alanda neler farklı?",
+    "Puanlar sonra nasıl kullanılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Denetim gününü ölçüyor: takvim önceden biliniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Denetim her ayın ilk salısı yapılıyor ve takvim bölümlerle önceden paylaşılıyor.",
+          "acilma_kosulu": "Denetimin ne zaman ve nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim ne zaman",
+            "ilk salı",
+            "önceden"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Denetimden önceki gün ekipler fazla mesaiye kalıp alanı topluyor; diğer günler koridorlarda geçici paletler duruyor.",
+          "acilma_kosulu": "Denetim günü ile diğer günlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim günü",
+            "önceki gün",
+            "topluyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Puanlar bölüm müdürlerinin aylık primine giriyor.",
+          "acilma_kosulu": "Puanların nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "puanlar sonra",
+            "prim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kontrol listesinde 25 madde var.",
+          "acilma_kosulu": "Kontrol listesindeki maddeler sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol listesinde",
+            "25 madde"
+          ]
+        }
+      ],
+      "kok_neden": "Puan denetim gününü ölçüyor, işi değil: denetim takvimi önceden biliniyor, ekipler bir gün önce alanı topluyor ve puan müdürlerin primine girdiği için denetim gününe hazırlanmak ödüllendiriliyor.",
+      "kok_neden_kelimeler": [
+        "önceden",
+        "denetim gün",
+        "prim",
+        "takvim",
+        "topluyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Liste sabit unsurları soruyor: tabela, çizgi, etiket",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kontrol listesindeki maddelerin çoğu \"tabela var mı, zemin çizgisi var mı, etiket var mı\" gibi; alanın gerçek kullanım düzeni sorulmuyor.",
+          "acilma_kosulu": "Kontrol listesindeki maddeler sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol listesinde",
+            "tabela",
+            "zemin çizgisi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dağınıklık yoğun saatlerde koridora bırakılan geçici paletlerden geliyor; denetim sabah, yoğunluk başlamadan yapılıyor.",
+          "acilma_kosulu": "Denetim günü ile diğer günlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim günü",
+            "yoğun saat",
+            "sabah"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Puanlar yalnızca panoya asılıyor; düşük maddeler için aksiyon açılmıyor.",
+          "acilma_kosulu": "Puanların nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "puanlar sonra",
+            "panoya",
+            "aksiyon"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Denetimi her ay farklı bir denetçi yapıyor.",
+          "acilma_kosulu": "Denetimin ne zaman ve nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim ne zaman",
+            "farklı bir denetçi"
+          ]
+        }
+      ],
+      "kok_neden": "Liste yanlış şeyi ölçüyor: maddeler tabela, çizgi ve etiket gibi sabit unsurları soruyor, dağınıklığın asıl kaynağı olan yoğun saatlerdeki geçici paletler sabah yapılan denetimde görünmüyor ve puanlar aksiyona dönüşmüyor.",
+      "kok_neden_kelimeler": [
+        "tabela",
+        "sabit",
+        "yoğun saat",
+        "geçici palet",
+        "aksiyon"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Disiplin değil kapasite: depo %95 dolu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Denetim günü ile diğer günler arasında fark yok; alan her gün aynı ölçüde dolu, koridorlara palet konmak zorunda kalınıyor.",
+          "acilma_kosulu": "Denetim günü ile diğer günlerin farkı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim günü",
+            "fark yok",
+            "her gün aynı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Listede koridordaki palet tek madde; denetçi palet sayısına değil varlığına bakıyor ve alan \"geçici alan\" diye işaretliyse puan kırmıyor.",
+          "acilma_kosulu": "Kontrol listesindeki maddeler sorulursa",
+          "ipucu_kelimeler": [
+            "kontrol listesinde",
+            "geçici alan",
+            "işaretli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Puanlar müdürlere gidiyor; ama depo doluluk oranı %95 ve bu bilgi 5S raporunda yer almıyor.",
+          "acilma_kosulu": "Puanların nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "puanlar sonra",
+            "doluluk",
+            "%95"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Denetim habersiz yapılıyor.",
+          "acilma_kosulu": "Denetimin ne zaman ve nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "denetim ne zaman",
+            "habersiz"
+          ]
+        }
+      ],
+      "kok_neden": "Dağınıklık disiplin değil kapasite sorunu: depo %95 dolu ve koridorlar her gün palet tutmak zorunda; 5S listesi işaretli geçici alanları puandan düşmüyor ve doluluk bilgisi 5S raporunda olmadığı için sorun 5S ile çözülmeye çalışılıyor.",
+      "kok_neden_kelimeler": [
+        "kapasite",
+        "doluluk",
+        "geçici alan",
+        "koridor",
+        "%95"
+      ]
+    }
+  ]
+}

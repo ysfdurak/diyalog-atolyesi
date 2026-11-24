@@ -1,0 +1,199 @@
+{
+  "id": "sikayet-tekrar",
+  "baslik": "Aynı müşteri şikâyeti neden tekrar ediyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Kalite ve iyileştirme",
+  "sure_dk": 7,
+  "acilis": "Büyük bir mağaza zinciri son dört ayda üçüncü kez aynı şikâyeti iletti: koliler mağazaya karışık geliyor, rafa yerleştirme uzuyor. Her seferinde düzeltici faaliyet kapatıldı. Şikâyetleri yöneten müşteri kalite sorumlusuyla konuşuyorsun.",
+  "rolun": "Kalite ve iyileştirmeden sorumlu yöneticisin. Amacın müşteriyi yatıştırmak değil, şikâyetin neden tekrar ettiğini anlamak.",
+  "karakter": {
+    "ad": "Esra",
+    "rol": "Müşteri kalite sorumlusu",
+    "tavir": "Baskı altında ve savunmada; \"her seferinde aksiyon aldık\" diyor. Sürece meraklı birine açık konuşuyor.",
+    "ilk_soz": "Her şikâyette aksiyon aldık, formlar kapandı. Müşteri yine de memnun değil."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri çok talepkâr.",
+    "Mağaza ekipleri koli açmayı bilmiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Müşteri karışık koli derken mağazada ne yaşıyor?",
+    "Her şikâyetten sonra hangi aksiyonlar alındı?",
+    "Bir mağaza siparişi kolilere nasıl bölünüyor?",
+    "Aksiyonların işe yarayıp yaramadığı nasıl kontrol edildi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Beklenti hiç tanımlanmadı: mağaza reyon bazlı istiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mağaza kolilerin reyona göre ayrılmasını istiyor; aynı kolide hem mutfak hem banyo ürünü gelince her ürünü ayrı reyona taşımak zorunda kalıyor.",
+          "acilma_kosulu": "Müşterinin mağazada ne yaşadığı sorulursa",
+          "ipucu_kelimeler": [
+            "karışık koli derken",
+            "reyona"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sipariş kolilere hacme göre bölünüyor; sistemde reyon bilgisi yok, toplayıcı kolinin dolmasına bakıyor.",
+          "acilma_kosulu": "Siparişin kolilere nasıl bölündüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kolilere nasıl",
+            "hacme",
+            "reyon bilgisi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Her şikâyette toplayıcılara \"dikkatli olun\" eğitimi verildi; müşterinin reyon beklentisi hiçbir yerde yazılı değil.",
+          "acilma_kosulu": "Alınan aksiyonlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi aksiyonlar",
+            "eğitim",
+            "dikkatli"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Aksiyonlar formda kapatıldı ve müşteriye bildirildi.",
+          "acilma_kosulu": "Aksiyonların nasıl kontrol edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "işe yarayıp",
+            "bildirildi"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyet tekrar ediyor çünkü müşterinin beklentisi hiç tanımlanmadı: mağaza kolilerin reyona göre ayrılmasını istiyor, sistemde reyon bilgisi yok ve koliler hacme göre bölünüyor; aksiyon her seferinde 'dikkatli olun' eğitimi oldu.",
+      "kok_neden_kelimeler": [
+        "reyon",
+        "beklenti",
+        "hacme",
+        "tanımlan",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Aksiyon kalıcı olmadı: kontrol yok, form kendiliğinden kapandı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aksiyon olarak koli etiketine reyon kodu yazılması kararlaştırıldı; yalnızca ilk hafta uygulandı.",
+          "acilma_kosulu": "Alınan aksiyonlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi aksiyonlar",
+            "reyon kodu",
+            "ilk hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aksiyonun sürüp sürmediği hiç kontrol edilmedi; form, aksiyon tarihi geçince kendiliğinden kapandı.",
+          "acilma_kosulu": "Aksiyonların nasıl kontrol edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "işe yarayıp",
+            "kontrol edilmedi",
+            "kendiliğinden"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Etiketler yeniden reyon kodu olmadan gelmeye başlayınca mağaza yine her koliyi açıp ayırmak zorunda kalıyor.",
+          "acilma_kosulu": "Müşterinin mağazada ne yaşadığı sorulursa",
+          "ipucu_kelimeler": [
+            "karışık koli derken",
+            "etiketler",
+            "açıp"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sipariş kolilere ürün grubu sırasına göre bölünüyor.",
+          "acilma_kosulu": "Siparişin kolilere nasıl bölündüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kolilere nasıl",
+            "ürün grubu"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyet tekrar ediyor çünkü aksiyon kalıcı olmadı: reyon kodlu etiket ilk hafta uygulandı, sonra bırakıldı; aksiyonun sürdüğü hiç kontrol edilmedi ve form tarihi geçince kendiliğinden kapandı.",
+      "kok_neden_kelimeler": [
+        "kontrol",
+        "kalıcı",
+        "kendiliğinden",
+        "etiket",
+        "reyon kod"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kök birleştirmede: siparişler tek sevkiyatta toplandı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki ay önce aynı mağazanın gün içindeki siparişleri tek sevkiyatta birleştirilmeye başlandı; farklı reyon siparişleri aynı kolilere toplanıyor.",
+          "acilma_kosulu": "Siparişin kolilere nasıl bölündüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kolilere nasıl",
+            "birleştir",
+            "tek sevkiyat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Mağazaya karışık gelen koliler, eskiden ayrı ayrı gelen reyon siparişlerinin birleştirilmiş hâli.",
+          "acilma_kosulu": "Müşterinin mağazada ne yaşadığı sorulursa",
+          "ipucu_kelimeler": [
+            "karışık koli derken",
+            "eskiden ayrı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aksiyonlar toplama ekibine yönelikti; birleştirme kararını veren nakliye planlama ekibi şikâyetten hiç haberdar edilmedi.",
+          "acilma_kosulu": "Alınan aksiyonlar sorulursa",
+          "ipucu_kelimeler": [
+            "hangi aksiyonlar",
+            "nakliye planlama",
+            "haberdar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müşteriye her aksiyondan sonra memnuniyet soruldu.",
+          "acilma_kosulu": "Aksiyonların nasıl kontrol edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "işe yarayıp",
+            "memnuniyet"
+          ]
+        }
+      ],
+      "kok_neden": "Şikâyetin kökü toplamada değil birleştirmede: maliyet için mağazanın siparişleri tek sevkiyatta birleştirilince farklı reyon siparişleri aynı kolilere girdi; aksiyonlar toplama ekibine yönelik oldu, kararı veren nakliye planlama şikâyetten haberdar edilmedi.",
+      "kok_neden_kelimeler": [
+        "birleştir",
+        "nakliye planlama",
+        "reyon",
+        "haberdar",
+        "tek sevkiyat"
+      ]
+    }
+  ]
+}
