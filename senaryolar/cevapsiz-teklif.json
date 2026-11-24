@@ -14,47 +14,217 @@
     "tavir": "Nazik ama oyalayıcı; \"değerlendiriyoruz\" deyip geçmek istiyor. Satış baskısı hissedince kapanıyor. Kendi derdini soran birine açık konuşuyor.",
     "ilk_soz": "Merhaba, kusura bakmayın dönemedim. Teklifiniz bizde, değerlendiriyoruz."
   },
-  "gizli_bilgiler": [
-    {
-      "id": "asil-dert",
-      "onem": "kritik",
-      "bilgi": "Asıl dertleri sezon dönemindeki kapasite sıkışması; teklif ise ağırlıklı olarak birim maliyet avantajını anlatıyordu.",
-      "acilma_kosulu": "Şu an lojistikte en çok neyle uğraştıkları, öncelikleri ya da teklifte neyin eksik kaldığı sorulursa",
-      "ipucu_kelimeler": ["öncelik", "uğraş", "zorlan", "eksik", "dert", "en önemli", "ihtiyaç", "beklenti"]
-    },
-    {
-      "id": "karar-verici",
-      "onem": "kritik",
-      "bilgi": "Kararı kendisi değil finans direktörü verecek; onun endişesi geçiş maliyeti ve bu konuda teklifte hiçbir şey yok.",
-      "acilma_kosulu": "Kararın nasıl ve kimler tarafından verileceği, süreçte başka kimlerin olduğu sorulursa",
-      "ipucu_kelimeler": ["karar", "kim", "süreç", "onay", "başka", "nasıl ilerl", "dahil"]
-    },
-    {
-      "id": "mevcut-sozlesme",
-      "onem": "kritik",
-      "bilgi": "Mevcut tedarikçiyle sözleşmeleri altı ay daha sürüyor; erken çıkışın cezası var.",
-      "acilma_kosulu": "Zamanlama, mevcut tedarikçi ya da ne zaman geçiş yapabilecekleri sorulursa",
-      "ipucu_kelimeler": ["zaman", "ne zaman", "mevcut", "şu an kim", "takvim", "geçiş", "sözleşme"]
-    },
-    {
-      "id": "olumlu-izlenim",
-      "onem": "destek",
-      "bilgi": "İlk görüşmeden olumlu izlenimle çıktı; referans depo ziyareti yapmak istiyor ama bunu söylemeye fırsat bulmadı.",
-      "acilma_kosulu": "İlk görüşmeyle ilgili izlenimi ya da bir sonraki adımda neyin işine yarayacağı sorulursa",
-      "ipucu_kelimeler": ["izlenim", "sonraki adım", "yardımcı ol", "nasıl bul", "işinize yara"]
-    }
-  ],
   "yaniltici_ipuclari": [
     "Bu aralar çok yoğunuz, sıra gelmedi.",
     "Bütçe dönemi, kararlar yavaş ilerliyor."
   ],
-  "kok_neden": "Teklif, müşterinin asıl derdi (sezon kapasitesi) ve gerçek karar vericinin endişesi (geçiş maliyeti) anlaşılmadan hazırlandı; üstelik mevcut sözleşme altı ay daha sürüyor. Sessizliğin nedeni yoğunluk değil, eksik keşif.",
-  "kok_neden_kelimeler": ["kapasite", "sezon", "karar verici", "finans", "geçiş", "sözleşme", "keşif"],
   "soru_hakki": 5,
   "ideal_sorular": [
     "Şu sıralar lojistik tarafında sizi en çok ne zorluyor?",
     "Böyle bir karar sizde nasıl ilerliyor, sürece kimler dahil oluyor?",
     "Bir değişiklik yapacak olsanız zamanlama açısından sizi ne bağlıyor?",
     "Teklifte görmeyi bekleyip göremediğiniz bir şey oldu mu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Eksik keşif: sezon kapasitesi, finans direktörü ve süren sözleşme",
+      "gizli_bilgiler": [
+        {
+          "id": "asil-dert",
+          "onem": "kritik",
+          "bilgi": "Asıl dertleri sezon dönemindeki kapasite sıkışması; teklif ise ağırlıklı olarak birim maliyet avantajını anlatıyordu.",
+          "acilma_kosulu": "Şu an lojistikte en çok neyle uğraştıkları, öncelikleri ya da teklifte neyin eksik kaldığı sorulursa",
+          "ipucu_kelimeler": [
+            "öncelik",
+            "uğraş",
+            "zorlan",
+            "eksik",
+            "dert",
+            "en önemli",
+            "ihtiyaç",
+            "beklenti"
+          ]
+        },
+        {
+          "id": "karar-verici",
+          "onem": "kritik",
+          "bilgi": "Kararı kendisi değil finans direktörü verecek; onun endişesi geçiş maliyeti ve bu konuda teklifte hiçbir şey yok.",
+          "acilma_kosulu": "Kararın nasıl ve kimler tarafından verileceği, süreçte başka kimlerin olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "kim",
+            "süreç",
+            "onay",
+            "başka",
+            "nasıl ilerl",
+            "dahil"
+          ]
+        },
+        {
+          "id": "mevcut-sozlesme",
+          "onem": "kritik",
+          "bilgi": "Mevcut tedarikçiyle sözleşmeleri altı ay daha sürüyor; erken çıkışın cezası var.",
+          "acilma_kosulu": "Zamanlama, mevcut tedarikçi ya da ne zaman geçiş yapabilecekleri sorulursa",
+          "ipucu_kelimeler": [
+            "zaman",
+            "ne zaman",
+            "mevcut",
+            "şu an kim",
+            "takvim",
+            "geçiş",
+            "sözleşme"
+          ]
+        },
+        {
+          "id": "olumlu-izlenim",
+          "onem": "destek",
+          "bilgi": "İlk görüşmeden olumlu izlenimle çıktı; referans depo ziyareti yapmak istiyor ama bunu söylemeye fırsat bulmadı.",
+          "acilma_kosulu": "İlk görüşmeyle ilgili izlenimi ya da bir sonraki adımda neyin işine yarayacağı sorulursa",
+          "ipucu_kelimeler": [
+            "izlenim",
+            "sonraki adım",
+            "yardımcı ol",
+            "nasıl bul",
+            "işinize yara"
+          ]
+        }
+      ],
+      "kok_neden": "Teklif, müşterinin asıl derdi (sezon kapasitesi) ve gerçek karar vericinin endişesi (geçiş maliyeti) anlaşılmadan hazırlandı; üstelik mevcut sözleşme altı ay daha sürüyor. Sessizliğin nedeni yoğunluk değil, eksik keşif.",
+      "kok_neden_kelimeler": [
+        "kapasite",
+        "sezon",
+        "karar verici",
+        "finans",
+        "geçiş",
+        "sözleşme",
+        "keşif"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Karar yetkisi el değiştirdi: şirket bir gruba satıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "satin-alindi",
+          "onem": "kritik",
+          "bilgi": "Şirket iki ay önce büyük bir grup tarafından satın alındı; yeni tedarikçi kararları dondu.",
+          "acilma_kosulu": "Şu sıralar onları en çok neyin zorladığı ya da şirkette ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "zorluyor",
+            "en çok ne",
+            "şu sıralar",
+            "değiş"
+          ]
+        },
+        {
+          "id": "yetki-gitti",
+          "onem": "kritik",
+          "bilgi": "Lojistik kararları artık grubun merkez satın alma ekibinde; Kerem'in onay yetkisi kalmadı.",
+          "acilma_kosulu": "Kararın nasıl ilerlediği ya da sürece kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "kimler",
+            "dahil",
+            "nasıl ilerl",
+            "süreç"
+          ]
+        },
+        {
+          "id": "ihale-donemi",
+          "onem": "kritik",
+          "bilgi": "Grubun kendi lojistik çerçeve anlaşması var; yeni bir tedarikçi ancak grubun yıllık ihale döneminde değerlendirilebilir.",
+          "acilma_kosulu": "Zamanlamayı neyin bağladığı ya da ne zaman karar verilebileceği sorulursa",
+          "ipucu_kelimeler": [
+            "zamanlama",
+            "bağlıyor",
+            "ne zaman",
+            "takvim"
+          ]
+        },
+        {
+          "id": "onermek-istiyor",
+          "onem": "destek",
+          "bilgi": "Teklifi beğendi ve sizi grubun ihalesine önermek istiyor.",
+          "acilma_kosulu": "Teklif hakkındaki görüşü ya da sonraki adım sorulursa",
+          "ipucu_kelimeler": [
+            "teklif",
+            "sonraki adım",
+            "yardımcı"
+          ]
+        }
+      ],
+      "kok_neden": "Sessizliğin nedeni teklif değil karar yetkisi: şirket bir grup tarafından satın alındı, lojistik kararları grubun merkezine geçti ve yeni tedarikçi ancak grubun yıllık ihalesinde değerlendirilebilir.",
+      "kok_neden_kelimeler": [
+        "satın alın",
+        "grup",
+        "karar yetkisi",
+        "ihale",
+        "merkez"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İç direnç: kendi depo ekibi karşı, çalışanların devri teklifte yok",
+      "gizli_bilgiler": [
+        {
+          "id": "calisanlar",
+          "onem": "kritik",
+          "bilgi": "Şirketin kendi deposunda 40 kişi çalışıyor; dış kaynağa geçiş bu kişilerin geleceği belirsiz demek ve Kerem'i en çok bu zorluyor.",
+          "acilma_kosulu": "Şu sıralar onu en çok neyin zorladığı sorulursa",
+          "ipucu_kelimeler": [
+            "zorluyor",
+            "en çok ne",
+            "şu sıralar",
+            "dert"
+          ]
+        },
+        {
+          "id": "karsi-rapor",
+          "onem": "kritik",
+          "bilgi": "Kendi depo müdürleri geçişe karşı; teklife karşı bir iç rapor hazırladı ve yönetim bu rapor yüzünden kararı erteledi.",
+          "acilma_kosulu": "Kararın nasıl ilerlediği ya da sürece kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "kimler",
+            "dahil",
+            "nasıl ilerl",
+            "süreç"
+          ]
+        },
+        {
+          "id": "devir-yok",
+          "onem": "kritik",
+          "bilgi": "Teklifte mevcut çalışanların devri ya da başka işlere yerleştirilmesi hakkında hiçbir şey yok; yönetim bu konu netleşmeden karar vermeyecek.",
+          "acilma_kosulu": "Kararı ya da zamanlamayı neyin beklettiği, ya da teklifte eksik olan sorulursa",
+          "ipucu_kelimeler": [
+            "zamanlama",
+            "bağlıyor",
+            "bekle",
+            "eksik",
+            "göremedi"
+          ]
+        },
+        {
+          "id": "kendisi-destekliyor",
+          "onem": "destek",
+          "bilgi": "Kerem kişisel olarak dış kaynağa geçişi destekliyor.",
+          "acilma_kosulu": "Kerem'in kişisel görüşü sorulursa",
+          "ipucu_kelimeler": [
+            "kişisel",
+            "sizce",
+            "fikriniz"
+          ]
+        }
+      ],
+      "kok_neden": "Sessizliğin nedeni iç direnç ve çalışanların devri: kendi depo ekipleri dış kaynağa karşı, depo müdürü karşı rapor hazırladı ve teklif mevcut 40 çalışana ne olacağını hiç ele almıyor.",
+      "kok_neden_kelimeler": [
+        "çalışan",
+        "iç direnç",
+        "depo müdürü",
+        "devri",
+        "dış kaynak"
+      ]
+    }
   ]
 }
