@@ -1,0 +1,199 @@
+{
+  "id": "proje-butcesi",
+  "baslik": "Proje bütçesi neden aşıldı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Proje yönetimi",
+  "sure_dk": 8,
+  "acilis": "Yeni raf sistemi kurulum projesi bütçeyi %35 aştı. Proje kapanış toplantısı yarın ve finans ayrıntılı açıklama istiyor. Proje yöneticisiyle konuşuyorsun.",
+  "rolun": "Projenin sponsorusun. Amacın suçlu bulmak değil, bütçenin neden aşıldığını anlamak.",
+  "karakter": {
+    "ad": "Nazlı",
+    "rol": "Proje yöneticisi",
+    "tavir": "Gergin ve hesap vermeye hazırlanmış; \"beklenmedik şeyler oldu\" diyor. Ayrıntı soran birine açık konuşuyor.",
+    "ilk_soz": "Rakamları hazırladım. Kısaca söyleyeyim, beklenmedik şeyler oldu."
+  },
+  "yaniltici_ipuclari": [
+    "Malzeme fiyatları arttı.",
+    "Bu tür projeler hep aşar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Aşımın en büyük kalemi ne?",
+    "Bütçe hazırlanırken hangi bilgilerle hesaplandı?",
+    "Proje sırasında kapsamda neler değişti?",
+    "Aşım ilk ne zaman görüldü, sonra ne yapıldı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Öngörülmeyen zemin: etüt yapılmadan bütçe",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aşımın en büyük kalemi zemin güçlendirme; yeni raflar için zeminin taşıma kapasitesi yetmedi.",
+          "acilma_kosulu": "Aşımın en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalem",
+            "zemin"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bütçe tedarikçinin standart fiyat listesiyle hazırlandı; maliyetten kaçınmak için zemin etüdü yapılmadı.",
+          "acilma_kosulu": "Bütçenin hangi bilgilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "etüd",
+            "standart fiyat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aşım kurulumun ikinci haftasında görüldü; ama sponsora ancak proje bitince raporlandı.",
+          "acilma_kosulu": "Aşımın ne zaman görüldüğü ve sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "raporlan",
+            "sponsor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Raf sayısı ve tipi planlandığı gibi kaldı.",
+          "acilma_kosulu": "Kapsamda neyin değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapsamda",
+            "raf sayısı"
+          ]
+        }
+      ],
+      "kok_neden": "Aşım öngörülmeyen zeminden: bütçe zemin etüdü yapılmadan standart fiyatla hazırlandı, zemin güçlendirme en büyük kalem oldu ve aşım erken görülse de sponsora proje sonunda raporlandı.",
+      "kok_neden_kelimeler": [
+        "zemin",
+        "etüd",
+        "güçlendirme",
+        "raporlan",
+        "standart fiyat"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kapsam kayması: sözlü onayla ara kat eklendi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kurulum sırasında operasyondan gelen isteklerle iki ek raf sırası ve bir ara kat eklendi; değişiklikler sözlü onaylandı.",
+          "acilma_kosulu": "Kapsamda neyin değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapsamda",
+            "ara kat",
+            "ek raf"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Aşımın en büyük kalemi ara kat; ilk bütçede yoktu.",
+          "acilma_kosulu": "Aşımın en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalem",
+            "ilk bütçe"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aşım ilk ara kat eklendiğinde görüldü; ama değişiklik talebi süreci olmadığı için bütçe revize edilmedi.",
+          "acilma_kosulu": "Aşımın ne zaman görüldüğü ve sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "değişiklik talebi",
+            "revize"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk bütçe teklif fiyatlarıyla gerçekçi hazırlanmıştı.",
+          "acilma_kosulu": "Bütçenin hangi bilgilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "teklif"
+          ]
+        }
+      ],
+      "kok_neden": "Aşım kapsamdan: kurulum sırasında sözlü onayla ek raf sırası ve ara kat eklendi, değişiklik talebi süreci olmadığı için bütçe revize edilmedi ve aşım ancak kapanışta görünür oldu.",
+      "kok_neden_kelimeler": [
+        "kapsam",
+        "ara kat",
+        "değişiklik talebi",
+        "sözlü",
+        "revize"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Takvim ve koşullar: gece çalışması ve dış depo kirası",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aşımın en büyük kalemi fazla mesai ve gece çalışması; kurulum operasyonu durdurmamak için gece yapıldı.",
+          "acilma_kosulu": "Aşımın en büyük kalemi sorulursa",
+          "ipucu_kelimeler": [
+            "en büyük kalem",
+            "gece",
+            "fazla mesai"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Raf teslimatı tedarikçide altı hafta gecikti; bu sürede dış depo kirası ödenmeye devam etti ve kurulum sıkıştırıldı.",
+          "acilma_kosulu": "Aşımın ne zaman görüldüğü ve sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "gecik",
+            "kira"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bütçe gündüz kurulum varsayımıyla hazırlandı; operasyonu durdurma yasağı bütçeye yansıtılmadı.",
+          "acilma_kosulu": "Bütçenin hangi bilgilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "gündüz",
+            "varsayım"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kapsam değişmedi.",
+          "acilma_kosulu": "Kapsamda neyin değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kapsamda",
+            "değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "Aşım takvim ve çalışma koşullarından: bütçe gündüz kurulum varsayımıyla hazırlandı, operasyon durdurulamadığı için iş geceye kaydı ve tedarikçi gecikmesi boyunca dış depo kirası ödendi.",
+      "kok_neden_kelimeler": [
+        "gece",
+        "gündüz",
+        "gecik",
+        "kira",
+        "varsayım"
+      ]
+    }
+  ]
+}

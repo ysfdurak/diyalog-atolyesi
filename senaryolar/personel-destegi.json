@@ -1,0 +1,200 @@
+{
+  "id": "personel-destegi",
+  "baslik": "Diğer departmana verilen destek neden hep sorun oluyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Yoğun dönemlerde ekibinden diğer departmanlara personel desteği veriyorsun. Son aylarda destek giden çalışanlar şikâyet ediyor, karşı departman da \"gelenler işe yaramıyor\" diyor. Sık destek giden çalışanlarından Emre'yle konuşuyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın destek vermeyi bırakmak değil, desteğin neden iki tarafı da memnun etmediğini anlamak.",
+  "karakter": {
+    "ad": "Emre",
+    "rol": "Depo çalışanı",
+    "tavir": "Kırgın ama kibar; \"artık ben gitmeyeyim\" demek istiyor. Dinlendiğini hissedince anlatıyor.",
+    "ilk_soz": "Yine destek mi var? Açık söyleyeyim, bu sefer başkası gitse iyi olur."
+  },
+  "yaniltici_ipuclari": [
+    "Orası çok yoğun, herkes gergin.",
+    "Ben biraz alışamadım galiba."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Son destek gittiğinde gün nasıl geçti?",
+    "Desteğe kimin gideceği nasıl belirleniyor?",
+    "Orada sana hangi işler veriliyor?",
+    "Destek dönüşünde burada neler oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Adaletsiz dağılım: hep itiraz etmeyen aynı kişiler gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Desteğe kimin gideceğine son anda vardiya amiri karar veriyor; hep aynı dört kişi gönderiliyor, çünkü onlar itiraz etmiyor.",
+          "acilma_kosulu": "Desteğe kimin gideceğinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kimin gideceği",
+            "aynı kişi",
+            "itiraz"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Dönünce kendi işi birikmiş oluyor ve o günün hedefinden yine sorumlu tutuluyor.",
+          "acilma_kosulu": "Destekten dönünce neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dönüşünde",
+            "birik",
+            "sorumlu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sabah işe gelince destek gideceğini öğreniyor; önceden haber verilmiyor.",
+          "acilma_kosulu": "Son destek günün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "gün nasıl",
+            "haber",
+            "sabah"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Orada genelde basit taşıma işleri veriliyor.",
+          "acilma_kosulu": "Orada hangi işlerin verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler",
+            "taşıma"
+          ]
+        }
+      ],
+      "kok_neden": "Destek adaletsiz dağıtıldığı için sorun: hep itiraz etmeyen aynı kişiler gönderiliyor, sabah habersiz öğreniyorlar ve döndüklerinde biriken kendi işlerinden de sorumlu tutuluyorlar.",
+      "kok_neden_kelimeler": [
+        "aynı kişi",
+        "adalet",
+        "habersiz",
+        "birik",
+        "sorumlu"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Karşılama yok: iş gösteren, sorumlu ve sistem yetkisi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Orada ona kimse iş göstermiyor; bir köşede bekletiliyor, sonra en ağır işe veriliyor.",
+          "acilma_kosulu": "Orada hangi işlerin verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler",
+            "bekletil",
+            "ağır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son destekte iki saat sorumlusunu aradı; o departmanın sisteminde yetkisi olmadığı için hiçbir kayıt giremedi.",
+          "acilma_kosulu": "Son destek günün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "gün nasıl",
+            "yetki",
+            "sorumlusu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Destek talebi telefonla \"iki kişi lazım\" diye geliyor; hangi beceride kişi gerektiği ve kimin karşılayacağı yazılmıyor.",
+          "acilma_kosulu": "Desteğe kimin gideceğinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kimin gideceği",
+            "talep",
+            "beceri"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Dönüşte kendi ekibi onu iyi karşılıyor.",
+          "acilma_kosulu": "Destekten dönünce neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dönüşünde",
+            "karşıla"
+          ]
+        }
+      ],
+      "kok_neden": "Destek karşı tarafta karşılanmadığı için işe yaramıyor: talep yalnızca kişi sayısıyla geliyor, orada iş gösteren ya da sorumlu biri yok, gidenin sistem yetkisi açılmıyor ve kişi bekletilip en ağır işe veriliyor.",
+      "kok_neden_kelimeler": [
+        "karşıla",
+        "sorumlu",
+        "yetki",
+        "talep",
+        "bekletil"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Emek görünmüyor: destek saatleri performansa yazılmıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Dönünce destek gittiği saatler kendi performans raporunda boşluk olarak görünüyor; aylık değerlendirmede verimi düşük çıkıyor.",
+          "acilma_kosulu": "Destekten dönünce neler olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dönüşünde",
+            "performans",
+            "rapor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son destekte bütün gün çalıştı ama yaptığı iş hiçbir yerde kaydedilmedi.",
+          "acilma_kosulu": "Son destek günün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "gün nasıl",
+            "kaydedil"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kimin gideceği performans sıralamasına göre belirleniyor; en düşük verimli görünenler gönderiliyor, destek de onların verimini daha da düşürüyor.",
+          "acilma_kosulu": "Desteğe kimin gideceğinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "kimin gideceği",
+            "sıralama",
+            "verim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Orada verilen işleri biliyor ve rahat yapıyor.",
+          "acilma_kosulu": "Orada hangi işlerin verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler",
+            "rahat"
+          ]
+        }
+      ],
+      "kok_neden": "Destek cezaya dönüşmüş: destek saatleri performans raporuna yazılmıyor, giden kişi verimsiz görünüyor ve en düşük verimliler gönderildiği için destek kısır bir döngüye dönüyor.",
+      "kok_neden_kelimeler": [
+        "performans",
+        "verim",
+        "kayıt",
+        "rapor",
+        "sıralama"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "depo-birlestirme",
+  "baslik": "Depo birleştirme planına neden itiraz var?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "İş geliştirme",
+  "sure_dk": 8,
+  "acilis": "Üç ayrı depoyu tek bir yeni depoda birleştirme planını yönetime sundun. Rakamlar olumlu, ama depo müdürlerinden ikisi plana açıkça itiraz ediyor ve proje durma noktasına geldi. Kuzey depo müdürüyle konuşuyorsun.",
+  "rolun": "Birleştirme planını hazırlayan iş geliştirme yöneticisisin. Amacın itirazı kırmak değil, neye itiraz edildiğini anlamak.",
+  "karakter": {
+    "ad": "Halil",
+    "rol": "Kuzey depo müdürü",
+    "tavir": "Deneyimli ve gururlu; \"değişime direnç\" damgası yemekten rahatsız. Kendisine itiraz ediliyormuş gibi hissedince sertleşir; işini soran birine anlatır.",
+    "ilk_soz": "Plana karşı olduğumu duymuşsunuzdur. Karşı değilim; sadece kimse bize sormadı."
+  },
+  "yaniltici_ipuclari": [
+    "Herkes kendi deposunu korumak ister.",
+    "Eski ekipler değişime zor alışır."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Planı ilk gördüğünde en çok neye takıldın, ne düşündün?",
+    "Senin deponda bu planın gözden kaçırdığı neler var?",
+    "Ekibin bu birleşmeyi nasıl karşıladı?",
+    "Bu plan hangi koşullarda senin için işe yarardı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İnsanlar: yeni depo çalışanların evine uzak",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kuzey deposundaki 60 çalışanın çoğu depoya yürüyerek ya da tek otobüsle geliyor; yeni depo 35 km uzakta ve oraya toplu taşıma yok.",
+          "acilma_kosulu": "Ekibinin birleşmeyi nasıl karşıladığı ya da çalışanların durumu sorulursa",
+          "ipucu_kelimeler": [
+            "ekibin",
+            "çalışan",
+            "ulaşım"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Planda personel maliyeti aynı kadroyla hesaplanmış; çalışanların ne kadarının yeni depoya gelebileceği hiç sorulmamış.",
+          "acilma_kosulu": "Planı ilk gördüğünde neye takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gördüğünde",
+            "personel",
+            "kadro"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Servis hattı ve geçiş döneminde yol desteği planlanırsa ekibinin çoğunu tutabileceğini düşünüyor.",
+          "acilma_kosulu": "Planın hangi koşullarda işe yarayacağı sorulursa",
+          "ipucu_kelimeler": [
+            "koşul",
+            "servis",
+            "yol"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kuzey deposunun en deneyimli forklift operatörleri emekliliğe yakın.",
+          "acilma_kosulu": "Planın onun deposunda gözden kaçırdıkları sorulursa",
+          "ipucu_kelimeler": [
+            "gözden kaçır",
+            "deneyim",
+            "emekli"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz birleşmeye değil insanlara: yeni depo çalışanların evine uzak ve toplu taşıma yok, planda kadronun aynen taşınacağı varsayılmış ve servis ya da yol desteği düşünülmemiş.",
+      "kok_neden_kelimeler": [
+        "çalışan",
+        "servis",
+        "kadro",
+        "uzak",
+        "ulaşım"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Eksik alan hesabı: sıcaklık kontrollü ürünler ve ruhsat",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kuzey deposunda ilaç ve kozmetik ürünler için sıcaklık kontrollü bir bölüm var; planda bu ürünler genel stoka eklenmiş.",
+          "acilma_kosulu": "Planın onun deposunda gözden kaçırdıkları sorulursa",
+          "ipucu_kelimeler": [
+            "gözden kaçır",
+            "sıcaklık",
+            "ürün"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Planı ilk gördüğünde aklına gelen, kendi deposundaki ürünlerin özel saklama koşullarının alan hesabında hiç yer almamasıydı.",
+          "acilma_kosulu": "Planı ilk gördüğünde neye takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gördüğünde",
+            "alan hesab"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yeni depoda ayrı sıcaklık kontrollü bölüm ve gerekli ruhsat planlanırsa itirazı kalmaz; ruhsatın alınması bir yıl sürebiliyor.",
+          "acilma_kosulu": "Planın hangi koşullarda işe yarayacağı sorulursa",
+          "ipucu_kelimeler": [
+            "koşul",
+            "ruhsat",
+            "bölüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekibi birleşmeye meraklı; yeni ekipmanla çalışmak istiyorlar.",
+          "acilma_kosulu": "Ekibinin birleşmeyi nasıl karşıladığı sorulursa",
+          "ipucu_kelimeler": [
+            "ekibin",
+            "merak"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz birleşmeye değil eksik alan hesabına: kuzey deposundaki sıcaklık kontrollü ürünler planda genel stoka eklenmiş, ayrı bölüm ve ruhsat düşünülmemiş; ruhsat süresi takvimi de değiştiriyor.",
+      "kok_neden_kelimeler": [
+        "sıcaklık",
+        "ruhsat",
+        "bölüm",
+        "alan",
+        "özel saklama"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Belirsizlik: üç müdürden biri kalacak, kimse söylemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Planda tek depo müdürü kadrosu var; üç müdürden hangisinin kalacağı ve diğerlerine ne olacağı hiç yazılmamış.",
+          "acilma_kosulu": "Planı ilk gördüğünde neye takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gördüğünde",
+            "müdür",
+            "kadro"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekibi \"müdürümüz gidiyor mu?\" diye soruyor; cevap veremediği için söylentiler yayılıyor ve iki kıdemli amir başka iş arıyor.",
+          "acilma_kosulu": "Ekibinin birleşmeyi nasıl karşıladığı sorulursa",
+          "ipucu_kelimeler": [
+            "ekibin",
+            "söylenti",
+            "amir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kendi rolü baştan açıkça konuşulsa ve geçiş döneminde ona bir görev verilse planı destekler.",
+          "acilma_kosulu": "Planın hangi koşullarda işe yarayacağı sorulursa",
+          "ipucu_kelimeler": [
+            "koşul",
+            "rol",
+            "görev"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Planın operasyon hesaplarını genel olarak doğru buluyor.",
+          "acilma_kosulu": "Planın onun deposunda gözden kaçırdıkları sorulursa",
+          "ipucu_kelimeler": [
+            "gözden kaçır",
+            "hesap"
+          ]
+        }
+      ],
+      "kok_neden": "İtiraz plana değil belirsizliğe: planda tek müdür kadrosu var ama kimin kalacağı ve diğerlerinin rolü konuşulmamış; bu belirsizlik ekibe söylenti olarak yayılıyor.",
+      "kok_neden_kelimeler": [
+        "rol",
+        "belirsiz",
+        "müdür",
+        "söylenti",
+        "kadro"
+      ]
+    }
+  ]
+}

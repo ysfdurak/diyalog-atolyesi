@@ -1,0 +1,199 @@
+{
+  "id": "ramak-kala",
+  "baslik": "Ramak kala olayları neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Son üç ayda forklift ile yaya arasındaki ramak kala bildirimleri üç katına çıktı. Henüz yaralanma yok. İş güvenliği uzmanıyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın kural ihlali yapanı bulmak değil, riskin neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Gökhan",
+    "rol": "İş güvenliği uzmanı",
+    "tavir": "Endişeli ve biraz bıkkın; \"kimse kurallara uymuyor\" diyor. Sahayı merak eden birine somut bilgi veriyor.",
+    "ilk_soz": "Bildirimler arttı, evet. Uyarıyoruz, eğitim veriyoruz, yine de oluyor."
+  },
+  "yaniltici_ipuclari": [
+    "Çalışanlar kurallara uymuyor.",
+    "Forkliftçiler hep acele ediyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ramak kala olayları en çok nerede ve hangi saatlerde oluyor?",
+    "Bildirimler artmaya başlamadan önce depoda ne değişti?",
+    "Bir yaya o noktada hangi yolu izliyor, neden?",
+    "Bildirim gelince ne yapılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yerleşim: yaya yolu kör köşeye kaydı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce yeni bir raf sırası eklendi; yaya yolu kör bir köşeye kaydı.",
+          "acilma_kosulu": "Artıştan önce depoda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artmaya başlamadan",
+            "raf",
+            "yerleşim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Olayların çoğu aynı kör köşede ve vardiya değişiminde oluyor.",
+          "acilma_kosulu": "Olayların nerede ve hangi saatlerde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nerede ve",
+            "köşe",
+            "vardiya değişim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yaya yolu soyunma odasından en uzun yolu çizdiği için çalışanlar raf arasından kestirme yapıyor.",
+          "acilma_kosulu": "Yayaların izlediği yol sorulursa",
+          "ipucu_kelimeler": [
+            "yaya o noktada",
+            "kestirme",
+            "soyunma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bildirimler kayda giriyor ve aylık rapora ekleniyor.",
+          "acilma_kosulu": "Bir bildirim gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "bildirim gelince",
+            "rapor"
+          ]
+        }
+      ],
+      "kok_neden": "Risk dikkatsizlikten değil yerleşimden: yeni raf sırası yaya yolunu kör köşeye taşıdı, yol uzadığı için çalışanlar raf arasından kestirme yapıyor ve olaylar vardiya değişiminde o köşede yığılıyor.",
+      "kok_neden_kelimeler": [
+        "yerleşim",
+        "köşe",
+        "yaya yolu",
+        "kestirme",
+        "raf"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Geçici personel: bu depoda eğitim almamış operatörler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sezon için alınan geçici personelden altısı forklift kullanıyor; operatör belgeleri var ama bu depoda hiç eğitim almadılar.",
+          "acilma_kosulu": "Artıştan önce depoda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artmaya başlamadan",
+            "geçici",
+            "eğitim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Olayların çoğu öğleden sonra vardiyasında, geçici operatörlerin çalıştığı saatlerde oluyor.",
+          "acilma_kosulu": "Olayların nerede ve hangi saatlerde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nerede ve",
+            "öğleden sonra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bildirimlerde operatörün adı yazılmıyor; bu yüzden olayların hangi operatörlerde yoğunlaştığı görülmüyor.",
+          "acilma_kosulu": "Bir bildirim gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "bildirim gelince",
+            "adı yazıl",
+            "yoğunlaş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yaya yolları işaretli ve çoğunlukla kullanılıyor.",
+          "acilma_kosulu": "Yayaların izlediği yol sorulursa",
+          "ipucu_kelimeler": [
+            "yaya o noktada",
+            "işaret"
+          ]
+        }
+      ],
+      "kok_neden": "Risk geçici personelden: sezonda alınan operatörler bu depoda eğitim almadan forklift kullanıyor, olaylar onların vardiyasında yığılıyor ve bildirimlerde operatör adı olmadığı için bu görülmüyor.",
+      "kok_neden_kelimeler": [
+        "geçici",
+        "eğitim",
+        "operatör",
+        "sezon",
+        "vardiya"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Hız baskısı: primli saatlik palet hedefi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce forklift operatörlerine saatlik palet hedefi getirildi; hedefi tutturanlara prim veriliyor.",
+          "acilma_kosulu": "Artıştan önce depoda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "artmaya başlamadan",
+            "hedef",
+            "prim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bildirim gelince yalnızca yayaya ya da operatöre uyarı yapılıyor; hedef ile olaylar arasındaki ilişkiye hiç bakılmadı.",
+          "acilma_kosulu": "Bir bildirim gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "bildirim gelince",
+            "uyarı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Olaylar en çok vardiya sonundaki son bir saatte oluyor; operatörler o saatte hedefi tamamlamak için hızlanıyor.",
+          "acilma_kosulu": "Olayların nerede ve hangi saatlerde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nerede ve",
+            "vardiya sonu",
+            "son bir saat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yayalar genelde işaretli yolları kullanıyor.",
+          "acilma_kosulu": "Yayaların izlediği yol sorulursa",
+          "ipucu_kelimeler": [
+            "yaya o noktada",
+            "işaret"
+          ]
+        }
+      ],
+      "kok_neden": "Risk hız baskısından: forklift operatörlerine primli saatlik palet hedefi getirildi, operatörler vardiya sonunda hedefi tutturmak için hızlanıyor ve bildirimler yalnızca uyarıyla kapatıldığı için hedefle bağ kurulmadı.",
+      "kok_neden_kelimeler": [
+        "hedef",
+        "prim",
+        "hız",
+        "vardiya sonu",
+        "uyarı"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "usta-fikir",
+  "baslik": "Deneyimli usta neden fikir vermiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 6,
+  "acilis": "Öneri sistemine depodan neredeyse hiç öneri gelmiyor. 22 yıllık forklift ustası Hasan'ın işi herkesten iyi bildiği söyleniyor, ama toplantılarda hiç konuşmuyor. Hasan'la çay molasında oturuyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın Hasan'dan öneri koparmak değil, fikirlerini neden paylaşmadığını anlamak.",
+  "karakter": {
+    "ad": "Hasan",
+    "rol": "Kıdemli forklift ustası",
+    "tavir": "Sakin, az konuşan, biraz alaycı; \"bana sorulmaz ki\" der. Samimi bir merak görünce hikâyesini anlatır.",
+    "ilk_soz": "Çay iyi geldi. Öneri soracaksan, ben öneri adamı değilim."
+  },
+  "yaniltici_ipuclari": [
+    "Yaşım geçti, yeni şeylerle uğraşmam.",
+    "Gençler bilir bu işleri."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Daha önce bir fikrini paylaştığında ne olmuştu?",
+    "Sence depoda en çok ne boşa gidiyor?",
+    "Öneri sistemine bir fikir yazmak nasıl bir şey?",
+    "Bir fikrin hayata geçmesi için neler gerekir?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Önerisi gerekçesiz reddedildi, kimse konuşmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İki yıl önce rampa randevularını gün içine dağıtma önerisi verdi; ret yazısı geldi, gerekçesi yoktu ve kimse onunla konuşmadı.",
+          "acilma_kosulu": "Daha önce bir fikrini paylaştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fikrini paylaştığında",
+            "ret",
+            "gerekçe"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ona göre en çok, sabahları aynı anda gelen araçlar yüzünden forkliftlerin beklemesi boşa gidiyor; önerisi de buydu.",
+          "acilma_kosulu": "Depoda en çok neyin boşa gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "boşa gidiyor",
+            "araç",
+            "bekle"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fikrinin neden reddedildiğini öğrenmek ve fikrini karar verenlere kendisi anlatabilmek istiyor.",
+          "acilma_kosulu": "Bir fikrin hayata geçmesi için gerekenler sorulursa",
+          "ipucu_kelimeler": [
+            "hayata geçmesi",
+            "karar veren"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Öneri formu bilgisayardan dolduruluyor.",
+          "acilma_kosulu": "Öneri sistemine fikir yazmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "öneri sistemine",
+            "bilgisayar"
+          ]
+        }
+      ],
+      "kok_neden": "Hasan fikir vermiyor çünkü verdiği öneri gerekçesiz reddedildi ve kimse onunla konuşmadı; önerinin neden reddedildiğini bilmek ve kendisi anlatabilmek istiyor.",
+      "kok_neden_kelimeler": [
+        "ret",
+        "gerekçe",
+        "reddedil",
+        "konuşmadı",
+        "anlat"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sistem ona göre değil: yalnızca bilgisayardan form",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Öneriler yalnızca bilgisayardaki formdan girilebiliyor; Hasan'ın depoda bilgisayara erişimi yok ve yazmaktan çekiniyor.",
+          "acilma_kosulu": "Öneri sistemine fikir yazmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "öneri sistemine",
+            "form",
+            "bilgisayar"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ona göre en çok, tek forklift şarj istasyonu yüzünden vardiya başında oluşan kuyruk boşa zaman götürüyor; bunu yıllardır biliyor.",
+          "acilma_kosulu": "Depoda en çok neyin boşa gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "boşa gidiyor",
+            "şarj"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fikrini sözlü anlatabileceği ya da birinin onun yerine yazabileceği bir yol olsa paylaşır.",
+          "acilma_kosulu": "Bir fikrin hayata geçmesi için gerekenler sorulursa",
+          "ipucu_kelimeler": [
+            "hayata geçmesi",
+            "sözlü",
+            "yerine"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Eskiden fikirlerini usta arkadaşlarına söylerdi.",
+          "acilma_kosulu": "Daha önce bir fikrini paylaştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fikrini paylaştığında",
+            "arkadaş"
+          ]
+        }
+      ],
+      "kok_neden": "Hasan fikir vermiyor çünkü öneri sistemi ona göre değil: öneriler yalnızca bilgisayardaki formdan girilebiliyor, depoda bilgisayara erişimi yok ve yazmaktan çekiniyor; sözlü anlatabileceği bir yol yok.",
+      "kok_neden_kelimeler": [
+        "form",
+        "bilgisayar",
+        "yaz",
+        "sözlü",
+        "erişim"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fikri başkasının adıyla ödül aldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Geçen yıl paylaştığı koridor işaretleme fikri, amirinin adıyla öneri olarak girildi ve ödül aldı.",
+          "acilma_kosulu": "Daha önce bir fikrini paylaştığında ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "fikrini paylaştığında",
+            "ödül",
+            "amir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Fikrin kimden çıktığı görünmüyorsa paylaşmanın anlamı olmadığını düşünüyor; adının yazılmasını istiyor.",
+          "acilma_kosulu": "Bir fikrin hayata geçmesi için gerekenler sorulursa",
+          "ipucu_kelimeler": [
+            "hayata geçmesi",
+            "kimden",
+            "adının"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Aklında, paletlerin sık taşındığı iki koridorun yerini değiştirme fikri var ama söylemiyor.",
+          "acilma_kosulu": "Depoda en çok neyin boşa gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "boşa gidiyor",
+            "koridor",
+            "palet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Öneri sisteminde ödül, öneriyi giren kişiye veriliyor.",
+          "acilma_kosulu": "Öneri sistemine fikir yazmanın nasıl olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "öneri sistemine",
+            "giren"
+          ]
+        }
+      ],
+      "kok_neden": "Hasan fikir vermiyor çünkü fikri bir kez başkasının adıyla girilip ödül aldı: öneri sisteminde ödül öneriyi girene gidiyor ve fikrin kimden çıktığı görünmüyor.",
+      "kok_neden_kelimeler": [
+        "adıyla",
+        "ödül",
+        "girene",
+        "kimden",
+        "isim"
+      ]
+    }
+  ]
+}

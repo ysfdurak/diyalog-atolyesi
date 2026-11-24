@@ -80,6 +80,11 @@ a { color: var(--vurgu); text-underline-offset: 3px; }
 .bolum { margin-top: 2.6rem; }
 .bolum > h2 { margin-bottom: 0.9rem; }
 .kartlar { display: grid; gap: 0.9rem; }
+.cipler { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 0.9rem; }
+.cip { font: inherit; font-size: 0.85rem; font-weight: 600; padding: 0.35rem 0.8rem; min-height: 2.25rem; border-radius: 999px; border: 1px solid var(--cizgi); background: var(--zemin-yumusak); color: var(--soluk); cursor: pointer; }
+.cip[aria-pressed="true"] { background: var(--vurgu-zemin); border-color: var(--vurgu); color: var(--vurgu); }
+.cip:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 2px; }
+.kart[hidden] { display: none; }
 .kart { border: 1px solid var(--cizgi); border-radius: var(--yaricap); padding: 1.1rem; background: var(--zemin); box-shadow: var(--golge); }
 .kart.gunun { border-color: var(--vurgu); }
 .kart-ust { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; font-size: 0.82rem; }

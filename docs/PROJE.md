@@ -14,7 +14,7 @@ Ayrıntı belgeleri: [Nasıl çalışır](NASIL_CALISIR.md) · [Senaryo yazma](S
 | **Kimin için** | Yöneticiliğe hazırlanan ya da ekip yöneten kişiler (portföy projesi, ticari amaç yok) |
 | **Canlı** | https://diyalog.ysfdurak.com (VPS, Docker, ortak Caddy) |
 | **Depo** | https://github.com/ysfdurak/diyalog-atolyesi (herkese açık, PolyForm Shield lisansı) |
-| **Durum** | Yayında. Soru modu: 15 senaryo, hepsi üç kök nedenli, 45 farklı oturum (hedef 30 senaryo, 90 oturum). Zor konuşma modu henüz yok. |
+| **Durum** | Yayında. Soru modu: 30 senaryo, hepsi üç kök nedenli, 90 farklı oturum; ana sayfada alan filtresi. Zor konuşma modu henüz yok. |
 | **Yapay zekâ** | Anthropic API (Haiku 5.5): karakter cevapları ve değerlendirme |
 | **Maliyet** | Oturum başına yarım sentin altı (tahmin); günlük limitler ve kredi bildirimiyle sınırlı |
 
@@ -122,7 +122,7 @@ Ortak altyapı (VPS, Docker, ortak Caddy, Cloudflare) site deposunda anlatılır
 ## 8. Bilinen sınırlar ve sonraki adımlar
 
 - **Gerçek model ayarı yapılmadı.** Senaryolar ve varyantlar yalnız sahte modelle doğrulandı. Önce bu.
-- **Hedef 30 senaryo × 3 kök neden = 90 oturum.** Şu an 15 senaryo var. Konular önce kullanıcının kendi işinde yaşadığı sorunlardan seçiliyor. Ana sayfa 30 kartı kaldırmaz; alan filtresi gerekecek.
+- **Soru modunda içerik hedefi tamam:** 30 senaryo × 3 kök neden = 90 oturum. Konuların yarısı kullanıcının kendi işinde yaşadığı sorunlardan. 90 kök nedenin hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda.
 - **Uzman seti taslak** ve yeni senaryoları kapsamıyor; bir eğitmen ya da İK uzmanı onaylamalı.
 - Metin tabanlı; ses tonu ve beden dili yok. Hesap yok; gelişim başka cihaza taşınmaz.
 - Sunucu yeniden başlarsa yarım oturumlar kaybolur.
@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | Son 15 senaryo (fazla mesai bütçesi, depo birleştirme, pilot yaygınlaştırma, mal kabul, denetim bulguları, rampa bekleme, ramak kala, eğitim, personel desteği, usta, vardiya gerginliği, elle rapor, kullanılmayan sistem, proje bütçesi, yeşil rapor) ve ana sayfada alan filtresi: 30 senaryo, 90 oturum. Senaryolar denetimli bir üretici betikle yazıldı (her ideal sorunun sahte modelde doğru bilgiyi açtığı yazarken kontrol edildi). |
 | 2026-11-24 | Gerçek sorunlardan beş senaryo (yatırım önerisi, BT talepleri, tekrar eden destek çağrıları, her kararın yöneticiye gelmesi, kalıcı olmayan iyileştirme): 15 senaryo, 45 oturum. |
 | 2026-11-24 | Eski beş senaryoya ikişer kök neden eklendi: 10 senaryo, 30 oturum. Hedef 30 senaryo, 90 oturum olarak belirlendi. Eski biçim testi geçici dosyaya taşındı. |
 | 2026-11-24 | Dört yeni senaryo, her biri üç kök nedenli (sayım farkları, yeni hizmet paketi, terfi reddi, proje gecikmesi); yeni alan: Proje yönetimi. 10 senaryo, 20 oturum. Bu proje dokümanı oluşturuldu. |

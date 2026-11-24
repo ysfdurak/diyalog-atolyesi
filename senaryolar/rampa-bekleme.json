@@ -1,0 +1,200 @@
+{
+  "id": "rampa-bekleme",
+  "baslik": "Sevkiyat araçları rampada neden bekliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Sevkiyat araçları yükleme için rampada ortalama 2,5 saat bekliyor. Nakliye firması bekleme ücreti faturalamaya başladı. Sevkiyat vardiya amiriyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın yükleme ekibini hızlandırmak değil, araçların neden beklediğini anlamak.",
+  "karakter": {
+    "ad": "Volkan",
+    "rol": "Sevkiyat vardiya amiri",
+    "tavir": "Hızlı konuşuyor, sorunu nakliyeciye bağlıyor. Ayrıntıyı soran birine dürüst davranıyor.",
+    "ilk_soz": "Araçlar erken geliyor, biz de yetişemiyoruz. Nakliyeci de fatura kesmeyi çok seviyor."
+  },
+  "yaniltici_ipuclari": [
+    "Şoförler hep erken geliyor.",
+    "Nakliye firması fırsatçılık yapıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Araç rampaya yanaştıktan sonra yükleme başlayana kadar neler oluyor?",
+    "Bekleme en çok hangi saatlerde ve hangi araçlarda oluyor?",
+    "Yüklenecek sipariş ne zaman hazır oluyor?",
+    "Araçların geliş saati nasıl belirleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Sipariş hazır değil: araç saatleri eski plana göre sabit",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Siparişlerin toplanması öğlen dalgası bitince başlıyor; araç geldiğinde siparişin yarısı henüz toplanmamış oluyor.",
+          "acilma_kosulu": "Siparişin ne zaman hazır olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hazır oluyor",
+            "toplan",
+            "dalga"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Araç saatleri nakliye firmasıyla bir yıl önce sabitlendi; toplama planı sonra değişti ama araç saatleri güncellenmedi.",
+          "acilma_kosulu": "Araçların geliş saatinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "geliş saati",
+            "sabit",
+            "güncellen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rampada araç, siparişin tamamı hazır olmadan yüklenmiyor; eksik kalem gelene kadar herkes bekliyor.",
+          "acilma_kosulu": "Araç yanaştıktan sonra yükleme başlayana kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yanaştıktan",
+            "eksik kalem",
+            "tamamı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bekleme en çok öğleden sonraki araçlarda oluyor.",
+          "acilma_kosulu": "Beklemenin hangi saatlerde ve araçlarda olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi araçlar",
+            "öğleden sonra"
+          ]
+        }
+      ],
+      "kok_neden": "Araçlar sipariş hazır olmadığı için bekliyor: toplama planı değişti ama araç saatleri bir yıl önceki plana göre sabit kaldı, araç geldiğinde sipariş henüz toplanmamış ve eksik kalem gelmeden yükleme başlamıyor.",
+      "kok_neden_kelimeler": [
+        "sipariş",
+        "toplama",
+        "araç saat",
+        "hazır",
+        "sabit"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Belge darboğazı: irsaliyeyi tek memur kesiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yükleme başlamadan irsaliye basılıp imzalanmalı; irsaliyeyi yalnızca vardiyadaki tek sevkiyat memuru kesebiliyor.",
+          "acilma_kosulu": "Araç yanaştıktan sonra yükleme başlayana kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yanaştıktan",
+            "irsaliye",
+            "memur"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleme en çok vardiya değişiminde ve öğle arasında oluyor; o saatlerde memur masasında olmuyor.",
+          "acilma_kosulu": "Beklemenin hangi saatlerde ve araçlarda olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi araçlar",
+            "vardiya değişim",
+            "öğle arası"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Siparişler genelde zamanında hazır; paletler rampada belge bekliyor.",
+          "acilma_kosulu": "Siparişin ne zaman hazır olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hazır oluyor",
+            "palet",
+            "belge"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Araç saatleri nakliyeciyle yapılan haftalık planla belirleniyor.",
+          "acilma_kosulu": "Araçların geliş saatinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "geliş saati",
+            "haftalık plan"
+          ]
+        }
+      ],
+      "kok_neden": "Araçlar belge için bekliyor: siparişler hazır ama yükleme irsaliye kesilmeden başlamıyor, irsaliyeyi tek bir memur kesebiliyor ve vardiya değişimi ile öğle arasında o yokken kuyruk oluşuyor.",
+      "kok_neden_kelimeler": [
+        "irsaliye",
+        "belge",
+        "memur",
+        "tek",
+        "vardiya"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ekipman paylaşımı: tır için gereken forklift mal kabulde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bekleme en çok büyük tırlarda oluyor; tır yüklemesi için gereken iki forkliftten biri sabahları mal kabule veriliyor.",
+          "acilma_kosulu": "Beklemenin hangi saatlerde ve araçlarda olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hangi araçlar",
+            "tır",
+            "forklift"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Araç yanaştıktan sonra forkliftin mal kabulden dönmesi bekleniyor; yükleme ekibi hazır ama ekipman yok.",
+          "acilma_kosulu": "Araç yanaştıktan sonra yükleme başlayana kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "yanaştıktan",
+            "ekipman"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Araç saatleri planlanırken ekipman durumuna bakılmıyor; mal kabul ve sevkiyat forklift kullanımını aralarında konuşmuyor.",
+          "acilma_kosulu": "Araçların geliş saatinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "geliş saati",
+            "ekipman durumu",
+            "konuşm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler çoğunlukla zamanında hazır.",
+          "acilma_kosulu": "Siparişin ne zaman hazır olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "hazır oluyor",
+            "zamanında"
+          ]
+        }
+      ],
+      "kok_neden": "Araçlar ekipman için bekliyor: tır yüklemesi için gereken forkliftlerden biri sabah mal kabule veriliyor, iki bölüm forklift paylaşımını planlamıyor ve araç saatleri ekipman durumuna bakılmadan belirleniyor.",
+      "kok_neden_kelimeler": [
+        "forklift",
+        "ekipman",
+        "mal kabul",
+        "paylaş",
+        "tır"
+      ]
+    }
+  ]
+}

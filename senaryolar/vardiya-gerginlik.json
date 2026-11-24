@@ -1,0 +1,199 @@
+{
+  "id": "vardiya-gerginlik",
+  "baslik": "İki vardiya arasında neden gerginlik var?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Sabah ve akşam vardiyası arasındaki gerginlik büyüyor: devir sırasında tartışmalar çıkıyor, iki ekip de birbirini \"işi yarım bırakmakla\" suçluyor. Akşam vardiyasının amiri Cem'le konuşuyorsun.",
+  "rolun": "İki vardiyanın da yöneticisisin. Amacın haklıyı bulmak değil, gerginliğin nereden doğduğunu anlamak.",
+  "karakter": {
+    "ad": "Cem",
+    "rol": "Akşam vardiyası amiri",
+    "tavir": "Savunmada, \"sabahçılar\" diye konuşuyor. Taraf tutulmadığını hissedince sakinleşip anlatıyor.",
+    "ilk_soz": "Sabahçılar yine şikâyet etmiş herhalde. Bizim de söyleyeceklerimiz var."
+  },
+  "yaniltici_ipuclari": [
+    "Sabah ekibi bizi küçümsüyor.",
+    "Kişisel meseleler bunlar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Vardiya devri nasıl yapılıyor?",
+    "Tartışmalar en çok hangi konularda çıkıyor?",
+    "İki vardiyanın başarısı nasıl ölçülüyor?",
+    "Gerginlik ilk ne zaman başladı, o dönemde ne değişti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ölçüm: yarım iş onu bitiren vardiyaya yazılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Vardiyalar o vardiyada kapatılan sipariş sayısıyla ölçülüyor; yarım kalan sipariş onu bitiren vardiyaya yazılıyor.",
+          "acilma_kosulu": "Vardiyaların nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "sipariş sayısı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tartışmalar en çok devirden önceki son saatte yarım bırakılan siparişler yüzünden çıkıyor; sabah vardiyası son saatte yeni sipariş açmıyor.",
+          "acilma_kosulu": "Tartışmaların hangi konularda çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konular",
+            "yarım",
+            "son saat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gerginlik, vardiya bazlı prim sistemi başladığında başladı.",
+          "acilma_kosulu": "Gerginliğin ne zaman başladığı ve o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "prim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devir notu yazılı olarak bırakılıyor.",
+          "acilma_kosulu": "Vardiya devrinin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya devri",
+            "devir notu"
+          ]
+        }
+      ],
+      "kok_neden": "Gerginlik kişisel değil ölçümden: prim vardiyada kapatılan sipariş sayısına bağlandı, yarım işler onu bitiren vardiyaya yazılıyor ve ekipler son saatte iş açmayıp birbirine yük bırakıyor.",
+      "kok_neden_kelimeler": [
+        "prim",
+        "ölçüm",
+        "yarım",
+        "sipariş",
+        "vardiya bazlı"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Devir yok: örtüşme kaldırıldı, bilgi tek mesajla gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Vardiyalar arasında örtüşme süresi yok; sabah ekibi akşamcılar gelmeden çıkıyor ve devir yalnızca bir telefon mesajıyla yapılıyor.",
+          "acilma_kosulu": "Vardiya devrinin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya devri",
+            "örtüşme",
+            "mesaj"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tartışmalar en çok arızalı ekipman ve eksik malzeme yüzünden çıkıyor; akşam ekibi bunları ancak işe başlayınca öğreniyor.",
+          "acilma_kosulu": "Tartışmaların hangi konularda çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konular",
+            "arıza",
+            "malzeme"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gerginlik, maliyet düşürmek için vardiyalar arasındaki yarım saatlik örtüşme kaldırıldığında başladı.",
+          "acilma_kosulu": "Gerginliğin ne zaman başladığı ve o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "maliyet",
+            "kaldırıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İki vardiya da aynı hedeflerle ölçülüyor.",
+          "acilma_kosulu": "Vardiyaların nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "hedef"
+          ]
+        }
+      ],
+      "kok_neden": "Gerginlik devirden: vardiyalar arasındaki örtüşme süresi kaldırıldı, devir tek bir mesajla yapılıyor ve arızalı ekipman ile eksik malzeme bilgisi akşam ekibine ancak iş başında ulaşıyor.",
+      "kok_neden_kelimeler": [
+        "devir",
+        "örtüşme",
+        "mesaj",
+        "arıza",
+        "bilgi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kaynak dağılımı: deneyimli kişiler ve sağlam forkliftler sabahta",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tartışmalar en çok forkliftler yüzünden çıkıyor; şarjı dolu ve sağlam olanlar sabah vardiyasında kalıyor.",
+          "acilma_kosulu": "Tartışmaların hangi konularda çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi konular",
+            "forklift",
+            "şarj"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Gerginlik, deneyimli iki operatörün sabaha alınmasıyla başladı; akşamda çoğunlukla yeni başlayanlar kaldı.",
+          "acilma_kosulu": "Gerginliğin ne zaman başladığı ve o dönemde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne zaman",
+            "deneyimli",
+            "operatör"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Akşam vardiyası aynı hedefle ölçülüyor ama daha az deneyimli ekip ve daha zayıf ekipmanla çalışıyor; hedef tutmayınca \"tembel\" diye anılıyorlar.",
+          "acilma_kosulu": "Vardiyaların nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "başarısı",
+            "hedef",
+            "ekipman"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Devir toplantısı düzenli yapılıyor.",
+          "acilma_kosulu": "Vardiya devrinin nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "vardiya devri",
+            "toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Gerginlik kaynak dağılımından: deneyimli operatörler ve sağlam forkliftler sabah vardiyasında toplandı, akşam ekibi daha zayıf kaynakla aynı hedefle ölçülüyor ve hedefi tutturamayınca suçlanıyor.",
+      "kok_neden_kelimeler": [
+        "kaynak",
+        "deneyimli",
+        "forklift",
+        "hedef",
+        "dağılım"
+      ]
+    }
+  ]
+}

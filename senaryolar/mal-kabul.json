@@ -1,0 +1,200 @@
+{
+  "id": "mal-kabul",
+  "baslik": "Mal kabul neden yetişmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Yoğun haftalarda mal kabulde kuyruk oluşuyor; araçlar rampada saatlerce bekliyor, gelen ürünler raflara bir gün geç giriyor. Kapasite hesabına göre ekip yetmeliydi. Mal kabul amiriyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın ekibi hızlandırmak değil, kabulün neden yetişmediğini anlamak.",
+  "karakter": {
+    "ad": "Kemal",
+    "rol": "Mal kabul amiri",
+    "tavir": "Pratik; \"ekip yetmiyor\" diye özetliyor. İşin nasıl yapıldığını soran birine ayrıntı veriyor.",
+    "ilk_soz": "Bize iki kişi daha verin, kuyruk biter. Başka söyleyecek pek bir şey yok."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip yetmiyor, o kadar.",
+    "Yoğun haftada her yerde böyle olur."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir aracın kapıya gelişinden ürünün rafa girişine kadar neler oluyor?",
+    "Kabulde en çok vakit hangi işte gidiyor?",
+    "Kapasite hesabı nasıl yapıldı, gerçekte süreler ne çıkıyor?",
+    "Yoğun haftalarda gelen mal neden aynı günlere yığılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Koli kalitesi: etiketsiz ve karışık koli, süre 30'dan 45 saniyeye",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En çok vakit, tedarikçiden etiketsiz ya da karışık gelen kolileri tek tek açıp saymakta gidiyor.",
+          "acilma_kosulu": "Kabulde en çok vaktin nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok vakit",
+            "etiket",
+            "karışık"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kapasite koli başına 30 saniyeyle hesaplandı; etiketsiz ve karışık kolilerle gerçek süre 45 saniye.",
+          "acilma_kosulu": "Kapasite hesabı ya da gerçek süreler sorulursa",
+          "ipucu_kelimeler": [
+            "kapasite hesab",
+            "saniye"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Etiketsiz koliye depoda yeniden etiket basılıyor; bu adım hiçbir süre hesabında yok.",
+          "acilma_kosulu": "Aracın kapıya gelişinden ürünün rafa girişine kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "kapıya gelişinden",
+            "adım",
+            "yeniden etiket"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kampanya öncesinde tüm tedarikçiler aynı haftaya sevkiyat planlıyor.",
+          "acilma_kosulu": "Gelen malın neden aynı günlere yığıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "yığılıyor",
+            "kampanya"
+          ]
+        }
+      ],
+      "kok_neden": "Kabul ekip azlığından değil kolinin hâlinden yetişmiyor: tedarikçiler etiketsiz ve karışık koli gönderiyor, süre koli başına 30 saniyeden 45 saniyeye çıkıyor ve depoda etiket basma adımı kapasite hesabında yok.",
+      "kok_neden_kelimeler": [
+        "etiket",
+        "karışık",
+        "saniye",
+        "kapasite",
+        "tedarikçi"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gün içine yayılmıyor: randevu kullanılmıyor, araçlar sabah geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Randevu sistemi var ama kullanılmıyor; tedarikçilerin çoğu trafiğe takılmamak için sabah 7'de kapıda oluyor.",
+          "acilma_kosulu": "Gelen malın neden aynı günlere yığıldığı ya da randevular sorulursa",
+          "ipucu_kelimeler": [
+            "yığılıyor",
+            "randevu",
+            "sabah"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kapasite günlük toplamla hesaplandı; ama araçların yarısı ilk iki saatte geliyor, öğleden sonra ekip boş bekliyor.",
+          "acilma_kosulu": "Kapasite hesabı ya da gerçek süreler sorulursa",
+          "ipucu_kelimeler": [
+            "kapasite hesab",
+            "günlük toplam",
+            "öğleden sonra"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Araç rampaya yanaşmadan belgeler güvenlikte elle kontrol ediliyor; ilk saatlerde bu kontrol kuyruğun kendisi oluyor.",
+          "acilma_kosulu": "Aracın kapıya gelişinden ürünün rafa girişine kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "kapıya gelişinden",
+            "belge",
+            "güvenlik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kabulün kendisi hedef sürede yapılıyor.",
+          "acilma_kosulu": "Kabulde en çok vaktin nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok vakit",
+            "hedef"
+          ]
+        }
+      ],
+      "kok_neden": "Kabul gün içine yayılmadığı için yetişmiyor: randevu sistemi kullanılmıyor, araçların yarısı sabah ilk iki saatte geliyor ve kapasite günlük toplama göre hesaplandığı için sabahki yığılma görünmüyor.",
+      "kok_neden_kelimeler": [
+        "randevu",
+        "sabah",
+        "yığıl",
+        "günlük toplam",
+        "yayıl"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yerleşim tıkanıyor: raflar eski stokla dolu, adres atanamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ürün kabul ediliyor ama raf adresi atanamıyor; rampada bekleyen paletler yüzünden yeni araç yanaşamıyor.",
+          "acilma_kosulu": "Aracın kapıya gelişinden ürünün rafa girişine kadar olanlar sorulursa",
+          "ipucu_kelimeler": [
+            "kapıya gelişinden",
+            "adres",
+            "palet"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En çok vakit, boş raf arayıp paletleri geçici alanlarda yer değiştirmekte gidiyor.",
+          "acilma_kosulu": "Kabulde en çok vaktin nereye gittiği sorulursa",
+          "ipucu_kelimeler": [
+            "en çok vakit",
+            "boş raf",
+            "geçici"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satışlar düşük gittiği için eski stok raflarda kalıyor; satın alma ise yoğun haftaya siparişleri planlandığı gibi getiriyor.",
+          "acilma_kosulu": "Gelen malın neden aynı günlere yığıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "yığılıyor",
+            "stok",
+            "satın alma"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kabul ekibinin süreleri hesaplanana yakın.",
+          "acilma_kosulu": "Kapasite hesabı ya da gerçek süreler sorulursa",
+          "ipucu_kelimeler": [
+            "kapasite hesab",
+            "ekibin süre"
+          ]
+        }
+      ],
+      "kok_neden": "Kabul yerleşimden tıkanıyor: raflar eski stokla dolu, kabul edilen ürüne adres atanamıyor ve rampada bekleyen paletler yeni aracın yanaşmasını engelliyor.",
+      "kok_neden_kelimeler": [
+        "raf",
+        "adres",
+        "stok",
+        "dolu",
+        "yerleş"
+      ]
+    }
+  ]
+}
