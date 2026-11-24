@@ -1,0 +1,201 @@
+{
+  "id": "kural-disi-alimlar",
+  "baslik": "Kural dışı satın almalar neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Satın alma sistemini atlayıp şirket kartı ya da doğrudan faturayla yapılan alımlar bir yılda iki katına çıktı. Bu alımlar ortalama %18 daha pahalı ve denetimde bulgu oldu. Bu tür alımları en çok yapan bölümlerden birinin şefiyle konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın kural dışı alım yapanları cezalandırmak değil, neden sistemin dışına çıkıldığını anlamak.",
+  "karakter": {
+    "ad": "Semra",
+    "rol": "Bakım ve tesis şefi",
+    "tavir": "Pratik ve sabırsız; \"iş durmasın diye\" diyor. Yaşadıklarını soran birine açık konuşuyor.",
+    "ilk_soz": "Biliyorum kurala uymuyor. Ama iş durmasın diye başka çarem kalmıyor."
+  },
+  "yaniltici_ipuclari": [
+    "Bölümler kurallara saygı duymuyor.",
+    "Satın alma yavaş, o kadar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "En son kural dışı alım yaptığında ne olmuştu?",
+    "Aynı ürünü sistemden almaya çalıştığında süreç nasıl ilerliyor?",
+    "Hangi tür ürünlerde sistem dışına çıkılıyor?",
+    "Sistemde aradığın ürünü bulabiliyor musun, nasıl?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Katalog eksik: ürün sistemde yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Aradığı ürünlerin çoğu satın alma kataloğunda yok; kataloğa yeni ürün ekletmek için ayrı bir talep ve üç hafta gerekiyor.",
+          "acilma_kosulu": "Katalogda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "aradığın ürünü",
+            "katalog",
+            "üç hafta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kural dışı alımların çoğu katalogda olmayan küçük teknik parçalar ve özel ölçülü malzemeler.",
+          "acilma_kosulu": "Sistem dışına çıkılan ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tür ürünlerde",
+            "teknik parça",
+            "özel ölçü"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En son bir yangın kapısı menteşesi gerekti; katalogda yoktu, yakındaki hırdavatçıdan kartla aldı.",
+          "acilma_kosulu": "Son kural dışı alımın nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "en son kural dışı",
+            "menteşe",
+            "hırdavat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Katalogdaki ürünler sistemden iki günde geliyor.",
+          "acilma_kosulu": "Sistemden alımın işleyişi sorulursa",
+          "ipucu_kelimeler": [
+            "sistemden almaya",
+            "iki günde"
+          ]
+        }
+      ],
+      "kok_neden": "Kural dışı alımlar katalog eksikliğinden: teknik parçaların ve özel ölçülü malzemelerin çoğu katalogda yok, kataloğa ürün ekletmek üç hafta sürüyor ve acil ihtiyaçta şef en yakın dükkândan kartla alıyor.",
+      "kok_neden_kelimeler": [
+        "katalog",
+        "yok",
+        "üç hafta",
+        "teknik parça",
+        "ekle"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sistem yavaş: küçük alım da beş onay",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sistemden alınca 300 TL'lik bir parça bile beş onaydan geçiyor ve iki hafta sürüyor.",
+          "acilma_kosulu": "Sistemden alımın işleyişi sorulursa",
+          "ipucu_kelimeler": [
+            "sistemden almaya",
+            "beş onay",
+            "300 TL"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son bir forklift sigortası gerekti; sistemden açtı, iki gün beklerken makine durduğu için kartla aldı.",
+          "acilma_kosulu": "Son kural dışı alımın nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "en son kural dışı",
+            "sigorta",
+            "makine durdu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Kural dışı alımların çoğu düşük tutarlı ve acil ihtiyaçlar.",
+          "acilma_kosulu": "Sistem dışına çıkılan ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tür ürünlerde",
+            "düşük tutarlı",
+            "acil"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünlerin çoğu katalogda var.",
+          "acilma_kosulu": "Katalogda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "aradığın ürünü",
+            "katalogda var"
+          ]
+        }
+      ],
+      "kok_neden": "Kural dışı alımlar sistemin yavaşlığından: düşük tutarlı ve acil bir parça bile beş onaydan geçip iki hafta sürüyor, iş durunca şef kartla almak zorunda kalıyor ve küçük acil alımlar için hızlı bir yol yok.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "yavaş",
+        "acil",
+        "düşük tutar",
+        "hızlı yol"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Anlaşmalı tedarikçi sorunlu: sözleşmeli firma teslim edemiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kural dışı alımların çoğu anlaşmalı tedarikçinin tek elden sağladığı ürünlerde: temizlik ve iş güvenliği malzemeleri.",
+          "acilma_kosulu": "Sistem dışına çıkılan ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tür ürünlerde",
+            "temizlik",
+            "iş güvenliği"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sistemden sipariş anlaşmalı tedarikçiye gidiyor; tedarikçi son altı ayda siparişlerin üçte birini eksik ya da geç teslim etti.",
+          "acilma_kosulu": "Sistemden alımın işleyişi sorulursa",
+          "ipucu_kelimeler": [
+            "sistemden almaya",
+            "eksik ya da geç",
+            "anlaşmalı tedarikçi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En son iş güvenliği eldiveni sipariş etti, iki hafta gelmedi; denetim öncesi kartla aldı.",
+          "acilma_kosulu": "Son kural dışı alımın nedeni sorulursa",
+          "ipucu_kelimeler": [
+            "en son kural dışı",
+            "eldiven",
+            "denetim öncesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Aradığı ürünler katalogda var.",
+          "acilma_kosulu": "Katalogda ürün bulma sorulursa",
+          "ipucu_kelimeler": [
+            "aradığın ürünü",
+            "katalogda"
+          ]
+        }
+      ],
+      "kok_neden": "Kural dışı alımlar anlaşmalı tedarikçinin teslim edememesinden: tek elden anlaşmalı tedarikçi siparişlerin üçte birini eksik ya da geç teslim ediyor ve ihtiyaç acil olunca bölümler sistemin dışına çıkıyor; tedarikçinin performansı takip edilmiyor.",
+      "kok_neden_kelimeler": [
+        "anlaşmalı tedarikçi",
+        "teslim",
+        "eksik",
+        "geç",
+        "performans"
+      ]
+    }
+  ]
+}

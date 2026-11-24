@@ -1,0 +1,200 @@
+{
+  "id": "yapay-zeka-pilotu",
+  "baslik": "Yapay zekâ tahmin aracı neden kullanılmadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 8,
+  "acilis": "Personel planlaması için bir yapay zekâ tahmin aracı üç ay pilot olarak denendi. Araç teknik olarak iyi sonuç verdi ama planlamacılar kararlarında neredeyse hiç kullanmadı ve pilot uzatılmadı. Pilotta yer alan planlamacılardan biriyle konuşuyorsun.",
+  "rolun": "Pilotu başlatan veri ve raporlama sorumlususun. Amacın aracı savunmak değil, neden kullanılmadığını anlamak.",
+  "karakter": {
+    "ad": "Pelin",
+    "rol": "Personel planlamacısı",
+    "tavir": "Merak eden ama temkinli biri; \"araç ilginçti\" diyor. Yargılanmadığını hissedince düşündüğünü açıkça söylüyor.",
+    "ilk_soz": "Araç ilginçti, rakamları da fena değildi. Ama ben planı yine kendi tablomla yaptım."
+  },
+  "yaniltici_ipuclari": [
+    "Planlamacılar yeniliğe kapalı.",
+    "Yapay zekâya güvenilmez."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Araç bir tahmin verdiğinde sen ne yapıyordun?",
+    "Tahminin neden o rakamı verdiğini anlayabiliyor muydun, nasıl?",
+    "Pilot sırasında plan yanlış çıksaydı sorumluluk kim olurdu, nasıl düşündün?",
+    "Araç senin günlük işine nasıl yerleşti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kara kutu: neden o rakam bilinmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Araç yalnızca bir rakam veriyordu; hangi etkenin tahmini yükselttiğini göstermiyordu.",
+          "acilma_kosulu": "Tahminin açıklanabilirliği sorulursa",
+          "ipucu_kelimeler": [
+            "o rakamı",
+            "etken",
+            "yalnızca bir rakam"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tahmin kendi tablosundan farklı çıkınca hangisinin doğru olduğunu anlayamadığı için kendi tablosuna güvendi.",
+          "acilma_kosulu": "Tahmin gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "tahmin verdiğinde",
+            "kendi tablosu",
+            "farklı çıkınca"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Plan yanlış çıkarsa sorumlu yine planlamacı; \"araç dedi\" diye açıklama yapamayacağını düşünüyor.",
+          "acilma_kosulu": "Planın sorumluluğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorumluluk kim",
+            "sorumlu yine",
+            "açıklama"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Araç ayrı bir ekranda açılıyordu.",
+          "acilma_kosulu": "Aracın günlük işe yerleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işine",
+            "ayrı bir ekran"
+          ]
+        }
+      ],
+      "kok_neden": "Araç kullanılmadı çünkü kara kutuydu: tahminin hangi etkenden geldiğini göstermiyordu, kendi tablosuyla çeliştiğinde planlamacı hangisinin doğru olduğunu anlayamadı ve plan yanlış çıkarsa sorumluluk yine onda olduğu için anlamadığı rakama güvenmedi.",
+      "kok_neden_kelimeler": [
+        "kara kutu",
+        "açıkla",
+        "etken",
+        "güven",
+        "sorumlu"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "İş akışına girmedi: ayrı ekran, ayrı giriş",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Araç ayrı bir web sayfasındaydı; ayrı şifreyle giriliyordu ve tahminler planlama tablosuna elle aktarılmalıydı.",
+          "acilma_kosulu": "Aracın günlük işe yerleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işine",
+            "ayrı şifre",
+            "elle aktar"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tahmini görmek için her sabah ayrı sisteme girmesi gerekiyordu; yoğun sabahlarda bunu atladı.",
+          "acilma_kosulu": "Tahmin gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "tahmin verdiğinde",
+            "her sabah",
+            "atladı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tahmin anlaşılırdı; ekranda etkenler de görünüyordu.",
+          "acilma_kosulu": "Tahminin açıklanabilirliği sorulursa",
+          "ipucu_kelimeler": [
+            "o rakamı",
+            "etkenler de"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Plan sorumluluğu ekip liderindeydi.",
+          "acilma_kosulu": "Planın sorumluluğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorumluluk kim",
+            "ekip lider"
+          ]
+        }
+      ],
+      "kok_neden": "Araç kullanılmadı çünkü iş akışına girmedi: ayrı bir sayfada, ayrı şifreyle açılıyordu, tahminler planlama tablosuna elle aktarılmalıydı ve yoğun sabahlarda bu ek adım atlandı.",
+      "kok_neden_kelimeler": [
+        "iş akışı",
+        "ayrı",
+        "elle aktar",
+        "şifre",
+        "ek adım"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Pilot kurgusu: araç ile eski yöntem karşılaştırılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pilot boyunca planlamacılardan aracı kullanmaları istendi ama kararlarında hangi rakamı kullandıklarını kaydetmeleri istenmedi.",
+          "acilma_kosulu": "Planın sorumluluğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorumluluk kim",
+            "kaydetme",
+            "hangi rakam"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tahmin geldiğinde onunla bir şey yapması beklendiği söylenmedi; pilotun amacı kendisine anlatılmadı.",
+          "acilma_kosulu": "Tahmin gelince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "tahmin verdiğinde",
+            "amacı",
+            "anlatılmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Araç günlük işe hiç yerleşmedi; pilot süresince aracı kimse sormadı, kimse sonuç istemedi.",
+          "acilma_kosulu": "Aracın günlük işe yerleşmesi sorulursa",
+          "ipucu_kelimeler": [
+            "günlük işine",
+            "kimse sormadı",
+            "sonuç istemedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tahminin gerekçesi ekranda görünüyordu.",
+          "acilma_kosulu": "Tahminin açıklanabilirliği sorulursa",
+          "ipucu_kelimeler": [
+            "o rakamı",
+            "gerekçe"
+          ]
+        }
+      ],
+      "kok_neden": "Araç kullanılmadı çünkü pilot kurgulanmadı: planlamacılara pilotun amacı ve onlardan ne beklendiği anlatılmadı, araç ile kendi tablolarını karşılaştırmaları ve kararlarını kaydetmeleri istenmedi ve süre boyunca kimse sonuç sormadı.",
+      "kok_neden_kelimeler": [
+        "pilot",
+        "amaç",
+        "karşılaştır",
+        "kayıt",
+        "sonuç"
+      ]
+    }
+  ]
+}

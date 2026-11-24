@@ -1,0 +1,200 @@
+{
+  "id": "tedarikciye-iade",
+  "baslik": "Tedarikçiye iadeler neden aylarca bekliyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Tedarikçiye geri gönderilmesi gereken hatalı ve fazla ürünler depoda ortalama dört ay bekliyor; iade alanı 120 paleti aştı ve bu ürünlerin bedeli hâlâ tahsil edilmedi. İade sürecini yöneten satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın kimseyi sıkıştırmak değil, iadelerin neden beklediğini anlamak.",
+  "karakter": {
+    "ad": "Feyza",
+    "rol": "Satın alma uzmanı",
+    "tavir": "Bunalmış ve dağınık; \"tedarikçiler yavaş\" diyor. Sürecin işleyişini soran birine açık konuşuyor.",
+    "ilk_soz": "Tedarikçilere yazıyoruz ama cevap gelmiyor. Paletler de öylece bekliyor."
+  },
+  "yaniltici_ipuclari": [
+    "Tedarikçiler iadeyi kabul etmek istemiyor.",
+    "Depo alanı küçük."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir iade kararı verildikten sonra hangi adımlar var?",
+    "Bekleyen iadelerin çoğu hangi aşamada bekliyor?",
+    "Tedarikçi sözleşmelerinde iade nasıl düzenlenmiş?",
+    "İade edilecek ürünün depodan çıkışını kim organize ediyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kanıt eksik: tedarikçi belge istiyor, belge yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bekleyen iadelerin çoğu tedarikçinin kanıt talebinde: hasar fotoğrafı ve mal kabul tutanağı isteniyor, çoğunda yok.",
+          "acilma_kosulu": "Bekleyen iadelerin durumu sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen iadelerin",
+            "fotoğraf",
+            "tutanak"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İade kararı veriliyor ama mal kabulde hasarın kayıt altına alınması için bir adım yok; kanıt sonradan aranıyor.",
+          "acilma_kosulu": "Iade sürecinin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "iade kararı",
+            "kayıt altına",
+            "sonradan aran"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sözleşmelerde iade için hasarın teslimden itibaren yedi gün içinde belgelenmesi şartı var; çoğu iade bu süreyi kaçırıyor.",
+          "acilma_kosulu": "Sözleşmedeki iade kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmelerinde iade",
+            "yedi gün",
+            "belgelen"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çıkışı sevkiyat ekibi organize ediyor.",
+          "acilma_kosulu": "Çıkışı kimin organize ettiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkışını",
+            "sevkiyat ekibi"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler kanıt eksikliğinden bekliyor: mal kabulde hasar belgelenmiyor, tedarikçi fotoğraf ve tutanak istiyor ve sözleşmedeki yedi günlük belgeleme süresi kaçırıldığı için tedarikçi iadeyi kabul etmiyor.",
+      "kok_neden_kelimeler": [
+        "kanıt",
+        "belge",
+        "fotoğraf",
+        "tutanak",
+        "yedi gün"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Çıkışın sahibi yok: kimse taşımayı organize etmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İade edilecek ürünün depodan çıkışını kimse organize etmiyor; satın alma \"depo halleder\", depo \"satın alma araç ayarlar\" diyor.",
+          "acilma_kosulu": "Çıkışı kimin organize ettiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkışını",
+            "araç ayarlar",
+            "depo halleder"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen iadelerin çoğu tedarikçi tarafından onaylanmış; yalnızca araç bekliyor.",
+          "acilma_kosulu": "Bekleyen iadelerin durumu sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen iadelerin",
+            "onaylanmış",
+            "araç bekliyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sözleşmelerde iade nakliyesinin kimde olduğu yazmıyor.",
+          "acilma_kosulu": "Sözleşmedeki iade kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmelerinde iade",
+            "nakliyesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İade kararı satın alma tarafından veriliyor.",
+          "acilma_kosulu": "Iade sürecinin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "iade kararı",
+            "satın alma tarafından"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler çıkışın sahibi olmadığı için bekliyor: tedarikçi onayı gelmiş iadeler araç bekliyor, satın alma ve depo taşımayı birbirine bırakıyor ve sözleşmelerde iade nakliyesinin kimde olduğu tanımlı değil.",
+      "kok_neden_kelimeler": [
+        "sahibi",
+        "araç",
+        "nakliye",
+        "organize",
+        "onaylanmış"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Toplama ve değerlendirme: iadeler biriktirilip toplu gönderiliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İade kararı verilince ürünler bir alana konuyor; tedarikçi başına bir tır dolana kadar biriktiriliyor.",
+          "acilma_kosulu": "Iade sürecinin adımları sorulursa",
+          "ipucu_kelimeler": [
+            "iade kararı",
+            "tır dolana",
+            "biriktir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen iadelerin çoğu küçük hacimli tedarikçilerin; onların bir tır doldurması aylar sürüyor.",
+          "acilma_kosulu": "Bekleyen iadelerin durumu sorulursa",
+          "ipucu_kelimeler": [
+            "bekleyen iadelerin",
+            "küçük hacimli",
+            "aylar"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sözleşmelere göre altı ay içinde iade edilmeyen ürünün bedeli talep edilemiyor; birçok iade bu süreye yaklaşıyor.",
+          "acilma_kosulu": "Sözleşmedeki iade kuralları sorulursa",
+          "ipucu_kelimeler": [
+            "sözleşmelerinde iade",
+            "altı ay",
+            "bedeli talep"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Çıkışı satın alma organize ediyor.",
+          "acilma_kosulu": "Çıkışı kimin organize ettiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkışını",
+            "satın alma organize"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler toplu gönderme kuralı yüzünden bekliyor: ürünler tedarikçi başına bir tır dolana kadar biriktiriliyor, küçük tedarikçilerin iadeleri aylarca bekliyor ve sözleşmedeki altı aylık süre dolmak üzere olduğu için bedeller kaybedilebilir.",
+      "kok_neden_kelimeler": [
+        "tır",
+        "biriktir",
+        "küçük",
+        "altı ay",
+        "toplu"
+      ]
+    }
+  ]
+}

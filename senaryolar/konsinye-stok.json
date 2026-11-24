@@ -1,0 +1,199 @@
+{
+  "id": "konsinye-stok",
+  "baslik": "Konsinye stok neden kontrolden çıktı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Bir tedarikçinin ürünleri depoda konsinye (satıldıkça ödenen) stok olarak tutuluyor. Yıl sonu mutabakatında tedarikçinin kayıtlarıyla bizim kayıtlarımız arasında 1,2 milyon TL fark çıktı. Konsinye stoku takip eden stok kontrol uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın farkı birine yüklemek değil, kontrolün neden kaybolduğunu anlamak.",
+  "karakter": {
+    "ad": "Nazım",
+    "rol": "Stok kontrol uzmanı",
+    "tavir": "Rakamcı ve endişeli; \"sistemde ayrı izliyoruz\" diyor. Ayrıntıyı soran birine açık konuşuyor.",
+    "ilk_soz": "Konsinye stoku sistemde ayrı izliyoruz, en azından öyle olması gerekiyor."
+  },
+  "yaniltici_ipuclari": [
+    "Tedarikçinin kayıtları hatalı.",
+    "Fark kayıp ve hırsızlıktan."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Konsinye ürün depoya girdiğinde sistemde nasıl ayrılıyor?",
+    "Fark en çok hangi ürünlerde ya da hangi aylarda oluşmuş?",
+    "Tedarikçiyle mutabakat ne sıklıkla ve nasıl yapılıyor?",
+    "Konsinye ürün satıldığında ya da iade edildiğinde kayıt nasıl ilerliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ayrım fiziksel değil: aynı ürün iki statüde aynı rafta",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Konsinye ürünler, aynı ürünün kendi stoğumuzla aynı rafa konuyor; sistem ayrımı yalnızca giriş kaydında yapıyor.",
+          "acilma_kosulu": "Girişte ayrımın nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "konsinye ürün depoya",
+            "aynı rafa",
+            "giriş kaydı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satışta sistem hangi statüden düşeceğini otomatik seçiyor; çoğu zaman önce kendi stoğumuzu düşüyor.",
+          "acilma_kosulu": "Satış ve iade kaydı sorulursa",
+          "ipucu_kelimeler": [
+            "satıldığında ya da",
+            "statü",
+            "otomatik seç"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fark en çok, aynı ürünün hem konsinye hem kendi stokta bulunduğu ürünlerde.",
+          "acilma_kosulu": "Farkın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "fark en çok",
+            "hem konsinye"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mutabakat yılda bir yapılıyor.",
+          "acilma_kosulu": "Mutabakat düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "mutabakat",
+            "yılda bir"
+          ]
+        }
+      ],
+      "kok_neden": "Konsinye kontrolü fiziksel ayrım olmadığı için kayboldu: aynı ürün iki statüde aynı rafta duruyor, satışta sistem hangi statüden düşeceğini otomatik seçiyor ve fark aynı ürünün iki statüde bulunduğu ürünlerde birikiyor.",
+      "kok_neden_kelimeler": [
+        "ayrım",
+        "aynı raf",
+        "statü",
+        "otomatik",
+        "fiziksel"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Mutabakat yılda bir: farklar birikti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tedarikçiyle mutabakat yalnızca yıl sonunda yapılıyor; ara dönemde karşılaştırma yok.",
+          "acilma_kosulu": "Mutabakat düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "mutabakat",
+            "yıl sonunda",
+            "ara dönem"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Fark ay ay küçük küçük birikmiş; en büyük artış, depo sayım düzeltmelerinin konsinye stoka yansıtılmadığı aylarda.",
+          "acilma_kosulu": "Farkın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "fark en çok",
+            "sayım düzeltme",
+            "yansıtılmadı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Satışlar tedarikçiye aylık raporla bildiriliyor ama iadeler ve hasar düşümleri rapora girmiyor.",
+          "acilma_kosulu": "Satış ve iade kaydı sorulursa",
+          "ipucu_kelimeler": [
+            "satıldığında ya da",
+            "aylık rapor",
+            "hasar düşüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Konsinye ürünler ayrı bir bölgede tutuluyor.",
+          "acilma_kosulu": "Girişte ayrımın nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "konsinye ürün depoya",
+            "ayrı bir bölge"
+          ]
+        }
+      ],
+      "kok_neden": "Konsinye kontrolü mutabakatın seyrekliğinden kayboldu: mutabakat yalnızca yıl sonunda yapılıyor, sayım düzeltmeleri ve iade ile hasar düşümleri konsinye kayıtlarına ve tedarikçi raporuna yansımadığı için farklar ay ay birikti.",
+      "kok_neden_kelimeler": [
+        "mutabakat",
+        "yıl sonu",
+        "birik",
+        "sayım düzeltme",
+        "iade"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sözleşme sorumluluğu tanımsız: hasar ve fire kimde",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Konsinye ürün depoda hasar görünce kim öder, sözleşmede tanımlı değil; hasarlılar sistemden düşülüyor ama tedarikçiye bildirilmiyor.",
+          "acilma_kosulu": "Satış ve iade kaydı sorulursa",
+          "ipucu_kelimeler": [
+            "satıldığında ya da",
+            "sözleşme",
+            "kim öder"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Fark en çok kırılgan ürünlerde ve depo taşıma kaynaklı hasarlarda.",
+          "acilma_kosulu": "Farkın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "fark en çok",
+            "kırılgan",
+            "taşıma kaynaklı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Mutabakatta tedarikçi hasarlı ürünleri hâlâ depoda satılabilir stok olarak görüyor.",
+          "acilma_kosulu": "Mutabakat düzeni sorulursa",
+          "ipucu_kelimeler": [
+            "mutabakat",
+            "satılabilir stok olarak"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Konsinye ürünler girişte ayrı lokasyona alınıyor.",
+          "acilma_kosulu": "Girişte ayrımın nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "konsinye ürün depoya",
+            "ayrı lokasyon"
+          ]
+        }
+      ],
+      "kok_neden": "Konsinye farkı sorumluluğun tanımsızlığından: depoda hasar gören konsinye ürünün bedelini kimin ödeyeceği sözleşmede yok, hasarlılar sistemden düşülüyor ama tedarikçiye bildirilmiyor ve tedarikçi onları hâlâ satılabilir sayıyor.",
+      "kok_neden_kelimeler": [
+        "sözleşme",
+        "hasar",
+        "sorumluluk",
+        "bildirilmiyor",
+        "tanımsız"
+      ]
+    }
+  ]
+}

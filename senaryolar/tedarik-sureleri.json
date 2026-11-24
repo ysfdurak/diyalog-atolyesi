@@ -1,0 +1,200 @@
+{
+  "id": "tedarik-sureleri",
+  "baslik": "Tedarik süreleri neden uzadı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Depoya gelen malların sipariş verildikten sonra gelme süresi bir yılda ortalama 9 günden 16 güne çıktı. Stok seviyeleri artırılmak zorunda kalındı. Tedarik planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın tedarikçileri suçlamak değil, sürelerin neden uzadığını anlamak.",
+  "karakter": {
+    "ad": "Orhan",
+    "rol": "Tedarik planlama uzmanı",
+    "tavir": "Analitik ve sakin; \"piyasa koşulları\" diyor. Süreyi parça parça soran birine açık konuşuyor.",
+    "ilk_soz": "Piyasada herkesin süreleri uzadı, bunu söyleyebilirim. Ama hepsi o değil."
+  },
+  "yaniltici_ipuclari": [
+    "Piyasa koşulları kötüleşti.",
+    "Tedarikçiler kapasite sorunu yaşıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "16 günün ne kadarı tedarikçide, ne kadarı yolda ve bizde geçiyor?",
+    "Sipariş tedarikçiye ne zaman ve nasıl gidiyor?",
+    "Mal geldikten sonra sisteme girene kadar neler oluyor?",
+    "Süreler en çok hangi tedarikçilerde uzadı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Süre bizde uzuyor: sipariş haftada bir toplu gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Siparişler eskiden günlük gidiyordu; bir yıl önce iş yükünü azaltmak için haftada bir toplu gönderime geçildi.",
+          "acilma_kosulu": "Siparişin tedarikçiye gidişi sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş tedarikçiye",
+            "haftada bir",
+            "toplu gönderim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "16 günün ortalama dört günü, ihtiyacın oluşmasından siparişin gönderilmesine kadar bizde geçiyor.",
+          "acilma_kosulu": "Sürenin parçaları sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı tedarikçide",
+            "dört gün",
+            "bizde geçiyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Süre bütün tedarikçilerde benzer oranda uzadı; tedarikçinin kendi süresi değişmedi.",
+          "acilma_kosulu": "Sürenin uzadığı tedarikçiler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tedarikçilerde",
+            "bütün tedarikçi",
+            "kendi süresi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mal kabulden sonra sisteme giriş aynı gün yapılıyor.",
+          "acilma_kosulu": "Mal geldikten sonraki süreç sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme girene",
+            "aynı gün"
+          ]
+        }
+      ],
+      "kok_neden": "Süre tedarikçide değil bizde uzadı: siparişler günlükten haftalık toplu gönderime geçti, ihtiyaç ile sipariş arasında ortalama dört gün kayboluyor ve tedarikçilerin kendi süreleri aslında değişmedi.",
+      "kok_neden_kelimeler": [
+        "haftalık",
+        "toplu gönderim",
+        "bizde",
+        "sipariş",
+        "dört gün"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Mal kabul sonrası bekleme: sisteme giriş gecikiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Mal depoya geliyor ama kalite kontrol ve sisteme giriş ortalama beş gün sürüyor; ürün bu sürede kullanılamıyor.",
+          "acilma_kosulu": "Mal geldikten sonraki süreç sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme girene",
+            "beş gün",
+            "kalite kontrol"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "16 günün ortalama beş günü malın depoda kalite kontrol beklemesi.",
+          "acilma_kosulu": "Sürenin parçaları sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı tedarikçide",
+            "kalite kontrol bekle"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Süre en çok kalite kontrole tabi tedarikçilerde uzadı; kontrol eden iki kişiden biri ayrıldı, yerine kimse alınmadı.",
+          "acilma_kosulu": "Sürenin uzadığı tedarikçiler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tedarikçilerde",
+            "kontrole tabi",
+            "yerine kimse"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Siparişler günlük gidiyor.",
+          "acilma_kosulu": "Siparişin tedarikçiye gidişi sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş tedarikçiye",
+            "günlük gidiyor"
+          ]
+        }
+      ],
+      "kok_neden": "Süre mal kabulden sonra uzadı: mal zamanında geliyor ama kalite kontrol ve sisteme giriş beş gün sürüyor; kontrol eden iki kişiden biri ayrıldı ve yerine kimse alınmadı.",
+      "kok_neden_kelimeler": [
+        "kalite kontrol",
+        "beş gün",
+        "sisteme giriş",
+        "ayrıldı",
+        "mal kabul"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yol uzadı: nakliye konsolidasyonu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "16 günün yedi günü yolda geçiyor; eskiden iki gündü.",
+          "acilma_kosulu": "Sürenin parçaları sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadarı tedarikçide",
+            "yedi gün",
+            "yolda"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Süre en çok uzak bölgelerdeki tedarikçilerde uzadı; bu tedarikçilerin malları artık aktarma merkezinde toplanıp haftada bir getiriliyor.",
+          "acilma_kosulu": "Sürenin uzadığı tedarikçiler sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tedarikçilerde",
+            "aktarma merkezi",
+            "uzak bölge"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Siparişler zamanında gidiyor; nakliye maliyetini düşürmek için geçen yıl tedarikçi malları konsolide taşımaya geçildi.",
+          "acilma_kosulu": "Siparişin tedarikçiye gidişi sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş tedarikçiye",
+            "konsolide",
+            "nakliye maliyeti"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mal geldiği gün sisteme giriliyor.",
+          "acilma_kosulu": "Mal geldikten sonraki süreç sorulursa",
+          "ipucu_kelimeler": [
+            "sisteme girene",
+            "geldiği gün"
+          ]
+        }
+      ],
+      "kok_neden": "Süre yolda uzadı: nakliye maliyetini düşürmek için uzak tedarikçilerin malları aktarma merkezinde toplanıp haftada bir getirilmeye başlandı ve yolda geçen süre iki günden yediye çıktı.",
+      "kok_neden_kelimeler": [
+        "yolda",
+        "konsolide",
+        "aktarma merkezi",
+        "nakliye maliyeti",
+        "haftada bir"
+      ]
+    }
+  ]
+}

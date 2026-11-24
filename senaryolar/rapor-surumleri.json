@@ -1,0 +1,199 @@
+{
+  "id": "rapor-surumleri",
+  "baslik": "Aynı raporun neden on farklı sürümü dolaşıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Aylık stok raporunun aynı ay için birbirinden farklı rakamlar içeren en az on sürümü e-postalarda dolaşıyor. Toplantılarda hangi rakamın doğru olduğu tartışılıyor. Raporu ilk hazırlayan stok analistiyle konuşuyorsun.",
+  "rolun": "Veri ve raporlama sorumlususun. Amacın kopyalayanları uyarmak değil, sürümlerin neden çoğaldığını anlamak.",
+  "karakter": {
+    "ad": "Taylan",
+    "rol": "Stok analisti",
+    "tavir": "Titiz ve bıkkın; \"ben bir kere gönderiyorum\" diyor. Raporun yolculuğunu merak eden birine anlatıyor.",
+    "ilk_soz": "Ben raporu ayda bir kere gönderiyorum. Sonra kimin neyi değiştirdiğini ben de bilmiyorum."
+  },
+  "yaniltici_ipuclari": [
+    "İnsanlar raporu kendi işine göre değiştiriyor.",
+    "Excel'e güvenilmez."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Rapor hazırlandıktan sonra kimlere ve nasıl gidiyor?",
+    "Farklı sürümler arasındaki farklar en çok nerede?",
+    "Raporu alanlar onu ne için ve nasıl değiştiriyor?",
+    "Rapordaki veriler hangi sistemden ve ne zaman alınıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Dağıtım e-postayla: her alan kendi kopyasını düzeltiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Rapor Excel dosyası olarak 40 kişiye e-postayla gidiyor; ortak bir yerde durmuyor.",
+          "acilma_kosulu": "Raporun dağıtımı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlere ve nasıl",
+            "e-posta",
+            "40 kişi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bölümler hatalı gördükleri satırları kendi kopyalarında düzeltip dosyayı başkalarına iletiyor; düzeltmeler analiste dönmüyor.",
+          "acilma_kosulu": "Raporun neden değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için ve nasıl",
+            "düzeltip",
+            "iletiyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sürümler arasındaki farkların çoğu bölümlerin elle düzelttiği satırlarda.",
+          "acilma_kosulu": "Sürümler arası farkların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "farklar en çok",
+            "elle düzelt"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veriler WMS'ten ayın son günü alınıyor.",
+          "acilma_kosulu": "Verinin kaynağı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sistemden",
+            "son gün"
+          ]
+        }
+      ],
+      "kok_neden": "Sürümler e-postayla dağıtımdan çoğalıyor: rapor ortak bir yerde değil, 40 kişiye dosya olarak gidiyor; bölümler hatalı gördüklerini kendi kopyalarında düzeltip iletiyor ve düzeltmeler kaynağa hiç dönmüyor.",
+      "kok_neden_kelimeler": [
+        "e-posta",
+        "kopya",
+        "düzelt",
+        "ortak",
+        "kaynağa"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kesim zamanı belirsiz: herkes veriyi farklı saatte çekiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Rapor WMS'ten çekiliyor ama verinin hangi saatte kesileceği tanımlı değil; ay sonu stok, gün içinde sürekli değişiyor.",
+          "acilma_kosulu": "Verinin kaynağı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sistemden",
+            "kesil",
+            "gün içinde"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Farklar en çok ay sonu stok rakamında; her bölüm raporu kendisi yeniden çalıştırdığında farklı bir saatin verisini alıyor.",
+          "acilma_kosulu": "Sürümler arası farkların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "farklar en çok",
+            "yeniden çalıştır",
+            "farklı bir saat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Analist raporu bir şablon olarak paylaşıyor; bölümler rakamı güncellemek için şablonu kendileri çalıştırıyor.",
+          "acilma_kosulu": "Raporun dağıtımı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlere ve nasıl",
+            "şablon"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bölümler raporu genelde biçim için değiştiriyor.",
+          "acilma_kosulu": "Raporun neden değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için ve nasıl",
+            "biçim için"
+          ]
+        }
+      ],
+      "kok_neden": "Sürümler kesim zamanının tanımsız olmasından çoğalıyor: ay sonu stok gün içinde değişiyor, raporu her bölüm kendi saatinde yeniden çalıştırıyor ve hangi saatin resmî rakam olduğu tanımlı değil.",
+      "kok_neden_kelimeler": [
+        "kesim",
+        "saat",
+        "tanımlı",
+        "yeniden çalıştır",
+        "resmî"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Tek rapor herkese uymuyor: her bölüm kendi tanımını ekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Finans stoku maliyetle, satış satılabilir adetle, depo fiziki adetle görmek istiyor; her bölüm raporu kendi tanımına göre değiştiriyor.",
+          "acilma_kosulu": "Raporun neden değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne için ve nasıl",
+            "maliyetle",
+            "satılabilir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Farklar en çok \"stok\" sütununda; bazı sürümlerde rezerve ve hasarlı ürünler düşülmüş, bazılarında değil.",
+          "acilma_kosulu": "Sürümler arası farkların yeri sorulursa",
+          "ipucu_kelimeler": [
+            "farklar en çok",
+            "rezerve",
+            "hasarlı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Rapor herkese aynı tek sayfa olarak gidiyor; bölümlere göre ayrı görünümler yok.",
+          "acilma_kosulu": "Raporun dağıtımı sorulursa",
+          "ipucu_kelimeler": [
+            "kimlere ve nasıl",
+            "tek sayfa",
+            "ayrı görünüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Veriler gece yarısı otomatik kesiliyor.",
+          "acilma_kosulu": "Verinin kaynağı ve zamanı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi sistemden",
+            "gece yarısı"
+          ]
+        }
+      ],
+      "kok_neden": "Sürümler tek raporun herkese uymamasından çoğalıyor: finans, satış ve depo stoku farklı tanımlarla görmek istiyor, rapor tek bir görünümle gidiyor ve her bölüm rezerve ve hasarlı ürünleri kendi tanımına göre ekleyip çıkarıyor.",
+      "kok_neden_kelimeler": [
+        "tanım",
+        "bölüm",
+        "görünüm",
+        "rezerve",
+        "tek rapor"
+      ]
+    }
+  ]
+}

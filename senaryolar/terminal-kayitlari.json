@@ -1,0 +1,201 @@
+{
+  "id": "terminal-kayitlari",
+  "baslik": "Terminal kayıtları neden gerçeği yansıtmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Analizler, toplama saatlerinin %30'unda birden fazla kalemin aynı saniyede okutulduğunu gösteriyor; verim ve süre raporları güvenilmez hâle geldi. Toplama ekibinin vardiya amiriyle konuşuyorsun.",
+  "rolun": "Veri ve raporlama sorumlususun. Amacın kural ihlalini cezalandırmak değil, kayıtların neden gerçeği yansıtmadığını anlamak.",
+  "karakter": {
+    "ad": "Erhan",
+    "rol": "Toplama vardiya amiri",
+    "tavir": "Savunmacı ama dürüst; \"ekip işini yapıyor\" diyor. Sahadaki pratiği merak eden birine açık konuşuyor.",
+    "ilk_soz": "Ekip işini yapıyor, ürünler doğru gidiyor. Terminale nasıl okuttukları o kadar önemli mi?"
+  },
+  "yaniltici_ipuclari": [
+    "Toplayıcılar sistemi kandırıyor.",
+    "Terminaller hatalı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir toplayıcı sahada terminali nasıl kullanıyor?",
+    "Toplu okutma en çok hangi işlerde ve hangi bölgelerde oluyor?",
+    "Terminal verisi sonra kimler tarafından nasıl kullanılıyor?",
+    "Kalem kalem okutmak sahada ne kadar zaman alıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kapsama yok: bazı koridorlarda terminal bağlanamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplu okutma en çok arka koridorlarda; orada kablosuz ağ kopuyor ve toplayıcılar ürünleri ağın çektiği yere gelince topluca okutuyor.",
+          "acilma_kosulu": "Toplu okutmanın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "toplu okutma",
+            "arka koridor",
+            "ağ kopuyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplayıcılar ağ olmayan yerde ürünü alıp ilk çeken noktada bütün kalemleri arka arkaya okutuyor.",
+          "acilma_kosulu": "Terminalin sahada kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "terminali nasıl",
+            "ilk çeken",
+            "arka arkaya"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Veri verim raporuna ve süre etüdüne giriyor; analistler toplu okutmanın nedenini bilmiyor.",
+          "acilma_kosulu": "Verinin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "terminal verisi",
+            "süre etüdü",
+            "nedenini bilmiyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tek tek okutma birkaç saniye sürüyor.",
+          "acilma_kosulu": "Tek tek okutmanın süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kalem kalem",
+            "birkaç saniye"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıtlar ağ yüzünden bozuk: arka koridorlarda kablosuz ağ kopuyor, toplayıcılar ürünleri ağın çektiği ilk noktada toplu okutuyor ve raporları kullanan analistler bu nedeni bilmediği için süreleri yanlış yorumluyor.",
+      "kok_neden_kelimeler": [
+        "ağ",
+        "kablosuz",
+        "toplu okut",
+        "arka koridor",
+        "kopuyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Hız baskısı: tek tek okutmak hedefi düşürüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Her kalemi ayrı okutmak, terminalin onay ekranı yüzünden kalem başına 6 saniye ekliyor; günde yarım saati buluyor.",
+          "acilma_kosulu": "Tek tek okutmanın süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kalem kalem",
+            "6 saniye",
+            "onay ekranı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplayıcılar kalemleri arabaya topluyor, sonra durdukları bir yerde terminale peş peşe okutuyor.",
+          "acilma_kosulu": "Terminalin sahada kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "terminali nasıl",
+            "peş peşe",
+            "arabaya topl"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Terminal verisi primli saatlik hedefin hesaplandığı rapora giriyor; toplu okutan daha yüksek görünüyor.",
+          "acilma_kosulu": "Verinin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "terminal verisi",
+            "prim",
+            "saatlik hedef"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Toplu okutma bütün bölgelere yayılmış.",
+          "acilma_kosulu": "Toplu okutmanın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "toplu okutma",
+            "yayılmış"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıtlar hız baskısıyla bozuluyor: tek tek okutmak onay ekranı yüzünden her kaleme saniyeler ekliyor, prim saatlik hedefe bağlı ve toplu okutan daha hızlı göründüğü için kayıt gerçek akışı değil hedefi gösteriyor.",
+      "kok_neden_kelimeler": [
+        "hız",
+        "prim",
+        "hedef",
+        "onay ekranı",
+        "toplu"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Süreç değişmiş: sipariş birleştirme kayda yansımıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplu okutma en çok çok siparişli toplamada; bir toplayıcı aynı anda altı siparişi topluyor ama terminal yalnızca tek sipariş akışını destekliyor.",
+          "acilma_kosulu": "Toplu okutmanın yoğunlaştığı yer sorulursa",
+          "ipucu_kelimeler": [
+            "toplu okutma",
+            "çok siparişli",
+            "altı sipariş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplayıcı ürünleri altı kasaya ayırıyor, sonra her sipariş için terminalde ayrı ayrı ama arka arkaya okutuyor.",
+          "acilma_kosulu": "Terminalin sahada kullanımı sorulursa",
+          "ipucu_kelimeler": [
+            "terminali nasıl",
+            "kasaya ayır",
+            "ayrı ayrı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Veri kişi verimini ölçmek için kullanılıyor; süreç değişikliği rapor tasarımına hiç bildirilmedi.",
+          "acilma_kosulu": "Verinin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "terminal verisi",
+            "kişi verimi",
+            "bildirilmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tek tek okutma uzun sürmüyor.",
+          "acilma_kosulu": "Tek tek okutmanın süresi sorulursa",
+          "ipucu_kelimeler": [
+            "kalem kalem",
+            "uzun sürmüyor"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıtlar süreçle uyuşmuyor: depo çok siparişli toplamaya geçti ama terminal tek sipariş akışını destekliyor, toplayıcılar siparişleri arka arkaya okutuyor ve bu süreç değişikliği raporu tasarlayanlara hiç bildirilmedi.",
+      "kok_neden_kelimeler": [
+        "süreç",
+        "çok siparişli",
+        "terminal",
+        "bildirilmedi",
+        "uyuşm"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "tek-tedarikci",
+  "baslik": "Tek tedarikçiye bağımlılık neden fark edilmedi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 8,
+  "acilis": "Etiket ve rulo malzemenin tek tedarikçisinin fabrikasında yangın çıktı; depo üç gün etiket basamadı ve sevkiyat durdu. Satın alma kategorisi uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın uzmanı suçlamak değil, bu riskin neden görülmediğini anlamak.",
+  "karakter": {
+    "ad": "Gonca",
+    "rol": "Kategori satın alma uzmanı",
+    "tavir": "Sarsılmış ve savunmada; \"bu tedarikçi on yıldır sorunsuzdu\" diyor. Süreci soran birine dürüst.",
+    "ilk_soz": "Bu tedarikçi on yıldır tek bir aksama yaşatmadı. Böyle bir şey beklemiyorduk."
+  },
+  "yaniltici_ipuclari": [
+    "Yangın kimsenin elinde olmayan bir şey.",
+    "Tedarikçi şanssızlık yaşadı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bu malzeme için tedarikçi nasıl seçildi, alternatif var mıydı?",
+    "Tedarikçi riskleri nasıl ve ne sıklıkla değerlendiriliyor?",
+    "Depoda bu malzemenin stoğu nasıl belirleniyor?",
+    "Yangın haberi geldiğinde ilk saatlerde neler oldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Fiyat için tek tedarikçi: ikinci kaynak bırakıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç yıl önce ikinci tedarikçi, hacim indirimi almak için bırakıldı; bütün hacim tek tedarikçiye verildi.",
+          "acilma_kosulu": "Tedarikçi seçimi ve alternatifler sorulursa",
+          "ipucu_kelimeler": [
+            "alternatif var mıydı",
+            "hacim indirimi",
+            "ikinci tedarikçi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi riskleri yalnızca fiyat ve teslim performansıyla değerlendiriliyor; tek kaynak riski değerlendirmede yok.",
+          "acilma_kosulu": "Risk değerlendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "riskleri nasıl",
+            "fiyat ve teslim",
+            "tek kaynak"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Stok, tedarikçinin güvenilir olduğu varsayımıyla iki günlük tutuluyor.",
+          "acilma_kosulu": "Stok seviyesinin belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "stoğu nasıl",
+            "iki günlük",
+            "güvenilir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yangın haberi tedarikçiden telefonla geldi.",
+          "acilma_kosulu": "Kriz anındaki ilk saatler sorulursa",
+          "ipucu_kelimeler": [
+            "yangın haberi",
+            "telefonla"
+          ]
+        }
+      ],
+      "kok_neden": "Bağımlılık fiyat için bilerek kuruldu ama risk görülmedi: ikinci tedarikçi hacim indirimi için bırakıldı, risk değerlendirmesi yalnızca fiyat ve teslime bakıyor ve stok tedarikçi aksamaz varsayımıyla iki günlük tutuluyor.",
+      "kok_neden_kelimeler": [
+        "tek kaynak",
+        "hacim indirimi",
+        "risk",
+        "iki günlük",
+        "fiyat"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Görünmeyen alt tedarikçi: iki tedarikçi aynı fabrikadan alıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kâğıt üzerinde iki tedarikçi var; ama ikisi de etiket rulosunu aynı fabrikadan alıp yeniden satıyor.",
+          "acilma_kosulu": "Tedarikçi seçimi ve alternatifler sorulursa",
+          "ipucu_kelimeler": [
+            "alternatif var mıydı",
+            "aynı fabrika",
+            "yeniden satıyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Risk değerlendirmesi yalnızca doğrudan tedarikçilere bakıyor; alt tedarikçiler hiç sorulmuyor.",
+          "acilma_kosulu": "Risk değerlendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "riskleri nasıl",
+            "alt tedarikçi",
+            "doğrudan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yangın haberi geldiğinde ikinci tedarikçi arandı; onun da malı olmadığı o zaman anlaşıldı.",
+          "acilma_kosulu": "Kriz anındaki ilk saatler sorulursa",
+          "ipucu_kelimeler": [
+            "yangın haberi",
+            "ikinci tedarikçi arandı",
+            "o zaman anlaşıldı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Depoda bir haftalık stok tutuluyordu.",
+          "acilma_kosulu": "Stok seviyesinin belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "stoğu nasıl",
+            "bir haftalık"
+          ]
+        }
+      ],
+      "kok_neden": "Bağımlılık görünmüyordu: kâğıt üzerinde iki tedarikçi vardı ama ikisi de aynı fabrikadan alıp satıyordu; risk değerlendirmesi alt tedarikçilere hiç bakmadığı için bu, ancak kriz anında ikinci tedarikçi aranınca anlaşıldı.",
+      "kok_neden_kelimeler": [
+        "alt tedarikçi",
+        "aynı fabrika",
+        "görünmüyor",
+        "risk",
+        "iki tedarikçi"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kriz planı yok: kimin ne yapacağı belli değildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yangın haberi geldiğinde ilk gün kimin karar vereceği belli değildi; satın alma, depo ve BT birbirini aradı.",
+          "acilma_kosulu": "Kriz anındaki ilk saatler sorulursa",
+          "ipucu_kelimeler": [
+            "yangın haberi",
+            "kimin karar",
+            "birbirini aradı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Etiket stoku bir haftalıktı; ama stok iki yazıcı modeline göre ayrı ayrı tutuluyor, biri iki günde bitti.",
+          "acilma_kosulu": "Stok seviyesinin belirlenmesi sorulursa",
+          "ipucu_kelimeler": [
+            "stoğu nasıl",
+            "yazıcı model",
+            "iki günde"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Alternatif tedarikçiler biliniyordu ama hiçbiriyle ön anlaşma ya da numune onayı yapılmamıştı; yeni tedarikçinin etiketi yazıcıya uymadı.",
+          "acilma_kosulu": "Tedarikçi seçimi ve alternatifler sorulursa",
+          "ipucu_kelimeler": [
+            "alternatif var mıydı",
+            "ön anlaşma",
+            "numune"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Risk değerlendirmesi yılda bir yapılıyor.",
+          "acilma_kosulu": "Risk değerlendirmesi sorulursa",
+          "ipucu_kelimeler": [
+            "riskleri nasıl",
+            "yılda bir"
+          ]
+        }
+      ],
+      "kok_neden": "Bağımlılık değil hazırlıksızlık sorunu büyüttü: alternatif tedarikçilerle ön anlaşma ve numune onayı yoktu, stok yazıcı modeline göre bölünmüştü ve kriz anında kimin karar vereceği belli değildi.",
+      "kok_neden_kelimeler": [
+        "kriz plan",
+        "ön anlaşma",
+        "numune",
+        "karar",
+        "hazırlık"
+      ]
+    }
+  ]
+}

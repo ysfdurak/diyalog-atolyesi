@@ -1,0 +1,201 @@
+{
+  "id": "en-ucuz-teklif",
+  "baslik": "En ucuz teklif neden en pahalıya geldi?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 8,
+  "acilis": "Forklift kiralama ihalesinde en düşük aylık fiyatı veren firma seçildi. Bir yılın sonunda toplam maliyet ikinci en iyi teklifin %22 üzerinde çıktı. İhaleyi yürüten satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın kararı eleştirmek değil, ucuz teklifin neden pahalıya geldiğini anlamak.",
+  "karakter": {
+    "ad": "Doruk",
+    "rol": "Satın alma uzmanı",
+    "tavir": "Hesaplarına güveniyor ama sarsılmış; \"teklif şartnameye uygundu\" diyor. Toplam maliyeti soran birine açık konuşuyor.",
+    "ilk_soz": "Teklif şartnameye birebir uygundu ve açık ara en ucuzdu. Sonradan çıkan kalemleri biz de beklemiyorduk."
+  },
+  "yaniltici_ipuclari": [
+    "Kiralama firması fırsatçılık yaptı.",
+    "Kullanım beklenenden fazla oldu."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Teklifler hangi kriterlerle karşılaştırıldı?",
+    "Yıl içinde faturaya hangi ek kalemler girdi?",
+    "Makinelerin arıza ve bakım durumu nasıl geçti?",
+    "İhale şartnamesi kimler ile, nasıl hazırlandı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Toplam maliyet hesaplanmadı: saat aşımı ve ek ücretler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Teklifler yalnızca aylık kira bedeliyle karşılaştırıldı; toplam sahip olma maliyeti hesaplanmadı.",
+          "acilma_kosulu": "Tekliflerin karşılaştırma kriterleri sorulursa",
+          "ipucu_kelimeler": [
+            "karşılaştırıldı",
+            "aylık kira",
+            "toplam sahip olma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Faturalara aylık 200 saati aşan kullanım için saat başı ek ücret girdi; depoda iki vardiya çalışıldığı için her ay aşıldı.",
+          "acilma_kosulu": "Faturadaki ek kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "ek kalemler",
+            "200 saat",
+            "saat başı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Şartnameyi yalnızca satın alma hazırladı; depo gerçek kullanım saatini hiç bildirmedi.",
+          "acilma_kosulu": "Şartnamenin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "şartnamesi kimler",
+            "yalnızca satın alma",
+            "kullanım saati"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Makineler genelde sorunsuz çalıştı.",
+          "acilma_kosulu": "Arıza ve bakım durumu sorulursa",
+          "ipucu_kelimeler": [
+            "arıza ve bakım",
+            "sorunsuz"
+          ]
+        }
+      ],
+      "kok_neden": "Ucuz teklif pahalıya geldi çünkü yalnızca aylık kira karşılaştırıldı: şartname depoya sorulmadan hazırlandı, gerçek kullanım saati bilinmedi ve iki vardiyada her ay aşılan 200 saat sınırının saat başı ücretleri toplam maliyeti şişirdi.",
+      "kok_neden_kelimeler": [
+        "toplam maliyet",
+        "aylık kira",
+        "saat",
+        "kullanım",
+        "şartname"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Duruş maliyeti: makineler sık arızalandı, yedek gelmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Makineler eski modeldi ve sık arızalandı; sözleşmede yedek makine süresi 72 saat yazıyordu.",
+          "acilma_kosulu": "Arıza ve bakım durumu sorulursa",
+          "ipucu_kelimeler": [
+            "arıza ve bakım",
+            "eski model",
+            "72 saat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Faturada ek kalem yok; ama arıza günlerinde fazla mesai ve dışarıdan günlük forklift kiralama maliyeti oluştu.",
+          "acilma_kosulu": "Faturadaki ek kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "ek kalemler",
+            "günlük forklift",
+            "fazla mesai"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Teklifler fiyat ve makine sayısıyla karşılaştırıldı; makine yaşı ve servis süresi kriter değildi.",
+          "acilma_kosulu": "Tekliflerin karşılaştırma kriterleri sorulursa",
+          "ipucu_kelimeler": [
+            "karşılaştırıldı",
+            "makine yaşı",
+            "servis süresi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Şartname depo ve satın alma tarafından birlikte hazırlandı.",
+          "acilma_kosulu": "Şartnamenin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "şartnamesi kimler",
+            "birlikte hazırlan"
+          ]
+        }
+      ],
+      "kok_neden": "Ucuz teklif duruşlardan pahalıya geldi: makine yaşı ve servis süresi kriter değildi, eski makineler sık arızalandı, yedek makine 72 saatte geldi ve arıza günlerinin fazla mesai ile dış kiralama maliyeti faturada görünmedi.",
+      "kok_neden_kelimeler": [
+        "arıza",
+        "makine yaşı",
+        "servis süresi",
+        "duruş",
+        "yedek"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Şartname dışı ihtiyaçlar: ek ekipman ve hasar faturaları",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Faturalara ataşman (çatal uzatma, varil tutucu) kiraları ve dönem sonunda \"olağan dışı aşınma\" hasar bedeli girdi.",
+          "acilma_kosulu": "Faturadaki ek kalemler sorulursa",
+          "ipucu_kelimeler": [
+            "ek kalemler",
+            "ataşman",
+            "hasar bedeli"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Şartname eski bir ihaleden kopyalandı; depodaki ağır ve hacimli ürünler için gereken ataşmanlar yazılmadı.",
+          "acilma_kosulu": "Şartnamenin hazırlanması sorulursa",
+          "ipucu_kelimeler": [
+            "şartnamesi kimler",
+            "kopyala",
+            "ağır ve hacimli"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Diğer teklif ataşmanları ve normal aşınmayı fiyata dahil etmişti; karşılaştırmada bu fark görülmedi.",
+          "acilma_kosulu": "Tekliflerin karşılaştırma kriterleri sorulursa",
+          "ipucu_kelimeler": [
+            "karşılaştırıldı",
+            "dahil etmiş",
+            "görülmedi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Makineler zamanında bakımdan geçti.",
+          "acilma_kosulu": "Arıza ve bakım durumu sorulursa",
+          "ipucu_kelimeler": [
+            "arıza ve bakım",
+            "zamanında bakım"
+          ]
+        }
+      ],
+      "kok_neden": "Ucuz teklif şartname dışı kalemlerden pahalıya geldi: şartname eski bir ihaleden kopyalandığı için gereken ataşmanlar yazılmadı, bu ataşmanlar ve aşınma hasarı ayrıca faturalandı ve diğer teklif bunları fiyata dahil ettiği hâlde fark görülmedi.",
+      "kok_neden_kelimeler": [
+        "şartname",
+        "ataşman",
+        "kopyala",
+        "hasar",
+        "dahil"
+      ]
+    }
+  ]
+}
