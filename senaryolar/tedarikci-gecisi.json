@@ -1,0 +1,199 @@
+{
+  "id": "tedarikci-gecisi",
+  "baslik": "Yeni tedarikçiye geçiş neden sorun çıkardı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 8,
+  "acilis": "Maliyeti %12 düşürmek için palet ve streç film tedarikçisi değiştirildi. Geçişten sonraki iki ayda yükleme sırasında devrilen palet sayısı arttı ve iki müşteri şikâyet etti. Geçişi yöneten satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Satın alma müdürüsün. Amacın kararı geri almak değil, geçişin neden sorun çıkardığını anlamak.",
+  "karakter": {
+    "ad": "Ebru",
+    "rol": "Satın alma uzmanı",
+    "tavir": "Kararını savunuyor; \"teknik şartnameye uygun\" diyor. Geçişin nasıl yapıldığını soran birine dürüst davranıyor.",
+    "ilk_soz": "Yeni tedarikçinin ürünleri şartnameye birebir uygun. Tasarrufu da sağladık."
+  },
+  "yaniltici_ipuclari": [
+    "Depo ekibi yeni ürüne alışamadı.",
+    "Her değişiklik başta sancılı olur."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni tedarikçi hangi kriterlerle seçildi?",
+    "Geçişten önce yeni ürün sahada nasıl denendi?",
+    "Sorun en çok hangi işlerde ve hangi müşterilerde çıkıyor?",
+    "Depo ekibi geçiş sürecine nasıl dahil oldu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Şartname yanlış şeyi ölçüyordu: streçin tutma gücü yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Seçim fiyata ve şartnamedeki kalınlık değerine göre yapıldı; şartnamede streçin gerilme ve tutma gücü tanımlı değil.",
+          "acilma_kosulu": "Tedarikçinin hangi kriterlerle seçildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterlerle",
+            "şartname",
+            "kalınlık"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Devrilmeler en çok uzun yola giden, yüksek ve ağır paletlerde oluyor.",
+          "acilma_kosulu": "Sorunun en çok nerede çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteriler",
+            "uzun yol",
+            "ağır palet"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yeni streç sahada denenmedi; yalnızca numune kalınlığı ölçüldü.",
+          "acilma_kosulu": "Ürünün geçişten önce nasıl denendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada nasıl denendi",
+            "numune"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Depo ekibine geçiş tarihi e-postayla bildirildi.",
+          "acilma_kosulu": "Depo ekibinin sürece nasıl dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "e-posta"
+          ]
+        }
+      ],
+      "kok_neden": "Şartname yanlış şeyi ölçüyordu: seçim fiyata ve kalınlığa göre yapıldı, streçin tutma gücü şartnamede yoktu ve ürün sahada denenmediği için ağır, uzun yol paletlerinde yetersiz kaldığı görülmedi.",
+      "kok_neden_kelimeler": [
+        "şartname",
+        "tutma gücü",
+        "kalınlık",
+        "denenmedi",
+        "fiyat"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Makine ayarlanmadı: depo ekibi geçişe dahil edilmedi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Depo ekibi geçişe dahil edilmedi; streç sarma makinesinin yeni filme göre ayarlanması gerektiği kimsenin aklına gelmedi.",
+          "acilma_kosulu": "Depo ekibinin sürece nasıl dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "sarma makine",
+            "ayar"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Numuneler laboratuvarda denendi; sahada makineyle hiç sarılmadı.",
+          "acilma_kosulu": "Ürünün geçişten önce nasıl denendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada nasıl denendi",
+            "laboratuvar",
+            "makine"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sorun yalnızca makineyle sarılan paletlerde; elle sarılan paletlerde devrilme yok.",
+          "acilma_kosulu": "Sorunun en çok nerede çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteriler",
+            "elle sarılan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tedarikçi fiyat ve teslim süresiyle seçildi.",
+          "acilma_kosulu": "Tedarikçinin hangi kriterlerle seçildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterlerle",
+            "teslim süresi"
+          ]
+        }
+      ],
+      "kok_neden": "Sorun üründe değil makinede: depo ekibi geçişe dahil edilmedi, streç sarma makinesi yeni filme göre ayarlanmadı ve numuneler yalnızca laboratuvarda denendiği için makineyle sarılan paletlerdeki sorun önceden görülmedi.",
+      "kok_neden_kelimeler": [
+        "makine",
+        "ayar",
+        "dahil",
+        "laboratuvar",
+        "sahada"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Palet kalitesi: daha ince tahta, bildirim ulaşmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Devrilmelerin çoğu yeni paletlerde; palet tahtaları çatlıyor ve forklift çatalı girince palet esniyor.",
+          "acilma_kosulu": "Sorunun en çok nerede çıktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteriler",
+            "tahta",
+            "çatla"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yeni palet tedarikçisi şartnamedeki ölçülere uyuyor ama daha ince tahta kullanıyor; şartnamede tahta kalınlığı ve taşıma kapasitesi yazmıyor.",
+          "acilma_kosulu": "Tedarikçinin hangi kriterlerle seçildiği sorulursa",
+          "ipucu_kelimeler": [
+            "kriterlerle",
+            "ince",
+            "taşıma kapasitesi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Depo ekibi ilk haftada çatlayan paletleri bildirdi ama bildirim satın almaya ulaşmadı; vardiya amirinde kaldı.",
+          "acilma_kosulu": "Depo ekibinin sürece nasıl dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "dahil oldu",
+            "bildir",
+            "amir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Numuneler sahada birkaç gün kullanıldı.",
+          "acilma_kosulu": "Ürünün geçişten önce nasıl denendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sahada nasıl denendi",
+            "birkaç gün"
+          ]
+        }
+      ],
+      "kok_neden": "Sorun paletlerde: yeni tedarikçi şartnameye uygun ama daha ince tahta kullanıyor, taşıma kapasitesi şartnamede tanımlı değil ve depo ekibinin çatlak palet bildirimi satın almaya ulaşmadı.",
+      "kok_neden_kelimeler": [
+        "palet",
+        "ince",
+        "taşıma kapasitesi",
+        "şartname",
+        "bildirim"
+      ]
+    }
+  ]
+}

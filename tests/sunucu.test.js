@@ -1,3 +1,4 @@
+import { readdirSync } from 'node:fs';
 // Sunucu entegrasyon testleri: gerçek HTTP sunucusu + SQLite + sahte model; MCP için resmi MCP istemcisi.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -64,7 +65,7 @@ test('web: durum gizli bilgi sızdırmaz; baştan sona oturum', async () => {
   const durumMetni = await (await fetch(taban + '/api/durum')).text();
   assert.ok(!durumMetni.includes('kok_neden') && !durumMetni.includes('gizli_bilgiler') && !durumMetni.includes('adresleme düzeni'));
   const durum = JSON.parse(durumMetni);
-  assert.equal(durum.senaryolar.length, 30);
+  assert.equal(durum.senaryolar.length, readdirSync(new URL('../senaryolar/', import.meta.url)).filter((f) => f.endsWith('.json')).length);
   assert.deepEqual([durum.kalanOturum, durum.gunlukHak, durum.siteAcik, durum.yapayZeka], [3, 3, true, false]);
 
   const o = await post('/api/oturum', { senaryoId: 'musteri-sozlesme' });

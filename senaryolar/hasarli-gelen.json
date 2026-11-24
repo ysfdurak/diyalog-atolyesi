@@ -1,0 +1,198 @@
+{
+  "id": "hasarli-gelen",
+  "baslik": "Gelen ürünler neden hasarlı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Bir tedarikçiden gelen ürünlerde mal kabulde tespit edilen hasar oranı son üç ayda %1'den %6'ya çıktı. Tedarikçi sorunun nakliyede olduğunu söylüyor. Mal kabulde hasar kayıtlarını tutan kalite kontrol elemanıyla konuşuyorsun.",
+  "rolun": "Tedarikçi kalitesinden sorumlu satın alma yöneticisisin. Amacın tedarikçiye ceza kesmek değil, hasarın nereden geldiğini anlamak.",
+  "karakter": {
+    "ad": "Murat",
+    "rol": "Mal kabul kalite kontrol elemanı",
+    "tavir": "Gözlemci ve titiz; \"ben sadece kaydediyorum\" diyor. Ayrıntı soran birine fotoğraf ve örnek veriyor.",
+    "ilk_soz": "Hasarları kaydediyorum, fotoğrafları da var. Kimin hatası olduğuna ben karar veremem."
+  },
+  "yaniltici_ipuclari": [
+    "Nakliyeciler özensiz.",
+    "Tedarikçi ucuz malzemeye geçmiştir."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Hasar en çok hangi ürünlerde ve paletin neresinde oluyor?",
+    "Hasar artmadan önce sevkiyat ya da ambalajda ne değişti?",
+    "Araç boşaltılırken neler oluyor?",
+    "Hasarlı ürün tespit edilince kayıt nasıl ilerliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Paletleme değişti: kat sayısı arttı, alt katlar eziliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi üç ay önce nakliye maliyetini düşürmek için palet yüksekliğini artırdı; paletler artık dört kat yerine altı kat.",
+          "acilma_kosulu": "Hasar artmadan önce ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "hasar artmadan",
+            "palet yüksekliği",
+            "altı kat"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hasar en çok alt katlardaki kolilerde, ezilme şeklinde.",
+          "acilma_kosulu": "Hasarın hangi ürünlerde ve paletin neresinde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "paletin neresinde",
+            "alt kat",
+            "ezil"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hasar kaydında yalnızca \"hasarlı\" yazıyor; hasarın türü ve paletteki yeri kaydedilmediği için tedarikçiye kanıt sunulamıyor.",
+          "acilma_kosulu": "Hasar kaydının nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "tespit edilince",
+            "türü",
+            "kanıt"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Araçlar forkliftle düzgün boşaltılıyor.",
+          "acilma_kosulu": "Araç boşaltılırken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "boşaltılırken",
+            "düzgün"
+          ]
+        }
+      ],
+      "kok_neden": "Hasar paletlemeden: tedarikçi nakliye maliyetini düşürmek için palet yüksekliğini artırdı, alt katlardaki koliler eziliyor ve kayıtta hasarın türü ve yeri olmadığı için bu tedarikçiye gösterilemiyor.",
+      "kok_neden_kelimeler": [
+        "palet",
+        "kat",
+        "ezil",
+        "kayıt",
+        "yükseklik"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Bizim boşaltmamız: yeni rampa ile araç arasında fark",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Araçlar iki aydır yeni yapılan rampadan boşaltılıyor; rampa ile araç arasında yükseklik farkı var ve transpalet geçerken paletler sarsılıyor.",
+          "acilma_kosulu": "Araç boşaltılırken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "boşaltılırken",
+            "rampa",
+            "transpalet"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Tedarikçinin ambalajında değişiklik yok; değişen bizim taraf, yeni rampa devreye alındı.",
+          "acilma_kosulu": "Hasar artmadan önce ne değiştiği ya da ambalaj sorulursa",
+          "ipucu_kelimeler": [
+            "hasar artmadan",
+            "yeni rampa"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hasar ürün fark etmeksizin paletin ön kenarındaki kolilerde oluyor.",
+          "acilma_kosulu": "Hasarın hangi ürünlerde ve paletin neresinde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "paletin neresinde",
+            "ön kenar"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hasarlı ürünler fotoğraflanıp tedarikçiye bildiriliyor.",
+          "acilma_kosulu": "Hasar kaydının nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "tespit edilince",
+            "fotoğraf"
+          ]
+        }
+      ],
+      "kok_neden": "Hasar bizim boşaltmamızdan: yeni rampa ile araç arasında yükseklik farkı var, transpalet geçerken paletin ön kenarındaki koliler zarar görüyor; tedarikçinin ambalajında bir değişiklik yok.",
+      "kok_neden_kelimeler": [
+        "rampa",
+        "yükseklik",
+        "transpalet",
+        "boşalt",
+        "ön kenar"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Nakliye zinciri değişti: aktarma deposu",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tedarikçi üç ay önce nakliye firmasını değiştirdi; yeni firma yükü kendi aktarma deposunda başka araçlara aktarıyor.",
+          "acilma_kosulu": "Hasar artmadan önce ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "hasar artmadan",
+            "nakliye firması",
+            "aktarma"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hasar en çok karışık yüklü araçlarla gelen, streçi yeniden sarılmış paletlerde.",
+          "acilma_kosulu": "Hasarın hangi ürünlerde ve paletin neresinde olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "paletin neresinde",
+            "streç",
+            "karışık yük"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Boşaltırken paletlerin bir kısmının farklı bir streçle yeniden sarıldığı görülüyor; bu bilgi kayda geçmiyor.",
+          "acilma_kosulu": "Araç boşaltılırken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "boşaltılırken",
+            "yeniden sarıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kayıtlar haftalık olarak satın almaya gönderiliyor.",
+          "acilma_kosulu": "Hasar kaydının nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "tespit edilince",
+            "haftalık"
+          ]
+        }
+      ],
+      "kok_neden": "Hasar nakliye zincirinden: tedarikçi nakliye firmasını değiştirdi, yeni firma yükü aktarma deposunda başka araçlara aktarıyor ve paletler streçi yeniden sarılmış, karışık yükle geliyor.",
+      "kok_neden_kelimeler": [
+        "nakliye",
+        "aktarma",
+        "streç",
+        "karışık",
+        "değiştir"
+      ]
+    }
+  ]
+}

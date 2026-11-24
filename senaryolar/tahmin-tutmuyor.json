@@ -1,0 +1,200 @@
+{
+  "id": "tahmin-tutmuyor",
+  "baslik": "Talep tahmini neden tutmuyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 8,
+  "acilis": "Haftalık personel planı satış tahminine dayanıyor. Son üç ayda tahmin ile gerçekleşen sipariş arasındaki fark ortalama %30; bazı günler ekip boş, bazı günler yetişmiyor. Tahmini hazırlayan talep planlama analistiyle konuşuyorsun.",
+  "rolun": "Operasyon planlamadan sorumlu yöneticisin. Amacın tahmini suçlamak değil, neden tutmadığını anlamak.",
+  "karakter": {
+    "ad": "İlker",
+    "rol": "Talep planlama analisti",
+    "tavir": "Modeline güveniyor; \"piyasa çok oynak\" diyor. Varsayımları soran birine açık konuşuyor.",
+    "ilk_soz": "Modelimiz geçmiş veriyle iyi çalışıyor. Son dönem piyasa olağanüstü oynak."
+  },
+  "yaniltici_ipuclari": [
+    "Piyasa çok oynak.",
+    "Müşteri davranışı değişti."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Tahmin hangi verilerle hazırlanıyor?",
+    "Sapma en çok hangi günlerde ya da hangi ürünlerde oluyor?",
+    "Satış ya da pazarlama tarafındaki planlar tahmine nasıl giriyor?",
+    "Tahmin ile gerçekleşen arasındaki fark sonra nasıl inceleniyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kampanyalar tahmine girmiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Pazarlama kampanya takvimini tahmin ekibiyle paylaşmıyor; kampanyalar tahmin hazırlandıktan sonra öğreniliyor.",
+          "acilma_kosulu": "Satış ve pazarlama planlarının tahmine nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama",
+            "kampanya",
+            "takvim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sapma en çok kampanya haftalarında ve indirime giren ürünlerde oluyor.",
+          "acilma_kosulu": "Sapmanın nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sapma",
+            "indirim"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tahmin yalnızca geçmiş satışlarla hazırlanıyor; geçen yılın kampanyaları da veride \"normal satış\" gibi duruyor.",
+          "acilma_kosulu": "Tahminin hangi verilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilerle",
+            "geçmiş satış",
+            "normal"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Fark aylık toplantıda konuşuluyor.",
+          "acilma_kosulu": "Farkın sonra nasıl incelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark sonra",
+            "aylık toplantı"
+          ]
+        }
+      ],
+      "kok_neden": "Tahmin kampanyaları görmüyor: pazarlama kampanya takvimini paylaşmıyor, model yalnızca geçmiş satışlardan çalışıyor ve geçmiş kampanyalar veride normal satış gibi durduğu için sapma kampanya haftalarında yığılıyor.",
+      "kok_neden_kelimeler": [
+        "kampanya",
+        "takvim",
+        "geçmiş",
+        "pazarlama",
+        "paylaş"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Tahmin değil çeviri yanlış: kalem katsayısı eskidi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tahmin sipariş adedini veriyor; personel planı ise sipariş başına ortalama kalem sayısıyla iş yüküne çevriliyor.",
+          "acilma_kosulu": "Tahminin hangi verilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilerle",
+            "sipariş adedi",
+            "kalem"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sipariş adedi tahmini aslında tutuyor; sapma, e-ticarete geçişle sipariş başına kalem sayısının düşmesinden geliyor.",
+          "acilma_kosulu": "Sapmanın nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sapma",
+            "e-ticaret",
+            "kalem sayısı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fark yalnızca sipariş adedi üzerinden inceleniyor; iş yüküne çevirme katsayısı iki yıldır hiç güncellenmedi.",
+          "acilma_kosulu": "Farkın sonra nasıl incelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark sonra",
+            "katsayı",
+            "güncellen"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satış planları aylık olarak tahmin ekibine geliyor.",
+          "acilma_kosulu": "Satış ve pazarlama planlarının tahmine nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama",
+            "aylık"
+          ]
+        }
+      ],
+      "kok_neden": "Tahmin değil çeviri yanlış: sipariş adedi tahmini tutuyor ama iş yüküne çevrilirken kullanılan sipariş başına kalem katsayısı iki yıldır güncellenmedi; e-ticarete geçişle siparişlerin yapısı değişti.",
+      "kok_neden_kelimeler": [
+        "katsayı",
+        "kalem",
+        "iş yükü",
+        "güncellen",
+        "e-ticaret"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bilinen bilgi akmıyor: büyük siparişler CRM'de kalıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sapma en çok ay sonlarında ve birkaç büyük kurumsal müşterinin ürünlerinde oluyor.",
+          "acilma_kosulu": "Sapmanın nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "sapma",
+            "ay sonu",
+            "kurumsal"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satış ekibi büyük müşterilerin toplu siparişlerini haftalar önce biliyor ama bu bilgi satışın kendi CRM'inde kalıyor, tahmine akmıyor.",
+          "acilma_kosulu": "Satış ve pazarlama planlarının tahmine nasıl girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "pazarlama",
+            "crm",
+            "satış ekibi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Fark incelenmiyor; tahmin her hafta aynı modelle yeniden çalıştırılıyor ve hata ölçülmüyor.",
+          "acilma_kosulu": "Farkın sonra nasıl incelendiği sorulursa",
+          "ipucu_kelimeler": [
+            "fark sonra",
+            "incelenmiyor",
+            "ölçülmüyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Tahmin son iki yılın günlük satış verisiyle hazırlanıyor.",
+          "acilma_kosulu": "Tahminin hangi verilerle hazırlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi verilerle",
+            "iki yıl"
+          ]
+        }
+      ],
+      "kok_neden": "Tahmin bilinen bilgiyi kullanmıyor: büyük müşterilerin toplu siparişleri satış ekibinin CRM'inde haftalar önce biliniyor ama tahmine akmıyor ve tahmin hatası hiç ölçülüp incelenmediği için düzeltilmiyor.",
+      "kok_neden_kelimeler": [
+        "crm",
+        "satış ekibi",
+        "büyük müşteri",
+        "ölçül",
+        "toplu sipariş"
+      ]
+    }
+  ]
+}

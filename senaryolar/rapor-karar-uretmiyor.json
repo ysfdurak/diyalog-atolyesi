@@ -1,0 +1,200 @@
+{
+  "id": "rapor-karar-uretmiyor",
+  "baslik": "Haftalık rapor neden hiçbir karara yol açmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Her pazartesi yönetime 25 sayfalık operasyon raporu gidiyor. Raporu hazırlamak bir günü alıyor; toplantı tutanaklarına bakınca son üç ayda rapora dayanan tek bir karar yok. Raporu sunan operasyon müdürüyle konuşuyorsun.",
+  "rolun": "Raporlama sorumlususun. Amacın raporu kısaltmak değil, neden karar üretmediğini anlamak.",
+  "karakter": {
+    "ad": "Sinan",
+    "rol": "Operasyon müdürü",
+    "tavir": "Pragmatik; \"rapor istendi, hazırlıyoruz\" diyor. Toplantının nasıl geçtiğini soran birine dürüst davranıyor.",
+    "ilk_soz": "Rapor istendiği gibi her hafta zamanında gidiyor. Gerisi yönetimin işi."
+  },
+  "yaniltici_ipuclari": [
+    "Yönetim raporu okumuyor.",
+    "Rapor fazla uzun, o kadar."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Pazartesi toplantısında rapor konuşulurken neler oluyor?",
+    "Raporun içeriğine kim, nasıl karar verdi?",
+    "Son dönemde yönetimin aldığı kararlar hangi bilgiye dayandı?",
+    "Raporda bir sorun görülünce sonra ne oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Geçmişi anlatıyor, karar seçeneği sunmuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Toplantıda rapordaki grafikler tek tek okunuyor; geçen haftanın ne olduğu konuşuluyor, ne yapılacağı değil.",
+          "acilma_kosulu": "Toplantıda rapor konuşulurken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi toplantı",
+            "geçen hafta",
+            "grafik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Raporda sorun görülünce \"takip edelim\" deniyor; raporda öneri ya da karar seçeneği bölümü yok.",
+          "acilma_kosulu": "Raporda sorun görülünce ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorun görülünce",
+            "takip",
+            "öneri"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İçerik iki yıl önce o zamanki genel müdürün isteğiyle belirlendi; o günden beri hiç gözden geçirilmedi.",
+          "acilma_kosulu": "Raporun içeriğine kimin nasıl karar verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriğine",
+            "genel müdür",
+            "gözden geçir"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kararlar daha çok koridor konuşmalarında veriliyor.",
+          "acilma_kosulu": "Yönetimin kararlarının hangi bilgiye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "aldığı kararlar",
+            "koridor"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor geçmişi anlatıyor, karara çağırmıyor: toplantıda grafikler okunuyor ama raporda öneri ya da karar seçeneği yok, içerik iki yıl önceki bir istekle belirlendi ve hiç gözden geçirilmedi.",
+      "kok_neden_kelimeler": [
+        "öneri",
+        "karar seçeneği",
+        "geçmiş",
+        "gözden geçiril",
+        "grafik"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kararlar başka bilgiyle veriliyor: raporda maliyet yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yönetimin son kararları finansın aylık maliyet tablosuna dayandı; operasyon raporunda maliyet bilgisi yok.",
+          "acilma_kosulu": "Yönetimin kararlarının hangi bilgiye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "aldığı kararlar",
+            "maliyet",
+            "finans"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pazartesi toplantısında rapor gündemin sonunda, son on dakikada konuşuluyor.",
+          "acilma_kosulu": "Toplantıda rapor konuşulurken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi toplantı",
+            "gündem",
+            "son on"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İçeriği operasyon ekibi kendi takip ettiği göstergelerden seçti; yönetime hangi kararları verdiği sorulmadı.",
+          "acilma_kosulu": "Raporun içeriğine kimin nasıl karar verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriğine",
+            "sorulmadı",
+            "göstergeler"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sorunlar genelde e-postayla ayrıca iletiliyor.",
+          "acilma_kosulu": "Raporda sorun görülünce ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorun görülünce",
+            "e-posta"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor yönetimin kararlarıyla bağlantısız: yönetim kararlarını maliyet bilgisiyle veriyor ama raporda maliyet yok, içerik yönetime sorulmadan operasyonun göstergelerinden seçildi ve rapor gündemin sonuna kalıyor.",
+      "kok_neden_kelimeler": [
+        "maliyet",
+        "sorulmadı",
+        "gündem",
+        "karar",
+        "bağlantı"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sorunun sahibi yok: kırmızılar haftalarca kalıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Raporda kırmızı görünen bir gösterge için sorumlu ve tarih atanmıyor; aynı kırmızı haftalarca raporda kalıyor.",
+          "acilma_kosulu": "Raporda sorun görülünce ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sorun görülünce",
+            "sorumlu",
+            "kırmızı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Toplantıda kırmızı göstergeler konuşuluyor ama \"bunu kim üstleniyor?\" sorusu hiç sorulmuyor.",
+          "acilma_kosulu": "Toplantıda rapor konuşulurken ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "pazartesi toplantı",
+            "üstleniyor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Son dönemdeki kararlar, kırmızı göstergeler müşteri şikâyetine dönüştükten sonra verildi.",
+          "acilma_kosulu": "Yönetimin kararlarının hangi bilgiye dayandığı sorulursa",
+          "ipucu_kelimeler": [
+            "aldığı kararlar",
+            "şikâyet",
+            "dönüştü"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İçerik yönetim ekibiyle birlikte belirlendi.",
+          "acilma_kosulu": "Raporun içeriğine kimin nasıl karar verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "içeriğine",
+            "birlikte"
+          ]
+        }
+      ],
+      "kok_neden": "Rapor sorunu gösteriyor ama sahiplendirmiyor: kırmızı göstergelere sorumlu ve tarih atanmıyor, toplantıda kimin üstleneceği sorulmuyor ve karar ancak sorun müşteri şikâyetine dönüşünce veriliyor.",
+      "kok_neden_kelimeler": [
+        "sorumlu",
+        "sahip",
+        "kırmızı",
+        "tarih",
+        "şikâyet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "olu-stok",
+  "baslik": "Depoda neden ölü stok birikiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "Bir yıldır hiç hareket etmeyen ürünler depo alanının %18'ini kaplıyor ve her ay artıyor. Mal kabulde yer sıkıntısı başladı. Kategori satın alma uzmanıyla konuşuyorsun.",
+  "rolun": "Depo ve envanterden sorumlu yöneticisin. Amacın ürünleri imha ettirmek değil, ölü stokun neden biriktiğini anlamak.",
+  "karakter": {
+    "ad": "Gizem",
+    "rol": "Kategori satın alma uzmanı",
+    "tavir": "Hedef odaklı; \"satış tahmini öyleydi\" diyor. Kararların nasıl alındığını soran birine açık konuşuyor.",
+    "ilk_soz": "O ürünleri satış ekibi istedi, biz aldık. Satılmaması bizim elimizde değil."
+  },
+  "yaniltici_ipuclari": [
+    "Satış ekibi tahmini şişiriyor.",
+    "Müşteri zevkleri çok hızlı değişiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Hareket etmeyen ürünlerin ortak noktası ne?",
+    "Bir ürün için ne kadar alınacağına nasıl karar veriliyor?",
+    "Satılmayan bir ürün fark edilince ne yapılıyor?",
+    "Satın almanın başarısı nasıl ölçülüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Ucuz alımın bedeli: asgari sipariş ve hacim indirimi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Tedarikçiler asgari sipariş miktarı istiyor ve büyük alıma ek indirim veriyor; çoğu ürün bir yıllık ihtiyacın üstünde alınıyor.",
+          "acilma_kosulu": "Alım miktarına nasıl karar verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar alınacağı",
+            "asgari",
+            "indirim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satın alma birim fiyattaki tasarrufla ölçülüyor; stokta bekleyen malın maliyeti hesaba girmiyor.",
+          "acilma_kosulu": "Satın almanın nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "satın almanın başarısı",
+            "birim fiyat",
+            "tasarruf"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Hareket etmeyen ürünlerin çoğu düşük satışlı ama büyük partilerle alınmış ürünler.",
+          "acilma_kosulu": "Hareket etmeyen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hareket etmeyen",
+            "büyük parti",
+            "düşük satış"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satılmayan ürünler için yılda bir indirim kampanyası yapılıyor.",
+          "acilma_kosulu": "Satılmayan ürün fark edilince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "satılmayan",
+            "kampanya"
+          ]
+        }
+      ],
+      "kok_neden": "Ölü stok ucuz alımın bedeli: satın alma birim fiyat tasarrufuyla ölçülüyor, asgari sipariş ve hacim indirimi yüzünden düşük satışlı ürünler bir yıllık ihtiyacın üstünde alınıyor ve stokta bekleme maliyeti hesaba girmiyor.",
+      "kok_neden_kelimeler": [
+        "birim fiyat",
+        "tasarruf",
+        "asgari",
+        "hacim indirimi",
+        "bekleme maliyeti"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Model geçişi: eski model satıştan kalktı, stokta kaldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hareket etmeyen ürünlerin çoğu yeni modeli çıkmış eski modeller; satış sistemi artık yeni ürün kodunu öneriyor.",
+          "acilma_kosulu": "Hareket etmeyen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hareket etmeyen",
+            "eski model",
+            "yeni model"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satılmayan ürünü satış kanalına geri sokacak bir süreç yok; ürünler sistemde \"aktif\" görünüyor ama hiçbir kanalda listelenmiyor.",
+          "acilma_kosulu": "Satılmayan ürün fark edilince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "satılmayan",
+            "listelen",
+            "aktif"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ne kadar alınacağı satış ekibinin yıllık tahminine göre belirleniyor; model geçişleri tahmine yansımıyor.",
+          "acilma_kosulu": "Alım miktarına nasıl karar verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar alınacağı",
+            "yıllık tahmin",
+            "model geçiş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satın alma, tedarik süresi ve fiyatla ölçülüyor.",
+          "acilma_kosulu": "Satın almanın nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "satın almanın başarısı",
+            "tedarik süresi"
+          ]
+        }
+      ],
+      "kok_neden": "Ölü stok model geçişlerinden: yeni model gelince eski modeller satış kanallarından kalkıyor ama stokta 'aktif' kalıyor, tahmin model geçişlerini görmüyor ve eski stoku satışa geri sokan bir süreç yok.",
+      "kok_neden_kelimeler": [
+        "model geçiş",
+        "eski model",
+        "listelen",
+        "aktif",
+        "tahmin"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İadeler sınıflandırılmıyor: karar sahibi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Hareket etmeyen ürünlerin büyük kısmı müşteri iadesi; ambalajı açılmış ya da hafif hasarlı oldukları için satılabilir stoka dönmüyorlar.",
+          "acilma_kosulu": "Hareket etmeyen ürünlerin ortak noktası sorulursa",
+          "ipucu_kelimeler": [
+            "hareket etmeyen",
+            "iade",
+            "hasar"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Satılmayan iade ürünü için karar sahibi yok; satış \"depo karar versin\", depo \"satış karar versin\" diyor.",
+          "acilma_kosulu": "Satılmayan ürün fark edilince ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "satılmayan",
+            "karar sahibi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ne kadar alınacağı hesaplanırken depodaki iade ürünleri stok sayılmıyor; aynı ürün yeniden satın alınıyor.",
+          "acilma_kosulu": "Alım miktarına nasıl karar verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ne kadar alınacağı",
+            "stok sayıl",
+            "yeniden satın"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satın almanın hedefleri arasında stok devir hızı var.",
+          "acilma_kosulu": "Satın almanın nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "satın almanın başarısı",
+            "devir hızı"
+          ]
+        }
+      ],
+      "kok_neden": "Ölü stok iadelerden: açılmış ya da hafif hasarlı iadeler satılabilir stoka dönmüyor, ne yapılacağına karar veren sahip yok ve sipariş hesabında stok sayılmadıkları için aynı ürün yeniden alınıyor.",
+      "kok_neden_kelimeler": [
+        "iade",
+        "hasar",
+        "karar",
+        "sahip",
+        "yeniden"
+      ]
+    }
+  ]
+}

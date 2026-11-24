@@ -1,0 +1,197 @@
+{
+  "id": "analiz-talepleri",
+  "baslik": "Analiz talepleri neden haftalar sürüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Operasyon müdürlerinin veri ekibine açtığı analiz talepleri ortalama üç haftada cevaplanıyor. Müdürler kararlarını analizi beklemeden vermeye başladı. Veri ekibinin kıdemli analistiyle konuşuyorsun.",
+  "rolun": "Veri ekibinin yöneticisisin. Amacın ekibi hızlandırmak değil, talebin neden bu kadar sürdüğünü anlamak.",
+  "karakter": {
+    "ad": "Zeynep",
+    "rol": "Kıdemli veri analisti",
+    "tavir": "Yetkin ama yorgun; \"çok talep var\" diye özetliyor. İş akışını soran birine açık konuşuyor.",
+    "ilk_soz": "Elimizde aynı anda yirmi talep var. Hepsine yetişmek mümkün değil."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip küçük.",
+    "Müdürler her şeyi acil istiyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir analiz talebi geldiğinde ilk ne yapıyorsunuz?",
+    "Üç haftanın en çok hangi kısmı bekleyerek geçiyor?",
+    "Teslim ettiğiniz analizler sonra nasıl kullanılıyor?",
+    "Benzer talepler ne sıklıkla tekrar geliyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Soru belirsiz: süre soruyu netleştirmekle geçiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Talepler genelde \"şunu bir inceleyin\" diye geliyor; ilk iş, müdürün asıl hangi kararı vereceğini anlamak için toplantı ayarlamak.",
+          "acilma_kosulu": "Bir talep gelince ilk ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne yapıyor",
+            "toplantı"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Üç haftanın yarısı müdürle toplantı bulmak ve sorunun ne olduğunu netleştirmekle geçiyor.",
+          "acilma_kosulu": "Sürenin en çok nerede geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "üç haftanın",
+            "netleştir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Teslim edilen analizlerin bir kısmı müdürün asıl sorusuna cevap vermediği için yeniden açılıyor.",
+          "acilma_kosulu": "Teslim edilen analizlerin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "teslim ettiğiniz",
+            "yeniden açıl"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Talepler çoğunlukla birbirinden farklı.",
+          "acilma_kosulu": "Benzer taleplerin ne sıklıkla geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "benzer talep",
+            "farklı"
+          ]
+        }
+      ],
+      "kok_neden": "Süre analizden değil sorudan: talepler hangi kararı desteklediği belli olmadan geliyor, sürenin yarısı soruyu netleştirmek için müdürle toplantı aramakla geçiyor ve yanlış soruya verilen cevaplar yeniden açılıyor.",
+      "kok_neden_kelimeler": [
+        "soru",
+        "netleştir",
+        "karar",
+        "toplantı",
+        "yeniden"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Veri hazırlığı: her analiz sıfırdan",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç haftanın çoğu veriyi farklı sistemlerden çekip birleştirmekle geçiyor; asıl analiz iki gün sürüyor.",
+          "acilma_kosulu": "Sürenin en çok nerede geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "üç haftanın",
+            "birleştir",
+            "çekip"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Taleplerin yarısı aynı birkaç soru üzerine (verimlilik, fazla mesai, sipariş gecikmesi) ama her seferinde veri sıfırdan hazırlanıyor.",
+          "acilma_kosulu": "Benzer taleplerin ne sıklıkla geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "benzer talep",
+            "sıfırdan",
+            "aynı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlk iş, gereken verinin hangi sistemde olduğunu bulmak ve erişim istemek; erişim talebi bir hafta sürebiliyor.",
+          "acilma_kosulu": "Bir talep gelince ilk ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne yapıyor",
+            "erişim"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Analizler genelde sunuma eklenip kullanılıyor.",
+          "acilma_kosulu": "Teslim edilen analizlerin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "teslim ettiğiniz",
+            "sunum"
+          ]
+        }
+      ],
+      "kok_neden": "Süre veri hazırlığından: her analizde veri farklı sistemlerden sıfırdan çekilip birleştiriliyor, erişim talepleri haftalar sürüyor ve sık tekrar eden sorular için hazır bir veri seti yok.",
+      "kok_neden_kelimeler": [
+        "veri hazırlığı",
+        "sıfırdan",
+        "birleştir",
+        "erişim",
+        "tekrar"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Öncelik kuralsız: en çok arayan öne geçiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk iş, talebi listeye eklemek; sıranın kuralı yok, en çok arayan müdürün talebi öne geçiyor.",
+          "acilma_kosulu": "Bir talep gelince ilk ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ilk ne yapıyor",
+            "liste",
+            "sıra"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir talep ortalama iki hafta sırada bekliyor; başlandıktan sonra da yarıda bırakılıp acil başka bir işe geçiliyor.",
+          "acilma_kosulu": "Sürenin en çok nerede geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "üç haftanın",
+            "sırada",
+            "yarıda"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Teslim edilen analizlerin üçte biri artık gerekmiyor; karar çoktan verilmiş oluyor.",
+          "acilma_kosulu": "Teslim edilen analizlerin nasıl kullanıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "teslim ettiğiniz",
+            "gerekmiyor",
+            "çoktan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Benzer talepler arada bir geliyor.",
+          "acilma_kosulu": "Benzer taleplerin ne sıklıkla geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "benzer talep",
+            "arada"
+          ]
+        }
+      ],
+      "kok_neden": "Süre önceliklendirmeden: talepler kuralsız bir listede bekliyor, en çok arayanın işi öne geçiyor, başlanan işler acil işler yüzünden yarıda kalıyor ve analizlerin bir kısmı karar verildikten sonra teslim ediliyor.",
+      "kok_neden_kelimeler": [
+        "öncelik",
+        "sıra",
+        "yarıda",
+        "acil",
+        "kural"
+      ]
+    }
+  ]
+}

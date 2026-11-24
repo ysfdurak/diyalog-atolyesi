@@ -1,0 +1,198 @@
+{
+  "id": "pano-kullanilmiyor",
+  "baslik": "Hazırlanan panoyu neden kimse açmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Üç ay önce depo müdürleri için Power BI'da bir operasyon panosu hazırlandı. Kullanım kayıtlarına göre son ayda panoyu yalnızca iki kişi açtı. Panoyu en çok kullanması beklenen depo müdürlerinden biriyle konuşuyorsun.",
+  "rolun": "Panoyu hazırlatan raporlama sorumlususun. Amacın panoyu savunmak değil, neden kullanılmadığını anlamak.",
+  "karakter": {
+    "ad": "Rıza",
+    "rol": "Güney depo müdürü",
+    "tavir": "Nazik ama ilgisiz; \"vakit bulamıyorum\" deyip geçiyor. İşini nasıl yönettiğini soran birine açılıyor.",
+    "ilk_soz": "Panoya bakmak istiyorum aslında, ama gün içinde hiç fırsat olmuyor."
+  },
+  "yaniltici_ipuclari": [
+    "Müdürler teknolojiye uzak.",
+    "Herkes çok yoğun."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Sabah depoya gelince işin durumunu nasıl öğreniyorsun?",
+    "Panoyu ilk açtığında ne gördün?",
+    "Gün içinde en çok hangi kararları veriyorsun?",
+    "Pano hazırlanırken senden neler istendi?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Kararın hızına yetişmiyor: veri bir gün geriden",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gün içindeki kararlarının çoğu o anki iş yüküne göre: hangi koridora kişi kaydırılacak, hangi araç önce yüklenecek.",
+          "acilma_kosulu": "Gün içinde hangi kararları verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kararlar",
+            "kişi kaydır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Pano bir önceki günün verisini gösteriyor; gece güncelleniyor, gün içinde hiç değişmiyor.",
+          "acilma_kosulu": "Panoyu ilk açtığında ne gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ilk açtığında",
+            "önceki gün",
+            "güncellen"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sabah durumu vardiya amirlerinin WhatsApp grubundan ve sahayı dolaşarak öğreniyor; anlık bilgi orada.",
+          "acilma_kosulu": "Sabah işin durumunu nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sabah depoya",
+            "whatsapp",
+            "dolaş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hazırlık sırasında onunla bir kez görüşüldü.",
+          "acilma_kosulu": "Pano hazırlanırken ondan ne istendiği sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "görüşül"
+          ]
+        }
+      ],
+      "kok_neden": "Pano kullanılmıyor çünkü kararın hızına yetişmiyor: müdürün kararları gün içi ve anlık, pano ise bir önceki günün verisini gösteriyor; anlık bilgi WhatsApp grubundan ve sahadan geliyor.",
+      "kok_neden_kelimeler": [
+        "önceki gün",
+        "anlık",
+        "gün içi",
+        "güncel",
+        "whatsapp"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Soruya cevap vermiyor: kırk grafik, tek bir karar yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Panoyu ilk açtığında dört sayfada kırka yakın grafik gördü; hangisine bakacağını bilemedi.",
+          "acilma_kosulu": "Panoyu ilk açtığında ne gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ilk açtığında",
+            "grafik",
+            "sayfa"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Hazırlanırken ondan bir şey istenmedi; içerik, eldeki bütün verilerin görselleştirilmesiyle oluşturuldu.",
+          "acilma_kosulu": "Pano hazırlanırken ondan ne istendiği sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "istenmedi",
+            "eldeki"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Asıl merak ettiği, gün sonunda hangi siparişlerin yetişmeyeceği; panoda bu soruya cevap veren bir gösterge yok.",
+          "acilma_kosulu": "Gün içinde hangi kararları verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kararlar",
+            "yetişmeyecek"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sabahları durumu vardiya amirlerinden öğreniyor.",
+          "acilma_kosulu": "Sabah işin durumunu nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sabah depoya",
+            "amirlerden"
+          ]
+        }
+      ],
+      "kok_neden": "Pano kullanılmıyor çünkü müdürün sorusuna cevap vermiyor: eldeki bütün veri kırk grafiğe döküldü, müdüre ne bilmek istediği sorulmadı ve en önemli soru olan yetişmeyecek siparişler panoda yok.",
+      "kok_neden_kelimeler": [
+        "soru",
+        "grafik",
+        "sorulmadı",
+        "yetişmeyecek",
+        "eldeki"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Güven yok: rakam bildiğiyle tutmadı, tanım açıklanmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Panoyu ilk açtığında dünkü sevkiyat sayısı kendi bildiğinden 300 eksikti; o günden beri rakamlara güvenmiyor.",
+          "acilma_kosulu": "Panoyu ilk açtığında ne gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ilk açtığında",
+            "eksik",
+            "güven"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Sabah durumu kendi tuttuğu Excel dosyasından takip ediyor; rakamları oradan kontrol ediyor.",
+          "acilma_kosulu": "Sabah işin durumunu nasıl öğrendiği sorulursa",
+          "ipucu_kelimeler": [
+            "sabah depoya",
+            "excel"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Farkın nedeni, panonun iptal edilip yeniden açılan siparişleri bir kez saymasıydı; bunu ona kimse açıklamadı ve tanımlar panoda yazmıyor.",
+          "acilma_kosulu": "Pano hazırlanırken ondan ne istendiği sorulursa",
+          "ipucu_kelimeler": [
+            "hazırlanırken",
+            "tanım",
+            "açıkla"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kararlarını çoğunlukla günlük sevkiyat sayısına bakarak veriyor.",
+          "acilma_kosulu": "Gün içinde hangi kararları verdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi kararlar",
+            "sevkiyat sayısı"
+          ]
+        }
+      ],
+      "kok_neden": "Pano kullanılmıyor çünkü müdür rakamlara güvenmiyor: ilk açtığında sevkiyat sayısı bildiğinden farklıydı, farkın nedeni olan tanım ne açıklandı ne panoya yazıldı ve müdür kendi Excel'ine döndü.",
+      "kok_neden_kelimeler": [
+        "güven",
+        "tanım",
+        "fark",
+        "excel",
+        "açıklan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "rakamlar-tutmuyor",
+  "baslik": "İki rapor aynı göstergede neden farklı rakam veriyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Veri ve raporlama",
+  "sure_dk": 7,
+  "acilis": "Yönetim toplantısında operasyonun raporu siparişlerin %96'sının zamanında gittiğini, müşteri hizmetlerinin raporu ise %81'ini gösterdi. Toplantı rakam tartışmasıyla geçti. Operasyon raporunu hazırlayan analistle konuşuyorsun.",
+  "rolun": "Raporlama sorumlususun. Amacın hangi rakamın doğru olduğuna karar vermek değil, farkın nereden geldiğini anlamak.",
+  "karakter": {
+    "ad": "Burcu",
+    "rol": "Operasyon veri analisti",
+    "tavir": "Kendi raporundan emin; \"bizim rakam sistemden geliyor\" diyor. Hesabın nasıl yapıldığını soran birine ayrıntı veriyor.",
+    "ilk_soz": "Bizim rakam doğrudan WMS'ten geliyor. Müşteri hizmetleri nereden ne çekiyor, bilmiyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Müşteri hizmetleri rakamı şişiriyor.",
+    "Excel'de bir hata vardır."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Zamanında teslimi siz nasıl tanımlıyorsunuz?",
+    "Hesaba hangi siparişler giriyor, hangileri dışarıda kalıyor?",
+    "Rakamı hangi tarihten hangi tarihe bakarak hesaplıyorsunuz?",
+    "İki ekip bu göstergeyi daha önce hiç birlikte konuştu mu, nasıl geçti?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tanım farkı: depodan çıkış mı, müşteriye varış mı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Operasyon \"zamanında\"yı siparişin depodan planlanan günde çıkması olarak sayıyor; müşteri hizmetleri ise müşteriye söz verilen günde varması olarak.",
+          "acilma_kosulu": "Zamanında teslimin nasıl tanımlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "tanımlıyorsunuz",
+            "depodan çık",
+            "varış"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Operasyonun rakamı çıkış tarihine bakıyor; kargodaki gecikmeler bu hesapta hiç görünmüyor.",
+          "acilma_kosulu": "Hesabın hangi döneme ve tarihe baktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tarihten",
+            "çıkış tarih",
+            "kargo"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İki ekip göstergenin tanımını hiç birlikte konuşmadı; ikisi de aynı adı kullanıyor.",
+          "acilma_kosulu": "Iki ekibin göstergeyi birlikte konuşup konuşmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "birlikte konuş",
+            "aynı ad"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Hesaba bütün siparişler giriyor.",
+          "acilma_kosulu": "Hesaba hangi siparişlerin girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hesaba hangi",
+            "bütün sipariş"
+          ]
+        }
+      ],
+      "kok_neden": "Fark tanımdan: operasyon zamanında olmayı depodan çıkışa, müşteri hizmetleri müşteriye varışa göre ölçüyor; kargo gecikmesi yalnızca ikincisinde görünüyor ve iki ekip aynı adı taşıyan iki farklı göstergeyi hiç konuşmadı.",
+      "kok_neden_kelimeler": [
+        "tanım",
+        "çıkış",
+        "varış",
+        "kargo",
+        "aynı ad"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kapsam farkı: kısmi ve iptal edilen siparişler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Operasyon hesabında kısmi gönderilen siparişler \"zamanında\" sayılıyor; eksik kalem sonra gitse de ilk çıkış tarihi esas alınıyor.",
+          "acilma_kosulu": "Hesaba hangi siparişlerin girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hesaba hangi",
+            "kısmi",
+            "eksik kalem"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Müşteri hizmetleri için sipariş, bütün kalemleri teslim edilince tamamlanmış sayılıyor.",
+          "acilma_kosulu": "Zamanında teslimin nasıl tanımlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "tanımlıyorsunuz",
+            "bütün kalem",
+            "tamamlan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Operasyon hesabı, müşterinin iptal edip yeniden verdiği siparişlerde yeni sipariş tarihini başlangıç alıyor; böylece gecikme sıfırlanıyor.",
+          "acilma_kosulu": "Hesabın hangi döneme ve tarihe baktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tarihten",
+            "iptal",
+            "başlangıç"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İki ekip bir kez toplandı ama sonuç yazıya geçmedi.",
+          "acilma_kosulu": "Iki ekibin göstergeyi birlikte konuşup konuşmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "birlikte konuş",
+            "yazıya"
+          ]
+        }
+      ],
+      "kok_neden": "Fark kapsamdan: operasyon kısmi gönderilen siparişi ilk çıkışta zamanında sayıyor ve iptal edilip yeniden verilen siparişte saati sıfırlıyor; müşteri hizmetleri ise bütün kalemler teslim edilince tamam sayıyor.",
+      "kok_neden_kelimeler": [
+        "kısmi",
+        "iptal",
+        "kapsam",
+        "bütün kalem",
+        "sıfırl"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Dönem ve kaynak farkı: gösterge sahibi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Operasyon raporu takvim ayına, müşteri hizmetlerininki ise mali aya göre hesaplanıyor; iki dönem arasında bir kampanya haftası farkı var.",
+          "acilma_kosulu": "Hesabın hangi döneme ve tarihe baktığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi tarihten",
+            "takvim ay",
+            "mali ay"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Müşteri hizmetleri rakamı WMS'ten değil, şikâyet kayıtlarından türetiyor: şikâyet gelmeyen siparişi zamanında, şikâyet geleni gecikmiş sayıyor.",
+          "acilma_kosulu": "Hesaba hangi siparişlerin girdiği sorulursa",
+          "ipucu_kelimeler": [
+            "hesaba hangi",
+            "şikâyet"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İki ekip daha önce konuştu ama hangi rakamın resmî olduğuna karar verecek bir gösterge sahibi yok.",
+          "acilma_kosulu": "Iki ekibin göstergeyi birlikte konuşup konuşmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "birlikte konuş",
+            "sahibi",
+            "resmî"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İki ekibin yazılı tanımı aynı.",
+          "acilma_kosulu": "Zamanında teslimin nasıl tanımlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "tanımlıyorsunuz",
+            "yazılı"
+          ]
+        }
+      ],
+      "kok_neden": "Fark dönem ve kaynaktan: raporlar farklı dönemlere bakıyor, biri WMS'ten diğeri şikâyet kayıtlarından türetiliyor ve hangisinin resmî rakam olduğuna karar verecek bir gösterge sahibi yok.",
+      "kok_neden_kelimeler": [
+        "dönem",
+        "kaynak",
+        "şikâyet",
+        "gösterge sahibi",
+        "resmî"
+      ]
+    }
+  ]
+}

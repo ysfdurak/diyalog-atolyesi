@@ -1,0 +1,198 @@
+{
+  "id": "cok-satan-bitiyor",
+  "baslik": "Çok satan ürünler neden stokta kalmıyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Tedarik ve satın alma",
+  "sure_dk": 7,
+  "acilis": "En çok satan 50 ürünün beşte biri her hafta en az bir gün stoksuz kalıyor ve siparişler eksik gidiyor. Aynı dönemde toplam stok değeri arttı. Stok planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Tedarik zincirinden sorumlu yöneticisin. Amacın stoğu artırmak değil, çok satanların neden bittiğini anlamak.",
+  "karakter": {
+    "ad": "Bora",
+    "rol": "Stok planlama uzmanı",
+    "tavir": "Hesap kitap insanı; \"sistem öneriyor, biz onaylıyoruz\" diyor. Parametreleri soran birine açık konuşuyor.",
+    "ilk_soz": "Sipariş önerilerini sistem üretiyor, biz onaylıyoruz. Bitiyorsa sistem az öneriyordur."
+  },
+  "yaniltici_ipuclari": [
+    "Tedarikçiler geç teslim ediyor.",
+    "Talep çok oynak."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Sistem sipariş önerisini nasıl hesaplıyor?",
+    "Stoksuz kalan ürünlerin ortak özelliği ne?",
+    "Bir ürünün parametreleri en son ne zaman güncellendi?",
+    "Stok bitmeden önce depoda ürün nerede duruyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Parametreler eski: emniyet stoku iki yıl önceki talebe göre",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Emniyet stoku ve yeniden sipariş noktaları iki yıl önce belirlendi; o günden beri güncellenmedi.",
+          "acilma_kosulu": "Parametrelerin ne zaman güncellendiği sorulursa",
+          "ipucu_kelimeler": [
+            "parametreleri",
+            "emniyet stoku",
+            "iki yıl"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Stoksuz kalanların çoğu son iki yılda satışı iki katına çıkan ürünler.",
+          "acilma_kosulu": "Stoksuz kalan ürünlerin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "stoksuz kalan",
+            "satışı iki kat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem, eski parametrelerle hesapladığı için çok satanlara geçmişteki talebe göre öneri üretiyor.",
+          "acilma_kosulu": "Sipariş önerisinin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş önerisini",
+            "geçmişteki talep"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünler çoğunlukla toplama gözünde duruyor.",
+          "acilma_kosulu": "Ürünün depoda nerede durduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeden önce",
+            "toplama gözü"
+          ]
+        }
+      ],
+      "kok_neden": "Çok satanlar eski parametreler yüzünden bitiyor: emniyet stoku ve yeniden sipariş noktaları iki yıl önce belirlendi ve hiç güncellenmedi; satışı ikiye katlanan ürünler için sistem hâlâ eski talebe göre öneri üretiyor.",
+      "kok_neden_kelimeler": [
+        "parametre",
+        "emniyet stoku",
+        "güncellen",
+        "eski talep",
+        "iki yıl"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Stok var, yerinde değil: ikmal günde bir kez",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Stoğu bitmiş görünen ürünler aslında depoda; yüksek raftaki rezerv alanda duruyor, toplama gözüne ikmal edilmemiş.",
+          "acilma_kosulu": "Ürünün depoda nerede durduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeden önce",
+            "rezerv",
+            "ikmal"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Stoksuz kalanların ortak özelliği, gün içinde birden fazla ikmal gerektiren hızlı ürünler olmaları.",
+          "acilma_kosulu": "Stoksuz kalan ürünlerin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "stoksuz kalan",
+            "hızlı ürün",
+            "birden fazla"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sistem önerisi doğru çalışıyor; ama göz boşalınca ürün \"yok\" görünüp sipariş eksik gidiyor, ikmal ise yalnızca sabah bir kez yapılıyor.",
+          "acilma_kosulu": "Sipariş önerisinin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş önerisini",
+            "göz boşal",
+            "sabah"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Parametreler altı ayda bir gözden geçiriliyor.",
+          "acilma_kosulu": "Parametrelerin ne zaman güncellendiği sorulursa",
+          "ipucu_kelimeler": [
+            "parametreleri",
+            "altı ay"
+          ]
+        }
+      ],
+      "kok_neden": "Stok bitmiyor, yerinde değil: hızlı ürünler rezerv alanda duruyor ama ikmal günde bir kez sabah yapılıyor, toplama gözü boşalınca ürün 'yok' görünüyor ve sipariş eksik gidiyor.",
+      "kok_neden_kelimeler": [
+        "ikmal",
+        "rezerv",
+        "toplama gözü",
+        "sabah",
+        "yerinde"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Tır doluluk kuralı: çok satanlar az satanları bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Sistem ürünleri tedarikçi bazında topluca öneriyor; bir tedarikçinin siparişi, bir tır dolacak kadar ürün birikince onaylanıyor.",
+          "acilma_kosulu": "Sipariş önerisinin nasıl hesaplandığı sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş önerisini",
+            "tedarikçi bazında",
+            "tır"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Stoksuz kalan ürünlerin çoğu, az satan ürünlerle aynı tedarikçiden gelen çok satanlar.",
+          "acilma_kosulu": "Stoksuz kalan ürünlerin ortak özelliği sorulursa",
+          "ipucu_kelimeler": [
+            "stoksuz kalan",
+            "aynı tedarikçi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Tır doluluk kuralı geçen yıl nakliye maliyetini düşürmek için getirildi; çok satanlar için bir istisna tanımlanmadı.",
+          "acilma_kosulu": "Parametrelerin ne zaman güncellendiği sorulursa",
+          "ipucu_kelimeler": [
+            "parametreleri",
+            "doluluk",
+            "istisna"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünler depoda düzenli olarak toplama gözüne ikmal ediliyor.",
+          "acilma_kosulu": "Ürünün depoda nerede durduğu sorulursa",
+          "ipucu_kelimeler": [
+            "bitmeden önce",
+            "düzenli"
+          ]
+        }
+      ],
+      "kok_neden": "Çok satanlar tır doluluk kuralı yüzünden bekliyor: sipariş tedarikçi bazında, tır dolacak kadar ürün birikince onaylanıyor; az satanlarla aynı tedarikçiden gelen çok satanlar için istisna tanımlanmadı.",
+      "kok_neden_kelimeler": [
+        "tır",
+        "doluluk",
+        "tedarikçi",
+        "istisna",
+        "bekliyor"
+      ]
+    }
+  ]
+}
