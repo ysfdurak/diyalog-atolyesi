@@ -14,47 +14,218 @@
     "tavir": "Kibar ama mesafeli. Konuyu fiyata bağlayıp kısa kesmek istiyor. Savunmaya geçmeyen, gerçekten dinleyen birine yaşadıklarını anlatıyor.",
     "ilk_soz": "Görüşme talebiniz için teşekkürler. Açık konuşayım, kararımız büyük ölçüde verildi."
   },
-  "gizli_bilgiler": [
-    {
-      "id": "hatali-sevkiyat",
-      "onem": "kritik",
-      "bilgi": "Son 2 ayda 3 kez eksik ya da yanlış sevkiyat oldu; biri firmanın en büyük müşterisine gitti.",
-      "acilma_kosulu": "Hizmetten memnuniyet, son dönemde yaşananlar, sorunlar ya da fiyat dışındaki etkenler sorulursa",
-      "ipucu_kelimeler": ["memnun", "hizmet", "yaşa", "sorun", "fiyat dışı", "başka", "deneyim", "son dönem"]
-    },
-    {
-      "id": "ust-yonetim",
-      "onem": "kritik",
-      "bilgi": "Bu hatalar yüzünden kendi genel müdürüne hesap vermek zorunda kaldı; karar aslında onun üstünden geldi.",
-      "acilma_kosulu": "Kararın nasıl ve kim tarafından alındığı ya da bu durumun onu kişisel olarak nasıl etkilediği sorulursa",
-      "ipucu_kelimeler": ["karar", "kim", "nasıl alındı", "etkile", "sizin için", "yönetim", "süreç"]
-    },
-    {
-      "id": "muhatap-yok",
-      "onem": "kritik",
-      "bilgi": "Sorun yaşandığında ulaşabileceği tek bir muhatap yok; her seferinde farklı biriyle konuşup konuyu baştan anlatıyor.",
-      "acilma_kosulu": "Sorun çıktığında ne olduğu, iletişim, kiminle görüştüğü ya da sorunların nasıl çözüldüğü sorulursa",
-      "ipucu_kelimeler": ["iletişim", "kiminle", "ulaş", "çözül", "ne oldu", "muhatap", "destek", "nasıl ilerledi"]
-    },
-    {
-      "id": "fiyat-farki",
-      "onem": "destek",
-      "bilgi": "Rakibin teklifi yalnızca %3 daha ucuz.",
-      "acilma_kosulu": "Rakip teklifin ayrıntısı ya da fiyat farkının büyüklüğü sorulursa",
-      "ipucu_kelimeler": ["teklif", "fark", "ne kadar", "yüzde", "rakip"]
-    }
-  ],
   "yaniltici_ipuclari": [
     "Piyasa artık çok fiyat odaklı.",
     "Bütçeler bu yıl herkes için sıkı."
   ],
-  "kok_neden": "Kayıp fiyattan değil güvenden: hizmet hataları ve tek bir muhatabın olmaması müşteriyi kendi yönetimi karşısında zor durumda bıraktı.",
-  "kok_neden_kelimeler": ["güven", "hata", "sevkiyat", "muhatap", "hizmet"],
   "soru_hakki": 5,
   "ideal_sorular": [
     "Fiyatı bir kenara bırakırsak, son dönemde bizimle çalışmak sizin için nasıldı?",
     "Bir sorun çıktığında süreç sizin tarafınızda nasıl ilerliyor?",
     "Bu karar sizin kurumunuzda nasıl şekillendi?",
     "Yeni tedarikçiden fiyat dışında en çok ne bekliyorsunuz?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Güven: hizmet hataları ve tek muhatap yokluğu",
+      "gizli_bilgiler": [
+        {
+          "id": "hatali-sevkiyat",
+          "onem": "kritik",
+          "bilgi": "Son 2 ayda 3 kez eksik ya da yanlış sevkiyat oldu; biri firmanın en büyük müşterisine gitti.",
+          "acilma_kosulu": "Hizmetten memnuniyet, son dönemde yaşananlar, sorunlar ya da fiyat dışındaki etkenler sorulursa",
+          "ipucu_kelimeler": [
+            "memnun",
+            "hizmet",
+            "yaşa",
+            "sorun",
+            "fiyat dışı",
+            "başka",
+            "deneyim",
+            "son dönem"
+          ]
+        },
+        {
+          "id": "ust-yonetim",
+          "onem": "kritik",
+          "bilgi": "Bu hatalar yüzünden kendi genel müdürüne hesap vermek zorunda kaldı; karar aslında onun üstünden geldi.",
+          "acilma_kosulu": "Kararın nasıl ve kim tarafından alındığı ya da bu durumun onu kişisel olarak nasıl etkilediği sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "kim",
+            "nasıl alındı",
+            "etkile",
+            "sizin için",
+            "yönetim",
+            "süreç"
+          ]
+        },
+        {
+          "id": "muhatap-yok",
+          "onem": "kritik",
+          "bilgi": "Sorun yaşandığında ulaşabileceği tek bir muhatap yok; her seferinde farklı biriyle konuşup konuyu baştan anlatıyor.",
+          "acilma_kosulu": "Sorun çıktığında ne olduğu, iletişim, kiminle görüştüğü ya da sorunların nasıl çözüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "iletişim",
+            "kiminle",
+            "ulaş",
+            "çözül",
+            "ne oldu",
+            "muhatap",
+            "destek",
+            "nasıl ilerledi"
+          ]
+        },
+        {
+          "id": "fiyat-farki",
+          "onem": "destek",
+          "bilgi": "Rakibin teklifi yalnızca %3 daha ucuz.",
+          "acilma_kosulu": "Rakip teklifin ayrıntısı ya da fiyat farkının büyüklüğü sorulursa",
+          "ipucu_kelimeler": [
+            "teklif",
+            "fark",
+            "ne kadar",
+            "yüzde",
+            "rakip"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıp fiyattan değil güvenden: hizmet hataları ve tek bir muhatabın olmaması müşteriyi kendi yönetimi karşısında zor durumda bıraktı.",
+      "kok_neden_kelimeler": [
+        "güven",
+        "hata",
+        "sevkiyat",
+        "muhatap",
+        "hizmet"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Değişen ihtiyaç: müşteri e-ticarete geçiyor, kimse sormadı",
+      "gizli_bilgiler": [
+        {
+          "id": "e-ticaret",
+          "onem": "kritik",
+          "bilgi": "Şirket satışlarının yarısını iki yıl içinde e-ticarete taşıyor; sizin hizmetiniz mağazalara palet dağıtımı üzerine kurulu.",
+          "acilma_kosulu": "Son dönemde işlerinde ne değiştiği, sizinle çalışmanın nasıl olduğu ya da önceliklerinin ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "son dönem",
+            "değiş",
+            "işiniz",
+            "strateji",
+            "öncelik"
+          ]
+        },
+        {
+          "id": "rakip-paket",
+          "onem": "kritik",
+          "bilgi": "Rakip, tek tek sipariş toplama ve iade yönetimini de içeren bir paket sundu; aradaki küçük fiyat farkı bu paketin yanında önemsiz.",
+          "acilma_kosulu": "Yeni tedarikçiden fiyat dışında ne beklediği ya da rakip teklifin içeriği sorulursa",
+          "ipucu_kelimeler": [
+            "fiyat dışı",
+            "yeni tedarikçi",
+            "rakip",
+            "bekliyor",
+            "teklif"
+          ]
+        },
+        {
+          "id": "kimse-sormadi",
+          "onem": "kritik",
+          "bilgi": "Karar e-ticaret direktörünün ekibinden geldi; dört yıldır sizinle görüşen kimse onların planlarını sormadı, yıllık değerlendirme toplantısı da iki yıldır yapılmadı.",
+          "acilma_kosulu": "Kararın kurumda nasıl şekillendiği ya da kimlerin dahil olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "şekillen",
+            "kurum",
+            "kimler",
+            "toplantı"
+          ]
+        },
+        {
+          "id": "operasyon-memnun",
+          "onem": "destek",
+          "bilgi": "Mağaza sevkiyatlarında sorun yok; operasyon ekibi sizden memnun.",
+          "acilma_kosulu": "Sorunlar ya da sorun çıktığında sürecin nasıl ilerlediği sorulursa",
+          "ipucu_kelimeler": [
+            "sorun",
+            "memnun",
+            "süreç"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıp fiyattan değil, müşterinin değişen ihtiyacını kaçırmaktan: müşteri e-ticarete geçiyor, hizmet mağaza dağıtımına kurulu ve yıllardır kimse planlarını sormadı; rakip yeni ihtiyaca göre paket sundu.",
+      "kok_neden_kelimeler": [
+        "e-ticaret",
+        "ihtiyac",
+        "değiş",
+        "strateji",
+        "plan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Görünmeyen maliyet: sözleşme dışı ek kalemler ve hatalı faturalar",
+      "gizli_bilgiler": [
+        {
+          "id": "ek-kalemler",
+          "onem": "kritik",
+          "bilgi": "Faturalarda sözleşmede açıkça yazmayan ek kalemler (bekleme ücreti, palet değişimi, acil sevk) çıkıyor; toplam maliyet teklif fiyatından yaklaşık %12 yüksek.",
+          "acilma_kosulu": "Son dönemde sizinle çalışmanın nasıl olduğu, fiyat dışındaki etkenler ya da faturalar sorulursa",
+          "ipucu_kelimeler": [
+            "son dönem",
+            "fiyat dışı",
+            "fatura",
+            "maliyet",
+            "çalışmak"
+          ]
+        },
+        {
+          "id": "mutabakat",
+          "onem": "kritik",
+          "bilgi": "Her ay finans ekibi faturaları düzeltmek için günlerce yazışıyor; düzeltme talepleri haftalarca cevapsız kalıyor.",
+          "acilma_kosulu": "Sorun çıktığında sürecin nasıl ilerlediği ya da sorunların nasıl çözüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "sorun",
+            "süreç",
+            "ilerl",
+            "çözül"
+          ]
+        },
+        {
+          "id": "finans-karari",
+          "onem": "kritik",
+          "bilgi": "Kararı faturalardan bıkan finans direktörü verdi; rakip her şey dahil sabit fiyat önerdi.",
+          "acilma_kosulu": "Kararın kurumda nasıl şekillendiği ya da yeni tedarikçiden ne beklendiği sorulursa",
+          "ipucu_kelimeler": [
+            "karar",
+            "şekillen",
+            "kurum",
+            "yeni tedarikçi",
+            "bekliyor"
+          ]
+        },
+        {
+          "id": "operasyon-memnun",
+          "onem": "destek",
+          "bilgi": "Operasyon ekibi sevkiyatlardan genel olarak memnun.",
+          "acilma_kosulu": "Operasyon ya da sevkiyat kalitesi sorulursa",
+          "ipucu_kelimeler": [
+            "operasyon",
+            "sevkiyat",
+            "memnun"
+          ]
+        }
+      ],
+      "kok_neden": "Kayıp liste fiyatından değil faturadan: sözleşme dışı ek kalemler toplam maliyeti şişirdi ve hatalı faturaların düzeltilmesi haftalarca sürdü; rakip her şey dahil sabit fiyat önerdi.",
+      "kok_neden_kelimeler": [
+        "fatura",
+        "ek kalem",
+        "sabit fiyat",
+        "toplam maliyet",
+        "şeffaf"
+      ]
+    }
   ]
 }

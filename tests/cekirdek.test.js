@@ -2,6 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { dirname, join } from 'node:path';
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { gununSenaryosu, herkeseAcik, senaryoDogrula, senaryolariYukle, varyantCozumle } from '../src/cekirdek/senaryolar.js';
 import { BOYUTLAR, degerlendirmeyiDuzelt, orandanPuana, puanla } from '../src/cekirdek/puanlama.js';
@@ -21,8 +23,8 @@ test('senaryolar: on senaryo geçerli, alan dağılımı ve ağırlıklar 100 ed
   const alanlar = {};
   for (const s of senaryolar.values()) alanlar[s.alan] = (alanlar[s.alan] || 0) + 1;
   assert.deepEqual(alanlar, { 'İş geliştirme': 3, Operasyon: 3, 'Ekip yönetimi': 3, 'Proje yönetimi': 1 });
-  // Yeni senaryolar baştan üç kök nedenli
-  for (const id of ['sayim-farki', 'yeni-hizmet', 'terfi-reddi', 'proje-gecikmesi']) assert.equal(senaryolar.get(id).varyantlar.length, 3, id);
+  // Her senaryo üç kök nedenli
+  for (const [id, s] of senaryolar) assert.equal(s.varyantlar.length, 3, id);
   for (const s of senaryolar.values()) for (const v of s.varyantlar) assert.equal(v.gizli_bilgiler.filter((b) => b.onem === 'kritik').length, 3, `${s.id}/${v.id}`);
   assert.equal(depoTemel.varyantlar.length, 3);
   for (const s of senaryolar.values()) assert.deepEqual(senaryoDogrula(s), []);
@@ -231,8 +233,10 @@ test('varyant: doğrulama kuralları', () => {
   assert.match(senaryoDogrula({ ...temel, varyantlar: [v, { ...v }] }).join(' '), /yineleniyor: v1/);
   assert.match(senaryoDogrula({ ...temel, varyantlar: [{ ...v, id: 'V 2' }] }).join(' '), /"id" alanı olmalı/);
   assert.match(senaryoDogrula({ ...temel, varyantlar: [{ ...v, kok_neden: '' }] }).join(' '), /Varyant "v1": "kok_neden"/);
-  // Eski biçim (varyantsız) tek varyant sayılır
-  const eski = senaryolariYukle(join(kok, 'senaryolar')).get('musteri-sozlesme');
+  // Eski biçim (varyantsız) tek varyant sayılır: gerçek dosyalar artık varyantlı, bu yüzden geçici klasörde denenir
+  const gecici = mkdtempSync(join(tmpdir(), 'senaryo-'));
+  writeFileSync(join(gecici, 'eski.json'), JSON.stringify({ ...temel, id: 'eski', ...v, id: 'eski' }));
+  const eski = senaryolariYukle(gecici).get('eski');
   assert.deepEqual(eski.varyantlar.map((x) => x.id), ['v1']);
   assert.ok(!('gizli_bilgiler' in eski));
   assert.throws(() => varyantCozumle(eski, 'v9'), /varyantı yok/);

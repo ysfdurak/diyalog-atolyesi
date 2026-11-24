@@ -14,47 +14,220 @@
     "tavir": "Yorgun ve çekingen. Şikâyetçi görünmek istemiyor, sorunu kendi üstüne alıyor. Yargılanmadığını hissedince anlatıyor.",
     "ilk_soz": "Raporlar için görüşeceğimizi tahmin etmiştim. Kusura bakmayın, toparlayacağım."
   },
-  "gizli_bilgiler": [
-    {
-      "id": "cift-yonetici",
-      "onem": "kritik",
-      "bilgi": "Bir aydır başka bir bölümün yöneticisi de doğrudan ona iş veriyor; öncelikler çakışıyor.",
-      "acilma_kosulu": "İş yükü, son bir ayda ne değiştiği, zamanını nelerin aldığı ya da başka kimlerden iş geldiği sorulursa",
-      "ipucu_kelimeler": ["iş yük", "değiş", "zamanın", "başka", "öncelik", "neler var", "üzerinde", "meşgul"]
-    },
-    {
-      "id": "arac-egitimi",
-      "onem": "kritik",
-      "bilgi": "Yeni raporlama aracının eğitimini alamadı; raporları hâlâ Excel'de elle hazırlıyor.",
-      "acilma_kosulu": "Raporları nasıl hazırladığı, işin nerede takıldığı, araçlar ya da neye ihtiyacı olduğu sorulursa",
-      "ipucu_kelimeler": ["nasıl hazır", "araç", "takıl", "ihtiyaç", "zorlan", "süreç", "eğitim", "en çok vakit"]
-    },
-    {
-      "id": "hayir-diyememe",
-      "onem": "kritik",
-      "bilgi": "Ek işleri yöneticisine söylemedi, çünkü \"hayır diyemeyen biri\" gibi görünmek istemedi.",
-      "acilma_kosulu": "Bunu neden daha önce paylaşmadığı, nasıl hissettiği ya da yöneticisinden ne beklediği sorulursa",
-      "ipucu_kelimeler": ["neden söyle", "paylaş", "hisset", "bekle", "destek", "nasıl yardım", "daha önce"]
-    },
-    {
-      "id": "fazla-mesai",
-      "onem": "destek",
-      "bilgi": "Haftada ortalama 8 saat fazla mesai yapıyor.",
-      "acilma_kosulu": "Çalışma saatleri, mesai ya da yorgunluğu sorulursa",
-      "ipucu_kelimeler": ["mesai", "saat", "yorgun", "kaçta", "dinlen"]
-    }
-  ],
   "yaniltici_ipuclari": [
     "Biraz motivasyonum düştü sanırım.",
     "Son zamanlarda dikkatim dağınık."
   ],
-  "kok_neden": "Belirsiz önceliklendirme ve araç eksikliği: iki yöneticiden gelen işler çakışıyor ve raporlar elle hazırlanıyor. Motivasyon düşüşü bunun sonucu, sebebi değil.",
-  "kok_neden_kelimeler": ["öncelik", "iki yönetici", "iş yük", "araç", "eğitim", "elle"],
   "soru_hakki": 5,
   "ideal_sorular": [
     "Son bir ayda işinde ne değişti?",
     "Bir raporu hazırlarken en çok vaktini ne alıyor?",
     "Şu an üzerinde hangi işler var ve bunlar kimden geliyor?",
     "Benden nasıl bir destek işini kolaylaştırırdı?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İki yönetici ve araç eğitimi eksikliği",
+      "gizli_bilgiler": [
+        {
+          "id": "cift-yonetici",
+          "onem": "kritik",
+          "bilgi": "Bir aydır başka bir bölümün yöneticisi de doğrudan ona iş veriyor; öncelikler çakışıyor.",
+          "acilma_kosulu": "İş yükü, son bir ayda ne değiştiği, zamanını nelerin aldığı ya da başka kimlerden iş geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "iş yük",
+            "değiş",
+            "zamanın",
+            "başka",
+            "öncelik",
+            "neler var",
+            "üzerinde",
+            "meşgul"
+          ]
+        },
+        {
+          "id": "arac-egitimi",
+          "onem": "kritik",
+          "bilgi": "Yeni raporlama aracının eğitimini alamadı; raporları hâlâ Excel'de elle hazırlıyor.",
+          "acilma_kosulu": "Raporları nasıl hazırladığı, işin nerede takıldığı, araçlar ya da neye ihtiyacı olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl hazır",
+            "araç",
+            "takıl",
+            "ihtiyaç",
+            "zorlan",
+            "süreç",
+            "eğitim",
+            "en çok vakit"
+          ]
+        },
+        {
+          "id": "hayir-diyememe",
+          "onem": "kritik",
+          "bilgi": "Ek işleri yöneticisine söylemedi, çünkü \"hayır diyemeyen biri\" gibi görünmek istemedi.",
+          "acilma_kosulu": "Bunu neden daha önce paylaşmadığı, nasıl hissettiği ya da yöneticisinden ne beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "neden söyle",
+            "paylaş",
+            "hisset",
+            "bekle",
+            "destek",
+            "nasıl yardım",
+            "daha önce"
+          ]
+        },
+        {
+          "id": "fazla-mesai",
+          "onem": "destek",
+          "bilgi": "Haftada ortalama 8 saat fazla mesai yapıyor.",
+          "acilma_kosulu": "Çalışma saatleri, mesai ya da yorgunluğu sorulursa",
+          "ipucu_kelimeler": [
+            "mesai",
+            "saat",
+            "yorgun",
+            "kaçta",
+            "dinlen"
+          ]
+        }
+      ],
+      "kok_neden": "Belirsiz önceliklendirme ve araç eksikliği: iki yöneticiden gelen işler çakışıyor ve raporlar elle hazırlanıyor. Motivasyon düşüşü bunun sonucu, sebebi değil.",
+      "kok_neden_kelimeler": [
+        "öncelik",
+        "iki yönetici",
+        "iş yük",
+        "araç",
+        "eğitim",
+        "elle"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Veri sorunu: veri ambarı taşındı, veri geç ve hatalı geliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "veri-gec",
+          "onem": "kritik",
+          "bilgi": "Bir ay önce veri ambarı yeni sisteme taşındı; rapor verisi artık iki gün gecikmeli geliyor.",
+          "acilma_kosulu": "Son bir ayda işinde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "son bir ay",
+            "veri",
+            "ne oldu"
+          ]
+        },
+        {
+          "id": "elle-duzeltme",
+          "onem": "kritik",
+          "bilgi": "Yeni sistemden gelen veride tekrarlanan ve eksik kayıtlar var; Mert her raporda verinin büyük kısmını elle düzeltiyor.",
+          "acilma_kosulu": "Raporu hazırlarken en çok neyin vakit aldığı ya da nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "vaktini",
+            "en çok",
+            "hazırlar",
+            "takıl",
+            "zorlan"
+          ]
+        },
+        {
+          "id": "soylemedi",
+          "onem": "kritik",
+          "bilgi": "Veri ekibine iki kez yazdı, dönüş alamadı; başka bir ekibi şikâyet ediyor gibi görünmemek için konuyu yöneticisine taşımadı.",
+          "acilma_kosulu": "Yöneticisinden nasıl bir destek beklediği ya da bunu neden daha önce paylaşmadığı sorulursa",
+          "ipucu_kelimeler": [
+            "destek",
+            "kolaylaştır",
+            "neden söyle",
+            "paylaş",
+            "bekle"
+          ]
+        },
+        {
+          "id": "is-ayni",
+          "onem": "destek",
+          "bilgi": "Üzerindeki iş miktarı değişmedi; aynı raporları hazırlıyor.",
+          "acilma_kosulu": "Üzerindeki işler ya da işlerin kimden geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "hangi işler",
+            "kimden",
+            "üzerinde",
+            "iş yük"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme Mert'ten değil veriden: veri ambarı taşındıktan sonra veri geç ve hatalı geliyor, Mert her raporu elle düzeltiyor ve veri ekibinden dönüş alamadığı sorunu yöneticisine de taşımadı.",
+      "kok_neden_kelimeler": [
+        "veri",
+        "geç",
+        "hatalı",
+        "elle",
+        "taşın"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Ölçüm sorunu: onay turu gecikme sayılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "yeni-onay",
+          "onem": "kritik",
+          "bilgi": "Bir aydır raporlar teslim edilmeden önce yeni gelen bölüm müdürünün onayından geçiyor.",
+          "acilma_kosulu": "Son bir ayda işinde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiş",
+            "son bir ay",
+            "ne oldu",
+            "yeni"
+          ]
+        },
+        {
+          "id": "onay-turu",
+          "onem": "kritik",
+          "bilgi": "Mert raporu zamanında bitiriyor; en çok vakit, müdürün her seferinde istediği biçim düzeltmeleri ve onay beklemekle geçiyor; bir tur 2-3 gün sürüyor.",
+          "acilma_kosulu": "Raporu hazırlarken en çok neyin vakit aldığı ya da nerede beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "vaktini",
+            "en çok",
+            "hazırlar",
+            "takıl",
+            "bekle"
+          ]
+        },
+        {
+          "id": "tarih-kaydi",
+          "onem": "kritik",
+          "bilgi": "Teslim tarihi, onayın çıktığı gün olarak kaydediliyor; yani onay beklemesi Mert'in gecikmesi gibi görünüyor.",
+          "acilma_kosulu": "Gecikmenin nasıl ölçüldüğü ya da yöneticisinden nasıl bir destek beklediği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl ölç",
+            "kayıt",
+            "tarih",
+            "destek",
+            "kolaylaştır"
+          ]
+        },
+        {
+          "id": "yazili-kural-yok",
+          "onem": "destek",
+          "bilgi": "Müdürün istediği biçim kuralları hiçbir yerde yazılı değil.",
+          "acilma_kosulu": "Rapor şablonu, kurallar ya da işlerin kimden geldiği sorulursa",
+          "ipucu_kelimeler": [
+            "kural",
+            "şablon",
+            "yazılı",
+            "kimden"
+          ]
+        }
+      ],
+      "kok_neden": "Gecikme Mert'in işinden değil onay sürecinden: raporlar zamanında bitiyor ama yeni müdürün onay turu günler sürüyor ve teslim tarihi onay günü sayıldığı için bekleme Mert'in gecikmesi gibi görünüyor.",
+      "kok_neden_kelimeler": [
+        "onay",
+        "müdür",
+        "bekle",
+        "tarih",
+        "süreç"
+      ]
+    }
   ]
 }

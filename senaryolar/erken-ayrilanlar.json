@@ -14,47 +14,217 @@
     "tavir": "Tecrübeli, işini seven ama yorgun. Yeni gelenlerden umudu kesmiş gibi konuşuyor. Kendi yükünü soran birine içini döküyor.",
     "ilk_soz": "Ayrılanları soracaksınız herhalde. Ne diyeyim, şimdikiler iki gün çalışıp bırakıyor."
   },
-  "gizli_bilgiler": [
-    {
-      "id": "ilk-gun",
-      "onem": "kritik",
-      "bilgi": "Yeni gelen ilk gün doğrudan en yoğun toplama hattına veriliyor, çünkü eksik hep orada; yanına gösterecek biri ayrılamıyor.",
-      "acilma_kosulu": "Yeni başlayan birinin ilk günü ya da ilk haftası nasıl geçtiği, nereye verildiği sorulursa",
-      "ipucu_kelimeler": ["ilk gün", "ilk hafta", "nereye", "nasıl başl", "karşıla", "nasıl geç"]
-    },
-    {
-      "id": "egitim-yok",
-      "onem": "kritik",
-      "bilgi": "Yazılı bir eğitim planı yok; el terminalini kimden denk gelirse ondan öğreniyorlar ve ilk hafta hata yapınca azar işitiyorlar.",
-      "acilma_kosulu": "İşin nasıl öğretildiği, eğitim, kimin gösterdiği ya da yeni gelenlerin nerede zorlandığı sorulursa",
-      "ipucu_kelimeler": ["öğre", "eğitim", "göster", "zorlan", "kim anlat", "destek", "hata"]
-    },
-    {
-      "id": "vardiya-bildirimi",
-      "onem": "kritik",
-      "bilgi": "Yeni gelenlerin vardiyası bir gün önce akşam bildiriliyor; ayrılanların çoğu bunu ve servis saatini sorun olarak söylemiş.",
-      "acilma_kosulu": "Ayrılanların ayrılırken ne söylediği, çıkış nedenleri ya da çalışma düzeni ve vardiyalar sorulursa",
-      "ipucu_kelimeler": ["ne söyle", "neden ayrıl", "vardiya", "çalışma düzen", "ne dedi", "servis", "gerekçe"]
-    },
-    {
-      "id": "amir-yuku",
-      "onem": "destek",
-      "bilgi": "Kendisi aynı anda 40 kişiye bakıyor; yeni gelene ilk gün ayırabildiği süre on dakikayı geçmiyor.",
-      "acilma_kosulu": "Kendi iş yükü, yeni gelenlere ne kadar zaman ayırabildiği ya da neye ihtiyacı olduğu sorulursa",
-      "ipucu_kelimeler": ["senin", "sizin yük", "zaman ayır", "kaç kişi", "ihtiyac", "sana"]
-    }
-  ],
   "yaniltici_ipuclari": [
     "Şimdiki gençler ağır işe gelemiyor.",
     "Başka yerde üç kuruş fazlasını bulan gidiyor."
   ],
-  "kok_neden": "Bir karşılama ve eğitim süreci yok: yeni gelen ilk gün en zor hatta tek başına bırakılıyor, işi tesadüfen öğreniyor ve vardiyasını son anda öğreniyor. Ayrılıkların nedeni isteksizlik değil, ilk haftanın tasarlanmamış olması.",
-  "kok_neden_kelimeler": ["eğitim", "ilk gün", "ilk hafta", "karşılama", "oryantasyon", "vardiya", "süreç"],
   "soru_hakki": 5,
   "ideal_sorular": [
     "Yeni başlayan birinin ilk günü baştan sona nasıl geçiyor?",
     "İşi kimden ve nasıl öğreniyorlar?",
     "Ayrılanlar giderken size ne söyledi?",
     "Yeni gelenlere zaman ayırabilmen için neye ihtiyacın var?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Tasarlanmamış ilk hafta: karşılama ve eğitim yok",
+      "gizli_bilgiler": [
+        {
+          "id": "ilk-gun",
+          "onem": "kritik",
+          "bilgi": "Yeni gelen ilk gün doğrudan en yoğun toplama hattına veriliyor, çünkü eksik hep orada; yanına gösterecek biri ayrılamıyor.",
+          "acilma_kosulu": "Yeni başlayan birinin ilk günü ya da ilk haftası nasıl geçtiği, nereye verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gün",
+            "ilk hafta",
+            "nereye",
+            "nasıl başl",
+            "karşıla",
+            "nasıl geç"
+          ]
+        },
+        {
+          "id": "egitim-yok",
+          "onem": "kritik",
+          "bilgi": "Yazılı bir eğitim planı yok; el terminalini kimden denk gelirse ondan öğreniyorlar ve ilk hafta hata yapınca azar işitiyorlar.",
+          "acilma_kosulu": "İşin nasıl öğretildiği, eğitim, kimin gösterdiği ya da yeni gelenlerin nerede zorlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "öğre",
+            "eğitim",
+            "göster",
+            "zorlan",
+            "kim anlat",
+            "destek",
+            "hata"
+          ]
+        },
+        {
+          "id": "vardiya-bildirimi",
+          "onem": "kritik",
+          "bilgi": "Yeni gelenlerin vardiyası bir gün önce akşam bildiriliyor; ayrılanların çoğu bunu ve servis saatini sorun olarak söylemiş.",
+          "acilma_kosulu": "Ayrılanların ayrılırken ne söylediği, çıkış nedenleri ya da çalışma düzeni ve vardiyalar sorulursa",
+          "ipucu_kelimeler": [
+            "ne söyle",
+            "neden ayrıl",
+            "vardiya",
+            "çalışma düzen",
+            "ne dedi",
+            "servis",
+            "gerekçe"
+          ]
+        },
+        {
+          "id": "amir-yuku",
+          "onem": "destek",
+          "bilgi": "Kendisi aynı anda 40 kişiye bakıyor; yeni gelene ilk gün ayırabildiği süre on dakikayı geçmiyor.",
+          "acilma_kosulu": "Kendi iş yükü, yeni gelenlere ne kadar zaman ayırabildiği ya da neye ihtiyacı olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "senin",
+            "sizin yük",
+            "zaman ayır",
+            "kaç kişi",
+            "ihtiyac",
+            "sana"
+          ]
+        }
+      ],
+      "kok_neden": "Bir karşılama ve eğitim süreci yok: yeni gelen ilk gün en zor hatta tek başına bırakılıyor, işi tesadüfen öğreniyor ve vardiyasını son anda öğreniyor. Ayrılıkların nedeni isteksizlik değil, ilk haftanın tasarlanmamış olması.",
+      "kok_neden_kelimeler": [
+        "eğitim",
+        "ilk gün",
+        "ilk hafta",
+        "karşılama",
+        "oryantasyon",
+        "vardiya",
+        "süreç"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Yanlış beklenti: ajans ilanı işi olduğundan hafif gösteriyor",
+      "gizli_bilgiler": [
+        {
+          "id": "ajans-ilani",
+          "onem": "kritik",
+          "bilgi": "Yeni gelenlerin çoğu bir istihdam ajansıyla geliyor; ilanda \"hafif paketleme işi\" yazıyor.",
+          "acilma_kosulu": "Ayrılanların giderken ne söylediği ya da neden ayrıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne söyle",
+            "neden ayrıl",
+            "ne dedi",
+            "gerekçe",
+            "ilan"
+          ]
+        },
+        {
+          "id": "soguk-hava",
+          "onem": "kritik",
+          "bilgi": "İlk gün soğuk hava deposuna veriliyorlar; ağır koli kaldırmak ve eksi derecede çalışmak onları şaşırtıyor.",
+          "acilma_kosulu": "Yeni başlayan birinin ilk gününün nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gün",
+            "nasıl geç",
+            "nereye",
+            "ilk hafta"
+          ]
+        },
+        {
+          "id": "tanitim-yok",
+          "onem": "kritik",
+          "bilgi": "Ajans yerleştirdiği kişi başına ücret alıyor, kişinin kalıp kalmamasına bakmıyor; işe başlamadan önce işi tanıtan bir görüşme ya da depo turu yok.",
+          "acilma_kosulu": "İşi kimden ve nasıl öğrendikleri ya da işe alımın nasıl yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "kimden",
+            "nasıl öğren",
+            "işe alım",
+            "görüşme",
+            "tanıt"
+          ]
+        },
+        {
+          "id": "tanidiklar",
+          "onem": "destek",
+          "bilgi": "Çalışanların tanıdığı olarak gelenler genelde kalıyor.",
+          "acilma_kosulu": "Kalanlarla ayrılanlar arasındaki fark ya da ihtiyaçlar sorulursa",
+          "ipucu_kelimeler": [
+            "kalan",
+            "tanıdık",
+            "fark",
+            "ihtiyac"
+          ]
+        }
+      ],
+      "kok_neden": "Ayrılığın nedeni isteksizlik değil yanlış beklenti: ajans ilanı hafif paketleme işi vaat ediyor, gelenler ilk gün soğuk hava deposunda ağır işle karşılaşıyor ve işi önceden tanıtan bir görüşme yok.",
+      "kok_neden_kelimeler": [
+        "beklenti",
+        "ilan",
+        "ajans",
+        "soğuk",
+        "tanıt"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "İlk ayın parası: geç maaş, avans yok, ödenmeyen mesai",
+      "gizli_bilgiler": [
+        {
+          "id": "gec-maas",
+          "onem": "kritik",
+          "bilgi": "Ayın ortasında başlayan biri ilk maaşını yaklaşık 45 gün sonra alıyor; avans verilmiyor.",
+          "acilma_kosulu": "Ayrılanların giderken ne söylediği ya da neden ayrıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "ne söyle",
+            "neden ayrıl",
+            "ne dedi",
+            "gerekçe",
+            "maaş"
+          ]
+        },
+        {
+          "id": "ilk-ay",
+          "onem": "kritik",
+          "bilgi": "Deneme süresinde fazla mesai ödenmiyor ve yemek kartı ikinci ayda başlıyor; ilk ay eline geçen düşük.",
+          "acilma_kosulu": "Yeni başlayan birinin ilk günlerinin ya da ilk ayının nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk gün",
+            "ilk hafta",
+            "ilk ay",
+            "nasıl geç"
+          ]
+        },
+        {
+          "id": "anlatilmiyor",
+          "onem": "kritik",
+          "bilgi": "Bunu işe başlarken kimse anlatmıyor; insan kaynakları bilgilendirmesi yalnızca iş güvenliği kurallarını kapsıyor.",
+          "acilma_kosulu": "İşi ve kuralları kimden, nasıl öğrendikleri sorulursa",
+          "ipucu_kelimeler": [
+            "kimden",
+            "nasıl öğren",
+            "bilgilendir",
+            "anlat"
+          ]
+        },
+        {
+          "id": "haftalik-odeme",
+          "onem": "destek",
+          "bilgi": "Ayrılanların çoğu yakındaki, haftalık ödeme yapan bir depoya geçti.",
+          "acilma_kosulu": "Ayrılanların nereye gittiği ya da ihtiyaçlar sorulursa",
+          "ipucu_kelimeler": [
+            "nereye gitti",
+            "ihtiyac",
+            "başka iş"
+          ]
+        }
+      ],
+      "kok_neden": "Ayrılığın nedeni iş değil ilk ayın parası: ilk maaş 45 gün sonra geliyor, avans yok, deneme süresinde fazla mesai ödenmiyor ve bunu işe başlarken kimse anlatmıyor.",
+      "kok_neden_kelimeler": [
+        "maaş",
+        "avans",
+        "ilk ay",
+        "ödeme",
+        "fazla mesai"
+      ]
+    }
   ]
 }

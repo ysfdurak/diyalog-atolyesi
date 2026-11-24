@@ -45,7 +45,7 @@ Bir senaryonun birden fazla kök nedeni (varyantı) olabilir. Açılış ve kara
 
 - **Neden:** Rapor kök nedeni gösterdiği için tek kök nedenli senaryo bir kez oynanınca biter. Varyantla "şöyle sorabilirdin" önerileri bir sonraki oynayışta da işe yarar, ama önceki cevap yaramaz. Kişi cevabı değil, soru kalıbını öğrenir.
 - **Gelişim grafiği** her varyantın yalnızca ilk denemesini sayar.
-- **Şu an:** 10 senaryo var; 5'i üç kök nedenli (depo verimi, sayım farkları, yeni hizmet paketi, terfi reddi, proje gecikmesi), 5'i tek kök nedenli. Toplam 20 farklı oturum eder.
+- **Şu an:** 10 senaryonun hepsi üç kök nedenli; toplam 30 farklı oturum. Hedef: 30 senaryo, 90 oturum.
 
 Dosyalar: `src/cekirdek/senaryolar.js` (varyantCozumle), `src/cekirdek/oturum.js` (baslat).
 
@@ -125,7 +125,7 @@ Dosyalar: `server/app.js` (kapat / izle / krediKontrol), `server/bildirim.js`, `
 - Kullanıcı hesabı yok; gelişim başka cihaza taşınmaz.
 - Soru etiketlerini model verir ve nadiren yanılabilir. Bu yüzden toplam skor kodla hesaplanır ve her etiket raporda görünür.
 - Sunucu yeniden başlarsa yarım kalan oturumlar kaybolur.
-- 10 senaryodan 5'i tek kök nedenli; bunlarda ikinci oynayış kolaydır. Grafikte bu yüzden her varyantın yalnızca ilk denemesi sayılır.
+- Üç kök nedeni de oynayan biri dördüncü denemede bilinen bir kök nedenle karşılaşır. Grafikte bu yüzden her varyantın yalnızca ilk denemesi sayılır.
 
 ## Sorulursa ne derim?
 
