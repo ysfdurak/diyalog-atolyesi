@@ -300,3 +300,9 @@ test('uzman seti: geçerli yapı ve karşılaştırma ölçüleri (sahte değerl
   assert.equal(kappa(['a', 'a'], ['a', 'a']), 1);
   assert.ok(Math.abs(kappa(['a', 'b', 'a', 'b'], ['a', 'a', 'b', 'b'])) < 1e-12, 'şans düzeyinde uyum = 0');
 });
+
+test('senaryolar: sektör yazılmamışsa depo ve lojistik sayılır, herkese açık bilgide görünür', () => {
+  const s = [...senaryolar.values()][0];
+  assert.equal(herkeseAcik(s).sektor, s.sektor || 'Depo ve lojistik');
+  assert.equal(herkeseAcik({ ...s, sektor: 'Bankacılık' }).sektor, 'Bankacılık');
+});

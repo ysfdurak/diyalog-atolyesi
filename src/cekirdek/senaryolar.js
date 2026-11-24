@@ -45,6 +45,7 @@ function icerikDogrula(x, onEk) {
 export function senaryoDogrula(s) {
   const h = [];
   if (!s || typeof s !== 'object') return ['Senaryo bir nesne olmalı.'];
+  if (s.sektor !== undefined && (typeof s.sektor !== 'string' || !s.sektor.trim())) hatalar.push('sektor boş olmayan bir metin olmalı');
   for (const alan of ['id', 'baslik', 'yetkinlik', 'alan', 'acilis', 'rolun']) {
     if (!metin(s[alan])) h.push(`"${alan}" boş olamaz.`);
   }
@@ -107,12 +108,16 @@ export function senaryolariYukle(klasor) {
 }
 
 /** Oyuncuya gösterilebilecek alanlar. Gizli bilgiler, kök neden ve varyant içerikleri ASLA buradan geçmez. */
+/** Sektör alanı isteğe bağlı; yazılmamışsa senaryo depo ve lojistik dünyasındandır. */
+export const VARSAYILAN_SEKTOR = 'Depo ve lojistik';
+
 export function herkeseAcik(s) {
   return {
     id: s.id,
     baslik: s.baslik,
     yetkinlik: s.yetkinlik,
     alan: s.alan,
+    sektor: s.sektor || VARSAYILAN_SEKTOR,
     zorluk: s.zorluk,
     sureDk: s.sure_dk || null,
     acilis: s.acilis,

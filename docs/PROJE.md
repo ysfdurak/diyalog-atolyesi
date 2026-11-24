@@ -122,7 +122,7 @@ Ortak altyapı (VPS, Docker, ortak Caddy, Cloudflare) site deposunda anlatılır
 ## 8. Bilinen sınırlar ve sonraki adımlar
 
 - **Gerçek model ayarı yapılmadı.** Senaryolar ve varyantlar yalnız sahte modelle doğrulandı. Önce bu.
-- **İçerik hedefi tamam:** 122 senaryo × 3 kök neden = 366 oturum. Hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda. 122 kart tek listede uzun; alan filtresi var, gerekirse "oynamadıklarım" filtresi eklenebilir. İlk partilerdeki konular kullanıcının kendi işinde yaşadığı sorunlardan seçildi.
+- **İçerik hedefi tamam:** 122 senaryo × 3 kök neden = 366 oturum. Hiçbiri gerçek modelle oynanmadı; gerçekçilik incelemesi kullanıcıda. Ana sayfada sektör, alan ve oynama durumu (hiç oynamadıklarım, yeni kök nedeni kalanlar, bitirdiklerim) filtreleri birlikte çalışıyor. İlk partilerdeki konular kullanıcının kendi işinde yaşadığı sorunlardan seçildi.
 - **Uzman seti taslak** ve yeni senaryoları kapsamıyor; bir eğitmen ya da İK uzmanı onaylamalı.
 - Metin tabanlı; ses tonu ve beden dili yok. Hesap yok; gelişim başka cihaza taşınmaz.
 - Sunucu yeniden başlarsa yarım oturumlar kaybolur.
@@ -176,6 +176,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-24 | Oynama durumu filtresi ve isteğe bağlı `sektor` alanı (yazılmamışsa "Depo ve lojistik"); sektör çipleri ikinci sektör gelince görünür. |
 | 2026-11-24 | İK ve işe alım (+7) ve Kalite ve iyileştirme (+8): 122 senaryo, 366 oturum; bir yıllık içerik hedefi tamamlandı. Tekrarlanan bir karakter adı düzeltildi. |
 | 2026-11-24 | Veri ve raporlama (+7) ve Tedarik ve satın alma (+8): 107 senaryo, 321 oturum. |
 | 2026-11-24 | İş geliştirme (+7) ve Proje yönetimi (+10): 92 senaryo, 276 oturum. Duman testi cevabı mesaj sayısıyla kontrol ediyor (kısa cevaplı günün senaryosunda yanlış alarm veriyordu). |
