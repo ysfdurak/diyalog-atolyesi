@@ -1,0 +1,201 @@
+{
+  "id": "forklift-arizalari",
+  "baslik": "Forklift arızaları neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Son altı ayda forklift arızaları iki katına çıktı; bazı günler filonun dörtte biri çalışmıyor. Filo iki yıl önce yenilenmişti. Bakım teknisyeniyle konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın operatörleri suçlamak değil, arızaların neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Bülent",
+    "rol": "Bakım teknisyeni",
+    "tavir": "Mesleğine hâkim, biraz alıngan; \"makineler iyi, kullanım kötü\" diyor. Teknik ayrıntıyı merak eden birine anlatıyor.",
+    "ilk_soz": "Makineler yeni sayılır. Ama nasıl kullanıldıklarını görseniz şaşırırsınız."
+  },
+  "yaniltici_ipuclari": [
+    "Operatörler makineye özen göstermiyor.",
+    "Yeni filo kalitesiz çıktı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Arızalar en çok hangi parçalarda ve hangi makinelerde oluyor?",
+    "Arızalar artmadan önce kullanımda ne değişti?",
+    "Makinelerin bakımı nasıl planlanıyor?",
+    "Operatör bir sorun fark edince ne yapıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Şarj düzeni: aküler yarım şarjla kullanılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Arızaların çoğu akü ve şarj sisteminde; aynı altı makinede tekrar ediyor.",
+          "acilma_kosulu": "Arızaların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi parçalarda",
+            "akü",
+            "şarj sistemi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İki vardiyalı düzene geçilince şarj için ayrılan süre kalmadı; aküler yarım şarjla takılıp sonuna kadar kullanılıyor.",
+          "acilma_kosulu": "Kullanımda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanımda ne",
+            "iki vardiya",
+            "yarım şarj"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bakım takvimi tek vardiyalı kullanıma göre yapılmış; iki vardiyada çalışma saati iki katına çıktı ama takvim değişmedi.",
+          "acilma_kosulu": "Bakımın nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bakımı nasıl",
+            "bakım takvim",
+            "çalışma saati"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Operatörler sorunları bir deftere yazıyor.",
+          "acilma_kosulu": "Operatörün sorun fark edince ne yaptığı sorulursa",
+          "ipucu_kelimeler": [
+            "operatör bir sorun",
+            "defter"
+          ]
+        }
+      ],
+      "kok_neden": "Arızalar kullanım düzeninden: iki vardiyaya geçilince şarj süresi kalmadı, aküler yarım şarjla sonuna kadar kullanılıyor ve bakım takvimi iki katına çıkan çalışma saatine göre güncellenmedi.",
+      "kok_neden_kelimeler": [
+        "şarj",
+        "akü",
+        "iki vardiya",
+        "bakım takvim",
+        "çalışma saati"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Zemin: yeni alanın bozuk zemini tekerlekleri yiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Arızaların çoğu tekerlek, rulman ve direksiyon sisteminde.",
+          "acilma_kosulu": "Arızaların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi parçalarda",
+            "tekerlek",
+            "rulman"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Altı ay önce açılan ek depo alanının zemininde derzler ve çukurlar var; forkliftler gün boyu bu alandan geçiyor.",
+          "acilma_kosulu": "Kullanımda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanımda ne",
+            "zemin",
+            "ek depo"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Operatörler zemindeki çukurları amirlerine bildirdi; bildirim tesis bakımına iletilmedi.",
+          "acilma_kosulu": "Operatörün sorun fark edince ne yaptığı sorulursa",
+          "ipucu_kelimeler": [
+            "operatör bir sorun",
+            "çukur",
+            "tesis bakım"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bakım üretici takvimine göre yapılıyor.",
+          "acilma_kosulu": "Bakımın nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bakımı nasıl",
+            "üretici takvim"
+          ]
+        }
+      ],
+      "kok_neden": "Arızalar zeminden: yeni açılan alanın zemini bozuk, forkliftler gün boyu bu alandan geçiyor ve tekerlek, rulman ve direksiyon arızalanıyor; operatörlerin bildirimleri tesis bakımına ulaşmadı.",
+      "kok_neden_kelimeler": [
+        "zemin",
+        "tekerlek",
+        "ek depo",
+        "bildirim",
+        "tesis"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Bildirim yok: küçük sorunlar büyük arızaya dönüyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Operatörler küçük sorunları (ses, sızıntı, fren boşluğu) bildirmiyor; bildirenin makinesi bakıma çekiliyor ve günün hedefi düşmüyor.",
+          "acilma_kosulu": "Operatörün sorun fark edince ne yaptığı sorulursa",
+          "ipucu_kelimeler": [
+            "operatör bir sorun",
+            "bildirmiyor",
+            "hedef"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bakım yalnızca arıza olunca yapılıyor; vardiya başı kontrol formu var ama kimse doldurmuyor.",
+          "acilma_kosulu": "Bakımın nasıl planlandığı sorulursa",
+          "ipucu_kelimeler": [
+            "bakımı nasıl",
+            "arıza olunca",
+            "kontrol formu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Arızaların çoğu küçük bir sorunun büyümesiyle oluşan, pahalı parça değişimi gerektiren arızalar.",
+          "acilma_kosulu": "Arızaların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi parçalarda",
+            "büyüme",
+            "pahalı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kullanım saatleri değişmedi.",
+          "acilma_kosulu": "Kullanımda ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "kullanımda ne",
+            "kullanım saati"
+          ]
+        }
+      ],
+      "kok_neden": "Arızalar bildirilmeyen küçük sorunlardan: küçük sorunu bildirenin makinesi bakıma çekiliyor ama hedefi düşmüyor, vardiya başı kontrol formu doldurulmuyor ve sorunlar büyüyüp pahalı arızaya dönüşüyor.",
+      "kok_neden_kelimeler": [
+        "bildir",
+        "küçük sorun",
+        "hedef",
+        "kontrol formu",
+        "büyü"
+      ]
+    }
+  ]
+}

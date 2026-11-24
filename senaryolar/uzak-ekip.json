@@ -1,0 +1,199 @@
+{
+  "id": "uzak-ekip",
+  "baslik": "Uzaktaki depo ekibi neden kopuk hissediyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Şehir dışındaki küçük aktarma deposunun 12 kişilik ekibi sana bağlı. Son anketlerde bu ekibin bağlılık puanı ana depodan 30 puan düşük; iki kişi ayrıldı. Uzak deponun ekip lideriyle görüntülü görüşüyorsun.",
+  "rolun": "Uzak deponun da bağlı olduğu depo müdürüsün. Amacın ekibi motive etmek değil, kopukluğun nedenini anlamak.",
+  "karakter": {
+    "ad": "Sinem",
+    "rol": "Uzak depo ekip lideri",
+    "tavir": "İçten ama yorgun; \"biz burada unutulduk\" diyor. Gerçekten dinlendiğini hissedince anlatıyor.",
+    "ilk_soz": "Arayıp sorduğunuz için teşekkürler. Burada biraz unutulmuş gibiyiz açıkçası."
+  },
+  "yaniltici_ipuclari": [
+    "Küçük ekipler hep böyle hisseder.",
+    "Uzaklık yüzünden, yapacak bir şey yok."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ana depoyla en son ne zaman ve nasıl temas ettiniz?",
+    "Bir sorun çıktığında ana depodan nasıl destek alıyorsunuz?",
+    "Ekibin gelişim ve terfi fırsatları ana depodakilerle nasıl karşılaştırılıyor?",
+    "Sence ekip en çok neler kaçırıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Görünmezlik: ziyaret ve bilgi yok",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ana depodan son ziyaret dokuz ay önceydi; duyurular e-postayla geliyor ama ekibin çoğunun e-postası yok.",
+          "acilma_kosulu": "Ana depoyla son temas sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "ziyaret",
+            "e-posta"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekip en çok ana depodaki toplantıları, kutlamaları ve değişiklik haberlerini kaçırıyor; değişiklikleri sonradan öğreniyorlar.",
+          "acilma_kosulu": "Ekibin neyi kaçırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırıyor",
+            "kutlama",
+            "sonradan öğren"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ödül ve takdirlerde uzak depo hiç anılmıyor; aylık başarı panosunda yalnızca ana depo var.",
+          "acilma_kosulu": "Gelişim ve terfi fırsatları sorulursa",
+          "ipucu_kelimeler": [
+            "terfi fırsatları",
+            "takdir",
+            "başarı panosu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sorun çıkınca ana depoya telefonla ulaşabiliyorlar.",
+          "acilma_kosulu": "Ana depodan nasıl destek alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "destek alıyorsunuz",
+            "telefonla"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk görünmezlikten: ana depodan dokuz aydır ziyaret yok, duyurular ekibin çoğunun ulaşamadığı e-postayla geliyor ve takdirlerde uzak depo hiç anılmıyor.",
+      "kok_neden_kelimeler": [
+        "görünmez",
+        "ziyaret",
+        "e-posta",
+        "takdir",
+        "anılmıyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Destek gecikiyor: sorunlar haftalarca bekliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir sorun çıkınca ana depoya talep açıyorlar; forklift arızası ya da yazıcı sorunu ortalama iki hafta bekliyor.",
+          "acilma_kosulu": "Ana depodan nasıl destek alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "destek alıyorsunuz",
+            "iki hafta",
+            "talep"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ana depoyla temas çoğunlukla açık talepleri hatırlatmak için yapılan telefonlar.",
+          "acilma_kosulu": "Ana depoyla son temas sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "hatırlat"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekip en çok, ana depodaki ekiplerin aynı gün aldığı desteği kaçırıyor; kendilerini \"ikinci sınıf\" hissediyorlar.",
+          "acilma_kosulu": "Ekibin neyi kaçırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırıyor",
+            "aynı gün",
+            "ikinci sınıf"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Terfi fırsatları ana depoyla aynı süreçte duyuruluyor.",
+          "acilma_kosulu": "Gelişim ve terfi fırsatları sorulursa",
+          "ipucu_kelimeler": [
+            "terfi fırsatları",
+            "aynı süreç"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk destek eşitsizliğinden: uzak deponun arıza ve talepleri haftalarca bekliyor, ana depo aynı gün destek alıyor ve ekip kendini ikinci sınıf hissediyor.",
+      "kok_neden_kelimeler": [
+        "destek",
+        "iki hafta",
+        "ikinci sınıf",
+        "talep",
+        "eşitsiz"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Yol kapalı: terfi ve eğitim yalnızca ana depoda",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Terfi ve eğitim fırsatları ana depoda; uzak depodan başvuranlar mülakata gitmek için izin kullanmak zorunda, ulaşım da karşılanmıyor.",
+          "acilma_kosulu": "Gelişim ve terfi fırsatları sorulursa",
+          "ipucu_kelimeler": [
+            "terfi fırsatları",
+            "izin kullan",
+            "ulaşım"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Ekip en çok gelişme fırsatını kaçırıyor; iki yılda uzak depodan kimse terfi etmedi.",
+          "acilma_kosulu": "Ekibin neyi kaçırdığı sorulursa",
+          "ipucu_kelimeler": [
+            "kaçırıyor",
+            "gelişme",
+            "terfi etmedi"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ana depoyla temas aylık rapor toplantısıyla sınırlı.",
+          "acilma_kosulu": "Ana depoyla son temas sorulursa",
+          "ipucu_kelimeler": [
+            "en son ne zaman",
+            "aylık rapor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sorunlarına çoğunlukla hızlı destek alıyorlar.",
+          "acilma_kosulu": "Ana depodan nasıl destek alındığı sorulursa",
+          "ipucu_kelimeler": [
+            "destek alıyorsunuz",
+            "hızlı destek"
+          ]
+        }
+      ],
+      "kok_neden": "Kopukluk geleceksizlikten: terfi ve eğitim yalnızca ana depoda, uzak depodan başvuranlar izin kullanıp yol masrafını kendisi karşılıyor ve iki yıldır uzak depodan kimse terfi etmedi.",
+      "kok_neden_kelimeler": [
+        "terfi",
+        "eğitim",
+        "izin",
+        "ulaşım",
+        "gelecek"
+      ]
+    }
+  ]
+}

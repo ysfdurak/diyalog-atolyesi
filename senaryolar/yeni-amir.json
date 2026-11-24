@@ -1,0 +1,200 @@
+{
+  "id": "yeni-amir",
+  "baslik": "Yeni amir ekibe neden kendini kabul ettiremiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Üç ay önce dışarıdan gelen vardiya amiri Sena'nın ekibinde iki kişi ayrıldı, ekip talimatlarını uygulamıyor ve herkes eski amire danışmaya devam ediyor. Sena'yla birebir görüşüyorsun.",
+  "rolun": "Sena'nın yöneticisisin. Amacın ekibi uyarmak değil, Sena'nın neden kabul görmediğini anlamak.",
+  "karakter": {
+    "ad": "Sena",
+    "rol": "Yeni vardiya amiri",
+    "tavir": "Hevesli ama hırpalanmış; \"ekip beni sınıyor\" diyor. Yargılanmadığını hissedince anlatıyor.",
+    "ilk_soz": "Ekip beni sınıyor sanırım. Ne söylesem eski amirlerine soruyorlar."
+  },
+  "yaniltici_ipuclari": [
+    "Ekip değişime kapalı.",
+    "Eski amirleri çok seviyorlardı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "İlk haftan nasıl geçti, ekiple nasıl tanıştın?",
+    "Ekip hangi konularda hâlâ eski amire danışıyor?",
+    "İlk üç ayda değiştirdiğin şeyler neler oldu?",
+    "Bir sorun çıktığında sana kim, nasıl destek oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Hızlı değişiklik: dinlemeden kurallar değişti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İlk iki haftada mola saatlerini, rotasyonu ve vardiya başı toplantısını değiştirdi; ekibe nedenini anlatmadı.",
+          "acilma_kosulu": "Ilk üç ayda neyin değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiştirdiğin",
+            "mola",
+            "rotasyon"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk hafta ekiple tek tek tanışmadı; ilk toplantıda yeni kuralları anlattı.",
+          "acilma_kosulu": "Ilk haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk haftan",
+            "tek tek tanış",
+            "yeni kural"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ekip eski amire, değişen kuralların neden değiştiğini ve eski usulü sürdürüp sürdüremeyeceklerini soruyor.",
+          "acilma_kosulu": "Ekibin eski amire ne danıştığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski amire",
+            "eski usul",
+            "neden değiştiği"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Müdürüyle haftada bir görüşüyor.",
+          "acilma_kosulu": "Sena'ya kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "haftada bir"
+          ]
+        }
+      ],
+      "kok_neden": "Sena kabul görmüyor çünkü dinlemeden değiştirdi: ilk haftada ekibi tanımadan kuralları değiştirdi, nedenini anlatmadı ve ekip kendi düzenlerini koruyabilmek için eski amire gidiyor.",
+      "kok_neden_kelimeler": [
+        "dinlemeden",
+        "değiştir",
+        "tanış",
+        "neden",
+        "kural"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Eski amir hâlâ orada: rol devri yapılmadı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Eski amir terfi edip aynı binada başka bir rolde; ekip vardiya planı ve izin gibi konularda hâlâ ona gidiyor, o da cevap veriyor.",
+          "acilma_kosulu": "Ekibin eski amire ne danıştığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski amire",
+            "terfi",
+            "aynı bina"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bir sorun çıkınca eski amir doğrudan ekibe talimat verebiliyor; Sena'nın yetkisi yazılı olarak tanımlanmadı.",
+          "acilma_kosulu": "Sena'ya kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "yetki",
+            "talimat ver"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İlk hafta eski amirle ortak bir devir toplantısı yapılmadı; ekibe kimin neye karar vereceği söylenmedi.",
+          "acilma_kosulu": "Ilk haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk haftan",
+            "devir toplantı"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk üç ayda pek bir şey değiştirmedi.",
+          "acilma_kosulu": "Ilk üç ayda neyin değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiştirdiğin",
+            "pek bir şey"
+          ]
+        }
+      ],
+      "kok_neden": "Sena kabul görmüyor çünkü rol devredilmedi: eski amir aynı binada ve ekibe hâlâ talimat veriyor, devir toplantısı yapılmadı ve Sena'nın yetkisi yazılı tanımlanmadığı için ekip kararları eski amire götürüyor.",
+      "kok_neden_kelimeler": [
+        "devir",
+        "eski amir",
+        "yetki",
+        "talimat",
+        "tanımlan"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Saha bilgisi eksik: depo işini bilmiyor, sormuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ekip eski amire en çok teknik konuları, makine arızasını ve zor siparişlerin nasıl toplanacağını danışıyor.",
+          "acilma_kosulu": "Ekibin eski amire ne danıştığı sorulursa",
+          "ipucu_kelimeler": [
+            "eski amire",
+            "teknik",
+            "zor sipariş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İlk ayda toplama rotasını değiştirdi; yeni rota soğuk oda kapısından geçtiği için iki gün sonra geri alınmak zorunda kalındı.",
+          "acilma_kosulu": "Ilk üç ayda neyin değiştirildiği sorulursa",
+          "ipucu_kelimeler": [
+            "değiştirdiğin",
+            "toplama rota",
+            "geri alın"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Sena depo işini bilmediğini belli etmemek için ekipten yardım istemiyor; ona yol gösterecek bir eşlik eden de atanmadı.",
+          "acilma_kosulu": "Sena'ya kimin destek olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "sana kim",
+            "yardım iste",
+            "eşlik"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "İlk hafta herkesle tanıştı.",
+          "acilma_kosulu": "Ilk haftanın nasıl geçtiği sorulursa",
+          "ipucu_kelimeler": [
+            "ilk haftan",
+            "herkesle tanış"
+          ]
+        }
+      ],
+      "kok_neden": "Sena kabul görmüyor çünkü saha bilgisini göstermeye çalışıp sormuyor: depo işini bilmediği için yanlış bir rota kararı geri alındı, ekip teknik konularda eski amire gidiyor ve Sena'ya yol gösterecek biri atanmadı.",
+      "kok_neden_kelimeler": [
+        "saha bilgisi",
+        "sormuyor",
+        "yardım",
+        "rota",
+        "eşlik"
+      ]
+    }
+  ]
+}

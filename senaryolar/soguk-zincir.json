@@ -1,0 +1,201 @@
+{
+  "id": "soguk-zincir",
+  "baslik": "Soğuk zincir ihlalleri neden arttı?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 3,
+  "alan": "Operasyon",
+  "sure_dk": 8,
+  "acilis": "Soğuk zincirli ürünlerde sıcaklık kaydedicilerin uyarı verdiği sevkiyatlar son üç ayda %2'den %9'a çıktı. Bir müşteri bir sevkiyatı reddetti. Soğuk oda sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın ekibi uyarmak değil, ihlallerin neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Hilal",
+    "rol": "Soğuk oda sorumlusu",
+    "tavir": "Dikkatli ve endişeli; \"odaların sıcaklığı normal\" diyor. Ürünün yolculuğunu soran birine ayrıntı veriyor.",
+    "ilk_soz": "Odalarımızın sıcaklık kayıtları temiz. Sorun bizde olamaz diye düşünüyorum."
+  },
+  "yaniltici_ipuclari": [
+    "Kaydediciler hatalı ölçüyor.",
+    "Nakliyeciler soğutucuyu kapatıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ürün soğuk odadan çıktıktan sonra araca kadar neler oluyor?",
+    "İhlaller en çok hangi saatlerde ve hangi sevkiyatlarda oluyor?",
+    "Son üç ayda soğuk zincir akışında ne değişti?",
+    "Kaydedici uyarı verince sonra ne yapılıyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Rampada bekleme: soğuk ürün açık rampada",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Ürün odadan çıkınca toplanıp sıcak rampada araç gelene kadar bekliyor; bekleme bazen bir saati buluyor.",
+          "acilma_kosulu": "Ürünün odadan araca kadar yolculuğu sorulursa",
+          "ipucu_kelimeler": [
+            "soğuk odadan çıktıktan",
+            "rampa",
+            "araç gelene"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İhlaller en çok öğleden sonra ve sıcak günlerde, araç gecikmesi olan sevkiyatlarda.",
+          "acilma_kosulu": "Ihlallerin nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "ihlaller en çok",
+            "öğleden sonra",
+            "sıcak gün"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce soğuk ürünler için ayrılmış soğutmalı rampa, normal sevkiyata verildi.",
+          "acilma_kosulu": "Soğuk zincir akışında ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "soğutmalı rampa",
+            "normal sevkiyat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Uyarı gelince ürün karantinaya alınıyor.",
+          "acilma_kosulu": "Uyarıdan sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı verince",
+            "karantina"
+          ]
+        }
+      ],
+      "kok_neden": "İhlaller rampada: soğuk ürünlere ayrılmış soğutmalı rampa normal sevkiyata verildi, ürün odadan çıkınca sıcak rampada aracı bekliyor ve araç geciktiği sıcak öğleden sonralarında ihlal oluşuyor.",
+      "kok_neden_kelimeler": [
+        "rampa",
+        "soğutmalı",
+        "bekle",
+        "araç",
+        "sıcak"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Toplama yöntemi: soğuk ürün kuru ürünle birlikte toplanıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce soğuk ve kuru ürünler aynı siparişte birlikte toplanmaya başlandı; soğuk ürün sipariş tamamlanana kadar arabada kalıyor.",
+          "acilma_kosulu": "Soğuk zincir akışında ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "birlikte toplan",
+            "araba"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Soğuk ürün odadan alınıp kuru ürünlerin toplandığı koridorlarda yarım saat dolaşıyor.",
+          "acilma_kosulu": "Ürünün odadan araca kadar yolculuğu sorulursa",
+          "ipucu_kelimeler": [
+            "soğuk odadan çıktıktan",
+            "yarım saat",
+            "koridor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İhlaller en çok karışık (soğuk + kuru) siparişlerde; yalnızca soğuk ürün içeren sevkiyatlarda ihlal yok.",
+          "acilma_kosulu": "Ihlallerin nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "ihlaller en çok",
+            "karışık sipariş",
+            "yalnızca soğuk"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Uyarı gelince müşteri bilgilendiriliyor.",
+          "acilma_kosulu": "Uyarıdan sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı verince",
+            "bilgilendir"
+          ]
+        }
+      ],
+      "kok_neden": "İhlaller toplama yönteminden: soğuk ve kuru ürünler aynı siparişte birlikte toplanmaya başlandı, soğuk ürün kuru koridorlarda yarım saat arabada dolaşıyor ve ihlaller yalnızca karışık siparişlerde çıkıyor.",
+      "kok_neden_kelimeler": [
+        "birlikte toplan",
+        "karışık",
+        "kuru",
+        "araba",
+        "yarım saat"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kaydedici ayarı ve yanlış uyarı: eşik değiştirildi",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce yeni model kaydedicilere geçildi; uyarı eşiği eski cihazdaki 8 °C yerine 6 °C'ye ayarlı geliyor.",
+          "acilma_kosulu": "Soğuk zincir akışında ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "son üç ayda",
+            "yeni model",
+            "eşik"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İhlallerin çoğu 6-8 °C arasındaki kısa sapmalar; eski cihazlar bunları uyarı saymıyordu.",
+          "acilma_kosulu": "Ihlallerin nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "ihlaller en çok",
+            "6-8",
+            "kısa sapma"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Uyarı gelince ürün tümüyle reddediliyor ya da imha ediliyor; sapmanın süresine ve ürünün dayanıklılığına bakılmıyor.",
+          "acilma_kosulu": "Uyarıdan sonra ne yapıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "uyarı verince",
+            "imha",
+            "süresi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürün odadan çıkınca hemen soğutmalı araca yükleniyor.",
+          "acilma_kosulu": "Ürünün odadan araca kadar yolculuğu sorulursa",
+          "ipucu_kelimeler": [
+            "soğuk odadan çıktıktan",
+            "hemen"
+          ]
+        }
+      ],
+      "kok_neden": "İhlallerin çoğu gerçek değil, ayardan: yeni kaydediciler uyarı eşiği 6 °C'ye ayarlı geldi, eski cihazların saymadığı kısa sapmalar artık ihlal görünüyor ve uyarı gelince süreye bakılmadan ürün reddediliyor.",
+      "kok_neden_kelimeler": [
+        "eşik",
+        "kaydedici",
+        "ayar",
+        "kısa sapma",
+        "yeni model"
+      ]
+    }
+  ]
+}

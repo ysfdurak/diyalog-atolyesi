@@ -1,0 +1,200 @@
+{
+  "id": "toplayici-yuruyus",
+  "baslik": "Toplayıcılar neden bu kadar çok yürüyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Toplayıcılar vardiya başına ortalama 14 km yürüyor; toplama süresinin %60'ı yürüyüşte geçiyor. Bir yıl önce bu oran %40'tı. Depo yerleşiminden sorumlu planlama uzmanıyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın toplayıcıları hızlandırmak değil, yürüyüşün neden arttığını anlamak.",
+  "karakter": {
+    "ad": "Erdem",
+    "rol": "Depo yerleşim ve planlama uzmanı",
+    "tavir": "Teknik ve temkinli; \"yerleşim mantıklı\" diyor. Veriyle soran birine açık konuşuyor.",
+    "ilk_soz": "Yerleşim bir yıl önce analizle yapıldı. Mantıklı bir yerleşim, onu söyleyeyim."
+  },
+  "yaniltici_ipuclari": [
+    "Toplayıcılar rotaya uymuyor.",
+    "Depo çok büyük."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Ürünlerin raftaki yeri nasıl belirleniyor?",
+    "Son bir yılda sipariş yapısında ne değişti?",
+    "Toplayıcının izlediği rota nasıl oluşuyor?",
+    "En çok yürünen koridorlarda hangi ürünler var?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Yerleşim eskidi: hızlı ürünler değişti, yerleri aynı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yerler bir yıl önce o günkü satış hızına göre belirlendi; o günden beri hiç güncellenmedi.",
+          "acilma_kosulu": "Ürün yerlerinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "raftaki yeri",
+            "satış hızı",
+            "güncellen"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Son bir yılda en çok satan 100 ürünün yarısı değişti; yeni hızlı ürünler deponun arka koridorlarında.",
+          "acilma_kosulu": "Sipariş yapısının nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş yapısında",
+            "en çok satan",
+            "arka koridor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En çok yürünen koridorlar deponun en uzak ucundaki yeni ürünlerin olduğu koridorlar.",
+          "acilma_kosulu": "En çok yürünen koridorlardaki ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "en çok yürünen",
+            "uzak uç",
+            "yeni ürün"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Rota terminalde sistem tarafından veriliyor.",
+          "acilma_kosulu": "Toplama rotasının nasıl oluştuğu sorulursa",
+          "ipucu_kelimeler": [
+            "rota nasıl",
+            "terminal"
+          ]
+        }
+      ],
+      "kok_neden": "Yürüyüş eskiyen yerleşimden: yerler bir yıl önceki satış hızına göre belirlendi ve hiç güncellenmedi, hızlı satan ürünlerin yarısı değişti ve yeni hızlı ürünler deponun en uzak koridorlarında kaldı.",
+      "kok_neden_kelimeler": [
+        "yerleşim",
+        "güncellen",
+        "satış hızı",
+        "uzak",
+        "hızlı ürün"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Sipariş yapısı değişti: tek kalemli siparişler",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "E-ticaret siparişleri arttı; siparişlerin %70'i artık tek ya da iki kalemli.",
+          "acilma_kosulu": "Sipariş yapısının nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş yapısında",
+            "tek ya da iki kalem",
+            "e-ticaret"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Her sipariş ayrı toplanıyor; toplayıcı tek kalem için depoyu baştan sona yürüyor, siparişler toplu toplanmıyor.",
+          "acilma_kosulu": "Toplama rotasının nasıl oluştuğu sorulursa",
+          "ipucu_kelimeler": [
+            "rota nasıl",
+            "ayrı toplan",
+            "toplu"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Yerleşim, mağaza siparişlerinin çok kalemli yapısına göre ürün aileleri yan yana olacak şekilde kurulmuştu.",
+          "acilma_kosulu": "Ürün yerlerinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "raftaki yeri",
+            "ürün aile",
+            "mağaza sipariş"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "En çok yürünen koridorlarda karışık ürünler var.",
+          "acilma_kosulu": "En çok yürünen koridorlardaki ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "en çok yürünen",
+            "karışık"
+          ]
+        }
+      ],
+      "kok_neden": "Yürüyüş sipariş yapısından: siparişlerin çoğu artık tek ya da iki kalemli, her sipariş ayrı toplanıyor ve yerleşim çok kalemli mağaza siparişlerine göre kurulduğu için toplayıcı tek kalem için depoyu baştan sona yürüyor.",
+      "kok_neden_kelimeler": [
+        "tek kalem",
+        "ayrı toplan",
+        "toplu",
+        "sipariş yapısı",
+        "mağaza"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Rota sistemi kullanılmıyor: terminal sırası adres sırası değil",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Terminal kalemleri sipariş sırasına göre gösteriyor, adres sırasına göre değil; toplayıcı aynı koridora defalarca dönüyor.",
+          "acilma_kosulu": "Toplama rotasının nasıl oluştuğu sorulursa",
+          "ipucu_kelimeler": [
+            "rota nasıl",
+            "sipariş sırası",
+            "adres sırası"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Yerleşim doğru yapılmış; hızlı ürünler ön koridorlarda.",
+          "acilma_kosulu": "Ürün yerlerinin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "raftaki yeri",
+            "ön koridor"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "En çok yürünen yerler ana koridorlar; toplayıcılar aynı koridordan gidip geliyor.",
+          "acilma_kosulu": "En çok yürünen koridorlardaki ürünler sorulursa",
+          "ipucu_kelimeler": [
+            "en çok yürünen",
+            "gidip gel",
+            "ana koridor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Sipariş yapısı son bir yılda pek değişmedi.",
+          "acilma_kosulu": "Sipariş yapısının nasıl değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "sipariş yapısında",
+            "pek değişmedi"
+          ]
+        }
+      ],
+      "kok_neden": "Yürüyüş rotadan: yerleşim doğru ama terminal kalemleri adres sırasına göre değil sipariş sırasına göre gösteriyor; toplayıcılar aynı koridora defalarca dönüyor.",
+      "kok_neden_kelimeler": [
+        "rota",
+        "adres sırası",
+        "sipariş sırası",
+        "terminal",
+        "dönüyor"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "palet-kaybi",
+  "baslik": "Paletler neden kayboluyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 1,
+  "alan": "Operasyon",
+  "sure_dk": 6,
+  "acilis": "Depo, kiralık palet havuzundan aldığı paletlerden yılda yaklaşık 3.000 tanesini geri veremiyor ve her kayıp palet için ücret ödüyor. Palet takibinden sorumlu sevkiyat memuruyla konuşuyorsun.",
+  "rolun": "Depo maliyetlerinden sorumlu yöneticisin. Amacın suçlu bulmak değil, paletlerin neden kaybolduğunu anlamak.",
+  "karakter": {
+    "ad": "Nurcan",
+    "rol": "Sevkiyat memuru",
+    "tavir": "Titiz ama bunalmış; \"kayıtları elimden geldiğince tutuyorum\" diyor. Süreci merak eden birine açık.",
+    "ilk_soz": "Kayıtları elimden geldiğince tutuyorum ama paletin peşinden kimse koşmuyor."
+  },
+  "yaniltici_ipuclari": [
+    "Şoförler paletleri götürüyor.",
+    "Paletler kırılıp atılıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir palet depodan çıkarken nasıl kaydediliyor?",
+    "Mağazalardan boş paletler nasıl geri dönüyor?",
+    "Kayıplar en çok hangi müşteri ya da güzergâhta oluyor?",
+    "Kırılan paletlere ne oluyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Geri dönüş sorumsuz: mağazalar paleti bekletiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Boş paletlerin geri dönüşü için mağazalarla bir anlaşma yok; mağazalar paletleri arka depoda biriktiriyor, araç boş dönüyor.",
+          "acilma_kosulu": "Boş paletlerin nasıl geri döndüğü sorulursa",
+          "ipucu_kelimeler": [
+            "boş paletler",
+            "anlaşma",
+            "biriktir"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kayıpların çoğu küçük mağazalarda; arka depoları olmadığı için paletleri sokağa çıkarıyorlar ve paletler kayboluyor.",
+          "acilma_kosulu": "Kayıpların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteri",
+            "küçük mağaza",
+            "sokağa"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çıkışta palet sayısı irsaliyeye yazılıyor ama mağaza teslimde palet sayısını imzalamıyor.",
+          "acilma_kosulu": "Paletin çıkışta nasıl kaydedildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkarken",
+            "irsaliye",
+            "imzala"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kırılan paletler ayrı bir alanda toplanıyor.",
+          "acilma_kosulu": "Kırılan paletlere ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kırılan paletler",
+            "ayrı alan"
+          ]
+        }
+      ],
+      "kok_neden": "Paletler geri dönüş sorumsuz olduğu için kayboluyor: mağazalarla palet iadesi anlaşması yok, teslimde palet sayısı imzalatılmıyor ve küçük mağazalar biriken paletleri sokağa çıkarıyor.",
+      "kok_neden_kelimeler": [
+        "geri dönüş",
+        "anlaşma",
+        "imza",
+        "küçük mağaza",
+        "biriktir"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Kayıt yok: çıkış sayısı tutulmuyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Çıkışta palet sayısı kaydedilmiyor; yalnızca koli sayısı irsaliyede var.",
+          "acilma_kosulu": "Paletin çıkışta nasıl kaydedildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkarken",
+            "koli sayısı",
+            "kaydedilmiyor"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kayıpların hangi müşteride olduğu bilinmiyor; yıl sonunda sayım farkı çıkıyor ve toplu ödeniyor.",
+          "acilma_kosulu": "Kayıpların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteri",
+            "bilinmiyor",
+            "sayım farkı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Boş paletler mağaza aracıyla gelişigüzel dönüyor; dönen palet sayısı da kaydedilmiyor.",
+          "acilma_kosulu": "Boş paletlerin nasıl geri döndüğü sorulursa",
+          "ipucu_kelimeler": [
+            "boş paletler",
+            "gelişigüzel",
+            "dönen palet"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Kırılan paletler tamir edilip yeniden kullanılıyor.",
+          "acilma_kosulu": "Kırılan paletlere ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kırılan paletler",
+            "tamir"
+          ]
+        }
+      ],
+      "kok_neden": "Paletler takip edilmediği için kayboluyor: ne çıkan ne de dönen palet sayısı kaydediliyor, kayıp ancak yıl sonu sayımında toplu olarak ortaya çıkıyor ve hangi müşteride olduğu bilinmiyor.",
+      "kok_neden_kelimeler": [
+        "kayıt",
+        "takip",
+        "sayım",
+        "çıkan",
+        "dönen"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Kırık palet kaydı: hurdaya giden paletler kayıp sayılıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kırılan paletler hurdacıya veriliyor; havuz şirketine hasar bildirimi yapılmadığı için kayıp sayılıp tam ücret ödeniyor.",
+          "acilma_kosulu": "Kırılan paletlere ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kırılan paletler",
+            "hurda",
+            "hasar bildirimi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kayıpların büyük kısmı belli bir müşteride değil, depo içinde; forklift hasarıyla kırılan paletler.",
+          "acilma_kosulu": "Kayıpların nerede yoğunlaştığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi müşteri",
+            "depo içi",
+            "forklift hasarı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Çıkışta palet sayısı doğru kaydediliyor ve mağazalardan dönüş düzenli.",
+          "acilma_kosulu": "Paletin çıkışta nasıl kaydedildiği sorulursa",
+          "ipucu_kelimeler": [
+            "depodan çıkarken",
+            "doğru kaydedil"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Mağazalar boş paletleri düzenli iade ediyor.",
+          "acilma_kosulu": "Boş paletlerin nasıl geri döndüğü sorulursa",
+          "ipucu_kelimeler": [
+            "boş paletler",
+            "düzenli iade"
+          ]
+        }
+      ],
+      "kok_neden": "Kaybın çoğu kayıp değil kırık: depo içinde forkliftle kırılan paletler hurdacıya veriliyor, havuz şirketine hasar bildirilmediği için kayıp sayılıp tam ücret ödeniyor.",
+      "kok_neden_kelimeler": [
+        "kırık",
+        "hurda",
+        "hasar bildirimi",
+        "forklift",
+        "depo içi"
+      ]
+    }
+  ]
+}

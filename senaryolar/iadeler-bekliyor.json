@@ -1,0 +1,200 @@
+{
+  "id": "iadeler-bekliyor",
+  "baslik": "İadeler neden haftalarca işlenmiyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Operasyon",
+  "sure_dk": 7,
+  "acilis": "Depoya gelen müşteri iadeleri ortalama 18 günde işleniyor; bu sürede ürünler satılamıyor ve müşterilere para iadesi gecikiyor. İade alanı taşmış durumda. İade bölümünün sorumlusuyla konuşuyorsun.",
+  "rolun": "Depo operasyon yöneticisisin. Amacın iade ekibini hızlandırmak değil, iadelerin neden beklediğini anlamak.",
+  "karakter": {
+    "ad": "Sevgi",
+    "rol": "İade bölümü sorumlusu",
+    "tavir": "Bunalmış ve dağınık; \"her gün daha fazlası geliyor\" diyor. İşin nasıl yürüdüğünü soran birine anlatıyor.",
+    "ilk_soz": "İade alanını gördünüz herhalde. Yetişemiyoruz, her gün daha fazlası geliyor."
+  },
+  "yaniltici_ipuclari": [
+    "İadeler çok arttı, o kadar.",
+    "İade ekibi yavaş çalışıyor."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Bir iade kolisi geldiğinde hangi adımlardan geçiyor?",
+    "Bekleyen iadelerin en çok hangi adımda takıldığını görüyorsun?",
+    "Bir ürünün yeniden satılabilir olduğuna nasıl karar veriliyor?",
+    "İade ekibi ne zaman ve nasıl ölçülüyor?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Karar kuralı yok: her ürün için onay bekleniyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Bir ürünün yeniden satılabilir olup olmadığına dair yazılı bir kural yok; şüpheli her ürün için kategori yöneticisinin onayı bekleniyor.",
+          "acilma_kosulu": "Satılabilirlik kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "yeniden satılabilir",
+            "yazılı kural",
+            "kategori yöneticisi"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen iadelerin çoğu \"karar bekliyor\" rafında; kategori yöneticileri bu onaylara haftada bir bakıyor.",
+          "acilma_kosulu": "Iadelerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımda takıl",
+            "karar bekliyor",
+            "haftada bir"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Koli açılıyor, ürün kontrol ediliyor ve sınıflanmadan önce fotoğrafı kategori yöneticisine gönderiliyor.",
+          "acilma_kosulu": "Bir iadenin geçtiği adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "iade kolisi geldiğinde",
+            "fotoğraf",
+            "sınıflan"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekip günlük açılan koli sayısıyla ölçülüyor.",
+          "acilma_kosulu": "Iade ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ekibi ne zaman",
+            "açılan koli"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler karar beklediği için birikiyor: satılabilirlik için yazılı bir kural yok, şüpheli her ürün kategori yöneticisinin onayını bekliyor ve onaylara haftada bir bakılıyor.",
+      "kok_neden_kelimeler": [
+        "kural",
+        "onay",
+        "karar",
+        "kategori yöneticisi",
+        "haftada bir"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Ekip başka işe kaydırılıyor: iade hep en son",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "İade ekibi ayrı ölçülmüyor; sevkiyat yoğunlaşınca ekibin yarısı her gün toplamaya kaydırılıyor.",
+          "acilma_kosulu": "Iade ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ekibi ne zaman",
+            "kaydırıl",
+            "toplama"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "İadeler en çok ilk adımda, koli açılmadan bekliyor; açılabilen günlerde süreç bir günde bitiyor.",
+          "acilma_kosulu": "Iadelerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımda takıl",
+            "koli açılmadan",
+            "bir günde"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Adımlar basit: aç, kontrol et, sınıfla, rafa koy; ama bu adımları yapacak kişi çoğu gün iade alanında değil.",
+          "acilma_kosulu": "Bir iadenin geçtiği adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "iade kolisi geldiğinde",
+            "aç, kontrol"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Satılabilirlik kararı için basit bir kontrol listesi var.",
+          "acilma_kosulu": "Satılabilirlik kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "yeniden satılabilir",
+            "kontrol listesi"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler kişi kaydırıldığı için bekliyor: iade ekibi ayrı ölçülmüyor ve öncelikli sayılmıyor, sevkiyat yoğunlaşınca ekibin yarısı toplamaya kaydırılıyor ve koliler hiç açılmadan birikiyor.",
+      "kok_neden_kelimeler": [
+        "kaydırıl",
+        "öncelik",
+        "toplama",
+        "ölçülmüyor",
+        "birik"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Sistem kaydı yok: iade bildirimi gelmeden işlem yapılamıyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Koli açılmadan önce sistemde müşteri hizmetlerinin açtığı iade kaydı bulunmalı; kayıt yoksa koli bekletiliyor.",
+          "acilma_kosulu": "Bir iadenin geçtiği adımlar sorulursa",
+          "ipucu_kelimeler": [
+            "iade kolisi geldiğinde",
+            "iade kaydı",
+            "müşteri hizmetleri"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Bekleyen kolilerin çoğu, müşteri hizmetlerinin henüz iade kaydı açmadığı koliler; kargo müşteriden doğrudan depoya getiriyor.",
+          "acilma_kosulu": "Iadelerin en çok nerede takıldığı sorulursa",
+          "ipucu_kelimeler": [
+            "hangi adımda takıl",
+            "kayıt açma",
+            "kargo"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İade ekibi işlenen iade sayısıyla ölçülüyor; kaydı olmayan koliler sayıma girmediği için kimsenin önceliği değil.",
+          "acilma_kosulu": "Iade ekibinin nasıl ölçüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "ekibi ne zaman",
+            "işlenen iade",
+            "sayım"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ürünlerin çoğu açıkça satılabilir durumda.",
+          "acilma_kosulu": "Satılabilirlik kararının nasıl verildiği sorulursa",
+          "ipucu_kelimeler": [
+            "yeniden satılabilir",
+            "açıkça"
+          ]
+        }
+      ],
+      "kok_neden": "İadeler kayıt yüzünden bekliyor: koli işlenmeden önce müşteri hizmetlerinin iade kaydı açması gerekiyor, kargo kayıttan önce depoya getiriyor ve kaydı olmayan koliler ölçüme girmediği için kimsenin önceliği değil.",
+      "kok_neden_kelimeler": [
+        "kayıt",
+        "müşteri hizmetleri",
+        "kargo",
+        "ölçüm",
+        "öncelik"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "yildiz-dusus",
+  "baslik": "En iyi çalışanın performansı neden düştü?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 6,
+  "acilis": "Ekibin iki yıldır en yüksek performanslı toplayıcısı Kübra'nın son üç ayda verimi %25 düştü ve iki kez işe geç kaldı. Daha önce hiç sorun yaşamamıştı. Kübra'yla birebir görüşüyorsun.",
+  "rolun": "Kübra'nın yöneticisisin. Amacın uyarı vermek değil, neyin değiştiğini anlamak.",
+  "karakter": {
+    "ad": "Kübra",
+    "rol": "Kıdemli toplayıcı",
+    "tavir": "Mesafeli ve biraz kırgın; \"bir şey yok, toparlarım\" diyor. Gerçekten ilgilenen birine açılıyor.",
+    "ilk_soz": "Bir şey yok, toparlarım. Biraz yoğun bir dönemdeyim o kadar."
+  },
+  "yaniltici_ipuclari": [
+    "Özel hayatında bir sorun vardır.",
+    "Hevesi kaçtı."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Son üç ayda işinde neler değişti?",
+    "Şu an bir gününün en çok hangi kısmı seni yoruyor?",
+    "Emeğin ekipte nasıl görülüyor?",
+    "Önümüzdeki dönemde kendini nerede görüyorsun?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "İyi olana yük biniyor: eğitim ve zor işler hep ona",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç aydır yeni gelenlerin eğitimi ona verildi; hedefi ise aynı kaldı.",
+          "acilma_kosulu": "Son üç ayda işinde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "işinde neler",
+            "yeni gelen",
+            "eğitim"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En çok yoran, en zor ve ağır siparişlerin \"sen hızlısın\" diye hep ona verilmesi.",
+          "acilma_kosulu": "Gününün en çok yoran kısmı sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi kısmı",
+            "ağır sipariş",
+            "hızlısın"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ek işleri hiçbir yerde görünmüyor; verim raporunda yalnızca düşen toplama sayısı görünüyor.",
+          "acilma_kosulu": "Emeğinin nasıl görüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "emeğin",
+            "verim rapor",
+            "görünmüyor"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Bir gün eğitmen olmayı düşünüyor.",
+          "acilma_kosulu": "Kendini nerede gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kendini nerede",
+            "eğitmen olma"
+          ]
+        }
+      ],
+      "kok_neden": "Performans düşmedi, yük arttı: en iyi olduğu için yeni gelenlerin eğitimi ve en ağır siparişler ona verildi, hedefi aynı kaldı ve ek işleri raporda görünmediği için düşüş tembellik gibi görünüyor.",
+      "kok_neden_kelimeler": [
+        "yük",
+        "eğitim",
+        "ağır sipariş",
+        "hedef",
+        "görünmüyor"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Tükenmişlik ve görülmeme: terfi başkasına gitti",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Kendini artık burada görmüyor; üç ay önce açılan ekip lideri pozisyonu, başvurduğu hâlde dışarıdan birine verildi.",
+          "acilma_kosulu": "Kendini nerede gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kendini nerede",
+            "ekip lideri",
+            "dışarıdan"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Neden seçilmediğini kimse açıklamadı; iki yıllık emeğinin görülmediğini düşünüyor.",
+          "acilma_kosulu": "Emeğinin nasıl görüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "emeğin",
+            "açıklamadı",
+            "emeğinin"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "İşinde değişen bir şey yok; geç kaldığı iki gün başka bir şirketle iş görüşmesine gitti.",
+          "acilma_kosulu": "Son üç ayda işinde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "işinde neler",
+            "iş görüşmesi"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "En çok yoran, uzun vardiyalar.",
+          "acilma_kosulu": "Gününün en çok yoran kısmı sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi kısmı",
+            "uzun vardiya"
+          ]
+        }
+      ],
+      "kok_neden": "Performans düşüşü kopuştan: başvurduğu ekip lideri pozisyonu dışarıdan birine verildi, neden seçilmediği açıklanmadı ve emeğinin görülmediğini düşünen Kübra başka işlere bakmaya başladı.",
+      "kok_neden_kelimeler": [
+        "terfi",
+        "açıklan",
+        "emek",
+        "görülme",
+        "ekip lideri"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Fiziksel sorun: yeni alan ve ağır kaldırma",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Üç ay önce ağır ürünlerin bulunduğu yeni bölüme kaydırıldı; daha önce hafif ürün bölümündeydi.",
+          "acilma_kosulu": "Son üç ayda işinde ne değiştiği sorulursa",
+          "ipucu_kelimeler": [
+            "işinde neler",
+            "ağır ürün",
+            "kaydırıl"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En çok, üst raftan ağır koli indirmek yoruyor; bel ağrısı başladı ama söylemedi, çünkü \"şikâyetçi\" görünmek istemiyor.",
+          "acilma_kosulu": "Gününün en çok yoran kısmı sorulursa",
+          "ipucu_kelimeler": [
+            "en çok hangi kısmı",
+            "bel",
+            "üst raf"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Eski bölümüne dönerse ya da ağır işlerde rotasyon olursa eski hızına döneceğini düşünüyor.",
+          "acilma_kosulu": "Kendini nerede gördüğü sorulursa",
+          "ipucu_kelimeler": [
+            "kendini nerede",
+            "rotasyon",
+            "eski bölüm"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Ekipte saygı görüyor.",
+          "acilma_kosulu": "Emeğinin nasıl görüldüğü sorulursa",
+          "ipucu_kelimeler": [
+            "emeğin",
+            "saygı"
+          ]
+        }
+      ],
+      "kok_neden": "Performans düşüşü fiziksel: ağır ürün bölümüne kaydırıldı, üst raftan ağır koli indirmek bel ağrısı yaptı ve şikâyetçi görünmemek için söylemedi; rotasyon ya da eski bölümüne dönüş onu eski hızına döndürür.",
+      "kok_neden_kelimeler": [
+        "ağır",
+        "bel",
+        "kaydırıl",
+        "rotasyon",
+        "söylemedi"
+      ]
+    }
+  ]
+}

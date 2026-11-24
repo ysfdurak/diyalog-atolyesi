@@ -1,0 +1,200 @@
+{
+  "id": "toplantida-sessizlik",
+  "baslik": "Ekip toplantılarında neden kimse konuşmuyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Haftalık ekip toplantılarında sorun ya da fikir soruyorsun; cevap gelmiyor. Toplantıdan sonra koridorda aynı kişiler sorunları kendi aralarında konuşuyor. Ekibin en deneyimli üyelerinden Gamze'yle birebir görüşüyorsun.",
+  "rolun": "Ekibin yöneticisisin. Amacın insanları konuşmaya zorlamak değil, toplantıda neden sessiz kaldıklarını anlamak.",
+  "karakter": {
+    "ad": "Gamze",
+    "rol": "Kıdemli depo çalışanı",
+    "tavir": "Gözlemci ve temkinli; \"herkes yoğun\" deyip geçiştiriyor. Güvende hissedince açık konuşuyor.",
+    "ilk_soz": "Toplantılar iyi geçiyor bence. Herkes yoğun, belki ondandır."
+  },
+  "yaniltici_ipuclari": [
+    "İnsanlar çekingen.",
+    "Ekip ilgisiz."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Toplantıda en son biri bir sorun söylediğinde ne olmuştu?",
+    "Toplantının gündemi nasıl belirleniyor?",
+    "Toplantıdan sonra koridorda neler konuşuluyor?",
+    "Toplantıda söylenen bir sorunun sonra nasıl takip edildiğini görüyorsun?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Söyleyen sorumlu tutuluyor: sorunu söyleyen çözmekle görevlendiriliyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "En son bir çalışan rampa düzenini eleştirdi; toplantının sonunda çözümü bulmakla o görevlendirildi ve ek iş oldu.",
+          "acilma_kosulu": "En son sorun söylenince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son biri",
+            "görevlendiril",
+            "ek iş"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Koridorda herkes \"söylersen iş sana kalır\" diyor; sorunlar orada konuşuluyor.",
+          "acilma_kosulu": "Toplantı sonrası konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "koridorda neler",
+            "iş sana kalır"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Görevlendirilen kişiye zaman ya da destek verilmiyor; çözemezse bu onun eksiği sayılıyor.",
+          "acilma_kosulu": "Sorunların nasıl takip edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip edildi",
+            "zaman ya da destek",
+            "eksiği"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gündemi yönetici hazırlıyor.",
+          "acilma_kosulu": "Gündemin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "gündemi nasıl",
+            "yönetici hazırl"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip sessiz çünkü konuşmak cezalandırılıyor: sorunu söyleyen kişi zaman ve destek verilmeden çözmekle görevlendiriliyor ve çözemezse bu onun eksiği sayılıyor; herkes 'söylersen iş sana kalır' diyor.",
+      "kok_neden_kelimeler": [
+        "söyleyen",
+        "görevlendiril",
+        "destek",
+        "ceza",
+        "iş sana kalır"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Gündem tek yönlü: toplantı bilgi aktarımı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Gündemi yönetici hazırlıyor; toplantının 25 dakikası duyuru ve rakam okumakla geçiyor, soru son beş dakikaya kalıyor.",
+          "acilma_kosulu": "Gündemin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "gündemi nasıl",
+            "duyuru",
+            "son beş dakika"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son biri bir sorun söylediğinde zaman bittiği için \"bunu sonra konuşalım\" denildi ve konuşulmadı.",
+          "acilma_kosulu": "En son sorun söylenince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son biri",
+            "sonra konuşalım",
+            "zaman bitti"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplantıda söylenen sorunlar not alınmıyor; takip eden kimse yok.",
+          "acilma_kosulu": "Sorunların nasıl takip edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip edildi",
+            "not alınmıyor",
+            "takip eden"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Koridorda genelde günlük işler konuşuluyor.",
+          "acilma_kosulu": "Toplantı sonrası konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "koridorda neler",
+            "günlük işler"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip sessiz çünkü toplantı dinlemeye kurulmuş: gündemi yönetici hazırlıyor, sürenin çoğu duyuru ve rakamla geçiyor, sorulara beş dakika kalıyor ve söylenen sorunlar not alınıp takip edilmiyor.",
+      "kok_neden_kelimeler": [
+        "gündem",
+        "duyuru",
+        "tek yönlü",
+        "not",
+        "takip"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Toplantıda amirler var: çalışanlar amirlerini eleştiremiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Koridorda konuşulan sorunların çoğu vardiya amirlerinin kararlarıyla ilgili; toplantıda amirler de oturuyor.",
+          "acilma_kosulu": "Toplantı sonrası konuşulanlar sorulursa",
+          "ipucu_kelimeler": [
+            "koridorda neler",
+            "amir",
+            "kararları"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En son biri vardiya planını eleştirdiğinde amiri ertesi hafta onu en ağır işe verdi.",
+          "acilma_kosulu": "En son sorun söylenince ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "en son biri",
+            "en ağır iş",
+            "ertesi hafta"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Toplantıda söylenen sorunlar takip için ilgili amire veriliyor; amirle ilgili bir sorunun takibi de yine amirde kalıyor.",
+          "acilma_kosulu": "Sorunların nasıl takip edildiği sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl takip edildi",
+            "ilgili amir",
+            "amirde kal"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Gündeme herkes madde ekleyebiliyor.",
+          "acilma_kosulu": "Gündemin nasıl belirlendiği sorulursa",
+          "ipucu_kelimeler": [
+            "gündemi nasıl",
+            "madde ekle"
+          ]
+        }
+      ],
+      "kok_neden": "Ekip sessiz çünkü sorunların çoğu amirlerle ilgili ve amirler toplantıda: amirini eleştiren biri ertesi hafta en ağır işe verildi ve amirle ilgili sorunun takibi de amirin kendisine kalıyor.",
+      "kok_neden_kelimeler": [
+        "amir",
+        "eleştir",
+        "en ağır iş",
+        "takip",
+        "güven"
+      ]
+    }
+  ]
+}

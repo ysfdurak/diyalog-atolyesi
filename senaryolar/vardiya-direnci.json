@@ -1,0 +1,201 @@
+{
+  "id": "vardiya-direnci",
+  "baslik": "Ekip yeni vardiya düzenine neden direniyor?",
+  "yetkinlik": "soru-sorma",
+  "mod": "soru",
+  "zorluk": 2,
+  "alan": "Ekip yönetimi",
+  "sure_dk": 7,
+  "acilis": "Verimliliği artırmak için 8 saatlik üç vardiyadan 12 saatlik iki vardiyaya geçilecek. Duyurudan sonra ekipte imza toplanıyor ve üç kişi istifa etti. Ekip temsilcisiyle konuşuyorsun.",
+  "rolun": "Depo müdürüsün ve kararı sen verdin. Amacın kararı savunmak değil, direnişin nedenini anlamak.",
+  "karakter": {
+    "ad": "Yılmaz",
+    "rol": "Ekip temsilcisi",
+    "tavir": "Kararlı ama saygılı; \"ekip bunu istemiyor\" diyor. Ciddiye alındığını hissedince ayrıntı veriyor.",
+    "ilk_soz": "Ekip bu düzeni istemiyor. Ben sadece onların sözcüsüyüm."
+  },
+  "yaniltici_ipuclari": [
+    "İnsanlar değişime direnir.",
+    "Ekip rahatına düşkün."
+  ],
+  "soru_hakki": 5,
+  "ideal_sorular": [
+    "Yeni düzen bir çalışanın haftasını nasıl değiştirecek?",
+    "Karar ekibe nasıl duyuruldu?",
+    "İmza toplayanların en çok kaygı duyduğu şey ne?",
+    "Bu düzen hangi koşullarda kabul edilebilir olurdu?"
+  ],
+  "varyantlar": [
+    {
+      "id": "v1",
+      "not": "Gelir kaybı: fazla mesai ve vardiya primi gidiyor",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Yeni düzende fazla mesai neredeyse kalkıyor ve gece vardiyası primi azalıyor; çalışanların aylık geliri ortalama %12 düşüyor.",
+          "acilma_kosulu": "Yeni düzenin haftayı nasıl değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "haftasını nasıl",
+            "fazla mesai",
+            "%12"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En büyük kaygı gelir kaybı; ekibin çoğu fazla mesaiyi düzenli gelir olarak bütçesine katmış.",
+          "acilma_kosulu": "En büyük kaygının ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaygı duyduğu",
+            "gelir kaybı",
+            "bütçe"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Gelir kaybını kapatan bir vardiya primi olursa çoğu yeni düzeni kabul eder.",
+          "acilma_kosulu": "Düzenin hangi koşullarda kabul edilebileceği sorulursa",
+          "ipucu_kelimeler": [
+            "kabul edilebilir",
+            "vardiya primi",
+            "kapat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Karar toplantıda duyuruldu.",
+          "acilma_kosulu": "Kararın nasıl duyurulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl duyuruldu",
+            "toplantıda duyur"
+          ]
+        }
+      ],
+      "kok_neden": "Direniş gelir kaybından: yeni düzende fazla mesai ve gece primi azalıyor, aylık gelir ortalama %12 düşüyor ve ekibin çoğu fazla mesaiyi düzenli gelir saymış; kaybı kapatan bir prim düzeni kabul edilebilir kılar.",
+      "kok_neden_kelimeler": [
+        "gelir",
+        "fazla mesai",
+        "prim",
+        "kayıp",
+        "%12"
+      ]
+    },
+    {
+      "id": "v2",
+      "not": "Duyuru: sormadan, panoya asıldı",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "Karar bir sabah panoya asılan duyuruyla öğrenildi; öncesinde kimseye fikri sorulmadı, iki hafta sonra başlıyor.",
+          "acilma_kosulu": "Kararın nasıl duyurulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl duyuruldu",
+            "pano",
+            "iki hafta sonra"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "En büyük kaygı, bir sonraki kararın da böyle sorulmadan geleceği; ekip söz hakkı istiyor.",
+          "acilma_kosulu": "En büyük kaygının ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaygı duyduğu",
+            "söz hakkı",
+            "sorulmadan"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Bir deneme dönemi ve ekibin vardiya planına katılacağı bir çalışma grubu olsa düzene karşı çıkmazlar.",
+          "acilma_kosulu": "Düzenin hangi koşullarda kabul edilebileceği sorulursa",
+          "ipucu_kelimeler": [
+            "kabul edilebilir",
+            "deneme dönemi",
+            "çalışma grubu"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Yeni düzenin gelire etkisi küçük.",
+          "acilma_kosulu": "Yeni düzenin haftayı nasıl değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "haftasını nasıl",
+            "gelire etki"
+          ]
+        }
+      ],
+      "kok_neden": "Direniş düzene değil yönteme: karar kimseye sorulmadan panoya asılarak duyuruldu ve iki hafta sonra başlıyor; ekip söz hakkı istiyor, deneme dönemi ve katılım olsa düzene karşı çıkmayacak.",
+      "kok_neden_kelimeler": [
+        "sorulmadan",
+        "duyuru",
+        "söz hakkı",
+        "deneme",
+        "katılım"
+      ]
+    },
+    {
+      "id": "v3",
+      "not": "Hayat düzeni: çocuk bakımı ve servis saatleri",
+      "gizli_bilgiler": [
+        {
+          "id": "b1",
+          "onem": "kritik",
+          "bilgi": "12 saatlik vardiyada çıkış 19:00 oluyor; çocukları kreşten 18:00'de alan çalışanlar için bu imkânsız.",
+          "acilma_kosulu": "Yeni düzenin haftayı nasıl değiştireceği sorulursa",
+          "ipucu_kelimeler": [
+            "haftasını nasıl",
+            "kreş",
+            "19:00"
+          ]
+        },
+        {
+          "id": "b2",
+          "onem": "kritik",
+          "bilgi": "Kaygı en çok çocuk bakımı ve servis; servis saatleri yeni vardiyaya göre değişmedi, akşam servisi 18:00'de kalkıyor.",
+          "acilma_kosulu": "En büyük kaygının ne olduğu sorulursa",
+          "ipucu_kelimeler": [
+            "kaygı duyduğu",
+            "servis",
+            "çocuk bakımı"
+          ]
+        },
+        {
+          "id": "b3",
+          "onem": "kritik",
+          "bilgi": "Ebeveynler için 8 saatlik bir seçenek ya da servisin yeni saatlere uyması kabul edilebilir kılar.",
+          "acilma_kosulu": "Düzenin hangi koşullarda kabul edilebileceği sorulursa",
+          "ipucu_kelimeler": [
+            "kabul edilebilir",
+            "seçenek",
+            "yeni saat"
+          ]
+        },
+        {
+          "id": "b4",
+          "onem": "destek",
+          "bilgi": "Karar toplantıda açıklandı ve sorular alındı.",
+          "acilma_kosulu": "Kararın nasıl duyurulduğu sorulursa",
+          "ipucu_kelimeler": [
+            "nasıl duyuruldu",
+            "sorular alındı"
+          ]
+        }
+      ],
+      "kok_neden": "Direniş hayat düzeninden: 12 saatlik vardiyada çıkış 19:00 oluyor, kreşten çocuk alan çalışanlar için bu imkânsız ve akşam servisi hâlâ 18:00'de; ebeveyn seçeneği ya da servis düzenlemesi olmadan geçiş insanları kaybettiriyor.",
+      "kok_neden_kelimeler": [
+        "çocuk",
+        "kreş",
+        "servis",
+        "19:00",
+        "hayat düzeni"
+      ]
+    }
+  ]
+}
