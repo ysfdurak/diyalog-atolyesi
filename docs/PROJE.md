@@ -141,6 +141,9 @@ Hesap yok. Tarayıcı, oynadığı varyantların kimliklerini (v1, v2…) gönde
 **"Neden 'Proje yönetimi' diye yeni bir alan?"**
 Soru sorma becerisi yalnız operasyona özgü değil. Proje gecikmesinde de aynı kalıplar ("ne değişti, en çok ne bekletiyor") farklı kök nedenlere (kapsam, tek anahtar kullanıcı, dış tedarikçi) götürüyor.
 
+**"canonical nedir, neden sabit yazmadın?"**
+Google'a "bu sayfanın asıl adresi bu" diyen etiket. Aynı içerik birden çok adresle açılabiliyorsa (parametreli adres, uzantılı/uzantısız) Google'ın hangisini dizine alacağını söyler. Sabit yazsaydım, uygulamayı kendi sunucusuna kuran bir kurum Google'a benim adresimi göstermiş olurdu; bu yüzden adres kurulumun `APP_URL` ayarından geliyor.
+
 ## 10. Kendini test et
 
 <details><summary>Senaryo dosyasında gizli bilgi en üstte de varyantların içinde de varsa ne olur?</summary>
@@ -176,6 +179,7 @@ Aynı kök nedeni ikinci kez bulmak beceri değil hatırlamadır; sayılırsa sk
 
 | Tarih | Değişiklik |
 |---|---|
+| 2026-11-25 | Arama motoru: ana sayfaya ve gizlilik sayfasına `canonical` (ana sayfaya `og:url`) eklendi. Adres HTML'ye sabit yazılmadı; dosyada `__APP_URL__` yer tutucusu var, sunucu açılışta onu `APP_URL` ile değiştiriyor. Böylece bir şirket kendi sunucusuna kurduğunda canonical kendi adresini gösteriyor, Google'a yanlışlıkla diyalog.ysfdurak.com denmiyor. Test: `sunucu.test.js` canonical'ın test sunucusunun adresiyle yazıldığını ve yer tutucunun kalmadığını kontrol ediyor. Ders: canonical her zaman yönlenmeyen son adres olmalı (Aday ve İngilizce Atölyesi'nde `.html` uzantılı canonical bu yüzden sorun çıkardı). |
 | 2026-11-25 | Geri bildirim düğmesi telefonda kartları kapatıyordu. Düğme ortak ölçüm servisinden geliyor (ysfdurak.com → sunucu/olcum/public/olcum.js); orada dar ekranda 48 px simgeye indirildi ve aşağı kaydırırken gizlenip yukarı kaydırınca/durunca geri geliyor (bütün projeler faydalanır). Diyalog'da ayrıca dar ekranda sayfa altına 72 px boşluk eklendi. |
 | 2026-11-25 | Önbellek: sunucu açılışta her arayüz dosyasının içeriğinden 10 haneli parmak izi (SHA-256) hesaplıyor ve HTML'deki bağlantıları `/app.js?v=<iz>` yapıyor. İzli istek 1 yıl `immutable`, izsiz/eski istek 5 dakika, HTML `no-cache`. Böylece yayından sonra Ctrl+F5 gerekmiyor (sorun 25 Kasım'da bilgisayarda eski filtrelerin görünmesiyle fark edildi). Not: Cloudflare kenar önbelleği de izli adresi ayrı anahtar saydığı için ayrıca temizleme gerekmez. |
 | 2026-11-25 | Filtre düzeni: sektör satırı hep açık ve Depo ve lojistik başta; alan ve oynama durumu satırları "Diğer filtreler" kutusunda (mobilde kapalı, geniş ekranda açık başlar; seçim sayısı başlıkta görünür). Açıklama metni varyant sayısından üretiliyor ("Her senaryonun üç farklı kök nedeni var"). Ders: `el()` yardımcısı `on` ile başlayan özellikleri olay sayıyor, `open` gibi özellikler ayrıca atanmalı. |

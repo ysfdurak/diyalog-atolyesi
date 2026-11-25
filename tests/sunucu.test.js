@@ -52,7 +52,11 @@ test('web: arayüz, sağlık kontrolü, güvenlik başlıkları ve bilinmeyen yo
   assert.equal(ana.status, 200);
   assert.match(ana.headers.get('content-type'), /text\/html/);
   assert.match(ana.headers.get('content-security-policy'), /default-src 'self'/);
-  assert.match(await ana.text(), /Diyalog Atölyesi/);
+  const html = await ana.text();
+  assert.match(html, /Diyalog Atölyesi/);
+  assert.ok(html.includes(`<link rel="canonical" href="${taban}/">`), 'canonical APP_URL ile yazılmalı');
+  assert.ok(!html.includes('__APP_URL__'));
+  assert.ok((await (await fetch(taban + '/gizlilik.html')).text()).includes(`<link rel="canonical" href="${taban}/gizlilik.html">`));
   assert.deepEqual(await (await fetch(taban + '/healthz')).json(), { ok: true });
   assert.equal((await fetch(taban + '/../server/config.js')).status, 404);
   assert.equal((await fetch(taban + '/mcp', { method: 'POST' })).status, 404); // MCP varsayılan kapalı

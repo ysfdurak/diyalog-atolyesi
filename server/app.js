@@ -46,7 +46,9 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
   }
   for (const [, d] of dosyalar) {
     if (!d.tur.startsWith('text/html')) continue;
-    d.icerik = Buffer.from(String(d.icerik).replace(/(href|src)="(\/[\w.-]+\.(?:js|css|svg))"/g, (tam, nitelik, yol) => {
+    // Standart adres (canonical, og:url) kurulumun kendi adresinden yazılır: APP_URL.
+    const adresli = String(d.icerik).replaceAll('__APP_URL__', config.appUrl);
+    d.icerik = Buffer.from(adresli.replace(/(href|src)="(\/[\w.-]+\.(?:js|css|svg))"/g, (tam, nitelik, yol) => {
       const hedef = dosyalar.get(yol);
       return hedef ? `${nitelik}="${yol}?v=${hedef.iz}"` : tam;
     }));
