@@ -38,7 +38,18 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
   // Arayüz dosyaları açılışta belleğe alınır; yalnızca web/ klasöründeki dosyalar sunulur.
   const dosyalar = new Map();
   for (const ad of readdirSync(config.webDir)) {
-    if (TURLER[extname(ad)]) dosyalar.set('/' + ad, { tur: TURLER[extname(ad)], icerik: readFileSync(join(config.webDir, ad)) });
+    if (!TURLER[extname(ad)]) continue;
+    const icerik = readFileSync(join(config.webDir, ad));
+    // Parmak izi: içerik değişince değişir. HTML'deki bağlantılar "/app.js?v=<iz>" olur;
+    // böylece her yayında tarayıcı yeni dosyayı çeker, aynı sürüm ise uzun süre önbellekte kalabilir.
+    dosyalar.set('/' + ad, { tur: TURLER[extname(ad)], icerik, iz: createHash('sha256').update(icerik).digest('hex').slice(0, 10) });
+  }
+  for (const [, d] of dosyalar) {
+    if (!d.tur.startsWith('text/html')) continue;
+    d.icerik = Buffer.from(String(d.icerik).replace(/(href|src)="(\/[\w.-]+\.(?:js|css|svg))"/g, (tam, nitelik, yol) => {
+      const hedef = dosyalar.get(yol);
+      return hedef ? `${nitelik}="${yol}?v=${hedef.iz}"` : tam;
+    }));
   }
 
   // --- Servis durumu: kredi bitti / anahtar reddedildi --------------------------------
@@ -213,9 +224,11 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
 
   async function handle(req, res) {
     basliklar(res);
-    let path;
+    let path, surum;
     try {
-      path = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+      const adres = new URL(req.url, 'http://x');
+      path = decodeURIComponent(adres.pathname);
+      surum = adres.searchParams.get('v');
     } catch {
       return json(res, 400, { hata: 'Geçersiz adres.' });
     }
@@ -240,7 +253,9 @@ export function createApp({ config, store, model: hamModel, bildirim = { gonder:
       if (!dosya) return json(res, 404, { hata: 'Bulunamadı.' });
       res.statusCode = 200;
       res.setHeader('Content-Type', dosya.tur);
-      res.setHeader('Cache-Control', dosya.tur.startsWith('text/html') ? 'no-cache' : 'public, max-age=300');
+      // HTML her seferinde doğrulanır; parmak izi tutan istek bir yıl, izsiz istek 5 dakika önbellekte kalır.
+      res.setHeader('Cache-Control', dosya.tur.startsWith('text/html') ? 'no-cache'
+        : surum && surum === dosya.iz ? 'public, max-age=31536000, immutable' : 'public, max-age=300');
       return res.end(req.method === 'HEAD' ? undefined : dosya.icerik);
     } catch (err) {
       if (res.headersSent) return res.end();

@@ -60,6 +60,22 @@ test('web: arayüz, sağlık kontrolü, güvenlik başlıkları ve bilinmeyen yo
   assert.ok(ornek.toplam > 0 && ornek.sorular.length > 0);
 });
 
+test('web: arayüz dosyaları parmak iziyle bağlanır ve uzun önbelleğe alınır', async () => {
+  const { taban } = await baslat();
+  const ana = await fetch(taban + '/');
+  assert.equal(ana.headers.get('cache-control'), 'no-cache');
+  const html = await ana.text();
+  const js = /src="\/app\.js\?v=([0-9a-f]{10})"/.exec(html);
+  const css = /href="\/styles\.css\?v=([0-9a-f]{10})"/.exec(html);
+  assert.ok(js && css, 'app.js ve styles.css parmak iziyle bağlanmalı');
+  const surumlu = await fetch(`${taban}/app.js?v=${js[1]}`);
+  assert.equal(surumlu.status, 200);
+  assert.match(surumlu.headers.get('cache-control'), /max-age=31536000, immutable/);
+  // eski ya da izsiz istek kısa önbellekle sunulur (eski sayfalar kırılmaz)
+  assert.equal((await fetch(`${taban}/app.js?v=eskisurum1`)).headers.get('cache-control'), 'public, max-age=300');
+  assert.equal((await fetch(`${taban}/styles.css`)).headers.get('cache-control'), 'public, max-age=300');
+});
+
 test('web: durum gizli bilgi sızdırmaz; baştan sona oturum', async () => {
   const { taban, post, store } = await baslat();
   const durumMetni = await (await fetch(taban + '/api/durum')).text();
