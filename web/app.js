@@ -76,9 +76,19 @@ const hataKutusu = (mesaj) => el('p', { class: 'kutu hata', role: 'alert' }, mes
 // --- Filtreler: sektör, alan ve oynama durumu. Seçimler bu ekranda tutulur; birlikte uygulanır. ---
 const DURUMLAR = [['', 'Hepsi'], ['yeni', 'Hiç oynamadıklarım'], ['devam', 'Yeni kök nedeni kalanlar'], ['bitti', 'Bitirdiklerim']];
 
+function kokNedenMetni(senaryolar) {
+  const sayilar = new Set(senaryolar.map((x) => x.varyantlar.length));
+  const bas = sayilar.size === 1
+    ? `Her senaryonun ${['', 'bir', 'iki', 'üç', 'dört', 'beş'][[...sayilar][0]] || [...sayilar][0]} farklı kök nedeni var.`
+    : 'Senaryoların çoğunun birden fazla kök nedeni var.';
+  return `${bas} Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.`;
+}
+
+const VARSAYILAN_SEKTOR = 'Depo ve lojistik';
+
 function filtreler(senaryolar, durumu) {
   const secim = { sektor: '', alan: '', durum: '' };
-  const satirlar = [];
+  const satirlar = []; // her biri { anahtar, dugum }
   const uygula = () => {
     for (const k of document.querySelectorAll('.senaryo-kartlari .kart')) {
       k.hidden = (secim.sektor && k.dataset.sektor !== secim.sektor)
@@ -96,15 +106,18 @@ function filtreler(senaryolar, durumu) {
         secim[anahtar] = deger;
         for (const x of dugmeler) x.setAttribute('aria-pressed', String(x === d));
         uygula();
+        ozetiGuncelle();
       };
       return d;
     });
-    satirlar.push(el('div', { class: 'cipler', role: 'group', 'aria-label': etiket }, ...dugmeler));
+    satirlar.push({ anahtar, dugum: el('div', { class: 'cipler', role: 'group', 'aria-label': etiket }, ...dugmeler) });
   };
   const say = (alan) => {
     const n = {};
     for (const s of senaryolar) n[s[alan]] = (n[s[alan]] || 0) + 1;
-    return Object.keys(n).sort((a, b) => a.localeCompare(b, 'tr')).map((k) => [k, `${k} (${n[k]})`]);
+    // Depo ve lojistik ana içerik olduğu için sektörler arasında başa gelir; gerisi alfabetik.
+    const once = (k) => (alan === 'sektor' && k === VARSAYILAN_SEKTOR ? 0 : 1);
+    return Object.keys(n).sort((a, b) => once(a) - once(b) || a.localeCompare(b, 'tr')).map((k) => [k, `${k} (${n[k]})`]);
   };
   const sektorler = say('sektor');
   if (sektorler.length > 1) satir('sektor', 'Sektöre göre süz', [['', `Bütün sektörler (${senaryolar.length})`], ...sektorler]);
@@ -117,7 +130,18 @@ function filtreler(senaryolar, durumu) {
     satir('durum', 'Oynama durumuna göre süz', DURUMLAR.map(([d, m]) => [d, d ? `${m} (${durumSayisi[d] || 0})` : m]));
   }
   if (!satirlar.length) return null;
-  return el('div', { class: 'filtreler' }, ...satirlar,
+  // Sektör satırı hep açık; alan ve durum satırları katlanır kutuda (mobilde ekranı kaplamasın).
+  const ust = satirlar.filter((x) => x.anahtar === 'sektor').map((x) => x.dugum);
+  const alt = satirlar.filter((x) => x.anahtar !== 'sektor').map((x) => x.dugum);
+  const ozet = el('summary', {}, 'Diğer filtreler');
+  function ozetiGuncelle() {
+    const n = ['alan', 'durum'].filter((k) => secim[k]).length;
+    ozet.textContent = n ? `Diğer filtreler (${n} seçili)` : 'Diğer filtreler';
+  }
+  const kutu = alt.length ? el('details', { class: 'filtre-kutusu' }, ozet, el('div', { class: 'filtreler' }, ...alt)) : null;
+  // "open" el() içinde olay adı sanılır (on… ile başlıyor); bu yüzden ayrıca atanıyor. Geniş ekranda açık başlar.
+  if (kutu) kutu.open = window.matchMedia('(min-width: 760px)').matches;
+  return el('div', { class: 'filtreler' }, ...ust, kutu,
     el('p', { id: 'filtre-bos', class: 'kucuk soluk', hidden: true }, 'Bu seçimlere uyan senaryo yok.'));
 }
 
@@ -176,7 +200,7 @@ async function anaSayfa() {
 
     el('section', { class: 'bolum', 'aria-labelledby': 'b-senaryolar' },
       el('h2', { id: 'b-senaryolar' }, 'Senaryolar'),
-      s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, 'Bazı senaryoların birden fazla kök nedeni var. Tekrar oynadığında oynamadığın bir kök neden gelir; önceki raporu hatırlamak değil, doğru soruyu sormak işe yarar.'),
+      s.senaryolar.some((x) => x.varyantlar.length > 1) && el('p', { class: 'soluk kucuk' }, kokNedenMetni(s.senaryolar)),
       filtreler(s.senaryolar, oynamaDurumu),
       el('div', { class: 'kartlar senaryo-kartlari' }, [gunun, ...s.senaryolar.filter((x) => x.id !== gunun.id)].map(kart))),
 
