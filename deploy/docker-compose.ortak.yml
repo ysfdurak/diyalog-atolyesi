@@ -6,6 +6,7 @@
 name: diyalog
 services:
   diyalog:
+    init: true  # PID 1 olarak tini: alt süreçleri toplar (zombie birikmez), sinyalleri düzgün iletir
     build: ..
     container_name: diyalog
     env_file: ../.env
